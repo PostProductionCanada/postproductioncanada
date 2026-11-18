@@ -195,6 +195,16 @@
       "url": "https://news.google.com/rss/search?q=AI+film+OR+filmmaking+OR+production+Canada+OR+Toronto+OR+Vancouver+OR+Montreal+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
       "category": "canada",
       "google": true
+    },
+    {
+      "name": "Canadian Cinema Editors",
+      "url": "https://cceditors.ca/feed/",
+      "category": "picture"
+    },
+    {
+      "name": "Vancouver Post Alliance",
+      "url": "https://vancouverpostalliance.com/feed/",
+      "category": "canada"
     }
   ]
 }

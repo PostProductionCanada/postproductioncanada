@@ -175,13 +175,20 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
     _leaf = f'<svg viewBox="-56 -3 112 106" aria-hidden="true"><polygon points="{lf}" style="fill:var(--red);stroke:var(--red);stroke-width:2;stroke-linejoin:round"/></svg>'
     _fav = "data:image/svg+xml," + _q(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -3 112 106"><polygon points="{lf}" fill="#d52b1e" stroke="#d52b1e" stroke-width="2" stroke-linejoin="round"/></svg>')
     (OUT / "status-of-the-artist.html").write_text(statuspage.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    import editors, shutil
+    cce_items = sorted(fetch({"name": "CCE", "url": "https://cceditors.ca/feed/", "category": "picture"})[1], key=lambda i: i["date"], reverse=True)
+    vpa_items = sorted(fetch({"name": "VPA", "url": "https://vancouverpostalliance.com/feed/", "category": "canada"})[1], key=lambda i: i["date"], reverse=True)
+    import base64 as _b64
+    _logo = "data:image/jpeg;base64," + _b64.b64encode((ROOT / "art" / "cce-logo.jpg").read_bytes()).decode()
+    (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
+    shutil.copy(ROOT / "art" / "cce-logo.jpg", OUT / "cce-logo.jpg")
     (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
@@ -386,6 +393,7 @@ main{padding:20px 0 40px}
 .pick{background:var(--panel);border:1px solid var(--line);border-left:4px solid #e0a100;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
 .pick h3{margin:0;font-size:18px;line-height:1.3}.pick h3 a{text-decoration:none}.pick h3 a:hover{text-decoration:underline}
 .why{margin:0;font-size:14px;color:var(--mute)}.why b{color:var(--ink)}
+@media (max-width:640px){.top{flex-wrap:wrap;gap:10px}.brand{white-space:nowrap;font-size:18px}.tools{width:100%;flex-wrap:wrap}.btn{white-space:nowrap}}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:13px}
 footer p{margin:0 0 8px;max-width:60em}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -394,7 +402,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}<a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}<a class="btn" href="editors.html">Editors</a><a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
