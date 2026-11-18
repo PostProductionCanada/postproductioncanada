@@ -205,6 +205,12 @@
       "name": "Vancouver Post Alliance",
       "url": "https://vancouverpostalliance.com/feed/",
       "category": "canada"
+    },
+    {
+      "name": "Hollywood North Buzz",
+      "url": "https://hollywoodnorthbuzz.com/feed",
+      "category": "canada",
+      "filter": true
     }
   ]
 }
