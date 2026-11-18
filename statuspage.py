@@ -26,12 +26,7 @@ LINKS = {
     "sk": "https://www.creativesask.ca/",
     "mb": "https://mbfilmmusic.ca/",
     "qc": "https://www.sodec.gouv.qc.ca/",
-    "fic": "https://filmincanada.com/incentives/",
 }
-
-
-def fic(slug):
-    return ("filmincanada.com", LINKS["fic"] + slug)
 
 
 # (jurisdiction, program(s) and headline rates as reported, link label, url, note)
@@ -40,27 +35,25 @@ CREDITS = [
                 "Production Services Tax Credit (PSTC): 16% of qualified Canadian labour.",
      [("CPTC (CAVCO)", LINKS["cptc"]), ("PSTC (CAVCO)", LINKS["pstc"]), ("CRA guide, form T1131", LINKS["t1131"])],
      "Run jointly by CAVCO and the Canada Revenue Agency. A production can claim one of the two, not both."),
-    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 36% per filmincanada.com, 2026; "
-                         "an older CMPA summary lists 28%); DAVE: 16% on digital animation, VFX and post-production labour.",
-     [("Creative BC", LINKS["bc"]), fic("british-columbia")],
-     "The DAVE credit is aimed squarely at post and VFX work. The sources disagree on the basic rate, so confirm it with Creative BC."),
-    ("Alberta", "Film and Television Tax Credit, reported at 22% or 30%.", [fic("alberta"), ("CMPA overview", CMPA_HUB)], ""),
+    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 28% in CMPA's summary, which may be out of date); DAVE: 16% on digital animation, VFX and post-production labour.",
+     [("Creative BC", LINKS["bc"])],
+     "The DAVE credit is aimed squarely at post and VFX work. Rates have been changing, so confirm the current basic rate with Creative BC."),
+    ("Alberta", "Film and Television Tax Credit, reported at 22% or 30%.", [("CMPA overview", CMPA_HUB)], ""),
     ("Saskatchewan", "Production grant (service stream: 25% of eligible spend, up to $5M), with a 5% bonus "
                      "when most post-production happens in the province.",
-     [("Creative Saskatchewan", LINKS["sk"]), fic("saskatchewan")], "A grant program rather than a tax credit."),
+     [("Creative Saskatchewan", LINKS["sk"])], "A grant program rather than a tax credit."),
     ("Manitoba", "Cost-of-Salaries credit 45% (up to 65% with bonuses) or Cost-of-Production credit 30% (up to 38%).",
-     [("Manitoba Film & Music", LINKS["mb"]), fic("manitoba")], ""),
+     [("Manitoba Film & Music", LINKS["mb"])], ""),
     ("Ontario", "Ontario Film and Television Tax Credit (35% of eligible labour); "
                 "Ontario Production Services Tax Credit (21.5%).",
-     [("Ontario Creates", LINKS["on"]), fic("ontario")], ""),
-    ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit "
-                       "(reported at 25% of spend, plus 16% on computer-aided effects and animation, per filmincanada.com).",
-     [("SODEC", LINKS["qc"]), fic("quebec")], "Domestic credit rates not confirmed in my research. Check the program."),
+     [("Ontario Creates", LINKS["on"])], ""),
+    ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit.",
+     [("SODEC", LINKS["qc"])], "Domestic credit rates not confirmed in my research. Check the program."),
     ("New Brunswick", "Production Incentive: CMPA lists service productions at 25% of all spend or 40% of labour, "
                       "and New Brunswick companies at 30% of all spend or 40% of labour.",
-     [("CMPA overview", CMPA_HUB)], "filmincanada.com (2026) lists no service incentive for New Brunswick. The sources conflict, so confirm directly."),
+     [("CMPA overview", CMPA_HUB)], "Program terms change. Confirm directly with the province."),
     ("Nova Scotia", "Film and Television Production Incentive Fund, reported at about 25–26% of eligible spend.",
-     [fic("nova-scotia"), ("CMPA overview", CMPA_HUB)], "An incentive fund, not a tax credit."),
+     [("CMPA overview", CMPA_HUB)], "An incentive fund, not a tax credit."),
     ("Newfoundland & Labrador", "Film and Video Tax Credit.", [("CMPA overview", CMPA_HUB)],
      "Rate not confirmed in my research."),
     ("Prince Edward Island", "Film and television incentive via the PEI Film & Television Office.",
@@ -82,7 +75,6 @@ SOURCES = [
     ("AQTIS 514 IATSE reacts to Bill 35", "https://aqtis514iatse.com/stream.php?page=60+&filename=AQTIS+514+IATSE+r%C3%A9action+loi+35_EN.pdf"),
     ("A brief history of status of the artist (Saskatchewan Arts Alliance)",
      "https://www.saskartsalliance.ca/facts/a-brief-history-of-status-of-the-artist-in-canada"),
-    ("Incentives by province (filmincanada.com, an independent guide)", "https://filmincanada.com/incentives/manitoba"),
     ("Production volume by region, Profile 2025 (CMPA)", "https://profile.cmpa.ca/en/overview-of-the-screen-sector-in-canada/12-region"),
     ("Tax credits and incentives across Canada (CMPA)", CMPA_HUB),
     ("Producing in Canada (Dentons)", "https://www.dentons.com/-/media/pdfs/guides-reports-and-whitepapers/producing-in-canada-guide.pdf"),
