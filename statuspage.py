@@ -40,10 +40,10 @@ CREDITS = [
                 "Production Services Tax Credit (PSTC): 16% of qualified Canadian labour.",
      [("CPTC (CAVCO)", LINKS["cptc"]), ("PSTC (CAVCO)", LINKS["pstc"]), ("CRA guide, form T1131", LINKS["t1131"])],
      "Run jointly by CAVCO and the Canada Revenue Agency. A production can claim one of the two, not both."),
-    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 28%); "
-                         "DAVE: 16% on digital animation, VFX and post-production labour.",
+    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 36% per filmincanada.com, 2026; "
+                         "an older CMPA summary lists 28%); DAVE: 16% on digital animation, VFX and post-production labour.",
      [("Creative BC", LINKS["bc"]), fic("british-columbia")],
-     "The DAVE credit is aimed squarely at post and VFX work."),
+     "The DAVE credit is aimed squarely at post and VFX work. The sources disagree on the basic rate, so confirm it with Creative BC."),
     ("Alberta", "Film and Television Tax Credit, reported at 22% or 30%.", [fic("alberta"), ("CMPA overview", CMPA_HUB)], ""),
     ("Saskatchewan", "Production grant (service stream: 25% of eligible spend, up to $5M), with a 5% bonus "
                      "when most post-production happens in the province.",
@@ -53,11 +53,12 @@ CREDITS = [
     ("Ontario", "Ontario Film and Television Tax Credit (35% of eligible labour); "
                 "Ontario Production Services Tax Credit (21.5%).",
      [("Ontario Creates", LINKS["on"]), fic("ontario")], ""),
-    ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit.",
-     [("SODEC", LINKS["qc"]), fic("quebec")], "Rates not confirmed in my research. Check the program."),
-    ("New Brunswick", "Production Incentive: service productions 25% of all spend or 40% of labour; "
-                      "New Brunswick companies 30% of all spend or 40% of labour.",
-     [("CMPA overview", CMPA_HUB)], ""),
+    ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit "
+                       "(reported at 25% of spend, plus 16% on computer-aided effects and animation, per filmincanada.com).",
+     [("SODEC", LINKS["qc"]), fic("quebec")], "Domestic credit rates not confirmed in my research. Check the program."),
+    ("New Brunswick", "Production Incentive: CMPA lists service productions at 25% of all spend or 40% of labour, "
+                      "and New Brunswick companies at 30% of all spend or 40% of labour.",
+     [("CMPA overview", CMPA_HUB)], "filmincanada.com (2026) lists no service incentive for New Brunswick. The sources conflict, so confirm directly."),
     ("Nova Scotia", "Film and Television Production Incentive Fund, reported at about 25–26% of eligible spend.",
      [fic("nova-scotia"), ("CMPA overview", CMPA_HUB)], "An incentive fund, not a tax credit."),
     ("Newfoundland & Labrador", "Film and Video Tax Credit.", [("CMPA overview", CMPA_HUB)],
