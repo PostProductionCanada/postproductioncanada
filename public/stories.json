@@ -1,5 +1,22 @@
 [
  {
+  "title": "Autodesk Adds AI Assistant, MCP Servers and Arnold Viewport Updates",
+  "url": "https://postperspective.com/autodesk-adds-ai-assistant-mcp-servers-and-arnold-viewport-updates/",
+  "date": "2026-11-18T23:10:18+00:00",
+  "source": "Post Perspective",
+  "excerpt": "Autodesk has introduced new AI capabilities across 3ds Max, Maya, Flow Capture and Flow Production Tracking, along with an updated Arnold viewport in Maya and 3ds Max. The AI features include an expanded Autodesk…",
+  "category": "picture",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "canada": false,
+  "ai": true,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Every Movie That Beat 'The Irishman' at the Oscars",
   "url": "https://nofilmschool.com/every-movie-that-beat-the-irishman-for-oscars",
   "date": "2026-11-18T22:30:04+00:00",
@@ -12,6 +29,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -28,6 +46,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -44,6 +63,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -60,6 +80,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -76,6 +97,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -92,6 +114,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -108,6 +131,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "ON"
@@ -126,6 +150,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -142,6 +167,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -158,6 +184,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -174,6 +201,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -190,6 +218,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -206,6 +235,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -222,6 +252,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -238,6 +269,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -254,6 +286,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -270,6 +303,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -286,6 +320,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -302,6 +337,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -318,6 +354,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -334,6 +371,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -350,6 +388,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -366,6 +405,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -382,6 +422,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -398,6 +439,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -414,6 +456,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -430,6 +473,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -446,6 +490,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "ON"
@@ -464,6 +509,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -480,6 +526,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -496,6 +543,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -512,6 +560,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -528,14 +577,15 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
  {
-  "title": "Short film expands playground for singers and rappers",
-  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN2hGRktyOXJtWkNxRzBkbng2dTBkUDFlZVdBd1FwTHZzZGQ0c1NRTTdmWHdjTHp5SU85SU45amItMjgtbjd2Q0s4MHN4UWdubjVMTFozV0JhWHZScWVqc2tsdF83WW9DOV9fNFdad3hYbnJ5OTgzUzVjQmN0TTd0WWZnem9QMHVPMmJWdTVPOGhPTnYxa1IwUXRQUS0?oc=5",
-  "date": "2026-11-18T09:33:40+00:00",
-  "source": "Laodong.vn",
+  "title": "UK actors move closer to securing new rights over AI copies of their faces and voices",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNenBjYmZDaHdpUk1KS0xJa3pRUmtQZmhWcGUzNmhuMy04aHNHMzJPd01iMldmRVEzSXFKbXRHN0c1M3l5emxtYVp4NW83NVRuc1E0TWJMMUtQcWZkVUM0WjZaZnprU1M0aktCV0hPb2FVOWpoaFhPUUZVZWZSV281WVUxUlUyVS1sTEZBUG5fcDMwV2o5a2t0UQ?oc=5",
+  "date": "2026-11-18T12:03:50+00:00",
+  "source": "SoaplandTV",
   "excerpt": "",
   "category": "vfx",
   "canada_only": false,
@@ -543,9 +593,29 @@
   "intl": true,
   "filter": true,
   "canada": false,
-  "ai": false,
+  "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Series Mania Forum Names Canada and Québec Guests of Honour for 2027",
+  "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBvd0xmS283c1M1dTY0Ri1CRUlncm5ENUNrQVU1cS1GVVRUN0lWVjRlXzhxRE10enpDNHhSVXdPenFoOXBWamFJNGVxMHdlckNQR2dHTU50TlBpYnM?oc=5",
+  "date": "2026-11-18T09:52:08+00:00",
+  "source": "FormatBiz",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "canada": true,
+  "ai": false,
+  "cce": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "Aiarty Video Enhancer – Offline AI Denoising, 4K Upscaling and Black Friday Offer",
@@ -560,6 +630,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -576,6 +647,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -592,26 +664,9 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Series Mania Forum Sets Canada-Quebec as 2027 Guests of Honor",
-  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4zWlRDVi00YWlmNjhfNWhoUmRQcTBSQ3U0RnV0eV9FOHVuSURlMjNpdFgzUl84MGFRXzNRY2liN0J3RmxMMzJJVk9BU0tCN1hFZ2xF?oc=5",
-  "date": "2026-11-18T07:09:46+00:00",
-  "source": "شبكة تواصل الإخبارية",
-  "excerpt": "",
-  "category": "canada",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "canada": true,
-  "ai": false,
-  "status": false,
-  "prov": [
-   "QC"
-  ]
  },
  {
   "title": "Episode 136: EditCon 2026: In Conversation with Brett Sullivan, CCE",
@@ -626,6 +681,7 @@
   "filter": false,
   "canada": true,
   "ai": false,
+  "cce": true,
   "status": false,
   "prov": [
    "ATL"
@@ -644,6 +700,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -660,6 +717,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -676,6 +734,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -692,6 +751,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -708,6 +768,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -724,6 +785,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -740,6 +802,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -756,6 +819,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -772,22 +836,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "PRODUCTION: Yianna Americanou Shoots Cypriot/Belgian/Canadian My Name Is Lily",
-  "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRGV1VnJ1VGdXV01BbFJXa19CUmlVOXJxLTBubWpmSzhQVWZJek5TbGk0ZmllNTN0WkZkamZ2Q2ctSkdhQ01fOTNEc0ttSzhsS0hpUU5SMGxzbjBfV0t3d2RRTDRDVXQ1b3JkaXFBMWtYc2M5ZHAybnBjRTZLV2NuSUIta09mV3lEMGI1ZlNQUmU4ZHY5bmE3TXcyY1Q5eV9IVEJxYzVsMnRqTzRfQ3drMDNNS0pDSjA5Z1pjSFZTVWRzV1hEU1o5UDlVa1N2cjlP?oc=5",
-  "date": "2026-11-17T20:33:11+00:00",
-  "source": "Film New Europe",
-  "excerpt": "",
-  "category": "canada",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "canada": true,
-  "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -804,6 +853,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -820,6 +870,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -836,6 +887,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -852,6 +904,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -868,6 +921,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -884,6 +938,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -900,6 +955,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -916,6 +972,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -932,6 +989,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -948,6 +1006,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -964,6 +1023,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -980,6 +1040,7 @@
   "filter": true,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -996,6 +1057,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1012,6 +1074,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1028,6 +1091,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1044,6 +1108,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1060,6 +1125,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1076,6 +1142,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1092,6 +1159,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1108,6 +1176,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1124,6 +1193,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1140,6 +1210,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1156,6 +1227,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1172,6 +1244,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1188,6 +1261,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1204,6 +1278,7 @@
   "filter": false,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "BC"
@@ -1222,6 +1297,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1238,6 +1314,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1254,6 +1331,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1270,6 +1348,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1286,6 +1365,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1302,6 +1382,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1318,6 +1399,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1334,6 +1416,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1350,6 +1433,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1366,6 +1450,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1382,6 +1467,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1398,6 +1484,7 @@
   "filter": false,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1414,6 +1501,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1430,6 +1518,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1446,6 +1535,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "QC"
@@ -1464,6 +1554,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1480,6 +1571,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1496,6 +1588,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1512,6 +1605,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1528,6 +1622,7 @@
   "filter": true,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1544,6 +1639,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1553,13 +1649,14 @@
   "date": "2026-11-16T22:59:48+00:00",
   "source": "Yahoo! Finance Canada",
   "excerpt": "",
-  "category": "business",
+  "category": "canada",
   "canada_only": false,
   "google": true,
   "intl": false,
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1576,6 +1673,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1592,6 +1690,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1608,6 +1707,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1624,6 +1724,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "QC"
@@ -1642,6 +1743,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1658,6 +1760,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1674,6 +1777,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1690,6 +1794,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1706,6 +1811,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1722,6 +1828,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1738,6 +1845,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1754,6 +1862,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1770,6 +1879,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1786,6 +1896,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1802,6 +1913,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1818,6 +1930,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1834,6 +1947,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1850,6 +1964,7 @@
   "filter": true,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1866,6 +1981,7 @@
   "filter": true,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1882,6 +1998,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1898,6 +2015,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1914,6 +2032,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1930,6 +2049,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1946,6 +2066,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1962,6 +2083,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1978,6 +2100,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -1994,6 +2117,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2010,6 +2134,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2026,22 +2151,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "Bridging the Worlds of Traditional Animation and Content Creation",
-  "url": "https://postperspective.com/bridging-the-worlds-of-traditional-animation-and-content-creation/",
-  "date": "2026-11-16T06:19:05+00:00",
-  "source": "Post Perspective",
-  "excerpt": "By Jake Bourke Glitch Productions is an Australian-based YouTube channel and animation studio known for its independent animation productions. Glitch is best known for viral series such as The Amazing Digital Circus…",
-  "category": "vfx",
-  "canada_only": false,
-  "google": false,
-  "intl": false,
-  "filter": false,
-  "canada": false,
-  "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2058,6 +2168,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2074,6 +2185,7 @@
   "filter": true,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2090,6 +2202,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2106,6 +2219,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2122,6 +2236,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2138,6 +2253,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2154,6 +2270,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2170,12 +2287,13 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
  {
   "title": "'The Last of Us' series brought more than $141 million in production spending to Alberta; a study found i",
-  "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQdFRLZWd5NzFQZFMxVENvTVhfQUVvVm5xTi10c25XR2dDaktQbHZUM2ZNNUJ3dGJkOFNnS3NJbW9OUmZCUmEyaEo1M2Q5OENIdko1ZHUxVy0xMUFoRDZjOTNDNlQ3LTh3N0tFRjl6Ymtpa1JDLWtBa0ZhMjRacldCOF9YY2FrU2ZmdkE1dmtkOHlBN3N3V0JsUy1Ma2p3a1AwVkdCYTc4UVluQ1dBNXVINFhLMnBGdV91TUtYTXZIX1hXR0NVdVlpbWk2bWZLRW9yQWpoZnR3OEY2MENEaFRSaS1hUDZheFRpTXNHQ01MQmxOdi1tZDJTVWFXdk4zTW5aUWRSZmJvU3B5VzVQVUFZVkJJTUVsM1JMdVozUkpPV2xMeDY2TG1JcHhWVnRTYUlKZXByZ2sydjJpQjBfd1VYRjh2UGhYUdIBywJBVV95cUxQY1cwOE1xaWFpQ2N3M3JoV3kzV211dEhzUDhfZUM1Q1pMNTZqb2MxSHFTSzNpdll4d3JRTWFNc3V2Y2plRWp1UzlVNG1BcU51WUxwY1ZEbmpnUEN4ZkVpR1MycjJzRWMyRHA1cUhhdndMN21UanozV09PQVRMVVZfb0t1d3FfMEF4ZjliWWdBbDlvNzdQRGtaci1vZHpQWnZpbWpjb3R1dDZvUkRKektSN25PbGNFaXBuUFg0NE8wR3VvTW9lVzRZaF9HanpvZW51aTdnc21DYXlNRGViV0hOUTFOOXNxcDhQQkNsMW9EY1BkWXpwa0VmS3I0Y2Jhc2xUZkpXYV9kQXlNWUJHUUhPYVZ1U0xKdkhINWhGOTdCWDJQRnJJamVTV2dKRXVPd21mWEJnSzJ1ak1hSlZRb0JqYkIzZ3c0OEx5T2g0?oc=5",
+  "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxQY1cwOE1xaWFpQ2N3M3JoV3kzV211dEhzUDhfZUM1Q1pMNTZqb2MxSHFTSzNpdll4d3JRTWFNc3V2Y2plRWp1UzlVNG1BcU51WUxwY1ZEbmpnUEN4ZkVpR1MycjJzRWMyRHA1cUhhdndMN21UanozV09PQVRMVVZfb0t1d3FfMEF4ZjliWWdBbDlvNzdQRGtaci1vZHpQWnZpbWpjb3R1dDZvUkRKektSN25PbGNFaXBuUFg0NE8wR3VvTW9lVzRZaF9HanpvZW51aTdnc21DYXlNRGViV0hOUTFOOXNxcDhQQkNsMW9EY1BkWXpwa0VmS3I0Y2Jhc2xUZkpXYV9kQXlNWUJHUUhPYVZ1U0xKdkhINWhGOTdCWDJQRnJJamVTV2dKRXVPd21mWEJnSzJ1ak1hSlZRb0JqYkIzZ3c0OEx5T2g00gHLAkFVX3lxTFBjVzA4TXFpYWlDY3czcmhXeTNXbXV0SHNQOF9lQzVDWkw1NmpvYzFIcVNLM2l2WXh3clFNYU1zdXZjamVFanVTOVU0bUFxTnVZTHBjVkRuamdQQ3hmRWlHUzJyMnNFYzJEcDVxSGF2d0w3bVRqejNXT09BVExVVl9vS3V3cV8wQXhmOWJZZ0FsOW83N1BEa1pyLW9kelBadmltamNvdHV0Nm9SREp6S1I3bk9sY0VpcG5QWDQ0TzBHdW9Nb2VXNFloX0dqem9lbnVpN2dzbUNheU1EZWJXSE5RMU45c3FwOFBCQ2wxb0RjUGRZenBrRWZLcjRjYmFzbFRmSldhX2RBeU1ZQkdRSE9hVnVTTEp2SEg1aEY5N0JYMlBGcklqZVNXZ0pFdU93bWZYQmdLMnVqTWFKVlFvQmpiQjNndzQ4THlPaDQ?oc=5",
   "date": "2026-11-14T19:30:00+00:00",
   "source": "The Times of India",
   "excerpt": "",
@@ -2186,6 +2304,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "AB"
@@ -2204,6 +2323,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2220,6 +2340,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2236,6 +2357,7 @@
   "filter": false,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2252,6 +2374,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2268,6 +2391,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2284,6 +2408,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2300,6 +2425,7 @@
   "filter": true,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2316,6 +2442,7 @@
   "filter": false,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "BC"
@@ -2334,6 +2461,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2350,6 +2478,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2366,6 +2495,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2382,6 +2512,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2398,6 +2529,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2414,6 +2546,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2430,6 +2563,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2446,6 +2580,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2462,6 +2597,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2478,6 +2614,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2494,6 +2631,7 @@
   "filter": true,
   "canada": true,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2510,6 +2648,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "ON"
@@ -2528,6 +2667,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2544,6 +2684,7 @@
   "filter": false,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "BC"
@@ -2562,6 +2703,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2578,6 +2720,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2594,6 +2737,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2610,6 +2754,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2626,6 +2771,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "ON"
@@ -2644,6 +2790,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2660,6 +2807,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2676,6 +2824,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2692,6 +2841,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2708,6 +2858,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2724,6 +2875,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2740,6 +2892,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2756,6 +2909,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2772,6 +2926,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2788,6 +2943,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2804,6 +2960,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2820,6 +2977,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2836,6 +2994,7 @@
   "filter": false,
   "canada": false,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2852,6 +3011,7 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2868,6 +3028,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  },
@@ -2884,6 +3045,7 @@
   "filter": true,
   "canada": true,
   "ai": false,
+  "cce": false,
   "status": false,
   "prov": [
    "ON"
@@ -2902,6 +3064,24 @@
   "filter": true,
   "canada": false,
   "ai": true,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "George Stroumboulopoulos hosts new MADE / unmade conversation series for CMF and Telefilm",
+  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPajdsZFRMUU50cnpybmtIbjVZdEo0cDNScnVlYnJ3NnFrVW5wMGpiTVdVYU45N2pUa0NYd2ZYVTI2MENYTmdnZmxRbU84eTVYOVVndTVKU1Naak5kUVZwZVNmQlVobUMxVllWN21CRVdYa1VWOWF6TkVCblVOaHpYQlRwUEtIZzI1THQ0ZTVxOHpIczFrSEdiNFB5Tk5rMlVjTUZPMzJOc21aZXZkLTZEVGwyNlM4MEx3OXc?oc=5",
+  "date": "2026-11-10T15:37:03+00:00",
+  "source": "Broadcast Dialogue",
+  "excerpt": "",
+  "category": "business",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "canada": true,
+  "ai": false,
+  "cce": false,
   "status": false,
   "prov": []
  }
