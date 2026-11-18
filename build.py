@@ -4,7 +4,7 @@
 Python 3 standard library only. Run:  python3 build.py
 Headlines + short excerpts only; every item links back to the original publisher.
 """
-import html, json, re, sys, time
+import html, json, re, sys, time, logo
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
@@ -185,8 +185,8 @@ def main():
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
-    _leaf = f'<svg viewBox="-56 -3 112 106" aria-hidden="true"><polygon points="{lf}" style="fill:var(--red);stroke:var(--red);stroke-width:2;stroke-linejoin:round"/></svg>'
-    _fav = "data:image/svg+xml," + _q(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -3 112 106"><polygon points="{lf}" fill="#d52b1e" stroke="#d52b1e" stroke-width="2" stroke-linejoin="round"/></svg>')
+    _leaf = logo.inline()
+    _fav = logo.favicon()
     (OUT / "status-of-the-artist.html").write_text(statuspage.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import editors, shutil
     cce_items = sorted(fetch({"name": "CCE", "url": "https://cceditors.ca/feed/", "category": "picture"})[1], key=lambda i: i["date"], reverse=True)
@@ -196,6 +196,8 @@ def main():
     (OUT / "privacy.html").write_text(privacy.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg), encoding="utf-8")
     import unions
     (OUT / "unions.html").write_text(unions.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    import originals
+    _arts = originals.render_all(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg, OUT, ROOT)
     import buzz
     (OUT / "buzz.html").write_text(buzz.render(_leaf, _fav, now.strftime("%Y-%m-%d"), now), encoding="utf-8")
     import base64 as _b64
@@ -291,6 +293,28 @@ def load_picks(now):
     out.sort(key=lambda r: r["dt"], reverse=True)
     return out[:8]
 
+def bodies_html(now):
+    try:
+        raw = json.loads((ROOT / "curated.json").read_text()).get("bodies", [])
+    except Exception:
+        return ""
+    rows = []
+    for r in raw:
+        d = parse_date(r.get("date", ""))
+        if d and now - d <= timedelta(days=int(r.get("expires_days", 75))):
+            rows.append({**r, "dt": d})
+    rows.sort(key=lambda r: r["dt"], reverse=True)
+    if not rows:
+        return ""
+    cards = "".join(
+        f'<article class="pick body"><div class="meta"><span class="src">CMPA</span><span class="dot">·</span><time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time></div>'
+        f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
+        + (f'<p class="why">{esc(r["note"])}</p>' if r.get("note") else "") + '</article>' for r in rows[:5])
+    return (f'<section class="picks" aria-label="Latest from the CMPA"><h2>📢 Latest from the CMPA</h2><div class="pgrid">{cards}</div>'
+            '<p class="note" style="margin-top:8px">Press releases from <a href="https://cmpa.ca/" target="_blank" rel="noopener">cmpa.ca</a>, the Canadian Media Producers Association. '
+            'This list is updated by hand.</p></section>')
+
+
 def picks_html(picks):
     if not picks:
         return ""
@@ -331,12 +355,14 @@ def render(items, sources, now):
     import base64
     from urllib.parse import quote
     poly = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
-    leaf = f'<svg viewBox="-56 -3 112 106" aria-hidden="true"><polygon points="{poly}" style="fill:var(--red);stroke:var(--red);stroke-width:2;stroke-linejoin:round"/></svg>'
-    fav_svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -3 112 106"><polygon points="{poly}" fill="#d52b1e" stroke="#d52b1e" stroke-width="2" stroke-linejoin="round"/></svg>'
-    favicon = "data:image/svg+xml," + quote(fav_svg)
+    leaf = logo.inline()
+    fav_svg = None
+    favicon = logo.favicon()
     flag = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "art" / "flag.svg").read_bytes()).decode()
     _cl = "data:image/jpeg;base64," + base64.b64encode((ROOT / "art" / "cce-logo-small.jpg").read_bytes()).decode()
-    return TEMPLATE.replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    import originals as _o
+    _orig = '<a class="btn" href="originals.html">Originals</a>' if _o.count_published(ROOT) else ""
+    return TEMPLATE.replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -422,6 +448,7 @@ main{padding:20px 0 40px}
 .picks{margin-bottom:26px}.picks h2{margin:0 0 10px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
 .pick{background:var(--panel);border:1px solid var(--line);border-left:4px solid #e0a100;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.pick.body{border-left-color:var(--red)}
 .pick h3{margin:0;font-size:18px;line-height:1.3}.pick h3 a{text-decoration:none}.pick h3 a:hover{text-decoration:underline}
 .why{margin:0;font-size:14px;color:var(--mute)}.why b{color:var(--ink)}
 @media (max-width:640px){.top{flex-wrap:wrap;gap:10px}.brand{white-space:nowrap;font-size:18px}.tools{width:100%;flex-wrap:wrap}.btn{white-space:nowrap}}
@@ -434,7 +461,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}<a class="btn" href="unions.html">Union Map</a><a class="btn" href="buzz.html">Post Buzz</a><a class="btn" href="editors.html">Editors</a><a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="unions.html">Union Map</a><a class="btn" href="buzz.html">Post Buzz</a><a class="btn" href="editors.html">Editors</a><a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
@@ -451,6 +478,7 @@ footer p{margin:0 0 8px;max-width:60em}
 {{SUBSCRIBE}}
 <main><div class="wrap">
   {{PICKS}}
+  {{BODIES}}
   <div class="grid" id="grid">
 {{CARDS}}
   </div>

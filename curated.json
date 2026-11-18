@@ -51,6 +51,46 @@
       "date": "2026-11-04",
       "expires_days": 60,
       "note": "Disney is putting money behind AI startups, including ones building hybrid filmmaking tools, and says it wants artists involved at every step of the workflow."
+    },
+    {
+      "title": "Disney Taps Adobe as 'Official AI Innovation Partner' Under Multiyear Pact",
+      "url": "https://variety.com/2026/digital/news/disney-adobe-official-ai-innovation-partner-1236943275/",
+      "source": "Variety",
+      "date": "2026-11-09",
+      "expires_days": 60,
+      "note": "Adobe, maker of Premiere Pro and After Effects, becomes Disney's AI partner in a multiyear alliance. Expect AI features to keep showing up in the tools editors already use."
+    }
+  ],
+  "bodies": [
+    {
+      "title": "CMPA celebrates federal government's significant investment in Canadian culture",
+      "url": "https://cmpa.ca/pressreleases/cmpa-celebrates-federal-governments-significant-investment-in-canadian-culture",
+      "date": "2026-11-05",
+      "note": "The CMPA's response to the federal budget: $600 million in immediate support for cultural industries and $300 million over two years for CBC/Radio-Canada."
+    },
+    {
+      "title": "CEPI welcomes CMPA and AQPM as its first international observer members",
+      "url": "https://cmpa.ca/pressreleases/cepi-welcomes-cmpa-and-aqpm-as-its-first-international-observer-members",
+      "date": "2026-10-29",
+      "note": "Canadian independent producers' associations join the European producers' association CEPI as observers."
+    },
+    {
+      "title": "CMPA appoints three new Board Directors on eve of federal advocacy meetings",
+      "url": "https://cmpa.ca/pressreleases/cmpa-appoints-three-new-board-directors-on-eve-of-federal-advocacy-meetings",
+      "date": "2026-10-05",
+      "note": "New directors, plus polling the CMPA took to Ottawa on the Online Streaming Act."
+    },
+    {
+      "title": "Global screen sector coalition calls on governments to protect local content",
+      "url": "https://cmpa.ca/pressreleases/global-content-statement",
+      "date": "2026-09-11",
+      "note": "A joint statement from 23 screen organizations, released at TIFF, backing domestic production requirements."
+    },
+    {
+      "title": "KOTV, Tyler Hagan, and Anthony Cauchy named 2026 CMPA Indiescreen Awards winners",
+      "url": "https://cmpa.ca/pressreleases/kotv-tyler-hagan-and-anthony-cauchy-named-2026-cmpa-indiescreen-awards-winners",
+      "date": "2026-09-10",
+      "note": "The producers honoured at the Indiescreen Awards during TIFF."
     }
   ]
 }
