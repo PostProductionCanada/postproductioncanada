@@ -295,6 +295,7 @@ def load_picks(now):
 
 BODY_SECTIONS = {
     "CMPA": ("📢 Latest from the CMPA", "https://cmpa.ca/", "cmpa.ca", "Press releases from the Canadian Media Producers Association."),
+    "LinkedIn": ("💼 Industry voices on LinkedIn", "https://www.linkedin.com/", "linkedin.com", "Articles from industry voices on LinkedIn. LinkedIn blocks automated readers, so these are added by hand and some show no date."),
     "Avid": ("🎛️ Latest from Avid", "https://www.avid.com/press-room", "avid.com", "Press releases and release notes from Avid, maker of Media Composer and Pro Tools."),
 }
 
@@ -307,15 +308,15 @@ def bodies_html(now):
     groups = {}
     for r in raw:
         d = parse_date(r.get("date", ""))
-        if d and now - d <= timedelta(days=int(r.get("expires_days", 75))):
+        if d is None or now - d <= timedelta(days=int(r.get("expires_days", 75))):
             groups.setdefault(r.get("source", "CMPA"), []).append({**r, "dt": d})
     out = []
     for src, (head, url, dom, blurb) in BODY_SECTIONS.items():
-        rows = sorted(groups.get(src, []), key=lambda r: r["dt"], reverse=True)[:5]
+        rows = sorted(groups.get(src, []), key=lambda r: r["dt"] or datetime(1970, 1, 1, tzinfo=timezone.utc), reverse=True)[:5]
         if not rows:
             continue
         cards = "".join(
-            f'<article class="pick body"><div class="meta"><span class="src">{esc(src)}</span><span class="dot">·</span><time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time></div>'
+            f'<article class="pick body"><div class="meta"><span class="src">{esc(src)}</span>{('<span class="dot">·</span>by ' + esc(r["by"])) if r.get("by") else ""}{('<span class="dot">·</span><time datetime="' + r["dt"].isoformat() + '">' + str(r["dt"].date()) + "</time>") if r["dt"] else ""}</div>'
             f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
             + (f'<p class="why">{esc(r["note"])}</p>' if r.get("note") else "") + '</article>' for r in rows)
         out.append(f'<section class="picks" aria-label="{esc(head)}"><h2>{head}</h2><div class="pgrid">{cards}</div>'
