@@ -66,31 +66,57 @@
       "title": "CMPA celebrates federal government's significant investment in Canadian culture",
       "url": "https://cmpa.ca/pressreleases/cmpa-celebrates-federal-governments-significant-investment-in-canadian-culture",
       "date": "2026-11-05",
-      "note": "The CMPA's response to the federal budget: $600 million in immediate support for cultural industries and $300 million over two years for CBC/Radio-Canada."
+      "note": "The CMPA's response to the federal budget: $600 million in immediate support for cultural industries and $300 million over two years for CBC/Radio-Canada.",
+      "source": "CMPA"
     },
     {
       "title": "CEPI welcomes CMPA and AQPM as its first international observer members",
       "url": "https://cmpa.ca/pressreleases/cepi-welcomes-cmpa-and-aqpm-as-its-first-international-observer-members",
       "date": "2026-10-29",
-      "note": "Canadian independent producers' associations join the European producers' association CEPI as observers."
+      "note": "Canadian independent producers' associations join the European producers' association CEPI as observers.",
+      "source": "CMPA"
     },
     {
       "title": "CMPA appoints three new Board Directors on eve of federal advocacy meetings",
       "url": "https://cmpa.ca/pressreleases/cmpa-appoints-three-new-board-directors-on-eve-of-federal-advocacy-meetings",
       "date": "2026-10-05",
-      "note": "New directors, plus polling the CMPA took to Ottawa on the Online Streaming Act."
+      "note": "New directors, plus polling the CMPA took to Ottawa on the Online Streaming Act.",
+      "source": "CMPA"
     },
     {
       "title": "Global screen sector coalition calls on governments to protect local content",
       "url": "https://cmpa.ca/pressreleases/global-content-statement",
       "date": "2026-09-11",
-      "note": "A joint statement from 23 screen organizations, released at TIFF, backing domestic production requirements."
+      "note": "A joint statement from 23 screen organizations, released at TIFF, backing domestic production requirements.",
+      "source": "CMPA"
     },
     {
       "title": "KOTV, Tyler Hagan, and Anthony Cauchy named 2026 CMPA Indiescreen Awards winners",
       "url": "https://cmpa.ca/pressreleases/kotv-tyler-hagan-and-anthony-cauchy-named-2026-cmpa-indiescreen-awards-winners",
       "date": "2026-09-10",
-      "note": "The producers honoured at the Indiescreen Awards during TIFF."
+      "note": "The producers honoured at the Indiescreen Awards during TIFF.",
+      "source": "CMPA"
+    },
+    {
+      "source": "Avid",
+      "title": "Avid accelerates music creation and audio post production with new Pro Tools Extensions and AI-powered capabilities",
+      "url": "https://www.avid.com/press-room/2026/11/avid-accelerates-music-creation-and-audio-post-production-with-new-pro-tools-extensions-and-ai",
+      "date": "2026-11-05",
+      "note": "Pro Tools 2026.11 adds Extensions (a new plugin format), an AI Stem Separator that runs locally, MIDI Polyphonic Expression and sharper Windows displays."
+    },
+    {
+      "source": "Avid",
+      "title": "What's new in Avid Media Composer 2026.8",
+      "url": "https://www.avid.com/resource-center/whats-new-avid-media-composer-2026-8",
+      "date": "2026-08-31",
+      "note": "Multicam Auto Cut driven by speaker, better transcript tools, an OpenTimelineIO 2.0 adapter update and secure collaboration on shared storage with Media Composer Enterprise."
+    },
+    {
+      "source": "Avid",
+      "title": "Avid shows the future of agentic editing at IBC2026, launches Media Composer 2026.8",
+      "url": "https://www.avid.com/press-room/2026/08/avid-shows-the-future-of-agentic-editing-at-ibc2026",
+      "date": "2026-08-31",
+      "note": "The press release behind the 2026.8 launch, with Avid's agentic editing preview and browser-based editing."
     }
   ]
 }

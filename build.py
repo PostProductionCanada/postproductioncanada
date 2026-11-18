@@ -293,26 +293,34 @@ def load_picks(now):
     out.sort(key=lambda r: r["dt"], reverse=True)
     return out[:8]
 
+BODY_SECTIONS = {
+    "CMPA": ("📢 Latest from the CMPA", "https://cmpa.ca/", "cmpa.ca", "Press releases from the Canadian Media Producers Association."),
+    "Avid": ("🎛️ Latest from Avid", "https://www.avid.com/press-room", "avid.com", "Press releases and release notes from Avid, maker of Media Composer and Pro Tools."),
+}
+
+
 def bodies_html(now):
     try:
         raw = json.loads((ROOT / "curated.json").read_text()).get("bodies", [])
     except Exception:
         return ""
-    rows = []
+    groups = {}
     for r in raw:
         d = parse_date(r.get("date", ""))
         if d and now - d <= timedelta(days=int(r.get("expires_days", 75))):
-            rows.append({**r, "dt": d})
-    rows.sort(key=lambda r: r["dt"], reverse=True)
-    if not rows:
-        return ""
-    cards = "".join(
-        f'<article class="pick body"><div class="meta"><span class="src">CMPA</span><span class="dot">·</span><time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time></div>'
-        f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
-        + (f'<p class="why">{esc(r["note"])}</p>' if r.get("note") else "") + '</article>' for r in rows[:5])
-    return (f'<section class="picks" aria-label="Latest from the CMPA"><h2>📢 Latest from the CMPA</h2><div class="pgrid">{cards}</div>'
-            '<p class="note" style="margin-top:8px">Press releases from <a href="https://cmpa.ca/" target="_blank" rel="noopener">cmpa.ca</a>, the Canadian Media Producers Association. '
-            'This list is updated by hand.</p></section>')
+            groups.setdefault(r.get("source", "CMPA"), []).append({**r, "dt": d})
+    out = []
+    for src, (head, url, dom, blurb) in BODY_SECTIONS.items():
+        rows = sorted(groups.get(src, []), key=lambda r: r["dt"], reverse=True)[:5]
+        if not rows:
+            continue
+        cards = "".join(
+            f'<article class="pick body"><div class="meta"><span class="src">{esc(src)}</span><span class="dot">·</span><time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time></div>'
+            f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
+            + (f'<p class="why">{esc(r["note"])}</p>' if r.get("note") else "") + '</article>' for r in rows)
+        out.append(f'<section class="picks" aria-label="{esc(head)}"><h2>{head}</h2><div class="pgrid">{cards}</div>'
+                   f'<p class="note" style="margin-top:8px">{esc(blurb)} From <a href="{esc(url)}" target="_blank" rel="noopener">{esc(dom)}</a>. This list is updated by hand.</p></section>')
+    return "\n".join(out)
 
 
 def picks_html(picks):

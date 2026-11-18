@@ -1,5 +1,23 @@
 [
  {
+  "title": "Final Cut Pro 13 — a deep dive",
+  "url": "https://www.provideocoalition.com/final-cut-pro-13-a-deep-dive/",
+  "date": "2026-11-18T23:25:45+00:00",
+  "source": "ProVideo Coalition",
+  "excerpt": "After a bumpy release — Apple had some internal tech issues — Final Cut Pro 13 has arrived on the App Store. Though the 12.4 point release added support for the new iPhone 18 Pro cinematic mode a few weeks ago, this…",
+  "category": "picture",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Autodesk Adds AI Assistant, MCP Servers and Arnold Viewport Updates",
   "url": "https://postperspective.com/autodesk-adds-ai-assistant-mcp-servers-and-arnold-viewport-updates/",
   "date": "2026-11-18T23:10:18+00:00",
@@ -2925,24 +2943,6 @@
   "prov": [
    "BC"
   ]
- },
- {
-  "title": "American Film Market 2026: Independent Film Under Construction",
-  "url": "https://www.provideocoalition.com/american-film-market-2026-independent-film-under-construction/",
-  "date": "2026-11-12T17:12:19+00:00",
-  "source": "ProVideo Coalition",
-  "excerpt": "At this year’s American Film Market, “under construction” feels like an appropriate unofficial theme. Outside the hosting Fairmont Century Plaza, construction makes navigating the perimeter an unexpected part of the…",
-  "category": "picture",
-  "canada_only": false,
-  "google": false,
-  "intl": false,
-  "filter": false,
-  "require": null,
-  "canada": false,
-  "ai": false,
-  "cce": false,
-  "status": false,
-  "prov": []
  },
  {
   "title": "Can Anyone Shoot an IMAX Film? From Production to the Big Screen – Focus Check ep142",
