@@ -1,0 +1,142 @@
+{
+  "_help": "category: canada | post | vfx | gear | business.  canada_only: true keeps only items that mention Canadian keywords (use for international feeds).",
+  "feeds": [
+    {
+      "name": "Cartt.ca",
+      "url": "https://cartt.ca/feed/",
+      "category": "canada",
+      "filter": true
+    },
+    {
+      "name": "Canadian Society of Cinematographers",
+      "url": "https://www.csc.ca/feed/",
+      "category": "canada"
+    },
+    {
+      "name": "Broadcast Dialogue",
+      "url": "https://www.broadcastdialogue.com/feed/",
+      "category": "canada",
+      "filter": true
+    },
+    {
+      "name": "Creative BC",
+      "url": "https://www.creativebc.com/feed/",
+      "category": "canada"
+    },
+    {
+      "name": "WIFT",
+      "url": "https://www.wift.com/feed/",
+      "category": "canada"
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=post-production+Canada+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "canada",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Canadian+film+television+post-production+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "canada",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=VFX+studio+Canada+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Vancouver+OR+Toronto+OR+Montreal+visual+effects+studio+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Canadian+film+TV+production+news+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "canada",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Telefilm+Canada+OR+%22Canada+Media+Fund%22+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22Directors+Guild+of+Canada%22+OR+%22IATSE+873%22+OR+%22ACTRA%22+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Canadian+screen+industry+tax+credit+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Post Perspective",
+      "url": "https://postperspective.com/feed/",
+      "category": "picture"
+    },
+    {
+      "name": "ProVideo Coalition",
+      "url": "https://www.provideocoalition.com/feed/",
+      "category": "picture"
+    },
+    {
+      "name": "RedShark News",
+      "url": "https://www.redsharknews.com/rss.xml",
+      "category": "picture"
+    },
+    {
+      "name": "No Film School",
+      "url": "https://www.nofilmschool.com/rss.xml",
+      "category": "picture"
+    },
+    {
+      "name": "StudioDaily",
+      "url": "https://www.studiodaily.com/feed/",
+      "category": "picture"
+    },
+    {
+      "name": "Post Magazine",
+      "url": "https://www.postmagazine.com/feed/",
+      "category": "picture"
+    },
+    {
+      "name": "fxguide",
+      "url": "https://www.fxguide.com/feed/",
+      "category": "vfx"
+    },
+    {
+      "name": "VFX Voice",
+      "url": "https://www.vfxvoice.com/feed/",
+      "category": "vfx"
+    },
+    {
+      "name": "Cartoon Brew",
+      "url": "https://www.cartoonbrew.com/feed",
+      "category": "vfx"
+    },
+    {
+      "name": "CineD",
+      "url": "https://www.cined.com/feed/",
+      "category": "gear"
+    },
+    {
+      "name": "Creative Bloq",
+      "url": "https://www.creativebloq.com/feeds/all",
+      "category": "gear",
+      "filter": true
+    },
+    {
+      "name": "TheWrap",
+      "url": "https://www.thewrap.com/feed/",
+      "category": "business",
+      "canada_only": true
+    }
+  ]
+}
