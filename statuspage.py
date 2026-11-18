@@ -26,7 +26,12 @@ LINKS = {
     "sk": "https://www.creativesask.ca/",
     "mb": "https://mbfilmmusic.ca/",
     "qc": "https://www.sodec.gouv.qc.ca/",
+    "fic": "https://filmincanada.com/incentives/",
 }
+
+
+def fic(slug):
+    return ("filmincanada.com", LINKS["fic"] + slug)
 
 
 # (jurisdiction, program(s) and headline rates as reported, link label, url, note)
@@ -35,25 +40,27 @@ CREDITS = [
                 "Production Services Tax Credit (PSTC): 16% of qualified Canadian labour.",
      [("CPTC (CAVCO)", LINKS["cptc"]), ("PSTC (CAVCO)", LINKS["pstc"]), ("CRA guide, form T1131", LINKS["t1131"])],
      "Run jointly by CAVCO and the Canada Revenue Agency. A production can claim one of the two, not both."),
-    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 28% in CMPA's summary, which may be out of date); DAVE: 16% on digital animation, VFX and post-production labour.",
-     [("Creative BC", LINKS["bc"])],
-     "The DAVE credit is aimed squarely at post and VFX work. Rates have been changing, so confirm the current basic rate with Creative BC."),
-    ("Alberta", "Film and Television Tax Credit, reported at 22% or 30%.", [("CMPA overview", CMPA_HUB)], ""),
+    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 36% per filmincanada.com, 2026; "
+                         "an older CMPA summary lists 28%); DAVE: 16% on digital animation, VFX and post-production labour.",
+     [("Creative BC", LINKS["bc"]), fic("british-columbia")],
+     "The DAVE credit is aimed squarely at post and VFX work. The sources disagree on the basic rate, so confirm it with Creative BC."),
+    ("Alberta", "Film and Television Tax Credit, reported at 22% or 30%.", [fic("alberta"), ("CMPA overview", CMPA_HUB)], ""),
     ("Saskatchewan", "Production grant (service stream: 25% of eligible spend, up to $5M), with a 5% bonus "
                      "when most post-production happens in the province.",
-     [("Creative Saskatchewan", LINKS["sk"])], "A grant program rather than a tax credit."),
+     [("Creative Saskatchewan", LINKS["sk"]), fic("saskatchewan")], "A grant program rather than a tax credit."),
     ("Manitoba", "Cost-of-Salaries credit 45% (up to 65% with bonuses) or Cost-of-Production credit 30% (up to 38%).",
-     [("Manitoba Film & Music", LINKS["mb"])], ""),
+     [("Manitoba Film & Music", LINKS["mb"]), fic("manitoba")], ""),
     ("Ontario", "Ontario Film and Television Tax Credit (35% of eligible labour); "
                 "Ontario Production Services Tax Credit (21.5%).",
-     [("Ontario Creates", LINKS["on"])], ""),
-    ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit.",
-     [("SODEC", LINKS["qc"])], "Domestic credit rates not confirmed in my research. Check the program."),
+     [("Ontario Creates", LINKS["on"]), fic("ontario")], ""),
+    ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit "
+                       "(reported at 25% of spend, plus 16% on computer-aided effects and animation, per filmincanada.com).",
+     [("SODEC", LINKS["qc"]), fic("quebec")], "Domestic credit rates not confirmed in my research. Check the program."),
     ("New Brunswick", "Production Incentive: CMPA lists service productions at 25% of all spend or 40% of labour, "
                       "and New Brunswick companies at 30% of all spend or 40% of labour.",
-     [("CMPA overview", CMPA_HUB)], "Program terms change. Confirm directly with the province."),
+     [("CMPA overview", CMPA_HUB)], "filmincanada.com (2026) lists no service incentive for New Brunswick. The sources conflict, so confirm directly."),
     ("Nova Scotia", "Film and Television Production Incentive Fund, reported at about 25–26% of eligible spend.",
-     [("CMPA overview", CMPA_HUB)], "An incentive fund, not a tax credit."),
+     [fic("nova-scotia"), ("CMPA overview", CMPA_HUB)], "An incentive fund, not a tax credit."),
     ("Newfoundland & Labrador", "Film and Video Tax Credit.", [("CMPA overview", CMPA_HUB)],
      "Rate not confirmed in my research."),
     ("Prince Edward Island", "Film and television incentive via the PEI Film & Television Office.",
@@ -75,12 +82,97 @@ SOURCES = [
     ("AQTIS 514 IATSE reacts to Bill 35", "https://aqtis514iatse.com/stream.php?page=60+&filename=AQTIS+514+IATSE+r%C3%A9action+loi+35_EN.pdf"),
     ("A brief history of status of the artist (Saskatchewan Arts Alliance)",
      "https://www.saskartsalliance.ca/facts/a-brief-history-of-status-of-the-artist-in-canada"),
+    ("Incentives by province (filmincanada.com, an independent guide)", "https://filmincanada.com/incentives/manitoba"),
     ("Production volume by region, Profile 2025 (CMPA)", "https://profile.cmpa.ca/en/overview-of-the-screen-sector-in-canada/12-region"),
     ("Tax credits and incentives across Canada (CMPA)", CMPA_HUB),
     ("Producing in Canada (Dentons)", "https://www.dentons.com/-/media/pdfs/guides-reports-and-whitepapers/producing-in-canada-guide.pdf"),
 ]
 
 e = html.escape
+
+import json
+from pathlib import Path
+
+PROV_NAMES = {"ON": "Ontario", "BC": "British Columbia", "QC": "Québec", "NS": "Nova Scotia", "MB": "Manitoba",
+              "NL": "Newfoundland & Labrador", "AB": "Alberta", "SK": "Saskatchewan", "NB": "New Brunswick",
+              "PE": "Prince Edward Island", "NU": "Nunavut", "NT": "Northwest Territories", "YT": "Yukon"}
+
+
+def load_fic():
+    try:
+        return json.loads((Path(__file__).parent / "data" / "filmincanada.json").read_text())
+    except Exception:
+        return None
+
+
+def tracked_chart(d):
+    rows = []
+    top = max(v["total"] for v in d["by_province"].values())
+    for code, v in d["by_province"].items():
+        seg = ""
+        for st, cls in (("shooting", "s-shoot"), ("prep", "s-prep"), ("wrapping", "s-wrap")):
+            n = v.get(st, 0)
+            if n:
+                seg += f'<div class="seg {cls}" style="width:{n / top * 100:.1f}%" title="{n} {st}"></div>'
+        rows.append(f'<div class="row2"><div class="lab">{e(PROV_NAMES.get(code, code))}</div>'
+                    f'<div class="track2">{seg}</div><div class="val">{v["total"]}</div></div>')
+    return "\n".join(rows)
+
+
+def incentive_chart(d):
+    inc = d["incentives_net_effective_12m_series"]
+    have = sorted(((c, v["name"], v["net_effective"]) for c, v in inc.items() if v["net_effective"] is not None),
+                  key=lambda x: -x[2])
+    none = [v["name"] for c, v in inc.items() if v["net_effective"] is None]
+    top = max(h[2] for h in have)
+    rows = "\n".join(
+        f'<div class="row"><div class="lab">{e(n)}</div><div class="track"><div class="fill" style="width:{p / top * 100:.1f}%"></div></div>'
+        f'<div class="val">{p:.1f}%</div></div>' for _, n, p in have)
+    return rows, ", ".join(none)
+
+
+def type_chart(d):
+    labels = {"series": "Series", "feature": "Features", "mow": "Movies of the week", "unknown": "Not stated",
+              "limited": "Limited series", "doc": "Documentary", "music_video": "Music video"}
+    items = sorted(d["by_type"].items(), key=lambda kv: -kv[1])
+    top = items[0][1]
+    return "\n".join(
+        f'<div class="row"><div class="lab">{e(labels.get(k, k))}</div><div class="track"><div class="fill dark" style="width:{n / top * 100:.1f}%"></div></div>'
+        f'<div class="val">{n}</div></div>' for k, n in items)
+
+
+def fic_section(d):
+    if not d:
+        return ""
+    inc_rows, none = incentive_chart(d)
+    sh, pr, wr = (d["by_status"].get(k, 0) for k in ("shooting", "prep", "wrapping"))
+    return f"""
+<h2>Productions being tracked, by province</h2>
+<p>Productions in prep, shooting or wrapping, counted from public listings by filmincanada.com. Snapshot of
+<b>{e(d["now_shooting_last_run"] or "unknown date")}</b>: {d["records"]} productions, {sh} shooting, {pr} in prep and {wr} wrapping.</p>
+<div class="chart" role="img" aria-label="Stacked bar chart of tracked productions by province">
+<div class="legend"><span><i class="s-shoot"></i>Shooting</span><span><i class="s-prep"></i>In prep</span><span><i class="s-wrap"></i>Wrapping</span></div>
+{tracked_chart(d)}
+</div>
+<p class="note" style="margin-top:10px">Treat this as a rough guide. The tracker draws on public listings such as ACTRA, UBCP and provincial agency pages, so it favours productions that appear there. It is not a complete count, and it was last updated in August, so a production's status will have moved on since. For where the money is spent, use the dollar chart above.</p>
+
+<h3>By type of production</h3>
+<div class="chart">
+{type_chart(d)}
+</div>
+
+<h2>What a production gets back, by province</h2>
+<p>Estimated net effective incentive on a $12M (USD) limited series made as a service production, as modelled by filmincanada.com. It combines provincial and federal credits, so it is a comparison tool, not a promise.</p>
+<div class="chart" role="img" aria-label="Bar chart of estimated net effective incentive by province">
+{inc_rows}
+</div>
+<p class="note" style="margin-top:10px">No service incentive listed for: {e(none)}.</p>
+
+<div class="box"><h3>About this data</h3>
+<p>Numbers in these three charts come from <a href="https://filmincanada.com/" target="_blank" rel="noopener">filmincanada.com</a>
+(<a href="{e(d["source_urls"]["now_shooting"])}" target="_blank" rel="noopener">Now Shooting</a>,
+<a href="{e(d["source_urls"]["incentives"])}" target="_blank" rel="noopener">incentives by province</a>), an independent guide. The site says it is run by a service production company with a commercial interest in production volume. I show counts only and link to the full detail on their site. Fetched {e(d["fetched_at"][:10])}.</p></div>
+"""
 
 
 def chart():
@@ -107,8 +199,9 @@ def credits_rows():
 
 
 def render(leaf, favicon, updated):
+    fic_html = fic_section(load_fic())
     srcs = "\n".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a></li>' for t, u in SOURCES)
-    return PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{CHART}}", chart())\
+    return PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{CHART}}", chart()).replace("{{FIC}}", fic_html)\
         .replace("{{CREDITS}}", credits_rows()).replace("{{SOURCES}}", srcs).replace("{{UPDATED}}", updated)
 
 
@@ -153,7 +246,14 @@ th[scope=row]{white-space:nowrap;width:1%}
 .fill{background:var(--red);height:100%;border-radius:8px}
 .val{font-size:14px;font-weight:700;white-space:nowrap}.up{color:#12a37f;font-weight:600}.down{color:var(--red);font-weight:600}
 .lab{font-size:14.5px}
-@media (max-width:560px){.row{grid-template-columns:1fr;gap:4px}}
+.fill.dark{background:var(--ink)}
+.row2{display:grid;grid-template-columns:150px 1fr 40px;gap:10px;align-items:center;margin:8px 0}
+.track2{display:flex;height:22px;background:var(--chip);border-radius:8px;overflow:hidden}
+.seg{height:100%}.s-shoot{background:var(--red)}.s-prep{background:#e0a100}.s-wrap{background:#2f7de1}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--mute);margin-bottom:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.row2 .val{text-align:right}
+@media (max-width:560px){.row{grid-template-columns:1fr;gap:4px}.row2{grid-template-columns:110px 1fr 34px}}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;color:var(--mute);font-size:13px}
 </style>
 </head>
@@ -202,6 +302,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 {{CHART}}
 </div>
 <p class="note" style="margin-top:10px">Source: CMPA Profile 2025, estimates based on CAVCO data. Includes Canadian production, foreign location and service work, and broadcaster in-house production. CMPA reports the Prairies and Territories together and the Atlantic provinces together, so I can't split them further. I used dollars because it's the only figure published on the same basis for every region. Counts of productions aren't published consistently by province.</p>
+
+{{FIC}}
 
 <h2>Sources</h2>
 <ul>

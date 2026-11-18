@@ -123,6 +123,11 @@ def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
 
 def main():
+    try:
+        import refresh_filmincanada
+        refresh_filmincanada.main()
+    except Exception as err:
+        print("filmincanada step skipped:", err, file=sys.stderr)
     feeds = json.loads((ROOT / "feeds.json").read_text())["feeds"]
     print(f"Fetching {len(feeds)} feeds…")
     with ThreadPoolExecutor(max_workers=6) as ex:
