@@ -221,7 +221,37 @@ def card(i):
             f'<span class="dot">·</span><time datetime="{iso}">{iso[:10]}</time></div>'
             f'<h3><a href="{esc(i["url"])}" target="_blank" rel="noopener">{esc(i["title"])}</a></h3>{ex}</article>')
 
+def load_picks(now):
+    try:
+        raw = json.loads((ROOT / "curated.json").read_text()).get("picks", [])
+    except Exception:
+        return []
+    out = []
+    for r in raw:
+        d = parse_date(r.get("date", ""))
+        if not d or not r.get("url") or not r.get("title"):
+            continue
+        if now - d > timedelta(days=int(r.get("expires_days", 30))):
+            continue
+        out.append({**r, "dt": d})
+    out.sort(key=lambda r: r["dt"], reverse=True)
+    return out[:6]
+
+def picks_html(picks):
+    if not picks:
+        return ""
+    cards = "".join(
+        f'<article class="pick"><div class="meta"><span class="src">{esc(r["source"])}</span><span class="dot">·</span>'
+        f'<time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time></div>'
+        f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
+        + (f'<p class="why"><b>Why it matters:</b> {esc(r["note"])}</p>' if r.get("note") else "") + '</article>'
+        for r in picks)
+    return f'<section class="picks" aria-label="Editor\'s picks"><h2>⭐ Editor\'s Picks</h2><div class="pgrid">{cards}</div></section>'
+
 def render(items, sources, now):
+    picks = load_picks(now)
+    ptitles = {norm(r["title"]) for r in picks}
+    items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
     counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or i["category"] == k)
               for k in ["all"] + list(CATS)}
@@ -244,7 +274,7 @@ def render(items, sources, now):
                f'<a href="mailto:{esc(cfg["contact_email"])}">{esc(cfg["contact_email"])}</a></p>') if cfg.get("contact_email") else ""
     import base64
     flag = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "art" / "flag.svg").read_bytes()).decode()
-    return TEMPLATE.replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -325,6 +355,11 @@ main{padding:20px 0 40px}
 .chips{flex-wrap:wrap}
 .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.heroart{width:100%;height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 @media (max-width:760px){.herogrid{grid-template-columns:1fr}.heroart{max-width:380px}}
+.picks{margin-bottom:26px}.picks h2{margin:0 0 10px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.pick{background:var(--panel);border:1px solid var(--line);border-left:4px solid #e0a100;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.pick h3{margin:0;font-size:18px;line-height:1.3}.pick h3 a{text-decoration:none}.pick h3 a:hover{text-decoration:underline}
+.why{margin:0;font-size:14px;color:var(--mute)}.why b{color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:13px}
 footer p{margin:0 0 8px;max-width:60em}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -349,6 +384,7 @@ footer p{margin:0 0 8px;max-width:60em}
 
 {{SUBSCRIBE}}
 <main><div class="wrap">
+  {{PICKS}}
   <div class="grid" id="grid">
 {{CARDS}}
   </div>

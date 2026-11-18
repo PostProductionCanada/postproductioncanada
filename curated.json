@@ -1,0 +1,40 @@
+{
+  "_help": "Editor's picks shown at the top of the site. Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in your own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags.",
+  "picks": [
+    {
+      "title": "Canada's CBC Joins Global Microdrama Boom",
+      "url": "https://www.hollywoodreporter.com/business/digital/canada-cbc-microdrama-boom-1236747052/",
+      "source": "The Hollywood Reporter",
+      "date": "2026-11-03",
+      "note": "Vertical, short-form drama is arriving in Canada. Faster schedules and lean crews will change how post gets booked and paid."
+    },
+    {
+      "title": "Big tech sent a wish list to U.S. trade negotiators. Here are the Canadian policies they want scrapped",
+      "url": "https://www.thewirereport.ca/2026/11/02/big-tech-sent-a-wish-list-to-u-s-trade-negotiators-here-are-the-canadian-policies-they-want-scrapped/",
+      "source": "The Wire Report",
+      "date": "2026-11-02",
+      "note": "The rules that fund Canadian content are on the table in trade talks. That money is what keeps Canadian shows in post here."
+    },
+    {
+      "title": "Budget 2026 strengthens news funding, cuts CBC dollars, and leaves CanCon hanging",
+      "url": "https://mediapolicy.ca/2026/11/07/budget-2026-strengthens-news-funding-cuts-cbc-dollars-and-leaves-cancon-hanging/",
+      "source": "Media Policy",
+      "date": "2026-11-07",
+      "note": "What the federal budget means for the broadcasters and funders that commission Canadian screen work."
+    },
+    {
+      "title": "It's up to Carney to protect Canadian content on our screens",
+      "url": "https://www.ipolitics.ca/2026/11/04/its-up-to-carney-to-protect-canadian-content-on-our-screens/",
+      "source": "iPolitics",
+      "date": "2026-11-04",
+      "note": "An opinion piece on whether Canadian-content protections survive the pressure from Washington."
+    },
+    {
+      "title": "Everybody's macrodosing on microdramas",
+      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/29/everybodys-macrodosing-on-microdramas",
+      "source": "The Guardian",
+      "date": "2026-10-29",
+      "note": "Background on the microdrama phenomenon behind the shift in what gets made and where it's watched."
+    }
+  ]
+}
