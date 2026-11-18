@@ -4,7 +4,7 @@
 Python 3 standard library only. Run:  python3 build.py
 Headlines + short excerpts only; every item links back to the original publisher.
 """
-import html, json, re, sys, time, logo
+import html, json, os, re, sys, time, logo
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
@@ -16,7 +16,7 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "public"
 SITE_URL = "https://postproductioncanada.ca"
 MAX_AGE_DAYS = 21
-MAX_ITEMS = 180
+MAX_ITEMS = 600
 UA = "Mozilla/5.0 (compatible; PostProductionCanadaBot/1.0; +https://postproductioncanada.ca)"
 
 CANADA_RE = re.compile(
@@ -119,6 +119,30 @@ def fetch(feed):
     print(f"  ok   {feed['name']}: {len(items)}")
     return feed, items
 
+ARCHIVE = ROOT / "data" / "archive.json"
+
+
+def load_archive():
+    try:
+        rows = json.loads(ARCHIVE.read_text())
+    except Exception:
+        return []
+    out = []
+    for r in rows:
+        try:
+            r["date"] = datetime.fromisoformat(r["date"])
+            out.append(r)
+        except Exception:
+            continue
+    return out
+
+
+def save_archive(items):
+    ARCHIVE.parent.mkdir(exist_ok=True)
+    ARCHIVE.write_text(json.dumps([{**i, "date": i["date"].isoformat()} for i in items],
+                                  ensure_ascii=False, separators=(",", ":")))
+
+
 def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
 
@@ -170,7 +194,19 @@ def main():
                 if AUDIO_RE.search(it["title"]): it["category"] = "audio"
                 elif VFX_RE.search(it["title"]): it["category"] = "vfx"
             items.append(it)
+    # remember stories between builds so the window really is MAX_AGE_DAYS, not just what feeds show today
+    fresh = {i["url"] for i in items}
+    for a in load_archive():
+        if a["url"] in fresh or a["date"] < cutoff or a["date"] > now + timedelta(days=1):
+            continue
+        key = norm(a["title"])
+        if key in seen:
+            continue
+        seen.add(key)
+        items.append(a)
     items.sort(key=lambda i: i["date"], reverse=True)
+    if os.environ.get("GITHUB_ACTIONS"):
+        save_archive(items)
     items = items[:MAX_ITEMS]
     sources = sorted({i["source"] for i in items})
     print(f"{len(items)} stories from {len(sources)} sources")
@@ -300,6 +336,16 @@ BODY_SECTIONS = {
 }
 
 
+def _body_card(src, r):
+    by = '<span class="dot">·</span>by ' + esc(r["by"]) if r.get("by") else ""
+    when = ""
+    if r.get("dt"):
+        when = '<span class="dot">·</span><time datetime="' + r["dt"].isoformat() + '">' + str(r["dt"].date()) + "</time>"
+    note = '<p class="why">' + esc(r["note"]) + "</p>" if r.get("note") else ""
+    return ('<article class="pick body"><div class="meta"><span class="src">' + esc(src) + "</span>" + by + when + "</div>"
+            '<h3><a href="' + esc(r["url"]) + '" target="_blank" rel="noopener">' + esc(r["title"]) + "</a></h3>" + note + "</article>")
+
+
 def bodies_html(now):
     try:
         raw = json.loads((ROOT / "curated.json").read_text()).get("bodies", [])
@@ -315,10 +361,7 @@ def bodies_html(now):
         rows = sorted(groups.get(src, []), key=lambda r: r["dt"] or datetime(1970, 1, 1, tzinfo=timezone.utc), reverse=True)[:5]
         if not rows:
             continue
-        cards = "".join(
-            f'<article class="pick body"><div class="meta"><span class="src">{esc(src)}</span>{('<span class="dot">·</span>by ' + esc(r["by"])) if r.get("by") else ""}{('<span class="dot">·</span><time datetime="' + r["dt"].isoformat() + '">' + str(r["dt"].date()) + "</time>") if r["dt"] else ""}</div>'
-            f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
-            + (f'<p class="why">{esc(r["note"])}</p>' if r.get("note") else "") + '</article>' for r in rows)
+        cards = "".join(_body_card(src, r) for r in rows)
         out.append(f'<section class="picks" aria-label="{esc(head)}"><h2>{head}</h2><div class="pgrid">{cards}</div>'
                    f'<p class="note" style="margin-top:8px">{esc(blurb)} From <a href="{esc(url)}" target="_blank" rel="noopener">{esc(dom)}</a>. This list is updated by hand.</p></section>')
     return "\n".join(out)

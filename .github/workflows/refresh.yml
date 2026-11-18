@@ -8,7 +8,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -25,6 +25,17 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 build.py
+      - name: Save rolling archive
+        continue-on-error: true
+        run: |
+          git config user.name "Post Production Canada"
+          git config user.email "noreply@postproductioncanada.ca"
+          git add data/archive.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update rolling archive"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
