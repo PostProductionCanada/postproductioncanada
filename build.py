@@ -170,7 +170,13 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+    import statuspage
+    lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
+    from urllib.parse import quote as _q
+    _leaf = f'<svg viewBox="-56 -3 112 106" aria-hidden="true"><polygon points="{lf}" style="fill:var(--red);stroke:var(--red);stroke-width:2;stroke-linejoin:round"/></svg>'
+    _fav = "data:image/svg+xml," + _q(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -3 112 106"><polygon points="{lf}" fill="#d52b1e" stroke="#d52b1e" stroke-width="2" stroke-linejoin="round"/></svg>')
+    (OUT / "status-of-the-artist.html").write_text(statuspage.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
@@ -283,8 +289,13 @@ def render(items, sources, now):
     contact = (f'<p>Want your outlet, guild or studio added, or have a story tip? '
                f'<a href="mailto:{esc(cfg["contact_email"])}">{esc(cfg["contact_email"])}</a></p>') if cfg.get("contact_email") else ""
     import base64
+    from urllib.parse import quote
+    poly = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
+    leaf = f'<svg viewBox="-56 -3 112 106" aria-hidden="true"><polygon points="{poly}" style="fill:var(--red);stroke:var(--red);stroke-width:2;stroke-linejoin:round"/></svg>'
+    fav_svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -3 112 106"><polygon points="{poly}" fill="#d52b1e" stroke="#d52b1e" stroke-width="2" stroke-linejoin="round"/></svg>'
+    favicon = "data:image/svg+xml," + quote(fav_svg)
     flag = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "art" / "flag.svg").read_bytes()).decode()
-    return TEMPLATE.replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -313,7 +324,7 @@ TEMPLATE = r"""<!doctype html>
 <meta property="og:description" content="The latest Canadian post-production, VFX and screen-industry news, all in one place.">
 <meta property="og:url" content="{{SITE}}/">
 <meta name="theme-color" content="#0f1115">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d52b1e'/><path d='M38 28l34 22-34 22z' fill='white'/></svg>">
+<link rel="icon" href="{{FAVICON}}">
 <style>
 :root{--bg:#f6f4ef;--panel:#fff;--ink:#16181d;--mute:#69707d;--line:#e4e0d6;--red:#d52b1e;--chip:#ece8dd}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1115;--panel:#181b21;--ink:#eceae4;--mute:#9099a8;--line:#272b33;--red:#ff5a4d;--chip:#222630}}
@@ -325,8 +336,8 @@ a{color:inherit}
 header{border-bottom:1px solid var(--line)}
 .top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:20px;text-decoration:none}
-.logo{width:30px;height:30px;border-radius:8px;background:var(--red);display:grid;place-items:center}
-.logo svg{width:14px;height:14px;fill:#fff;margin-left:2px}
+.logo{width:30px;height:30px;display:grid;place-items:center}
+.logo svg{width:28px;height:28px}
 .brand b{color:var(--red)}
 .tools{display:flex;gap:8px;align-items:center}
 .btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer;text-decoration:none}
@@ -377,8 +388,8 @@ footer p{margin:0 0 8px;max-width:60em}
 </head>
 <body>
 <header><div class="wrap top">
-  <a class="brand" href="/"><span class="logo"><svg viewBox="0 0 10 10"><path d="M0 0l10 5-10 5z"/></svg></span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}<a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a>
+  <div class="tools">{{SUBBTN}}<a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
