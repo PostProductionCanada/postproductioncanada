@@ -1,5 +1,75 @@
 [
  {
+  "title": "Is Superhero Fatigue Actually Real? The Reception of 'Endgame Encore' Might Have the Answer",
+  "url": "https://nofilmschool.com/is-superhero-fatigue-real",
+  "date": "2026-11-18T21:30:04+00:00",
+  "source": "No Film School",
+  "excerpt": "It’s a debate as old as time, really. Are superheroes in the media played out? The most common genre comparison when this topic comes up is obviously the Western, which obviously had a major heyday before fizzling out…",
+  "category": "picture",
+  "canada_only": false,
+  "google": false,
+  "filter": false,
+  "canada": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Why You Should Start Your Screenplay With an “Anxiety Draft”",
+  "url": "https://nofilmschool.com/starting-a-screenplay-with-an-anxiety-draft",
+  "date": "2026-11-18T21:01:31+00:00",
+  "source": "No Film School",
+  "excerpt": "Whenever I’m sitting down to tackle a new screenwriting project, my anxiety shoots through the roof. It usually stays at that peak until my first draft is completed, but that initial hit of it while staring at the blank…",
+  "category": "picture",
+  "canada_only": false,
+  "google": false,
+  "filter": false,
+  "canada": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Netflix Resurrects ‘Grendel’ As An Adult Animated Series With Bobbypills",
+  "url": "https://www.cartoonbrew.com/series/netflix-grendel-bobbypills-bobak-esfarjani-269583.html",
+  "date": "2026-11-18T20:50:04+00:00",
+  "source": "Cartoon Brew",
+  "excerpt": "Netflix is having another go at Matt Wagner’s 'Grendel' comics, with Bobak Esfarjani as showrunner and French standout studio Bobbypills handling animation.",
+  "category": "vfx",
+  "canada_only": false,
+  "google": false,
+  "filter": false,
+  "canada": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "2027 Oscars Short Film Contenders: ‘The View’ Director Alli Sadegiani",
+  "url": "https://www.cartoonbrew.com/awards/the-view-director-alli-sadegiani-269526.html",
+  "date": "2026-11-18T20:32:17+00:00",
+  "source": "Cartoon Brew",
+  "excerpt": "The Pixar veteran turns childhood memories of growing up between cultures in Sweden into a short that blends hand-drawn animation with live-action footage.",
+  "category": "vfx",
+  "canada_only": false,
+  "google": false,
+  "filter": false,
+  "canada": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Floyd Norman Accepts Honorary Oscar At The Governors Awards",
+  "url": "https://www.cartoonbrew.com/awards/floyd-norman-honorary-oscar-2-269576.html",
+  "date": "2026-11-18T20:14:02+00:00",
+  "source": "Cartoon Brew",
+  "excerpt": "Disney animation legend Floyd Norman accepted an honorary Oscar at the 2026 Governors Awards and recalled his first visit to the Disney studio.",
+  "category": "vfx",
+  "canada_only": false,
+  "google": false,
+  "filter": false,
+  "canada": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Telefilm Canada names Erin Burke as national director of feature film for English market",
   "url": "https://cartt.ca/telefilm-canada-names-erin-burke-as-national-director-of-feature-film-for-english-market/",
   "date": "2026-11-18T20:01:39+00:00",
@@ -9,7 +79,23 @@
   "canada_only": false,
   "google": false,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "98 Years Ago, This 7 Min Cartoon Changed Hollywood Animation Forever",
+  "url": "https://nofilmschool.com/steamboat-willie",
+  "date": "2026-11-18T19:34:08+00:00",
+  "source": "No Film School",
+  "excerpt": "On November 18, 1928, audiences at New York City’s Colony Theater were the first to have their lives changed forever. They thought they were seated to see a war drama called Gang War. But before the main titles rolled…",
+  "category": "vfx",
+  "canada_only": false,
+  "google": false,
+  "filter": false,
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "‘Somewhere Out There’ Directors On Don Bluth, Taking On Disney, And The Cost Of Going Independent (EXCLUSIVE CLIP)",
@@ -21,7 +107,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "The Immersive Audio Wars Heat Up as Shure Drops a New Spatial Microphone Kit",
@@ -33,7 +121,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Adobe MAX 2026 Part 2: Recap",
@@ -45,7 +135,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Skydance Animation Shakeup; The Death Of Etsy; Manchester’s AI Ban",
@@ -57,7 +149,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "A New Vimeo on Demand Alternative is Here as rushes Launches Rentals",
@@ -69,7 +163,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Read and Download the Project Hail Mary Screenplay",
@@ -81,7 +177,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "ShotDeck Gets a Makeover With New Look and a Range of New Features",
@@ -93,7 +191,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Etsy-dus: Artists Leave The Online Marketplace In Droves After New Terms Allow AI Training On Their Work",
@@ -105,7 +205,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Why Francis Lawrence Nails One 'Hunger Games' Adaptation and Struggles on Others",
@@ -117,7 +219,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "How to Cast an Indie Film",
@@ -129,7 +233,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Skydance Animation Shakeup: Bill Damaschke Steps Down At WBPA, Michael Ouweleen Takes On Nickelodeon",
@@ -141,7 +247,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "'Primetime' Uses 4 Cameras to Tell You What's Real",
@@ -153,7 +261,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "What Editors Can Learn from the Greatest Ad Agencies",
@@ -165,7 +275,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "ShotDeck Relaunch Announced – Natural Language Search, Movie and TV Clips, Public Decks",
@@ -177,7 +289,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "On Eve Of ‘GTA VI’ Launch, Rockstar Is In Court Defending Itself Against Union-Busting Claims",
@@ -189,7 +303,11 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "Magic Lantern for Canon DSLRs in 2026 – 14-Bit RAW Video, Film Roll, Soup Engine and M-Film",
@@ -201,7 +319,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "rushes Rentals Launched – Vimeo On Demand Alternative with 90% Revenue Share and Rentals from Your Own Website",
@@ -213,7 +333,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1: the first compact cinema camera in LUMIX history",
@@ -225,7 +347,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Series Mania Forum Names Canada and Québec Guests of Honour for 2027",
@@ -237,7 +361,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "Aiarty Video Enhancer – Offline AI Denoising, 4K Upscaling and Black Friday Offer",
@@ -249,7 +377,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Density 1.0 color grading plugin for Final Cut Pro",
@@ -261,7 +391,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "LUMIX SHX1 cage: Wooden Camera range",
@@ -273,7 +405,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Winning the Agentic Shelf: What CPG Marketers Need to Know",
@@ -285,7 +419,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Shooting Color, Contrast and Glamour for Michael Showalter’s Verity",
@@ -297,7 +433,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Pedro Almodóvar’s ‘Bitter Christmas’: Decoding the Layers of Autofiction",
@@ -309,7 +447,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Jon Portman’s ‘Beast Of The Seine,’ A Hand-Drawn Short Inspired By A Bizarre 1908 Dog Story, Is Now Online",
@@ -321,7 +461,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "The 5 Best William Friedkin Movies",
@@ -333,7 +475,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "The French Psychological Horror Film That Pushed Hitchcock To Make ‘Psycho’",
@@ -345,19 +489,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
- },
- {
-  "title": "2027 Oscars Short Film Contenders: ‘Tuna Tartare’ Director Lena Greene",
-  "url": "https://www.cartoonbrew.com/awards/tuna-tartare-lena-greene-oscars-short-269511.html",
-  "date": "2026-11-17T21:14:10+00:00",
-  "source": "Cartoon Brew",
-  "excerpt": "An expired tuna can and a fake Louis Vuitton purse run a karaoke bar in a 2D musical with a nightmare sequence made from 100 watercolor paintings.",
-  "category": "vfx",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Film Quote of the Day: This 'Friday the 13th' Line Established a Hit Franchise",
@@ -369,7 +503,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "PRODUCTION: Yianna Americanou Shoots Cypriot/Belgian/Canadian My Name Is Lily",
@@ -381,7 +517,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Robert Pattinson is Ushering In the Movie Star Era Again",
@@ -393,7 +531,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "What an Audi CEO Controversy Teaches about Politics and Employee Trust",
@@ -405,7 +545,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Signiant Acquires Ceivo Media Intelligence Technology",
@@ -417,7 +559,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Three Essential Screenwriting Lessons from the 'Hunger Games' Movies",
@@ -429,7 +573,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Skywild Pictures buys Niv Fichman’s Rhombus in major Canadian production deal",
@@ -441,7 +587,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Open Enrollment: The Complete Guide to College Campus Experiential",
@@ -453,7 +601,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Targeting College Students? Try Tapping into Campus Rituals",
@@ -465,7 +615,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Influencer Partnerships: 3 Ways to Amplify College Campus Campaigns",
@@ -477,7 +629,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "From Kotex to American Eagle, Brands are Rushing RushTok to Reach Gen Z",
@@ -489,7 +643,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "3 Best Practices for Building a College Campus Campaign",
@@ -501,7 +657,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Pizza Shops & Mini Marts: Inside Fordham University’s Recruitment Strategy",
@@ -513,7 +671,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "How to Create Your Own Micro Short Film Using Topview’s Film Studio",
@@ -525,7 +685,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Shure MV360 spatial microphone & MV360+ with built-in 32-bit float recorder w/wireless control",
@@ -537,7 +699,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Disney Nearly Doubles Quarterly Profit, Targets $3 Billion In Annual Cuts As More Layoffs Loom",
@@ -549,7 +713,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Speaking in Shots: How DP Lawrence Sher Translates Director Visions & ShotDeck’s Next Chapter",
@@ -561,7 +727,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Final Cut Pro 13 adds MotionVFX for one of the biggest updates ever",
@@ -573,7 +741,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Red Connect Adds Native Colorfront Color Management",
@@ -585,7 +755,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Final Cut Pro 13 First Look – The MotionVFX Library Is Why I Am Subscribing to Apple Creator Studio",
@@ -597,7 +769,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Add 32-Bit Float Audio Recording to the New LUMIX SHX1 With This XLR Handle",
@@ -609,7 +783,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic Offers Even More Add-On Support for the New LUMIX SHX1 With This Control Grip Handle",
@@ -621,7 +797,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Nikon’s Big ZR Version 2.00 Firmware Update is Finally Ready to Drop Next Week",
@@ -633,7 +811,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Beeble’s Updated SwitchX 3.0: AI Environments, More Creative Control",
@@ -645,7 +825,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "How to Check Any Shot's Composition in Seconds",
@@ -657,7 +839,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "9 Differences Between Amateur and Pro Writers, from a Disney Head Writer",
@@ -669,7 +853,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Creative BC welcomes Pete Mitchell and Tarek Elneweihi to its Board of Directors",
@@ -681,7 +867,11 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "Black Friday: a guide to keep you safe from AI promoted fake websites",
@@ -693,7 +883,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Tool Tip Tuesday for Adobe Premiere: Color Matching with the AI Assistant (Beta)",
@@ -705,7 +897,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Post Vets Launch UK-Based Post Strategy Consultancy, WonderWorks",
@@ -717,7 +911,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1 Interview – Tsumura-san on Blackmagic RAW, Missing ND, S9 Successor, and Firmware Hacks",
@@ -729,7 +925,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic Goes 6K Open Gate With Its New LUMIX SHX1 Full-Frame Box Cinema Camera",
@@ -741,7 +939,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1 Lab Test – Rolling Shutter, Dynamic Range and Exposure Latitude",
@@ -753,7 +953,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX AU-SHX1 Announced – 6K Full-Frame Box Camera, OLPF, Blackmagic RAW Recording to SSD, ARRI LogC3 Pre-installed",
@@ -765,7 +967,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1: specs, price, and release date",
@@ -777,7 +981,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1 Review and Mini-Documentary – One Box Camera to Rule Them All?",
@@ -789,7 +995,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Plugs, Boots, Copper – Know Your Cable Maintenance & Replacement Parts",
@@ -801,7 +1009,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "‘The Cat Came Back’ Director Cordell Barker Gives Santa A Rival In The Full Trailer For ‘The Anta Claus Of The South Pole’ (EXCLUSIVE)",
@@ -813,7 +1023,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Websites Aren’t Just For People Anymore. Here’s How Marketers Optimize Them For Agents",
@@ -825,7 +1037,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Canadian film powerhouse Rhombus Media acquired by nascent player Skywild Pictures",
@@ -837,7 +1051,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "\"Our priority is to ensure that Québec remains an attractive destination for major productions\" - Señal News",
@@ -849,7 +1065,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "Nikon ZR Firmware 2.00 Reportedly Coming November 24 – High ISO NR for ProRes N-Log, Full HD Limit for LUT Over HDMI",
@@ -861,7 +1081,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Camerimage 2026 Winners – Golden Frog for Łukasz Żal and Fatherland, Shot in Black and White on ARRI ALEXA 35",
@@ -873,7 +1095,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Disney’s radical new animation technique will make Hexed the end of an era",
@@ -885,7 +1109,9 @@
   "canada_only": false,
   "google": false,
   "filter": true,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Sony drone boom mic patent: stays out of shot",
@@ -897,7 +1123,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Why Trump Is Throwing His Weight Behind a Hollywood Tax Credit",
@@ -909,7 +1137,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "AI Is the Big Show. Creators Carry the Story.",
@@ -921,7 +1151,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "HPA NET Roundtable: AI as a Second Unit",
@@ -933,7 +1165,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Scott Brothers Entertainment launches Curity Studios podcast network",
@@ -945,7 +1179,9 @@
   "canada_only": false,
   "google": false,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Telus directors have issues with Quebecor offer to buy telco giant",
@@ -957,7 +1193,11 @@
   "canada_only": false,
   "google": false,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "2027 Oscars Short Film Contenders: ‘With Tapes And Toasts In The Car’ Director Kiana Naghshineh",
@@ -969,7 +1209,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Why Hollywood Is Sweating Thursday’s 'Grand Theft Auto VI' Launch",
@@ -981,7 +1223,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Film Quote of the Day: The ‘Harry Potter’ Line That Reminds Us Not to Lose Ourselves in Dreams",
@@ -993,7 +1237,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Consider Leveling Up Your Color Grading Workflows in Final Cut Pro With This New Color Plugin",
@@ -1005,7 +1251,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Lilith Fair, Backrooms, win at the Directors Guild of Canada Awards",
@@ -1017,7 +1265,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "7 Best Maggie Gyllenhaal Movies, Ranked",
@@ -1029,7 +1279,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Virtual Content Creator Roundtable",
@@ -1041,7 +1293,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "A Quick Look at How Adobe’s New AI Assistant Could Streamline Your Workflows in Premiere",
@@ -1053,7 +1307,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Box Office: ‘The Cat In The Hat’ Holds At No. 2 As ‘Wildwood’ Passes ‘Kubo’",
@@ -1065,7 +1321,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "How Do You Edit a Movie With a 6-Hour First Cut? 'Project Hail Mary' Editor Explains",
@@ -1077,19 +1335,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
- },
- {
-  "title": "Everything You Need to Know About Adobe Premiere 27.0 and Its Latest Improvements",
-  "url": "https://nofilmschool.com/adobe-premiere-update-27-0",
-  "date": "2026-11-16T17:00:06+00:00",
-  "source": "No Film School",
-  "excerpt": "After wrapping up a week at Adobe MAX 2026 in Miami, it’s hard not to see creative design choices and the workflows that bring them to life in pretty much all aspects of media, advertisements, and, of course…",
-  "category": "picture",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Lomography Lomo72: price, specs, release date",
@@ -1101,7 +1349,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Nikon Z8 Firmware Mod NikonFirmwarePatch Adds 8.3K Open-Gate N-RAW, More ProRes Options and S-Log3",
@@ -1113,7 +1363,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Adobe Max: AI takes center stage in Miami",
@@ -1125,31 +1377,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
- },
- {
-  "title": "Robert Pattinson Is James Bond: What This Means for the Future of the 007 Franchise",
-  "url": "https://nofilmschool.com/robert-pattinson-is-james-bond",
-  "date": "2026-11-16T16:16:37+00:00",
-  "source": "No Film School",
-  "excerpt": "The wait is over; a new person is taking up the mantle of 007. Well, James Bond will be played by one of Hollywood's hottest actors: Robert Pattinson. Amazon made the announcement this morning, and we officially have…",
-  "category": "picture",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
- },
- {
-  "title": "Hack Your Nikon Z30 to Raise Bitrates up to 200 Mbps in 4K With This New Experimental Firmware",
-  "url": "https://nofilmschool.com/wonder-lantern-nikon-z30",
-  "date": "2026-11-16T16:00:05+00:00",
-  "source": "No Film School",
-  "excerpt": "Is the Magic Lantern era of camera hacking back? It sure looks like it. And, sadly, as expected, however you want to shake it, you can guess the driving force behind experimental firmware extensions making a comeback…",
-  "category": "picture",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "The huge CyberLink Black Friday sale is a fantastic chance to get into video editing",
@@ -1161,7 +1391,9 @@
   "canada_only": false,
   "google": false,
   "filter": true,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "The first scene from the new Harry Potter series just dropped – and it's sparked a fierce filmmaking debate",
@@ -1173,7 +1405,9 @@
   "canada_only": false,
   "google": false,
   "filter": true,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "SmallRig Magnetic Phone Support Mounts the iPhone Duo on a Camera – MagSafe, Dual Rotating Shafts, 80g Aluminum Build",
@@ -1185,7 +1419,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Manifesting who we are with GoPro’s MISSION 1 PRO ILS",
@@ -1197,7 +1433,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "New York Closes In on California as Top US Production State – California Answers With $1 Billion Tax Credit Plan",
@@ -1209,7 +1447,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "ASUS XG Core RX 9060 XT LP: specs and price",
@@ -1221,7 +1461,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Memory Costs Hit Canon, FUJIFILM, Nikon and Sony – Canon Plans Price Increases From 2027",
@@ -1233,7 +1475,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Beeble SwitchX 3.0: new features and availability",
@@ -1245,7 +1489,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Christine Shaw: Adapting Filmmaking to Every Story and Platform",
@@ -1257,7 +1503,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Bridging the Worlds of Traditional Animation and Content Creation",
@@ -1269,7 +1517,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "The Testaments, Small Achievable Goals lead 2026 DGC Awards winners",
@@ -1281,7 +1531,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Trump says he’s working with bipartisan senators on film industry legislation",
@@ -1293,7 +1545,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "European Film Awards Unveil One Of Their Strongest Animation Lineups In Years",
@@ -1305,7 +1559,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "'The Last of Us' series brought more than $141 million in production spending to Alberta; a study found i",
@@ -1317,7 +1573,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "AB"
+  ]
  },
  {
   "title": "Manchester Animation Festival Bans Films Made With GenAI, Names ‘In Waves’ Best Feature",
@@ -1329,7 +1589,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
@@ -1341,7 +1603,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Donald Trump Urges Congress To Pass Federal Film & TV Tax Incentive Amid Worries Bill Will Languish: “Get This Done!”",
@@ -1353,7 +1617,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Indigenous Screen Office welcomes $51M promised by federal budget",
@@ -1365,7 +1631,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "British Columbia, Canada, at the IDFA Forum 2026",
@@ -1377,7 +1645,11 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "Save Hundreds on Your Next Cinema Camera – MZed Pro Members Now Get B&H Education Pricing",
@@ -1389,7 +1661,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Insta360 X5 in How to Rob a Bank: 360 camera use",
@@ -1401,7 +1675,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Rescue Your Interview Audio Without Leaving Premiere",
@@ -1413,7 +1689,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Nikon Z30 Wonder Lantern Mod Adds Higher Bitrates – 200 Mbps 4K, 25-Minute Slow Motion, Photo Zebras",
@@ -1425,7 +1703,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "ARRI Publishes Legacy Analog Camera Archive – ARRIFLEX 35, 16SR and 416 Manuals, Brochures and Specs Online",
@@ -1437,7 +1717,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "GKIDS Acquires NA Rights To Cartoon Saloon’s ‘Julián,’ Sets March 2027 Theatrical Release",
@@ -1449,7 +1731,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "New Trailer For Brad Bird’s ‘Ray Gunn’ Arrives Ahead Of Limited 70mm Run",
@@ -1461,19 +1745,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
- },
- {
-  "title": "‘Gatto’ Trailer Offers A Closer Look At Pixar’s Painterly Turn",
-  "url": "https://www.cartoonbrew.com/feature-film/gatto-trailer-pixar-enrico-casarosa-269394.html",
-  "date": "2026-11-13T03:48:47+00:00",
-  "source": "Cartoon Brew",
-  "excerpt": "Pixar’s new ‘Gatto’ trailer showcases the hand-painted 2D textures and CG animation of Enrico Casarosa’s Venice-set crime comedy, opening March 5, 2027.",
-  "category": "vfx",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Mega Man Legends reappears in the ACTRA Toronto registry and theories are already circulating",
@@ -1485,7 +1759,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "Playing in Canada’s cinema sandbox is art on a tight budget",
@@ -1497,7 +1775,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Creative Pathways™ Below-the-Line Mentorship 2026/27 Open for Applications",
@@ -1509,7 +1789,11 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "American Film Market 2026: Independent Film Under Construction",
@@ -1521,7 +1805,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Can Anyone Shoot an IMAX Film? From Production to the Big Screen – Focus Check ep142",
@@ -1533,7 +1819,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Bond producer first female president of film school",
@@ -1545,7 +1833,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Mega Man Legends ACTRA Toronto Listing Reveals A New Project Could Be in The Works",
@@ -1557,7 +1847,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "Blackmagic Ambisonic Microphone Announced – 7th Order Ambisonics, 108 MEMS Microphones, Single USB-C Cable",
@@ -1569,7 +1863,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Council plans to charge TV productions for filming",
@@ -1581,31 +1877,23 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
-  "title": "Acclaimed French Adult Animated Comedy ‘Jim Queen’ Is Getting A U.S. Theatrical Release After Magnolia Pickup",
-  "url": "https://www.cartoonbrew.com/distribution/jim-queen-us-theatrical-release-magnolia-pictures-269369.html",
-  "date": "2026-11-12T00:56:45+00:00",
-  "source": "Cartoon Brew",
-  "excerpt": "Magnolia Pictures has acquired the acclaimed French adult animated comedy, with an English-language dub featuring Jordan Firstman and Matteo Lane.",
-  "category": "vfx",
+  "title": "CANADA Wins Best Production Company at 2026 UK Music Video Awards — LBB",
+  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTGRfaVlZUG9Od0hZbTFIR01Odzl1eG5zMjZPOTdVdTRES3N1SVVrSGhPem5naUlnalplejJjWTNwLVp6bEhnY2RmYjh0Z3ZaSzRJWTh4OWI4b3ctQ2NKZkY2TXpZS3dDTl94TDBRMWFZa0hzSy1OenFOMkJmSG96TVRVS0FuX0VpTVUtRkdOYWpFaXptSnBz?oc=5",
+  "date": "2026-11-11T14:52:15+00:00",
+  "source": "LBB - Little Black Book",
+  "excerpt": "",
+  "category": "audio",
   "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
- },
- {
-  "title": "2027 Oscars Short Film Contenders: ‘18 Months’ Directors Paulo Garcia And Natália Gouvea",
-  "url": "https://www.cartoonbrew.com/awards/18-months-directors-paulo-garcia-natalia-gouvea-269280.html",
-  "date": "2026-11-12T00:32:17+00:00",
-  "source": "Cartoon Brew",
-  "excerpt": "Stop-motion puppets, projected shadows, and digital expressions bring a true story of two fathers and an unexpected path to parenthood to life.",
-  "category": "vfx",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": false
+  "google": true,
+  "filter": true,
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Petition to scrap Canadian film industry's 'federal grind' to be tabled",
@@ -1617,7 +1905,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Mega Man Legends – New Media Project Listed by ACTRA Toronto Union",
@@ -1629,7 +1919,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "George Stroumboulopoulos hosts new MADE / unmade conversation series for CMF and Telefilm",
@@ -1641,7 +1935,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Acclaimed Guitarist and Composer Donna Grantis Joins the Sustainable Production Forum for an Exclusive Live Performance and Sneak Peek of New Mercury Films Documentary",
@@ -1653,7 +1949,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Canadian Armed Forces Veterans Given Production Experience On ‘Murdoch Mysteries’",
@@ -1665,7 +1963,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "‘Mega Man Legends – New Media’ listing appears on ACTRA Toronto current projects page",
@@ -1677,7 +1977,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "British Columbia, Canada at the American Film Market 2026",
@@ -1689,7 +1993,11 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "Canada unveils $600M funding boost for film, TV, music and local media",
@@ -1701,7 +2009,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Canadian Government Introduces Canada Creative Credit to Support ‘Artistic Production’",
@@ -1713,7 +2023,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "ACTRA Manitoba, MCMA hand out annual awards",
@@ -1725,7 +2037,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "MB"
+  ]
  },
  {
   "title": "British Columbia, Canada, at the World Congress of Science and Factual Producers 2026",
@@ -1737,7 +2053,11 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "Ottawa reveals details on long-promised $600-million for screen and music sectors",
@@ -1749,7 +2069,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "fxpodcast: Wētā FX brings the ocean, lava and islands of Moana to life",
@@ -1761,7 +2085,9 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": false
+  "canada": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "A Hindu epic hits the big screens, sacrificing depth for action",
@@ -1773,7 +2099,9 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Dark Slope to Open New Virtual Production Stage in Vancouver (Exclusive)",
@@ -1785,7 +2113,11 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "Ottawa boosts journalism tax credit by $501M, extends eligibility to broadcasters",
@@ -1797,7 +2129,25 @@
   "canada_only": false,
   "google": true,
   "filter": true,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
+ },
+ {
+  "title": "It’s up to Carney to protect Canadian content on our screens",
+  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOWFDMFdCNExFMnNkZGwwM1hmMzJZRUViT0oxX1RmbzNkd1NidHRNeE1tZTdkeGRuS2hjLUZvOU80UGJIREZ6bHZiaUZBSVhxVHBIdV9qYWFxLXgzaEVXYUlwWHVDMGZrczJ3MmJvZjRpa1NEaFNMdjFDRkw4YjNRLXkzcHNrb2Q4MjI2RlRmUDFDeS1SZ0g3ZmNHNW4?oc=5",
+  "date": "2026-11-04T08:00:00+00:00",
+  "source": "iPolitics",
+  "excerpt": "",
+  "category": "business",
+  "canada_only": false,
+  "google": true,
+  "filter": true,
+  "canada": true,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Creative BC Supports Audience Growth and Market Development for 14 B.C. Magazine Publishers",
@@ -1809,18 +2159,10 @@
   "canada_only": false,
   "google": false,
   "filter": false,
-  "canada": true
- },
- {
-  "title": "Member Spotlight: Kaayla Whachell",
-  "url": "https://csc.ca/member-spotlight-kaayla-whachell/?utm_source=rss&utm_medium=rss&utm_campaign=member-spotlight-kaayla-whachell",
-  "date": "2026-10-28T20:38:30+00:00",
-  "source": "Canadian Society of Cinematographers",
-  "excerpt": "Kaayla Whachell and Send the Rain. The post Member Spotlight: Kaayla Whachell appeared first on Canadian Society of Cinematographers .",
-  "category": "canada",
-  "canada_only": false,
-  "google": false,
-  "filter": false,
-  "canada": true
+  "canada": true,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  }
 ]

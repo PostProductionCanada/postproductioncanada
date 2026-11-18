@@ -80,8 +80,16 @@ def text(el, path):
 def fetch(feed):
     try:
         req = Request(feed["url"], headers={"User-Agent": UA, "Accept": "application/rss+xml, application/xml, text/xml, */*"})
-        with urlopen(req, timeout=20) as r:
-            data = r.read()
+        data = None
+        for attempt in range(3):
+            try:
+                with urlopen(req, timeout=20) as r:
+                    data = r.read()
+                break
+            except Exception as err:
+                if attempt == 2 or "429" not in str(err):
+                    raise
+                time.sleep(4 * (attempt + 1) + (hash(feed["url"]) % 5))
         root = ET.fromstring(data)
     except Exception as e:
         print(f"  FAIL {feed['name']}: {e}", file=sys.stderr)
@@ -117,7 +125,7 @@ def norm(t):
 def main():
     feeds = json.loads((ROOT / "feeds.json").read_text())["feeds"]
     print(f"Fetching {len(feeds)} feeds…")
-    with ThreadPoolExecutor(max_workers=10) as ex:
+    with ThreadPoolExecutor(max_workers=6) as ex:
         results = list(ex.map(fetch, feeds))
     cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
     now = datetime.now(timezone.utc)
@@ -143,6 +151,9 @@ def main():
             seen.add(key)
             seen_sets.append(words)
             it["canada"] = is_ca
+            blob2 = it["title"] + " " + it["excerpt"]
+            it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
+            it["prov"] = [k for k, r in PROV_RE.items() if r.search(blob2)]
             if it["category"] in ("picture", "gear", "vfx"):
                 if AUDIO_RE.search(it["title"]): it["category"] = "audio"
                 elif VFX_RE.search(it["title"]): it["category"] = "vfx"
@@ -159,6 +170,7 @@ def main():
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url></urlset>')
+    (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
@@ -166,7 +178,24 @@ def main():
 def esc(s): return html.escape(s, quote=True)
 
 CATS = {"canada": ("🍁", "Canada"), "picture": ("🎞️", "Picture & Editing"), "audio": ("🎧", "Audio"),
-        "vfx": ("✨", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions")}
+        "vfx": ("✨", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
+        "status": ("⚖️", "Status of the Artist")}
+STATUS_RE = re.compile(r"(status of the artist|collective agreements?|collective bargaining|bargaining|ratif\\w+|strikes?|lockout|"
+                       r"labou?r (board|code|standards|law|dispute|action|shortage)|freelanc\\w+|independent contractors?|"
+                       r"self[- ]employed|minimum wage|artists?['’]? (rights|fees|status)|union (drive|vote|contract|deal|certif\\w+)|"
+                       r"pay (rate|scale|equity)|residuals|royalt\\w+|layoffs?|job losses|working conditions)", re.I)
+PROVS = {"BC": r"vancouver|british columbia|burnaby|victoria,? b|creative bc|\bB\.C\.|\bBC\b",
+         "AB": r"calgary|edmonton|alberta|banff",
+         "SK": r"saskatchewan|regina|saskatoon",
+         "MB": r"winnipeg|manitoba",
+         "ON": r"toronto|ontario|ottawa|hamilton|omdc|\bGTA\b|london, ont",
+         "QC": r"montr[eé]al|qu[eé]bec|sodec|laval|gatineau",
+         "ATL": r"halifax|nova scotia|new brunswick|moncton|fredericton|newfoundland|st\. john|prince edward|charlottetown|atlantic canada",
+         "TERR": r"yukon|nunavut|northwest territories|whitehorse|yellowknife"}
+PROV_RE = {k: re.compile(v, re.I if k != "BC" else 0) for k, v in PROVS.items()}
+PROV_RE["BC"] = re.compile(PROVS["BC"], re.I)
+PROV_LABEL = {"BC": "British Columbia", "AB": "Alberta", "SK": "Saskatchewan", "MB": "Manitoba", "ON": "Ontario",
+              "QC": "Québec", "ATL": "Atlantic Canada", "TERR": "Territories"}
 AUDIO_RE = re.compile(r"\b(audio|sound|mix(ing|er)?|microphones?|mic|dolby|atmos|loudness|podcast\w*|music|dialogue|foley|"
                       r"adr|dubbing|spatial|ambisonic|headphones?|speakers?|pro tools|reaper|ableton|aes)\b", re.I)
 VFX_RE = re.compile(r"\b(vfx|visual effects|animat\w+|composit\w+|nuke|houdini|unreal|cgi|3d|motion graphics|"
@@ -176,24 +205,30 @@ def card(i):
     cats = []
     if i["canada"]: cats.append("canada")
     cats.append(i["category"])
+    if i["status"]: cats.append("status")
     iso = i["date"].isoformat()
     em, lab = CATS[i["category"]]
     chip = f'<span class="chip c-{i["category"]}">{em} {lab}</span>'
     if i["canada"] and i["category"] != "canada":
         chip += '<span class="chip c-canada">🍁</span>'
+    if i["status"]:
+        chip += '<span class="chip c-status">⚖️ Status</span>'
+    for k in i["prov"]:
+        chip += f'<span class="chip c-prov">📍 {k}</span>'
     ex = f'<p class="ex">{esc(i["excerpt"])}</p>' if i["excerpt"] else ""
-    return (f'<article class="card k-{i["category"]}" data-cats="{" ".join(sorted(set(cats)))}" data-t="{esc(norm(i["title"] + " " + i["source"]))}">'
+    return (f'<article class="card k-{i["category"]}" data-cats="{" ".join(sorted(set(cats)))}" data-prov="{" ".join(i["prov"])}" data-t="{esc(norm(i["title"] + " " + i["source"]))}">'
             f'<div class="chips">{chip}</div><div class="meta"><span class="src">{esc(i["source"])}</span>'
             f'<span class="dot">·</span><time datetime="{iso}">{iso[:10]}</time></div>'
             f'<h3><a href="{esc(i["url"])}" target="_blank" rel="noopener">{esc(i["title"])}</a></h3>{ex}</article>')
 
 def render(items, sources, now):
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or i["category"] == k)
-              for k in ["all", "canada", "picture", "audio", "vfx", "gear", "business"]}
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or i["category"] == k)
+              for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "🎬 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
     tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
+    popts = "".join(f'<option value="{k}">{PROV_LABEL[k]} ({sum(1 for i in items if k in i["prov"])})</option>' for k in PROV_LABEL)
     cfg = json.loads((ROOT / "site.json").read_text())
     sub, subbtn = "", ""
     if cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action"):
@@ -207,7 +242,9 @@ def render(items, sources, now):
                'Unsubscribe any time.</p>' + inner + '</div></section>')
     contact = (f'<p>Want your outlet, guild or studio added, or have a story tip? '
                f'<a href="mailto:{esc(cfg["contact_email"])}">{esc(cfg["contact_email"])}</a></p>') if cfg.get("contact_email") else ""
-    return TEMPLATE.replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    import base64
+    flag = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "art" / "flag.svg").read_bytes()).decode()
+    return TEMPLATE.replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -283,6 +320,11 @@ main{padding:20px 0 40px}
 .ex{margin:0;color:var(--mute);font-size:14px}
 .empty{display:none;text-align:center;color:var(--mute);padding:50px 0}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
+.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
+#prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
+.chips{flex-wrap:wrap}
+.herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.heroart{width:100%;height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+@media (max-width:760px){.herogrid{grid-template-columns:1fr}.heroart{max-width:380px}}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:13px}
 footer p{margin:0 0 8px;max-width:60em}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -294,14 +336,15 @@ footer p{margin:0 0 8px;max-width:60em}
   <div class="tools">{{SUBBTN}}<a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
-<section class="hero"><div class="wrap">
+<section class="hero"><div class="wrap herogrid"><div>
   <h1>All of Canada's post-production news, <em>in one place.</em></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources, updated every few hours. Free, always.</p>
-</div></section>
+</div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
 
 <div class="bar"><div class="wrap">
   <div class="tabs" id="tabs">{{TABS}}</div>
   <input id="q" type="search" placeholder="Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…" aria-label="Search stories">
+  <select id="prov" aria-label="Filter by province"><option value="">📍 All provinces</option>{{PROVOPTS}}</select>
 </div></div>
 
 {{SUBSCRIBE}}
@@ -320,11 +363,11 @@ footer p{margin:0 0 8px;max-width:60em}
 
 <script>
 (function(){
-  var tabs=document.querySelectorAll('.tab'),cards=[].slice.call(document.querySelectorAll('.card')),q=document.getElementById('q'),empty=document.getElementById('empty'),f='all';
+  var tabs=document.querySelectorAll('.tab'),cards=[].slice.call(document.querySelectorAll('.card')),q=document.getElementById('q'),pv=document.getElementById('prov'),empty=document.getElementById('empty'),f='all';
   function apply(){
     var s=q.value.toLowerCase().trim(),n=0;
     cards.forEach(function(c){
-      var ok=(f==='all'||c.dataset.cats.split(' ').indexOf(f)>-1)&&(!s||c.dataset.t.indexOf(s)>-1);
+      var ok=(f==='all'||c.dataset.cats.split(' ').indexOf(f)>-1)&&(!s||c.dataset.t.indexOf(s)>-1)&&(!pv.value||c.dataset.prov.split(' ').indexOf(pv.value)>-1);
       c.style.display=ok?'':'none'; if(ok)n++;
     });
     empty.style.display=n?'none':'block';
@@ -332,7 +375,7 @@ footer p{margin:0 0 8px;max-width:60em}
   tabs.forEach(function(t){t.addEventListener('click',function(){
     tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();
   })});
-  q.addEventListener('input',apply);
+  q.addEventListener('input',apply);pv.addEventListener('change',apply);
   cards.forEach(function(c){var t=c.querySelector('time');var d=new Date(t.getAttribute('datetime')),diff=(Date.now()-d)/36e5;
     t.textContent=diff<1?'just now':diff<24?Math.floor(diff)+'h ago':diff<48?'yesterday':d.toLocaleDateString('en-CA',{month:'short',day:'numeric'});});
   var r=document.documentElement;

@@ -137,6 +137,30 @@
       "url": "https://www.thewrap.com/feed/",
       "category": "business",
       "canada_only": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22status+of+the+artist%22+Canada+when:60d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22collective+agreement%22+film+OR+television+OR+screen+Canada+when:60d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Canada+screen+industry+freelancers+OR+crew+OR+layoffs+OR+%22labour%22+when:60d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22Status+of+the+Artist%22+Qu%C3%A9bec+OR+Ontario+OR+%22British+Columbia%22+artists+when:60d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
     }
   ]
 }
