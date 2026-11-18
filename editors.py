@@ -47,6 +47,54 @@ ARTICLES = [
 
 VPA_SITE = "https://vancouverpostalliance.com/"
 
+# DaVinci Resolve Studio: the latest. (title, source, date, url, note). Only items opened or seen in search results.
+RESOLVE_ARTICLES = [
+    ("DaVinci Resolve Gets AI Assistant Integration and Other New Features With Latest 21.1 Update", "No Film School", "2026-09-08",
+     "https://nofilmschool.com/davinci-resolve-update-21-1",
+     "The headline story on 21.1: AI assistant integration plus over 100 new tools and controls."),
+    ("Blackmagic Design DaVinci Resolve 21.1", "Newsshooter", "2026-09-07",
+     "https://www.newsshooter.com/2026/09/07/blackmagic-design-davinci-resolve-21-1",
+     "A page-by-page rundown of what's new, including multicam controls, the updated trim editor and scripting API changes."),
+    ("DaVinci Resolve 21.1.2", "Newsshooter", "2026-10-26",
+     "https://www.newsshooter.com/2026/10/26/davinci-resolve-21-1-2",
+     "The latest point release: faster AI tools, better timeline edit-point selection and faster OGraf playback."),
+    ("DaVinci Resolve 21 review: Blackmagic turns its editor into a full creative hub", "Videomaker", "",
+     "https://www.videomaker.com/reviews/software/davinci-resolve-21-review-blackmagic-turns-its-editor-into-a-full-creative-hub",
+     "A full review with strengths and weaknesses. It notes that many of the new AI tools need Studio."),
+    ("DaVinci Resolve 21 (2026) video editing software review", "TechRadar", "",
+     "https://www.techradar.com/pro/software-services/davinci-resolve-21-2026-video-editing-software-review",
+     "A 4.5 out of 5 review that focuses on the new Photo page and the AI tools reserved for Studio owners."),
+    ("In Depth: DaVinci Resolve Studio vs Free (Updated for 21)", "Toolfarm", "",
+     "https://www.toolfarm.com/tutorial/in-depth-davinci-resolve-studio-vs-the-free-version",
+     "What Studio adds over the free version, updated for version 21. Useful before you decide to buy."),
+    ("DaVinci Resolve 21.1 Uses MCP to Let AI Assistants Control the Edit", "YMCinema", "2026-09-17",
+     "https://ymcinema.com/2026/09/17/davinci-resolve-21-1-mcp-ai-assistants-control-edit/",
+     "Explains the new MCP server in Resolve Studio and what an AI assistant can do inside your project."),
+    ("Release of DaVinci Resolve Studio 21.1 (release notes)", "Blackmagic Forum", "2026-09-08",
+     "https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=239823",
+     "Official notes. Back up your project library first: projects opened in 21.1 can't be opened in 20.3.2. Python scripting also moved to Studio."),
+    ("Release of DaVinci Resolve Studio 21.1.1 (release notes)", "Blackmagic Forum", "",
+     "https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=240579",
+     "Official notes for the first point release after 21.1."),
+    ("Release of DaVinci Resolve Studio 21.1.2 (release notes)", "Blackmagic Forum", "2026-10-27",
+     "https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=241166",
+     "Official notes for the newest release, with the full list of fixes."),
+]
+RESOLVE_VIDEOS = [
+    ("What's New in DaVinci Resolve 21.1", "Blackmagic Design (YouTube)", "2026-09-07",
+     "https://www.youtube.com/watch?v=Wi44XLKQ3YA", "The official walkthrough of 21.1, including setting up an AI assistant."),
+    ("NEW! DaVinci Resolve 21.1 Details YOU NEED TO KNOW", "YouTube", "",
+     "https://www.youtube.com/watch?v=2cJoshmcYxo", "Chaptered tour of the edit page, trim editor, multicam, Fusion and the MCP integration."),
+    ("DaVinci Resolve 21.1 Update: What's New & What You Need to Know", "YouTube", "",
+     "https://www.youtube.com/watch?v=wW70K9gGPPY", "A long, detailed look at the update, including the manual and new log format support."),
+    ("DaVinci Resolve 21 Multicam Editing Tutorial (New UI & Timeline Layout)", "YouTube", "",
+     "https://www.youtube.com/watch?v=Sqc0_t9SRn0", "Hands-on multicam in version 21: syncing, the dual viewer and angle switching."),
+    ("DaVinci Resolve 21 STUDIO - Best features for Creators", "YouTube", "",
+     "https://www.youtube.com/watch?v=ubvYuipEz-0", "The Studio AI tools in action, including IntelliSearch and slate reading."),
+    ("Before You Update to DaVinci Resolve 21, Watch This", "YouTube", "",
+     "https://www.youtube.com/watch?v=IjZ0ExUBtfo", "A colourist's take on whether to update now or wait."),
+]
+
 
 def feed_list(items, n=8):
     if not items:
@@ -64,7 +112,11 @@ def render(leaf, favicon, updated, cce_items, vpa_items):
     arts = "".join(
         f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(s)}{", " + e(d) if d else ""}</span>'
         f'<div class="note">{e(n)}</div></li>' for t, s, d, u, n in ARTICLES)
-    return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{AWARDS}}", awards)
+    def _lst(items):
+        return "".join(
+            f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(s)}{", " + e(d) if d else ""}</span>'
+            f'<div class="note">{e(n)}</div></li>' for t, s, d, u, n in items)
+    return (PAGE.replace("{{RESARTS}}", _lst(RESOLVE_ARTICLES)).replace("{{RESVIDS}}", _lst(RESOLVE_VIDEOS)).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{AWARDS}}", awards)
             .replace("{{CCELINKS}}", links).replace("{{ARTICLES}}", arts).replace("{{CCEFEED}}", feed_list(cce_items))
             .replace("{{VPAFEED}}", feed_list(vpa_items, 5)).replace("{{UPDATED}}", updated))
 
@@ -117,7 +169,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 </div></header>
 <main class="wrap">
 <h1>Canadian editors</h1>
-<p class="lede">The Canadian Cinema Editors, a west coast post community, and a reading list on the people who cut Canada's screen stories.</p>
+<p class="lede">The Canadian Cinema Editors, a west coast post community, the latest on DaVinci Resolve Studio, and a reading list on the people who cut Canada's screen stories.</p>
 
 <h2>Canadian Cinema Editors (CCE)</h2>
 <div class="box cce">
@@ -150,6 +202,13 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
   <h3>Latest from the VPA</h3>
   {{VPAFEED}}
 </div>
+
+<h2 id="resolve">DaVinci Resolve Studio: the latest</h2>
+<p>Resolve 21.1 added AI assistant integration, and 21.1.2 is the newest point release. Here is a reading list of reviews, release notes and videos.</p>
+<h3>Articles and release notes</h3>
+<div class="box"><ul class="arts">{{RESARTS}}</ul></div>
+<h3>Videos on YouTube</h3>
+<div class="box"><ul class="arts">{{RESVIDS}}</ul></div>
 
 <h2>Reading list: Canadian editors in the news</h2>
 <div class="box"><ul class="arts">{{ARTICLES}}</ul></div>
