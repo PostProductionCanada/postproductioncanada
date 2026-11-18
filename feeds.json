@@ -161,6 +161,40 @@
       "url": "https://news.google.com/rss/search?q=%22Status+of+the+Artist%22+Qu%C3%A9bec+OR+Ontario+OR+%22British+Columbia%22+artists+when:60d&hl=en-CA&gl=CA&ceid=CA:en",
       "category": "business",
       "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22AI+filmmaking%22+OR+%22AI+film%22+OR+%22AI+video%22+filmmakers+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true,
+      "intl": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22generative+AI%22+film+OR+television+OR+production+OR+VFX+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true,
+      "intl": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Runway+OR+Sora+OR+Veo+OR+Kling+OR+Midjourney+video+filmmakers+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true,
+      "intl": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=AI+actors+OR+%22synthetic+performers%22+OR+%22AI+studio%22+film+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true,
+      "intl": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=AI+film+OR+filmmaking+OR+production+Canada+OR+Toronto+OR+Vancouver+OR+Montreal+when:14d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "canada",
+      "google": true
     }
   ]
 }

@@ -115,7 +115,7 @@ def fetch(feed):
             continue
         items.append({"title": title, "url": link, "date": date, "source": source,
                       "excerpt": clip(strip_tags(desc)), "category": feed["category"],
-                      "canada_only": feed.get("canada_only", False), "google": bool(feed.get("google")), "filter": bool(feed.get("google") or feed.get("filter"))})
+                      "canada_only": feed.get("canada_only", False), "google": bool(feed.get("google")), "intl": bool(feed.get("intl")), "filter": bool(feed.get("google") or feed.get("filter"))})
     print(f"  ok   {feed['name']}: {len(items)}")
     return feed, items
 
@@ -139,7 +139,7 @@ def main():
                 continue
             if it["filter"] and not SCREEN_RE.search(it["title"]):
                 continue
-            if it["google"] and not CANADA_RE.search(blob):
+            if it["google"] and not it["intl"] and not CANADA_RE.search(blob):
                 continue
             is_ca = it["category"] == "canada" or bool(CANADA_RE.search(blob))
             if it["canada_only"] and not (CANADA_RE.search(blob) and POST_RE.search(blob)):
@@ -152,6 +152,7 @@ def main():
             seen_sets.append(words)
             it["canada"] = is_ca
             blob2 = it["title"] + " " + it["excerpt"]
+            it["ai"] = bool(AI_CS.search(blob2) or AI_CI.search(blob2))
             it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
             it["prov"] = [k for k, r in PROV_RE.items() if r.search(blob2)]
             if it["category"] in ("picture", "gear", "vfx"):
@@ -179,7 +180,13 @@ def esc(s): return html.escape(s, quote=True)
 
 CATS = {"canada": ("🍁", "Canada"), "picture": ("🎞️", "Picture & Editing"), "audio": ("🎧", "Audio"),
         "vfx": ("✨", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
+        "ai": ("🤖", "AI Filmmaking"),
         "status": ("⚖️", "Status of the Artist")}
+AI_CS = re.compile(r"\bAI\b|\bA\.I\.|\bGen-?AI\b|\bLLMs?\b")
+AI_CI = re.compile(r"(artificial intelligence|generative|machine learning|\brunway\b|\bsora\b|\bveo\b|\bkling\b|midjourney|"
+                   r"firefly|\bluma\b|\bpika\b|hailuo|seedance|comfyui|stable diffusion|text[- ]to[- ]video|image[- ]to[- ]video|"
+                   r"synthetic (actors?|media|performers?)|deepfakes?|chatgpt|\bgemini\b|\bwan 2|\bflux\b|diffusion model|"
+                   r"neural|ai[- ](generated|film\w*|actors?|video|tools?|studio|native))", re.I)
 STATUS_RE = re.compile(r"(status of the artist|collective agreements?|collective bargaining|bargaining|ratif\\w+|strikes?|lockout|"
                        r"labou?r (board|code|standards|law|dispute|action|shortage)|freelanc\\w+|independent contractors?|"
                        r"self[- ]employed|minimum wage|artists?['’]? (rights|fees|status)|union (drive|vote|contract|deal|certif\\w+)|"
@@ -206,11 +213,14 @@ def card(i):
     if i["canada"]: cats.append("canada")
     cats.append(i["category"])
     if i["status"]: cats.append("status")
+    if i["ai"]: cats.append("ai")
     iso = i["date"].isoformat()
     em, lab = CATS[i["category"]]
     chip = f'<span class="chip c-{i["category"]}">{em} {lab}</span>'
     if i["canada"] and i["category"] != "canada":
         chip += '<span class="chip c-canada">🍁</span>'
+    if i["ai"]:
+        chip += '<span class="chip c-ai">🤖 AI</span>'
     if i["status"]:
         chip += '<span class="chip c-status">⚖️ Status</span>'
     for k in i["prov"]:
@@ -253,7 +263,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "🎬 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
@@ -350,7 +360,7 @@ main{padding:20px 0 40px}
 .ex{margin:0;color:var(--mute);font-size:14px}
 .empty{display:none;text-align:center;color:var(--mute);padding:50px 0}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
-.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
+.chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
 .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.heroart{width:100%;height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
