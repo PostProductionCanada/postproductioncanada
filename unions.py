@@ -82,8 +82,7 @@ DATA = {
                   "The Winnipeg stop of the CCE's EditCon, run with Film Training Manitoba.")],
         "note": "I found no Manitoba post-production association. On Screen Manitoba is the closest industry-wide body."},
     "ON": {"unions": [
-        U("DGC Ontario", "Represents picture and sound editors, post-production supervisors and their departmental assistants, according to DGC Ontario. " + CORE_NOTE, DGC_CORE),
-        U("IATSE Local 873", "Toronto motion picture technicians. Editing coverage not confirmed.", "https://www.iatse873.com/node/15000016")],
+        U("DGC Ontario", "Represents picture and sound editors, post-production supervisors and their departmental assistants, according to DGC Ontario. " + CORE_NOTE, DGC_CORE)],
         "post": [U("Canadian Cinema Editors (CCE)", "A non-profit professional association based in Toronto. It is not a union.", "editors.html")], "read": []},
     "QC": {"unions": [
         U("AQTIS 514 IATSE", "Represents about 8,000 freelance professionals in more than 200 audiovisual trades, including post-production. Québec's status of the artist law gives it a bargaining framework.", "https://aqtis514iatse.com/")],
