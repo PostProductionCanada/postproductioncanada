@@ -115,7 +115,7 @@ def fetch(feed):
             continue
         items.append({"title": title, "url": link, "date": date, "source": source,
                       "excerpt": clip(strip_tags(desc)), "category": feed["category"],
-                      "canada_only": feed.get("canada_only", False), "google": bool(feed.get("google")), "intl": bool(feed.get("intl")), "filter": bool(feed.get("google") or feed.get("filter"))})
+                      "canada_only": feed.get("canada_only", False), "google": bool(feed.get("google")), "intl": bool(feed.get("intl")), "filter": bool(feed.get("google") or feed.get("filter")), "require": feed.get("require")})
     print(f"  ok   {feed['name']}: {len(items)}")
     return feed, items
 
@@ -142,6 +142,11 @@ def main():
             blob = f"{it['title']} {it['excerpt']} {it['source']}"
             if EXCLUDE_RE.search(it["title"]):
                 continue
+            req = it.get("require")
+            if req:
+                pats = req if isinstance(req, list) else [req]
+                if not all(re.search(pt, it["title"] + " " + it["excerpt"], re.I) for pt in pats):
+                    continue
             if it["filter"] and not SCREEN_RE.search(it["title"]):
                 continue
             if it["google"] and not it["intl"] and not CANADA_RE.search(blob):
@@ -195,7 +200,7 @@ def main():
     (OUT / "buzz.html").write_text(buzz.render(_leaf, _fav, now.strftime("%Y-%m-%d"), now), encoding="utf-8")
     import base64 as _b64
     _logo = "data:image/jpeg;base64," + _b64.b64encode((ROOT / "art" / "cce-logo.jpg").read_bytes()).decode()
-    (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
+    (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items, [i for i in items if i["category"] == "audio"][:8]).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
     shutil.copy(ROOT / "art" / "cce-logo.jpg", OUT / "cce-logo.jpg")
     (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
     tok = (_cfg.get("analytics_token") or "").strip()
@@ -284,7 +289,7 @@ def load_picks(now):
             continue
         out.append({**r, "dt": d})
     out.sort(key=lambda r: r["dt"], reverse=True)
-    return out[:6]
+    return out[:8]
 
 def picks_html(picks):
     if not picks:

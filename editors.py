@@ -106,7 +106,22 @@ def feed_list(items, n=8):
     return "<ul class=\"feed\">" + "".join(rows) + "</ul>"
 
 
-def render(leaf, favicon, updated, cce_items, vpa_items):
+CSA_MIX_WINNER = ("Rudy Michael, Lucas Roveda, Dave Mercel and Adam Clark", "Nirvanna the Band the Show the Movie")
+CSA_MIX_NOMINEES = [
+    ("Matthew Chan", "Honey Bunch"),
+    ("Michelle Irving, Jeremy Fong and Pablo Villegas", "Mile End Kicks"),
+    ("Lou Solakofski and Maryan P'yatnochka", "Nika and Madison"),
+    ("Brianna Todd and Carter Buckman", "Sway"),
+]
+MIX_LINKS = [
+    ("Canadian Screen Award for Best Sound Mixing: full list of winners and nominees", "Wikipedia",
+     "https://en.wikipedia.org/wiki/Canadian_Screen_Award_for_Best_Sound_Mixing"),
+    ("'Heated Rivalry' tops Canadian Screen Awards with 16 wins (full winners list)", "Deadline",
+     "https://deadline.com/2026/06/heated-rivalry-tops-canadian-screen-awards-1236931778"),
+]
+
+
+def render(leaf, favicon, updated, cce_items, vpa_items, audio_items=None):
     awards = "".join(f"<li><b>{e(a)}:</b> {e(w)}</li>" for a, w in CCE_AWARDS_2026)
     links = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a></li>' for t, u in CCE_LINKS)
     arts = "".join(
@@ -116,7 +131,11 @@ def render(leaf, favicon, updated, cce_items, vpa_items):
         return "".join(
             f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(s)}{", " + e(d) if d else ""}</span>'
             f'<div class="note">{e(n)}</div></li>' for t, s, d, u, n in items)
-    return (PAGE.replace("{{RESARTS}}", _lst(RESOLVE_ARTICLES)).replace("{{RESVIDS}}", _lst(RESOLVE_VIDEOS)).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{AWARDS}}", awards)
+    noms = "".join(f"<li>{e(n)}, <i>{e(t)}</i></li>" for n, t in CSA_MIX_NOMINEES)
+    mixlinks = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(s)}</span></li>' for t, s, u in MIX_LINKS)
+    return (PAGE.replace("{{MIXWIN}}", f"<b>{e(CSA_MIX_WINNER[0])}</b>, <i>{e(CSA_MIX_WINNER[1])}</i>").replace("{{MIXNOMS}}", noms)
+            .replace("{{MIXLINKS}}", mixlinks).replace("{{AUDIOFEED}}", feed_list(audio_items or [], 8))
+            .replace("{{RESARTS}}", _lst(RESOLVE_ARTICLES)).replace("{{RESVIDS}}", _lst(RESOLVE_VIDEOS)).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{AWARDS}}", awards)
             .replace("{{CCELINKS}}", links).replace("{{ARTICLES}}", arts).replace("{{CCEFEED}}", feed_list(cce_items))
             .replace("{{VPAFEED}}", feed_list(vpa_items, 5)).replace("{{UPDATED}}", updated))
 
@@ -209,6 +228,18 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="box"><ul class="arts">{{RESARTS}}</ul></div>
 <h3>Videos on YouTube</h3>
 <div class="box"><ul class="arts">{{RESVIDS}}</ul></div>
+
+<h2 id="sound">Sound mixing in Canada</h2>
+<h3>Canadian Screen Awards: Achievement in Sound Mixing, 2026</h3>
+<div class="box">
+  <p><span class="pill">Winner</span><br>{{MIXWIN}}</p>
+  <p class="note" style="margin-bottom:4px">Also nominated:</p>
+  <ul>{{MIXNOMS}}</ul>
+  <ul class="arts">{{MIXLINKS}}</ul>
+</div>
+<h3>Latest stories on mixing and film audio</h3>
+<div class="box">{{AUDIOFEED}}</div>
+<p class="note">Stories update automatically from audio and post-production news sources.</p>
 
 <h2>Reading list: Canadian editors in the news</h2>
 <div class="box"><ul class="arts">{{ARTICLES}}</ul></div>

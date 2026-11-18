@@ -40,10 +40,10 @@ CREDITS = [
                 "Production Services Tax Credit (PSTC): 16% of qualified Canadian labour.",
      [("CPTC (CAVCO)", LINKS["cptc"]), ("PSTC (CAVCO)", LINKS["pstc"]), ("CRA guide, form T1131", LINKS["t1131"])],
      "Run jointly by CAVCO and the Canada Revenue Agency. A production can claim one of the two, not both."),
-    ("British Columbia", "Film Incentive BC (basic 35%); Production Services Tax Credit (basic 36% per filmincanada.com, 2026; "
-                         "an older CMPA summary lists 28%); DAVE: 16% on digital animation, VFX and post-production labour.",
+    ("British Columbia", "Film Incentive BC (basic 40%); Production Services Tax Credit (basic 36%), both raised in 2025 for productions "
+                         "starting principal photography after Dec 31, 2024, per Creative BC; DAVE: 16% on digital animation, VFX and post-production labour.",
      [("Creative BC", LINKS["bc"]), fic("british-columbia")],
-     "The DAVE credit is aimed squarely at post and VFX work. The sources disagree on the basic rate, so confirm it with Creative BC."),
+     "The DAVE credit is aimed squarely at post and VFX work. Older summaries still show the previous 35% and 28% rates."),
     ("Alberta", "Film and Television Tax Credit, reported at 22% or 30%.", [fic("alberta"), ("CMPA overview", CMPA_HUB)], ""),
     ("Saskatchewan", "Production grant (service stream: 25% of eligible spend, up to $5M), with a 5% bonus "
                      "when most post-production happens in the province.",
@@ -199,10 +199,39 @@ def credits_rows():
     return "\n".join(out)
 
 
+VFX_ROWS = [
+    ("Federal", "Film or Video Production Services Tax Credit (PSTC): 16% of qualified Canadian labour. No VFX-specific bonus.",
+     [("PSTC (CAVCO)", LINKS["pstc"])]),
+    ("British Columbia", "DAVE: 16% of eligible BC labour directly attributable to digital animation, visual effects and post-production. It is a bonus on top of the basic PSTC (36%) or Film Incentive BC (40%), and you must claim one of those first. Entertainment Partners notes that PSTC plus DAVE is available to productions with only VFX and post work done in BC, with no principal photography requirement.",
+     [("DAVE bulletin (Creative BC)", "https://creativebc.com/wp-content/uploads/2025/07/DAVE_Tax_Credit_Info_Bulletin_FAQ.pdf"),
+      ("PSTC rates (Creative BC)", "https://creativebc.com/motion-picture-tax-credits/production-services-tax-credit")]),
+    ("Ontario", "OCASE: 18% of eligible Ontario labour on computer animation and special effects, no cap, claimed on top of the OFTTC (35%) or OPSTC (21.5%). Animation studios, VFX houses, post houses and 3D service providers can qualify. Ontario labour must exceed $25,000. Eligibility depends on several tests, so it is not a simple parallel to BC.",
+     [("OCASE (Ontario Creates)", "https://www.ontariocreates.ca/tax-incentives/ocase")]),
+    ("Québec", "On top of the Production Services Tax Credit (25% of qualified spend), an extra 16% on qualified labour for computer-aided special effects and animation, including chroma-key shooting. The domestic credit has a smaller bonus, reported at 10% with a cap.",
+     [("Overview (Entertainment Partners)", "https://www.ep.com/blog/vfx-post-production-tax-incentives-guide"),
+      ("Animation and effects credits (Time Consulting)", "https://timeconsulting.ca/animation-special-effects-tax-credits")]),
+    ("Other provinces", "I found no VFX-specific credit in Alberta, Saskatchewan, Manitoba, the Atlantic provinces or the territories. Their general credits may still cover post spend, so check each program.",
+     [("CMPA overview", CMPA_HUB)]),
+]
+
+
+def vfx_section():
+    rows = []
+    for j, txt, links in VFX_ROWS:
+        ls = " · ".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(l)}</a>' for l, u in links)
+        rows.append(f'<tr><th scope="row">{e(j)}</th><td>{e(txt)}</td><td>{ls}</td></tr>')
+    return ('<h2>Credits for VFX, animation and post</h2>'
+            '<p>Three places run credits aimed squarely at visual effects, animation and post-production work: British Columbia, Ontario and Québec. '
+            'These go to production and post companies, not individual artists, but they decide where VFX and post work gets booked.</p>'
+            '<div class="tw"><table><thead><tr><th>Where</th><th>What it adds</th><th>Official sources</th></tr></thead><tbody>'
+            + "".join(rows) + '</tbody></table></div>'
+            '<p class="note" style="margin-top:10px">Rates checked against Creative BC and Ontario Creates on Nov 18, 2026. Budgets change these, so confirm with the agency before you plan around a figure.</p>')
+
+
 def render(leaf, favicon, updated):
     fic_html = fic_section(load_fic())
     srcs = "\n".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a></li>' for t, u in SOURCES)
-    return PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{CHART}}", chart()).replace("{{FIC}}", fic_html)\
+    return PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{VFX}}", vfx_section()).replace("{{CHART}}", chart()).replace("{{FIC}}", fic_html)\
         .replace("{{CREDITS}}", credits_rows()).replace("{{SOURCES}}", srcs).replace("{{UPDATED}}", updated)
 
 
@@ -296,6 +325,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 {{CREDITS}}
 </tbody></table></div>
 <p class="note" style="margin-top:10px">Rates come from CMPA, law-firm and consultant summaries, and change often. Confirm with the agency before you plan around any figure. Northwest Territories was not covered in my research.</p>
+
+{{VFX}}
 
 <h2>Where production happens</h2>
 <p>Total film and television production volume by region, April 2024 to March 2025, in dollars, with the change from the year before. Canada's total was $10.17 billion.</p>

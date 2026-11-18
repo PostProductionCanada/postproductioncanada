@@ -216,6 +216,23 @@
       "name": "YMCinema",
       "url": "https://ymcinema.com/feed/",
       "category": "gear"
+    },
+    {
+      "name": "TheWrap Tech",
+      "url": "https://www.thewrap.com/industry-news/tech/feed/",
+      "category": "vfx",
+      "require": [
+        "\\bAI\\b|artificial intelligence|generative",
+        "film|studio|Hollywood|Disney|Netflix|animation|VFX|production|actor|script|streaming|creator|Pixar|Warner|Paramount|Lionsgate|Sony|Universal|Amazon"
+      ]
+    },
+    {
+      "name": "Mix",
+      "url": "https://www.mixonline.com/feed",
+      "category": "audio",
+      "require": [
+        "film|movie|television|\\bTV\\b|Atmos|Dolby|streaming|documentary|cinema|dialogue|\\bADR\\b|foley|re-recording|post-production|soundtrack|dubbing"
+      ]
     }
   ]
 }

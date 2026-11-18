@@ -12,6 +12,7 @@ e = html.escape
 DGC_CORE = "https://cmpa.ca/wp-content/uploads/2023/10/2023-2025-DGC-Core-Agreement-FULLY-EXECUTED.pdf"
 DGC_MAR = "https://cmpa.ca/wp-content/uploads/2024/01/2023-2025-DGC-Schedule-2-DGC-Martimes-FULLY-EXECUTED-revised-01.11.2024.pdf"
 AB_PAGE = "https://www.alberta.ca/film-production-resources"
+YTG = "https://emrlibrary.gov.yk.ca/EcDev/film-production-guide-yukon-2010.pdf"
 CP = "https://creativepathwayscanada.com/about/people/unions-and-guilds"
 CORE_NOTE = "Signatory to the DGC–CMPA Core Agreement, which has Picture Editing Department provisions."
 
@@ -49,7 +50,10 @@ DATA = {
                   "What Local 891 asks for to join as a first assistant editor, including paid days worked and Avid skills."),
                  ("About ACFC West", "ACFC West", "", "https://www.acfcwest.com/about-us", "How the union describes itself and the departments it represents.")],
         "note": "Some BC workers hold cards in more than one union (\"dual card\"), according to Creative Pathways."},
-    "YT": {"unions": [U("IATSE Local 891", "Its charter covers British Columbia and the Yukon. Editing-specific coverage in the Yukon not confirmed.", "https://www.iatse.com/")], "post": [], "read": []},
+    "YT": {"unions": [U("IATSE Local 891", "Its charter covers British Columbia and the Yukon. Editing-specific coverage in the Yukon not confirmed.", "https://www.iatse.com/")],
+        "post": [U("Northern Film and Video Industry Association (NFVIA)", "Works to supply trained crew and gear for Yukon productions.", YTG),
+                 U("Yukon Film Society", "Supports Yukon media artists with equipment and workshops, including editing courses, and runs the Available Light Film Festival.", YTG)],
+        "read": [("Yukon Film Production Guide", "Government of Yukon", "2010", YTG, "An older guide to Yukon's film organizations. The groups may have changed, so check their current status.")]},
     "AB": {"unions": [
         U("DGC Alberta", "The Alberta government describes it as covering all areas of production, design and editing. " + CORE_NOTE, AB_PAGE),
         U("IATSE Locals 210 (Edmonton) and 212 (Calgary)", "Represent stage and film technicians across Alberta, per the Alberta government. Editing coverage not confirmed.", AB_PAGE)],
@@ -63,12 +67,20 @@ DATA = {
                  ("Film production resources", "Alberta.ca", "", AB_PAGE, "The government's guide to Alberta's unions, post community and incentives.")]},
     "SK": {"unions": [U("DGC Saskatchewan District Council", CORE_NOTE, DGC_CORE)], "post": [], "read": []},
     "MB": {"unions": [
-        U("DGC Manitoba District Council", CORE_NOTE, DGC_CORE),
-        U("IATSE Local 856", "Represents freelance crafts workers in Manitoba's motion picture industry. Editing is not among the departments it lists, so confirm with the local.", "https://iatse856.com/")],
-        "post": [], "read": [("EditCon 2026: Winnipeg, in conversation with Matthew Hannam", "Film Training Manitoba", "2026",
-                              "https://filmtraining.mb.ca/editcon-2026-winnipeg-in-conversation-with-matthew-hannam-in-partnership-with-film-training-manitoba",
-                              "The Winnipeg stop of the CCE's EditCon, run with Film Training Manitoba.")],
-        "note": "I found no Manitoba post-production association."},
+        U("DGC Manitoba District Council", "Film Training Manitoba says DGC Manitoba represents sound and picture editors, along with directors, assistant directors, locations and production office. About 200 members and 250 permittees across all its classifications, per Manitoba Film & Music. " + CORE_NOTE, "https://www.getonsetmanitoba.com/dgc-mb"),
+        U("IATSE Local 856", "Represents Manitoba crafts such as art, costume, grip, lighting and sound, but Editing is not among its listed departments. About 543 members and 964 permittees across all departments.", "https://www.iatse856.com")],
+        "post": [U("On Screen Manitoba", "The industry association for 2,000+ filmmakers, crew, unions and service suppliers. Its members include DGC Manitoba and IATSE 856.", "https://www.onscreenmanitoba.com"),
+                 U("Film Training Manitoba", "Non-profit sector council that runs the courses required for DGC Manitoba and IATSE 856 membership. Partner for EditCon in Winnipeg.", "https://filmtraining.mb.ca/entry-workshops"),
+                 U("Urban Post Production", "A Toronto post house with a sister location in Winnipeg (sound editorial, mixing, picture finishing and more).", "https://urbanpost.ca")],
+        "read": [("Entry-level tips: getting a job on a DGC Manitoba or IATSE 856 shoot", "Film Training Manitoba", "",
+                  "https://filmtraining.mb.ca/entry-workshops",
+                  "A plain explanation of which departments each union covers in Manitoba, including editors under the DGC."),
+                 ("Key contacts: local unions and guilds", "Manitoba Film & Music", "", "https://www.mbfilmmusic.ca/film-commission/key-contacts",
+                  "The provincial agency's list of Manitoba's unions with membership numbers."),
+                 ("EditCon 2026: Winnipeg, in conversation with Matthew Hannam", "Film Training Manitoba", "2026",
+                  "https://filmtraining.mb.ca/editcon-2026-winnipeg-in-conversation-with-matthew-hannam-in-partnership-with-film-training-manitoba",
+                  "The Winnipeg stop of the CCE's EditCon, run with Film Training Manitoba.")],
+        "note": "I found no Manitoba post-production association. On Screen Manitoba is the closest industry-wide body."},
     "ON": {"unions": [
         U("DGC Ontario", "Represents picture and sound editors, post-production supervisors and their departmental assistants, according to DGC Ontario. " + CORE_NOTE, DGC_CORE),
         U("IATSE Local 873", "Toronto motion picture technicians. Editing coverage not confirmed.", "https://www.iatse873.com/node/15000016")],
@@ -83,13 +95,28 @@ DATA = {
     "NS": {"unions": MARITIMES, "post": [], "read": []},
     "PE": {"unions": MARITIMES, "post": [], "read": []},
     "NL": {"unions": [U("DGC Newfoundland and Labrador District Council", CORE_NOTE, DGC_CORE)], "post": [], "read": []},
-    "NT": {"unions": [], "post": [], "read": [], "note": "I haven't researched the Northwest Territories yet."},
-    "NU": {"unions": [], "post": [], "read": [], "note": "I haven't researched Nunavut yet."},
+    "NT": {"unions": [],
+        "post": [U("NWT Film Commission", "The territorial government's film office, a liaison for productions and local crew.", "https://www.nwtfilm.com/en/local-industry"),
+                 U("Western Arctic Moving Pictures (WAMP)", "Non-profit that runs workshops, rents gear and presents the Yellowknife International Film Festival.", "https://www.nwtfilm.com/en/local-industry"),
+                 U("Northwest Territories Media Producers Association", "Industry professionals working to build a sustainable NWT media industry.", "https://www.nwtfilm.com/en/local-industry")],
+        "read": [("Rolling, Action! The NWT Film and Media Sector Strategy and Action Plan, 2021–2026", "Government of the Northwest Territories", "2021",
+                  "https://www.ntlegislativeassembly.ca/sites/default/files/legacy/td_415-192.pdf", "The territory's plan, including crew training and workforce gaps."),
+                 ("NWT Film Rebate Program", "Government of the Northwest Territories", "2015",
+                  "https://www.castandcrew.com/wp-content/uploads/2018/05/NWTFilmRebateProgramFINALFeb2015docx0.pdf", "An older program document that lists film editor, sound editor and visual effects editor among its recognized positions.")],
+        "note": "I found no union local for editors in the Northwest Territories. IATSE's District 12 includes the NWT and Nunavut, but I found no local. Confirm directly."},
+    "NU": {"unions": [],
+        "post": [U("Nunavut Film Development Corporation", "Keeps a directory of Nunavut technicians and producers, including editors.", "https://www.nunavutfilm.ca/technicians-producers"),
+                 U("Isuma", "Inuit-owned production company and media collective based in Igloolik.", "https://en.wikipedia.org/wiki/Isuma")],
+        "read": [("Thinking About Isuma", "POV Magazine", "", "https://povmagazine.com/thinking-about-isuma",
+                  "How Isuma works. It notes the production employed Inuit people in their own communities, with some post-production done in Isuma's Montreal office.")],
+        "note": "I found no union local for editors in Nunavut. Confirm directly."},
 }
 
 NUMBERS = [
-    ("Directors Guild of Canada (DGC)", "5,500+ members, 48 occupations", "Editors are one of those occupations. I found no editor-only count.",
+    ("Directors Guild of Canada (DGC)", "5,500 to 7,000+ members, 48 occupations", "Sources differ on the total. Editors are one of those occupations. I found no editor-only count.",
      "https://en.wikipedia.org/wiki/Directors_Guild_of_Canada"),
+    ("DGC Manitoba District Council", "About 200 members, 250 permittees", "Across all its classifications, including picture and sound editors. No editor-only count found.",
+     "https://www.mbfilmmusic.ca/film-commission/key-contacts"),
     ("IATSE Local 891 (BC and Yukon)", "9,000+ members, 19 departments", "Editing is one department. Its pages say 9,000 to over 10,000, plus 5,000+ permittees per Creative Pathways. I found no Editing Department count.",
      "https://www.iatse.com/"),
     ("AQTIS 514 IATSE (Québec)", "About 8,000 freelancers, 200+ trades", "Includes post-production trades. No editor-only count found.",

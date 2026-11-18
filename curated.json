@@ -43,6 +43,14 @@
       "date": "2026-09-17",
       "expires_days": 120,
       "note": "Resolve Studio now has a built-in MCP server, so an AI assistant can handle routine edit-room jobs like renaming clips, building deliverables and reframing to vertical from plain-language instructions."
+    },
+    {
+      "title": "Disney's Accelerator Day Highlights AI Startups",
+      "url": "https://www.thewrap.com/industry-news/tech/disney-ai-accelerator-startup-investor/",
+      "source": "TheWrap",
+      "date": "2026-11-04",
+      "expires_days": 60,
+      "note": "Disney is putting money behind AI startups, including ones building hybrid filmmaking tools, and says it wants artists involved at every step of the workflow."
     }
   ]
 }
