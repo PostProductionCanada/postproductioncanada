@@ -35,6 +35,14 @@
       "source": "The Guardian",
       "date": "2026-10-29",
       "note": "Background on the microdrama phenomenon behind the shift in what gets made and where it's watched."
+    },
+    {
+      "title": "DaVinci Resolve 21.1 Uses MCP to Let AI Assistants Control the Edit",
+      "url": "https://ymcinema.com/2026/09/17/davinci-resolve-21-1-mcp-ai-assistants-control-edit/",
+      "source": "YMCinema",
+      "date": "2026-09-17",
+      "expires_days": 120,
+      "note": "Resolve Studio now has a built-in MCP server, so an AI assistant can handle routine edit-room jobs like renaming clips, building deliverables and reframing to vertical from plain-language instructions."
     }
   ]
 }

@@ -211,6 +211,11 @@
       "url": "https://hollywoodnorthbuzz.com/feed",
       "category": "canada",
       "filter": true
+    },
+    {
+      "name": "YMCinema",
+      "url": "https://ymcinema.com/feed/",
+      "category": "gear"
     }
   ]
 }
