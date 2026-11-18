@@ -194,7 +194,21 @@ def render(items, sources, now):
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "🎬 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
     tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
-    return TEMPLATE.replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
+    cfg = json.loads((ROOT / "site.json").read_text())
+    sub, subbtn = "", ""
+    if cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action"):
+        subbtn = '<a class="btn" href="#subscribe">Subscribe</a>'
+        inner = cfg.get("subscribe_embed_html") or (
+            f'<form method="post" action="{esc(cfg["subscribe_form_action"])}" target="_blank" class="sf">'
+            '<input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">'
+            '<button class="btn go" type="submit">Subscribe free</button></form>')
+        sub = ('<section id="subscribe" class="subbox"><div class="wrap"><h2>📬 Get the Canadian post news in your inbox</h2>'
+               '<p>Free updates, plus original articles and interviews with Canada\'s editors, colourists, sound mixers and VFX artists. '
+               'Unsubscribe any time.</p>' + inner + '</div></section>')
+    contact = (f'<p>Want your outlet, guild or studio added, or have a story tip? '
+               f'<a href="mailto:{esc(cfg["contact_email"])}">{esc(cfg["contact_email"])}</a></p>') if cfg.get("contact_email") else ""
+    return TEMPLATE.replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+        .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
         .replace("{{SOURCES}}", " · ".join(esc(s) for s in sources)).replace("{{SITE}}", SITE_URL)
@@ -268,6 +282,7 @@ main{padding:20px 0 40px}
 .card h3 a:hover{text-decoration:underline}
 .ex{margin:0;color:var(--mute);font-size:14px}
 .empty{display:none;text-align:center;color:var(--mute);padding:50px 0}
+.subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:13px}
 footer p{margin:0 0 8px;max-width:60em}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -276,7 +291,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo"><svg viewBox="0 0 10 10"><path d="M0 0l10 5-10 5z"/></svg></span>Post Production <b>Canada</b></a>
-  <div class="tools"><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}<a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -289,6 +304,7 @@ footer p{margin:0 0 8px;max-width:60em}
   <input id="q" type="search" placeholder="Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…" aria-label="Search stories">
 </div></div>
 
+{{SUBSCRIBE}}
 <main><div class="wrap">
   <div class="grid" id="grid">
 {{CARDS}}
@@ -299,7 +315,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <footer><div class="wrap">
   <p>Updated <time datetime="{{UPDATED_ISO}}">{{UPDATED}}</time> · {{NSTORIES}} stories from the last three weeks.</p>
   <p>Post Production Canada shows headlines and short excerpts only. Every story links to its original publisher — go read them. Sources: {{SOURCES}}.</p>
-  <p>Run by DayDream Productions Inc. Want your outlet, guild or studio newsfeed added? Get in touch.</p>
+  {{CONTACT}}
 </div></footer>
 
 <script>
