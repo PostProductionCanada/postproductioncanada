@@ -147,11 +147,12 @@ def fic_section(d):
     inc_rows, none = incentive_chart(d)
     sh, pr, wr = (d["by_status"].get(k, 0) for k in ("shooting", "prep", "wrapping"))
     return f"""
-<h2>Productions being tracked, by province</h2>
-<p>Productions in prep, shooting or wrapping, counted from public listings by filmincanada.com. Snapshot of
-<b>{e(d["now_shooting_last_run"] or "unknown date")}</b>: {d["records"]} productions, {sh} shooting, {pr} in prep and {wr} wrapping.</p>
-<div class="chart" role="img" aria-label="Stacked bar chart of tracked productions by province">
-<div class="legend"><span><i class="s-shoot"></i>Shooting</span><span><i class="s-prep"></i>In prep</span><span><i class="s-wrap"></i>Wrapping</span></div>
+<h2>Work heading toward post, by province</h2>
+<p>Shoots are a leading indicator for post: a production that is wrapping is about to land in the edit, and one in prep will follow.
+These are productions in prep, shooting or wrapping, counted from public listings by filmincanada.com. Snapshot of
+<b>{e(d["now_shooting_last_run"] or "unknown date")}</b>: {d["records"]} productions, {wr} wrapping (closest to post), {sh} shooting and {pr} in prep.</p>
+<div class="chart" role="img" aria-label="Stacked bar chart of productions heading toward post, by province">
+<div class="legend"><span><i class="s-wrap"></i>Wrapping (post next)</span><span><i class="s-shoot"></i>Shooting</span><span><i class="s-prep"></i>In prep</span></div>
 {tracked_chart(d)}
 </div>
 <p class="note" style="margin-top:10px">Treat this as a rough guide. The tracker draws on public listings such as ACTRA, UBCP and provincial agency pages, so it favours productions that appear there. It is not a complete count, and it was last updated in August, so a production's status will have moved on since. For where the money is spent, use the dollar chart above.</p>
