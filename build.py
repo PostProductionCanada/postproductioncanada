@@ -541,6 +541,7 @@ footer p{margin:0 0 8px;max-width:60em}
   <h2>Resources</h2>
   <ul>
     <li><a href="https://www.productionlist.com/" target="_blank" rel="noopener">Production List</a> — a directory of film and TV productions and companies, including post and VFX houses. Mostly US-focused; contact details are for paying members.</li>
+    <li><a href="https://postperspective.com/" target="_blank" rel="noopener">Post Perspective</a> — trade news and features on post-production, VFX, editing, colour and sound. Its stories also appear in the news feed above.</li>
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
