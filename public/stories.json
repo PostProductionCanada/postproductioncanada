@@ -4115,26 +4115,6 @@
   ]
  },
  {
-  "title": "Ottawa boosts journalism tax credit by $501M, extends eligibility to broadcasters",
-  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPckhsdjA0SjNzMmxXeXRmeC1GaGNFY2tINGF4anBKMkZtOG0zZ0R2ZmJZYXdfckRfUGpPUk5Pc0RFQjRDb1JNWGxfSlg3TzBDQlBnUVNROVhQbG54bHdGQjU4UlU1TFRmMnJ5OVk3ODNlLWdvLWFlOW5memNLNDdDejFuNjJLLTN4cEU0Sk5zQXZtczJtZWVBUW9fSVE0TFRiSW5zYXVxVVdBZFphWmtjbHlQSTdPSUhmSTRtdQ?oc=5",
-  "date": "2026-11-05T08:00:00+00:00",
-  "source": "CTV News",
-  "excerpt": "",
-  "category": "business",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "cce": false,
-  "status": false,
-  "prov": [
-   "ON"
-  ]
- },
- {
   "title": "Idris Elba and Google give African filmmakers a route from AI training to funded films",
   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQVN3ZEdGLXFqb1hrS0VXTlNvUjJaa21vakpZYURVcEg4OE5aVFJ5SVR4ZmJJb3dFZXdMeHg2RHBKMW9fWkQxd3BlSG0xel9DOWhuVjZBWHY5emZWMGN1QS1iV3U3bHAxaGo0eHV5a0RSNHM3QVh6TFRSZ2RCNVRGZXRHQk9nZHFuUzdLeVBLalFZckVtN0VTdDYwUzBEdU1sLXpQYlVOTlR4cV94MTF0ZkswcUpMcmxYY0o1YS1XbzdZdnh4bEE?oc=5",
   "date": "2026-11-05T08:00:00+00:00",
@@ -4241,6 +4221,26 @@
   "cce": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Ottawa boosts journalism tax credit by $501M, extends eligibility to broadcasters",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPckhsdjA0SjNzMmxXeXRmeC1GaGNFY2tINGF4anBKMkZtOG0zZ0R2ZmJZYXdfckRfUGpPUk5Pc0RFQjRDb1JNWGxfSlg3TzBDQlBnUVNROVhQbG54bHdGQjU4UlU1TFRmMnJ5OVk3ODNlLWdvLWFlOW5memNLNDdDejFuNjJLLTN4cEU0Sk5zQXZtczJtZWVBUW9fSVE0TFRiSW5zYXVxVVdBZFphWmtjbHlQSTdPSUhmSTRtdQ?oc=5",
+  "date": "2026-11-05T08:00:00+00:00",
+  "source": "CTV News",
+  "excerpt": "",
+  "category": "business",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "cce": false,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "Can AI Really Replace Everyone in the Film Industry?",

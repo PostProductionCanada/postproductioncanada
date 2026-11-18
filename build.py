@@ -143,6 +143,21 @@ def save_archive(items):
                                   ensure_ascii=False, separators=(",", ":")))
 
 
+_PROTECT = re.compile(r"(<head\b.*?</head>|<script\b.*?</script>|<style\b.*?</style>)", re.S | re.I)
+_PP = re.compile(r"(?<![\w/.\-])([Pp]ost-production)(?![\w/\-])")
+
+
+def nobreak(html_text):
+    """Keep 'post-production' from splitting across lines, in page text only (never in attributes, scripts or URLs)."""
+    out = []
+    for part in _PROTECT.split(html_text):
+        if _PROTECT.fullmatch(part or ""):
+            out.append(part)
+            continue
+        out.append(re.sub(r"(>)([^<]+)(<)", lambda m: m.group(1) + _PP.sub(r'<span class="nb">\1</span>', m.group(2)) + m.group(3), part))
+    return "".join(out)
+
+
 def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
 
@@ -241,14 +256,15 @@ def main():
     (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items, [i for i in items if i["category"] == "audio"][:8]).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
     shutil.copy(ROOT / "art" / "cce-logo.jpg", OUT / "cce-logo.jpg")
     (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
+    (OUT / "build.json").write_text(json.dumps({"built": now.isoformat()}))
     tok = (_cfg.get("analytics_token") or "").strip()
-    if tok:
-        beacon = ("<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
-                  "data-cf-beacon='{\"token\": \"" + tok + "\"}'></script>")
-        for f in OUT.glob("*.html"):
-            t = f.read_text(encoding="utf-8")
-            if "cloudflareinsights" not in t:
-                f.write_text(t.replace("</head>", beacon + "</head>", 1), encoding="utf-8")
+    beacon = ("<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
+              "data-cf-beacon='{\"token\": \"" + tok + "\"}'></script>") if tok else ""
+    for f in list(OUT.glob("*.html")) + list(OUT.glob("originals/*.html")):
+        t = nobreak(f.read_text(encoding="utf-8"))
+        if beacon and "cloudflareinsights" not in t:
+            t = t.replace("</head>", beacon + "</head>", 1)
+        f.write_text(t, encoding="utf-8")
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
@@ -414,7 +430,17 @@ def render(items, sources, now):
     _cl = "data:image/jpeg;base64," + base64.b64encode((ROOT / "art" / "cce-logo-small.jpg").read_bytes()).decode()
     import originals as _o
     _orig = '<a class="btn" href="originals.html">Originals</a>' if _o.count_published(ROOT) else ""
-    return TEMPLATE.replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    _today = now.date()
+    _counts = [0] * 21
+    for _i in items:
+        _k = (_today - _i["date"].date()).days
+        if 0 <= _k < 21:
+            _counts[20 - _k] += 1
+    _mx = max(_counts) or 1
+    _bars = "".join('<i style="height:%d%%" title="%s: %d stories"%s></i>' % (
+        max(10, round(_c / _mx * 100)), (now - timedelta(days=20 - _n)).strftime("%b %-d"), _c, ' class="today"' if _n == 20 else "")
+        for _n, _c in enumerate(_counts))
+    return TEMPLATE.replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -505,6 +531,26 @@ main{padding:20px 0 40px}
 .why{margin:0;font-size:14px;color:var(--mute)}.why b{color:var(--ink)}
 @media (max-width:640px){.top{flex-wrap:wrap;gap:10px}.brand{white-space:nowrap;font-size:18px}.tools{width:100%;flex-wrap:wrap}.btn{white-space:nowrap}}
 .res{border-top:1px solid var(--line);padding:26px 0 6px}.res h2{margin:0 0 8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}.res ul{margin:0;padding-left:18px;max-width:60em}.res li{margin:6px 0;font-size:14.5px}.res a{color:var(--red)}
+.nb{white-space:nowrap}
+.brand{white-space:nowrap}.btn{white-space:nowrap}.top{flex-wrap:wrap;gap:10px}.tools{flex-wrap:wrap}
+.deck{padding:4px 0 18px}
+.synth{position:relative;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:12px 18px;align-items:end;background:linear-gradient(#1c1e24,#101216);color:#ffb347;border:1px solid #2c2f36;border-radius:14px;padding:16px 28px;box-shadow:inset 0 0 0 2px #0007,0 8px 22px rgba(0,0,0,.18);font-family:ui-monospace,Menlo,Consolas,monospace}
+.synth::before,.synth::after{content:"";position:absolute;top:0;bottom:0;width:12px;background:repeating-linear-gradient(90deg,#6b3f1d,#8d5c2a 3px,#6b3f1d 6px);border-radius:14px 0 0 14px}
+.synth::before{left:0}.synth::after{right:0;border-radius:0 14px 14px 0}
+.cell .lbl{font-size:10.5px;letter-spacing:.16em;color:#c9a66b;margin-bottom:4px}
+.lcd{font-size:34px;line-height:1;font-weight:700;color:#ff4d3a;text-shadow:0 0 10px rgba(255,77,58,.55);letter-spacing:.04em;background:#0b0c0e;border:1px solid #000;border-radius:8px;padding:8px 12px;box-shadow:inset 0 0 12px #000}
+.lcd.sm{font-size:16px;color:#ffb347;text-shadow:0 0 8px rgba(255,179,71,.4);padding:12px 12px}
+.cell.wide{grid-column:1/-1}.cell.wide .lbl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2px 10px}
+.now{color:#ff4d3a;animation:blink 1s steps(2) infinite}
+.meter{display:flex;align-items:flex-end;gap:3px;height:42px;background:#0b0c0e;border:1px solid #000;border-radius:8px;padding:6px 8px;box-shadow:inset 0 0 12px #000}
+.meter i{flex:1;background:linear-gradient(#ffb347,#c9701b);border-radius:2px;min-height:3px;opacity:.8}
+.meter i.today{background:linear-gradient(#ff6b57,#ff4d3a);opacity:1;animation:pulse 1.4s ease-in-out infinite}
+.steps{grid-column:1/-1;display:flex;gap:7px;justify-content:center}
+.steps b{width:14px;height:8px;border-radius:2px;background:#2a2d34;box-shadow:inset 0 0 2px #000}
+.steps b.on{background:#ff4d3a;box-shadow:0 0 8px #ff4d3a}
+@keyframes blink{50%{opacity:.25}}@keyframes pulse{50%{opacity:.55}}
+@media (prefers-reduced-motion:reduce){.now,.meter i.today{animation:none}}
+@media (max-width:720px){.synth{grid-template-columns:1fr 1fr;padding:14px 22px}.cell:nth-child(3){grid-column:1/-1}.lcd{font-size:28px}}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:13px}
 footer p{margin:0 0 8px;max-width:60em}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -517,9 +563,17 @@ footer p{margin:0 0 8px;max-width:60em}
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
-  <h1>All of Canada's post-production news, <em>in one place.</em></h1>
-  <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources, updated every few hours. Free, always.</p>
+  <h1>All of Canada's <span class="nb">post-production</span> news, <em>in one place.</em></h1>
+  <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
+
+<section class="deck" aria-label="Update clock"><div class="wrap"><div class="synth">
+  <div class="cell"><div class="lbl">TODAY</div><div class="lcd sm" id="today">{{TODAYSTR}}</div></div>
+  <div class="cell"><div class="lbl">NEXT UPDATE IN</div><div class="lcd" id="cd">--:--:--</div></div>
+  <div class="cell"><div class="lbl">LAST UPDATED</div><div class="lcd sm" id="lu">{{UPDATED}}</div></div>
+  <div class="cell wide"><div class="lbl">LAST 21 DAYS <span id="range"></span><span class="now">● NOW</span></div><div class="meter" id="meter">{{BARS}}</div></div>
+  <div class="steps" id="steps" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+</div></div></section>
 
 <div class="bar"><div class="wrap">
   <div class="tabs" id="tabs">{{TABS}}</div>
@@ -579,6 +633,30 @@ footer p{margin:0 0 8px;max-width:60em}
     var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
     var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}
   });
+})();
+(function(){
+  var cd=document.getElementById('cd'); if(!cd) return;
+  var built=new Date('{{UPDATED_ISO}}'),lu=document.getElementById('lu'),rg=document.getElementById('range'),td=document.getElementById('today'),
+      steps=document.querySelectorAll('#steps b'),DAY=864e5,polling=false;
+  function pad(n){return n<10?'0'+n:''+n}
+  function fmt(d,o){try{return d.toLocaleDateString('en-CA',o)}catch(e){return d.toDateString()}}
+  function nextRun(now){var d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),0,17,0));
+    for(var i=0;i<10;i++){var t=new Date(d.getTime()+i*3*36e5);if(t>now)return t}return d}
+  try{lu.textContent=built.toLocaleString('en-CA',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}catch(e){}
+  function poll(){if(polling)return;polling=true;
+    (function go(){fetch('build.json?'+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){
+      if(new Date(j.built)>built){location.reload()}else{setTimeout(go,30000)}}).catch(function(){setTimeout(go,60000)})})()}
+  function tick(){
+    var now=new Date(),t=nextRun(now),diff=t-now,last=new Date(t.getTime()-3*36e5);
+    td.textContent=fmt(now,{weekday:'long',month:'short',day:'numeric',year:'numeric'});
+    rg.textContent=fmt(new Date(now-21*DAY),{month:'short',day:'numeric'})+' to '+fmt(now,{month:'short',day:'numeric'});
+    if(now-last<8*60e3&&built<last){cd.textContent='UPDATING…';poll()}
+    else{var s=Math.floor(diff/1000);cd.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60)}
+    var k=now.getSeconds()%12;steps.forEach(function(b,i){b.classList.toggle('on',i===k)});
+  }
+  tick();setInterval(tick,1000);
+  document.querySelectorAll('.card time').forEach(function(t){var d=new Date(t.getAttribute('datetime'));
+    if(Date.now()-d>21*DAY){var c=t.closest('.card');if(c)c.style.display='none'}});
 })();
 </script>
 </body>
