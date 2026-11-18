@@ -24,6 +24,12 @@ CCE_LINKS = [
     ("CCE website", CCE_SITE),
     ("2026 CCE Awards, full nominees and winners", "https://cceditors.ca/2026-awards"),
     ("EditCon 2026, the annual picture-editing conference", "https://cceditors.ca/editcon-2026"),
+    ("The Editor's Cut (English) and L'Art du montage (French) podcasts", "https://cceditors.ca/what-we-do/podcasts/"),
+    ("The Editor's Taskbook", "https://cceditors.ca/taskbook"),
+    ("Find an editor (member directory)", "https://cceditors.ca/membership-account/directory/"),
+    ("Become a member", "https://cceditors.ca/become-a-member/"),
+    ("Friends of the CCE", "https://cceditors.ca/friends-of-the-cce/"),
+    ("CCE newsletter", "http://eepurl.com/hHgqSH"),
 ]
 
 # (title, source, date, url, note). Only items I opened or saw in search results.
@@ -193,12 +199,12 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <h2>Canadian Cinema Editors (CCE)</h2>
 <div class="box cce">
   <div>
-    <a class="logobox" href="https://cceditors.ca/" target="_blank" rel="noopener"><img src="cce-logo.jpg" alt="Canadian Cinema Editors / Les Monteurs et Monteuses de cinéma canadien logo" width="500" height="143"></a>
+    <a class="logobox" href="https://cceditors.ca/" target="_blank" rel="noopener"><img src="cce-logo.jpg" alt="Canadian Cinema Editors / Les Monteurs et Monteuses de cinéma canadien logo" width="900" height="240"></a>
     <div class="credit">Logo © Canadian Cinema Editors</div>
   </div>
   <div>
     <span class="pill">Non-profit professional association</span>
-    <p>The CCE is a bilingual, not-for-profit professional, educational and cultural association for Canada-wide post-production people, founded in 2007 and based in Toronto. It exists to promote picture editing in film, television and new media, to educate peers and students, and to show Canadian editors' work to the world. <b>It is not a union.</b> It runs the CCE Awards, the annual EditCon conference, mentorship, a podcast and an editor directory.</p>
+    <p>The CCE is a bilingual, not-for-profit professional, educational and cultural association for Canada-wide post-production people, founded in 2007 and based in Toronto. It exists to promote picture editing in film, television and new media, to educate peers and students, and to show Canadian editors' work to the world. <b>It is not a union.</b> It runs the CCE Awards, the annual EditCon conference, mentorship, two podcasts (one in English, one in French) and an editor directory.</p>
     <ul>{{CCELINKS}}</ul>
   </div>
 </div>
