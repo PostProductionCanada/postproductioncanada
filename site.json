@@ -1,6 +1,9 @@
 {
-  "_help": "Fill these in once you have a newsletter service and a public email. Empty = hidden.",
+  "_help": "Fill these in as you set things up. Empty = hidden or off.",
   "subscribe_form_action": "",
   "subscribe_embed_html": "",
-  "contact_email": ""
+  "contact_email": "",
+  "analytics_token": "",
+  "sender_name": "Post Production Canada",
+  "mailing_address": ""
 }

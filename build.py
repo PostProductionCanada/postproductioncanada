@@ -185,6 +185,9 @@ def main():
     import editors, shutil
     cce_items = sorted(fetch({"name": "CCE", "url": "https://cceditors.ca/feed/", "category": "picture"})[1], key=lambda i: i["date"], reverse=True)
     vpa_items = sorted(fetch({"name": "VPA", "url": "https://vancouverpostalliance.com/feed/", "category": "canada"})[1], key=lambda i: i["date"], reverse=True)
+    import privacy
+    _cfg = json.loads((ROOT / "site.json").read_text())
+    (OUT / "privacy.html").write_text(privacy.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg), encoding="utf-8")
     import buzz
     (OUT / "buzz.html").write_text(buzz.render(_leaf, _fav, now.strftime("%Y-%m-%d"), now), encoding="utf-8")
     import base64 as _b64
@@ -192,6 +195,14 @@ def main():
     (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
     shutil.copy(ROOT / "art" / "cce-logo.jpg", OUT / "cce-logo.jpg")
     (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
+    tok = (_cfg.get("analytics_token") or "").strip()
+    if tok:
+        beacon = ("<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
+                  "data-cf-beacon='{\"token\": \"" + tok + "\"}'></script>")
+        for f in OUT.glob("*.html"):
+            t = f.read_text(encoding="utf-8")
+            if "cloudflareinsights" not in t:
+                f.write_text(t.replace("</head>", beacon + "</head>", 1), encoding="utf-8")
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
@@ -299,7 +310,9 @@ def render(items, sources, now):
             '<button class="btn go" type="submit">Subscribe free</button></form>')
         sub = ('<section id="subscribe" class="subbox"><div class="wrap"><h2>📬 Get the Canadian post news in your inbox</h2>'
                '<p>Free updates, plus original articles and interviews with Canada\'s editors, colourists, sound mixers and VFX artists. '
-               'Unsubscribe any time.</p>' + inner + '</div></section>')
+               'Unsubscribe any time.</p>' + inner +
+               '<p class="consent">By subscribing you agree to receive the Post Production Canada newsletter by email. '
+               'Unsubscribe any time. <a href="privacy.html">Privacy</a></p></div></section>')
     contact = (f'<p>Want your outlet, guild or studio added, or have a story tip? '
                f'<a href="mailto:{esc(cfg["contact_email"])}">{esc(cfg["contact_email"])}</a></p>') if cfg.get("contact_email") else ""
     import base64
@@ -384,7 +397,8 @@ main{padding:20px 0 40px}
 .card h3 a:hover{text-decoration:underline}
 .ex{margin:0;color:var(--mute);font-size:14px}
 .empty{display:none;text-align:center;color:var(--mute);padding:50px 0}
-.subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
+.subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
+.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -435,6 +449,7 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
+    <li><a href="privacy.html">Privacy</a> — what we collect (almost nothing) and how the newsletter works.</li>
     <li><a href="status-of-the-artist.html">Status of the Artist and tax credits</a> — what the laws mean for editors, with credits by province.</li>
   </ul>
 </div></section>
@@ -456,9 +471,9 @@ footer p{margin:0 0 8px;max-width:60em}
     empty.style.display=n?'none':'block';
   }
   tabs.forEach(function(t){t.addEventListener('click',function(){
-    tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();
+    tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
   })});
-  q.addEventListener('input',apply);pv.addEventListener('change',apply);
+  q.addEventListener('input',apply);pv.addEventListener('change',apply);var h0=location.hash.slice(1);if(h0)tabs.forEach(function(t){if(t.dataset.f===h0)t.click()});
   cards.forEach(function(c){var t=c.querySelector('time');var d=new Date(t.getAttribute('datetime')),diff=(Date.now()-d)/36e5;
     t.textContent=diff<1?'just now':diff<24?Math.floor(diff)+'h ago':diff<48?'yesterday':d.toLocaleDateString('en-CA',{month:'short',day:'numeric'});});
   var r=document.documentElement;

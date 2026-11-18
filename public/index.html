@@ -57,7 +57,8 @@ main{padding:20px 0 40px}
 .card h3 a:hover{text-decoration:underline}
 .ex{margin:0;color:var(--mute);font-size:14px}
 .empty{display:none;text-align:center;color:var(--mute);padding:50px 0}
-.subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
+.subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
+.subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -287,11 +288,12 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
+    <li><a href="privacy.html">Privacy</a> — what we collect (almost nothing) and how the newsletter works.</li>
     <li><a href="status-of-the-artist.html">Status of the Artist and tax credits</a> — what the laws mean for editors, with credits by province.</li>
   </ul>
 </div></section>
 <footer><div class="wrap">
-  <p>Updated <time datetime="2026-11-18T22:55:05.492985+00:00">2026-11-18 22:55 UTC</time> · 180 stories from the last three weeks.</p>
+  <p>Updated <time datetime="2026-11-18T23:05:32.721866+00:00">2026-11-18 23:05 UTC</time> · 180 stories from the last three weeks.</p>
   <p>Post Production Canada shows headlines and short excerpts only. Every story links to its original publisher — go read them. Sources: ANTARA News · Advanced Television · Broadcast Dialogue · C21media · CBC · Canadian Cinema Editors · Cartoon Brew · Cartt.ca · CineD · Comic Book Resources · Console Creatures · Creative BC · Creative Bloq · Dataconomy · Deadline · Delaware Today · Education News Canada · Film New Europe · Final Weapon · Foro3D · Haberler.com · Hollywood North Buzz · Indie Shorts Mag · JournalArta · LBB - Little Black Book · LBC · Laodong.vn · Los Angeles Times · Mixmag · News of Bahrain · No Film School · PRWeek · Passionate In Marketing · Post Magazine · Post Perspective · ProVideo Coalition · RedShark News · Roastbrief US · SBS Star · Senal News · SoaplandTV · South China Morning Post · StudioDaily · Tech.eu · The Georgia Straight · The Globe and Mail · The Guardian · The Korea Times · The New Indian Express · The Signal · The Times of India · ThePrint · Thought Catalog · University of Exeter News · Vietnam.vn · YMCinema · Yahoo News Canada · Yahoo! Finance Canada · afaqs! · openPR.com · شبكة تواصل الإخبارية.</p>
   
 </div></footer>
@@ -308,9 +310,9 @@ footer p{margin:0 0 8px;max-width:60em}
     empty.style.display=n?'none':'block';
   }
   tabs.forEach(function(t){t.addEventListener('click',function(){
-    tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();
+    tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
   })});
-  q.addEventListener('input',apply);pv.addEventListener('change',apply);
+  q.addEventListener('input',apply);pv.addEventListener('change',apply);var h0=location.hash.slice(1);if(h0)tabs.forEach(function(t){if(t.dataset.f===h0)t.click()});
   cards.forEach(function(c){var t=c.querySelector('time');var d=new Date(t.getAttribute('datetime')),diff=(Date.now()-d)/36e5;
     t.textContent=diff<1?'just now':diff<24?Math.floor(diff)+'h ago':diff<48?'yesterday':d.toLocaleDateString('en-CA',{month:'short',day:'numeric'});});
   var r=document.documentElement;
