@@ -304,10 +304,22 @@ def main():
             t = add_nav(t, _rel, bool(_arts))
         if beacon and "cloudflareinsights" not in t:
             t = t.replace("</head>", beacon + "</head>", 1)
+        if "ppc-foot" not in t:
+            t = t.replace("</body>", FOOT.replace("{{YEAR}}", str(now.year)) + "</body>", 1)
         f.write_text(t, encoding="utf-8")
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
+
+FOOT = ('<div class="ppc-foot" style="border-top:1px solid rgba(128,128,128,.3);padding:18px 16px 30px;text-align:center;'
+        'font-size:12.5px;line-height:1.55;opacity:.78"><div style="max-width:760px;margin:0 auto">'
+        '&copy; {{YEAR}} Post Production Canada. All rights reserved. '
+        'Post Production Canada compiles publicly available information for Canada\'s post-production community: news, resources and reference. '
+        'Headlines and excerpts link to their original publishers, who keep all rights in their own work. '
+        'Summaries and original text on this site are ours; please do not republish them without permission. '
+        'Provided for information only, with no guarantee of accuracy or completeness; check anything important with the source. '
+        'Independent, and not affiliated with or endorsed by any union, guild, association or company mentioned. '
+        'Corrections or removal requests are welcome.</div></div>')
 
 _ED_RE = re.compile(r"(?<![\w/.@#\-])editor(s?)(?![\w/@]|\.[a-z])")
 
