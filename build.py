@@ -298,7 +298,7 @@ def main():
     beacon = ("<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
               "data-cf-beacon='{\"token\": \"" + tok + "\"}'></script>") if tok else ""
     for f in list(OUT.glob("*.html")) + list(OUT.glob("originals/*.html")):
-        t = nobreak(f.read_text(encoding="utf-8"))
+        t = cap_editor(nobreak(f.read_text(encoding="utf-8")))
         _rel = f.relative_to(OUT).as_posix()
         if _rel != "index.html":
             t = add_nav(t, _rel, bool(_arts))
@@ -308,6 +308,32 @@ def main():
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
+
+_ED_RE = re.compile(r"(?<![\w/.@#\-])editor(s?)(?![\w/@]|\.[a-z])")
+
+
+def cap_editor(t):
+    """House style: the word Editor is always capitalized. Applies to our own text only, never to
+    third-party headlines (cards, picks, the Morning Roll), attributes, URLs or scripts."""
+    out, mode = [], None
+    for seg in re.split(r"(<[^>]*>)", t):
+        if seg.startswith("<"):
+            low = seg.lower()
+            if re.match(r"<(script|style)\b", low):
+                mode = "json" if 'id="data"' in low else "skip"
+            elif low.startswith("</script") or low.startswith("</style"):
+                mode = None
+            elif re.match(r'<article class="(card|pick|frame)\b', low):
+                mode = "card"
+            elif low.startswith("</article") and mode == "card":
+                mode = None
+            out.append(seg)
+        elif mode in (None, "json"):
+            out.append(_ED_RE.sub(lambda m: "Editor" + m.group(1), seg))
+        else:
+            out.append(seg)
+    return "".join(out)
+
 
 def esc(s): return html.escape(s, quote=True)
 

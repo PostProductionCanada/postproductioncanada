@@ -14,7 +14,9 @@ DGC_MAR = "https://cmpa.ca/wp-content/uploads/2024/01/2023-2025-DGC-Schedule-2-D
 AB_PAGE = "https://www.alberta.ca/film-production-resources"
 YTG = "https://emrlibrary.gov.yk.ca/EcDev/film-production-guide-yukon-2010.pdf"
 CP = "https://creativepathwayscanada.com/about/people/unions-and-guilds"
-CORE_NOTE = "Signatory to the DGC–CMPA Core Agreement, which has Picture Editing Department provisions."
+CORE_NOTE = ("Signatory to the DGC–CMPA Core Agreement. Its departments include Picture Editing (with VFX Editor and assistant VFX Editor roles), "
+"Sound Editing (Supervising Sound Editor/Sound Designer, Sound Editor and assistants) and Post Production Supervision (Supervisor and Coordinator). "
+"Roles per the 2023–25 text; a new 2026–28 agreement took effect January 1, 2026, so check current wording.")
 
 # tile position (col, row) on an approximate grid
 PROV = {
@@ -83,7 +85,10 @@ DATA = {
         "note": "I found no Manitoba post-production association. On Screen Manitoba is the closest industry-wide body."},
     "ON": {"unions": [
         U("DGC Ontario", "Represents picture and sound editors, post-production supervisors and their departmental assistants, according to DGC Ontario. " + CORE_NOTE, DGC_CORE)],
-        "post": [U("Canadian Cinema Editors (CCE)", "A non-profit professional association based in Toronto. It is not a union.", "editors.html")], "read": []},
+        "post": [U("Canadian Cinema Editors (CCE)", "A non-profit professional association based in Toronto. It is not a union.", "editors.html")],
+        "read": [("2023–25 DGC Ontario Schedule 5 (public agreement text)", "CMPA", "2024", "https://cmpa.ca/wp-content/uploads/2024/02/2023-2025-DGC-Schedule-5-DGC-Ontario-FULLY-EXECUTED-READABLE.pdf",
+                  "Includes the post production supervisor and coordinator rules (ON21) and a letter on training new people in Picture Editing, Sound Editing and Post Production Supervision.")],
+        "note": "VFX: the Core Agreement covers VFX Editors inside Picture Editing. For VFX Supervisors, the 2023–25 Ontario schedule listed them, with First Assistant VFX Supervisors, in a jurisdiction letter, with the parties to negotiate language in the next round. I could not find the public 2026–28 Ontario text, so I have not confirmed whether that changed."},
     "QC": {"unions": [
         U("AQTIS 514 IATSE", "Represents about 8,000 freelance professionals in more than 200 audiovisual trades, including post-production. Québec's status of the artist law gives it a bargaining framework.", "https://aqtis514iatse.com/")],
         "post": [], "read": [("Heated Rivalry: local talent, Véronique Barbe, editor", "AQTIS 514 IATSE", "2026-01-23",
@@ -159,7 +164,14 @@ header{border-bottom:1px solid var(--line)}.top{display:flex;align-items:center;
 h1{font-size:clamp(28px,5vw,42px);line-height:1.1;letter-spacing:-.03em;margin:30px 0 8px}
 h2{font-size:24px;letter-spacing:-.02em;margin:38px 0 8px}h3{font-size:17px;margin:16px 0 4px}
 p{margin:0 0 12px}.lede{color:var(--mute);font-size:18px}.note{color:var(--mute);font-size:13.5px}
-.map{display:grid;grid-template-columns:repeat(9,1fr);grid-auto-rows:54px;gap:6px;margin:18px 0}
+.console{background:linear-gradient(#2b2e36,#1a1c21);border:2px solid #3b3f48;border-radius:20px;padding:14px 16px 12px;margin:18px 0;box-shadow:0 6px 0 #0d0e10,inset 0 1px 0 #4a4e58}
+.knobs,.faders{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}
+.knobs i{height:14px;width:14px;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#9aa0ab,#3a3d44 70%);box-shadow:0 0 0 2px #14151a}
+.knobs i:nth-child(3n){background:radial-gradient(circle at 35% 30%,#ff8a7f,#a31b10 70%)}
+.faders i{height:22px;width:6px;margin:6px auto 0;border-radius:3px;background:#0b0c0e;box-shadow:inset 0 0 0 1px #3a3d44;position:relative}
+.faders i::after{content:"";position:absolute;left:-5px;width:16px;height:7px;border-radius:2px;background:linear-gradient(#e8e8ea,#9aa0ab);top:var(--t,4px)}
+.faders i:nth-child(2n){--t:12px}.faders i:nth-child(3n){--t:1px}.faders i:nth-child(5n){--t:9px}
+.map{display:grid;grid-template-columns:repeat(9,1fr);grid-auto-rows:54px;gap:6px;margin:10px 0}
 .tile{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;font:inherit;cursor:pointer;display:grid;place-items:center}
 .tile b{font-size:15px}.tile:hover{border-color:var(--red)}.tile.on{background:var(--red);border-color:var(--red);color:#fff}
 .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0}
@@ -178,10 +190,20 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <main class="wrap">
 <h1>🗺️ Who represents editors, by province</h1>
 <p class="lede">Pick a province to see which unions and guilds have agreements covering editors there, and its post-production community.</p>
-<div class="map" role="group" aria-label="Map of Canada by province and territory (approximate layout)">{{TILES}}</div>
+<div class="console"><div class="knobs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="map" role="group" aria-label="Map of Canada by province and territory (approximate layout)">{{TILES}}</div><div class="faders" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
 <p class="note">An approximate tile map, not a geographic one.</p>
 
 <div id="panel" class="box"><p>Choose a province above.</p></div>
+
+<h2>🧭 Post Supervisors: the people who run the schedule</h2>
+<p>If the Editor owns the cut, the post supervisor owns everything around it. Reel Canada describes them as the main line of communication between the producers, director, Editors, sound Editors, outside facilities and the production accountant. It also calls the role not creative, yet integral to delivery.</p>
+<div class="box">
+<div class="u"><b>What they manage</b><div>The post schedule and budget, vendor deals, and the deliverables list and specs for each platform, plus QC through to delivery, according to ScenePaper's job description. Frame.io's guide says they are ideally on board before the shoot, helping set up the cutting room workflow, hiring crew and choosing outside vendors.</div></div>
+<div class="u"><b>Why they get special DGC attention</b><div>Under the 2023–25 DGC Ontario schedule (ON21), post supervisor and coordinator functions may only be done by a Guild member, a non-member with a bona fide producer credit, or a full-time employee of the producer's parent company. That keeps the job inside the guild unless the person has real producing duties.</div></div>
+<div class="u"><b>Training pipeline</b><div>The same Ontario schedule has a letter agreeing that a Tier A production doing post in Ontario engages a trainee from one of three streams (Picture Editing, Sound Editing, or Post Production Supervision and Coordination) for six weeks or the length of post, whichever is less. A matching letter appears in the 2026–28 Maritimes agreement.</div></div>
+<div class="u"><b>Who represents them</b><div>DGC Ontario names post-production supervisors among its categories. Reel Canada's page for the role lists the DGC councils in Alberta, Saskatchewan, Manitoba, Ontario, Newfoundland and Labrador and the Maritimes. I have not confirmed coverage in BC or Québec.</div></div>
+</div>
+<p class="note">Sources: <a href="https://reelcanada.ca/reel-opportunities/careers-in-film/careers/post-production-supervisor" target="_blank" rel="noopener">Reel Canada</a>, <a href="https://scenepaper.com/roles/post-production-supervisor" target="_blank" rel="noopener">ScenePaper</a>, <a href="https://blog.frame.io/2020/01/27/post-production-supervisor" target="_blank" rel="noopener">Frame.io</a>, <a href="https://cmpa.ca/wp-content/uploads/2024/02/2023-2025-DGC-Schedule-5-DGC-Ontario-FULLY-EXECUTED-READABLE.pdf" target="_blank" rel="noopener">DGC Ontario Schedule 5 (CMPA)</a>. If you supervise post and know where the job gets tricky under the agreement, tell me and I'll check it and add it.</p>
 
 <h2>How many editors?</h2>
 <p>I looked for public counts of editors in each union and found only overall membership. Here is what's published.</p>
