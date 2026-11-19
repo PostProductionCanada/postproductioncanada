@@ -307,6 +307,8 @@ def main():
         if "ppc-foot" not in t:
             t = t.replace("</body>", FOOT.replace("{{YEAR}}", str(now.year)) + "</body>", 1)
         f.write_text(t, encoding="utf-8")
+    import members
+    members.write(OUT, ROOT, _leaf, _fav)
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
