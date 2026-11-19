@@ -193,7 +193,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
   <a class="btn" href="/">← Latest news</a>
 </div></header>
 <main class="wrap">
-<h1>Canadian editors</h1>
+<h1>✂️ Canadian editors</h1>
 <p class="lede">The Canadian Cinema Editors, a west coast post community, the latest on DaVinci Resolve Studio, and a reading list on the people who cut Canada's screen stories.</p>
 
 <h2>Canadian Cinema Editors (CCE)</h2>

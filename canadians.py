@@ -90,7 +90,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap">
-<h1>Canadian Stories</h1>
+<h1>🍁 Canadian Stories</h1>
 <p class="lede">Canadians have cut, directed and crafted a lot of the movies and television the world watches, often without anyone noticing. These are some of their stories.</p>
 {{CARDS}}
 <div class="box add"><h3>Got a story?</h3><p>If you know a Canadian editor, director or craftsperson with a great story, send me the name and I'll research it and add it here, with sources. A longer list is welcome too.</p></div>

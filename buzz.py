@@ -129,7 +129,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
   <a class="btn" href="/">← Latest news</a>
 </div></header>
 <main class="wrap">
-<h1>Post Buzz</h1>
+<h1>🎬 Post Buzz</h1>
 <p class="lede">What's heading into post across Canada. When a production wraps, the edit, colour, sound and VFX come next, so end-of-shoot dates show where the work is about to land.</p>
 
 <h2>Wrapping in the next 90 days</h2>

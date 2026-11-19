@@ -299,7 +299,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
   <a class="btn" href="/">← Latest news</a>
 </div></header>
 <main class="wrap">
-<h1>Status of the Artist, tax credits and where Canada produces</h1>
+<h1>⚖️ Status of the Artist, tax credits and where Canada produces</h1>
 <p class="lede">A plain-language guide for editors and other post-production freelancers. Researched from public sources, listed at the bottom. This is information, not legal or tax advice.</p>
 
 <h2>What "status of the artist" means</h2>

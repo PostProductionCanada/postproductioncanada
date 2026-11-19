@@ -158,6 +158,24 @@ def nobreak(html_text):
     return "".join(out)
 
 
+NAV = [("index.html", "🏠 News"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+       ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
+NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
+           ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
+           ".sitenav a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}</style>")
+
+
+def add_nav(t, fname, has_originals):
+    pre = "../" if fname.startswith("originals/") else ""
+    items = list(NAV)
+    if has_originals:
+        items.insert(1, ("originals.html", "📝 Originals"))
+    links = "".join('<a href="%s%s"%s>%s</a>' % (pre, h, ' class="on"' if h == fname else "", lbl.replace("&", "&amp;")) for h, lbl in items)
+    nav = '<nav class="sitenav" aria-label="Sections"><div class="snw">' + links + "</div></nav>"
+    t = t.replace("</head>", NAV_CSS + "</head>", 1)
+    return t.replace("</header>", "</header>" + nav, 1)
+
+
 def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
 
@@ -275,6 +293,9 @@ def main():
               "data-cf-beacon='{\"token\": \"" + tok + "\"}'></script>") if tok else ""
     for f in list(OUT.glob("*.html")) + list(OUT.glob("originals/*.html")):
         t = nobreak(f.read_text(encoding="utf-8"))
+        _rel = f.relative_to(OUT).as_posix()
+        if _rel != "index.html":
+            t = add_nav(t, _rel, bool(_arts))
         if beacon and "cloudflareinsights" not in t:
             t = t.replace("</head>", beacon + "</head>", 1)
         f.write_text(t, encoding="utf-8")
@@ -448,7 +469,7 @@ def render(items, sources, now):
     flag = "data:image/svg+xml;base64," + base64.b64encode((ROOT / "art" / "flag.svg").read_bytes()).decode()
     _cl = "data:image/jpeg;base64," + base64.b64encode((ROOT / "art" / "cce-logo-small.jpg").read_bytes()).decode()
     import originals as _o
-    _orig = '<a class="btn" href="originals.html">Originals</a>' if _o.count_published(ROOT) else ""
+    _orig = '<a class="btn" href="originals.html">📝 Originals</a>' if _o.count_published(ROOT) else ""
     _today = now.date()
     _counts = [0] * 21
     for _i in items:
@@ -607,7 +628,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="vibe-cutting.html">Vibe Cutting</a><a class="btn" href="schools.html">Schools</a><a class="btn" href="canadians.html">Canadian Stories</a><a class="btn" href="unions.html">Union Map</a><a class="btn" href="buzz.html">Post Buzz</a><a class="btn" href="editors.html">Editors</a><a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>

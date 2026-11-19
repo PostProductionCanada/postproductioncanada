@@ -176,7 +176,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap">
-<h1>Who represents editors, by province</h1>
+<h1>🗺️ Who represents editors, by province</h1>
 <p class="lede">Pick a province to see which unions and guilds have agreements covering editors there, and its post-production community.</p>
 <div class="map" role="group" aria-label="Map of Canada by province and territory (approximate layout)">{{TILES}}</div>
 <p class="note">An approximate tile map, not a geographic one.</p>

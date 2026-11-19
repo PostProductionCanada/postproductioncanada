@@ -99,7 +99,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap">
-<h1>Vibe Cutting</h1>
+<h1>🎚️ Vibe Cutting</h1>
 <p class="lede">{{INTRO}}</p>
 <p class="note">Items marked <span class="pill">vendor</span> come from companies that sell a related product, so read them with that in mind. Summaries are mine, and each item links to its source.</p>
 {{SECTIONS}}

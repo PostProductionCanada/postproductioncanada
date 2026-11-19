@@ -130,7 +130,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap">
-<h1>Schools across Canada</h1>
+<h1>🎓 Schools across Canada</h1>
 <p class="lede">Where to learn picture editing, sound and post-production, from Newfoundland to Vancouver. Colleges, universities and private schools.</p>
 <p class="note">Programs change every year, so check each school before you apply. Being listed is not an endorsement. Where I couldn't reach a school's own page, the entry says so. New Brunswick, PEI and the territories aren't covered yet.</p>
 <div class="filters" id="filters">
