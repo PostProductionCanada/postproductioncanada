@@ -152,6 +152,25 @@
   "prov": []
  },
  {
+  "title": "Skydance to combine Warner Bros. TV Group and Paramount Television Studios",
+  "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeFJwMDVTZm1QUHlHOWplaDEtRy1iTW5jNWFZby15UmJLQWhSM3l6MFVKM2RCZDBDM2VETUg5OTBxai1SV1Z5X3BBX3Utdlk4RTNsd3RkeHRCcWZMWXZaQU5mMTZPVnRUd2lJS3BLVG5Sb2t2dzQ0bHgyOG0tOThyNHFHTzVJLWc?oc=5",
+  "date": "2026-11-18T21:20:52+00:00",
+  "source": "Yahoo! Finance Canada",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Why You Should Start Your Screenplay With an “Anxiety Draft”",
   "url": "https://nofilmschool.com/starting-a-screenplay-with-an-anxiety-draft",
   "date": "2026-11-18T21:01:31+00:00",
@@ -3835,6 +3854,25 @@
   "prov": []
  },
  {
+  "title": "Disney and Adobe build generative AI models for production",
+  "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vNjhiYzE3VWtzMzNJcEtOM3VEbXp2dUZ1TEZJX3ptQThBVmxJRFB3RUduUlhVbDVRbEY5ZlRPRi1FVVpVS2JnSXNISndJRDJTUjVpVVVBektpOW1MTFZHeG5QUQ?oc=5",
+  "date": "2026-11-09T17:03:00+00:00",
+  "source": "Tbreak UAE",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "British Columbia, Canada at the American Film Market 2026",
   "url": "https://creativebc.com/2026/11/british-columbia-canada-at-the-american-film-market-2026/",
   "date": "2026-11-09T16:00:00+00:00",
@@ -3991,25 +4029,6 @@
   "prov": []
  },
  {
-  "title": "Disney and Adobe build generative AI models for production",
-  "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vNjhiYzE3VWtzMzNJcEtOM3VEbXp2dUZ1TEZJX3ptQThBVmxJRFB3RUduUlhVbDVRbEY5ZlRPRi1FVVpVS2JnSXNISndJRDJTUjVpVVVBektpOW1MTFZHeG5QUQ?oc=5",
-  "date": "2026-11-09T08:00:00+00:00",
-  "source": "Tbreak UAE",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "“It’s All Cinema!” Directors of 2026’s Top Docs on Taking Risks, Interacting With Subjects and the Huge Success of ‘You Can See Everything’ (Video)",
   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTzBRUlE1Y2ZUTHNGcXNaZU1fVnYydF92ZWdGZ2FwcWxrQVlDYTFCcFFRT2V6ZWdhU2UxZ1JXbjFKLTBNWng5MS1lU19GazE2bGIwZ3dDdmcyM0haa1BLa3BxdHJGMDFoMThSdUloU1UwMmVMM1htWWtIdjhMT2E3SVBhMWw0VnZUWUV3NVhpZmRmSnhWM1laaHRSZUFwVkJwbDUxRE9ZZ2ZBcDJacS1vMm1lQWtLeExKMFNlWlBUd3drQQ?oc=5",
   "date": "2026-11-09T08:00:00+00:00",
@@ -4063,10 +4082,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Ottawa reveals details on long-promised $600-million for screen and music sectors",
@@ -4200,10 +4219,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",
@@ -4572,17 +4591,17 @@
  },
  {
   "title": "How Grimes’ Cameo in Theater-Bound AI Film ‘Gods Don’t Give Gifts’ Came Together (EXCLUSIVE)",
-  "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBfcDZINGVvRjV6TGZqR00zWXBnY0NldlpGYW04a3B0Y2lpR3B2ZXJYRXMtNUxVblIzZ2REOWdCSGViZTluSml1WV9sb2xtRDJMTENPM0NOMERZUXVNNzF4OWhucGV0blBnVW12aHE3ald3cjlpdm41RWJR?oc=5",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRkVESjd5YUJ5cmtyMVo3UXoxMklQOHJmVWRRQzNxMmVGU2VESUFTR0NmUGJ0dVhmYkRYRHMzajk4UWt2MGpWaU1oc0tGRlRxWDVodEpXMmdhWFFiX2pqclVqMFdIUzc5ZWdVQkxTSkhKYjMtdTlsZFN0cWVZLTlXS2tITVlLSGc3cW5QRC1md2VCZw?oc=5",
   "date": "2026-11-05T08:00:00+00:00",
-  "source": "Yahoo News Canada",
+  "source": "Variety",
   "excerpt": "",
-  "category": "canada",
+  "category": "vfx",
   "canada_only": false,
   "google": true,
-  "intl": false,
+  "intl": true,
   "filter": true,
   "require": null,
-  "canada": true,
+  "canada": false,
   "ai": true,
   "vibe": false,
   "cce": false,

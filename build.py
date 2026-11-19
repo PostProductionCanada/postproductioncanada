@@ -308,7 +308,7 @@ def main():
     beacon = ("<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
               "data-cf-beacon='{\"token\": \"" + tok + "\"}'></script>") if tok else ""
     for f in list(OUT.glob("*.html")) + list(OUT.glob("originals/*.html")):
-        t = cap_editor(nobreak(f.read_text(encoding="utf-8")))
+        t = style.link_people(cap_editor(nobreak(f.read_text(encoding="utf-8"))))
         _rel = f.relative_to(OUT).as_posix()
         if _rel != "index.html":
             t = add_nav(t, _rel, bool(_arts))
