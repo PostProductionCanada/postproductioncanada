@@ -142,7 +142,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <h2>Worth a read</h2>
 <div class="box"><ul class="arts">{{CUR}}</ul></div>
 </main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent and is not affiliated with Hollywood North Buzz.</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent and is not run by Hollywood North Buzz.</div></footer>
 </body>
 </html>
 """

@@ -442,7 +442,15 @@ def render(items, sources, now):
     _bars = "".join('<i style="height:%d%%" title="%s: %d stories"%s></i>' % (
         max(10, round(_c / _mx * 100)), (now - timedelta(days=20 - _n)).strftime("%b %-d"), _c, ' class="today"' if _n == 20 else "")
         for _n, _c in enumerate(_counts))
-    return TEMPLATE.replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    _fbu = (cfg.get("feedback_form_url") or "").strip()
+    _fbm = (cfg.get("contact_email") or "").strip()
+    _fb = ""
+    if _fbu or _fbm:
+        _href = _fbu or ("mailto:" + _fbm + "?subject=Post%20Production%20Canada%20feedback")
+        _ext = ' target="_blank" rel="noopener"' if _fbu else ""
+        _fb = ('<section class="res"><div class="wrap"><h2>Feedback and tips</h2><p>Spot something missing or wrong? Know a story, a source, or a Canadian editor or director we should feature? '
+               '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
+    return TEMPLATE.replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -534,6 +542,9 @@ main{padding:20px 0 40px}
 @media (max-width:640px){.top{flex-wrap:wrap;gap:10px}.brand{white-space:nowrap;font-size:18px}.tools{width:100%;flex-wrap:wrap}.btn{white-space:nowrap}}
 .res{border-top:1px solid var(--line);padding:26px 0 6px}.res h2{margin:0 0 8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}.res ul{margin:0;padding-left:18px;max-width:60em}.res li{margin:6px 0;font-size:14.5px}.res a{color:var(--red)}
 .nb{white-space:nowrap}
+.filmframe{display:inline-block;position:relative;background:#14161a;color:#f6f4ef;font-size:.8em;letter-spacing:.05em;white-space:nowrap;padding:.42em .6em;margin:.18em 0;border-radius:3px;border:2px solid var(--ink)}
+.filmframe::before,.filmframe::after{content:"";position:absolute;left:5px;right:5px;height:5px;background:repeating-linear-gradient(90deg,#f6f4ef 0 6px,transparent 6px 12px);opacity:.9}
+.filmframe::before{top:4px}.filmframe::after{bottom:4px}
 .brand{white-space:nowrap}.btn{white-space:nowrap}.top{flex-wrap:wrap;gap:10px}.tools{flex-wrap:wrap}
 .deck{padding:4px 0 18px}
 .synth{position:relative;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:12px 18px;align-items:end;background:linear-gradient(#1c1e24,#101216);color:#ffb347;border:1px solid #2c2f36;border-radius:14px;padding:16px 28px;box-shadow:inset 0 0 0 2px #0007,0 8px 22px rgba(0,0,0,.18);font-family:ui-monospace,Menlo,Consolas,monospace}
@@ -565,7 +576,7 @@ footer p{margin:0 0 8px;max-width:60em}
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
-  <h1>All of Canada's <span class="nb">post-production</span> news, <em>in one place.</em></h1>
+  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span> news,<br><em>in one place.</em></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
 
@@ -593,6 +604,7 @@ footer p{margin:0 0 8px;max-width:60em}
   <div class="empty" id="empty">Nothing matches that. Try a different filter or search.</div>
 </div></main>
 
+{{FEEDBACK}}
 <section class="res"><div class="wrap">
   <h2>Resources</h2>
   <ul>

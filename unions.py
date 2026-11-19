@@ -191,7 +191,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <h2>How to read this</h2>
 <p>Coverage depends on the production. Many editors work non-union, and some work under more than one agreement. "Not confirmed" means I couldn't verify it from a public source. Check with the local, guild or association before you rely on anything here. The Canadian Cinema Editors is a professional association, not a union, so it appears only under "post community".</p>
 </main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent and is not affiliated with any union, guild or association listed.</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent and is not run by, or an official publication of, any union, guild or association listed.</div></footer>
 <script id="data" type="application/json">{{DATA}}</script>
 <script>
 (function(){

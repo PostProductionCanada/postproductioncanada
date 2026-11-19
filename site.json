@@ -6,5 +6,6 @@
   "analytics_token": "",
   "sender_name": "Post Production Canada",
   "mailing_address": "",
-  "default_byline": "Post Production Canada"
+  "default_byline": "Post Production Canada",
+  "feedback_form_url": ""
 }

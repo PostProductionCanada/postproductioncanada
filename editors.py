@@ -251,7 +251,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="box"><ul class="arts">{{ARTICLES}}</ul></div>
 <p class="note">Headlines and links only. Each story belongs to its publisher. The CCE and VPA lists above update automatically from their own feeds.</p>
 </main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent and is not affiliated with the CCE or the VPA.</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent and is not run by, or an official publication of, the CCE or the VPA.</div></footer>
 </body>
 </html>
 """
