@@ -4,7 +4,7 @@
 Python 3 standard library only. Run:  python3 build.py
 Headlines + short excerpts only; every item links back to the original publisher.
 """
-import html, json, os, re, sys, time, logo
+import html, json, os, re, sys, time, logo, style
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
@@ -343,7 +343,7 @@ def cap_editor(t):
                 mode = None
             out.append(seg)
         elif mode in (None, "json"):
-            out.append(_ED_RE.sub(lambda m: "Editor" + m.group(1), seg))
+            out.append(style.cap_text(seg))
         else:
             out.append(seg)
     return "".join(out)
@@ -725,7 +725,7 @@ main{padding:20px 0 40px}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;line-height:1.3;text-decoration:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
-.comma{position:relative;z-index:2;margin-left:.22em}
+.comma{position:relative;z-index:2;margin-left:.06em;margin-right:.1em}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
 .filmframe::before{top:4px}.filmframe::after{bottom:4px}
 .brand{white-space:nowrap}.btn{white-space:nowrap}.top{flex-wrap:wrap;gap:10px}.tools{flex-wrap:wrap}
