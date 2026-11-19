@@ -4219,10 +4219,10 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": [],
-  "vibe": false
+  "prov": []
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",

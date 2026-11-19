@@ -39,7 +39,7 @@ MARITIMES = [
 
 DATA = {
     "BC": {"unions": [
-        U("IATSE Local 891", "Represents motion picture workers in BC and the Yukon. Editing is one of its 19 departments. Over 9,000 members (its own pages give figures from 9,000 to over 10,000).", "https://www.iatse.com/"),
+        U("IATSE Local 891", "Represents motion picture workers in BC and the Yukon. Its department list on its About page includes Editing, Sound and Visual Effects. Over 9,000 members (its own pages give figures from 9,000 to over 10,000). It publishes a public weekly Rumour Mill and Production Summary; the October 29, 2026 summary has a Post Only section that listed three productions that day.", "https://iatse.com/_content/documents/public/RM_PS/2026-10-29_RM-PS.pdf"),
         U("ACFC West, Local 2020 Unifor", "A technical film union recognized by the BC Labour Board, with Editing among its departments. Supplies crew for smaller-budget features and movies of the week.", "https://www.acfcwest.com/about-us"),
         U("DGC British Columbia", "Covers directors, assistant directors, production and location managers and PAs. Editors are not on that list.", CP)],
         "post": [U("Vancouver Post Alliance", "Non-profit association for BC's post-production industry.", "https://vancouverpostalliance.com/"),
