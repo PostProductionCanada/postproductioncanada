@@ -158,7 +158,7 @@ def nobreak(html_text):
     return "".join(out)
 
 
-NAV = [("index.html", "🏠 News"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+NAV = [("index.html", "🏠 News"), ("awards.html", "🏆 Awards"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -257,7 +257,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -275,7 +275,9 @@ def main():
     import didyouknow
     _dyk = [i for i in items if didyouknow.STUDIO_RE.search(i["title"] + " " + i.get("excerpt", ""))]
     (OUT / "cut-in-canada.html").write_text(didyouknow.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _dyk), encoding="utf-8")
-    import topics
+    import topics, awards, docs
+    (OUT / "awards.html").write_text(awards.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    (OUT / "documentary.html").write_text(docs.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     (OUT / "wellbeing.html").write_text(topics.wellbeing(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     (OUT / "green-post.html").write_text(topics.green(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import vibecutting
@@ -304,6 +306,9 @@ def main():
             t = add_nav(t, _rel, bool(_arts))
         if beacon and "cloudflareinsights" not in t:
             t = t.replace("</head>", beacon + "</head>", 1)
+        if _rel == "editors.html" and "ed-banner" not in t:
+            import graphics
+            t = t.replace("</h1>", "</h1><style>" + graphics.CSS + "</style>" + graphics.banner("THE EDITOR IS AN ARTIST", "The Editor shapes the story.") + graphics.craft_cards(), 1)
         if "ppc-foot" not in t:
             t = t.replace("</body>", FOOT.replace("{{YEAR}}", str(now.year)) + "</body>", 1)
         f.write_text(t, encoding="utf-8")
@@ -772,7 +777,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
@@ -816,6 +821,8 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
+    <li><a href="awards.html">Awards</a> — the awards that honour Editors, sound, VFX and music supervision, with winners and IMDb links.</li>
+    <li><a href="documentary.html">Documentary in Canada</a> — a sourced timeline and where to watch.</li>
     <li><a href="wellbeing.html">Wellbeing</a> — mental health and work-life balance support for screen workers.</li>
     <li><a href="green-post.html">Green Post</a> — sustainability programs and what they mean for post.</li>
     <li><a href="cut-in-canada.html">Did you know that was cut in Canada?</a> — movies and TV whose editing, effects or sound was done in Canada.</li>
