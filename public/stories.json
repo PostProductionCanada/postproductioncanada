@@ -13,6 +13,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -31,6 +32,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -49,6 +51,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -67,6 +70,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -85,6 +89,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -103,6 +108,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -121,6 +127,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -139,6 +146,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -157,6 +165,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -177,6 +186,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -195,6 +205,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -213,6 +224,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -231,6 +243,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -249,6 +262,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -267,6 +281,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -285,6 +300,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -303,6 +319,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -321,6 +338,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -339,6 +357,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -357,6 +376,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -375,6 +395,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -393,6 +414,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -411,6 +433,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -429,6 +452,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -447,6 +471,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -465,6 +490,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -483,6 +509,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -501,6 +528,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -519,6 +547,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -537,6 +566,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -557,6 +587,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -575,6 +606,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -593,6 +625,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -611,6 +644,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -629,6 +663,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -649,7 +684,8 @@
   "ai": true,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Short film expands playground for singers and rappers",
@@ -665,6 +701,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -683,6 +720,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -701,6 +739,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -719,6 +758,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -737,6 +777,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -757,6 +798,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": true,
   "status": false,
   "prov": [
@@ -777,6 +819,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -797,6 +840,7 @@
   ],
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -815,6 +859,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -833,6 +878,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -851,6 +897,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -869,6 +916,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -887,6 +935,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -905,6 +954,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -923,6 +973,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -941,6 +992,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -959,6 +1011,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -977,6 +1030,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -995,6 +1049,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1013,6 +1068,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1031,6 +1087,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1049,6 +1106,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1067,6 +1125,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1085,6 +1144,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1103,6 +1163,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1121,6 +1182,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1139,6 +1201,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1157,6 +1220,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1175,6 +1239,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1193,6 +1258,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1211,6 +1277,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1229,6 +1296,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1247,6 +1315,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1265,6 +1334,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1283,6 +1353,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1301,6 +1372,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1319,6 +1391,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1337,6 +1410,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1355,6 +1429,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1373,6 +1448,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1391,6 +1467,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1409,6 +1486,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -1429,6 +1507,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1447,6 +1526,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": true,
   "cce": false,
   "status": false,
   "prov": []
@@ -1465,6 +1545,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1483,6 +1564,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1501,6 +1583,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1519,6 +1602,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1537,6 +1621,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1555,6 +1640,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1573,6 +1659,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1591,6 +1678,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1609,6 +1697,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1627,6 +1716,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1645,6 +1735,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1663,6 +1754,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1681,6 +1773,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -1701,6 +1794,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1719,6 +1813,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1737,6 +1832,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1755,6 +1851,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1773,6 +1870,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1791,6 +1889,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1809,6 +1908,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1827,6 +1927,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1845,6 +1946,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1863,6 +1965,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1881,6 +1984,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1899,6 +2003,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -1921,6 +2026,7 @@
   ],
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1939,6 +2045,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1957,6 +2064,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1975,6 +2083,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -1993,6 +2102,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2011,6 +2121,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2029,6 +2140,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2047,6 +2159,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2065,6 +2178,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2083,6 +2197,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2101,6 +2216,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2119,6 +2235,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2137,6 +2254,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2155,6 +2273,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2173,6 +2292,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2191,6 +2311,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2209,6 +2330,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2227,6 +2349,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2245,6 +2368,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2263,6 +2387,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2281,6 +2406,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2299,6 +2425,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2317,6 +2444,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2335,6 +2463,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2353,6 +2482,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2371,6 +2501,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2389,6 +2520,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2407,6 +2539,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2425,6 +2558,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2443,6 +2577,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2461,6 +2596,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2479,6 +2615,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2497,6 +2634,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2515,6 +2653,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2533,6 +2672,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -2553,6 +2693,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2571,6 +2712,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2589,6 +2731,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2607,6 +2750,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2625,6 +2769,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2643,6 +2788,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2661,6 +2807,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2679,6 +2826,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -2704,7 +2852,8 @@
   "ai": true,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Save Hundreds on Your Next Cinema Camera – MZed Pro Members Now Get B&H Education Pricing",
@@ -2720,6 +2869,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2738,6 +2888,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2756,6 +2907,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2774,6 +2926,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2792,6 +2945,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2810,6 +2964,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2828,6 +2983,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2846,6 +3002,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2864,6 +3021,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2882,6 +3040,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2900,6 +3059,7 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2918,6 +3078,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -2938,6 +3099,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2956,6 +3118,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -2976,6 +3139,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -2994,6 +3158,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3012,6 +3177,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3030,6 +3196,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3050,6 +3217,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3068,6 +3236,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3086,6 +3255,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3104,6 +3274,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3122,6 +3293,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3140,6 +3312,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3158,6 +3331,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3176,6 +3350,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3194,6 +3369,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3212,6 +3388,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3230,6 +3407,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3248,6 +3426,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3266,6 +3445,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3284,6 +3464,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3302,6 +3483,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3320,6 +3502,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3340,6 +3523,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3358,6 +3542,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3376,6 +3561,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3394,6 +3580,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3412,6 +3599,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3430,6 +3618,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3448,6 +3637,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3466,6 +3656,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3484,6 +3675,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3502,6 +3694,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3520,6 +3713,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3540,6 +3734,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3558,6 +3753,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3576,6 +3772,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3594,6 +3791,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3612,6 +3810,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3630,11 +3829,31 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
    "BC"
   ]
+ },
+ {
+  "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY0lHVk5mOUpEZmsxUVdMNnNDZzI0YUcwQXd5aFdZdzBxaksyWF9yeTlHZGtCTHlXNFJ4T2k3TGRlWDJSLUhtdkFxVVB5X2FKZVlCek1RRzJZY194c1gwVGlmazBfTkhwQXAtSEZBZmZ3UERLOVJ0OTZzcjJVZzZvT2FzanNKQQ?oc=5",
+  "date": "2026-11-09T14:56:50+00:00",
+  "source": "Animation World Network",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Canon’s $2,499 EOS R6 V Earns Amazon’s Choice With Just 19 Reviews",
@@ -3650,6 +3869,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3668,6 +3888,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3686,6 +3907,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3704,6 +3926,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3724,6 +3947,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3742,24 +3966,7 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
-  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY0lHVk5mOUpEZmsxUVdMNnNDZzI0YUcwQXd5aFdZdzBxaksyWF9yeTlHZGtCTHlXNFJ4T2k3TGRlWDJSLUhtdkFxVVB5X2FKZVlCek1RRzJZY194c1gwVGlmazBfTkhwQXAtSEZBZmZ3UERLOVJ0OTZzcjJVZzZvT2FzanNKQQ?oc=5",
-  "date": "2026-11-09T08:00:00+00:00",
-  "source": "Animation World Network",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3778,6 +3985,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3796,6 +4004,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3816,6 +4025,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3834,6 +4044,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3854,6 +4065,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3872,6 +4084,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3890,6 +4103,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3908,6 +4122,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -3930,7 +4145,8 @@
   "ai": true,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",
@@ -3946,6 +4162,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3964,6 +4181,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -3982,6 +4200,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4000,6 +4219,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4018,24 +4238,7 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "Jimmy movie review & film summary",
-  "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1hd3JTV2RabjRhUl9kcVJKcnVYWVhoUExiX0FrLWxpdmFaWUpQTXcxaDRUdUFfR0JtR2M0Um1kOXlUVFhQWmhGNjFQRTNsbVk3M1R4TUE4bS1OUENhdTloX0llakdNWDhZbXkxR0Y0ZWxKMTgyN3BXRHZXTi0?oc=5",
-  "date": "2026-11-06T08:00:00+00:00",
-  "source": "Roger Ebert",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4054,6 +4257,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4072,6 +4276,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4090,6 +4295,7 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4108,6 +4314,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4126,6 +4333,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4144,6 +4352,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4162,6 +4371,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -4182,6 +4392,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -4202,6 +4413,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4220,6 +4432,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4238,6 +4451,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4256,6 +4470,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4274,6 +4489,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4292,6 +4508,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4310,6 +4527,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4328,6 +4546,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4346,6 +4565,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4364,6 +4584,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4382,6 +4603,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -4402,6 +4624,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -4422,6 +4645,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -4442,6 +4666,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
@@ -4462,6 +4687,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": []
@@ -4480,6 +4706,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": true,
   "status": false,
   "prov": [
