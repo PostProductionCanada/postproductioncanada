@@ -158,7 +158,7 @@ def nobreak(html_text):
     return "".join(out)
 
 
-NAV = [("index.html", "🏠 News"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+NAV = [("index.html", "🏠 News"), ("index.html#subscribe", "📬 Newsletter"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -364,8 +364,8 @@ def cap_editor(t):
 
 def esc(s): return html.escape(s, quote=True)
 
-CATS = {"canada": ("🍁", "Canada"), "picture": ("🎞️", "Picture & Editing"), "audio": ("🎧", "Audio"),
-        "vfx": ("✨", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
+CATS = {"canada": ("🍁", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎧", "Audio"),
+        "vfx": ("🟩", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
         "cce": ("✂️", "CCE"),
         "vibe": ("🎚️", "Vibe Cutting"),
@@ -582,11 +582,19 @@ def render(items, sources, now):
     counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "cce" and i["cce"]) or (k == "vibe" and i["vibe"]) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
-    tabs = [("all", "🎬 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
+    tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
     tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
     popts = "".join(f'<option value="{k}">{PROV_LABEL[k]} ({sum(1 for i in items if k in i["prov"])})</option>' for k in PROV_LABEL)
     cfg = json.loads((ROOT / "site.json").read_text())
-    sub, subbtn = "", ""
+    sub, subbtn = "", '<a class="btn" href="/#subscribe">📬 Newsletter</a>'
+    _rss = ('<p class="consent" style="opacity:.9">📡 <b>RSS</b> is a free way to follow the site without email. Copy <b>postproductioncanada.ca/feed.xml</b> into a feed reader such as Feedly or NetNewsWire and new stories show up there. '
+            '<a href="/feed.xml">Open the feed</a></p>')
+    if not (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")):
+        _em = cfg.get("contact_email") or ""
+        _hello = (' Want to be first? Email <a href="mailto:' + esc(_em) + '?subject=Newsletter">' + esc(_em) + '</a> with the subject Newsletter.') if _em else ""
+        sub = ('<section id="subscribe" class="subbox"><div class="wrap"><h2>📬 The newsletter is coming soon</h2>'
+               '<p>A short, free email with the week\'s Canadian post-production news, plus original articles and interviews with Canada\'s Editors, colourists, sound mixers and VFX artists.' + _hello + '</p>'
+               + _rss + '</div></section>')
     if cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action"):
         subbtn = '<a class="btn" href="#subscribe">Subscribe</a>'
         inner = cfg.get("subscribe_embed_html") or (
@@ -597,7 +605,7 @@ def render(items, sources, now):
                '<p>Free updates, plus original articles and interviews with Canada\'s editors, colourists, sound mixers and VFX artists. '
                'Unsubscribe any time.</p>' + inner +
                '<p class="consent">By subscribing you agree to receive the Post Production Canada newsletter by email. '
-               'Unsubscribe any time. <a href="privacy.html">Privacy</a></p></div></section>')
+               'Unsubscribe any time. <a href="privacy.html">Privacy</a></p>' + _rss + '</div></section>')
     contact = (f'<p>Want your outlet, guild or studio added, or have a story tip? '
                f'<a href="mailto:{esc(cfg["contact_email"])}">{esc(cfg["contact_email"])}</a></p>') if cfg.get("contact_email") else ""
     import base64
@@ -738,7 +746,6 @@ main{padding:20px 0 40px}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;line-height:1.3;text-decoration:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
-.comma{position:relative;z-index:2;margin-left:.06em;margin-right:.1em}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
 .filmframe::before{top:4px}.filmframe::after{bottom:4px}
 .brand{white-space:nowrap}.btn{white-space:nowrap}.top{flex-wrap:wrap;gap:10px}.tools{flex-wrap:wrap}
@@ -789,7 +796,7 @@ footer p{margin:0 0 8px;max-width:60em}
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
-  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span><span class="comma">,</span><br><em>in one place.</em></h1>
+  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span><br><em>in one place.</em></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
 
