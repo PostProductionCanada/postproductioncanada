@@ -102,6 +102,40 @@ RESOLVE_VIDEOS = [
 ]
 
 
+# Storytelling and creativity in Resolve. Only items seen in search results or opened. Notes paraphrase what each page says.
+RESOLVE_CREATIVE_ARTICLES = [
+    ("DaVinci Resolve (official)", "Blackmagic Design", "", "https://www.blackmagicdesign.com/products/davinciresolve/",
+     "The official overview of the pages: Cut and Edit for building the story, Fusion for effects and motion graphics, Color, and Fairlight for sound."),
+    ("Advanced Editing with DaVinci Resolve (training book)", "Blackmagic Design", "", "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-15-Advanced-Editing.pdf",
+     "Dialogue editing is about more than the words: the eyes, mouths and body language carry the emotion. It shows how to audition alternate takes with the Take Selector and how to cut on action. Written for Resolve 15, so the interface has changed."),
+    ("The Visual Effects Guide to DaVinci Resolve 20 (training book)", "Blackmagic Design", "", "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Fusion-Visual-Effects.pdf",
+     "Official lessons on Fusion, with keying, tracking and masking, for Editors who want to do their own effects without leaving Resolve."),
+    ("Master Pacing in Video Editing for Maximum Story Impact", "Inside the Edit", "", "https://www.insidetheedit.com/blog/pacing-in-video-editing",
+     "Start with the emotion you want the audience to feel, then choose a tempo. Includes a practice exercise: cut a scene one way, duplicate it and cut it the opposite way."),
+    ("Mastering film editing: essential techniques for storytelling", "Artlist", "", "https://artlist.io/blog/editing-techniques",
+     "Timing, J and L cuts, match cuts, smash cuts and sound bridges, with the advice to practice them in an editor such as Resolve."),
+    ("How to Tell a Story in Film and Video With Colour Grading in DaVinci Resolve", "Envato Tuts+", "", "https://photography.tutsplus.com/articles/how-to-tell-a-story-in-film-and-video-with-colour-grading-in-davinci-resolve--cms-39975",
+     "Natural colour reinforces a story, but sometimes you need a stronger, stylised touch. A look at both approaches in Resolve."),
+    ("Everything you need to know to color grade in DaVinci Resolve", "Storyblocks", "", "https://www.storyblocks.com/resources/tutorials/davinci-resolve-color-grading",
+     "Explains the difference between colour correction and colour grading, and how grading sets mood, marks time and place and shapes emotion."),
+    ("Advanced Audio Editing in DaVinci Resolve", "Pro Sound Effects", "", "https://blog.prosoundeffects.com/advanced-audio-editing-in-davinci-resolve",
+     "Fairlight as a full audio workstation. Creative uses of automation include muffling dialogue behind a closed door with a high-pass filter and changing reverb as a character moves through spaces."),
+    ("Doing It All In DaVinci, Part 6: Overview of Audio in Fairlight", "Filmmakers Academy", "", "https://www.filmmakersacademy.com/blog-doing-it-all-in-davinci-part-6-overview-of-audio-in-fairlight",
+     "A sound-minded take on mixing in Fairlight, including panning a passing car's sound across the screen to knit it to the picture."),
+]
+
+RESOLVE_CREATIVE_VIDEOS = [
+    ("Audio Storytelling and Editing in DaVinci Resolve 19: Audio Masterclass on a Real Project", "YouTube", "", "https://www.youtube.com/watch?v=flE3YU3Lirw",
+     "Chapters cover building the story from voiceover, J and L cuts for audio, then Fairlight EQ, noise removal and dynamics."),
+    ("DaVinci Resolve 17 Fairlight Training: Introduction to Sound Design", "YouTube", "", "https://www.youtube.com/watch?v=n4uTGns2z7c",
+     "Explains why sounds the characters can hear are a priority, how non-diegetic sound can show what a character feels, and why sound design means crafting a sound to achieve a goal."),
+    ("How to Start Color Grading in DaVinci Resolve: Total Beginner's Guide", "YouTube", "", "https://www.youtube.com/watch?v=Wc6EAZp7pzQ",
+     "Grading as correction, as emotion and as a way to lead the viewer's eye through the frame."),
+    ("Documentary Video Editing in DaVinci Resolve: Masking Reveal Tutorial", "YouTube", "", "https://www.youtube.com/watch?v=GWvTlWML4bw",
+     "Documentary-style editing in Resolve, from story structure to cinematic pacing and colour."),
+]
+
+
 def feed_list(items, n=8):
     if not items:
         return "<p class=\"note\">Nothing to show right now.</p>"
@@ -141,7 +175,7 @@ def render(leaf, favicon, updated, cce_items, vpa_items, audio_items=None):
     mixlinks = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(s)}</span></li>' for t, s, u in MIX_LINKS)
     return (PAGE.replace("{{MIXWIN}}", f"<b>{e(CSA_MIX_WINNER[0])}</b>, <i>{e(CSA_MIX_WINNER[1])}</i>").replace("{{MIXNOMS}}", noms)
             .replace("{{MIXLINKS}}", mixlinks).replace("{{AUDIOFEED}}", feed_list(audio_items or [], 8))
-            .replace("{{RESARTS}}", _lst(RESOLVE_ARTICLES)).replace("{{RESVIDS}}", _lst(RESOLVE_VIDEOS)).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{AWARDS}}", awards)
+            .replace("{{RESARTS}}", _lst(RESOLVE_ARTICLES)).replace("{{RESVIDS}}", _lst(RESOLVE_VIDEOS)).replace("{{RESCARTS}}", _lst(RESOLVE_CREATIVE_ARTICLES)).replace("{{RESCVIDS}}", _lst(RESOLVE_CREATIVE_VIDEOS)).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{AWARDS}}", awards)
             .replace("{{CCELINKS}}", links).replace("{{ARTICLES}}", arts).replace("{{CCEFEED}}", feed_list(cce_items))
             .replace("{{VPAFEED}}", feed_list(vpa_items, 5)).replace("{{UPDATED}}", updated))
 
@@ -234,6 +268,13 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="box"><ul class="arts">{{RESARTS}}</ul></div>
 <h3>Videos on YouTube</h3>
 <div class="box"><ul class="arts">{{RESVIDS}}</ul></div>
+
+<h2 id="resolve-story">Storytelling and creativity in Resolve</h2>
+<p>Resolve is a tool, and the craft is knowing what the audience should feel. These reads and videos cover pacing, performance, colour, sound and effects with a story in mind. Check the version a tutorial was written for, as Resolve changes often.</p>
+<h3>Articles and official guides</h3>
+<div class="box"><ul class="arts">{{RESCARTS}}</ul></div>
+<h3>Videos on YouTube</h3>
+<div class="box"><ul class="arts">{{RESCVIDS}}</ul></div>
 
 <h2 id="sound">Sound mixing in Canada</h2>
 <h3>Canadian Screen Awards: Achievement in Sound Mixing, 2026</h3>
