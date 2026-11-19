@@ -450,6 +450,77 @@ def picks_html(picks):
         for r in picks)
     return f'<section class="picks" aria-label="Editor\'s picks"><h2>⭐ Editor\'s Picks</h2><div class="pgrid">{cards}</div></section>'
 
+
+ROLL_FILE = ROOT / "data" / "roll.json"
+ROLL_HOUR_ET = 8
+
+
+def _et(now):
+    try:
+        from zoneinfo import ZoneInfo
+        return now.astimezone(ZoneInfo("America/Toronto"))
+    except Exception:
+        return now - timedelta(hours=5)
+
+
+def get_roll(items, now):
+    """The Morning Roll: compiled once a day, on the first build at or after 8:00 a.m. Eastern, then kept until the next one."""
+    et = _et(now)
+    today = et.strftime("%Y-%m-%d")
+    old = None
+    try:
+        old = json.loads(ROLL_FILE.read_text())
+    except Exception:
+        pass
+    due = old is None or (et.hour >= ROLL_HOUR_ET and old.get("date") != today)
+    if not due:
+        return old
+    pool = [i for i in items if i["date"] >= now - timedelta(hours=24)]
+    if len(pool) < 5:
+        pool = [i for i in items if i["date"] >= now - timedelta(hours=72)]
+    pool = [i for i in pool if i["canada"] or "news.google.com" not in i["url"]]
+    pool.sort(key=lambda i: (i["canada"], i["date"]), reverse=True)
+    pick, per = [], {}
+    for i in pool:
+        if per.get(i["source"], 0) >= 2:
+            continue
+        per[i["source"]] = per.get(i["source"], 0) + 1
+        pick.append(i)
+        if len(pick) == 6:
+            break
+    pick.sort(key=lambda i: i["date"], reverse=True)
+    roll = {"date": today, "compiled": ("PREVIEW" if old is None else et.strftime("%-I:%M %p ET")), "day": et.strftime("%a %b %-d").upper(),
+            "items": [{"title": i["title"], "url": i["url"], "source": i["source"], "category": i["category"],
+                       "prov": i.get("prov", []), "canada": bool(i["canada"]), "date": i["date"].strftime("%b %-d")} for i in pick]}
+    if os.environ.get("GITHUB_ACTIONS") or os.environ.get("ROLL_SAVE") or old is None:
+        ROLL_FILE.parent.mkdir(exist_ok=True)
+        ROLL_FILE.write_text(json.dumps(roll, indent=1, ensure_ascii=False))
+    return roll
+
+
+REEL = ('<svg class="reel" viewBox="0 0 100 100" aria-hidden="true"><g class="spin"><circle cx="50" cy="50" r="46" fill="#1b1d22" stroke="#9aa0ab" stroke-width="3"/>'
+        + "".join(f'<circle cx="{50+27*__import__("math").cos(k*1.0472):.1f}" cy="{50+27*__import__("math").sin(k*1.0472):.1f}" r="9" fill="#f6f4ef"/>' for k in range(6))
+        + '<circle cx="50" cy="50" r="8" fill="#9aa0ab"/><circle cx="50" cy="50" r="3" fill="#1b1d22"/></g></svg>')
+
+
+def roll_html(items, now):
+    r = get_roll(items, now)
+    frames = ""
+    for n, s in enumerate(r["items"], 1):
+        em = CATS.get(s["category"], ("🎬", ""))[0]
+        leaf = "🍁 " if (s["canada"] and s["category"] != "canada") else ""
+        pins = "".join(f'<span class="rpin">📍 {esc(k)}</span>' for k in s["prov"])
+        frames += (f'<article class="frame"><div class="fno">SC.{n:02d}</div><div class="fmeta">{em} {leaf}{pins}</div>'
+                   f'<a class="ftitle" href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a>'
+                   f'<div class="fsrc">{esc(s["source"])} · {esc(s["date"])}</div>'
+                   f'<a class="fmore" href="{esc(s["url"])}" target="_blank" rel="noopener">Read the full article →</a></article>')
+    if not frames:
+        frames = '<article class="frame"><div class="ftitle">The roll is loading. Check back after 8 a.m. Eastern.</div></article>'
+    return ('<section class="roll" aria-label="Morning Roll"><div class="wrap"><div class="rollhead">' + REEL +
+            f'<div class="rtxt"><div class="rlcd">MORNING ROLL · {esc(r["day"])}</div>'
+            f'<div class="rsub">☕ Your 8 a.m. rundown of the latest. {"Preview edition: the first full roll compiles at 8 a.m. Eastern." if r["compiled"] == "PREVIEW" else "Compiled " + esc(r["compiled"]) + "."} Read it with your first coffee or tea.</div></div>'
+            + REEL + '</div><div class="strip">' + frames + '</div></div></section>')
+
 def render(items, sources, now):
     picks = load_picks(now)
     ptitles = {norm(r["title"]) for r in picks}
@@ -504,7 +575,7 @@ def render(items, sources, now):
         _ext = ' target="_blank" rel="noopener"' if _fbu else ""
         _fb = ('<section class="res"><div class="wrap"><h2>Feedback and tips</h2><p>Spot something missing or wrong? Know a story, a source, or a Canadian editor or director we should feature? '
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
-    return TEMPLATE.replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -599,6 +670,21 @@ main{padding:20px 0 40px}
 .nb{white-space:nowrap}
 .filmframe{display:inline-block;position:relative;background:#14161a;color:#f6f4ef;font-size:.8em;letter-spacing:.05em;white-space:nowrap;padding:.42em .6em;margin:.18em 0;border-radius:3px;border:2px solid var(--ink)}
 .filmframe::before,.filmframe::after{content:"";position:absolute;left:5px;right:5px;height:5px;background:repeating-linear-gradient(90deg,#f6f4ef 0 6px,transparent 6px 12px);opacity:.9}
+.roll{background:#14161a;border-top:1px solid #2a2d34;border-bottom:1px solid #2a2d34;padding:18px 0 22px;color:#eceae4}
+.rollhead{display:flex;align-items:center;gap:14px;justify-content:space-between;margin-bottom:12px}
+.reel{width:64px;height:64px;flex:none}.reel .spin{transform-origin:50px 50px;animation:rspin 9s linear infinite}
+@keyframes rspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.reel .spin{animation:none}}
+.rtxt{flex:1;min-width:0;text-align:center}
+.rlcd{display:inline-block;background:#0b0d0a;color:#ffb000;font:700 clamp(15px,3.2vw,24px)/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;padding:8px 14px;border-radius:6px;border:2px solid #3a3d44;text-shadow:0 0 8px rgba(255,176,0,.55)}
+.rsub{color:#aab0bb;font-size:13.5px;margin-top:8px}
+.strip{position:relative;display:flex;gap:10px;overflow-x:auto;padding:22px 10px;background:#0b0c0e;border-radius:6px;scroll-snap-type:x proximity}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,#f6f4ef 0 12px,transparent 12px 26px);opacity:.85}
+.strip::before{top:6px}.strip::after{bottom:6px}
+.frame{flex:0 0 min(270px,78vw);scroll-snap-align:start;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
+.fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
+.ftitle{color:#fff;font-weight:700;line-height:1.3;text-decoration:none}.ftitle:hover{text-decoration:underline}
+.fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
 .comma{position:relative;z-index:2;margin-left:.22em}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
 .filmframe::before{top:4px}.filmframe::after{bottom:4px}
@@ -653,6 +739,8 @@ footer p{margin:0 0 8px;max-width:60em}
   <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span><span class="comma">,</span><br><em>in one place.</em></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
+
+{{ROLL}}
 
 <section class="deck" aria-label="Update clock"><div class="wrap"><div class="synth">
   <div class="cell"><div class="lbl">TODAY</div><div class="lcd sm" id="today">{{TODAYSTR}}</div></div>

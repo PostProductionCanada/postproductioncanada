@@ -3,6 +3,7 @@ name: Refresh news and deploy
 on:
   schedule:
     - cron: "17 */3 * * *"   # every 3 hours
+    - cron: "7 12,13 * * *"  # just after 8 a.m. Eastern, either side of daylight saving
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -30,7 +31,7 @@ jobs:
         run: |
           git config user.name "Post Production Canada"
           git config user.email "noreply@postproductioncanada.ca"
-          git add data/archive.json
+          git add data/archive.json data/roll.json
           if ! git diff --cached --quiet; then
             git commit -m "Update rolling archive"
             git pull --rebase origin main
