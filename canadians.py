@@ -16,7 +16,7 @@ STORIES = [
      "sources": [("Stanley Kubrick, cinephile", "Sight and Sound (BFI)", "https://www.bfi.org.uk/sight-and-sound/stanley-kubrick-cinephile"),
                  ("How avant-garde NFB filmmaker Arthur Lipsett influenced Kubrick and Lucas", "NFB Blog", "https://blog.nfb.ca/blog/2012/10/03/how-lipsett-influenced-kubrick-lucas"),
                  ("The documentary roots of 2001 and the Canadian voice of HAL", "Gerry Flahive, Medium", "https://medium.com/@gflahive/im-sure-you-ll-agree-there-s-some-truth-in-what-i-say-the-documentary-roots-and-a-i-1eb994454d00")]},
-    {"name": "Ronald Sanders", "roles": ["Picture editor"],
+    {"name": "Ronald Sanders", "roles": ["Picture editor"], "prov": ["MB", "ON"],
      "angle": "Born in Winnipeg, based in Toronto, and David Cronenberg's regular editor since the late 1970s.",
      "story": ["Sanders came to picture editing through documentaries and sound editing, and cut his first feature in 1976. From the late 1970s he became the editor of most of David Cronenberg's films, a partnership that runs from Videodrome and The Fly through Crash, A History of Violence and Eastern Promises. He also cut the animated feature Coraline, which was nominated for an Oscar.",
                "His editing won Genie Awards for Dead Ringers, Crash, eXistenZ and Eastern Promises, and DGC Craft Awards for A History of Violence and Eastern Promises. He is a member of the Canadian Cinema Editors."],
@@ -24,7 +24,7 @@ STORIES = [
      "sources": [("Ronald Sanders", "The Canadian Encyclopedia", "https://thecanadianencyclopedia.ca/en/article/ronald-sanders"),
                  ("Ronald Sanders (film editor)", "Wikipedia", "https://en.wikipedia.org/wiki/Ronald_Sanders_(film_editor)"),
                  ("Behind the Cut: Ronald Sanders", "ioncinema", "https://www.ioncinema.com/news/uncategorized/behind-the-cut-ronald-sanders-part-i")]},
-    {"name": "Jean-Marc Vallée", "roles": ["Director", "Editor"],
+    {"name": "Jean-Marc Vallée", "roles": ["Director", "Editor"], "prov": ["QC"],
      "angle": "Born in Montréal, and one of the few Canadian filmmakers to cross over to major Hollywood success.",
      "story": ["Vallée directed Dallas Buyers Club, Wild, Big Little Lies and Sharp Objects. He also edited much of his own work, credited under the name John Mac McMurphy, and under that name earned an Academy Award nomination for Best Film Editing on Dallas Buyers Club.",
                "He died in December 2021, aged 58."],
@@ -48,7 +48,8 @@ def card(s):
         cred = '<p class="note"><b>Credits:</b> ' + " · ".join(e(c) for c in s["credits"]) + "</p>"
     note = f'<p class="note">{e(s["note"])}</p>' if s.get("note") else ""
     src = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(o)}</span></li>' for t, o, u in s["sources"])
-    return (f'<article class="box"><div>{roles}</div><h3>{e(s["name"])}</h3><p class="angle">🍁 {e(s["angle"])}</p>'
+    pins = "".join(f'<span class="pill">📍 {e(p)}</span> ' for p in s.get("prov", []))
+    return (f'<article class="box"><div>{roles}{pins}</div><h3>{e(s["name"])}</h3><p class="angle">🍁 {e(s["angle"])}</p>'
             f'{paras}{cred}{note}<ul class="src">{src}</ul></article>')
 
 

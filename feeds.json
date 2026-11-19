@@ -233,6 +233,13 @@
       "require": [
         "film|movie|television|\\bTV\\b|Atmos|Dolby|streaming|documentary|cinema|dialogue|\\bADR\\b|foley|re-recording|post-production|soundtrack|dubbing"
       ]
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%28%22Rodeo+FX%22+OR+%22Image+Engine%22+OR+%22Spin+VFX%22+OR+%22Mr.+X%22+OR+%22Folks+VFX%22+OR+%22Soho+VFX%22+OR+%22Eyeline%22+OR+%22DNEG%22%29+VFX+when%3A30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "vfx",
+      "google": true,
+      "intl": true
     }
   ]
 }

@@ -158,7 +158,7 @@ def nobreak(html_text):
     return "".join(out)
 
 
-NAV = [("index.html", "🏠 News"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+NAV = [("index.html", "🏠 News"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -257,7 +257,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -272,6 +272,12 @@ def main():
     (OUT / "privacy.html").write_text(privacy.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg), encoding="utf-8")
     import unions
     (OUT / "unions.html").write_text(unions.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    import didyouknow
+    _dyk = [i for i in items if didyouknow.STUDIO_RE.search(i["title"] + " " + i.get("excerpt", ""))]
+    (OUT / "cut-in-canada.html").write_text(didyouknow.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _dyk), encoding="utf-8")
+    import topics
+    (OUT / "wellbeing.html").write_text(topics.wellbeing(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    (OUT / "green-post.html").write_text(topics.green(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import vibecutting
     (OUT / "vibe-cutting.html").write_text(vibecutting.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import schools
@@ -340,6 +346,14 @@ AUDIO_RE = re.compile(r"\b(audio|sound|mix(ing|er)?|microphones?|mic|dolby|atmos
 VFX_RE = re.compile(r"\b(vfx|visual effects|animat\w+|composit\w+|nuke|houdini|unreal|cgi|3d|motion graphics|"
                     r"after effects|maya|blender|virtual production|volume|mocap|pixar|dreamworks|weta|ilm)\b", re.I)
 
+def _decor(r):
+    """A leaf for anything Canadian and a pin for any province it connects to."""
+    text = r.get("title", "") + " " + r.get("note", "")
+    leaf = "🍁 " if (CANADA_RE.search(text) or r.get("source") == "CMPA") else ""
+    pins = "".join(f'<span class="chip c-prov">📍 {k}</span>' for k, rx in PROV_RE.items() if rx.search(text))
+    return leaf, pins
+
+
 def card(i):
     cats = []
     if i["canada"]: cats.append("canada")
@@ -349,6 +363,7 @@ def card(i):
     if i["cce"]: cats.append("cce")
     if i["vibe"]: cats.append("vibe")
     iso = i["date"].isoformat()
+    _lf = "🍁 " if i["canada"] else ""
     em, lab = CATS[i["category"]]
     chip = f'<span class="chip c-{i["category"]}">{em} {lab}</span>'
     if i["canada"] and i["category"] != "canada":
@@ -365,7 +380,7 @@ def card(i):
         chip += f'<span class="chip c-prov">📍 {k}</span>'
     ex = f'<p class="ex">{esc(i["excerpt"])}</p>' if i["excerpt"] else ""
     return (f'<article class="card k-{i["category"]}" data-cats="{" ".join(sorted(set(cats)))}" data-prov="{" ".join(i["prov"])}" data-t="{esc(norm(i["title"] + " " + i["source"]))}">'
-            f'<div class="chips">{chip}</div><div class="meta"><span class="src">{esc(i["source"])}</span>'
+            f'<div class="chips">{chip}</div><div class="meta"><span class="src">{_lf}{esc(i["source"])}</span>'
             f'<span class="dot">·</span><time datetime="{iso}">{iso[:10]}</time></div>'
             f'<h3><a href="{esc(i["url"])}" target="_blank" rel="noopener">{esc(i["title"])}</a></h3>{ex}</article>')
 
@@ -398,7 +413,8 @@ def _body_card(src, r):
     if r.get("dt"):
         when = '<span class="dot">·</span><time datetime="' + r["dt"].isoformat() + '">' + str(r["dt"].date()) + "</time>"
     note = '<p class="why">' + esc(r["note"]) + "</p>" if r.get("note") else ""
-    return ('<article class="pick body"><div class="meta"><span class="src">' + esc(src) + "</span>" + by + when + "</div>"
+    _lf, _pn = _decor({**r, "source": src})
+    return ('<article class="pick body"><div class="meta"><span class="src">' + _lf + esc(src) + "</span>" + by + when + _pn + "</div>"
             '<h3><a href="' + esc(r["url"]) + '" target="_blank" rel="noopener">' + esc(r["title"]) + "</a></h3>" + note + "</article>")
 
 
@@ -427,8 +443,8 @@ def picks_html(picks):
     if not picks:
         return ""
     cards = "".join(
-        f'<article class="pick"><div class="meta"><span class="src">{esc(r["source"])}</span><span class="dot">·</span>'
-        f'<time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time></div>'
+        f'<article class="pick"><div class="meta"><span class="src">{_decor(r)[0]}{esc(r["source"])}</span><span class="dot">·</span>'
+        f'<time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time>{_decor(r)[1]}</div>'
         f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
         + (f'<p class="why"><b>Why it matters:</b> {esc(r["note"])}</p>' if r.get("note") else "") + '</article>'
         for r in picks)
@@ -583,6 +599,7 @@ main{padding:20px 0 40px}
 .nb{white-space:nowrap}
 .filmframe{display:inline-block;position:relative;background:#14161a;color:#f6f4ef;font-size:.8em;letter-spacing:.05em;white-space:nowrap;padding:.42em .6em;margin:.18em 0;border-radius:3px;border:2px solid var(--ink)}
 .filmframe::before,.filmframe::after{content:"";position:absolute;left:5px;right:5px;height:5px;background:repeating-linear-gradient(90deg,#f6f4ef 0 6px,transparent 6px 12px);opacity:.9}
+.comma{position:relative;z-index:2;margin-left:.22em}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
 .filmframe::before{top:4px}.filmframe::after{bottom:4px}
 .brand{white-space:nowrap}.btn{white-space:nowrap}.top{flex-wrap:wrap;gap:10px}.tools{flex-wrap:wrap}
@@ -629,11 +646,11 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
-  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span>,<br><em>in one place.</em></h1>
+  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span><span class="comma">,</span><br><em>in one place.</em></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
 
@@ -671,6 +688,9 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
+    <li><a href="wellbeing.html">Wellbeing</a> — mental health and work-life balance support for screen workers.</li>
+    <li><a href="green-post.html">Green Post</a> — sustainability programs and what they mean for post.</li>
+    <li><a href="cut-in-canada.html">Did you know that was cut in Canada?</a> — movies and TV whose editing, effects or sound was done in Canada.</li>
     <li><a href="vibe-cutting.html">Vibe Cutting</a> — editing by telling the software what you want, and how AI is wiring into editing software.</li>
     <li><a href="schools.html">Schools across Canada</a> — colleges, universities and private schools teaching picture editing, sound and post.</li>
     <li><a href="canadians.html">Canadian Stories</a> — the editors and directors from Canada behind screens the world watches.</li>

@@ -9,6 +9,7 @@ import html
 e = html.escape
 TAGNAMES = {"picture": "Picture editing", "sound": "Sound and audio post", "post": "Post-production", "music": "Music and audio production"}
 ORIG = "official"
+REGION_CODE = {"Ontario": "ON", "British Columbia": "BC", "Alberta": "AB", "Saskatchewan": "SK", "Manitoba": "MB", "Québec": "QC", "Atlantic Canada": None}
 
 REGIONS = [
     ("Ontario", [
@@ -91,8 +92,9 @@ def render(leaf, favicon, updated):
                 chips = "".join(f'<span class="pill t-{t}">{e(TAGNAMES[t])}</span> ' for t in tags)
                 progs += (f'<div class="prog" data-tags="{" ".join(tags)}"><div>{chips}</div>'
                           f'<a href="{e(url)}" target="_blank" rel="noopener">{e(title)}</a><div class="note">{e(note)}</div></div>')
+            code = REGION_CODE.get(region) or ("NL" if "North Atlantic" in s["school"] else "NS")
             cards.append(f'<article class="box" data-tags="{" ".join({t for p in s["programs"] for t in p[1]})}"><h3>{e(s["school"])}</h3>'
-                         f'<div class="meta">{e(s["city"])} · {e(s["kind"])}</div>{progs}</article>')
+                         f'<div class="meta">🍁 📍 {code} · {e(s["city"])} · {e(s["kind"])}</div>{progs}</article>')
         secs.append(f'<h2 id="{e(region.lower().replace(" ", "-"))}">{e(region)}</h2>{"".join(cards)}')
     return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{SECTIONS}}", "".join(secs)).replace("{{UPDATED}}", updated))
 
