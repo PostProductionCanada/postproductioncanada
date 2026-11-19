@@ -56,9 +56,9 @@ def link_people(t):
                 depth_a += 1
             elif low.startswith("</a"):
                 depth_a = max(0, depth_a - 1)
-            elif re.match(r"<h[1-6]\b", low):
+            elif re.match(r"<h[12]\b", low):
                 depth_h += 1
-            elif re.match(r"</h[1-6]\b", low):
+            elif re.match(r"</h[12]\b", low):
                 depth_h = max(0, depth_h - 1)
             out.append(seg)
         elif mode is None and not depth_a and not depth_h:
