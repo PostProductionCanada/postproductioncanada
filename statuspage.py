@@ -225,7 +225,13 @@ def vfx_section():
             'These go to production and post companies, not individual artists, but they decide where VFX and post work gets booked.</p>'
             '<div class="tw"><table><thead><tr><th>Where</th><th>What it adds</th><th>Official sources</th></tr></thead><tbody>'
             + "".join(rows) + '</tbody></table></div>'
-            '<p class="note" style="margin-top:10px">Rates checked against Creative BC and Ontario Creates on Nov 18, 2026. Budgets change these, so confirm with the agency before you plan around a figure.</p>')
+            '<p class="note" style="margin-top:10px">Rates checked against Creative BC and Ontario Creates on Nov 18, 2026. Budgets change these, so confirm with the agency before you plan around a figure.</p>'
+            '<div class="box"><h3 style="margin-top:0">Further reading</h3><ul>'
+            '<li><a href="https://www.fixersincanada.ca/blog/film-tax-incentives-guide/" target="_blank" rel="noopener">Film tax credits in Canada: CPTC and provincial stacking guide</a> <span class="pill">vendor</span> Fixers in Canada'
+            '<div class="note">A production-services company\'s explainer on how federal and provincial credits combine. Its figures may lag the official pages, so check them against the agencies above.</div></li>'
+            '<li><a href="https://www.fixersincanada.ca/blog/post-production-facilities-guide/" target="_blank" rel="noopener">Post-production facilities guide: local vs international</a> <span class="pill">vendor</span> Fixers in Canada'
+            '<div class="note">A service company\'s view on choosing between local and international post facilities. It sells production services, so read it as a vendor guide.</div></li>'
+            '</ul></div>')
 
 
 def render(leaf, favicon, updated):
