@@ -726,25 +726,6 @@
   "prov": []
  },
  {
-  "title": "Short film expands playground for singers and rappers",
-  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN2hGRktyOXJtWkNxRzBkbng2dTBkUDFlZVdBd1FwTHZzZGQ0c1NRTTdmWHdjTHp5SU85SU45amItMjgtbjd2Q0s4MHN4UWdubjVMTFozV0JhWHZScWVqc2tsdF83WW9DOV9fNFdad3hYbnJ5OTgzUzVjQmN0TTd0WWZnem9QMHVPMmJWdTVPOGhPTnYxa1IwUXRQUS0?oc=5",
-  "date": "2026-11-18T09:33:40+00:00",
-  "source": "Laodong.vn",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "Aiarty Video Enhancer – Offline AI Denoising, 4K Upscaling and Black Friday Offer",
   "url": "https://www.cined.com/aiarty-video-enhancer-offline-ai-denoising-4k-upscaling-and-black-friday-offer/",
   "date": "2026-11-18T09:04:55+00:00",
@@ -3394,6 +3375,25 @@
   "prov": []
  },
  {
+  "title": "AI Movie Awards Announces Winners Of First London Edition, Celebrating Global AI Filmmaking Talent",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZmNVS2FidjF0TGpTVlZ0YTlUV1M3bVFwbmlKNGtUVS1ORUN5WGMyMkp0TzBVUmgxWndTX0FaUEV4SER1aW0wcnNuQmlkVDIzdUZ2eXJEcGNEcVV2U2lLRllhWE5lYm1XM3ZpNE40bDFWTDRiUkFTQmRpYmVIQWJMN3k4MzAwNHpycjVFMFVqMXJnTmV6ZG9IY05Oak51ZVFVNVhxTGZqaWUtcU5tX2tGR0xqWVNQTXBoVkEyaA?oc=5",
+  "date": "2026-11-11T18:15:21+00:00",
+  "source": "Roastbrief US",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "CANADA Wins Best Production Company at 2026 UK Music Video Awards — LBB",
   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTGRfaVlZUG9Od0hZbTFIR01Odzl1eG5zMjZPOTdVdTRES3N1SVVrSGhPem5naUlnalplejJjWTNwLVp6bEhnY2RmYjh0Z3ZaSzRJWTh4OWI4b3ctQ2NKZkY2TXpZS3dDTl94TDBRMWFZa0hzSy1OenFOMkJmSG96TVRVS0FuX0VpTVUtRkdOYWpFaXptSnBz?oc=5",
   "date": "2026-11-11T14:52:15+00:00",
@@ -4063,10 +4063,10 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": [],
-  "vibe": false
+  "prov": []
  },
  {
   "title": "Ottawa reveals details on long-promised $600-million for screen and music sectors",
