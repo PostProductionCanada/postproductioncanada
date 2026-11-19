@@ -43,6 +43,16 @@ SECTIONS = [
         ("IBC2026: A-Z of exhibitor news", "SVG Europe", "", "https://www.svgeurope.org/blog/headlines/ibc2026-a-z-of-exhibitor-news",
          "Shows how widespread the shift is: for example, SNS's on-premise AI suite takes plain-language requests and can assemble an EDL from matching clips.", False),
     ]),
+    ("AI beyond the edit: footage and discovery", [
+        ("Google Flow: 5 new AI tools for visual storytelling (Pocket Studio)", "Google", "2026-11-12", "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools",
+         "Google's announcement. Pocket Studio generates several camera angles from one phone take and upgrades the image, and Google says it keeps the actor's original performance intact. That is Google's claim, not an independent test. It matters to Editors because coverage is what they cut with.", False),
+        ("Google adds five artist-built Flow tools for characters, effects and camera angles", "Superpower Daily", "2026-11-12", "https://superpowerdaily.com/posts/google-adds-five-artist-built-flow-tools-for-characters-effects-and-camera-angles",
+         "A summary that stresses the new views are generated from the recording rather than captured by extra cameras, and that the claims about preserving performance are not independently measured.", True),
+        ("Netflix Launches AI Discover Content Recommendation Feature", "Variety", "2026-11-03", "https://variety.com/2026/tv/news/netflix-launches-ai-discover-content-recommendations-1236937769",
+         "Netflix's AI Discover tab, on the TV app for a limited group of US subscribers, offers real-time themed picks such as Scare Me and Family Movie Night from your viewing history. Variety says it is not a chatbot and is not on kids' profiles. Netflix calls it a test kitchen. It changes how audiences find what Editors cut.", False),
+        ("Can't Find Anything to Watch on Netflix? This New AI Feature May Be the Answer", "PCMag UK", "2026-11", "https://uk.pcmag.com/video-streaming-services/168234/cant-find-anything-to-watch-on-netflix-this-new-ai-feature-may-be-the-answer",
+         "Describes where the Discover tab appears in the TV app, the Tune Your Recommendations feedback control, and Netflix's own wording about a new intelligence layer that responds in real time.", True),
+    ]),
     ("What it means for editors", [
         ("AI in post-production: how to use it and where it saves time", "Runway", "", "https://runway.com/resources/ai-post-production",
          "Argues AI saves the most time on ingest, assembly and cleanup, while picture lock and the final mix stay mostly human decisions.", True),
