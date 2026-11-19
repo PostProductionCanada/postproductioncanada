@@ -232,7 +232,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -247,6 +247,8 @@ def main():
     (OUT / "privacy.html").write_text(privacy.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg), encoding="utf-8")
     import unions
     (OUT / "unions.html").write_text(unions.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    import schools
+    (OUT / "schools.html").write_text(schools.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import canadians
     (OUT / "canadians.html").write_text(canadians.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import originals
@@ -450,7 +452,7 @@ def render(items, sources, now):
         _ext = ' target="_blank" rel="noopener"' if _fbu else ""
         _fb = ('<section class="res"><div class="wrap"><h2>Feedback and tips</h2><p>Spot something missing or wrong? Know a story, a source, or a Canadian editor or director we should feature? '
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
-    return TEMPLATE.replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -564,6 +566,23 @@ main{padding:20px 0 40px}
 @keyframes blink{50%{opacity:.25}}@keyframes pulse{50%{opacity:.55}}
 @media (prefers-reduced-motion:reduce){.now,.meter i.today{animation:none}}
 @media (max-width:720px){.synth{grid-template-columns:1fr 1fr;padding:14px 22px}.cell:nth-child(3){grid-column:1/-1}.lcd{font-size:28px}}
+.vu{display:inline-flex;gap:2px;align-items:flex-end;height:28px;opacity:0;width:0;overflow:hidden;transition:opacity .4s,width .4s,margin .4s}
+body.charge .vu{opacity:1;width:46px;margin-right:4px}
+.vu s{display:flex;flex-direction:column-reverse;gap:1px;width:4px;text-decoration:none}
+.vu u{display:block;height:3px;border-radius:1px;background:#2a2d34;text-decoration:none}
+.vu u.on{background:#2ecc71}.vu u.on.m{background:#ffb347}.vu u.on.h{background:#ff4d3a}
+.finale{position:absolute;inset:0;z-index:4;display:none;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(3,1fr);gap:6px 10px;padding:14px 26px;background:linear-gradient(#14161a,#0b0c0e);border-radius:14px;align-items:center;justify-items:center}
+.finale.go{display:grid}
+.cb{position:relative;width:min(44px,100%);height:38px}
+.cb .sl{position:absolute;top:11px;left:0;right:0;bottom:0;background:#e8e2d4;border-radius:3px;display:grid;place-items:center;font:700 11px ui-monospace,Menlo,monospace;color:#14161a}
+.cb .arm{position:absolute;top:0;left:0;right:0;height:10px;background:repeating-linear-gradient(115deg,#14161a 0 6px,#f6f4ef 6px 12px);border:1px solid #888;border-radius:2px;transform-origin:left bottom;transform:rotate(-28deg)}
+.finale.go .arm{animation:clap .2s ease-in forwards;animation-delay:var(--d)}
+.finale.go .sl{animation:flash .5s ease-out var(--d)}
+@keyframes clap{to{transform:rotate(0)}}
+@keyframes flash{0%{background:#fff;box-shadow:0 0 14px #fff}100%{background:#e8e2d4;box-shadow:none}}
+.fin-title{grid-column:1/-1;grid-row:3;justify-self:start;color:#ffb347;font:700 12px ui-monospace,Menlo,monospace;letter-spacing:.18em;opacity:0;animation:fin 4s forwards 2.2s}
+@keyframes fin{0%{opacity:0}15%,85%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.finale.go .arm{animation:none;transform:rotate(0)}.finale.go .sl{animation:none}}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:13px}
 footer p{margin:0 0 8px;max-width:60em}
 @media (max-width:520px){.grid{grid-template-columns:1fr}}
@@ -571,8 +590,8 @@ footer p{margin:0 0 8px;max-width:60em}
 </head>
 <body>
 <header><div class="wrap top">
-  <a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="canadians.html">Canadian Stories</a><a class="btn" href="unions.html">Union Map</a><a class="btn" href="buzz.html">Post Buzz</a><a class="btn" href="editors.html">Editors</a><a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="schools.html">Schools</a><a class="btn" href="canadians.html">Canadian Stories</a><a class="btn" href="unions.html">Union Map</a><a class="btn" href="buzz.html">Post Buzz</a><a class="btn" href="editors.html">Editors</a><a class="btn" href="status-of-the-artist.html">Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
@@ -585,6 +604,7 @@ footer p{margin:0 0 8px;max-width:60em}
   <div class="cell"><div class="lbl">NEXT UPDATE IN</div><div class="lcd" id="cd">--:--:--</div></div>
   <div class="cell"><div class="lbl">LAST UPDATED</div><div class="lcd sm" id="lu">{{UPDATED}}</div></div>
   <div class="cell wide"><div class="lbl">LAST 21 DAYS <span id="range"></span><span class="now">● NOW</span></div><div class="meter" id="meter">{{BARS}}</div></div>
+<div class="finale" id="finale" aria-hidden="true"><div class="cb" style="grid-column:1;grid-row:1;--d:0.00s"><div class="arm"></div><div class="sl"><span>YT</span></div></div><div class="cb" style="grid-column:2;grid-row:1;--d:0.30s"><div class="arm"></div><div class="sl"><span>NT</span></div></div><div class="cb" style="grid-column:3;grid-row:1;--d:0.60s"><div class="arm"></div><div class="sl"><span>NU</span></div></div><div class="cb" style="grid-column:1;grid-row:2;--d:0.00s"><div class="arm"></div><div class="sl"><span>BC</span></div></div><div class="cb" style="grid-column:2;grid-row:2;--d:0.30s"><div class="arm"></div><div class="sl"><span>AB</span></div></div><div class="cb" style="grid-column:3;grid-row:2;--d:0.60s"><div class="arm"></div><div class="sl"><span>SK</span></div></div><div class="cb" style="grid-column:4;grid-row:2;--d:0.90s"><div class="arm"></div><div class="sl"><span>MB</span></div></div><div class="cb" style="grid-column:5;grid-row:2;--d:1.20s"><div class="arm"></div><div class="sl"><span>ON</span></div></div><div class="cb" style="grid-column:6;grid-row:2;--d:1.50s"><div class="arm"></div><div class="sl"><span>QC</span></div></div><div class="cb" style="grid-column:8;grid-row:2;--d:2.10s"><div class="arm"></div><div class="sl"><span>NL</span></div></div><div class="cb" style="grid-column:7;grid-row:3;--d:1.80s"><div class="arm"></div><div class="sl"><span>NB</span></div></div><div class="cb" style="grid-column:8;grid-row:3;--d:2.10s"><div class="arm"></div><div class="sl"><span>PE</span></div></div><div class="cb" style="grid-column:9;grid-row:3;--d:2.40s"><div class="arm"></div><div class="sl"><span>NS</span></div></div><div class="fin-title">COAST TO COAST · ACTION!</div></div>
   <div class="steps" id="steps" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
 </div></div></section>
 
@@ -613,6 +633,7 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
+    <li><a href="schools.html">Schools across Canada</a> — colleges, universities and private schools teaching picture editing, sound and post.</li>
     <li><a href="canadians.html">Canadian Stories</a> — the editors and directors from Canada behind screens the world watches.</li>
     <li><a href="unions.html">Union Map</a> — pick a province to see which unions and guilds cover editors there.</li>
     <li><a href="privacy.html">Privacy</a> — what we collect (almost nothing) and how the newsletter works.</li>
@@ -669,6 +690,16 @@ footer p{margin:0 0 8px;max-width:60em}
     else{var s=Math.floor(diff/1000);cd.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60)}
     var k=now.getSeconds()%12;steps.forEach(function(b,i){b.classList.toggle('on',i===k)});
   }
+  var vu=document.querySelectorAll('#vu s'),fin=document.getElementById('finale'),lastRemain=1e9,demoEnd=0,lastFin=0;
+  function fire(){var n=Date.now();if(n-lastFin<20000)return;lastFin=n;fin.classList.remove('go');void fin.offsetWidth;fin.classList.add('go');setTimeout(function(){fin.classList.remove('go')},5200)}
+  window.ppcFinale=fire;window.ppcDemo=function(sec){demoEnd=Date.now()+(sec||14)*1000};
+  function meter(a){vu.forEach(function(col){var lvl=a>0?Math.round(Math.random()*(1+5*a)):0;if(lvl>6)lvl=6;col.querySelectorAll('u').forEach(function(u,i){var on=i<lvl;u.className=on?('on'+(i>=4?' h':i>=3?' m':'')):''})})}
+  setInterval(function(){var r=demoEnd?(demoEnd-Date.now())/1000:lastRemain;var a=(r>0&&r<=12)?(12-r)/12:0;meter(a)},90);
+  function chargeCheck(remain){document.body.classList.toggle('charge',remain>0&&remain<=12);
+    if(lastRemain<=2&&remain>9000)fire();lastRemain=remain}
+  var _tick=tick;tick=function(){_tick();var now=new Date(),t=nextRun(now),remain=(t-now)/1000;
+    if(demoEnd){var dr=(demoEnd-Date.now())/1000;document.body.classList.toggle('charge',dr>0&&dr<=12);if(dr<=0){demoEnd=0;fire()}}
+    else chargeCheck(remain)};
   tick();setInterval(tick,1000);
   document.querySelectorAll('.card time').forEach(function(t){var d=new Date(t.getAttribute('datetime'));
     if(Date.now()-d>21*DAY){var c=t.closest('.card');if(c)c.style.display='none'}});
