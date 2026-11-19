@@ -76,6 +76,48 @@ def row(i):
             f'<div class="note">{e(i["region"])}{city} · shoots {s} to {en}</div></li>')
 
 
+# Rumour mill by province: titles, studios and dates only, from unions' own public listings. Hand-maintained, dated.
+RUMOURS_ASOF = "November 19, 2026"
+RUMOURS = [
+    ("British Columbia", "BC", "IATSE Local 891 Rumour Mill, November 5 and October 29, 2026",
+     "https://iatse.com/_content/documents/public/RM_PS/2026-11-05_RM-PS.pdf",
+     "IATSE 891's weekly bulletin says these details were approved for its Rumour Mill. Shoot dates are the union's, and some are still to be set.",
+     [("Hexagram (feature, Paramount)", "Shoot Jan. 18 to Mar. 22, 2027. Office opens Nov. 23, 2026."),
+      ("The Innocent (series, Netflix)", "Shoot from Apr. 12, 2027, end date to be set. Office opens Jan. 18."),
+      ("Arrivals: A New Manifest Mystery, Season 1 (series, WB)", "Shoot Jan. 19 to Jun. 9, 2027. Office opens Dec. 14."),
+      ("The Black Tapes (series, Amazon/MGM)", "Shoot from Jan. 20, 2027, end date to be set."),
+      ("Anaheim Realm, Season 2 (series, Sony Pictures Television)", "Shoot Mar. 1 to Sept. 30, 2027. Office is open."),
+      ("Coven Academy, Season 2 (series, Disney)", "Dates to be set.")]),
+    ("Ontario", "ON", "DGC Ontario production list, November 18, 2026 (productions in pre-production)",
+     "https://www.dgc.ca/en/ontario/production-list",
+     "Pre-production means the shoot has not started yet. Titles, tiers and dates come from the guild's list.",
+     [("Bannerman, Season 1 (series, Tier A, Toronto)", "Pre-production Oct. 22, 2026 to Jan. 13, 2027. Shoot Jan. 14 to Apr. 19, 2027."),
+      ("Cutthroat (feature, Tier C, Mississauga)", "Shoot Nov. 25, 2026 to Jan. 7, 2027. Picture post is listed from Dec. 18, 2026 to Apr. 4, 2027."),
+      ("Dark Horse (documentary, Toronto)", "Pre-production Sept. 28 to Dec. 6, 2026. Shoot Dec. 7, 2026 to May 19, 2027."),
+      ("Mini (feature, Tier A, Toronto)", "Pre-production Nov. 2, 2026 to Feb. 7, 2027. Shoot from Feb. 8, 2027."),
+      ("On Broadway (feature, Tier A, Toronto)", "Pre-production Jun. 15, 2026 to Jan. 3, 2027. Shoot Jan. 4 to Feb. 12, 2027.")]),
+    ("Alberta", "AB", "DGC Alberta production list, November 6, 2026",
+     "https://www.dgc.ca/en/alberta/production-list",
+     "One feature listed in pre-production. Its schedule shows as adjusted.",
+     [("A Tier F feature from Legends of Conquest Productions Inc. (Edmonton)", "Pre-production Sept. 1 to Nov. 29, 2026. Shoot Nov. 30, 2026 to Jan. 18, 2027, with a break Dec. 19 to Jan. 3.")]),
+    ("Newfoundland and Labrador", "NL", "DGC Newfoundland & Labrador production list, November 18, 2026",
+     "https://www.dgc.ca/en/newfoundland-labrador/production-list",
+     "Two productions are listed, and both are shooting now, so any post would come after wrap.",
+     [("Saint Pierre, Season 3 (series, Tier A, Mount Pearl)", "Shoot July 5 to Nov. 30, 2026."),
+      ("Secrets and Light Part 1: Illuminations (TV movie, Tier F, St. John's)", "Shooting now. Dates not listed.")]),
+]
+NOT_YET = "Québec, the Maritimes, Manitoba and Saskatchewan are not covered yet. Send me a union rumour list for them and I will add it."
+
+
+def rumours_html():
+    out = ""
+    for prov, code, srcname, url, note, items in RUMOURS:
+        lis = "".join(f"<li><b>{e(t)}</b><div class=\"note\">{e(d)}</div></li>" for t, d in items)
+        out += (f'<div class="box"><h3 style="margin:0 0 4px">🍁 📍 {e(prov)}</h3><p class="note" style="margin:0 0 6px">{e(note)} '
+                f'<a href="{e(url)}" target="_blank" rel="noopener">{e(srcname)}</a></p><ul class="arts">{lis}</ul></div>')
+    return out + f'<p class="note">{e(NOT_YET)}</p>'
+
+
 def render(leaf, favicon, updated, now):
     items, ok = gather()
     soon = sorted([i for i in items if now <= i["end"] <= now + timedelta(days=90)], key=lambda i: i["end"])[:12]
@@ -86,7 +128,7 @@ def render(leaf, favicon, updated, now):
     cur = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(s)}, {e(d)}</span>'
                   f'<div class="note">{e(n)}</div></li>' for t, s, d, u, n in CURATED)
     srcs = " · ".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(r)} list</a>' for r, u in ok) or "Hollywood North Buzz"
-    return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{SOON}}", soon_html)
+    return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{RUMOURS}}", rumours_html()).replace("{{ASOF}}", RUMOURS_ASOF).replace("{{SOON}}", soon_html)
             .replace("{{JUST}}", just_html).replace("{{CUR}}", cur).replace("{{SRCS}}", srcs)
             .replace("{{N}}", str(len(items))).replace("{{UPDATED}}", updated))
 
@@ -131,6 +173,10 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <main class="wrap">
 <h1>🎬 Post Buzz</h1>
 <p class="lede">What's heading into post across Canada. When a production wraps, the edit, colour, sound and VFX come next, so end-of-shoot dates show where the work is about to land.</p>
+
+<h2>🗣️ Rumour mill by province</h2>
+<p>What might be coming, from the unions' own public listings. These are production titles, studios and dates only, as of {{ASOF}}. Schedules move, and a listing is not a promise of post work, so confirm with the production.</p>
+{{RUMOURS}}
 
 <h2>Wrapping in the next 90 days</h2>
 <div class="box">{{SOON}}</div>
