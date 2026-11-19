@@ -583,6 +583,7 @@ main{padding:20px 0 40px}
 .nb{white-space:nowrap}
 .filmframe{display:inline-block;position:relative;background:#14161a;color:#f6f4ef;font-size:.8em;letter-spacing:.05em;white-space:nowrap;padding:.42em .6em;margin:.18em 0;border-radius:3px;border:2px solid var(--ink)}
 .filmframe::before,.filmframe::after{content:"";position:absolute;left:5px;right:5px;height:5px;background:repeating-linear-gradient(90deg,#f6f4ef 0 6px,transparent 6px 12px);opacity:.9}
+.newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
 .filmframe::before{top:4px}.filmframe::after{bottom:4px}
 .brand{white-space:nowrap}.btn{white-space:nowrap}.top{flex-wrap:wrap;gap:10px}.tools{flex-wrap:wrap}
 .deck{padding:4px 0 18px}
@@ -632,7 +633,7 @@ footer p{margin:0 0 8px;max-width:60em}
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
-  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span> news,<br><em>in one place.</em></h1>
+  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span>,<br><em>in one place.</em></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
 

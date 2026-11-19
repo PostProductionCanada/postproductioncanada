@@ -1,8 +1,7 @@
 """Brand mark: a clapperboard with a maple leaf and mountain range on the slate."""
 from urllib.parse import quote
 
-LEAF = ("0,0 9,19 17,14 15,36 34,28 31,45 50,40 42,58 52,68 20,66 6,76 4,76 4,86 -4,86 -4,76 -6,76 "
-        "-20,66 -52,68 -42,58 -50,40 -31,45 -34,28 -15,36 -17,14 -9,19")
+LEAF = "0,0 9,21 19,15 15,38 36,31 32,49 46,47 39,62 10,60 4,64 4,84 -4,84 -4,64 -10,60 -39,62 -46,47 -32,49 -36,31 -15,38 -19,15 -9,21"
 
 
 def _svg(body, red, light, themed, attrs=""):
