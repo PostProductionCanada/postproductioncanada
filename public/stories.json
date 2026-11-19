@@ -152,25 +152,6 @@
   "prov": []
  },
  {
-  "title": "Skydance to combine Warner Bros. TV Group and Paramount Television Studios",
-  "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeFJwMDVTZm1QUHlHOWplaDEtRy1iTW5jNWFZby15UmJLQWhSM3l6MFVKM2RCZDBDM2VETUg5OTBxai1SV1Z5X3BBX3Utdlk4RTNsd3RkeHRCcWZMWXZaQU5mMTZPVnRUd2lJS3BLVG5Sb2t2dzQ0bHgyOG0tOThyNHFHTzVJLWc?oc=5",
-  "date": "2026-11-18T21:20:52+00:00",
-  "source": "Yahoo! Finance Canada",
-  "excerpt": "",
-  "category": "canada",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "Why You Should Start Your Screenplay With an “Anxiety Draft”",
   "url": "https://nofilmschool.com/starting-a-screenplay-with-an-anxiety-draft",
   "date": "2026-11-18T21:01:31+00:00",
@@ -3394,25 +3375,6 @@
   "prov": []
  },
  {
-  "title": "AI Movie Awards Announces Winners Of First London Edition, Celebrating Global AI Filmmaking Talent",
-  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZmNVS2FidjF0TGpTVlZ0YTlUV1M3bVFwbmlKNGtUVS1ORUN5WGMyMkp0TzBVUmgxWndTX0FaUEV4SER1aW0wcnNuQmlkVDIzdUZ2eXJEcGNEcVV2U2lLRllhWE5lYm1XM3ZpNE40bDFWTDRiUkFTQmRpYmVIQWJMN3k4MzAwNHpycjVFMFVqMXJnTmV6ZG9IY05Oak51ZVFVNVhxTGZqaWUtcU5tX2tGR0xqWVNQTXBoVkEyaA?oc=5",
-  "date": "2026-11-11T18:15:21+00:00",
-  "source": "Roastbrief US",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "CANADA Wins Best Production Company at 2026 UK Music Video Awards — LBB",
   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTGRfaVlZUG9Od0hZbTFIR01Odzl1eG5zMjZPOTdVdTRES3N1SVVrSGhPem5naUlnalplejJjWTNwLVp6bEhnY2RmYjh0Z3ZaSzRJWTh4OWI4b3ctQ2NKZkY2TXpZS3dDTl94TDBRMWFZa0hzSy1OenFOMkJmSG96TVRVS0FuX0VpTVUtRkdOYWpFaXptSnBz?oc=5",
   "date": "2026-11-11T14:52:15+00:00",
@@ -4219,10 +4181,10 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": [],
-  "vibe": false
+  "prov": []
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",
