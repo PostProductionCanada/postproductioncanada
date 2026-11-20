@@ -16,7 +16,7 @@ STORIES = [
      "sources": [("Stanley Kubrick, cinephile", "Sight and Sound (BFI)", "https://www.bfi.org.uk/sight-and-sound/stanley-kubrick-cinephile"),
                  ("How avant-garde NFB filmmaker Arthur Lipsett influenced Kubrick and Lucas", "NFB Blog", "https://blog.nfb.ca/blog/2012/10/03/how-lipsett-influenced-kubrick-lucas"),
                  ("The documentary roots of 2001 and the Canadian voice of HAL", "Gerry Flahive, Medium", "https://medium.com/@gflahive/im-sure-you-ll-agree-there-s-some-truth-in-what-i-say-the-documentary-roots-and-a-i-1eb994454d00")]},
-    {"name": "Ronald Sanders", "roles": ["Picture editor"], "prov": ["MB", "ON"],
+    {"name": "Ronald Sanders", "letters": "CCE", "roles": ["Picture editor"], "prov": ["MB", "ON"],
      "angle": "Born in Winnipeg, based in Toronto, and David Cronenberg's regular editor since the late 1970s.",
      "story": ["Sanders came to picture editing through documentaries and sound editing, and cut his first feature in 1976. From the late 1970s he became the editor of most of David Cronenberg's films, a partnership that runs from Videodrome and The Fly through Crash, A History of Violence and Eastern Promises. He also cut the animated feature Coraline, which was nominated for an Oscar.",
                "His editing won Genie Awards for Dead Ringers, Crash, eXistenZ and Eastern Promises, and DGC Craft Awards for A History of Violence and Eastern Promises. He is a member of the Canadian Cinema Editors."],
@@ -32,7 +32,27 @@ STORIES = [
      "sources": [("Jean-Marc Vallée dies at 58", "ABC News", "https://abcnews.com/GMA/Culture/big-lies-director-jean-marc-vallee-dies-58/story?id=81955814"),
                  ("Jean-Marc Vallée", "Wikipedia", "https://en.wikipedia.org/wiki/Jean-Marc_Vall%C3%A9e"),
                  ("Jean-Marc Vallée (1963-2021)", "The Film Experience", "http://thefilmexperience.net/blog/2021/12/27/jean-marc-vallee-1963-2021.html")]},
-    {"name": "Wendy Hallam Martin", "roles": ["Picture editor"],
+    {"name": "Don Cassidy", "letters": "CCE", "roles": ["Picture editor"], "prov": ["ON"],
+     "angle": "A Toronto-area editor who won a Primetime Emmy for cutting a HISTORY miniseries.",
+     "story": ["Cassidy won the 2012 Primetime Emmy for Outstanding Single-Camera Picture Editing for a Miniseries or a Movie, for Part 2 of Hatfields & McCoys, produced for HISTORY. The Television Academy's database lists the win.",
+               "Other credits include Rent-a-Goalie, The Kennedys and Vikings. IMDb lists him as a member of the Canadian Cinema Editors."],
+     "credits": ["Rent-a-Goalie", "The Kennedys", "Hatfields & McCoys", "Vikings"],
+     "sources": [("Don Cassidy: Emmy Awards and Nominations", "Television Academy", "https://emmys.com/node/224736"),
+                 ("Don Cassidy", "IMDb", "https://www.imdb.com/name/nm0144183/")]},
+    {"name": "Jay Prychidny", "letters": "CCE", "roles": ["Picture editor"], "prov": ["ON"],
+     "angle": "A Canadian editor who cut Tim Burton's episodes of Wednesday and then Beetlejuice Beetlejuice.",
+     "story": ["Prychidny edited all of Tim Burton's episodes of the Netflix series Wednesday and then reunited with Burton on the 2024 sequel Beetlejuice Beetlejuice. He won a Canadian Cinema Editors award for editing on Wednesday in 2023, according to the CCE's listing.",
+               "Earlier, he won back-to-back Canadian Screen Awards in 2017 and 2018 for Orphan Black and The Amazing Race Canada, and a Gemini and a CCE award for Canada's Next Top Model in 2010/2011. He also produced on Orphan Black, The Next Step and Snowpiercer, and edited Scream VI, his first feature. We found no Emmy for him."],
+     "credits": ["Orphan Black", "The Amazing Race Canada", "Wednesday", "Scream VI", "Beetlejuice Beetlejuice"],
+     "sources": [("Jay Prychidny, CCE, joins Manhattan Edit Workshop as Artist in Residence", "MEWShop, Sept 2023", "https://www.mewshop.com/blog-news-and-press/wednesayr-editor-jay-prychidnyjoins-manhattan-edit-workshop-as-artist-in-residence-"),
+                 ("Bringing Beetlejuice back from the afterlife with picture editor Jay Prychidny", "The Wider Lens", "https://thewiderlens.ca/series/creative-spotlight/bringing-beetlejuice-back-from-the-afterlife-with-picture-editor-jay-prychidny/")]},
+    {"name": "Cam McLauchlin", "letters": "CCE", "roles": ["Picture editor"], "prov": ["ON"],
+     "angle": "A Toronto editor who came up working with Guillermo del Toro and went on to cut Nightmare Alley.",
+     "story": ["The CCE's Coffee with an Editor interview says McLauchlin spent his early career working with Guillermo del Toro as an assistant, associate editor and editor on Pacific Rim, Crimson Peak, The Strain and The Shape of Water, and was then cutting del Toro's Nightmare Alley.",
+               "His other work includes The Void, Teen Spirit, The Kindness of Strangers and Clifton Hill, and the CCE credits him as editor on The Last Showgirl. He is a CSA and DGC nominated editor."],
+     "credits": ["Pacific Rim", "Crimson Peak", "The Strain", "The Shape of Water", "Nightmare Alley", "Teen Spirit", "The Kindness of Strangers", "Clifton Hill", "The Last Showgirl"],
+     "sources": [("Coffee with an Editor, Episode 009: Cam McLauchlin", "Canadian Cinema Editors", "https://cceditors.ca/2020/08/coffee-with-an-editor-cam-mclauchlin/")]},
+    {"name": "Wendy Hallam Martin", "letters": "CCE, ACE", "roles": ["Picture editor"],
      "angle": "A Canadian editor, CCE and ACE, cutting one of the most talked-about series of its era.",
      "story": ["Hallam Martin won Best Editing in TV Drama at the 12th Canadian Cinema Editors Awards for The Handmaid's Tale, episode 403, \"The Crossing\"."],
      "credits": ["The Handmaid's Tale"],
@@ -49,7 +69,7 @@ def card(s):
     note = f'<p class="note">{e(s["note"])}</p>' if s.get("note") else ""
     src = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(o)}</span></li>' for t, o, u in s["sources"])
     pins = "".join(f'<span class="pill">📍 {e(p)}</span> ' for p in s.get("prov", []))
-    return (f'<article class="box"><div>{roles}{pins}</div><h3>{e(s["name"])}</h3><p class="angle">🇨🇦 {e(s["angle"])}</p>'
+    return (f'<article class="box"><div>{roles}{pins}</div><h3>{e(s["name"])}{(", " + e(s["letters"])) if s.get("letters") else ""}</h3><p class="angle">🇨🇦 {e(s["angle"])}</p>'
             f'{paras}{cred}{note}<ul class="src">{src}</ul></article>')
 
 
