@@ -618,9 +618,8 @@ def roll_html(items, now):
     return ('<section class="roll" aria-label="Morning Roll"><div class="wrap"><div class="rollhead">' + REEL +
             f'<div class="rtxt"><div class="rlcd">MORNING ROLL · {esc(r["day"])}</div>'
             f'<div class="rsub">☕ Your 8 a.m. rundown of the latest. {"Preview edition: the first full roll compiles at 8 a.m. Eastern." if r["compiled"] == "PREVIEW" else "Compiled " + esc(r["compiled"]) + "."} Read it with your first coffee or tea.</div></div>'
-            + REEL + '</div><div class="strip" id="strip">' + frames + '</div>'
-            '<div class="rctl"><button class="btn" id="rpause" type="button" aria-pressed="false">⏸ Pause scroll</button> <span>Scrolls slowly on its own. Touch or hover to stop.</span></div>'
-            + _takeaways(items, now) + _ROLL_JS + '</div></section>')
+            + '<div class="coffee" aria-hidden="true">☕</div></div><div class="strip" id="strip">' + frames + '</div>'
+            + _takeaways(items, now) + '</div></section>')
 
 def render(items, sources, now):
     picks = load_picks(now)
@@ -634,7 +633,7 @@ def render(items, sources, now):
     tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
     popts = "".join(f'<option value="{k}">{PROV_LABEL[k]} ({sum(1 for i in items if k in i["prov"])})</option>' for k in PROV_LABEL)
     cfg = json.loads((ROOT / "site.json").read_text())
-    sub, subbtn = "", '<a class="btn" href="networking.html">🤝 Networking</a>'
+    sub, subbtn = "", ""
     _rss = ('<p class="consent" style="opacity:.9">📡 <b>RSS</b> is a free way to follow the site without email. Copy <b>postproductioncanada.ca/feed.xml</b> into a feed reader such as Feedly or NetNewsWire and new stories show up there. '
             '<a href="/feed.xml">Open the feed</a></p>')
     if cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action"):
@@ -678,7 +677,7 @@ def render(items, sources, now):
         _ext = ' target="_blank" rel="noopener"' if _fbu else ""
         _fb = ('<section class="res"><div class="wrap"><h2>Feedback and tips</h2><p>Spot something missing or wrong? Know a story, a source, or a Canadian editor or director we should feature? '
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
-    return TEMPLATE.replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -727,7 +726,7 @@ header{border-bottom:1px solid var(--line)}
 .hero{padding:34px 0 18px}
 .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.08;letter-spacing:-.03em;margin:0 0 10px;max-width:16em}
 .hero h1 em{font-style:normal;color:var(--red)}
-.hero p{color:var(--mute);margin:0;max-width:40em}
+.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.loopwrap{margin-top:14px!important}.loop{display:inline-block;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,19px);line-height:1.3;padding:12px 18px;border-radius:12px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}
 .bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
 .bar .wrap{display:flex;flex-direction:column;gap:10px}
 .tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
@@ -780,15 +779,15 @@ main{padding:20px 0 40px}
 .rtxt{flex:1;min-width:0;text-align:center}
 .rlcd{display:inline-block;background:#0b0d0a;color:#ffb000;font:700 clamp(15px,3.2vw,24px)/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;padding:8px 14px;border-radius:6px;border:2px solid #3a3d44;text-shadow:0 0 8px rgba(255,176,0,.55)}
 .rsub{color:#aab0bb;font-size:13.5px;margin-top:8px}
-.strip{position:relative;display:flex;gap:10px;overflow-x:auto;padding:22px 10px;background:#0b0c0e;border-radius:6px;scroll-snap-type:x proximity}
+.strip{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px 10px;background:#0b0c0e;border-radius:6px}
 .strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,#f6f4ef 0 12px,transparent 12px 26px);opacity:.85}
 .strip::before{top:6px}.strip::after{bottom:6px}
-.frame{flex:0 0 min(270px,78vw);scroll-snap-align:start;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.frame{flex:none;width:100%;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
 .takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
 .fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
-.ftitle{color:#fff;font-weight:700;line-height:1.3;text-decoration:none}.ftitle:hover{text-decoration:underline}
+.ftitle{color:#fff;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none}.coffee{font-size:48px;line-height:1;width:64px;text-align:center;flex:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
 .filmframe::before{top:4px}.filmframe::after{bottom:4px}
@@ -841,7 +840,8 @@ footer p{margin:0 0 8px;max-width:60em}
 
 <section class="hero"><div class="wrap herogrid"><div>
   <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span><br><em>in one place.</em></h1>
-  <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. Original articles coming soon. Free, always.</p>
+  <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. <span class="nw">Free, always.</span></p>
+  <p class="loopwrap"><a class="loop" href="{{LOOP}}">✨ Original articles and features are coming soon. Stay in the loop: click here →</a></p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
 
 {{ROLL}}
