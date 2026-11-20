@@ -1,5 +1,5 @@
 {
-  "_help": "Editor's picks shown at the top of the site. Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in your own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags.",
+  "_help": "Our picks shown at the top of the site. Editing and post only (camera gear and DP/editor collaboration pieces are fine now and then). Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in our own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags. 'parked' holds picks taken out as off-topic (policy and general industry); they are not shown.",
   "picks": [
     {
       "title": "Adobe Firefly adds Build a story and Assemble short video",
@@ -30,48 +30,12 @@
       "note": "Vertical, short-form drama is arriving in Canada. Faster schedules and lean crews will change how post gets booked and paid."
     },
     {
-      "title": "Big tech sent a wish list to U.S. trade negotiators. Here are the Canadian policies they want scrapped",
-      "url": "https://www.thewirereport.ca/2026/11/02/big-tech-sent-a-wish-list-to-u-s-trade-negotiators-here-are-the-canadian-policies-they-want-scrapped/",
-      "source": "The Wire Report",
-      "date": "2026-11-02",
-      "note": "The rules that fund Canadian content are on the table in trade talks. That money is what keeps Canadian shows in post here."
-    },
-    {
-      "title": "Budget 2026 strengthens news funding, cuts CBC dollars, and leaves CanCon hanging",
-      "url": "https://mediapolicy.ca/2026/11/07/budget-2026-strengthens-news-funding-cuts-cbc-dollars-and-leaves-cancon-hanging/",
-      "source": "Media Policy",
-      "date": "2026-11-07",
-      "note": "What the federal budget means for the broadcasters and funders that commission Canadian screen work."
-    },
-    {
-      "title": "It's up to Carney to protect Canadian content on our screens",
-      "url": "https://www.ipolitics.ca/2026/11/04/its-up-to-carney-to-protect-canadian-content-on-our-screens/",
-      "source": "iPolitics",
-      "date": "2026-11-04",
-      "note": "An opinion piece on whether Canadian-content protections survive the pressure from Washington."
-    },
-    {
-      "title": "Everybody's macrodosing on microdramas",
-      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/29/everybodys-macrodosing-on-microdramas",
-      "source": "The Guardian",
-      "date": "2026-10-29",
-      "note": "Background on the microdrama phenomenon behind the shift in what gets made and where it's watched."
-    },
-    {
       "title": "DaVinci Resolve 21.1 Uses MCP to Let AI Assistants Control the Edit",
       "url": "https://ymcinema.com/2026/09/17/davinci-resolve-21-1-mcp-ai-assistants-control-edit/",
       "source": "YMCinema",
       "date": "2026-09-17",
       "expires_days": 120,
       "note": "Resolve Studio now has a built-in MCP server, so an AI assistant can handle routine edit-room jobs like renaming clips, building deliverables and reframing to vertical from plain-language instructions."
-    },
-    {
-      "title": "Disney's Accelerator Day Highlights AI Startups",
-      "url": "https://www.thewrap.com/industry-news/tech/disney-ai-accelerator-startup-investor/",
-      "source": "TheWrap",
-      "date": "2026-11-04",
-      "expires_days": 60,
-      "note": "Disney is putting money behind AI startups, including ones building hybrid filmmaking tools, and says it wants artists involved at every step of the workflow."
     },
     {
       "title": "Disney Taps Adobe as 'Official AI Innovation Partner' Under Multiyear Pact",
@@ -146,6 +110,44 @@
       "url": "https://www.linkedin.com/pulse/canada-wants-its-content-seen-who-investing-making-audiences-rodger-j5mwc/",
       "date": "",
       "note": "Argues Canada funds production far more than marketing and audience-building, citing a January 2026 CRTC-commissioned study, and calls for a national audience-development strategy."
+    }
+  ],
+  "parked": [
+    {
+      "title": "Big tech sent a wish list to U.S. trade negotiators. Here are the Canadian policies they want scrapped",
+      "url": "https://www.thewirereport.ca/2026/11/02/big-tech-sent-a-wish-list-to-u-s-trade-negotiators-here-are-the-canadian-policies-they-want-scrapped/",
+      "source": "The Wire Report",
+      "date": "2026-11-02",
+      "note": "The rules that fund Canadian content are on the table in trade talks. That money is what keeps Canadian shows in post here."
+    },
+    {
+      "title": "Budget 2026 strengthens news funding, cuts CBC dollars, and leaves CanCon hanging",
+      "url": "https://mediapolicy.ca/2026/11/07/budget-2026-strengthens-news-funding-cuts-cbc-dollars-and-leaves-cancon-hanging/",
+      "source": "Media Policy",
+      "date": "2026-11-07",
+      "note": "What the federal budget means for the broadcasters and funders that commission Canadian screen work."
+    },
+    {
+      "title": "It's up to Carney to protect Canadian content on our screens",
+      "url": "https://www.ipolitics.ca/2026/11/04/its-up-to-carney-to-protect-canadian-content-on-our-screens/",
+      "source": "iPolitics",
+      "date": "2026-11-04",
+      "note": "An opinion piece on whether Canadian-content protections survive the pressure from Washington."
+    },
+    {
+      "title": "Everybody's macrodosing on microdramas",
+      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/29/everybodys-macrodosing-on-microdramas",
+      "source": "The Guardian",
+      "date": "2026-10-29",
+      "note": "Background on the microdrama phenomenon behind the shift in what gets made and where it's watched."
+    },
+    {
+      "title": "Disney's Accelerator Day Highlights AI Startups",
+      "url": "https://www.thewrap.com/industry-news/tech/disney-ai-accelerator-startup-investor/",
+      "source": "TheWrap",
+      "date": "2026-11-04",
+      "expires_days": 60,
+      "note": "Disney is putting money behind AI startups, including ones building hybrid filmmaking tools, and says it wants artists involved at every step of the workflow."
     }
   ]
 }

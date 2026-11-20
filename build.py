@@ -167,20 +167,40 @@ HOME_FAB = ('<a class="homefab" href="/" title="Back to the home page (the 2 bee
             'font:800 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 14px 7px 8px;border-radius:999px;'
             'border:2px solid #ffb000;box-shadow:0 4px 14px rgba(0,0,0,.35)}.homefab:hover{background:#000}@media print{.homefab{display:none}}</style>')
 
-NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("sound.html", "🎧 Sound"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Education"), ("canadians.html", "🇨🇦 Canadian Stories"),
-       ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
-NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
-           ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
-           ".sitenav a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}</style>")
+GROUPS = [
+    ("📰 News", [("buzz.html", "🎬 Post Buzz"), ("awards.html", "🏆 Awards"), ("canadians.html", "🇨🇦 Canadian Stories"), ("documentary.html", "🎥 Documentary")]),
+    ("✂️ Craft", [("editors.html", "✂️ Editors"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("software.html", "💻 Software"),
+                   ("sound.html", "🎧 Sound"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors")]),
+    ("🎓 Learn and work", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits"), ("networking.html", "🤝 Networking")]),
+    ("💚 Life", [("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing")]),
+]
+NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}"
+           ".sitenav a,.sitenav summary{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer;list-style:none}"
+           ".sitenav summary::-webkit-details-marker{display:none}.sitenav summary::after{content:' \\25BE';opacity:.6}"
+           ".sitenav a.on,.sitenav summary.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}"
+           ".sitenav details{position:relative}.sitenav details[open]{z-index:70}.sitenav .gp{position:absolute;top:calc(100% + 6px);left:0;min-width:210px;max-width:86vw;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,.25)}"
+           ".sitenav .gp a{border:0;border-radius:8px;background:transparent;white-space:normal}.sitenav .gp a:hover{background:var(--line)}</style>")
+
+
+def menu_html(pre="", cur="", originals=False, home=True):
+    def a(h, lbl):
+        return '<a href="%s%s"%s>%s</a>' % (pre, h, ' class="on"' if h == cur else "", lbl.replace("&", "&amp;"))
+    out = ""
+    if home:
+        out += a("index.html", LEADER + " Picture Start")
+    for gl, items in GROUPS:
+        its = list(items)
+        if originals and gl.endswith("News"):
+            its.insert(0, ("originals.html", "📝 Originals"))
+        on = any(h == cur for h, _ in its)
+        out += ('<details><summary%s>%s</summary><div class="gp">%s</div></details>' % (' class="on"' if on else "", gl, "".join(a(h, l) for h, l in its)))
+    out += a("contact.html", "✉️ Contact")
+    return out
 
 
 def add_nav(t, fname, has_originals):
     pre = "../" if fname.startswith("originals/") else ""
-    items = list(NAV)
-    if has_originals:
-        items.insert(1, ("originals.html", "📝 Originals"))
-    links = "".join('<a href="%s%s"%s>%s</a>' % (pre, h, ' class="on"' if h == fname else "", lbl.replace("&", "&amp;")) for h, lbl in items)
-    nav = '<nav class="sitenav" aria-label="Sections"><div class="snw">' + links + "</div></nav>"
+    nav = '<nav class="sitenav" aria-label="Sections"><div class="snw">' + menu_html(pre, fname, has_originals) + "</div></nav>"
     t = t.replace("</head>", NAV_CSS + "</head>", 1)
     return t.replace("</header>", "</header>" + nav, 1)
 
@@ -331,6 +351,8 @@ def main():
     for f in list(OUT.glob("*.html")) + list(OUT.glob("originals/*.html")):
         t = style.link_people(cap_editor(nobreak(f.read_text(encoding="utf-8"))))
         _rel = f.relative_to(OUT).as_posix()
+        if _rel == "index.html":
+            t = t.replace("</head>", NAV_CSS + "</head>", 1)
         if _rel != "index.html":
             t = add_nav(t, _rel, bool(_arts))
         if _rel != "index.html" and "homefab" not in t:
@@ -735,7 +757,7 @@ def render(items, sources, now):
         _ext = ' target="_blank" rel="noopener"' if _fbu else ""
         _fb = ('<section class="res"><div class="wrap"><h2>Feedback and tips</h2><p>Spot something missing or wrong? Know a story, a source, or a Canadian editor or director we should feature? '
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
-    return TEMPLATE.replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -893,7 +915,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Education</a><a class="btn" href="canadians.html">🇨🇦 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="sound.html">🎧 Sound</a><a class="btn" href="composers.html">🎼 Composers</a><a class="btn" href="music-supervisors.html">🎸 Music Supervisors</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}{{MENU}}<a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
