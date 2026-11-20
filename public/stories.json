@@ -1,24 +1,60 @@
 [
  {
-  "title": "Montreal’s image+nation film festival opens 39th edition",
-  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSi1PMXZRVUp4d052MDJvT0pfaUpEdC1iR3V2MW5QVUJoNW9FQkRNSjRLZ29hRURlQkZvZG95RDRRS3lkd0hEczFnLUhXclNpQjhhSEhyU2x1YVRLMDMtUDBvU0hnMXhINnFvVzhPcmNxYWpBVjBfNVJQSE0wcUlMVUpIVVY1WWd6NkJWQlJ0VEFKTHFiNWJfOE40UGhOQjZwM09R?oc=5",
-  "date": "2026-11-20T03:06:00+00:00",
-  "source": "CityNews Montreal",
-  "excerpt": "",
+  "title": "TUNE IN: Tzinquaw Opera",
+  "url": "https://vancouverpostalliance.com/tune-in-tzinquaw-opera/?utm_source=rss&utm_medium=rss&utm_campaign=tune-in-tzinquaw-opera",
+  "date": "2026-11-20T05:09:35+00:00",
+  "source": "Vancouver Post Alliance",
+  "excerpt": "Tzinquaw Opera Dcoumentary FilmSaturday, December 5th 5:45pm Whistler Film Festival (Squamish Lil’Wat Cultural Centre) In the 1940s, at a time when Indigenous cultural expression was suppressed in Canada, an…",
   "category": "canada",
   "canada_only": false,
-  "google": true,
+  "google": false,
   "intl": false,
-  "filter": true,
+  "filter": false,
   "require": null,
   "canada": true,
   "ai": false,
   "vibe": false,
   "cce": false,
   "status": false,
-  "prov": [
-   "QC"
-  ]
+  "prov": []
+ },
+ {
+  "title": "Auto Levels – a free script for color grading in After Effects",
+  "url": "https://www.provideocoalition.com/auto-levels-a-free-script-for-color-grading-in-after-effects/",
+  "date": "2026-11-20T05:07:49+00:00",
+  "source": "ProVideo Coalition",
+  "excerpt": "Auto Levels is a free script for After Effects, to help with colour grading. You can download it here, and the video below will take you through it. But wait! Isn’t there already a plugin called “Auto Levels”? Yes there…",
+  "category": "vfx",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Featured Member: Alexander Ferguson",
+  "url": "https://vancouverpostalliance.com/featured-member-alexander-ferguson/?utm_source=rss&utm_medium=rss&utm_campaign=featured-member-alexander-ferguson",
+  "date": "2026-11-20T04:54:12+00:00",
+  "source": "Vancouver Post Alliance",
+  "excerpt": "Alexander Ferguson Composer, Songwriter, Music Producer How many years have you spent working or studying in the post production industry? I’ve been a composer for film & TV for 13 years. I’ve also composed music for…",
+  "category": "canada",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "London AI Film Awards Crown Pray to Gacha Top Winner as OPUS Reveals First Champions",
@@ -42,7 +78,7 @@
  {
   "title": "Here's who's nominated for the UBCP/ACTRA awards this weekend",
   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWGZoZGo3ZEtkbUh6ZEU3aGpUa1lMMm5JTXVZdWQ2Q1RfZHZxc0xMWkl3amV3MXA3VDUzdW5MclZvUE8yVE5aWEVKYXRGMC1IQV94RWpyWkNOY3RRVEhUMlZ1ZmRGYUtFLW9mU0tJODIyNUhwRmRrY0xsM29GSnFxYklfUE8wUHFVMTQyNnlrR18yS1J2XzROdGJubUhZR0syYkVScWZXX1BsUnFPbThocTZMa3ZUWWtMdFJYMktrMThwejJtZVE?oc=5",
-  "date": "2026-11-20T01:51:24+00:00",
+  "date": "2026-11-20T01:51:13+00:00",
   "source": "Vancouver Is Awesome",
   "excerpt": "",
   "category": "business",
@@ -1169,10 +1205,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Film Quote of the Day: 'The Third Man' Speech That Gave Us a Great Villain Line",
@@ -1781,10 +1817,10 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": [],
-  "vibe": false
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1: the first compact cinema camera in LUMIX history",
@@ -2015,10 +2051,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Full Sail’s Mix Palace Now Immersive",
@@ -2912,10 +2948,10 @@
   "require": null,
   "canada": false,
   "ai": false,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "‘The Cat Came Back’ Director Cordell Barker Gives Santa A Rival In The Full Trailer For ‘The Anta Claus Of The South Pole’ (EXCLUSIVE)",
@@ -3393,10 +3429,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Lomography Lomo72: price, specs, release date",
@@ -4333,12 +4369,12 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
    "ON"
-  ],
-  "vibe": false
+  ]
  },
  {
   "title": "Playing in Canada’s cinema sandbox is art on a tight budget",
@@ -4548,10 +4584,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "The New Indie Wave: How AI is reimagining filmmaking",
@@ -4976,25 +5012,6 @@
   ]
  },
  {
-  "title": "Why your best AI pilots never see production",
-  "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa2k3bmkwZmRqN1o4QktrOEg3MXFab29OWWxDMHV6ZmRmOW92enVOUkk0NlV5aE55YkdRaC11aEJ0NlNGbDlzTHBWMG1pTkpsdXJMNkZ1MWtibjNDVW1oTHZaekpnU2l1OTl2WWJnX09DLXVka1F1S1AzSmVqRzFveg?oc=5",
-  "date": "2026-11-10T08:00:00+00:00",
-  "source": "Spiceworks",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "From Pilot to Production: The Intelligence Powering Agentic AI in Capital Markets",
   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOS1V4Z3Y4ckpQWHZKaGxCbkVtVk9JYjZFcERqUlE4eUc5YUd4NV84OEQ0ajh0QTA4dThmOUk1QU1heVVmWUotRF9TXzFsaGhwSWF6TjJBWkl6d0FCRnVCX3pIMWF3djN3OGJmMXpGcmpvZnZKbEx0bGYtdkk2Rnp6eFo1Yjl4TmtfN2ZDWnBPaGo3ZGtGZnVBMGJFMVIyNVN5bVBWVTBqd0VjYldNN0JnZWp1OUg?oc=5",
   "date": "2026-11-10T08:00:00+00:00",
@@ -5031,6 +5048,44 @@
   "cce": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Tilly Norwood Creator’s New Project? An AI Talking-Dog Movie With the Co-Director of ‘The Lion King’ (Video)",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdGwxUEdCYjN0VzFFOGRfZXhuVzBWU2lJT2ktb09xMHpEdzhZRVhFdDlBMERNUWVIdk85Y0plSEJtYk9UNTBhQU9idEJGS1RfZG4zbE5uSTVfWnFOVjcyLTZwTGliQUoyZTBwMVJ5c1RWREdlRV9FcVlKYWdyTFFjVmRScmlKMmtfLXp1QklvbllZY1lGRmlPTzBxSDlNcjlINk1MZDNrUWVHSnJDSGoxU0ln?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "The Hollywood Reporter",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Why your best AI pilots never see production",
+  "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa2k3bmkwZmRqN1o4QktrOEg3MXFab29OWWxDMHV6ZmRmOW92enVOUkk0NlV5aE55YkdRaC11aEJ0NlNGbDlzTHBWMG1pTkpsdXJMNkZ1MWtibjNDVW1oTHZaekpnU2l1OTl2WWJnX09DLXVka1F1S1AzSmVqRzFveg?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "Spiceworks",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "cce": false,
+  "status": false,
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "TriCoast Advanced Technology Studios Launches Global AI Feature Film Production Company Targeting 35 Features Per Year",
@@ -5227,6 +5282,25 @@
   "prov": []
  },
  {
+  "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY0lHVk5mOUpEZmsxUVdMNnNDZzI0YUcwQXd5aFdZdzBxaksyWF9yeTlHZGtCTHlXNFJ4T2k3TGRlWDJSLUhtdkFxVVB5X2FKZVlCek1RRzJZY194c1gwVGlmazBfTkhwQXAtSEZBZmZ3UERLOVJ0OTZzcjJVZzZvT2FzanNKQQ?oc=5",
+  "date": "2026-11-09T08:00:00+00:00",
+  "source": "Animation World Network",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Disney and Adobe build generative AI models for production",
   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vNjhiYzE3VWtzMzNJcEtOM3VEbXp2dUZ1TEZJX3ptQThBVmxJRFB3RUduUlhVbDVRbEY5ZlRPRi1FVVpVS2JnSXNISndJRDJTUjVpVVVBektpOW1MTFZHeG5QUQ?oc=5",
   "date": "2026-11-09T08:00:00+00:00",
@@ -5263,25 +5337,6 @@
   "cce": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
-  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY0lHVk5mOUpEZmsxUVdMNnNDZzI0YUcwQXd5aFdZdzBxaksyWF9yeTlHZGtCTHlXNFJ4T2k3TGRlWDJSLUhtdkFxVVB5X2FKZVlCek1RRzJZY194c1gwVGlmazBfTkhwQXAtSEZBZmZ3UERLOVJ0OTZzcjJVZzZvT2FzanNKQQ?oc=5",
-  "date": "2026-11-09T08:00:00+00:00",
-  "source": "Animation World Network",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "cce": false,
-  "status": false,
-  "prov": [],
-  "vibe": false
  },
  {
   "title": "British Columbia, Canada, at the World Congress of Science and Factual Producers 2026",
@@ -5455,10 +5510,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",

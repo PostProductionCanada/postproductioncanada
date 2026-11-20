@@ -2,6 +2,20 @@
   "_help": "Editor's picks shown at the top of the site. Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in your own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags.",
   "picks": [
     {
+      "title": "Adobe Firefly adds Build a story and Assemble short video",
+      "url": "https://www.redsharknews.com/adobe-firefly-build-story-assemble-short-video",
+      "source": "RedShark News",
+      "date": "2026-11-11",
+      "note": "Two beta Firefly workspaces, announced at Adobe MAX 2026, take a prompt to planned scenes and shots, then to a short video on a single-track timeline. It is generative and in beta, but it shows where Adobe wants assembly work to go, which matters to Assistant Editors and Editors."
+    },
+    {
+      "title": "Sony files patent for a drone-mounted boom mic",
+      "url": "https://www.redsharknews.com/sony-drone-boom-microphone-patent",
+      "source": "RedShark News",
+      "date": "2026-11-17",
+      "note": "A patent application, not a product. It describes a drone that keeps a mic close to the actor but out of shot, and can filter out its own propeller hum. Worth knowing for dialogue Editors and sound people, but nothing you can buy."
+    },
+    {
       "title": "Google Flow adds Pocket Studio: new camera angles generated from one phone take",
       "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools",
       "source": "Google",
