@@ -202,6 +202,43 @@ def menu_html(pre="", cur="", originals=False, home=True):
     return out
 
 
+
+MYPAGE_SECS = [("roll", "☕ Morning Roll"), ("hist", "📼 Past 10 days of the roll"), ("clock", "🕐 Update clock"), ("picks", "⭐ Our Picks"),
+               ("feeds", "📢 Industry feeds (CMPA, LinkedIn, Avid)"), ("stories", "📰 All stories, tabs and search"), ("res", "📚 Resources and feedback")]
+
+
+def add_mypage(t):
+    """Let readers choose which home-page sections they see; remembered on their device. Also adds jump links."""
+    def tag(pattern, sec, ident=None, count=1):
+        nonlocal t
+        rep = lambda m: m.group(0).replace(">", f' data-sec="{sec}"' + (f' id="{ident}"' if ident else "") + ">", 1)
+        t = re.sub(pattern, rep, t, count=count)
+    tag(r'<section class="roll"[^>]*>', "roll", "roll")
+    tag(r'<section class="rollhist"[^>]*>', "hist")
+    tag(r'<section class="deck"[^>]*>', "clock")
+    tag(r'<section class="picks" aria-label="Our picks">', "picks", "picks")
+    tag(r'<section class="picks" aria-label="(?!Our picks)[^"]*">', "feeds", None, count=0)
+    tag(r'<div class="bar"[^>]*>', "stories", "news")
+    tag(r'<div[^>]*id="grid"[^>]*>', "stories")
+    tag(r'<section class="res">', "res", None, count=0)
+    boxes = "".join(f'<label><input type="checkbox" data-s="{k}" checked> {lbl}</label>' for k, lbl in MYPAGE_SECS)
+    panel = ('<div class="wrap"><details class="mypage" id="mypage"><summary>⚙️ Choose what you see</summary>'
+             '<p class="note">Tick what you want on this page. We remember your choices on this device.</p><div class="mpgrid">' + boxes + '</div>'
+             '<p class="note">Jump to: <a href="#roll">Morning Roll</a> · <a href="#picks">Our Picks</a> · <a href="#news">All stories</a> · <a href="#res">Resources</a></p>'
+             '<button class="btn" type="button" id="mpreset">Show everything</button></details></div>'
+             '<style>.mypage{margin:14px 0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px}.mypage summary{cursor:pointer;font-weight:700}'
+             '.mpgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px 14px;margin:10px 0}.mpgrid label{font-size:14px;cursor:pointer}.mypage .note{font-size:13px;color:var(--mute);margin:6px 0}</style>'
+             '<script>(function(){var K="ppc_sections",T="ppc_tab",st={};try{st=JSON.parse(localStorage.getItem(K)||"{}")}catch(e){}'
+             'function ap(){document.querySelectorAll("#mypage input[data-s]").forEach(function(c){var on=st[c.dataset.s]!==false;c.checked=on;'
+             'document.querySelectorAll("[data-sec=\\u0027"+c.dataset.s+"\\u0027]").forEach(function(el){el.style.display=on?"":"none"})})}'
+             'ap();document.addEventListener("DOMContentLoaded",ap);document.addEventListener("change",function(e){var c=e.target;if(c.matches&&c.matches("#mypage input[data-s]")){st[c.dataset.s]=c.checked;try{localStorage.setItem(K,JSON.stringify(st))}catch(x){}ap()}});'
+             'var r=document.getElementById("mpreset");if(r)r.addEventListener("click",function(){st={};try{localStorage.removeItem(K)}catch(x){}ap()});'
+             'document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".tab");if(b){try{localStorage.setItem(T,b.dataset.f)}catch(x){}}});'
+             'window.addEventListener("load",function(){try{var tb=localStorage.getItem(T);if(tb&&tb!=="all"){var bt=document.querySelector(".tab[data-f=\\u0027"+tb+"\\u0027]");if(bt)bt.click()}}catch(e){}});'
+             '})();</script>')
+    return re.sub(r'(<section class="hero">.*?</section>)', lambda m: m.group(1) + panel, t, count=1, flags=re.S)
+
+
 def add_nav(t, fname, has_originals):
     pre = "../" if fname.startswith("originals/") else ""
     nav = '<nav class="sitenav" aria-label="Sections"><div class="snw">' + menu_html(pre, fname, has_originals) + "</div></nav>"
@@ -365,6 +402,7 @@ def main():
         _rel = f.relative_to(OUT).as_posix()
         if _rel == "index.html":
             t = t.replace("</head>", NAV_CSS + "</head>", 1)
+            t = add_mypage(t)
             _tf = HOME_FAB.replace('<a class="homefab" href="/" title="Back to the home page (the 2 beep)" aria-label="Back to the home page">',
                                    '<a class="homefab" id="topfab" href="#top" title="Back to the top" aria-label="Back to the top" style="display:none">', 1)
             _tf += ('<script>(function(){var b=document.getElementById("topfab");if(!b)return;'

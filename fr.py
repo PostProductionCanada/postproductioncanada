@@ -3,6 +3,10 @@ lines stay in their original language. Draft translation: needs a native French 
 import html, re
 
 EXACT = {
+    "⚙️ Choose what you see": "⚙️ Choisissez ce que vous voyez", "Tick what you want on this page. We remember your choices on this device.": "Cochez ce que vous voulez voir sur cette page. Nous retenons vos choix sur cet appareil.",
+    "☕ Morning Roll": "☕ Rouleau du matin", "📼 Past 10 days of the roll": "📼 Les 10 derniers jours du rouleau", "🕐 Update clock": "🕐 Horloge de mise à jour", "⭐ Our Picks": "⭐ Nos choix",
+    "📢 Industry feeds (CMPA, LinkedIn, Avid)": "📢 Fils de l'industrie (CMPA, LinkedIn, Avid)", "📰 All stories, tabs and search": "📰 Tous les articles, onglets et recherche", "📚 Resources and feedback": "📚 Ressources et commentaires",
+    "Jump to:": "Aller à :", "Morning Roll": "Rouleau du matin", "Our Picks": "Nos choix", "All stories": "Tous les articles", "Resources": "Ressources", "Show everything": "Tout afficher",
     "← Latest news": "← Dernières nouvelles", "Picture Start": "Accueil",
     "Post Production Canada — the latest news in one place": "Post Production Canada — l'actualité canadienne de la postproduction, au même endroit",
     # menu
