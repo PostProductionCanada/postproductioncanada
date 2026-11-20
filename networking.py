@@ -93,7 +93,7 @@ def render(leaf, favicon, updated):
             + '<p>Post is a lonely job. This page is a gathering place: screenings, socials, talks, trade shows and open houses where Canada\'s Editors, colourists, sound people, VFX artists and Post Supervisors can meet. '
               'Every entry links to the organizer\'s own page. Dates were read from those pages on ' + e(AS_OF) + ', so confirm before you travel.</p>'
             + '<h2>Coming up</h2><div class="box"><ul class="ev">' + ev + '</ul></div>'
-            + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + ' Province icons are simple original emblems, not official flags.</p>'
+            + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + '</p>'
             + '<h2>Regular gatherings</h2>' + rec
             + '<h2>🏠 Open houses and demo nights</h2>'
               '<div class="box"><p>None are listed yet. This is where a post house, a VR or virtual-production company, or a gear maker can show off its space and meet the community.</p>'

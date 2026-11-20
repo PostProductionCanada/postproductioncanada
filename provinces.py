@@ -1,5 +1,4 @@
-"""Province emblems: a small emoji icon plus the two-letter code on a coloured pill.
-These are simple original icons, not official flags or coats of arms."""
+"""Province badges: a pin and the province name on a coloured pill."""
 import html
 
 P = {
@@ -13,7 +12,7 @@ P = {
 
 def badge(code, text=None):
     emoji, col, name = P[code]
-    label = text or (code if code != "CA" else "Canada")
+    label = text or name
     return ('<span title="' + html.escape(name) + '" style="display:inline-block;background:' + col +
             ';color:#fff;font:700 11px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;padding:4px 9px;border-radius:999px;margin:0 4px 0 0;vertical-align:middle">'
-            + emoji + " " + html.escape(label) + "</span>")
+            + "📍 " + html.escape(label) + "</span>")
