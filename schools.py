@@ -100,6 +100,55 @@ REGIONS = [
 ]
 
 
+# Alumni: (prov, school, source link, [(name, what we can source)]). Each line is from the school's own page or a reference page.
+ALUMNI = [
+    ("ON", "Sheridan College (animation), Oakville", "https://www.sheridancollege.ca/about/at-a-glance/history/animation",
+     [("Domee Shi", "Bachelor of Animation 2011; won the Oscar for Best Animated Short for Bao."),
+      ("Alan Barillaro", "Sheridan alum who won an Oscar (Piper)."),
+      ("Chris Williams", "Director of The Sea Beast."),
+      ("Dean DeBlois", "Director of How to Train Your Dragon."),
+      ("Jon Klassen", "Illustrator and author, named to the Order of Canada in 2018."),
+      ("Jon Minnis", "While a student, animated Charade, which won the Oscar for Best Animated Short Film.")]),
+    ("ON", "Toronto Metropolitan University, Image Arts", "https://www.torontomu.ca/image-arts/about/ima-alumni",
+     [("Jeremy Podeswa", "IMA '84. Directed for TV, including Game of Thrones, with four Emmy nominations."),
+      ("Pia Di Ciaula", "IMA '92. Film and TV Editor whose credits include The Crown."),
+      ("Jasmin Mozaffari", "IMA '13. Writer-director of Firecrackers, Best Director at the Canadian Screen Awards."),
+      ("Alan Goluboff", "IMA '77. First AD and director, and National President of the DGC for eight years.")]),
+    ("ON", "York University, Film", "https://www.yorku.ca/news/2025/05/30/york-alumni-nominated-for-76-canadian-screen-awards",
+     [("Nicolás Pereda", "Film director; his features have premiered at TIFF."),
+      ("Chelsea McMullan", "MFA '10, BFA '06. Canadian Screen Award nominee for directing the documentary series Swan Song."),
+      ("Alison Duke", "MFA 2020. Director of Mr. Jane and Finch and the first Black woman to direct a Heritage Minute.")]),
+    ("QC", "Concordia, Mel Hoppenheim School of Cinema, Montréal", "https://www.concordia.ca/alumni-friends/news/cinema.html",
+     [("Maciek Szczerbowski", "Concordia reports an Oscar for this alumnus."),
+      ("Élise de Blois", "Production designer with four decades of screen credits.")]),
+    ("QC", "Université de Montréal, Film", "https://thecanadianencyclopedia.ca/en/article/jean-marc-vallee",
+     [("Jean-Marc Vallée", "Studied film at Université de Montréal; director of C.R.A.Z.Y., Dallas Buyers Club and Wild, and also an Editor.")]),
+    ("BC", "Vancouver Film School", "https://vfs.edu/news/vfs-alumni-oscars-golden-globes-2026",
+     [("Scott Mosier", "Producer and Editor; met Kevin Smith and cinematographer Dave Klein at VFS."),
+      ("Steve Lund", "Actor in Schitt's Creek, Haven and Bitten."),
+      ("Chris Vermeulen", "Film Production alum who worked in VFX on One Battle After Another."),
+      ("403 alumni", "VFS says 403 of its alumni worked on 2026 Oscar- and Golden Globe-nominated projects, including 24 on KPop Demon Hunters.")]),
+]
+
+
+def alumni_html():
+    import provinces
+    out = ('<h2 id="alumni">🎓 Famous alumni</h2><p>Canadians who studied film, animation or TV at these schools. '
+           'Each name comes from the school\'s own page or a reference page, linked on each card.</p>')
+    for p, school, url, people in ALUMNI:
+        li = "".join("<li><b>" + e(n) + "</b>: " + e(t) + "</li>" for n, t in people)
+        out += ('<article class="box"><h3>' + provinces.badge(p) + " " + e(school) + "</h3><ul>" + li + "</ul>"
+                '<a href="' + e(url) + '" target="_blank" rel="noopener">Source →</a></article>')
+    out += ('<article class="box"><h3>🎬 James Cameron: Canadian, but not a Canadian film-school story</h3>'
+            '<p>Born in Kapuskasing, Ontario, Cameron grew up near Niagara Falls and attended Stamford Collegiate there. His family moved to California when he was 17. '
+            'He enrolled at Fullerton College in 1973 to study physics, switched to English and left in 1974. He then taught himself special effects, partly by reading graduate theses in a university library. '
+            'So he was schooled in Ontario, but not in film.</p>'
+            '<a href="https://en.wikipedia.org/wiki/James_Cameron" target="_blank" rel="noopener">Source: Wikipedia</a> · '
+            '<a href="https://achievement.org/achiever/james-cameron" target="_blank" rel="noopener">Academy of Achievement</a></article>')
+    out += '<p class="note">Know an alum we missed? Send the name and a link to hello@postproductioncanada.ca. Province badges are pins, not official emblems.</p>'
+    return out
+
+
 def render(leaf, favicon, updated):
     secs = []
     for region, schools in REGIONS:
@@ -114,7 +163,7 @@ def render(leaf, favicon, updated):
             cards.append(f'<article class="box" data-tags="{" ".join({t for p in s["programs"] for t in p[1]})}"><h3>{e(s["school"])}</h3>'
                          f'<div class="meta">🍁 📍 {code} · {e(s["city"])} · {e(s["kind"])}</div>{progs}</article>')
         secs.append(f'<h2 id="{e(region.lower().replace(" ", "-"))}">{e(region)}</h2>{"".join(cards)}')
-    return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{SECTIONS}}", "".join(secs)).replace("{{UPDATED}}", updated))
+    return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{SECTIONS}}", "".join(secs) + alumni_html()).replace("{{UPDATED}}", updated))
 
 
 PAGE = r"""<!doctype html>

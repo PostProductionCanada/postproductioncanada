@@ -38,27 +38,6 @@
   "prov": []
  },
  {
-  "title": "Ubisoft cuts 166 jobs at Montreal and Quebec City video game studios",
-  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUzFSaS1ITE54YXg5dEtqSFdobC1jVjd4N1BuYTFCemZvXzlrU0o1aGxjcUhFMG1Ldm42U3BtVXI5MHFuLXJKMnFZZnZ0cEJGQmZSTFRVX1pVMS01ZmdsdVRkN2k1WFg2SzQwcEU5WXhIekJ6UUxQN2VZUXJyQmF6RXpmeTJRWDV4TXdj?oc=5",
-  "date": "2026-11-19T21:27:19+00:00",
-  "source": "CBC",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": [
-   "QC"
-  ]
- },
- {
   "title": "'GTA VI' Glorifies Killing, and That's Okay",
   "url": "https://nofilmschool.com/violent-video-game-are-okay",
   "date": "2026-11-19T21:15:01+00:00",
@@ -195,6 +174,27 @@
   "cce": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Ubisoft cuts 166 jobs at Montreal and Quebec City video game studios",
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQi1iSXRiOEJHMk9zTjRKSnFXblpNanVzV0ZpWHFoYTFDVUc3UHhnSVFpb0kxS1FrQmR5WlRMZi1vZ0VGaUNYd2YxMXZKMTVvSUtpZTFzYzRhTHgtaE5ON1VVbVV6MWtOY19oemdJYTRVYU45MDVjQWVMcmJYYXo2SExfcVV1aUNfWDNIeFROR0xYYnNUVENKU0xncTFlak0?oc=5",
+  "date": "2026-11-19T19:04:08+00:00",
+  "source": "CBC",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "How Costume Designer Mynka Draper Captured Early-'90s LA Hip-Hop for FX’s 'The Drop: A Snowfall Saga'",
@@ -4312,12 +4312,12 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "vibe": false,
   "cce": false,
   "status": false,
   "prov": [
    "ON"
-  ],
-  "vibe": false
+  ]
  },
  {
   "title": "Playing in Canada’s cinema sandbox is art on a tight budget",
@@ -4955,25 +4955,6 @@
   ]
  },
  {
-  "title": "Why your best AI pilots never see production",
-  "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa2k3bmkwZmRqN1o4QktrOEg3MXFab29OWWxDMHV6ZmRmOW92enVOUkk0NlV5aE55YkdRaC11aEJ0NlNGbDlzTHBWMG1pTkpsdXJMNkZ1MWtibjNDVW1oTHZaekpnU2l1OTl2WWJnX09DLXVka1F1S1AzSmVqRzFveg?oc=5",
-  "date": "2026-11-10T08:00:00+00:00",
-  "source": "Spiceworks",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "From Pilot to Production: The Intelligence Powering Agentic AI in Capital Markets",
   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOS1V4Z3Y4ckpQWHZKaGxCbkVtVk9JYjZFcERqUlE4eUc5YUd4NV84OEQ0ajh0QTA4dThmOUk1QU1heVVmWUotRF9TXzFsaGhwSWF6TjJBWkl6d0FCRnVCX3pIMWF3djN3OGJmMXpGcmpvZnZKbEx0bGYtdkk2Rnp6eFo1Yjl4TmtfN2ZDWnBPaGo3ZGtGZnVBMGJFMVIyNVN5bVBWVTBqd0VjYldNN0JnZWp1OUg?oc=5",
   "date": "2026-11-10T08:00:00+00:00",
@@ -5010,6 +4991,25 @@
   "cce": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Why your best AI pilots never see production",
+  "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa2k3bmkwZmRqN1o4QktrOEg3MXFab29OWWxDMHV6ZmRmOW92enVOUkk0NlV5aE55YkdRaC11aEJ0NlNGbDlzTHBWMG1pTkpsdXJMNkZ1MWtibjNDVW1oTHZaekpnU2l1OTl2WWJnX09DLXVka1F1S1AzSmVqRzFveg?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "Spiceworks",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "cce": false,
+  "status": false,
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "TriCoast Advanced Technology Studios Launches Global AI Feature Film Production Company Targeting 35 Features Per Year",
@@ -5206,6 +5206,25 @@
   "prov": []
  },
  {
+  "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY0lHVk5mOUpEZmsxUVdMNnNDZzI0YUcwQXd5aFdZdzBxaksyWF9yeTlHZGtCTHlXNFJ4T2k3TGRlWDJSLUhtdkFxVVB5X2FKZVlCek1RRzJZY194c1gwVGlmazBfTkhwQXAtSEZBZmZ3UERLOVJ0OTZzcjJVZzZvT2FzanNKQQ?oc=5",
+  "date": "2026-11-09T08:00:00+00:00",
+  "source": "Animation World Network",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Disney and Adobe build generative AI models for production",
   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vNjhiYzE3VWtzMzNJcEtOM3VEbXp2dUZ1TEZJX3ptQThBVmxJRFB3RUduUlhVbDVRbEY5ZlRPRi1FVVpVS2JnSXNISndJRDJTUjVpVVVBektpOW1MTFZHeG5QUQ?oc=5",
   "date": "2026-11-09T08:00:00+00:00",
@@ -5242,25 +5261,6 @@
   "cce": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
-  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY0lHVk5mOUpEZmsxUVdMNnNDZzI0YUcwQXd5aFdZdzBxaksyWF9yeTlHZGtCTHlXNFJ4T2k3TGRlWDJSLUhtdkFxVVB5X2FKZVlCek1RRzJZY194c1gwVGlmazBfTkhwQXAtSEZBZmZ3UERLOVJ0OTZzcjJVZzZvT2FzanNKQQ?oc=5",
-  "date": "2026-11-09T08:00:00+00:00",
-  "source": "Animation World Network",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "cce": false,
-  "status": false,
-  "prov": [],
-  "vibe": false
  },
  {
   "title": "British Columbia, Canada, at the World Congress of Science and Factual Producers 2026",

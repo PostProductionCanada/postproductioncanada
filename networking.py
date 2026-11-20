@@ -41,14 +41,31 @@ FESTIVALS = [
     ("QC", "RIDM, Montreal International Documentary Festival", "Montréal", "Nov 19 to 29, 2026", "https://ridm.ca/en"),
     ("BC", "Whistler Film Festival", "Whistler", "Dec 2 to 6, 2026", "https://www.whistlerfilmfestival.com/"),
     ("ON", "Prime Time (Canadian Media Producers Association)", "Ottawa", "Jan 27 to 29, 2027", "https://cmpa.ca/prime-time/"),
+    ("BC", "Victoria Film Festival", "Victoria", "Feb 5 to Mar 14, 2027", "https://film-fest-report.com/2027-film-festival-dates"),
+    ("YT", "Available Light Film Festival", "Whitehorse", "Feb 11 to 27, 2027", "https://film-fest-report.com/2027-film-festival-dates"),
+    ("ON", "Kingston Canadian Film Festival", "Kingston", "Feb 24 to 28, 2027", "https://filmfreeway.com/KingstonCanadianFilmFestival"),
+    ("QC", "Regard, Saguenay International Short Film Festival", "Saguenay", "Mar 17 to 21, 2027", "https://festivalregard.com/en/call-for-entries"),
+    ("YT", "Dawson City International Short Film Festival", "Dawson City", "Mar 25 to 28, 2027", "https://www.dawsonfilmfest.com/submit.html"),
+    ("ON", "Canadian Film Fest", "Toronto", "Mar 30 to Apr 4, 2027", "https://www.canfilmfest.ca"),
     ("ON", "Hot Docs Festival", "Toronto", "Apr 23 to May 2, 2027", "https://hotdocs.ca/festivals/hot-docs-festival"),
     ("BC", "DOXA Documentary Film Festival", "Vancouver", "Apr 29 to May 9, 2027", "https://www.doxafestival.ca/"),
+    ("QC", "Canadian Independent Film Festival", "Montréal", "May 21 to 23, 2027", "https://festhome.com/en/festival/canadian-independent-film-festival-ciff"),
     ("AB", "Banff World Media Festival", "Banff", "June 13 to 16, 2027 (Playback lists to June 17)", "https://banffmediafestival.playbackonline.ca/"),
     ("QC", "Fantasia International Film Festival", "Montréal", "July 15 to Aug 1, 2027", "https://fantasiafestival.com/en/"),
+    ("MB", "Gimli International Film Festival", "Gimli", "July 21 to 25, 2027", "https://www.gimlifilm.com"),
     ("NS", "Atlantic International Film Festival", "Halifax", "Sept 15 to 22, 2027", "https://atlanticfilmfestival.ca/"),
     ("ON", "Cinéfest Sudbury International Film Festival", "Sudbury", "Sept 18 to 26, 2027", "https://cinefest.com/"),
+    ("ON", "Forest City Film Festival", "London", "Oct 15 to 24, 2027", "https://fcff.ca"),
 ]
-NO_FESTIVAL_YET = "Saskatchewan, Manitoba, New Brunswick, Prince Edward Island, Newfoundland and Labrador and the territories are not covered yet. Send a festival with a link to the organizer's page and it goes on."
+# Annual festivals that just ran, with next dates not posted yet when this page was built.
+WRAPPED = [
+    ("ON", "Toronto International Film Festival (TIFF)", "Toronto", "2026 ran Sept 10 to 20; 2027 dates not found", "https://tiff.net"),
+    ("BC", "Vancouver International Film Festival (VIFF)", "Vancouver", "2026 ran Oct 1 to 11; 2027 dates not posted", "https://viff.org/festival/viff-2026"),
+    ("SK", "Regina International Film Festival and Awards (RIFFA)", "Regina", "2026 ran Aug 12 to 22; 2027 dates not posted", "https://riffa.ca"),
+    ("NB", "Silver Wave Film Festival", "Fredericton", "2026 ran Nov 5 to 12; 2027 dates not posted", "https://www.nbfilmcoop.com/silver-wave-film-festival"),
+    ("NL", "St. John's International Women's Film Festival", "St. John's", "2026 ran Oct 20 to 24; 2027 dates not posted", "https://destinationfilmguide.com/top-north-american-film-festivals-2026-27"),
+]
+NO_FESTIVAL_YET = "Dates not found yet for the Charlottetown Film Festival (PEI), the Yellowknife International Film Festival (NWT), the Calgary International Film Festival (AB) or any festival in Nunavut. Send a festival with a link to the organizer's page and it goes on."
 
 # Recurring, with no 2027 dates announced yet.
 RECURRING = [
@@ -85,6 +102,8 @@ def render(leaf, favicon, updated):
         for n, w, t, u in RECURRING)
     fest = "".join('<li>' + provinces.badge(p) + ' <a href="' + e(u) + '" target="_blank" rel="noopener">' + e(nm) + '</a>'
                    '<div class="note">' + e(c) + ' · ' + e(d) + '</div></li>' for p, nm, c, d, u in FESTIVALS)
+    wrapped = "".join('<li>' + provinces.badge(p) + ' <a href="' + e(u) + '" target="_blank" rel="noopener">' + e(nm) + '</a>'
+                      '<div class="note">' + e(c) + ' · ' + e(d) + '</div></li>' for p, nm, c, d, u in WRAPPED)
     watch = "".join("<li>" + e(x) + "</li>" for x in WATCH)
     css = ("<style>.ev{list-style:none;padding:0;margin:0}.ev li{padding:12px 0;border-bottom:1px solid var(--line)}"
            ".ev li:last-child{border-bottom:0}.ev b{display:block;font:700 13px ui-monospace,Menlo,monospace;color:var(--red)}"
@@ -93,7 +112,7 @@ def render(leaf, favicon, updated):
             + '<p>Post is a lonely job. This page is a gathering place: screenings, socials, talks, trade shows and open houses where Canada\'s Editors, colourists, sound people, VFX artists and Post Supervisors can meet. '
               'Every entry links to the organizer\'s own page. Dates were read from those pages on ' + e(AS_OF) + ', so confirm before you travel.</p>'
             + '<h2>Coming up</h2><div class="box"><ul class="ev">' + ev + '</ul></div>'
-            + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + '</p>'
+            + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + '</p><h3>Just wrapped, next dates not posted</h3><div class="box"><ul class="ev">' + wrapped + '</ul></div>'
             + '<h2>Regular gatherings</h2>' + rec
             + '<h2>🏠 Open houses and demo nights</h2>'
               '<div class="box"><p>None are listed yet. This is where a post house, a VR or virtual-production company, or a gear maker can show off its space and meet the community.</p>'
