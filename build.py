@@ -768,7 +768,7 @@ header{border-bottom:1px solid var(--line)}
 .hero{padding:34px 0 18px}
 .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.08;letter-spacing:-.03em;margin:0 0 10px;max-width:16em}
 .hero h1 em{font-style:normal;color:var(--red)}
-.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.loopwrap{margin-top:14px!important}.loop{display:inline-block;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,19px);line-height:1.3;padding:12px 18px;border-radius:12px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}
+.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.loopwrap{margin-top:14px!important}.loop{display:block;text-align:center;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,19px);line-height:1.3;padding:12px 18px;border-radius:12px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}.clap{font-size:1.25em;vertical-align:-2px}
 .bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
 .bar .wrap{display:flex;flex-direction:column;gap:10px}
 .tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
@@ -881,10 +881,10 @@ footer p{margin:0 0 8px;max-width:60em}
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
-  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="newsword">NEWS</span><br><em>in one place.</em></h1>
+  <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="nw"><span class="newsword">NEWS</span> <em>in one place.</em></span></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. <span class="nw">Free, always.</span></p>
-  <p class="loopwrap"><a class="loop" href="{{LOOP}}">✨ Original articles and features are coming soon. Stay in the loop: click here →</a></p>
-</div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div></section>
+</div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div>
+<div class="wrap"><p class="loopwrap"><a class="loop" href="{{LOOP}}">Original articles and features are coming soon. Stay in the loop: <span class="clap">🎬</span> click here →</a></p></div></section>
 
 {{ROLL}}
 
