@@ -1,5 +1,26 @@
 [
  {
+  "title": "Montreal’s image+nation film festival opens 39th edition",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSi1PMXZRVUp4d052MDJvT0pfaUpEdC1iR3V2MW5QVUJoNW9FQkRNSjRLZ29hRURlQkZvZG95RDRRS3lkd0hEczFnLUhXclNpQjhhSEhyU2x1YVRLMDMtUDBvU0hnMXhINnFvVzhPcmNxYWpBVjBfNVJQSE0wcUlMVUpIVVY1WWd6NkJWQlJ0VEFKTHFiNWJfOE40UGhOQjZwM09R?oc=5",
+  "date": "2026-11-20T03:06:00+00:00",
+  "source": "CityNews Montreal",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
+ },
+ {
   "title": "London AI Film Awards Crown Pray to Gacha Top Winner as OPUS Reveals First Champions",
   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdV9zNVlQZmtnUG4td3N2eGtfemI1QVVZWXdRT0JyZ3RxTFpXUThJOHZJRHdfbTZlUloyYWxQRkIxekRfQ0JOemNCdmMwdVI5T3FPQmZBWUlSSEZkMlRsb1drYkhSZ01QNVN6ajF0NFRETjltcUpmNjl3XzhSaXMzZVpBcjI3LVhwdWFDZjBKYVZDYlhYdUZlQjB0Z0N1UXAxZm5TNFowWkk4LUVXVXdqaXNSazdiU3pI?oc=5",
   "date": "2026-11-20T02:03:57+00:00",
@@ -594,6 +615,25 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Lemonlight Announces Hero, an AI Production Operating System for Video",
+  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSGlwUGtreldnLVBJbW9uZmRrRl9hZDNITG1pVVk4Vm5VY0lWOFBEMGFONVBIVXBpY19zeU44N3B5SWMxRVFKZDR3LWxWYkJwVXNIeVNTZTlFNnlFSVlNWWFGY2RkWVI4aGxFa0NHQzRBSTZuRDZJQVdQWUdUQktTNFhDNnNiX0t6MEFzYmpaN0hqNHM5aHFYMUExV1VaTmhKQjk2dEZQaWtHZGxVX2c?oc=5",
+  "date": "2026-11-19T15:20:46+00:00",
+  "source": "Sports Video Group",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
   "vibe": false,
   "cce": false,
   "status": false,
@@ -1741,10 +1781,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "Panasonic LUMIX SHX1: the first compact cinema camera in LUMIX history",
@@ -2091,10 +2131,10 @@
   "require": null,
   "canada": false,
   "ai": true,
-  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false
  },
  {
   "title": "The 5 Best William Friedkin Movies",
@@ -2692,25 +2732,6 @@
   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcXNtbFBQYkFsdll3QWtxcm1RRmE2eFYtZTZNMGQ4TGF5a3lEbTVPYmdUR3J5VEJGUU1zNEhQdWI3VzR1NE0xSW5HTjRpTnRJMFBYVXJWQXp5NTBoanFJOVJWMDg0c0xFeHp3V2kzRXVpQ1BLNVgxQTVZOUo0VHVyUjRIdkduSlB3enZYY21BbzB4ZDF2N0lHWTVBVQ?oc=5",
   "date": "2026-11-17T15:36:37+00:00",
   "source": "Dataconomy",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "Nueva Pescanova Launches AI Project to Optimize Seafood Production",
-  "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZEJNM1Jjc21JXzl1U1hxNmJUeVFIcnkyd19mMTdPWlFZM2ZyRmltMHlWbE9JODVuWXZBcDl0eW5JZS1RckhCWjB2LTFUTldHUjhHOW9Ldm81b2QwaXd3OXQtQmNmeHY5NHFhcWwyaml4ZmtDbVBZaUh4V2gwSFMzem1zd2NZTzNfV21pUU9FYnVtU21nY1ZVWFZvbHpPUnpKci1KeGxGbXdWUFBX?oc=5",
-  "date": "2026-11-17T15:35:18+00:00",
-  "source": "Seafoodnews",
   "excerpt": "",
   "category": "vfx",
   "canada_only": false,
@@ -3834,6 +3855,25 @@
   "vibe": false
  },
  {
+  "title": "Adobe Reveals New AI Technology That Lets Filmmakers Talk to Characters Before Creating Videos",
+  "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUWZTdUlYbU9ZeDQ4cVd3ZnhRVzFmSldZRkRtZ29WdlZmdWd2eDhxcm9KRHZsZTlKWlRLYU1iRV9sLTFhRjlJTWxBTG9aMWNwT1FSRHdWTW9BN0pyYUpNWDhEa3phUmpFUHJPbEdwUjhETGxkWWViVUpBWnlPT25XSHA0LWtLVUFsQkoydHBfTFc5YW9QYjNpcDd0cV8wZmdBa2R5cmdwMmQ2NE56QTcyR21BTVQ5Q29iVEhsSTZHYVMxdkRhRGc?oc=5",
+  "date": "2026-11-14T19:32:46+00:00",
+  "source": "SoaplandTV",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "'The Last of Us' series brought more than $141 million in production spending to Alberta; a study found i",
   "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQdFRLZWd5NzFQZFMxVENvTVhfQUVvVm5xTi10c25XR2dDaktQbHZUM2ZNNUJ3dGJkOFNnS3NJbW9OUmZCUmEyaEo1M2Q5OENIdko1ZHUxVy0xMUFoRDZjOTNDNlQ3LTh3N0tFRjl6Ymtpa1JDLWtBa0ZhMjRacldCOF9YY2FrU2ZmdkE1dmtkOHlBN3N3V0JsUy1Ma2p3a1AwVkdCYTc4UVluQ1dBNXVINFhLMnBGdV91TUtYTXZIX1hXR0NVdVlpbWk2bWZLRW9yQWpoZnR3OEY2MENEaFRSaS1hUDZheFRpTXNHQ01MQmxOdi1tZDJTVWFXdk4zTW5aUWRSZmJvU3B5VzVQVUFZVkJJTUVsM1JMdVozUkpPV2xMeDY2TG1JcHhWVnRTYUlKZXByZ2sydjJpQjBfd1VYRjh2UGhYUdIBywJBVV95cUxQY1cwOE1xaWFpQ2N3M3JoV3kzV211dEhzUDhfZUM1Q1pMNTZqb2MxSHFTSzNpdll4d3JRTWFNc3V2Y2plRWp1UzlVNG1BcU51WUxwY1ZEbmpnUEN4ZkVpR1MycjJzRWMyRHA1cUhhdndMN21UanozV09PQVRMVVZfb0t1d3FfMEF4ZjliWWdBbDlvNzdQRGtaci1vZHpQWnZpbWpjb3R1dDZvUkRKektSN25PbGNFaXBuUFg0NE8wR3VvTW9lVzRZaF9HanpvZW51aTdnc21DYXlNRGViV0hOUTFOOXNxcDhQQkNsMW9EY1BkWXpwa0VmS3I0Y2Jhc2xUZkpXYV9kQXlNWUJHUUhPYVZ1U0xKdkhINWhGOTdCWDJQRnJJamVTV2dKRXVPd21mWEJnSzJ1ak1hSlZRb0JqYkIzZ3c0OEx5T2g0?oc=5",
   "date": "2026-11-14T19:30:00+00:00",
@@ -4508,10 +4548,10 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "vibe": false,
   "cce": false,
   "status": false,
-  "prov": [],
-  "vibe": false
+  "prov": []
  },
  {
   "title": "The New Indie Wave: How AI is reimagining filmmaking",

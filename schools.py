@@ -171,7 +171,7 @@ PAGE = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Schools for picture editing, sound and post across Canada — Post Production Canada</title>
+<title>Education for picture editing, sound and post across Canada — Post Production Canada</title>
 <meta name="description" content="Colleges, universities and private schools across Canada that teach picture editing, sound and post-production.">
 <link rel="icon" href="{{FAVICON}}">
 <style>
@@ -199,7 +199,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap">
-<h1>🎓 Schools across Canada</h1>
+<h1>🎓 Education across Canada</h1>
 <p class="lede">Where to learn picture editing, sound and post-production, from Newfoundland to Vancouver. Colleges, universities and private schools.</p>
 <p class="note">Programs change every year, so check each school before you apply. Being listed is not an endorsement. Where we couldn't reach a school's own page, the entry says so. Visual effects, colour and music programs have been added, but the list is not complete, and I don't know the full count of Canadian schools that teach these. New Brunswick, PEI and the territories aren't covered yet.</p>
 <h2 id="learn-on-the-job">🛠️ Learn on the job: mentorships, trainee roles and internships</h2>

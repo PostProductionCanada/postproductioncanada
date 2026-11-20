@@ -167,7 +167,7 @@ HOME_FAB = ('<a class="homefab" href="/" title="Back to the home page (the 2 bee
             'font:800 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 14px 7px 8px;border-radius:999px;'
             'border:2px solid #ffb000;box-shadow:0 4px 14px rgba(0,0,0,.35)}.homefab:hover{background:#000}@media print{.homefab{display:none}}</style>')
 
-NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Education"), ("canadians.html", "🍁 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -519,7 +519,7 @@ def picks_html(picks):
         f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
         + (f'<p class="why"><b>Why it matters:</b> {esc(r["note"])}</p>' if r.get("note") else "") + '</article>'
         for r in picks)
-    return f'<section class="picks" aria-label="Editor\'s picks"><h2>⭐ Editor\'s Picks</h2><div class="pgrid">{cards}</div></section>'
+    return f'<section class="picks" aria-label="Our picks"><h2>⭐ Our Picks</h2><div class="pgrid">{cards}</div></section>'
 
 
 ROLL_FILE = ROOT / "data" / "roll.json"
@@ -877,7 +877,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Education</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
@@ -928,7 +928,7 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="green-post.html">Green Post</a> — sustainability programs and what they mean for post.</li>
     <li><a href="cut-in-canada.html">Did you know that was cut in Canada?</a> — movies and TV whose editing, effects or sound was done in Canada.</li>
     <li><a href="vibe-cutting.html">Vibe Cutting</a> — editing by telling the software what you want, and how AI is wiring into editing software.</li>
-    <li><a href="schools.html">Schools across Canada</a> — colleges, universities and private schools teaching picture editing, sound and post.</li>
+    <li><a href="schools.html">Education across Canada</a> — colleges, universities and private schools teaching picture editing, sound and post.</li>
     <li><a href="canadians.html">Canadian Stories</a> — the editors and directors from Canada behind screens the world watches.</li>
     <li><a href="unions.html">Union Map</a> — pick a province to see which unions and guilds cover editors there.</li>
     <li><a href="privacy.html">Privacy</a> — what we collect (almost nothing) and how the newsletter works.</li>

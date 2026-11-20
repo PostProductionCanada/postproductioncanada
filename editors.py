@@ -312,7 +312,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="box"><ul class="arts">
 <li>An Editor who will let you learn the whole workflow: dailies, turnovers, temp sound and music, and the finishing handoff.</li>
 <li>Shows with visual effects, sound and music work, because that is where assistants learn the most.</li>
-<li>A mentor. The CCE mentorship program has an assistant editing category. See the Schools page for how to apply.</li>
+<li>A mentor. The CCE mentorship program has an assistant editing category. See the Education page for how to apply.</li>
 <li>A clear plan for what comes next. Several sources say assisting and editing are different skills, so cut on your own time.</li>
 </ul></div>
 

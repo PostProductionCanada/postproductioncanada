@@ -210,7 +210,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <li>Backstage describes two routes: rise inside one post department such as picture or sound editorial, or go from post assistant to post coordinator to supervisor. <span class="when">Backstage (US)</span></li>
 <li>A post supervisor interviewed on YouTube (Chloé Bellande) says the usual path is from post coordinator to supervisor within the same show, because the producer already trusts you. <span class="when">YouTube interview</span></li>
 <li>Caroline Dobbe, a post supervisor on <i>The Boys</i>, told Careers in Film that she learned the technical side on the job, and that knowing editing software is not necessary for the role. <span class="when">Careers in Film</span></li>
-<li>The College of the North Atlantic's one-year post-production certificate in Newfoundland and Labrador includes a Post-Production Supervision course. See the Schools page.</li>
+<li>The College of the North Atlantic's one-year post-production certificate in Newfoundland and Labrador includes a Post-Production Supervision course. See the Education page.</li>
 </ul></div>
 <h3>What the agreement says vs. what the job often becomes</h3>
 <div class="box">
