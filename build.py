@@ -424,7 +424,7 @@ def cap_editor(t):
 
 def esc(s): return html.escape(s, quote=True)
 
-CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎧", "Audio"),
+CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎶", "Sound & Emotion"),
         "vfx": ("🟩", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
         "cce": ("✂️", "CCE"),
