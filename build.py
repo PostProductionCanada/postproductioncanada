@@ -158,7 +158,16 @@ def nobreak(html_text):
     return "".join(out)
 
 
-NAV = [("index.html", "🏠 News"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+LEADER = ('<svg class="leader" viewBox="0 0 40 40" width="26" height="26" aria-hidden="true" style="vertical-align:middle">'
+          '<circle cx="20" cy="20" r="17.5" fill="#14161a" stroke="#f6f4ef" stroke-width="2.5"/><circle cx="20" cy="20" r="11" fill="none" stroke="#f6f4ef" stroke-width="1.2"/>'
+          '<path d="M2.5 20h35M20 2.5v35" stroke="#f6f4ef" stroke-width="1.2"/><path d="M20 20 L20 4.5 A15.5 15.5 0 0 1 33.4 12.3 Z" fill="#ffb000" opacity=".45"/>'
+          '<text x="20" y="26.5" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-weight="900" font-size="19" fill="#ffb000" stroke="#14161a" stroke-width=".8">2</text></svg>')
+HOME_FAB = ('<a class="homefab" href="/" title="Back to the home page (the 2 beep)" aria-label="Back to the home page">' + LEADER + '<span>Picture Start</span></a>'
+            '<style>.homefab{position:fixed;left:14px;bottom:14px;z-index:60;display:flex;align-items:center;gap:8px;background:#14161a;color:#ffb000!important;'
+            'font:800 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 14px 7px 8px;border-radius:999px;'
+            'border:2px solid #ffb000;box-shadow:0 4px 14px rgba(0,0,0,.35)}.homefab:hover{background:#000}@media print{.homefab{display:none}}</style>')
+
+NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -316,6 +325,8 @@ def main():
         _rel = f.relative_to(OUT).as_posix()
         if _rel != "index.html":
             t = add_nav(t, _rel, bool(_arts))
+        if _rel != "index.html" and "homefab" not in t:
+            t = t.replace("</body>", HOME_FAB + "</body>", 1)
         if beacon and "cloudflareinsights" not in t:
             t = t.replace("</head>", beacon + "</head>", 1)
         if _rel == "editors.html" and "ed-banner" not in t:
