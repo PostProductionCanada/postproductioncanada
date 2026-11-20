@@ -125,7 +125,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 {{CARDS}}
 <div class="box add"><h3>Got a story?</h3><p>If you know a Canadian editor, director or craftsperson with a great story, send us the name and we'll research it and add it here, with sources. A longer list is welcome too.</p></div>
 </main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are mine; every claim links to its source.</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are ours; every claim links to its source.</div></footer>
 </body>
 </html>
 """

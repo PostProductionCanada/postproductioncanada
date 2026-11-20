@@ -217,7 +217,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 {{SECTIONS}}
 <div class="box" style="border-left:4px solid #e0a100"><h3>Know a school or program that's missing?</h3><p class="note" style="margin:6px 0 0">Send us the name and we'll check its program page and add it.</p></div>
 </main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are mine, and each entry links to its source.</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are ours, and each entry links to its source.</div></footer>
 <script>
 (function(){
   var bs=document.querySelectorAll('#filters .btn'),boxes=document.querySelectorAll('.box[data-tags]'),heads=document.querySelectorAll('main h2');

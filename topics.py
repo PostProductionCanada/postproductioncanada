@@ -76,7 +76,7 @@ h1{font-size:clamp(28px,5vw,42px);line-height:1.1;letter-spacing:-.03em;margin:3
 </style></head><body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap"><h1>{{H1}}</h1><p class="lede">{{LEDE}}</p>{{BODY}}</main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are mine and each item links to its source. {{FOOT}}</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are ours and each item links to its source. {{FOOT}}</div></footer>
 </body></html>"""
 
 

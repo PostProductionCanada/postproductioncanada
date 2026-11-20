@@ -85,7 +85,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="box">{{LATEST}}</div>
 <div class="box add"><h3>Know one?</h3><p class="note" style="margin:6px 0 0">Send a title and what was done in Canada, and we'll check the credits and add it. Directors like Guillermo del Toro are a good start, but a great story about a small film is welcome too.</p></div>
 </main>
-<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are mine, and each item links to its source.</div></footer>
+<footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are ours, and each item links to its source.</div></footer>
 </body>
 </html>
 """
