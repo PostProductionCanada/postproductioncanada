@@ -99,7 +99,8 @@
     {
       "name": "StudioDaily",
       "url": "https://www.studiodaily.com/feed/",
-      "category": "picture"
+      "category": "picture",
+      "filter": true
     },
     {
       "name": "Post Magazine",

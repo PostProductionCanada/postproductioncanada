@@ -36,9 +36,14 @@ SCREEN_RE = re.compile(
     r"cinematograph\w*|director\w*|actor\w*|actra|iatse|dgc|telefilm|cmf|netflix|disney|paramount|"
     r"documentar\w+|festival|tiff|box office|sound|audio|colou?r|davinci|avid|adobe|content|crew|"
     r"tax credit|soundstage|set|shoot\w*|casting|screenwrit\w+|writers?)\b", re.I)
+SOURCE_EXCLUDE = {"StudioDaily", "Britannica", "Harvard Business Review", "Honest Reporting Canada", "Moomoo", "Investing.com Canada", "Drive Tesla Canada"}
 EXCLUDE_RE = re.compile(
     r"\b(radio stations?|earnings|tsx|nasdaq|stock\w*|shares|ammunition|air defen[cs]e|tariffs?|"
-    r"auto industry|mortgage|real estate|hockey|nhl|wildfire|weather forecast|horoscope|crypto\w*)\b", re.I)
+    r"auto industry|mortgage|real estate|hockey|nhl|wildfire|weather forecast|horoscope|crypto\w*|"
+    r"gold|silver|copper|lithium|mining|oil and gas|oil & gas|solar cell\w*|climate systems|stellantis|agnico|capital markets|royalties provides|"
+    r"robotics|ghg emissions|mega man|honest ?reporting|quebecor|telus|dill pickle|rushtok|gen z|crisis playbook|pr roundup|measuring clicks|"
+    r"audi ceo|campus rituals|recruitment strategy|chatgpt ads|earphones|earpods|britannica|streetcar named desire|mass production|2nm|casting calls|twitter reviews|"
+    r"instagram launches|film quote of the day|movies,? ranked|stars who almost|every movie that beat|worldbuilding|screenplay|anxiety draft|pro writers|movies that inspired|grand theft auto|gta vi)\b", re.I)
 
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
@@ -267,7 +272,7 @@ def main():
             if it["date"] < cutoff or it["date"] > now + timedelta(days=1):
                 continue
             blob = f"{it['title']} {it['excerpt']} {it['source']}"
-            if EXCLUDE_RE.search(it["title"]):
+            if EXCLUDE_RE.search(it["title"]) or it["source"] in SOURCE_EXCLUDE:
                 continue
             req = it.get("require")
             if req:
@@ -300,8 +305,9 @@ def main():
             it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
             it["prov"] = [k for k, r in PROV_RE.items() if r.search(blob2)]
             if it["category"] in ("picture", "gear", "vfx"):
-                if AUDIO_RE.search(it["title"]): it["category"] = "audio"
+                if AUDIO_RE.search(it["title"]) and not it["ai"]: it["category"] = "audio"
                 elif VFX_RE.search(it["title"]): it["category"] = "vfx"
+            refine_category(it)
             items.append(it)
     # remember stories between builds so the window really is MAX_AGE_DAYS, not just what feeds show today
     fresh = {i["url"] for i in items}
@@ -309,7 +315,7 @@ def main():
         if a["url"] in fresh or a["date"] < cutoff or a["date"] > now + timedelta(days=1):
             continue
         key = norm(a["title"])
-        if key in seen:
+        if key in seen or EXCLUDE_RE.search(a["title"]) or a.get("source") in SOURCE_EXCLUDE:
             continue
         seen.add(key)
         # archived stories may predate newer tags: fill in defaults and recompute the cheap text tags
@@ -323,6 +329,7 @@ def main():
         a["dgc"] = bool(DGC_RE.search(_b + " " + a["source"]))
         a["iatse"] = bool(IATSE_RE.search(_b + " " + a["source"]))
         a["guild"] = a["cce"] or a["dgc"] or a["iatse"]
+        refine_category(a)
         items.append(a)
     items.sort(key=lambda i: i["date"], reverse=True)
     if os.environ.get("GITHUB_ACTIONS"):
@@ -575,6 +582,22 @@ TOPICS = [
     ("💼", "Jobs", r"hiring|\bjobs?\b|layoffs?|job cuts|\bcareers?\b"),
 ]
 TOPIC_RES = [(em, lab, re.compile(rx, re.I)) for em, lab, rx in TOPICS]
+
+
+GEARISH = re.compile("|".join(rx for _em, _lab, rx in TOPICS if _lab in ("Camera", "Lens", "Lighting", "Drone", "Mic", "Storage")), re.I)
+EDITISH = re.compile(r"\b(edit\w*|post|workflow|colou?r|grad\w+|premiere|resolve|avid|final cut|vfx|visual effects|media composer)\b", re.I)
+DEAL2 = re.compile(r"black friday|cyber monday|\bsale\b|\bdeals?\b|% off|discount|save up to", re.I)
+
+
+def refine_category(it):
+    """Fix the category a feed gave a story: sales and camera news are gear, AI-only stories are AI, not VFX."""
+    c, t = it.get("category"), it["title"]
+    if c in ("picture", "audio", "vfx") and DEAL2.search(t):
+        it["category"] = "gear"
+    elif c == "picture" and GEARISH.search(t) and not EDITISH.search(t):
+        it["category"] = "gear"
+    elif c == "vfx" and it.get("ai") and not VFX_RE.search(t):
+        it["category"] = "ai"
 
 
 def topic_chips(title, url, skip=()):
