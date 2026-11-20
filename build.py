@@ -433,7 +433,9 @@ def main():
             import graphics
             t = t.replace("</h1>", "</h1><style>" + graphics.CSS + "</style>" + graphics.banner("THE EDITOR IS AN ARTIST", "The Editor shapes the story.") + graphics.craft_cards(), 1)
         if "ppc-foot" not in t:
-            t = t.replace("</body>", FOOT.replace("{{YEAR}}", str(now.year)) + "</body>", 1)
+            _tu = (_cfg.get("tip_url") or "").strip()
+            _tl = (f'<p style="margin:0 0 14px"><b>Support us.</b> Post Production Canada is free and always will be. If it saves you time, you can <a href="{_tu}" target="_blank" rel="noopener">buy us a coffee</a>.</p>' if _tu else "")
+            t = t.replace("</body>", FOOT.replace("{{YEAR}}", str(now.year)).replace("{{TIPLINE}}", _tl) + "</body>", 1)
         if _rel == "index.html":
             t = t.replace('<button class="btn" id="theme"', '<a class="btn" href="fr.html" hreflang="fr" lang="fr" title="Version française">FR</a><button class="btn" id="theme"', 1)
             t = t.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/fr.html"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/"></head>', 1)
@@ -476,6 +478,7 @@ FOOT = ('<div class="ppc-foot" style="border-top:1px solid rgba(128,128,128,.3);
         '<a href="contact.html" style="color:inherit">Contact us</a>.</p>'
         '<p style="margin:0 0 14px"><b>Rights.</b> Headlines and excerpts link to their original publishers, who keep all rights in their own work. '
         'Summaries and original text on this site are ours; please do not republish them without permission.</p>'
+        '{{TIPLINE}}'
         '<p style="margin:0"><b>Please note.</b> Provided for information only, with no guarantee of accuracy or completeness, so check anything important with the source. '
         'We are independent, and not affiliated with or endorsed by any union, guild, association or company mentioned.</p>'
         '</div></div>')
@@ -509,7 +512,7 @@ def cap_editor(t):
 def esc(s): return html.escape(s, quote=True)
 
 CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎶", "Sound & Emotion"),
-        "vfx": ("🟩", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
+        "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Games"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
         "guilds": ("🛡️", "DGC · CCE · IATSE"),
         "vibe": ("🎚️", "Vibe Cutting"),
@@ -586,6 +589,8 @@ TOPIC_RES = [(em, lab, re.compile(rx, re.I)) for em, lab, rx in TOPICS]
 
 GEARISH = re.compile("|".join(rx for _em, _lab, rx in TOPICS if _lab in ("Camera", "Lens", "Lighting", "Drone", "Mic", "Storage")), re.I)
 EDITISH = re.compile(r"\b(edit\w*|post|workflow|colou?r|grad\w+|premiere|resolve|avid|final cut|vfx|visual effects|media composer)\b", re.I)
+VP_RE = re.compile(r"\b(virtual production|unreal|led wall|led volume|real[- ]time|mocap|motion capture|video games?|games?|gaming|game studios?|ubisoft|game engine|metaverse|\bvr\b|\bxr\b)\b", re.I)
+ANIM_RE = re.compile(r"\b(animat\w+|cartoon\w*|anime|stop[- ]motion|pixar|dreamworks|laika|annecy|animation festival|kubo)\b", re.I)
 DEAL2 = re.compile(r"black friday|cyber monday|\bsale\b|\bdeals?\b|% off|discount|save up to", re.I)
 
 
@@ -598,6 +603,11 @@ def refine_category(it):
         it["category"] = "gear"
     elif c == "vfx" and it.get("ai") and not VFX_RE.search(t):
         it["category"] = "ai"
+    if it.get("category") == "vfx":
+        if VP_RE.search(t):
+            it["category"] = "vp"
+        elif ANIM_RE.search(t) or it.get("source") in ("Cartoon Brew", "Animation World Network", "Animation Magazine"):
+            it["category"] = "animation"
 
 
 def topic_chips(title, url, skip=()):
@@ -1035,7 +1045,9 @@ def render(items, sources, now):
         _ext = ' target="_blank" rel="noopener"' if _fbu else ""
         _fb = ('<section class="res"><div class="wrap"><h2>Feedback and tips</h2><p>Spot something missing or wrong? Know a story, a source, or a Canadian editor or director we should feature? '
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
-    return TEMPLATE.replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
+    _tip = (cfg.get("tip_url") or "").strip()
+    _tipbtn = f'<a class="btn" href="{esc(_tip)}" target="_blank" rel="noopener" title="Support Post Production Canada">☕ Buy us a coffee</a>' if _tip else ""
+    return TEMPLATE.replace("{{TIPBTN}}", _tipbtn).replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -1113,7 +1125,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -1193,7 +1205,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}{{MENU}}<a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}{{MENU}}{{TIPBTN}}<a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>

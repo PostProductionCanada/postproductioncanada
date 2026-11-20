@@ -1,5 +1,5 @@
 {
-  "_help": "Fill these in as you set things up. Empty = hidden or off.",
+  "_help": "Fill these in as you set things up. Empty = hidden or off. tip_url: your Buy Me a Coffee (or Ko-fi) page link; leave empty to hide the button.",
   "subscribe_form_action": "",
   "subscribe_embed_html": "",
   "contact_email": "hello@postproductioncanada.ca",
@@ -7,5 +7,6 @@
   "sender_name": "Post Production Canada",
   "mailing_address": "",
   "default_byline": "Post Production Canada",
-  "feedback_form_url": ""
+  "feedback_form_url": "",
+  "tip_url": ""
 }

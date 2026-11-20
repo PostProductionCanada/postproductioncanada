@@ -3,6 +3,7 @@ lines stay in their original language. Draft translation: needs a native French 
 import html, re
 
 EXACT = {
+    "☕ Buy us a coffee": "☕ Offrez-nous un café", "Support us.": "Soutenez-nous.",
     "⚙️ Choose what you see": "⚙️ Choisissez ce que vous voyez", "Tick what you want on this page. We remember your choices on this device.": "Cochez ce que vous voulez voir sur cette page. Nous retenons vos choix sur cet appareil.",
     "☕ Morning Roll": "☕ Rouleau du matin", "📼 Past 10 days of the roll": "📼 Les 10 derniers jours du rouleau", "🕐 Update clock": "🕐 Horloge de mise à jour", "⭐ Our Picks": "⭐ Nos choix",
     "📢 Industry feeds (CMPA, LinkedIn, Avid)": "📢 Fils de l'industrie (CMPA, LinkedIn, Avid)", "📰 All stories, tabs and search": "📰 Tous les articles, onglets et recherche", "📚 Resources and feedback": "📚 Ressources et commentaires",
@@ -31,7 +32,7 @@ EXACT = {
     "TODAY": "AUJOURD'HUI", "NEXT UPDATE IN": "PROCHAINE MISE À JOUR DANS", "LAST UPDATED": "DERNIÈRE MISE À JOUR", "LAST 21 DAYS": "21 DERNIERS JOURS", "● NOW": "● MAINTENANT",
     "COAST TO COAST · ACTION!": "D'UN OCÉAN À L'AUTRE · ACTION !",
     # tabs
-    "📰 All": "📰 Tout", "🎬 Storytelling & Editing": "🎬 Récit et montage", "🟩 VFX & Animation": "🟩 Effets visuels et animation", "🎥 Gear & Software": "🎥 Équipement et logiciels",
+    "📰 All": "📰 Tout", "🎬 Storytelling & Editing": "🎬 Récit et montage", "🟩 VFX & Animation": "🟩 Effets visuels et compositing", "🎥 Gear & Software": "🎥 Équipement et logiciels",
     "💼 Business & Unions": "💼 Affaires et syndicats", "🤖 AI Filmmaking": "🤖 Cinéma et IA", "⚖️ Status of the Artist": "⚖️ Statut de l'artiste",
     "©️ Copyright & Legal": "©️ Droit d'auteur et juridique", "💡 Tips & Tricks": "💡 Trucs et astuces", "📍 All provinces": "📍 Toutes les provinces",
     "⭐ Our Picks": "⭐ Nos choix",
