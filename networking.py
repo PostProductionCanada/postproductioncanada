@@ -28,6 +28,10 @@ FEATURED = {
 
 # (date text, title, where, who, url, note)
 EVENTS = [
+    ("2027, dates not found yet", "Series Mania 2027: Canada and Quebec are the Guests of Honour",
+     "Lille, France", "Series Mania, with Telefilm Canada and SODEC",
+     "https://sodec.gouv.qc.ca/presence-internationale/series-mania/en",
+     "The Directors Guild of Canada announced that Canada and Quebec were selected as the 2027 Guests of Honour, with Telefilm and SODEC representatives in Lille to build partnerships. Applications to join the Series Mania delegation are open; the DGC's email did not give a deadline, so check with the DGC, Telefilm or SODEC. The 2026 festival ran March 20 to 27."),
     ("Nov 20, 2026, 9 a.m. ET (14:00 GMT)", "DaVinci Resolve online seminar: Workflows from Camera to Delivery",
      "Online, free", "Blackmagic Design",
      "https://www.blackmagicdesign.com/event/davinci-resolve-online-seminars",

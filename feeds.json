@@ -254,6 +254,12 @@
       "url": "https://cmpa.ca/feed/",
       "category": "canada",
       "filter": true
+    },
+    {
+      "name": "Deadline",
+      "url": "https://news.google.com/rss/search?q=site%3Adeadline.com+%28Canada+OR+Canadian+OR+Telefilm+OR+CBC+OR+Crave+OR+Ottawa+OR+Toronto+OR+Vancouver+OR+Montreal+OR+Quebec%29+when%3A7d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "canada",
+      "google": true
     }
   ]
 }
