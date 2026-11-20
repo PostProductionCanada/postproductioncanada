@@ -87,7 +87,7 @@ CHAIN = [
 def _row(items):
     out = ""
     for ic, nm, st, u, lb, ca in items:
-        tag = ' <span style="background:#d52b1e;color:#fff;border-radius:999px;font:700 11px/1 sans-serif;padding:3px 8px">🍁 Canadian-made</span>' if ca else ""
+        tag = ' <span style="background:#8a1710;color:#fff;border-radius:999px;font:700 11px/1 sans-serif;padding:3px 8px">🍁 Canadian-made</span>' if ca else ""
         out += ('<article class="box"><h3>' + ic + " " + e(nm) + tag + "</h3><p>" + e(st) + '</p><a href="' + e(u)
                 + '" target="_blank" rel="noopener">' + e(lb) + " →</a></article>")
     return out
