@@ -5,7 +5,7 @@ Every line links to a source. Versions and news were read on AS_OF. Hand-maintai
 Icons are simple emoji, not company logos (logos are trademarks).
 """
 import html
-import topics, provinces
+import topics, provinces, videos
 
 e = html.escape
 AS_OF = "November 19, 2026"
@@ -65,6 +65,8 @@ VFX = [
      "https://www.autodesk.com/products/flame", "Autodesk", True),
     ("🍁", "Autodesk Maya", "The 3D package that grew out of Alias, a Toronto company, and Wavefront.",
      "https://www.autodesk.com/products/maya", "Autodesk", True),
+    ("🎮", "Unreal Engine (Epic Games)", "The game engine used for real-time work and virtual production on LED stages. It is the big name for real-time, not for traditional compositing, where Nuke leads. Version not checked this round.",
+     "https://www.unrealengine.com", "Epic Games", False),
     ("🎬", "Adobe After Effects", "The layer-based compositor that pairs with Premiere.",
      "https://www.adobe.com/products/aftereffects.html", "Adobe", False),
 ]
@@ -124,7 +126,7 @@ def render(leaf, favicon, updated):
             + '<h2 id="now">🎬 Picture editing</h2>' + _row(PICTURE)
             + '<h2>🔊 Sound</h2>' + _row(SOUND)
             + '<h2>✨ Visual effects</h2><p class="note">🍁 marks software with Canadian roots: Discreet Logic (Montréal), eyeon (Toronto), Side Effects (Toronto) and Alias (Toronto).</p>' + _row(VFX)
-            + '<h2>📺 Watch</h2><p class="note">Links open YouTube in a new tab. Nothing loads from YouTube until you click. Know a good video? Send it to hello@postproductioncanada.ca.</p>' + vids
+            + '<h2>📺 Watch</h2><p class="note">Links open YouTube in a new tab. Nothing loads from YouTube until you click. Know a good video? Send it to hello@postproductioncanada.ca.</p>' + vids + videos.shelf()
             + '<h2>🍁 Made in Canada</h2><div class="box"><ul>'
               '<li><b>Discreet Logic, Montréal, 1991.</b> Flame, Inferno and Smoke, later bought by Autodesk.</li>'
               '<li><b>Softimage, Montréal.</b> The 3D company Discreet Logic\'s founder came from.</li>'
