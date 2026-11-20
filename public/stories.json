@@ -7868,27 +7868,6 @@
   "prov": []
  },
  {
-  "title": "The 2026 Boston-Silicon Valley AI Film Festival: 11 Awards and the Convergence of AI & Filmmaking",
-  "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTzRXSjdBXy1IN2ZFQjdKV0lFQTFWT1dXUkZ3ajM1cFJYVjlJVmloSVF3T0w0TkpySWtKcFR0b2s2bS1yd2JDUlctdmRpN05kdEQ5bW10eWZoa2t2U0pQeVJWb2dYSnhQdnZEY21fTlRkZjJPZTY4ZUdISWVZLTZPQVE2eVFhZ1VVTTlrX1VNSWpuLVcwd1ZHaVZudzM2REtHVVQxV2Zwd2ZnZU1FMXZYRVh1ZEw0YUJRRWVaUTlwU1ZDVHFnWlJFam1QUkJwMjFyeUMtNUw3TExMeVdvOG1vZTRPazExOEdZOE5sMw?oc=5",
-  "date": "2026-11-10T11:59:50+00:00",
-  "source": "The Des Moines Register",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": []
- },
- {
   "title": "The economics of AI filmmaking in Nigeria",
   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBZeGpZSmRiSTlqVDZmaGduZHJscEtWZXZkemtSZS1OVWdDSDBSdzNYaHNmR1d5UFY2LWo5R0VUb2JYMWNYSldqZ3R6Y3BxbnF3aDlJX1hnMldGMmd5RzNKWGgwbnIydW9EWFN6QQ?oc=5",
   "date": "2026-11-10T10:58:29+00:00",
@@ -8015,6 +7994,27 @@
   "prov": [
    "ON"
   ]
+ },
+ {
+  "title": "The 2026 Boston-Silicon Valley AI Film Festival: 11 Awards and the Convergence of AI & Filmmaking",
+  "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTzRXSjdBXy1IN2ZFQjdKV0lFQTFWT1dXUkZ3ajM1cFJYVjlJVmloSVF3T0w0TkpySWtKcFR0b2s2bS1yd2JDUlctdmRpN05kdEQ5bW10eWZoa2t2U0pQeVJWb2dYSnhQdnZEY21fTlRkZjJPZTY4ZUdISWVZLTZPQVE2eVFhZ1VVTTlrX1VNSWpuLVcwd1ZHaVZudzM2REtHVVQxV2Zwd2ZnZU1FMXZYRVh1ZEw0YUJRRWVaUTlwU1ZDVHFnWlJFam1QUkJwMjFyeUMtNUw3TExMeVdvOG1vZTRPazExOEdZOE5sMw?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "The Des Moines Register",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "From Pilot to Production: The Intelligence Powering Agentic AI in Capital Markets",

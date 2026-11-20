@@ -155,7 +155,7 @@ def render(leaf, favicon, updated):
                       '<div class="note">' + e(c) + ' · ' + e(d) + '</div></li>' for p, nm, c, d, u in WRAPPED)
     watch = "".join("<li>" + e(x) + "</li>" for x in WATCH)
     css = ("<style>.ev{list-style:none;padding:0;margin:0}.ev li{padding:12px 0;border-bottom:1px solid var(--line)}"
-           ".ev li:last-child{border-bottom:0}.ev b{display:block;font:700 13px ui-monospace,Menlo,monospace;color:var(--red)}"
+           ".ev li:last-child{border-bottom:0}.ev b{display:inline-block;margin-bottom:4px;font:700 13px ui-monospace,Menlo,monospace;color:#fff;background:#0a7cff;border-radius:6px;padding:2px 9px}.fest .note:first-of-type{color:#0a7cff;font-weight:700}@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .fest .note:first-of-type{color:#4da3ff}}:root[data-theme=dark] .fest .note:first-of-type{color:#4da3ff}"
            ".ev a{font-weight:700;text-decoration:none}.ev a:hover{text-decoration:underline}</style>")
     body = (css
             + '<p>Post is a lonely job. This page is a gathering place: screenings, socials, talks, trade shows and open houses where Canada\'s Editors, colourists, sound people, VFX artists and Post Supervisors can meet. '
@@ -164,7 +164,7 @@ def render(leaf, favicon, updated):
               '<p><b>' + e(FEATURED["when"]) + '</b> · ' + e(FEATURED["who"]) + '</p><p>' + e(FEATURED["text"]) + '</p><ul>' + "".join("<li>" + e(x) + "</li>" for x in FEATURED["points"]) + '</ul>'
               '<p><a class="btn" href="' + e(FEATURED["url"]) + '" target="_blank" rel="noopener">Register and see the program →</a></p></div>'
             + '<h2>Coming up</h2><div class="box"><ul class="ev">' + ev + '</ul></div>'
-            + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + '</p><h3>Just wrapped, next dates not posted</h3><div class="box"><ul class="ev">' + wrapped + '</ul></div>'
+            + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev fest">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + '</p><h3>Just wrapped, next dates not posted</h3><div class="box"><ul class="ev fest">' + wrapped + '</ul></div>'
             + '<h2>Regular gatherings</h2>' + rec
             + '<h2>🏠 Open houses and demo nights</h2>'
               '<div class="box"><p>None are listed yet. This is where a post house, a VR or virtual-production company, or a gear maker can show off its space and meet the community.</p>'
