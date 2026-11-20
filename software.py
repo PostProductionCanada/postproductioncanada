@@ -69,6 +69,15 @@ VFX = [
      "https://www.adobe.com/products/aftereffects.html", "Adobe", False),
 ]
 
+# Video shelf: (title as on YouTube, channel, kind, why it is here, url). Link cards only: no embeds, no thumbnails,
+# so a visitor's browser does not contact YouTube until they click. Added from titles and channel names; not every claim in a video is checked.
+VIDEOS = [
+    ("Avid's Ready to Edit helps editors sync media, transcribe and align dialogue, and organize bins", "Avid", "Official",
+     "Ready to Edit is a new Media Composer 2026.8 feature, so this is the maker explaining its own tool.", "https://www.youtube.com/watch?v=fsgiOpNZDEM"),
+    ("DaVinci Resolve Motion Graphics will never be the same...", "MrAlexTech", "Creator's opinion",
+     "Resolve 21 added a large set of motion graphics tools to Fusion. This is one creator's take on them, not an official source.", "https://www.youtube.com/watch?v=Txilg-667Ac"),
+]
+
 HOUSES = [
     ("BC", "Image Engine (founded in Vancouver in 1995, merged with Cinesite in 2015), The Embassy, Zoic Studios, plus Vancouver outposts of Wētā FX, ILM, Framestore, DNEG, Pixomondo, Sony Imageworks, Digital Domain and Scanline VFX (owned by Netflix)."),
     ("QC", "Rodeo FX (Montréal, with a Québec City studio), plus Montréal branches of Framestore, DNEG, MPC, Pixomondo, Sony Imageworks, Digital Domain, Crafty Apes and Scanline VFX."),
@@ -102,6 +111,8 @@ def render(leaf, favicon, updated):
            ".ch b{display:block}</style>")
     hist = "".join('<li><b>' + e(y) + '</b> ' + ic + '<p>' + e(t) + '</p><a href="' + e(u) + '"' + ('' if u.startswith('#') else ' target="_blank" rel="noopener"')
                    + '>' + e(l) + '</a></li>' for y, ic, t, u, l in HISTORY)
+    vids = "".join('<article class="box"><h3>▶ <a href="' + e(u) + '" target="_blank" rel="noopener">' + e(t) + '</a></h3>'
+                   '<p class="note">' + e(ch) + ' · <b>' + e(k) + '</b></p><p>' + e(w) + '</p></article>' for t, ch, k, w, u in VIDEOS)
     houses = "".join('<article class="box"><p>' + provinces.badge(p) + " " + e(t) + "</p></article>" for p, t in HOUSES)
     chain = "".join('<li><span>' + n + '</span><b>' + e(h) + '</b>' + e(t) + '</li>' for n, h, t in CHAIN)
     body = (css
@@ -113,6 +124,7 @@ def render(leaf, favicon, updated):
             + '<h2 id="now">🎬 Picture editing</h2>' + _row(PICTURE)
             + '<h2>🔊 Sound</h2>' + _row(SOUND)
             + '<h2>✨ Visual effects</h2><p class="note">🍁 marks software with Canadian roots: Discreet Logic (Montréal), eyeon (Toronto), Side Effects (Toronto) and Alias (Toronto).</p>' + _row(VFX)
+            + '<h2>📺 Watch</h2><p class="note">Links open YouTube in a new tab. Nothing loads from YouTube until you click. Know a good video? Send it to hello@postproductioncanada.ca.</p>' + vids
             + '<h2>🍁 Made in Canada</h2><div class="box"><ul>'
               '<li><b>Discreet Logic, Montréal, 1991.</b> Flame, Inferno and Smoke, later bought by Autodesk.</li>'
               '<li><b>Softimage, Montréal.</b> The 3D company Discreet Logic\'s founder came from.</li>'
