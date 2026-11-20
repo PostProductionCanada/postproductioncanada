@@ -286,6 +286,8 @@ def main():
             blob = f"{it['title']} {it['excerpt']} {it['source']}"
             if EXCLUDE_RE.search(it["title"]) or it["source"] in SOURCE_EXCLUDE:
                 continue
+            if it["source"].startswith("Yahoo") and not CANADA_RE.search(it["title"] + " " + it["excerpt"]):
+                continue  # Yahoo only when a Canadian or the Canadian industry is involved
             req = it.get("require")
             if req:
                 pats = req if isinstance(req, list) else [req]
@@ -327,7 +329,8 @@ def main():
         if a["url"] in fresh or a["date"] < cutoff or a["date"] > now + timedelta(days=1):
             continue
         key = norm(a["title"])
-        if key in seen or EXCLUDE_RE.search(a["title"]) or a.get("source") in SOURCE_EXCLUDE:
+        if (key in seen or EXCLUDE_RE.search(a["title"]) or a.get("source") in SOURCE_EXCLUDE
+                or (str(a.get("source", "")).startswith("Yahoo") and not CANADA_RE.search(a["title"] + " " + a.get("excerpt", "")))):
             continue
         seen.add(key)
         # archived stories may predate newer tags: fill in defaults and recompute the cheap text tags
