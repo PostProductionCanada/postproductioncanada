@@ -29,7 +29,7 @@ def craft_cards():
         ("✂️", "What stays out", "Some of the biggest decisions are omissions. What an Editor leaves out can hit harder than what is shown."),
     ]
     h = "".join('<div class="craft"><div class="ci">' + a + '</div><h3>' + b + '</h3><p>' + c + '</p></div>' for a, b, c in items)
-    return ('<h2>The Editor is an artist</h2><p class="lede" style="font-size:16px">Editing is not assembly. It is where a film’s story, rhythm and emotion are decided. A long-standing filmmaking adage calls editing the final rewrite.</p>'
+    return ('<h2>The Editor is an Artist</h2><p class="lede" style="font-size:16px">Editing is not assembly. It is where a film’s story, rhythm and emotion are decided. A long-standing filmmaking adage calls editing the final rewrite.</p>'
             '<div class="craftgrid">' + h + '</div><p class="note">Paraphrased from <a href="https://www.lafilm.edu/blog/the-film-students-guide-to-visual-storytelling" target="_blank" rel="noopener">The Film Student’s Guide to Visual Storytelling</a> (L.A. Film School) and <a href="https://www.heidimarshall.com/your-performance-in-the-edit-room" target="_blank" rel="noopener">Your Performance in the Editing Room</a>.</p>')
 
 
