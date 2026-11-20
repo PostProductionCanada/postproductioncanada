@@ -1,0 +1,164 @@
+"""French (Canadian) version of the home page. Translates the site's own wording; story headlines and our hand-written
+lines stay in their original language. Draft translation: needs a native French reviewer."""
+import html, re
+
+EXACT = {
+    "Post Production Canada — the latest news in one place": "Post Production Canada — l'actualité canadienne de la postproduction, au même endroit",
+    # menu
+    "📰 News": "📰 Actualités", "🎬 Post Buzz": "🎬 Post Buzz", "🏆 Awards": "🏆 Prix", "🇨🇦 Canadian Stories": "🇨🇦 Histoires canadiennes", "🎥 Documentary": "🎥 Documentaire",
+    "✂️ Craft": "✂️ Métier", "✂️ Editors": "✂️ Monteurs et monteuses", "📷 Cinematographers": "📷 Direction photo", "🤖 Digital Assistant Editor": "🤖 L'assistant monteur numérique",
+    "📐 Delivery Specs": "📐 Spécifications de livraison", "🎞️ Cut in Canada": "🎞️ Monté au Canada", "🎚️ Vibe Cutting": "🎚️ Vibe Cutting", "💻 Software": "💻 Logiciels",
+    "🎶 Sound & Emotion": "🎶 Son et émotion", "🎼 Composers": "🎼 Compositeurs", "🎸 Music Supervisors": "🎸 Superviseurs musicaux",
+    "🎓 Learn and work": "🎓 Apprendre et travailler", "🎓 Education": "🎓 Formation", "🗺️ Union Map": "🗺️ Carte des syndicats",
+    "⚖️ Status & Tax Credits": "⚖️ Statut de l'artiste et crédits d'impôt", "🤝 Networking": "🤝 Réseautage", "💚 Wellbeing": "💚 Bien-être",
+    "🌍 Sustainability": "🌍 Durabilité", "🌍 Green Post": "🌍 Postproduction verte", "✉️ Contact": "✉️ Contact",
+    # hero
+    "All of Canada's": "Toute l'actualité de la", "POST PRODUCTION": "POSTPRODUCTION", "NEWS": "CANADIENNE", "in one place.": "au même endroit.",
+    "Editing, colour, sound, VFX, animation and the business behind them — gathered from": "Montage, étalonnage, son, effets visuels, animation et l'industrie qui les soutient, rassemblés à partir de",
+    "and updated live every few hours.": "et mis à jour en direct toutes les quelques heures.", "Free, always.": "Gratuit, toujours.",
+    "Original articles and features are coming soon. Stay in the loop:": "Des articles originaux et des reportages s'en viennent. Restez dans la boucle :", "click here →": "cliquez ici →",
+    # roll and clock
+    "Read the full article →": "Lire l'article complet →", "🇨🇦 Key takeaways for Canada": "🇨🇦 L'essentiel pour le Canada",
+    "stories in the last 7 days;": "articles dans les 7 derniers jours;", "have a Canadian angle.": "ont un angle canadien.", "Most-mentioned places:": "Lieux les plus mentionnés :",
+    "Busiest topic:": "Sujet le plus actif :", "Counted from the stories on this page, not opinion. Pick a province or tab below to dig in.": "Calculé à partir des articles de cette page, sans opinion. Choisissez une province ou un onglet ci-dessous pour creuser.",
+    "📼 Past 10 days of the Morning Roll": "📼 Les 10 derniers jours du Rouleau du matin", "Missed a morning? Open a day to see its six reels.": "Un matin manqué? Ouvrez une journée pour voir ses six bobines.",
+    "Days marked here before the roll began saving itself were rebuilt from our story archive, so they may differ slightly from what ran that morning.": "Les journées antérieures à l'enregistrement automatique du rouleau ont été reconstituées à partir de nos archives, et peuvent donc différer légèrement de ce qui a été publié ce matin-là.",
+    "TODAY": "AUJOURD'HUI", "NEXT UPDATE IN": "PROCHAINE MISE À JOUR DANS", "LAST UPDATED": "DERNIÈRE MISE À JOUR", "LAST 21 DAYS": "21 DERNIERS JOURS", "● NOW": "● MAINTENANT",
+    "COAST TO COAST · ACTION!": "D'UN OCÉAN À L'AUTRE · ACTION !",
+    # tabs
+    "📰 All": "📰 Tout", "🎬 Storytelling & Editing": "🎬 Récit et montage", "🟩 VFX & Animation": "🟩 Effets visuels et animation", "🎥 Gear & Software": "🎥 Équipement et logiciels",
+    "💼 Business & Unions": "💼 Affaires et syndicats", "🤖 AI Filmmaking": "🤖 Cinéma et IA", "⚖️ Status of the Artist": "⚖️ Statut de l'artiste",
+    "©️ Copyright & Legal": "©️ Droit d'auteur et juridique", "💡 Tips & Tricks": "💡 Trucs et astuces", "📍 All provinces": "📍 Toutes les provinces",
+    "⭐ Our Picks": "⭐ Nos choix",
+    "📢 Latest from the CMPA": "📢 Dernières nouvelles de la CMPA", "💼 Industry voices on LinkedIn": "💼 Voix de l'industrie sur LinkedIn", "🎛️ Latest from Avid": "🎛️ Dernières nouvelles d'Avid",
+    "Nothing matches that. Try a different filter or search.": "Aucun résultat. Essayez un autre filtre ou une autre recherche.",
+    # resources
+    "Feedback and tips": "Commentaires et suggestions", "Spot something missing or wrong? Know a story, a source, or a Canadian Editor or director we should feature?": "Vous remarquez une omission ou une erreur? Vous connaissez une histoire, une source, ou un monteur ou une réalisatrice du Canada à mettre en vedette?",
+    "Send feedback": "Envoyer un commentaire", "Resources": "Ressources",
+    "— a directory of film and TV productions and companies, including post and VFX houses. Mostly US-focused; contact details are for paying members.": "— un répertoire de productions et d'entreprises de cinéma et de télévision, y compris des maisons de postproduction et d'effets visuels. Surtout centré sur les États-Unis; les coordonnées sont réservées aux membres payants.",
+    "— trade news and features on": "— nouvelles et reportages de l'industrie sur la", "Post-Production": "postproduction", ", VFX, editing, colour and sound. Its stories also appear in the news feed above.": ", les effets visuels, le montage, l'étalonnage et le son. Ses articles figurent aussi dans le fil ci-dessus.",
+    "— the non-profit association for Canadian picture Editors, plus the Vancouver Post Alliance.": "— l'association sans but lucratif des monteurs et monteuses d'image canadiens, ainsi que la Vancouver Post Alliance.",
+    "— film incentives by province and a tracker of productions across Canada.": "— les incitatifs au cinéma par province et un suivi des productions partout au Canada.",
+    "— the annual economic report on Canada's screen industry.": "— le rapport économique annuel sur l'industrie canadienne de l'écran.",
+    "— the awards that honour Editors, sound, VFX and music supervision, with winners and IMDb links.": "— les prix qui honorent le montage, le son, les effets visuels et la supervision musicale, avec les lauréats et des liens IMDb.",
+    "Documentary in Canada": "Le documentaire au Canada", "— a sourced timeline and where to watch.": "— une chronologie sourcée et où regarder.",
+    "— mental health and work-life balance support for screen workers.": "— soutien en santé mentale et en conciliation travail-vie pour les travailleurs de l'écran.",
+    "— sustainability programs and what they mean for post.": "— programmes de durabilité et ce qu'ils signifient pour la postproduction.",
+    "Did you know that was cut in Canada?": "Saviez-vous que c'était monté au Canada?", "— movies and TV whose editing, effects or sound was done in Canada.": "— films et émissions dont le montage, les effets ou le son ont été réalisés au Canada.",
+    "— editing by telling the software what you want, and how AI is wiring into editing software.": "— monter en disant au logiciel ce qu'on veut, et comment l'IA s'intègre aux logiciels de montage.",
+    "Education across Canada": "La formation au Canada", "— colleges, universities and private schools teaching picture editing, sound and post.": "— collèges, universités et écoles privées qui enseignent le montage d'image, le son et la postproduction.",
+    "Canadian Stories": "Histoires canadiennes", "— the Editors and directors from Canada behind screens the world watches.": "— les monteurs, monteuses et réalisateurs du Canada derrière les écrans que le monde regarde.",
+    "Union Map": "Carte des syndicats", "— pick a province to see which unions and guilds cover Editors there.": "— choisissez une province pour voir quels syndicats et guildes représentent les monteurs et monteuses.",
+    "Privacy": "Confidentialité", "— what we collect (almost nothing) and how the newsletter works.": "— ce que nous recueillons (presque rien) et le fonctionnement de l'infolettre.",
+    "Status of the Artist and tax credits": "Statut de l'artiste et crédits d'impôt", "— what the laws mean for Editors, with credits by province.": "— ce que les lois signifient pour les monteurs et monteuses, avec les crédits par province.",
+    "Updated": "Mis à jour",
+    "Want your outlet, guild or studio added, or have a story tip?": "Vous voulez qu'on ajoute votre média, votre guilde ou votre studio, ou vous avez une idée de reportage?",
+    "All rights reserved.": "Tous droits réservés.", "What we are.": "Qui nous sommes.",
+    "A collective for Canada's post-production community. We compile publicly available information: news, resources and reference. We are always adding things, and we want to hear what is missing.": "Un collectif pour la communauté canadienne de la postproduction. Nous compilons de l'information publique : nouvelles, ressources et références. Nous ajoutons sans cesse du contenu et nous voulons savoir ce qui manque.",
+    "Send it to us.": "Envoyez-le-nous.", "Story tips, events, festivals, schools, videos, corrections or removal requests are all welcome.": "Idées de reportages, événements, festivals, écoles, vidéos, corrections ou demandes de retrait : tout est bienvenu.",
+    "Contact us": "Nous joindre", "Rights.": "Droits.",
+    "Headlines and excerpts link to their original publishers, who keep all rights in their own work. Summaries and original text on this site are ours; please do not republish them without permission.": "Les titres et extraits renvoient à leurs éditeurs d'origine, qui conservent tous les droits sur leurs œuvres. Les résumés et textes originaux de ce site sont les nôtres; veuillez ne pas les republier sans permission.",
+    "Please note.": "À noter.",
+    "Provided for information only, with no guarantee of accuracy or completeness, so check anything important with the source. We are independent, and not affiliated with or endorsed by any union, guild, association or company mentioned.": "Fourni à titre informatif seulement, sans garantie d'exactitude ni d'exhaustivité; vérifiez tout élément important auprès de la source. Nous sommes indépendants et n'avons aucun lien avec les syndicats, guildes, associations ou entreprises mentionnés, qui ne nous endossent pas.",
+}
+FRAG = [
+    ("Post Production Canada shows headlines and short excerpts only. Every story links to its original publisher — go read them. Sources:", "Post Production Canada n'affiche que des titres et de courts extraits. Chaque article renvoie à son éditeur d'origine : allez les lire. Sources :"),
+    ("Press releases from the Canadian Media Producers Association. From", "Communiqués de l'Association canadienne des producteurs médiatiques. Source :"),
+    ("Articles from industry voices on LinkedIn. LinkedIn blocks automated readers, so these are added by hand and some show no date. From", "Articles de voix de l'industrie sur LinkedIn. LinkedIn bloque les lecteurs automatisés; ils sont donc ajoutés à la main et certains n'ont pas de date. Source :"),
+    ("Press releases and release notes from Avid, maker of Media Composer and Pro Tools. From", "Communiqués et notes de version d'Avid, fabricant de Media Composer et de Pro Tools. Source :"),
+    (". This list is updated by hand.", ". Cette liste est mise à jour à la main."),
+    ("Your 8 a.m. rundown of the latest.", "Votre survol de 8 h de l'actualité."), ("Read it with your first coffee or tea.", "À lire avec votre premier café ou thé."),
+    ("Preview edition: the first full roll compiles at 8 a.m. Eastern.", "Édition préliminaire : le premier rouleau complet est compilé à 8 h, heure de l'Est."),
+    ("🇨🇦 Canadian angle:", "🇨🇦 Angle canadien :"), ("🌐 Wider industry story", "🌐 Histoire de l'industrie en général"),
+]
+MONTHS = {"Jan": "janv.", "Feb": "févr.", "Mar": "mars", "Apr": "avr.", "May": "mai", "Jun": "juin", "Jul": "juill.", "Aug": "août", "Sep": "sept.", "Oct": "oct.", "Nov": "nov.", "Dec": "déc."}
+DAYS = {"Mon": "LUN", "Tue": "MAR", "Wed": "MER", "Thu": "JEU", "Fri": "VEN", "Sat": "SAM", "Sun": "DIM"}
+DAYS_LONG = {"Monday": "lundi", "Tuesday": "mardi", "Wednesday": "mercredi", "Thursday": "jeudi", "Friday": "vendredi", "Saturday": "samedi", "Sunday": "dimanche"}
+PROV = {"British Columbia": "Colombie-Britannique", "Saskatchewan": "Saskatchewan", "Atlantic Canada": "Canada atlantique", "Territories": "Territoires"}
+ATTR = {
+    "Toggle theme": "Changer de thème", "Morning Roll": "Rouleau du matin", "Past ten days of the Morning Roll": "Les dix derniers jours du Rouleau du matin", "Update clock": "Horloge de mise à jour",
+    "Search stories": "Rechercher des articles", "Filter by province": "Filtrer par province", "Our picks": "Nos choix", "Sections": "Sections",
+    "Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…": "Rechercher des titres — Resolve, Avid, Téléfilm, Vancouver, crédit d'impôt…",
+    "Back to the home page": "Retour à l'accueil", "Back to the home page (the 2 beep)": "Retour à l'accueil",
+}
+
+
+def _dyn(t):
+    m = re.match(r"^MORNING ROLL · (\w{3}) (\w{3}) (\d+)$", t)
+    if m:
+        return f"LE ROULEAU DU MATIN · {DAYS.get(m.group(1), m.group(1))} {m.group(3)} {MONTHS.get(m.group(2), m.group(2)).upper()}"
+    m = re.match(r"^(\w+), (\w{3}) (\d+), (\d{4})$", t)
+    if m and m.group(1) in DAYS_LONG:
+        return f"{DAYS_LONG[m.group(1)]} {m.group(3)} {MONTHS.get(m.group(2), m.group(2))} {m.group(4)}"
+    m = re.match(r"^(\d+) sources$", t)
+    if m:
+        return f"{m.group(1)} sources"
+    m = re.match(r"^\((\d+) stories\)\.$", t)
+    if m:
+        return f"({m.group(1)} articles)."
+    m = re.match(r"^· (\d+) stories from the last three weeks\.$", t)
+    if m:
+        return f"· {m.group(1)} articles des trois dernières semaines."
+    m = re.match(r"^(.+) \((\d+)\)$", t)
+    if m and m.group(1) in PROV:
+        return f"{PROV[m.group(1)]} ({m.group(2)})"
+    m = re.match(r"^REEL (\d+)$", t)
+    if m:
+        return f"BOBINE {m.group(1)}"
+    return None
+
+
+def _text(t, fragments):
+    raw = t
+    s = html.unescape(t.strip())
+    if not s:
+        return raw
+    out = EXACT.get(s) or _dyn(s)
+    if out is None and fragments:
+        out = s
+        for en, fr in FRAG:
+            out = out.replace(en, fr)
+        m = re.search(r"Compiled (\d+):(\d+) (AM|PM) ET\.", out)
+        if m:
+            h = int(m.group(1)) % 12 + (12 if m.group(3) == "PM" else 0)
+            out = out.replace(m.group(0), f"Compilé à {h} h {m.group(2)} (HE).")
+        if out == s:
+            return raw
+    elif out is None:
+        return raw
+    lead = t[: len(t) - len(t.lstrip())]
+    trail = t[len(t.rstrip()):]
+    return lead + html.escape(out, quote=False) + trail
+
+
+def to_french(page):
+    parts = re.split(r"(<[^>]*>)", page)
+    out, mode = [], None
+    skip_re = re.compile(r"<(script|style|title)\b", re.I)
+    for seg in parts:
+        if seg.startswith("<"):
+            low = seg.lower()
+            if skip_re.match(low):
+                mode = "skip"
+            elif re.match(r"</(script|style)\b", low):
+                mode = None
+            elif re.match(r'<article class="(card|pick)\b', low):
+                mode = "card"
+            elif low.startswith("</article") and mode == "card":
+                mode = None
+            def rep(m):
+                k = html.unescape(m.group(2))
+                return m.group(1) + html.escape(ATTR[k], quote=True) + '"' if k in ATTR else m.group(0)
+            seg = re.sub(r'((?:placeholder|aria-label|title)=")([^"]*)"', rep, seg)
+            out.append(seg)
+        elif mode == "skip":
+            out.append(seg)
+        elif mode == "card":
+            out.append(seg)
+        else:
+            out.append(_text(seg, fragments=True))
+    res = "".join(out)
+    res = res.replace("<title>", "<title>", 1)
+    res = re.sub(r"<title>[^<]*</title>", "<title>Post Production Canada — l'actualité canadienne de la postproduction, au même endroit</title>", res, count=1)
+    res = re.sub(r'<html lang="[^"]*"', '<html lang="fr-CA"', res, count=1)
+    return res
