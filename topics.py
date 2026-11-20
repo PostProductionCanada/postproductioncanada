@@ -113,6 +113,6 @@ def green(leaf, fav, updated):
             '<div class="box"><h3>Where post fits</h3><p class="note" style="margin:6px 0 0">Start with the Editors Top Tips on DGC Green. Beyond that, the biggest levers in post are compute and storage: where your cloud or render farm gets its power, how long machines run idle, and how much media you keep and move. Ask your facility for its numbers.</p></div>')
     return _page(leaf, fav, updated, "Green post-production",
                  "What the DGC, provinces and broadcasters are doing about sustainability in Canadian screen production and post.",
-                 "🌱 Green post-production",
+                 "🌍 Green post-production",
                  "What the DGC, the provinces and broadcasters are doing about the footprint of screen work, and what it means for post, from editing rooms to render farms.",
                  body)
