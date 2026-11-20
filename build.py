@@ -621,6 +621,44 @@ def _et(now):
         return now - timedelta(hours=5)
 
 
+HIST_FILE = ROOT / "data" / "roll_history.json"
+
+
+def _pick_roll(items, ref, bounded=False):
+    """The six stories for a roll compiled at `ref` (a UTC datetime). `bounded` ignores stories newer than ref (for rebuilding past days)."""
+    def window(hours):
+        return [i for i in items if i["date"] >= ref - timedelta(hours=hours) and (not bounded or i["date"] <= ref)]
+    pool = window(24)
+    if len(pool) < 5:
+        pool = window(72)
+    pool = [i for i in pool if i["canada"] or "news.google.com" not in i["url"]]
+    pool.sort(key=lambda i: (i["canada"], i["date"]), reverse=True)
+    pick, per = [], {}
+    for i in pool:
+        if per.get(i["source"], 0) >= 2:
+            continue
+        per[i["source"]] = per.get(i["source"], 0) + 1
+        pick.append(i)
+        if len(pick) == 6:
+            break
+    pick.sort(key=lambda i: i["date"], reverse=True)
+    return [{"title": i["title"], "url": i["url"], "source": i["source"], "category": i["category"],
+             "prov": i.get("prov", []), "canada": bool(i["canada"]), "date": i["date"].strftime("%b %-d")} for i in pick]
+
+
+def _load_hist():
+    try:
+        return json.loads(HIST_FILE.read_text())
+    except Exception:
+        return {}
+
+
+def _save_hist(h):
+    HIST_FILE.parent.mkdir(exist_ok=True)
+    keep = sorted(h)[-12:]
+    HIST_FILE.write_text(json.dumps({k: h[k] for k in keep}, indent=1, ensure_ascii=False))
+
+
 def get_roll(items, now):
     """The Morning Roll: compiled once a day, on the first build at or after 8:00 a.m. Eastern, then kept until the next one."""
     et = _et(now)
@@ -633,27 +671,63 @@ def get_roll(items, now):
     due = old is None or (et.hour >= ROLL_HOUR_ET and old.get("date") != today)
     if not due:
         return old
-    pool = [i for i in items if i["date"] >= now - timedelta(hours=24)]
-    if len(pool) < 5:
-        pool = [i for i in items if i["date"] >= now - timedelta(hours=72)]
-    pool = [i for i in pool if i["canada"] or "news.google.com" not in i["url"]]
-    pool.sort(key=lambda i: (i["canada"], i["date"]), reverse=True)
-    pick, per = [], {}
-    for i in pool:
-        if per.get(i["source"], 0) >= 2:
-            continue
-        per[i["source"]] = per.get(i["source"], 0) + 1
-        pick.append(i)
-        if len(pick) == 6:
-            break
-    pick.sort(key=lambda i: i["date"], reverse=True)
     roll = {"date": today, "compiled": ("PREVIEW" if old is None else et.strftime("%-I:%M %p ET")), "day": et.strftime("%a %b %-d").upper(),
-            "items": [{"title": i["title"], "url": i["url"], "source": i["source"], "category": i["category"],
-                       "prov": i.get("prov", []), "canada": bool(i["canada"]), "date": i["date"].strftime("%b %-d")} for i in pick]}
+            "items": _pick_roll(items, now)}
     if os.environ.get("GITHUB_ACTIONS") or os.environ.get("ROLL_SAVE") or old is None:
         ROLL_FILE.parent.mkdir(exist_ok=True)
         ROLL_FILE.write_text(json.dumps(roll, indent=1, ensure_ascii=False))
+        if old and old.get("date") and old["date"] != today:
+            h = _load_hist()
+            h[old["date"]] = {**old, "reconstructed": False}
+            _save_hist(h)
     return roll
+
+
+def roll_history(items, now, today_date):
+    """The last ten days of rolls. Days with no saved roll are rebuilt from the story archive and labelled as such."""
+    from datetime import date as _d
+    et = _et(now)
+    h = _load_hist()
+    changed = False
+    for k in range(1, 11):
+        day = (et - timedelta(days=k)).date()
+        key = day.isoformat()
+        if key == today_date or key in h:
+            continue
+        try:
+            from zoneinfo import ZoneInfo
+            ref = datetime(day.year, day.month, day.day, ROLL_HOUR_ET, 0, tzinfo=ZoneInfo("America/Toronto")).astimezone(timezone.utc)
+        except Exception:
+            ref = datetime(day.year, day.month, day.day, ROLL_HOUR_ET + 5, 0, tzinfo=timezone.utc)
+        pick = _pick_roll(items, ref, bounded=True)
+        if pick:
+            h[key] = {"date": key, "day": day.strftime("%a %b %-d").upper(), "items": pick, "reconstructed": True}
+            changed = True
+    if changed:
+        _save_hist(h)
+    return {k: v for k, v in h.items() if k != today_date and k >= (et - timedelta(days=10)).date().isoformat()}
+
+
+def history_html(items, now, today_date):
+    h = roll_history(items, now, today_date)
+    if not h:
+        return ""
+    days = ""
+    for key in sorted(h, reverse=True):
+        r = h[key]
+        rows = ""
+        for n, s in enumerate(r["items"], 1):
+            wy = WHY.get(s["title"])
+            why = f'<div class="hwhy"><b>Why it matters:</b> {esc(wy[0])}</div>' if wy else ""
+            leaf = "🇨🇦 " if s.get("canada") else ""
+            pins = "".join(f'<span class="rpin">📍 {esc(PROV_LABEL.get(k, k))}</span>' for k in s.get("prov", []))
+            rows += (f'<li><span class="hno">{MINIREEL} REEL {n}</span> {leaf}<a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a> '
+                     f'<span class="hsrc">{esc(s["source"])} · {esc(s["date"])}</span> {pins}{why}</li>')
+        days += f'<details class="hday"><summary>{esc(r["day"])}</summary><ol>{rows}</ol></details>'
+    recon = any(v.get("reconstructed") for v in h.values())
+    note = ('<p class="hnote">Days marked here before the roll began saving itself were rebuilt from our story archive, so they may differ slightly from what ran that morning.</p>' if recon else "")
+    return ('<section class="rollhist" aria-label="Past ten days of the Morning Roll"><div class="wrap"><h2>📼 Past 10 days of the Morning Roll</h2>'
+            '<p class="hnote">Missed a morning? Open a day to see its six reels.</p>' + days + note + '</div></section>')
 
 
 REEL = ('<svg class="reel" viewBox="0 0 100 100" aria-hidden="true"><g class="spin"><circle cx="50" cy="50" r="46" fill="#1b1d22" stroke="#9aa0ab" stroke-width="3"/>'
@@ -748,7 +822,7 @@ def roll_html(items, now):
             f'<div class="rtxt"><div class="rlcd">MORNING ROLL · {esc(r["day"])}</div>'
             f'<div class="rsub">☕ Your 8 a.m. rundown of the latest. {"Preview edition: the first full roll compiles at 8 a.m. Eastern." if r["compiled"] == "PREVIEW" else "Compiled " + esc(r["compiled"]) + "."} Read it with your first coffee or tea.</div></div>'
             + '<div class="coffee" aria-hidden="true">☕</div></div><div class="strip" id="strip">' + frames + '</div>'
-            + _takeaways(items, now) + '</div></section>')
+            + _takeaways(items, now) + '</div></section>' + history_html(items, now, r["date"]))
 
 def render(items, sources, now):
     picks = load_picks(now)
@@ -895,7 +969,7 @@ main{padding:20px 0 40px}
 .pick{background:var(--panel);border:1px solid var(--line);border-left:4px solid #e0a100;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
 .pick.body{border-left-color:var(--red)}
 .pick h3{margin:0;font-size:18px;line-height:1.3}.pick h3 a{text-decoration:none}.pick h3 a:hover{text-decoration:underline}
-.why{margin:0;font-size:14px;color:var(--mute)}.why b{color:var(--ink)}
+.why{margin:0;font-size:14px;color:#4a3a00;background:#fff4cc;border-left:4px solid #e0a100;border-radius:4px;padding:8px 10px;line-height:1.45}.why b{color:#8a5d00}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .why{color:#fff1c2;background:#33290a;border-left-color:#ffcc33}:root:not([data-theme="light"]) .why b{color:#ffcc33}}:root[data-theme="dark"] .why{color:#fff1c2;background:#33290a;border-left-color:#ffcc33}:root[data-theme="dark"] .why b{color:#ffcc33}
 @media (max-width:640px){.top{flex-wrap:wrap;gap:10px}.brand{white-space:nowrap;font-size:18px}.tools{width:100%;flex-wrap:wrap}.btn{white-space:nowrap}}
 .res{border-top:1px solid var(--line);padding:26px 0 6px}.res h2{margin:0 0 8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}.res ul{margin:0;padding-left:18px;max-width:60em}.res li{margin:6px 0;font-size:14.5px}.res a{color:var(--red)}
 .nb{white-space:nowrap}
@@ -915,7 +989,7 @@ main{padding:20px 0 40px}
 .rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
 .takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
 .fgist{color:#fff1c2;font-size:14px;line-height:1.45;background:#33290a;border-left:4px solid #ffcc33;border-radius:4px;padding:8px 10px}.fgist b{color:#ffcc33}.fgist a{color:#ffd980;text-decoration:underline}.mreel{vertical-align:-4px;margin-right:4px}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
-.fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
+.rollhist{background:#14161a;color:#eceae4;padding:6px 0 22px}.rollhist h2{margin:14px 0 6px;font-size:18px}.hnote{color:#8f96a3;font-size:12.5px;margin:4px 0 10px}.hday{background:#1e2127;border:1px solid #30343c;border-radius:8px;margin:6px 0;padding:8px 14px}.hday summary{cursor:pointer;font:700 13px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.12em}.hday ol{margin:10px 0 4px;padding-left:0;list-style:none}.hday li{padding:7px 0;border-top:1px solid #30343c;font-size:14px;line-height:1.4}.hday li a{color:#fff;font-weight:600}.hno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.12em;margin-right:6px}.hsrc{color:#8f96a3;font-size:12px}.hwhy{background:#33290a;border-left:4px solid #ffcc33;border-radius:4px;padding:6px 10px;margin-top:6px;color:#fff1c2;font-size:13.5px}.hwhy b{color:#ffcc33}.fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none}.coffee{font-size:48px;line-height:1;width:64px;text-align:center;flex:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
