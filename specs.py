@@ -30,10 +30,11 @@ SPECS = [
 
 # Apple ProRes target data rates, Mb/s at 1920x1080, 29.97 fps (Apple ProRes white paper / support page)
 PRORES = [
+    ("XDCAM HD422 (50 Mbps) ⭐", "CBC's preferred delivery format and Bell Media's broadcast-ready format (MXF)", 50),
     ("ProRes 422 Proxy", "Offline editing at full resolution", 45),
     ("ProRes 422 LT", "Smaller files for editing and some delivery", 102),
     ("ProRes 422", "Everyday editing and finishing", 147),
-    ("ProRes 422 HQ", "High-quality 4:2:2 finishing, mastering and some broadcast delivery", 220),
+    ("ProRes 422 HQ ⭐", "High-quality 4:2:2 finishing and mastering; Bell Media's first choice for HD and UHD delivery", 220),
     ("ProRes 4444", "4:4:4 sources, graphics and alpha channels, nearly lossless", 330),
     ("ProRes 4444 XQ", "The highest-quality 4:4:4 for demanding colour and VFX work", 500),
 ]
@@ -44,6 +45,16 @@ DNXHR = [
     ("DNxHR HQ", "High quality, standard broadcast uses", 83.26),
     ("DNxHR HQX", "High quality extended, for high-end broadcast production and delivery", 83.26),
     ("DNxHR 444", "4:4:4 and RGB, for VFX work and cinema delivery", 166.61),
+]
+
+NORMAL = [
+    ("CBC/Radio-Canada (v5.1, 2016)", "MXF, XDCAM HD422 50 Mbps (preferred)", "Accepts 29.97i, plus 23.976p, 25i, 25p and 29.97p; the frame rate must stay constant", "Timecode continuous; drop frame for 29.97"),
+    ("Bell Media (revision November 2025)", "HD: MOV or MXF; ProRes HQ or better, then DNxHD 175x, then XDCAM 50. UHD SDR: ProRes HQ or better, or DNxHR HQ or better. The broadcast-ready profile accepts only XDCAM HD 50 Mbps MXF.", "1920x1080 (23.976p preferred, 29.97i second) or 3840x2160 (23.976p); BT.709. UHD HDR (BT.2020) needs prior approval", "Timecode starts at 00:00:00:00"),
+]
+AUDIO = [
+    ("CBC/Radio-Canada (v5.1, 2016)", "PCM, 24-bit, 48 kHz", "-24 LKFS +/- 2 LU, integrated and dialogue", "-2 dBTP maximum", "2 tracks (stereo) up to 6 (5.1), plus described video. CBC layout: 8 channels (L, R, C, LFE, Ls, Rs, DV-L, DV-R)"),
+    ("Bell Media (revision November 2025)", "48 kHz, 24-bit", "-24 LKFS +/- 2 LU (ITU-R BS.1770-4)", "-2 dBFS maximum", "Surround and stereo track layouts are specified in its document"),
+    ("Netflix (sound mix specs v1.5)", "48 kHz, 24-bit, discrete LPCM .wav or .bwav; no lossy audio", "-27 LKFS +/- 2 LU, dialogue-gated (ITU-R BS.1770-1)", "-2 dB true peak maximum", "5.1 or 2.0 near-field mixes, with stems that add up to the mix"),
 ]
 DRIVES = [1, 2, 4, 8, 16]  # terabytes, decimal
 
@@ -71,10 +82,13 @@ def render(leaf, favicon, updated):
     st_uhd = _table(head, [[n] + [(lambda v: f"{v:.1f} h" if v < 10 else f"{v:.0f} h")(d * 1000 / (_gbph(m) * 4)) for d in DRIVES] for n, use, m in PRORES])
     body = (css + '<p>' + e(INTRO) + '</p><p class="note">Facts read on ' + e(AS_OF) + '. Delivery specs change, so always confirm with the buyer.</p>'
             '<h2>Where the delivery specs live</h2>' + cards
+            + '<h2>What is normal in Canadian delivery</h2><p>Read straight from the buyers\' own documents. The common thread: a broadcast-quality 4:2:2 file, ProRes HQ or XDCAM HD at 50 Mbps, at 1080, in the frame rate the show was shot.</p>' + _table(["Buyer", "File and codec", "Picture", "Timecode"], NORMAL)
+            + '<h2>🔊 Audio specs</h2><p>The same pattern for sound: 48 kHz and 24-bit everywhere, a peak limit of -2, and a loudness target that differs by buyer. Canadian broadcasters ask for -24 LKFS; Netflix measures dialogue only and asks for -27. Mixing to the wrong one is the classic delivery rejection.</p>' + _table(["Buyer", "Sample rate and bit depth", "Loudness", "Peak", "Tracks"], AUDIO)
+            + '<p class="note">LKFS is the loudness unit; LU is the tolerance around the target. Check the spec for how each buyer measures it. These tables come from the documents linked above, as read on ' + e(AS_OF) + '. A newer version may exist, so ask your buyer.</p>'
             + '<h2>🎞️ Codec chart</h2><p>A codec is how the picture is squeezed into a file. These are the two main editing and finishing families. '
               'Higher data rate means bigger files and more headroom for grading and VFX.</p>'
-              '<h3>Apple ProRes, at 1920 x 1080 and 29.97 fps</h3>' + hd +
-              '<p class="note">Data rates are Apple\'s target rates from its ProRes documentation. "Per hour" is our arithmetic from that rate (Mbps x 3,600 seconds, divided by 8, in decimal gigabytes). Real files vary a little, and UHD files are much bigger: UHD has four times the pixels of 1080p.</p>'
+              '<h3>XDCAM and Apple ProRes, at 1920 x 1080 and 29.97 fps (⭐ = named in the delivery specs we read)</h3>' + hd +
+              '<p class="note">Data rates are Apple\'s target rates from its ProRes documentation, and the 50 Mbps for XDCAM HD422 comes from CBC\'s spec. "Per hour" is our arithmetic from that rate (Mbps x 3,600 seconds, divided by 8, in decimal gigabytes). Real files vary a little, and UHD files are much bigger: UHD has four times the pixels of 1080p.</p>'
               '<h3>Avid DNxHR, at UHD 3840 x 2160 and 23.976 fps</h3>' + uhd +
               '<p class="note">From Avid\'s DNxHR bandwidth table, which lists the rates in megabytes per second (MiB/s); we converted to Mbps and per-hour gigabytes. DNxHR also comes in HD, 2K and 4K sizes. Look up the exact one in Avid\'s table.</p>'
             + '<h2>💾 How much footage does a drive hold?</h2><p>Hours of one camera angle, edited straight from the drive, by codec. Decimal terabytes, as drive makers count them, so a real drive formats a little smaller. Audio, extra camera angles and a second backup copy all need more room.</p>'
@@ -84,5 +98,5 @@ def render(leaf, favicon, updated):
               '<h2>What is not here yet</h2><p>Delivery codecs such as H.264 and H.265, and camera RAW formats, vary too much by camera and settings for a single chart, and we have not found sources we trust for them yet. '
               'Tell us which you want next, and send any delivery spec you would like listed, at <a href="mailto:hello@postproductioncanada.ca?subject=Specs">hello@postproductioncanada.ca</a>.</p>')
     return topics._page(leaf, favicon, updated, "Delivery Specs and Tech",
-                        "Where Canadian and streamer delivery specs live, plus a codec chart and a storage chart for post.",
-                        "📐 Delivery Specs and Tech", "The files, the rates, and how much drive you need.", body)
+                        "What is normal in Canadian delivery, video and audio, plus a codec chart and a storage chart for post.",
+                        "📐 Delivery Specs and Tech", "What buyers actually ask for, the loudness targets, and how much drive you need.", body)
