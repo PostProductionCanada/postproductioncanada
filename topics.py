@@ -107,8 +107,40 @@ def wellbeing(leaf, fav, updated):
                  body, "This is information, not medical advice.")
 
 
+FILM_HISTORY = [
+    ("Film versus digital, by the numbers", "UCLA Institute of the Environment and Sustainability, 2021 (a student practicum report for HBO)",
+     "The study compared an hour of unedited footage. It found that 35mm film needs about 180 times more energy and 224 times more water than digital capture on SD cards, "
+     "and produces 3.4 times more CO2 equivalent and 1.5 times more hazardous waste: 561 kg of CO2e for film against 165 kg for digital. "
+     "It is a student report, and we have not checked how it counts the energy of storing and rendering digital files, so read it as one estimate.",
+     "https://www.ioes.ucla.edu/wp-content/uploads/2024/07/UCLA-IoES-Practicum-HBO-Film-vs-Digital-Final-Report-2021.pdf"),
+    ("What came out of the lab", "Ohio State University Environmental Health and Safety",
+     "Film processing waste can contain silver, which the US Environmental Protection Agency treats as a toxic heavy metal. The university's fact sheet gives silver concentrations from 5 to 12,000 mg/L depending on the stage, "
+     "says spent solutions and rinse waters can count as hazardous waste, and says films and negatives themselves may need to be managed as hazardous waste. Silver recovery units are one way to treat it.",
+     "https://ehs.osu.edu/kb/film-processing-and-silver-waste-generation"),
+    ("Less film, less silver in the sewers", "PetaPixel, 2023 (about still photography, not cinema)",
+     "A photography article reports that in 2006 Swedish authorities found silver pollution in Stockholm's sewers had halved over five years, which they attributed to the decline of film photography and the rise of digital. "
+     "It is a still-photography example, but it shows the direction of travel.",
+     "https://petapixel.com/2023/02/06/plastic-waste-and-toxic-chemicals-is-film-photography-bad-for-the-planet/"),
+    ("Kodak film sales fall 96 percent", "NPR, August 8, 2014",
+     "NPR reported that Kodak's motion-picture film sales had dropped 96 percent over the previous decade, at the moment Hollywood studios agreed to keep buying a set amount of film so Kodak would keep making it. "
+     "Most productions had already moved to digital.",
+     "https://www.npr.org/transcripts/338918039"),
+    ("Canada's film labs close", "Playback, around 2014 (the article is undated online)",
+     "When Deluxe closed its west-end Toronto lab, it left a lab business it had been in locally since the 1960s: \"The economics and the demand no longer made sense,\" said Deluxe Toronto's Dan McLellan. "
+     "Technicolor and Deluxe had both shut their Canadian labs, leaving Vision Globale in Montréal. The article says widespread digital projection is what ultimately hurt film shooting. "
+     "Digital jobs grew: Deluxe Toronto had a data input and output department of six staff and 15 people encoding content for platforms. A Technicolor Canada executive said the importance of skilled colourists had not changed.",
+     "https://playbackonline.ca/?p=93963"),
+]
+
+
+def _plain_cards(items):
+    return "".join(f'<article class="box"><h3><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a></h3><div class="when">{e(o)}</div><p>{e(x)}</p></article>' for t, o, x, u in items)
+
+
 def green(leaf, fav, updated):
     body = ('<h2>What Canada is doing</h2>' + _cards(GREEN) +
+            '<h2>🎞️ From film to digital: what changed</h2><p>Post used to run on chemistry. Here is what the sources say about the footprint of film, and what happened when it went away. '
+            'This covers film itself. Digital has its own footprint in storage, rendering and streaming, and that is the next chapter we plan to research.</p>' + _plain_cards(FILM_HISTORY) +
             '<div class="box"><h3>Honest scorecard</h3><p style="margin:6px 0 0">Five provinces have their own green-production programs and the DGC runs one of the most detailed guild hubs, but the UK\'s albert calculator is still the benchmark that Canadian programs build on. Canada has real momentum here. Calling it the world leader would be an overstatement, and the one gap everyone admits is data on post-production and cloud rendering.</p></div>'
             '<div class="box"><h3>Where post fits</h3><p class="note" style="margin:6px 0 0">Start with the Editors Top Tips on DGC Green. Beyond that, the biggest levers in post are compute and storage: where your cloud or render farm gets its power, how long machines run idle, and how much media you keep and move. Ask your facility for its numbers.</p></div>')
     return _page(leaf, fav, updated, "Green post-production",

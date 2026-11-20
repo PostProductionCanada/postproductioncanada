@@ -252,6 +252,7 @@ def main():
             it["vibe"] = bool(VIBE_RE.search(blob2) and VIBE_CTX.search(blob2))
             it["cce"] = bool(CCE_RE.search(blob2 + " " + it["source"] + " " + it["url"]))
             it["legal"] = bool(LEGAL_RE.search(blob2))
+            it["tips"] = it["category"] in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(it["title"])) and not NOT_TIPS.search(it["title"])
             it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
             it["prov"] = [k for k, r in PROV_RE.items() if r.search(blob2)]
             if it["category"] in ("picture", "gear", "vfx"):
@@ -273,6 +274,7 @@ def main():
         a["ai"] = bool(AI_CS.search(_b) or AI_CI.search(_b))
         a["vibe"] = bool(VIBE_RE.search(_b) and VIBE_CTX.search(_b))
         a["legal"] = bool(LEGAL_RE.search(_b))
+        a["tips"] = a.get("category") in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(a["title"])) and not NOT_TIPS.search(a["title"])
         a["cce"] = bool(CCE_RE.search(_b + " " + a["source"] + " " + a.get("url", "")))
         items.append(a)
     items.sort(key=lambda i: i["date"], reverse=True)
@@ -420,7 +422,12 @@ CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Ed
         "cce": ("✂️", "CCE"),
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
-        "legal": ("©️", "Copyright & Legal")}
+        "legal": ("©️", "Copyright & Legal"),
+        "tips": ("💡", "Tips & Tricks")}
+NOT_TIPS = re.compile(r"instagram|tiktok|campaign|fake website|black friday|\bcast(ing)? |rob a bank", re.I)
+TIPS_RE = re.compile(r"(\bhow[- ]to\b|\bhow (to|i|we|they|it was|this was|that was|was)\b[^.]{0,60}\b(made|done|cut|edited|built|created|achieved|shot|mixed|graded|composited)\b|"
+                     r"tutorials?|\btips?\b|tricks?\b|step[- ]by[- ]step|walk-?through|masterclass|breakdowns?|behind the (scenes|cut)|art of the cut|"
+                     r"(editing|colou?r|grading|post|audio|sound|vfx|finishing) workflows?|techniques?|explained|a guide to|beginner'?s guide|cheat ?sheet|shortcuts?|best practices|under the hood)", re.I)
 LEGAL_RE = re.compile(r"(copyright\w*|intellectual property|infring\w+|lawsuits?|\bsued?\b|\bsues\b|litigation|piracy|pirated|"
                       r"trade-?marks?|likeness|right of publicity|moral rights|fair dealing|neighbouring rights|\bSOCAN\b|\bCMRRA\b|re:sound|"
                       r"\bsync(hronization)? licen[cs]\w+|music licen[cs]\w+|licen[cs]ing (deal|agreement|rights)|training data|"
@@ -468,6 +475,7 @@ def card(i):
     cats.append(i["category"])
     if i["status"]: cats.append("status")
     if i.get("legal"): cats.append("legal")
+    if i.get("tips"): cats.append("tips")
     if i["ai"]: cats.append("ai")
     if i["cce"]: cats.append("cce")
     if i["vibe"]: cats.append("vibe")
@@ -487,6 +495,8 @@ def card(i):
         chip += '<span class="chip c-status">⚖️ Status</span>'
     if i.get("legal"):
         chip += '<span class="chip c-legal">©️ Legal</span>'
+    if i.get("tips"):
+        chip += '<span class="chip c-tips">💡 Tips</span>'
     for k in i["prov"]:
         chip += f'<span class="chip c-prov">📍 {k}</span>'
     ex = f'<p class="ex">{esc(i["excerpt"])}</p>' if i["excerpt"] else ""
@@ -708,7 +718,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "cce" and i["cce"]) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "cce" and i["cce"]) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
@@ -837,7 +847,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
