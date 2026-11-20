@@ -730,7 +730,7 @@ def _body_card(src, r):
             '<h3><a href="' + esc(r["url"]) + '" target="_blank" rel="noopener">' + esc(r["title"]) + "</a></h3>" + note + "</article>")
 
 
-def bodies_html(now):
+def bodies_html(now, items=None):
     try:
         raw = json.loads((ROOT / "curated.json").read_text()).get("bodies", [])
     except Exception:
@@ -746,8 +746,21 @@ def bodies_html(now):
         if not rows:
             continue
         cards = "".join(_body_card(src, r) for r in rows)
-        out.append(f'<section class="picks" aria-label="{esc(head)}"><h2>{head}</h2><div class="pgrid">{cards}</div>'
-                   f'<p class="note" style="margin-top:8px">{esc(blurb)} From <a href="{esc(url)}" target="_blank" rel="noopener">{esc(dom)}</a>. This list is updated by hand.</p></section>')
+        out.append(f'<section class="picks fold" aria-label="{esc(head)}"><details class="bfold"><summary><h2>{head} <span class="ct">({len(rows)})</span></h2></summary><div class="pgrid">{cards}</div>'
+                   f'<p class="note" style="margin-top:8px">{esc(blurb)} From <a href="{esc(url)}" target="_blank" rel="noopener">{esc(dom)}</a>. This list is updated by hand.</p></details></section>')
+    # guild news that comes in through the feeds: DGC, CCE, IATSE
+    gi = [i for i in (items or []) if i.get("guild") and now - i["date"] <= timedelta(days=30)]
+    gi.sort(key=lambda i: i["date"], reverse=True)
+    gi = gi[:8]
+    if gi:
+        def _tag(i):
+            t = [n for k, n in (("dgc", "DGC"), ("cce", "CCE"), ("iatse", "IATSE")) if i.get(k)]
+            return " · ".join(t)
+        cards = "".join('<article class="pick body"><div class="meta"><span class="src">' + esc(_tag(i)) + '</span><span class="dot">·</span>' + esc(i["source"])
+                        + '<span class="dot">·</span><time datetime="' + i["date"].isoformat() + '">' + str(i["date"].date()) + '</time></div>'
+                        '<h3><a href="' + esc(i["url"]) + '" target="_blank" rel="noopener">' + esc(i["title"]) + '</a></h3></article>' for i in gi)
+        out.append(f'<section class="picks fold" aria-label="DGC, CCE and IATSE"><details class="bfold"><summary><h2>\U0001F6E1\uFE0F Latest from the DGC, CCE and IATSE <span class="ct">({len(gi)})</span></h2></summary><div class="pgrid">{cards}</div>'
+                   f'<p class="note" style="margin-top:8px">Stories from the last 30 days that mention the Directors Guild of Canada, Canadian Cinema Editors or IATSE. Added automatically as they come in; see the DGC · CCE · IATSE tab for more.</p></details></section>')
     return "\n".join(out)
 
 
@@ -1071,7 +1084,7 @@ def render(items, sources, now):
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
     _tip = (cfg.get("tip_url") or "").strip()
     _tipbtn = f'<a class="btn" href="{esc(_tip)}" target="_blank" rel="noopener" title="Support Post Production Canada">☕ Buy us a coffee</a>' if _tip else ""
-    return TEMPLATE.replace("{{TIPBTN}}", _tipbtn).replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{TIPBTN}}", _tipbtn).replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", bodies_html(now, items)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -1155,6 +1168,7 @@ main{padding:20px 0 40px}
 .chips{flex-wrap:wrap}
 .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.heroart{width:100%;height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 @media (max-width:760px){.herogrid{grid-template-columns:1fr}.heroart{max-width:380px}}
+.picks.fold{margin-bottom:12px}.bfold>summary{cursor:pointer;list-style:none}.bfold>summary::-webkit-details-marker{display:none}.bfold>summary h2{display:inline-block;margin:0 0 6px}.bfold>summary::after{content:"Show \25BE";font-size:12px;color:var(--mute);margin-left:8px}.bfold[open]>summary::after{content:"Hide \25B4"}.bfold .ct{font-weight:400;opacity:.7}.bfold[open]>summary h2{margin-bottom:10px}
 .picks{margin-bottom:26px}.picks h2{margin:0 0 10px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
 .pick{background:var(--panel);border:1px solid var(--line);border-left:4px solid #e0a100;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
