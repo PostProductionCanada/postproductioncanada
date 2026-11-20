@@ -602,15 +602,35 @@ def _takeaways(items, now):
             '</ul><p>Counted from the stories on this page, not opinion. Pick a province or tab below to dig in.</p></div>')
 
 
+ROLL_PHRASES = ["COLD OPEN", "ROLLING", "CLOSE-UP", "PLOT TWIST", "WIDE SHOT", "THAT'S A WRAP"]
+
+
 def roll_html(items, now):
     r = get_roll(items, now)
     frames = ""
+    byurl = {it["url"]: it for it in items}
     for n, s in enumerate(r["items"], 1):
         em = CATS.get(s["category"], ("🎬", ""))[0]
         leaf = "🍁 " if (s["canada"] and s["category"] != "canada") else ""
-        pins = "".join(f'<span class="rpin">📍 {esc(k)}</span>' for k in s["prov"])
-        frames += (f'<article class="frame"><div class="fno">SC.{n:02d}</div><div class="fmeta">{em} {leaf}{pins}</div>'
+        pins = "".join(f'<span class="rpin">📍 {esc(PROV_LABEL.get(k, k))}</span>' for k in s["prov"])
+        ex = (s.get("excerpt") or (byurl.get(s["url"]) or {}).get("excerpt") or "").strip()
+        ex = re.sub(r"This content is restricted to subscribers\.?", "", ex, flags=re.I)
+        ex = re.split(r"\s+The post\s", ex)[0].split("appeared first on")[0].strip()
+        if len(ex) < 40:
+            ex = ""
+        if len(ex) > 170:
+            ex = ex[:170].rsplit(" ", 1)[0].rstrip(",;:.") + "…"
+        gist = f'<div class="fgist"><b>The gist:</b> {esc(ex)}</div>' if ex else ""
+        if s["prov"]:
+            ang = "🍁 Canadian angle: " + ", ".join(PROV_LABEL.get(k, k) for k in s["prov"])
+        elif s["canada"]:
+            ang = "🍁 Canadian angle: a Canadian story"
+        else:
+            ang = "🌐 Wider industry story"
+        phrase = ROLL_PHRASES[(n - 1) % len(ROLL_PHRASES)]
+        frames += (f'<article class="frame"><div class="fno">SC.{n:02d} · {phrase}</div><div class="fmeta">{em} {leaf}{pins}</div>'
                    f'<a class="ftitle" href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a>'
+                   f'{gist}<div class="fang">{ang}</div>'
                    f'<div class="fsrc">{esc(s["source"])} · {esc(s["date"])}</div>'
                    f'<a class="fmore" href="{esc(s["url"])}" target="_blank" rel="noopener">Read the full article →</a></article>')
     if not frames:
@@ -779,13 +799,13 @@ main{padding:20px 0 40px}
 .rtxt{flex:1;min-width:0;text-align:center}
 .rlcd{display:inline-block;background:#0b0d0a;color:#ffb000;font:700 clamp(15px,3.2vw,24px)/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;padding:8px 14px;border-radius:6px;border:2px solid #3a3d44;text-shadow:0 0 8px rgba(255,176,0,.55)}
 .rsub{color:#aab0bb;font-size:13.5px;margin-top:8px}
-.strip{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px 10px;background:#0b0c0e;border-radius:6px}
+.strip{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:28px 12px;background:#0b0c0e;border-radius:6px}@media (max-width:760px){.strip{grid-template-columns:repeat(2,1fr)}}@media (max-width:520px){.strip{grid-template-columns:1fr}}
 .strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,#f6f4ef 0 12px,transparent 12px 26px);opacity:.85}
 .strip::before{top:6px}.strip::after{bottom:6px}
-.frame{flex:none;width:100%;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.frame{min-width:0;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
 .takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
-.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
+.fgist{color:#c9ced8;font-size:14px;line-height:1.45}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none}.coffee{font-size:48px;line-height:1;width:64px;text-align:center;flex:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
