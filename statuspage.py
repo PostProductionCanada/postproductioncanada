@@ -55,16 +55,16 @@ CREDITS = [
      [("Ontario Creates", LINKS["on"]), fic("ontario")], ""),
     ("Québec", "Film and Television Production Tax Credit and Production Services Tax Credit "
                        "(reported at 25% of spend, plus 16% on computer-aided effects and animation, per filmincanada.com).",
-     [("SODEC", LINKS["qc"]), fic("quebec")], "Domestic credit rates not confirmed in my research. Check the program."),
+     [("SODEC", LINKS["qc"]), fic("quebec")], "Domestic credit rates not confirmed in our research. Check the program."),
     ("New Brunswick", "Production Incentive: CMPA lists service productions at 25% of all spend or 40% of labour, "
                       "and New Brunswick companies at 30% of all spend or 40% of labour.",
      [("CMPA overview", CMPA_HUB)], "filmincanada.com (2026) lists no service incentive for New Brunswick. The sources conflict, so confirm directly."),
     ("Nova Scotia", "Film and Television Production Incentive Fund, reported at about 25–26% of eligible spend.",
      [fic("nova-scotia"), ("CMPA overview", CMPA_HUB)], "An incentive fund, not a tax credit."),
     ("Newfoundland & Labrador", "Film and Video Tax Credit.", [("CMPA overview", CMPA_HUB)],
-     "Rate not confirmed in my research."),
+     "Rate not confirmed in our research."),
     ("Prince Edward Island", "Film and television incentive via the PEI Film & Television Office.",
-     [("CMPA overview", CMPA_HUB)], "Details not confirmed in my research."),
+     [("CMPA overview", CMPA_HUB)], "Details not confirmed in our research."),
     ("Yukon", "Yukon Location Incentive Program: travel rebate, Yukon spend rebate and a training component.",
      [("CMPA overview", CMPA_HUB)], ""),
     ("Nunavut", "Labour rebate of 17% or 27% of eligible costs, plus bonuses.", [("CMPA overview", CMPA_HUB)],
@@ -210,7 +210,7 @@ VFX_ROWS = [
     ("Québec", "On top of the Production Services Tax Credit (25% of qualified spend), an extra 16% on qualified labour for computer-aided special effects and animation, including chroma-key shooting. The domestic credit has a smaller bonus, reported at 10% with a cap.",
      [("Overview (Entertainment Partners)", "https://www.ep.com/blog/vfx-post-production-tax-incentives-guide"),
       ("Animation and effects credits (Time Consulting)", "https://timeconsulting.ca/animation-special-effects-tax-credits")]),
-    ("Other provinces", "I found no VFX-specific credit in Alberta, Saskatchewan, Manitoba, the Atlantic provinces or the territories. Their general credits may still cover post spend, so check each program.",
+    ("Other provinces", "We found no VFX-specific credit in Alberta, Saskatchewan, Manitoba, the Atlantic provinces or the territories. Their general credits may still cover post spend, so check each program.",
      [("CMPA overview", CMPA_HUB)]),
 ]
 
@@ -320,8 +320,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <li><b>Everywhere else,</b> an editor's pay and conditions come from union agreements and individual contracts, not from a status law.</li>
 <li><b>Federally,</b> the act could matter for a self-employed editor working for a broadcaster, but only if the editor's sector is certified.</li>
 </ul></div>
-<div class="box warn"><h3>What I could not confirm</h3>
-<p>I could not confirm that picture editors are named in Québec's law or covered by a federal certification. Before you rely on any of this, check with AQTIS (Québec), your union local, or the Canada Industrial Relations Board's certification register. I'm also not certain of the details of every provincial act.</p></div>
+<div class="box warn"><h3>What we could not confirm</h3>
+<p>We could not confirm that picture editors are named in Québec's law or covered by a federal certification. Before you rely on any of this, check with AQTIS (Québec), your union local, or the Canada Industrial Relations Board's certification register. I'm also not certain of the details of every provincial act.</p></div>
 
 <h2>Production tax credits, federal and by province</h2>
 <p>These credits go to production companies, not to individual editors. They matter because they decide where work lands, and some target post directly: BC's DAVE credit covers post-production and VFX labour, and Saskatchewan adds a bonus for post done in-province.</p>
@@ -330,7 +330,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <tbody>
 {{CREDITS}}
 </tbody></table></div>
-<p class="note" style="margin-top:10px">Rates come from CMPA, law-firm and consultant summaries, and change often. Confirm with the agency before you plan around any figure. Northwest Territories was not covered in my research.</p>
+<p class="note" style="margin-top:10px">Rates come from CMPA, law-firm and consultant summaries, and change often. Confirm with the agency before you plan around any figure. Northwest Territories was not covered in our research.</p>
 
 {{VFX}}
 
@@ -339,7 +339,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="chart" role="img" aria-label="Bar chart of production volume by region">
 {{CHART}}
 </div>
-<p class="note" style="margin-top:10px">Source: CMPA Profile 2025, estimates based on CAVCO data. Includes Canadian production, foreign location and service work, and broadcaster in-house production. CMPA reports the Prairies and Territories together and the Atlantic provinces together, so I can't split them further. I used dollars because it's the only figure published on the same basis for every region. Counts of productions aren't published consistently by province.</p>
+<p class="note" style="margin-top:10px">Source: CMPA Profile 2025, estimates based on CAVCO data. Includes Canadian production, foreign location and service work, and broadcaster in-house production. CMPA reports the Prairies and Territories together and the Atlantic provinces together, so we can't split them further. We used dollars because it's the only figure published on the same basis for every region. Counts of productions aren't published consistently by province.</p>
 
 {{FIC}}
 

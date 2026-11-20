@@ -60,7 +60,7 @@ WIN = {
         ("Best Editing in a Feature Length Documentary", ["Nicole Bazuin"], "Modern Whore"),
         ("Achievement in Sound Editing", ["Ed Douglas", "Dermain Finlayson"], "40 Acres"),
         ("Achievement in Visual Effects", ["Tristan Zerafa", "Lou Gatti", "Mike Stadnyckyj", "Graham Houston", "James Soares", "Christopher Shewchuk", "Jeniree Bastidas", "Onur Can Yol", "Luca Tarantini"],
-         "Nirvanna the Band the Show the Movie. A team of ten; I list nine names that match across sources, because one team member's first name is printed two ways. Credits on the IMDb event page below."),
+         "Nirvanna the Band the Show the Movie. A team of ten; we list nine names that match across sources, because one team member's first name is printed two ways. Credits on the IMDb event page below."),
     ],
     "DGC Awards 2025": [
         ("Best Picture Editing, Feature Film", ["Dev Singh", "Sandy Pereira"], "40 Acres"),
@@ -87,8 +87,8 @@ def render(leaf, favicon, updated):
     wins = "".join('<h2>' + e(k) + '</h2>' + table(v) for k, v in WIN.items())
     body = (css + graphics.banner("THE CUT IS WHERE THE STORY IS MADE", "Editors are artists. These are the awards that say so.") + graphics.craft_cards()
             + '<h2>The awards that honour the craft</h2>' + shows
-            + '<p class="note">I found no awards show that honours post supervisors specifically. If you know of one, send it and I will check it.</p>'
-            + '<h2>Recent Canadian winners</h2><p class="note">Names are from the linked winner lists. A person’s IMDb link is shown only when I found the page and matched it to the credit. Otherwise it says so.</p>' + wins
+            + '<p class="note">We found no awards show that honours post supervisors specifically. If you know of one, send it and we will check it.</p>'
+            + '<h2>Recent Canadian winners</h2><p class="note">Names are from the linked winner lists. A person’s IMDb link is shown only when we found the page and matched it to the credit. Otherwise it says so.</p>' + wins
             + '<p class="note">Sources: <a href="https://cceditors.ca/2026-awards" target="_blank" rel="noopener">CCE 2026 Awards</a>, <a href="https://deadline.com/2026/06/heated-rivalry-tops-canadian-screen-awards-1236931778" target="_blank" rel="noopener">Deadline, Canadian Screen Awards winners</a>, <a href="https://www.imdb.com/event/ev0001872/2026/1" target="_blank" rel="noopener">IMDb: Canadian Screen Awards 2026</a>, <a href="https://finance.yahoo.com/news/winners-announced-24th-annual-dgc-171800007.html" target="_blank" rel="noopener">DGC Awards 2025 winners</a>.</p>')
     return topics._page(leaf, favicon, updated, "Awards honouring Editors",
                         "Awards that honour Canadian Editors, sound Editors, VFX artists and music supervisors, with the winners and their IMDb pages.",

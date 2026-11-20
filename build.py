@@ -330,15 +330,18 @@ def main():
     (OUT / "stories.json").write_text(json.dumps(
         [{**i, "date": i["date"].isoformat()} for i in items], ensure_ascii=False, indent=1))
 
-FOOT = ('<div class="ppc-foot" style="border-top:1px solid rgba(128,128,128,.3);padding:18px 16px 30px;text-align:center;'
-        'font-size:12.5px;line-height:1.55;opacity:.78"><div style="max-width:760px;margin:0 auto">'
-        '&copy; {{YEAR}} Post Production Canada. All rights reserved. '
-        'Post Production Canada compiles publicly available information for Canada\'s post-production community: news, resources and reference. '
-        'Headlines and excerpts link to their original publishers, who keep all rights in their own work. '
-        'Summaries and original text on this site are ours; please do not republish them without permission. '
-        'Provided for information only, with no guarantee of accuracy or completeness; check anything important with the source. '
-        'Independent, and not affiliated with or endorsed by any union, guild, association or company mentioned. '
-        'Corrections or removal requests are welcome: <a href="contact.html" style="color:inherit">Contact</a>.</div></div>')
+FOOT = ('<div class="ppc-foot" style="border-top:1px solid rgba(128,128,128,.3);padding:22px 16px 34px;text-align:center;'
+        'font-size:13px;line-height:1.7;opacity:.82"><div style="max-width:720px;margin:0 auto">'
+        '<p style="margin:0 0 14px"><b>&copy; {{YEAR}} Post Production Canada.</b> All rights reserved.</p>'
+        '<p style="margin:0 0 14px"><b>What we are.</b> A collective for Canada\'s post-production community. We compile publicly available information: news, resources and reference. '
+        'We are always adding things, and we want to hear what is missing.</p>'
+        '<p style="margin:0 0 14px"><b>Send it to us.</b> Story tips, events, festivals, schools, videos, corrections or removal requests are all welcome. '
+        '<a href="contact.html" style="color:inherit">Contact us</a>.</p>'
+        '<p style="margin:0 0 14px"><b>Rights.</b> Headlines and excerpts link to their original publishers, who keep all rights in their own work. '
+        'Summaries and original text on this site are ours; please do not republish them without permission.</p>'
+        '<p style="margin:0"><b>Please note.</b> Provided for information only, with no guarantee of accuracy or completeness, so check anything important with the source. '
+        'We are independent, and not affiliated with or endorsed by any union, guild, association or company mentioned.</p>'
+        '</div></div>')
 
 _ED_RE = re.compile(r"(?<![\w/.@#\-])editor(s?)(?![\w/@]|\.[a-z])")
 

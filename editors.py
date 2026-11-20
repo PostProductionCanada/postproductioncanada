@@ -308,7 +308,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <p><b>Annie Jean, CCE.</b> The CCE says she was a scholarship recipient of the Academy of Canadian Cinema &amp; Television's National Apprenticeship Program in 1988 and has never left the editing rooms since, going from sound to picture and from assistant to Editor, with more than 65 productions as chief Editor. In 2026 she received the CCE Lifetime Achievement Award. <a href="https://cceditors.ca/2026-awards" target="_blank" rel="noopener">Source</a></p>
 <p><b>The 2026 Assistant Editor Recognition Award.</b> The CCE gives this award for assistants on nominated projects. The 2026 recipients, per the CCE and Playback, were Andrew Bukovac (<i>Wednesday</i>), Geneviève Roberge (<i>Heated Rivalry</i>), Majda Drinnan (<i>DMV</i>), Paul Kwan (<i>Celebrity IOU</i>) and Wesley Demkiw (<i>The Twisted Tale of Amanda Knox</i>). <a href="https://playbackonline.ca/2026/05/25/canadian-cinema-editors-names-2026-winners" target="_blank" rel="noopener">Playback</a></p>
 <p class="note" style="margin-bottom:0">The CCE's EditCon 2026 also had a session called Assistant Editors: The Heart of Post-Production. See the reading list below.</p></div>
-<h3>What to look for in a first assistant job (my reading of the sources)</h3>
+<h3>What to look for in a first assistant job (our reading of the sources)</h3>
 <div class="box"><ul class="arts">
 <li>An Editor who will let you learn the whole workflow: dailies, turnovers, temp sound and music, and the finishing handoff.</li>
 <li>Shows with visual effects, sound and music work, because that is where assistants learn the most.</li>

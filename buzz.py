@@ -106,7 +106,7 @@ RUMOURS = [
      [("Saint Pierre, Season 3 (series, Tier A, Mount Pearl)", "Shoot July 5 to Nov. 30, 2026."),
       ("Secrets and Light Part 1: Illuminations (TV movie, Tier F, St. John's)", "Shooting now. Dates not listed.")]),
 ]
-NOT_YET = "Québec, the Maritimes, Manitoba and Saskatchewan are not covered yet. Send me a union rumour list for them and I will add it."
+NOT_YET = "Québec, the Maritimes, Manitoba and Saskatchewan are not covered yet. Send us a union rumour list for them and we will add it."
 
 
 def rumours_html():

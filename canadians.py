@@ -1,6 +1,6 @@
 """'Canadian Stories': editors, directors and craftspeople from Canada behind screens the world watches.
 
-Every entry is built from the public sources linked on it, and the wording is my own summary.
+Every entry is built from the public sources linked on it, and the wording is our own summary.
 To add one, append a dict to STORIES and rebuild.
 """
 import html
@@ -12,7 +12,7 @@ STORIES = [
      "angle": "Work from the National Film Board of Canada that caught Stanley Kubrick's eye.",
      "story": ["Two NFB films found their way onto Stanley Kubrick's radar. Universe (1960), by Roman Kroitor and Colin Low, is reported to have been a touchstone while Kubrick and Arthur C. Clarke prepared 2001: A Space Odyssey, and Kubrick is said to have chosen its narrator, the Canadian actor Douglas Rain, as the voice of HAL 9000. He also hired Universe's effects designer, Wally Gentleman, though by one account Gentleman did not stay long.",
                "Earlier, for Dr. Strangelove, Kubrick wanted NFB filmmaker Arthur Lipsett, whose collage-style Very Nice, Very Nice (1961) was nominated for an Oscar, to direct the trailer."],
-     "note": "These accounts come from memoirs, talks and articles, so treat the details as reported. If the story you have in mind is a different one, send me the name.",
+     "note": "These accounts come from memoirs, talks and articles, so treat the details as reported. If the story you have in mind is a different one, send us the name.",
      "sources": [("Stanley Kubrick, cinephile", "Sight and Sound (BFI)", "https://www.bfi.org.uk/sight-and-sound/stanley-kubrick-cinephile"),
                  ("How avant-garde NFB filmmaker Arthur Lipsett influenced Kubrick and Lucas", "NFB Blog", "https://blog.nfb.ca/blog/2012/10/03/how-lipsett-influenced-kubrick-lucas"),
                  ("The documentary roots of 2001 and the Canadian voice of HAL", "Gerry Flahive, Medium", "https://medium.com/@gflahive/im-sure-you-ll-agree-there-s-some-truth-in-what-i-say-the-documentary-roots-and-a-i-1eb994454d00")]},
@@ -94,7 +94,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <h1>🍁 Canadian Stories</h1>
 <p class="lede">Canadians have cut, directed and crafted a lot of the movies and television the world watches, often without anyone noticing. These are some of their stories.</p>
 {{CARDS}}
-<div class="box add"><h3>Got a story?</h3><p>If you know a Canadian editor, director or craftsperson with a great story, send me the name and I'll research it and add it here, with sources. A longer list is welcome too.</p></div>
+<div class="box add"><h3>Got a story?</h3><p>If you know a Canadian editor, director or craftsperson with a great story, send us the name and we'll research it and add it here, with sources. A longer list is welcome too.</p></div>
 </main>
 <footer><div class="wrap">Page built {{UPDATED}}. Post Production Canada is independent. Summaries are mine; every claim links to its source.</div></footer>
 </body>

@@ -99,7 +99,7 @@ def wellbeing(leaf, fav, updated):
     body = ('<div class="box help"><h3>If you are in crisis, call or text 9-8-8</h3>'
             '<p style="margin:6px 0 0">9-8-8 is the national suicide crisis line in Canada, free, any time. If someone is in immediate danger, call 911.</p></div>'
             '<h2>Support and reading</h2>' + _cards(WELL) +
-            '<div class="box"><h3>A note about post</h3><p class="note" style="margin:6px 0 0">Everything above is industry-wide. I have not found a Canadian resource written only for editors, colourists and sound people, who often work alone for long stretches. If you know one, send it and I will check it and add it.</p></div>')
+            '<div class="box"><h3>A note about post</h3><p class="note" style="margin:6px 0 0">Everything above is industry-wide. We have not found a Canadian resource written only for editors, colourists and sound people, who often work alone for long stretches. If you know one, send it and we will check it and add it.</p></div>')
     return _page(leaf, fav, updated, "Wellbeing and work-life balance",
                  "Mental health and work-life balance resources for Canadian screen workers.",
                  "💚 Wellbeing and work-life balance",
