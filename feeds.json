@@ -279,6 +279,20 @@
       "url": "https://news.google.com/rss/search?q=%28%22Canadian+Cinema+Editors%22+OR+%22CCE+Awards%22+OR+EditCon%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA:en",
       "category": "picture",
       "google": true
+    },
+    {
+      "name": "Google News",
+      "category": "audio",
+      "google": true,
+      "intl": true,
+      "url": "https://news.google.com/rss/search?q=%28%22sound+editor%22+OR+%22supervising+sound+editor%22+OR+%22sound+designer%22+OR+%22re-recording+mixer%22+OR+%22dialogue+editor%22+OR+foley%29+%28film+OR+television+OR+series+OR+movie%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA:en"
+    },
+    {
+      "name": "Google News",
+      "category": "picture",
+      "google": true,
+      "intl": true,
+      "url": "https://news.google.com/rss/search?q=%28%22film+editor%22+OR+%22picture+editor%22+OR+%22assistant+editor%22+OR+%22Media+Composer%22+OR+%22Final+Cut+Pro%22+OR+%22DaVinci+Resolve%22+OR+%22Premiere+Pro%22%29+when%3A14d&hl=en-CA&gl=CA&ceid=CA:en"
     }
   ]
 }

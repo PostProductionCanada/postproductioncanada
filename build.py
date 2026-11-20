@@ -43,7 +43,7 @@ EXCLUDE_RE = re.compile(
     r"gold|silver|copper|lithium|mining|oil and gas|oil & gas|solar cell\w*|climate systems|stellantis|agnico|capital markets|royalties provides|"
     r"robotics|ghg emissions|mega man|honest ?reporting|quebecor|telus|dill pickle|rushtok|gen z|crisis playbook|pr roundup|measuring clicks|"
     r"audi ceo|campus rituals|recruitment strategy|chatgpt ads|earphones|earpods|britannica|streetcar named desire|mass production|2nm|casting calls|twitter reviews|"
-    r"instagram launches|film quote of the day|movies,? ranked|stars who almost|every movie that beat|worldbuilding|screenplay|anxiety draft|pro writers|movies that inspired|grand theft auto|gta vi)\b", re.I)
+    r"rachel bilson|scott foley|jingle bells|panchjanya|sanatan|instagram launches|film quote of the day|movies,? ranked|stars who almost|every movie that beat|worldbuilding|screenplay|anxiety draft|pro writers|movies that inspired|grand theft auto|gta vi)\b", re.I)
 
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
@@ -191,6 +191,15 @@ NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(-
            ".sitenav .gp a{border:0;border-radius:8px;background:transparent;white-space:normal}.sitenav .gp a:hover{background:var(--line)}</style>")
 
 
+def _members_slug():
+    try:
+        if (ROOT / "data" / "members.enc").exists():
+            return json.loads((ROOT / "data" / "members.json").read_text())["slug"]
+    except Exception:
+        pass
+    return None
+
+
 def menu_html(pre="", cur="", originals=False, home=True):
     def a(h, lbl):
         return '<a href="%s%s"%s>%s</a>' % (pre, h, ' class="on"' if h == cur else "", lbl.replace("&", "&amp;"))
@@ -204,6 +213,9 @@ def menu_html(pre="", cur="", originals=False, home=True):
         on = any(h == cur for h, _ in its)
         out += ('<details><summary%s>%s</summary><div class="gp">%s</div></details>' % (' class="on"' if on else "", gl, "".join(a(h, l) for h, l in its)))
     out += a("contact.html", "✉️ Contact")
+    _ms = _members_slug()
+    if _ms:
+        out += a(_ms + ".html", "🔑 Subscribers")
     return out
 
 
@@ -511,7 +523,7 @@ def cap_editor(t):
 
 def esc(s): return html.escape(s, quote=True)
 
-CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎶", "Sound & Emotion"),
+CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing"), "story": ("🎬", "Storytelling & Filmmaking"), "soundedit": ("🎧", "Sound Editing"), "audio": ("🎶", "Sound & Emotion"),
         "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Games"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
         "guilds": ("🛡️", "DGC · CCE · IATSE"),
@@ -519,6 +531,9 @@ CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Ed
         "status": ("⚖️", "Status of the Artist"),
         "legal": ("©️", "Copyright & Legal"),
         "tips": ("💡", "Tips & Tricks")}
+LEGACY_CAT = {"picture": "editing"}
+SOUNDEDIT_RE = re.compile(r"\b(sound (design\w*|edit\w*|mix\w*|supervis\w*)|dialogue (editor|editing)|foley|ADR|re-?recording|mixer|atmos|supervising sound|audio post|post[- ]audio)\b", re.I)
+EDITPIC_RE = re.compile(r"\b(adobe|HPA|edit\w*|cutting room|rough cut|assembl\w+|premiere|resolve|media composer|avid|final cut|timeline|colou?r grad\w+|colou?rist|grading|montage|editcon|CCE)\b", re.I)
 NOT_TIPS = re.compile(r"instagram|tiktok|campaign|fake website|black friday|\bcast(ing)? |rob a bank", re.I)
 TIPS_RE = re.compile(r"(\bhow[- ]to\b|\bhow (to|i|we|they|it was|this was|that was|was)\b[^.]{0,60}\b(made|done|cut|edited|built|created|achieved|shot|mixed|graded|composited)\b|"
                      r"tutorials?|\btips?\b|tricks?\b|step[- ]by[- ]step|walk-?through|masterclass|breakdowns?|behind the (scenes|cut)|art of the cut|"
@@ -591,6 +606,7 @@ GEARISH = re.compile("|".join(rx for _em, _lab, rx in TOPICS if _lab in ("Camera
 EDITISH = re.compile(r"\b(edit\w*|post|workflow|colou?r|grad\w+|premiere|resolve|avid|final cut|vfx|visual effects|media composer)\b", re.I)
 VP_RE = re.compile(r"\b(virtual production|unreal|led wall|led volume|real[- ]time|mocap|motion capture|video games?|games?|gaming|game studios?|ubisoft|game engine|metaverse|\bvr\b|\bxr\b)\b", re.I)
 ANIM_RE = re.compile(r"\b(animat\w+|cartoon\w*|anime|stop[- ]motion|pixar|dreamworks|laika|annecy|animation festival|kubo)\b", re.I)
+GEAR_BRANDS = re.compile(r"\b(nikon|canon eos|lumix|fujifilm|hasselblad|obsbot|insta360|gopro|smallrig|tilta|dzofilm|nanlite|aputure|sigma|tamron|zeiss|viltrox|arriflex|arri alexa|red komodo|v-raptor|sony (fx\d|a7|burano|venice)|panasonic)\b", re.I)
 DEAL2 = re.compile(r"black friday|cyber monday|\bsale\b|\bdeals?\b|% off|discount|save up to", re.I)
 
 
@@ -599,10 +615,15 @@ def refine_category(it):
     c, t = it.get("category"), it["title"]
     if c in ("picture", "audio", "vfx") and DEAL2.search(t):
         it["category"] = "gear"
-    elif c == "picture" and GEARISH.search(t) and not EDITISH.search(t):
+    elif c == "picture" and (GEARISH.search(t) or GEAR_BRANDS.search(t)) and not EDITISH.search(t):
         it["category"] = "gear"
     elif c == "vfx" and it.get("ai") and not VFX_RE.search(t):
         it["category"] = "ai"
+    if it.get("category") in ("picture", "audio") and SOUNDEDIT_RE.search(t):
+        it["category"] = "soundedit"
+    elif it.get("category") == "picture":
+        _ps = it.get("source") == "Post Perspective" and not re.search(r"\b(DP|shooting|shoots?|cinematograph\w*|camera)\b", t)
+        it["category"] = "editing" if (EDITPIC_RE.search(t) or _ps) else "story"
     if it.get("category") == "vfx":
         if VP_RE.search(t):
             it["category"] = "vp"
@@ -637,7 +658,7 @@ def card(i):
     if i["vibe"]: cats.append("vibe")
     iso = i["date"].isoformat()
     _lf = "🇨🇦 " if i["canada"] else ""
-    em, lab = CATS[i["category"]]
+    em, lab = CATS[LEGACY_CAT.get(i["category"], i["category"])]
     chip = f'<span class="chip c-{i["category"]}">{em} {lab}</span>'
     if i["canada"] and i["category"] != "canada":
         chip += '<span class="chip c-canada">🇨🇦</span>'
@@ -919,7 +940,7 @@ ROLL_PHRASES = ["COLD OPEN", "ROLLING", "CLOSE-UP", "PLOT TWIST", "WIDE SHOT", "
 def reel_chips(title, url, category, excerpt="", source=""):
     """Small topic chips for a Morning Roll reel: category, AI, legal, guild, tips and up to three topic icons."""
     blob = title + " " + excerpt
-    em, lab = CATS.get(category, ("🎬", ""))
+    em, lab = CATS.get(LEGACY_CAT.get(category, category), ("🎬", ""))
     out = f'<span class="rchip">{em} {esc(lab)}</span>' if lab else ""
     if AI_CS.search(blob) or AI_CI.search(blob):
         out += '<span class="rchip">🤖 AI</span>'
@@ -931,7 +952,7 @@ def reel_chips(title, url, category, excerpt="", source=""):
         out += '<span class="rchip">🛡️ DGC</span>'
     if IATSE_RE.search(blob):
         out += '<span class="rchip">🛡️ IATSE</span>'
-    if category in ("picture", "audio", "vfx", "gear") and TIPS_RE.search(title) and not NOT_TIPS.search(title):
+    if category in ("picture", "editing", "story", "soundedit", "audio", "vfx", "gear") and TIPS_RE.search(title) and not NOT_TIPS.search(title):
         out += '<span class="rchip">💡 Tips</span>'
     seen = {lab}
     n = 0
@@ -1125,7 +1146,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}

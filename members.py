@@ -16,8 +16,18 @@ PAGE = """<!doctype html><html lang="en-CA"><head><meta charset="utf-8"><meta na
 details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:700 19px ui-sans-serif,sans-serif}
 </style></head><body>
 <header><div class="wrap top"><span class="brand"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></span></div></header>
-<main class="wrap"><div class="gate" id="gate"><h1 style="font-size:28px">Members</h1><p class="note">Enter the password to read the original articles.</p>
-<form id="f"><input id="pw" type="password" autocomplete="current-password" aria-label="Password" autofocus><button type="submit">Unlock</button></form><div id="err" role="alert"></div></div>
+<main class="wrap"><div class="gate" id="gate" style="max-width:560px;text-align:left">
+<p class="note" style="margin:0 0 4px"><a href="index.html">← Back to the news</a></p>
+<h1 style="font-size:30px;margin:6px 0 8px">🔑 Subscribers' corner</h1>
+<p><b>Always free to join. Unsubscribe any time.</b> Subscribers get our original articles and bonus material as we add it, and the newsletter in their inbox.</p>
+<div class="box" style="border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0">
+<p style="margin:0 0 6px"><b>Already a subscriber?</b> Enter the password from your welcome email.</p>
+<form id="f" style="text-align:center"><input id="pw" type="password" autocomplete="current-password" aria-label="Password" autofocus><button type="submit">Unlock</button></form><div id="err" role="alert"></div>
+<p class="note" style="margin:6px 0 0">Lost it? Email <a href="mailto:hello@postproductioncanada.ca?subject=Subscriber%20password">hello@postproductioncanada.ca</a> from the address you subscribed with.</p></div>
+<div class="box" style="border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0">
+<p style="margin:0 0 6px"><b>Not subscribed yet?</b> Join free. We will send you the password and the newsletter, and you can leave with one click.</p>
+<p style="margin:0"><a class="btn" style="display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:9px 20px;text-decoration:none;font-weight:700" href="{{JOIN}}">Subscribe free →</a></p></div>
+<p class="note">The password is a light gate to keep originals for our readers. It is not bank-grade security, so please do not share it around.</p></div>
 <div id="out" hidden></div></main>
 <script>
 var ENC="{{ENC}}",ITER={{ITER}};
@@ -48,6 +58,11 @@ def write(out, root, leaf, favicon):
     if not (enc.exists() and meta.exists()):
         return
     m = json.loads(meta.read_text())
-    page = (PAGE.replace("{{FAVICON}}", favicon).replace("{{LEAF}}", leaf)
+    try:
+        cfg = json.loads((Path(root) / "site.json").read_text())
+    except Exception:
+        cfg = {}
+    join = "index.html#subscribe" if (cfg.get("subscribe_form_action") or cfg.get("subscribe_embed_html")) else "mailto:" + (cfg.get("contact_email") or "hello@postproductioncanada.ca") + "?subject=Subscribe%20me%20to%20Post%20Production%20Canada"
+    page = (PAGE.replace("{{JOIN}}", join).replace("{{FAVICON}}", favicon).replace("{{LEAF}}", leaf)
             .replace("{{ENC}}", enc.read_text().strip()).replace("{{ITER}}", str(m["iter"])))
     (Path(out) / f'{m["slug"]}.html').write_text(page, encoding="utf-8")

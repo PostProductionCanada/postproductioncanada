@@ -3,6 +3,7 @@ lines stay in their original language. Draft translation: needs a native French 
 import html, re
 
 EXACT = {
+    "🔑 Subscribers": "🔑 Abonnés",
     "🆕 NEW": "🆕 NOUVEAU",
     "● LIVE": "● EN DIRECT", "Next update in": "Prochaine mise à jour dans", "Last updated": "Dernière mise à jour", "All stories from the last 3 weeks:": "Tous les articles des 3 dernières semaines :",
     "☕ Buy us a coffee": "☕ Offrez-nous un café", "Support us.": "Soutenez-nous.",
@@ -34,7 +35,7 @@ EXACT = {
     "TODAY": "AUJOURD'HUI", "NEXT UPDATE IN": "PROCHAINE MISE À JOUR DANS", "LAST UPDATED": "DERNIÈRE MISE À JOUR", "LAST 21 DAYS": "21 DERNIERS JOURS", "● NOW": "● MAINTENANT",
     "COAST TO COAST · ACTION!": "D'UN OCÉAN À L'AUTRE · ACTION !",
     # tabs
-    "📰 All": "📰 Tout", "🎬 Storytelling & Editing": "🎬 Récit et montage", "🟩 VFX & Animation": "🟩 Effets visuels et compositing", "🎥 Gear & Software": "🎥 Équipement et logiciels",
+    "📰 All": "📰 Tout", "✂️ Picture Editing": "✂️ Montage d'image", "🎬 Storytelling & Filmmaking": "🎬 Récit et réalisation", "🎧 Sound Editing": "🎧 Montage sonore", "🟩 VFX & Animation": "🟩 Effets visuels et compositing", "🎥 Gear & Software": "🎥 Équipement et logiciels",
     "💼 Business & Unions": "💼 Affaires et syndicats", "🤖 AI Filmmaking": "🤖 Cinéma et IA", "⚖️ Status of the Artist": "⚖️ Statut de l'artiste",
     "©️ Copyright & Legal": "©️ Droit d'auteur et juridique", "💡 Tips & Tricks": "💡 Trucs et astuces", "📍 All provinces": "📍 Toutes les provinces",
     "⭐ Our Picks": "⭐ Nos choix",
