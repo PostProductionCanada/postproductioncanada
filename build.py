@@ -469,6 +469,39 @@ def _decor(r):
     return leaf, pins
 
 
+TOPICS = [
+    ("📷", "Camera", r"\bcameras?\b|\bARRI\b|alexa|\bred (komodo|v-raptor|raptor)|ursa|\bFX\d|mirrorless|camcorder|insta360|gopro|\bcinema line|sensor|\bX-T\d|\bZ ?\d{1,2}\b|\bR\d{1,2}\b"),
+    ("🔭", "Lens", r"\blens(es)?\b|anamorphic|\bprimes?\b|zoom lens|\bNAMM"),
+    ("🔦", "Lighting", r"\blighting\b|\bled panels?\b|aputure|nanlite|godox|\blight kit|\bnanlux|\bvela\b"),
+    ("🚁", "Drone", r"\bdrones?\b|\bfpv\b|\bdji\b"),
+    ("🎙️", "Mic", r"microphones?|\bmics?\b|lavalier|\bboom\b|field recorder|sound devices|shotgun"),
+    ("💾", "Storage", r"\bstorage\b|\bssd\b|\bnas\b|hard drives?|\blto\b|\braid\b|\bbackups?\b|memory cards?|cfexpress"),
+    ("🎨", "Colour", r"colou?r (grad|correct|manage|match|science)|davinci|\bluts?\b|\bhdr\b|dolby vision|colou?rist"),
+    ("🧩", "Plugin", r"plug-?ins?|add-ons?|\bofx\b|\bextension\b"),
+    ("🎞️", "Film stock", r"\b35mm\b|\b16mm\b|\b65mm\b|film stock|kodak|celluloid|\bimax\b"),
+    ("🆕", "New", r"\blaunch(es|ed)?\b|announc|unveil|releas|introduc|new version|firmware|\bbeta\b|\bupdate[sd]?\b|\badds?\b"),
+    ("🏷️", "Deal", r"\bprice|\bdeals?\b|\bsale\b|black friday|discount|cyber monday"),
+    ("🎪", "Festival", r"festival"),
+    ("🏆", "Awards", r"\bawards?\b|nominee|nominat|\bwins?\b|winners?"),
+    ("💼", "Jobs", r"hiring|\bjobs?\b|layoffs?|job cuts|\bcareers?\b"),
+]
+TOPIC_RES = [(em, lab, re.compile(rx, re.I)) for em, lab, rx in TOPICS]
+
+
+def topic_chips(title, url, skip=()):
+    out, n = "", 0
+    for em, lab, rx in TOPIC_RES:
+        if lab in skip or not rx.search(title):
+            continue
+        out += f'<span class="chip c-topic" title="{lab}">{em} {lab}</span>'
+        n += 1
+        if n == 3:
+            break
+    if "youtube.com" in url or "youtu.be" in url:
+        out += '<span class="chip c-topic" title="Video">▶️ Video</span>'
+    return out
+
+
 def card(i):
     cats = []
     if i["canada"]: cats.append("canada")
@@ -497,6 +530,10 @@ def card(i):
         chip += '<span class="chip c-legal">©️ Legal</span>'
     if i.get("tips"):
         chip += '<span class="chip c-tips">💡 Tips</span>'
+    _tc = topic_chips(i["title"], i["url"])
+    if i["category"] != "gear" and any(f'title="{g}"' in _tc for g in ("Camera", "Lens", "Lighting", "Drone", "Mic", "Storage")):
+        chip += '<span class="chip c-gear">🎥 Gear</span>'
+    chip += _tc
     for k in i["prov"]:
         chip += f'<span class="chip c-prov">📍 {k}</span>'
     ex = f'<p class="ex">{esc(i["excerpt"])}</p>' if i["excerpt"] else ""
@@ -847,7 +884,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}

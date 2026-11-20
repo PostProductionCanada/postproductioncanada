@@ -132,6 +132,25 @@ FILM_HISTORY = [
      "https://playbackonline.ca/?p=93963"),
 ]
 
+DIGITAL_FOOTPRINT = [
+    ("Carbon impact of video streaming", "The Carbon Trust white paper, with DIMPACT (funded by Netflix)",
+     "Puts one hour of video-on-demand streaming at about 55 g of CO2e in Europe, which it calls very small next to other everyday activities. The viewing device is typically the biggest part of the footprint, "
+     "and moving from high to standard definition made only a very small difference. Note the funder: Netflix paid for the work.",
+     "https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/carbon-impact-of-video-streaming"),
+    ("Telefilm spotlights Canadian film and TV's carbon footprint", "Playback, February 22, 2024",
+     "Telefilm's study of 22 Canadian productions, covering 144 hours of content, found TV series averaged 34 tonnes of CO2 per hour and features 25. Accommodation, post-production and disposal together made up about 10% of average emissions. "
+     "Features under $1 million averaged 12 tonnes per hour against 59 for those over $5 million. In Canadian data, post is a small slice. The slice may be growing as work moves to the cloud, and the study did not isolate it.",
+     "https://playbackonline.ca/2024/02/22/telefilm-spotlights-canadian-film-tvs-carbon-footprint/"),
+    ("albert: year one report, carbon footprinting the TV industry", "BAFTA albert, UK",
+     "In the UK's first-year data, an hour of TV production averaged 5.8 tonnes of CO2e. Travel and the production office made up 68% of that, and accommodation another tonne. Location work and post-production make up the last part. "
+     "It is UK television, not Canadian, and from the early years of the tool.",
+     "https://static.bafta.org/files/albert-year-one-report-carbon-footprinting-the-tv-industry-1574.pdf"),
+    ("Virtual production's role: a carbon study", "Studio Ulster at Ulster University",
+     "A report on virtual production says the carbon footprint of extensive cloud computing, rendering and data storage is not well understood in the creative industries. It argues the movement of data could be a very large source of emissions but that nobody yet knows the scale, "
+     "and calls for a carbon calculator built for the job. It also found that virtual production cut emissions in its tests.",
+     "https://futureobservatory.org/files/dcmsreports/futureobservatory_culturalpolicyreport_studioulster.pdf"),
+]
+
 
 def _plain_cards(items):
     return "".join(f'<article class="box"><h3><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a></h3><div class="when">{e(o)}</div><p>{e(x)}</p></article>' for t, o, x, u in items)
@@ -140,7 +159,7 @@ def _plain_cards(items):
 def green(leaf, fav, updated):
     body = ('<h2>What Canada is doing</h2>' + _cards(GREEN) +
             '<h2>🎞️ From film to digital: what changed</h2><p>Post used to run on chemistry. Here is what the sources say about the footprint of film, and what happened when it went away. '
-            'This covers film itself. Digital has its own footprint in storage, rendering and streaming, and that is the next chapter we plan to research.</p>' + _plain_cards(FILM_HISTORY) +
+            'This covers film itself. Digital has its own footprint in storage, rendering and streaming, and that is the next chapter we plan to research.</p>' + _plain_cards(FILM_HISTORY) + '<h2>💾 The digital footprint: what we know and what we don\'t</h2><p>Film is gone, but post still burns energy: storage, rendering, cloud review and streaming. The honest summary from the sources below is that the viewing end is small per hour, Canadian data shows post as a minor slice, and nobody has yet measured cloud storage and rendering for screen production properly. When a Canadian study does, it goes here.</p>' + _plain_cards(DIGITAL_FOOTPRINT) +
             '<div class="box"><h3>Honest scorecard</h3><p style="margin:6px 0 0">Five provinces have their own green-production programs and the DGC runs one of the most detailed guild hubs, but the UK\'s albert calculator is still the benchmark that Canadian programs build on. Canada has real momentum here. Calling it the world leader would be an overstatement, and the one gap everyone admits is data on post-production and cloud rendering.</p></div>'
             '<div class="box"><h3>Where post fits</h3><p class="note" style="margin:6px 0 0">Start with the Editors Top Tips on DGC Green. Beyond that, the biggest levers in post are compute and storage: where your cloud or render farm gets its power, how long machines run idle, and how much media you keep and move. Ask your facility for its numbers.</p></div>')
     return _page(leaf, fav, updated, "Green post-production",
