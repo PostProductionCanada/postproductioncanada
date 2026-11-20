@@ -2,6 +2,14 @@
   "_help": "Our picks shown at the top of the site. Editing and post only (camera gear and DP/editor collaboration pieces are fine now and then). Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in our own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags. 'parked' holds picks taken out as off-topic (policy and general industry); they are not shown.",
   "picks": [
     {
+      "title": "Accounting for the new economics of VFX",
+      "url": "https://vfxvoice.com/accounting-for-the-new-economics-of-vfx/",
+      "source": "VFX Voice",
+      "date": "2026-10-06",
+      "expires_days": 60,
+      "note": "Executives at Digital Domain, MR. X, Zoic and Pitch Black name Canada, and B.C. in particular, as a high-yield VFX region because of tax credits, exchange rates and deep talent. It is not a ranking of houses, and the same pieces say rival countries are catching up, rebates are converging, and mid-tier shops are being squeezed."
+    },
+    {
       "title": "Adobe Firefly adds Build a story and Assemble short video",
       "url": "https://www.redsharknews.com/adobe-firefly-build-story-assemble-short-video",
       "source": "RedShark News",
