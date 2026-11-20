@@ -30,6 +30,16 @@ def registry():
     return _REG
 
 
+IMDB_STYLE = "font-size:.72em;font-weight:800;background:#f5c518;color:#000;border-radius:4px;padding:1px 5px;text-decoration:none;font-family:ui-sans-serif,-apple-system,sans-serif"
+
+
+def imdb_badge(name):
+    reg = registry()
+    if name not in reg:
+        return ""
+    return '<a class="imdbl" href="https://www.imdb.com/name/' + reg[name] + '/" target="_blank" rel="noopener" style="' + IMDB_STYLE + '">IMDb</a>'
+
+
 def link_people(t):
     """Add a small IMDb link after the first mention, on each page or article, of every verified person.
     Skips headings, existing links, scripts and third-party headline cards."""
@@ -40,6 +50,7 @@ def link_people(t):
     pat = re.compile("(" + "|".join(re.escape(n) for n in names) + ")")
     seen, out = set(), []
     depth_a = depth_h = 0
+    pname = False
     mode = None
     for seg in re.split(r"(<[^>]*>)", t):
         if seg.startswith("<"):
@@ -56,6 +67,12 @@ def link_people(t):
                 depth_a += 1
             elif low.startswith("</a"):
                 depth_a = max(0, depth_a - 1)
+            elif low.startswith('<h3 class="pname"'):
+                depth_h += 1
+                pname = True
+            elif pname and low.startswith("</h3"):
+                depth_h = max(0, depth_h - 1)
+                pname = False
             elif re.match(r"<h[12]\b", low):
                 depth_h += 1
             elif re.match(r"</h[12]\b", low):
@@ -68,7 +85,7 @@ def link_people(t):
                     return n
                 seen.add(n)
                 return (n + ' <a class="imdbl" href="https://www.imdb.com/name/' + reg[n] + '/" target="_blank" rel="noopener" '
-                        'style="font-size:.72em;font-weight:700;border:1px solid currentColor;border-radius:5px;padding:0 4px;text-decoration:none;opacity:.8">IMDb</a>')
+                        'style="' + IMDB_STYLE + '">IMDb</a>')
             out.append(pat.sub(rep, seg))
         else:
             out.append(seg)

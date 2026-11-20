@@ -60,6 +60,15 @@ STORIES = [
 ]
 
 
+def _badge(name):
+    try:
+        import style
+        b = style.imdb_badge(name)
+        return "(" + b + ")" if b else ""
+    except Exception:
+        return ""
+
+
 def card(s):
     roles = "".join(f'<span class="pill">{e(r)}</span> ' for r in s["roles"])
     paras = "".join(f"<p>{e(t)}</p>" for t in s["story"])
@@ -69,7 +78,7 @@ def card(s):
     note = f'<p class="note">{e(s["note"])}</p>' if s.get("note") else ""
     src = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(o)}</span></li>' for t, o, u in s["sources"])
     pins = "".join(f'<span class="pill">📍 {e(p)}</span> ' for p in s.get("prov", []))
-    return (f'<article class="box"><div>{roles}{pins}</div><h3>{e(s["name"])}{(", " + e(s["letters"])) if s.get("letters") else ""}</h3><p class="angle">🇨🇦 {e(s["angle"])}</p>'
+    return (f'<article class="box"><div>{roles}{pins}</div><h3 class="pname">{e(s["name"])}{(", " + e(s["letters"])) if s.get("letters") else ""} {_badge(s["name"])}</h3><p class="angle">🇨🇦 {e(s["angle"])}</p>'
             f'{paras}{cred}{note}<ul class="src">{src}</ul></article>')
 
 
