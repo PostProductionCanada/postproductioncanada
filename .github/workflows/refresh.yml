@@ -31,13 +31,14 @@ jobs:
         run: |
           git config user.name "Post Production Canada"
           git config user.email "noreply@postproductioncanada.ca"
-          git add data/archive.json data/roll.json data/roll_history.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update rolling archive"
+          for attempt in 1 2 3; do
             git fetch origin main
-            git rebase -X theirs origin/main
-            git push origin HEAD:main
-          fi
+            rm -rf /tmp/datasave
+            git worktree add --detach /tmp/datasave origin/main
+            cp data/archive.json data/roll.json data/roll_history.json /tmp/datasave/data/ 2>/dev/null || true
+            (cd /tmp/datasave && git add data/archive.json data/roll.json data/roll_history.json && if ! git diff --cached --quiet; then git commit -m "Update rolling archive" && git push origin HEAD:main; fi) && break
+            git worktree remove --force /tmp/datasave || true
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
