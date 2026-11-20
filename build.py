@@ -545,6 +545,9 @@ def card(i):
     for k in i["prov"]:
         chip += f'<span class="chip c-prov">📍 {k}</span>'
     ex = f'<p class="ex">{esc(i["excerpt"])}</p>' if i["excerpt"] else ""
+    _wy = WHY.get(i["title"])
+    if _wy:
+        ex += f'<p class="why"><b>Why it matters:</b> {esc(_wy[0])} <a href="{esc(_wy[2])}" target="_blank" rel="noopener">{esc(_wy[1])}</a></p>'
     return (f'<article class="card k-{i["category"]}" data-cats="{" ".join(sorted(set(cats)))}" data-prov="{" ".join(i["prov"])}" data-t="{esc(norm(i["title"] + " " + i["source"]))}">'
             f'<div class="chips">{chip}</div><div class="meta"><span class="src">{_lf}{esc(i["source"])}</span>'
             f'<span class="dot">·</span><time datetime="{iso}">{iso[:10]}</time></div>'
