@@ -5100,11 +5100,11 @@
   "require": null,
   "canada": true,
   "ai": true,
-  "vibe": false,
   "cce": false,
-  "legal": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Kendrapara’s VFX artist shines with 3D visuals for Ramayana movie",
