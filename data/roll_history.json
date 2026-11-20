@@ -459,16 +459,44 @@
  },
  "2026-11-18": {
   "date": "2026-11-18",
+  "compiled": "PREVIEW",
   "day": "WED NOV 18",
   "items": [
    {
-    "title": "Series Mania Forum Announces Canada-Québec as Guests of Honour for 2027",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUmJTa2JxZll2ZjFvRXg4R3NYV0dRay0yWF90TjhJMDh3STQtNFlUcmRfdldURC1tMkNFVUw1X0QxMmhrZUJ6YW53WUlsTEZmdEZpR2dWd3J4cTlqeEkwNUlpZl9WdHNjMF82eThSd1lMakw3ME5yQ2hRcXdOMjAtVHZXc3NqT2F4X1hhQ1JXMy1EaWRfZlllTnRVMTQ2NDlFSFFJeA?oc=5",
-    "source": "todotvnews.com",
+    "title": "Final Cut Pro 13 — a deep dive",
+    "url": "https://www.provideocoalition.com/final-cut-pro-13-a-deep-dive/",
+    "source": "ProVideo Coalition",
+    "category": "picture",
+    "prov": [],
+    "canada": false,
+    "date": "Nov 18"
+   },
+   {
+    "title": "Skydance to combine Warner Bros. TV Group and Paramount Television Studios",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeFJwMDVTZm1QUHlHOWplaDEtRy1iTW5jNWFZby15UmJLQWhSM3l6MFVKM2RCZDBDM2VETUg5OTBxai1SV1Z5X3BBX3Utdlk4RTNsd3RkeHRCcWZMWXZaQU5mMTZPVnRUd2lJS3BLVG5Sb2t2dzQ0bHgyOG0tOThyNHFHTzVJLWc?oc=5",
+    "source": "Yahoo! Finance Canada",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 18"
+   },
+   {
+    "title": "THE GREATEST is Prime’s #5 & #6 Most-Watched Series in 1st 2 Weeks",
+    "url": "https://hollywoodnorthbuzz.com/2026/11/the-greatest-is-primes-5-6-most-watched-series-in-1st-2-weeks.html",
+    "source": "Hollywood North Buzz",
     "category": "canada",
     "prov": [
-     "QC"
+     "ON"
     ],
+    "canada": true,
+    "date": "Nov 18"
+   },
+   {
+    "title": "Telefilm Canada names Erin Burke as national director of feature film for English market",
+    "url": "https://cartt.ca/telefilm-canada-names-erin-burke-as-national-director-of-feature-film-for-english-market/",
+    "source": "Cartt.ca",
+    "category": "canada",
+    "prov": [],
     "canada": true,
     "date": "Nov 18"
    },
@@ -493,38 +521,9 @@
     ],
     "canada": true,
     "date": "Nov 18"
-   },
-   {
-    "title": "Skywild Pictures buys Niv Fichman’s Rhombus in major Canadian production deal",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNTZFai1QWFZjbUlmNmVHRUo1Mzlwbzh3d3Y2eWc4VHlKUHRPdUVmUEh2eTJIdGYxS0x1ODBBQm9sZE5td0RLckRuTUNDcEMwTnN2Y3hOLXlsRno5OHM5SHByVUtrWnlmd3BlQ0pnM1JySl9UR05rZktobkdmWUhNZUdUQ0x3R05oSmFaODllVFBhS0hKMnZ4YW5HLTZuTmM1WDRUZDlGWmlueXM?oc=5",
-    "source": "C21media",
-    "category": "canada",
-    "prov": [],
-    "canada": true,
-    "date": "Nov 17"
-   },
-   {
-    "title": "Creative BC welcomes Pete Mitchell and Tarek Elneweihi to its Board of Directors",
-    "url": "https://creativebc.com/2026/11/creative-bc-welcomes-pete-mitchell-and-tarek-elneweihi-to-its-board-of-directors/",
-    "source": "Creative BC",
-    "category": "canada",
-    "prov": [
-     "BC"
-    ],
-    "canada": true,
-    "date": "Nov 17"
-   },
-   {
-    "title": "‘The Cat Came Back’ Director Cordell Barker Gives Santa A Rival In The Full Trailer For ‘The Anta Claus Of The South Pole’ (EXCLUSIVE)",
-    "url": "https://www.cartoonbrew.com/tv/cordell-barker-anta-claus-of-the-south-pole-trailer-269474.html",
-    "source": "Cartoon Brew",
-    "category": "vfx",
-    "prov": [],
-    "canada": true,
-    "date": "Nov 17"
    }
   ],
-  "reconstructed": true
+  "reconstructed": false
  },
  "2026-11-19": {
   "date": "2026-11-19",
