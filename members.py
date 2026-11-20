@@ -46,7 +46,8 @@ document.getElementById('f').addEventListener('submit',async function(ev){
   ev.preventDefault();var err=document.getElementById('err');err.textContent='Unlocking…';
   try{var arts=await unlock(document.getElementById('pw').value);
     var h='<h1>Originals</h1><p class="meta">Original writing on Canadian post-production. Private.</p>';
-    arts.forEach(function(a){h+='<details><summary>'+esc(a.title)+'</summary><p class="meta">'+esc(a.byline)+' · '+esc(a.date)+'</p>'+a.html+(a.disclosure?'<p class="disc"><b>Disclosure:</b> '+esc(a.disclosure)+'</p>':'')+'</details>'});
+    var DISC='<p class="disc legal"><b>About these articles.</b> We write from published, linked sources and say when something is our own reading or opinion. We try to be right, and we correct errors quickly: <a href="mailto:hello@postproductioncanada.ca?subject=Correction">tell us about one</a>. Nothing here is legal, financial, tax or career advice. Names and trademarks belong to their owners, and we have no commercial relationship with anyone named unless a piece says so.</p>';
+    h+=DISC;arts.forEach(function(a){var ty=(a.type||'').toLowerCase();var bd=ty==='editorial'?'<span class="badge ed">Editorial</span>':(ty?'<span class="badge">'+esc(ty.charAt(0).toUpperCase()+ty.slice(1))+'</span>':'');var en=ty==='editorial'?'<p class="disc"><b>This is an editorial.</b> It is our opinion, not reporting. Facts in it are sourced below; the conclusions are ours.</p>':'';h+='<details><summary>'+bd+esc(a.title)+'</summary><p class="meta">'+esc(a.byline)+' · '+esc(a.date)+'</p>'+en+a.html+(a.disclosure?'<p class="disc"><b>Disclosure:</b> '+esc(a.disclosure)+'</p>':'')+'</details>'});
     var o=document.getElementById('out');o.innerHTML=h;o.hidden=false;document.getElementById('gate').hidden=true;
   }catch(e){err.textContent='That password did not work.'}
 });

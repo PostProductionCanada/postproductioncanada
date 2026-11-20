@@ -143,6 +143,7 @@ h2,h3{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;lette
 .pill{font:700 12px ui-sans-serif,sans-serif;background:var(--chip);border-radius:999px;padding:2px 10px;display:inline-block}
 .meta,.note{color:var(--mute);font:14px ui-sans-serif,-apple-system,"Segoe UI",sans-serif}
 blockquote{border-left:4px solid var(--red);margin:16px 0;padding:2px 16px;color:var(--mute)}
+.badge{display:inline-block;font:700 11px ui-sans-serif,-apple-system,sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:99px;padding:2px 8px;margin-right:8px;color:var(--mute)}.badge.ed{color:#e8730c;border-color:#e8730c}.disc.legal{border-top:0;border-left:3px solid var(--line);padding:6px 12px;margin:0 0 18px}
 .disc,.corr{font:14px/1.5 ui-sans-serif,-apple-system,sans-serif;color:var(--mute);border-top:1px solid var(--line);padding-top:12px;margin-top:28px}
 ul.list{list-style:none;padding:0}ul.list li{padding:16px 0;border-bottom:1px solid var(--line)}ul.list a{text-decoration:none;font-size:20px}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;color:var(--mute);font:13px ui-sans-serif,sans-serif}

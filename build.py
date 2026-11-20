@@ -314,6 +314,7 @@ def main():
             it["dgc"] = bool(DGC_RE.search(blob2 + " " + it["source"]))
             it["iatse"] = bool(IATSE_RE.search(blob2 + " " + it["source"]))
             it["guild"] = it["cce"] or it["dgc"] or it["iatse"]
+            it["fest"] = bool(FEST_RE.search(it["title"])) and not NOT_FEST.search(it["title"])
             it["legal"] = bool(LEGAL_RE.search(blob2))
             it["tips"] = it["category"] in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(it["title"])) and not NOT_TIPS.search(it["title"])
             it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
@@ -344,6 +345,7 @@ def main():
         a["dgc"] = bool(DGC_RE.search(_b + " " + a["source"]))
         a["iatse"] = bool(IATSE_RE.search(_b + " " + a["source"]))
         a["guild"] = a["cce"] or a["dgc"] or a["iatse"]
+        a["fest"] = bool(FEST_RE.search(a["title"])) and not NOT_FEST.search(a["title"])
         refine_category(a)
         items.append(a)
     items.sort(key=lambda i: i["date"], reverse=True)
@@ -533,10 +535,13 @@ CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
         "legal": ("©️", "Copyright & Legal"),
-        "tips": ("💡", "Tips & Tricks")}
+        "tips": ("💡", "Tips & Tricks"),
+        "fest": ("🎪", "Festivals")}
 LEGACY_CAT = {"picture": "editing"}
 SOUNDEDIT_RE = re.compile(r"\b(sound (design\w*|edit\w*|mix\w*|supervis\w*)|dialogue (editor|editing)|foley|ADR|re-?recording|mixer|atmos|supervising sound|audio post|post[- ]audio)\b", re.I)
 EDITPIC_RE = re.compile(r"\b(adobe|HPA|edit\w*|cutting room|rough cut|assembl\w+|premiere|resolve|media composer|avid|final cut|timeline|colou?r grad\w+|colou?rist|grading|montage|editcon|CCE)\b", re.I)
+FEST_RE = re.compile(r"\b(festivals?|tiff|sundance|cannes|berlinale|venice film|hot docs|fantasia|sxsw|annecy|sitges|slamdance|rendez-vous|fnc|fcmm|cinema festival|film market|marché du film)\b", re.I)
+NOT_FEST = re.compile(r"music festival|food festival|comedy festival|jazz|\bbeer|\bwine|christmas|holiday|festival of lights|coachella|glastonbury|lollapalooza", re.I)
 NOT_TIPS = re.compile(r"instagram|tiktok|campaign|fake website|black friday|\bcast(ing)? |rob a bank", re.I)
 TIPS_RE = re.compile(r"(\bhow[- ]to\b|\bhow (to|i|we|they|it was|this was|that was|was)\b[^.]{0,60}\b(made|done|cut|edited|built|created|achieved|shot|mixed|graded|composited)\b|"
                      r"tutorials?|\btips?\b|tricks?\b|step[- ]by[- ]step|walk-?through|masterclass|breakdowns?|behind the (scenes|cut)|art of the cut|"
@@ -598,7 +603,6 @@ TOPICS = [
     ("🎞️", "Film stock", r"\b35mm\b|\b16mm\b|\b65mm\b|film stock|kodak|celluloid|\bimax\b"),
     ("🆕", "New", r"\blaunch(es|ed)?\b|announc|unveil|releas|introduc|new version|firmware|\bbeta\b|\bupdate[sd]?\b|\badds?\b"),
     ("🏷️", "Deal", r"\bprice|\bdeals?\b|\bsale\b|black friday|discount|cyber monday"),
-    ("🎪", "Festival", r"festival"),
     ("🏆", "Awards", r"\bawards?\b|nominee|nominat|\bwins?\b|winners?"),
     ("💼", "Jobs", r"hiring|\bjobs?\b|layoffs?|job cuts|\bcareers?\b"),
 ]
@@ -655,6 +659,7 @@ def card(i):
     if i["status"]: cats.append("status")
     if i.get("legal"): cats.append("legal")
     if i.get("tips"): cats.append("tips")
+    if i.get("fest"): cats.append("fest")
     if i["ai"]: cats.append("ai")
     if i["cce"]: cats.append("cce")
     if i.get("guild"): cats.append("guilds")
@@ -681,6 +686,8 @@ def card(i):
         chip += '<span class="chip c-legal">©️ Legal</span>'
     if i.get("tips"):
         chip += '<span class="chip c-tips">💡 Tips</span>'
+    if i.get("fest"):
+        chip += '<span class="chip c-fest">🎪 Festival</span>'
     _tc = topic_chips(i["title"], i["url"])
     if i["category"] != "gear" and any(f'title="{g}"' in _tc for g in ("Camera", "Lens", "Lighting", "Drone", "Mic", "Storage")):
         chip += '<span class="chip c-gear">🎥 Gear</span>'
@@ -968,6 +975,8 @@ def reel_chips(title, url, category, excerpt="", source=""):
         out += '<span class="rchip">🛡️ DGC</span>'
     if IATSE_RE.search(blob):
         out += '<span class="rchip">🛡️ IATSE</span>'
+    if FEST_RE.search(title) and not NOT_FEST.search(title):
+        out += '<span class="rchip" style="color:#e8730c;font-weight:700">🎪 Festival</span>'
     if category in ("picture", "editing", "story", "soundedit", "audio", "vfx", "gear") and TIPS_RE.search(title) and not NOT_TIPS.search(title):
         out += '<span class="rchip">💡 Tips</span>'
     seen = {lab}
@@ -1031,7 +1040,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
@@ -1162,7 +1171,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
