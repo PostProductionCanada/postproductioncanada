@@ -10,6 +10,22 @@ e = html.escape
 AS_OF = "November 19, 2026"
 CONTACT = "hello@postproductioncanada.ca"
 
+# Featured: the event where the industry meets policymakers. Facts from the CMPA's Prime Time page and its November 2026 email.
+FEATURED = {
+    "title": "Prime Time 2027",
+    "when": "January 27 to 29, 2027 · Ottawa",
+    "who": "Canadian Media Producers Association (CMPA)",
+    "url": "https://cmpa.ca/prime-time/",
+    "text": ("The CMPA calls it Canada's leading screen industry conference: three days where 1,200+ producers, broadcasters, streamers, distributors, funders and policymakers connect, do deals and shape the future of content. "
+             "It is held in Ottawa, where the policy that decides tax credits, Canadian content rules and funding gets made, so it is the room where the industry and government meet."),
+    "points": [
+        "Feature conversation: Bell Media President Sean Cohan and VP Global Content Justin Stockman on Canadian content, cultural sovereignty, and the role of streamers and broadcasters.",
+        "The Bell Media Delegate Lounge is open all three days as a home base for meetings and breaks.",
+        "Hotel: rooms at The Westin are sold out, but several nearby hotels still had Prime Time rates in the CMPA's latest email. Delegates also get reduced airfare and train rates.",
+        "Breakfast, lunch, coffee breaks and evening receptions are included with the pass.",
+    ],
+}
+
 # (date text, title, where, who, url, note)
 EVENTS = [
     ("Nov 20, 2026, 9 a.m. ET (14:00 GMT)", "DaVinci Resolve online seminar: Workflows from Camera to Delivery",
@@ -117,6 +133,9 @@ def render(leaf, favicon, updated):
     body = (css
             + '<p>Post is a lonely job. This page is a gathering place: screenings, socials, talks, trade shows and open houses where Canada\'s Editors, colourists, sound people, VFX artists and Post Supervisors can meet. '
               'Every entry links to the organizer\'s own page. Dates were read from those pages on ' + e(AS_OF) + ', so confirm before you travel.</p>'
+            + '<div class="box feat" style="border-left:5px solid var(--red)"><div class="note"><b>⭐ FEATURED · INDUSTRY AND GOVERNMENT</b></div><h2 style="margin:4px 0"><a href="' + e(FEATURED["url"]) + '" target="_blank" rel="noopener">' + e(FEATURED["title"]) + '</a></h2>'
+              '<p><b>' + e(FEATURED["when"]) + '</b> · ' + e(FEATURED["who"]) + '</p><p>' + e(FEATURED["text"]) + '</p><ul>' + "".join("<li>" + e(x) + "</li>" for x in FEATURED["points"]) + '</ul>'
+              '<p><a class="btn" href="' + e(FEATURED["url"]) + '" target="_blank" rel="noopener">Register and see the program →</a></p></div>'
             + '<h2>Coming up</h2><div class="box"><ul class="ev">' + ev + '</ul></div>'
             + '<h2>🎞️ Festivals across Canada</h2><div class="box"><ul class="ev">' + fest + '</ul></div><p class="note">' + e(NO_FESTIVAL_YET) + '</p><h3>Just wrapped, next dates not posted</h3><div class="box"><ul class="ev">' + wrapped + '</ul></div>'
             + '<h2>Regular gatherings</h2>' + rec
