@@ -52,6 +52,6 @@ def render(leaf, favicon, updated):
             + '<h2>Reading</h2>' + _cards(READING)
             + '<h2>Send us a name or a story</h2><p>Email <a href="mailto:hello@postproductioncanada.ca?subject=Sound">hello@postproductioncanada.ca</a> '
               'with a link to the original and we will check it before it goes up.</p>')
-    return topics._page(leaf, favicon, updated, "Sound Editing and Design in Canada",
+    return topics._page(leaf, favicon, updated, "Sound & Emotion: sound editing and design in Canada",
                         "Canadian sound editors, designers and mixers, and the awards that celebrate their work.",
-                        "🎧 Sound Editing and Design", "The people who make Canadian film and television sound right.", body)
+                        "🎶 Sound & Emotion", "Sound editing and design, and the people who make Canadian film and television feel right.", body)

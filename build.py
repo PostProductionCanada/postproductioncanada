@@ -174,7 +174,7 @@ HOME_FAB = ('<a class="homefab" href="/" title="Back to the home page (the 2 bee
 GROUPS = [
     ("📰 News", [("buzz.html", "🎬 Post Buzz"), ("awards.html", "🏆 Awards"), ("canadians.html", "🇨🇦 Canadian Stories"), ("documentary.html", "🎥 Documentary")]),
     ("✂️ Craft", [("editors.html", "✂️ Editors"), ("cinematographers.html", "📷 Cinematographers"), ("digital-assistant-editor.html", "🤖 Digital Assistant Editor"), ("specs.html", "📐 Delivery Specs"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("software.html", "💻 Software"),
-                   ("sound.html", "🎧 Sound"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors")]),
+                   ("sound.html", "🎶 Sound & Emotion"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors")]),
     ("🎓 Learn and work", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
     ("🌍 Sustainability", [("green-post.html", "🌍 Green Post")]),
 ]
