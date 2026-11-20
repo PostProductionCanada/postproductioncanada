@@ -602,6 +602,11 @@ def _takeaways(items, now):
             '</ul><p>Counted from the stories on this page, not opinion. Pick a province or tab below to dig in.</p></div>')
 
 
+try:
+    WHY = json.loads((ROOT / "data" / "why.json").read_text())
+except Exception:
+    WHY = {}
+
 ROLL_PHRASES = ["COLD OPEN", "ROLLING", "CLOSE-UP", "PLOT TWIST", "WIDE SHOT", "THAT'S A WRAP"]
 
 
@@ -620,7 +625,11 @@ def roll_html(items, now):
             ex = ""
         if len(ex) > 170:
             ex = ex[:170].rsplit(" ", 1)[0].rstrip(",;:.") + "…"
-        gist = f'<div class="fgist"><b>The gist:</b> {esc(ex)}</div>' if ex else ""
+        wy = WHY.get(s["title"])
+        if wy:
+            gist = f'<div class="fgist"><b>Why it matters:</b> {esc(wy[0])} <a href="{esc(wy[2])}" target="_blank" rel="noopener">{esc(wy[1])}</a></div>'
+        else:
+            gist = f'<div class="fgist"><b>The gist:</b> {esc(ex)}</div>' if ex else ""
         if s["prov"]:
             ang = "🍁 Canadian angle: " + ", ".join(PROV_LABEL.get(k, k) for k in s["prov"])
         elif s["canada"]:
@@ -805,7 +814,7 @@ main{padding:20px 0 40px}
 .frame{min-width:0;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
 .takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
-.fgist{color:#c9ced8;font-size:14px;line-height:1.45}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
+.fgist a{color:#ff8a7f}.fgist{color:#c9ced8;font-size:14px;line-height:1.45}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none}.coffee{font-size:48px;line-height:1;width:64px;text-align:center;flex:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
