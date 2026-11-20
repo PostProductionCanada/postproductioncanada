@@ -618,6 +618,8 @@ try:
 except Exception:
     WHY = {}
 
+MINIREEL = ('<svg class="mreel" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#ffb000" stroke-width="2"/>'
+            '<circle cx="12" cy="6" r="2.3" fill="#ffb000"/><circle cx="17.2" cy="15" r="2.3" fill="#ffb000"/><circle cx="6.8" cy="15" r="2.3" fill="#ffb000"/><circle cx="12" cy="12" r="1.6" fill="#ffb000"/></svg>')
 ROLL_PHRASES = ["COLD OPEN", "ROLLING", "CLOSE-UP", "PLOT TWIST", "WIDE SHOT", "THAT'S A WRAP"]
 
 
@@ -648,7 +650,7 @@ def roll_html(items, now):
         else:
             ang = "🌐 Wider industry story"
         phrase = ROLL_PHRASES[(n - 1) % len(ROLL_PHRASES)]
-        frames += (f'<article class="frame"><div class="fno">SC.{n:02d} · {phrase}</div><div class="fmeta">{em} {leaf}{pins}</div>'
+        frames += (f'<article class="frame"><div class="fno">{MINIREEL} REEL {n}</div><div class="fmeta">{em} {leaf}{pins}</div>'
                    f'<a class="ftitle" href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a>'
                    f'{gist}<div class="fang">{ang}</div>'
                    f'<div class="fsrc">{esc(s["source"])} · {esc(s["date"])}</div>'
@@ -825,7 +827,7 @@ main{padding:20px 0 40px}
 .frame{min-width:0;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
 .takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
-.fgist a{color:#ff8a7f}.fgist{color:#c9ced8;font-size:14px;line-height:1.45}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
+.fgist{color:#fff1c2;font-size:14px;line-height:1.45;background:#33290a;border-left:4px solid #ffcc33;border-radius:4px;padding:8px 10px}.fgist b{color:#ffcc33}.fgist a{color:#ffd980;text-decoration:underline}.mreel{vertical-align:-4px;margin-right:4px}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none}.coffee{font-size:48px;line-height:1;width:64px;text-align:center;flex:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
