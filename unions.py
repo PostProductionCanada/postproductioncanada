@@ -117,8 +117,8 @@ DATA = {
 }
 
 NUMBERS = [
-    ("Directors Guild of Canada (DGC)", "5,500 to 7,000+ members, 48 occupations", "Sources differ on the total. Editors are one of those occupations. I found no editor-only count.",
-     "https://en.wikipedia.org/wiki/Directors_Guild_of_Canada"),
+    ("Directors Guild of Canada (DGC)", "About 8,000 members as of November 2026, 48 occupations", "The membership figure was confirmed by the DGC in November 2026. Editors are one of those occupations. I found no editor-only count.",
+     "https://www.dgc.ca"),
     ("DGC Manitoba District Council", "About 200 members, 250 permittees", "Across all its classifications, including picture and sound editors. No editor-only count found.",
      "https://www.mbfilmmusic.ca/film-commission/key-contacts"),
     ("IATSE Local 891 (BC and Yukon)", "9,000+ members, 19 departments", "Editing is one department. Its pages say 9,000 to over 10,000, plus 5,000+ permittees per Creative Pathways. I found no Editing Department count.",
