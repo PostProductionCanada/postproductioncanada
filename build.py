@@ -615,7 +615,7 @@ def topic_chips(title, url, skip=()):
     for em, lab, rx in TOPIC_RES:
         if lab in skip or not rx.search(title):
             continue
-        out += f'<span class="chip c-topic" title="{lab}">{em} {lab}</span>'
+        out += f'<span class="chip c-topic{" c-newchip" if lab == "New" else ""}" title="{lab}">{em} {"NEW" if lab == "New" else lab}</span>'
         n += 1
         if n == 3:
             break
@@ -940,7 +940,7 @@ def reel_chips(title, url, category, excerpt="", source=""):
             break
         if lab2 in seen or not rx.search(title):
             continue
-        out += f'<span class="rchip">{em2} {lab2}</span>'
+        out += f'<span class="rchip{" c-newchip" if lab2 == "New" else ""}">{em2} {"NEW" if lab2 == "New" else lab2}</span>'
         n += 1
     if "youtube.com" in url or "youtu.be" in url:
         out += '<span class="rchip">▶️ Video</span>'
@@ -1125,7 +1125,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -1146,7 +1146,7 @@ main{padding:20px 0 40px}
 .rollhead{display:flex;align-items:center;gap:14px;justify-content:space-between;margin-bottom:12px}
 .reel{width:64px;height:64px;flex:none}.reel .spin{transform-origin:50px 50px;animation:rspin 9s linear infinite}
 @keyframes rspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.reel .spin{animation:none}}
-.rtxt{flex:1;min-width:0;text-align:center}
+.livebar{background:#0b0c0e;border-bottom:1px solid #2c2f36;color:#c9a66b;font:600 13px ui-monospace,Menlo,Consolas,monospace}.lbin{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:8px 16px}.lvdot{color:#ff4d3a;animation:blink 1.2s steps(2) infinite}.lvcd{color:#ff4d3a;font-size:20px;text-shadow:0 0 10px rgba(255,77,58,.55);letter-spacing:.06em}.lvlu{color:#ffb347}.rangepill{display:inline-block;background:#ffcc33;color:#161200;font:800 12px ui-monospace,Menlo,monospace;letter-spacing:.04em;border-radius:999px;padding:3px 12px;animation:rpulse 1.8s ease-in-out infinite;box-shadow:0 0 0 0 rgba(255,204,51,.7)}.lbin .rangepill{margin-left:auto}@keyframes rpulse{0%{box-shadow:0 0 0 0 rgba(255,204,51,.75)}70%{box-shadow:0 0 0 10px rgba(255,204,51,0)}100%{box-shadow:0 0 0 0 rgba(255,204,51,0)}}@media (prefers-reduced-motion:reduce){.rangepill,.lvdot{animation:none}}.rtxt{flex:1;min-width:0;text-align:center}
 .rlcd{display:inline-block;background:#0b0d0a;color:#ffb000;font:700 clamp(15px,3.2vw,24px)/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;padding:8px 14px;border-radius:6px;border:2px solid #3a3d44;text-shadow:0 0 8px rgba(255,176,0,.55)}
 .rsub{color:#aab0bb;font-size:13.5px;margin-top:8px}
 .strip{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:28px 12px;background:#0b0c0e;border-radius:6px}@media (max-width:760px){.strip{grid-template-columns:repeat(2,1fr)}}@media (max-width:520px){.strip{grid-template-columns:1fr}}
@@ -1208,6 +1208,7 @@ footer p{margin:0 0 8px;max-width:60em}
   <div class="tools">{{SUBBTN}}{{ORIG}}{{MENU}}{{TIPBTN}}<a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
+<div class="livebar"><div class="wrap lbin"><span class="lvdot">● LIVE</span><span class="lvt">Next update in</span><b class="lvcd" id="cd2">--:--:--</b><span class="lvt">Last updated</span><b class="lvlu" id="lu2"></b><span class="rangepill" title="Every story on this page was published in this window"><span class="rp1">All stories from the last 3 weeks:</span> <span id="range2"></span></span></div></div>
 <section class="hero"><div class="wrap herogrid"><div>
   <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="nw"><span class="newsword">NEWS</span> <em>in one place.</em></span></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from <b class="nsrc">{{NSOURCES}} sources</b> and updated live every few hours. <span class="nw">Free, always.</span></p>
@@ -1218,9 +1219,9 @@ footer p{margin:0 0 8px;max-width:60em}
 
 <section class="deck" aria-label="Update clock"><div class="wrap"><div class="synth">
   <div class="cell"><div class="lbl">TODAY</div><div class="lcd sm" id="today">{{TODAYSTR}}</div></div>
-  <div class="cell"><div class="lbl">NEXT UPDATE IN</div><div class="lcd" id="cd">--:--:--</div></div>
+  <div class="cell" style="display:none"><div class="lbl">NEXT UPDATE IN</div><div class="lcd" id="cd">--:--:--</div></div>
   <div class="cell"><div class="lbl">LAST UPDATED</div><div class="lcd sm" id="lu">{{UPDATED}}</div></div>
-  <div class="cell wide"><div class="lbl">LAST 21 DAYS <span id="range"></span><span class="now">● NOW</span></div><div class="meter" id="meter">{{BARS}}</div></div>
+  <div class="cell wide"><div class="lbl">LAST 21 DAYS <span class="rangepill" id="range"></span><span class="now">● NOW</span></div><div class="meter" id="meter">{{BARS}}</div></div>
 <div class="finale" id="finale" aria-hidden="true"><div class="cb" style="grid-column:1;grid-row:1;--d:0.00s"><div class="arm"></div><div class="sl"><span>YT</span></div></div><div class="cb" style="grid-column:2;grid-row:1;--d:0.30s"><div class="arm"></div><div class="sl"><span>NT</span></div></div><div class="cb" style="grid-column:3;grid-row:1;--d:0.60s"><div class="arm"></div><div class="sl"><span>NU</span></div></div><div class="cb" style="grid-column:1;grid-row:2;--d:0.00s"><div class="arm"></div><div class="sl"><span>BC</span></div></div><div class="cb" style="grid-column:2;grid-row:2;--d:0.30s"><div class="arm"></div><div class="sl"><span>AB</span></div></div><div class="cb" style="grid-column:3;grid-row:2;--d:0.60s"><div class="arm"></div><div class="sl"><span>SK</span></div></div><div class="cb" style="grid-column:4;grid-row:2;--d:0.90s"><div class="arm"></div><div class="sl"><span>MB</span></div></div><div class="cb" style="grid-column:5;grid-row:2;--d:1.20s"><div class="arm"></div><div class="sl"><span>ON</span></div></div><div class="cb" style="grid-column:6;grid-row:2;--d:1.50s"><div class="arm"></div><div class="sl"><span>QC</span></div></div><div class="cb" style="grid-column:8;grid-row:2;--d:2.10s"><div class="arm"></div><div class="sl"><span>NL</span></div></div><div class="cb" style="grid-column:7;grid-row:3;--d:1.80s"><div class="arm"></div><div class="sl"><span>NB</span></div></div><div class="cb" style="grid-column:8;grid-row:3;--d:2.10s"><div class="arm"></div><div class="sl"><span>PE</span></div></div><div class="cb" style="grid-column:9;grid-row:3;--d:2.40s"><div class="arm"></div><div class="sl"><span>NS</span></div></div><div class="fin-title">COAST TO COAST · ACTION!</div></div>
   <div class="steps" id="steps" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
 </div></div></section>
@@ -1301,7 +1302,7 @@ footer p{margin:0 0 8px;max-width:60em}
   function fmt(d,o){try{return d.toLocaleDateString('en-CA',o)}catch(e){return d.toDateString()}}
   function nextRun(now){var d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),0,17,0));
     for(var i=0;i<10;i++){var t=new Date(d.getTime()+i*3*36e5);if(t>now)return t}return d}
-  try{lu.textContent=built.toLocaleString('en-CA',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}catch(e){}
+  try{lu.textContent=built.toLocaleString('en-CA',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});var l2=document.getElementById('lu2');if(l2)l2.textContent=lu.textContent}catch(e){}
   function poll(){if(polling)return;polling=true;
     (function go(){fetch('build.json?'+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(j){
       if(new Date(j.built)>built){location.reload()}else{setTimeout(go,30000)}}).catch(function(){setTimeout(go,60000)})})()}
@@ -1311,6 +1312,7 @@ footer p{margin:0 0 8px;max-width:60em}
     rg.textContent=fmt(new Date(now-21*DAY),{month:'short',day:'numeric'})+' to '+fmt(now,{month:'short',day:'numeric'});
     if(now-last<8*60e3&&built<last){cd.textContent='UPDATING…';poll()}
     else{var s=Math.floor(diff/1000);cd.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60)}
+    var c2=document.getElementById('cd2');if(c2)c2.textContent=cd.textContent;var r2=document.getElementById('range2');if(r2)r2.textContent=rg.textContent;
     var k=now.getSeconds()%12;steps.forEach(function(b,i){b.classList.toggle('on',i===k)});
   }
   var vu=document.querySelectorAll('#vu s'),fin=document.getElementById('finale'),lastRemain=1e9,demoEnd=0,lastFin=0;

@@ -1040,6 +1040,32 @@
   "prov": []
  },
  {
+  "title": "Ubisoft cuts 166 jobs at Montreal and Quebec City video game studios",
+  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUzFSaS1ITE54YXg5dEtqSFdobC1jVjd4N1BuYTFCemZvXzlrU0o1aGxjcUhFMG1Ldm42U3BtVXI5MHFuLXJKMnFZZnZ0cEJGQmZSTFRVX1pVMS01ZmdsdVRkN2k1WFg2SzQwcEU5WXhIekJ6UUxQN2VZUXJyQmF6RXpmeTJRWDV4TXdj?oc=5",
+  "date": "2026-11-19T21:27:19+00:00",
+  "source": "CBC",
+  "excerpt": "",
+  "category": "vp",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
+ },
+ {
   "title": "Ottawa screening of a documentary on AI misogyny meets Canada’s new deepfake law",
   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaWhSdjhjdWdXZU0zN2tFNW9XdmZIZE1KRFhCR1p3OFU2eElNUkJBNHFXUXZCLUdaTFliYVJFS0Z4YkJHM21RUDFJcFZ5RHFzbzF5SkNMR3RIWHh5a25hV0lPOGNXdDU3ZjVnamVWa3NYSzFWRks2VVZnczN5TE9lenFOMFhNR0NiR2l4cGtqb2VBVm14ZGZBZ0M0WldwNlE4NG4xUmJvM1BHUQ?oc=5",
   "date": "2026-11-19T21:05:07+00:00",
@@ -1261,32 +1287,6 @@
   "tips": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Ubisoft cuts 166 jobs at Montreal and Quebec City video game studios",
-  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQi1iSXRiOEJHMk9zTjRKSnFXblpNanVzV0ZpWHFoYTFDVUc3UHhnSVFpb0kxS1FrQmR5WlRMZi1vZ0VGaUNYd2YxMXZKMTVvSUtpZTFzYzRhTHgtaE5ON1VVbVV6MWtOY19oemdJYTRVYU45MDVjQWVMcmJYYXo2SExfcVV1aUNfWDNIeFROR0xYYnNUVENKU0xncTFlak0?oc=5",
-  "date": "2026-11-19T19:04:08+00:00",
-  "source": "CBC",
-  "excerpt": "",
-  "category": "vp",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [
-   "QC"
-  ]
  },
  {
   "title": "How Costume Designer Mynka Draper Captured Early-'90s LA Hip-Hop for FX’s 'The Drop: A Snowfall Saga'",
@@ -2460,13 +2460,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "Final Cut Pro 13 — a deep dive",
@@ -2968,13 +2968,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "A New Vimeo on Demand Alternative is Here as rushes Launches Rentals",
@@ -3402,13 +3402,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX SHX1: the first compact cinema camera in LUMIX history",
@@ -3500,15 +3500,15 @@
   "ai": false,
   "vibe": false,
   "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": [
    "QC"
-  ]
+  ],
+  "dgc": false,
+  "iatse": false,
+  "guild": false
  },
  {
   "title": "Short film expands playground for singers and rappers",
@@ -3908,7 +3908,7 @@
   "date": "2026-11-17T20:33:11+00:00",
   "source": "Film New Europe",
   "excerpt": "",
-  "category": "canada",
+  "category": "business",
   "canada_only": false,
   "google": true,
   "intl": false,
@@ -3918,13 +3918,13 @@
   "ai": false,
   "vibe": false,
   "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "dgc": false,
+  "iatse": false,
+  "guild": false
  },
  {
   "title": "Robert Pattinson is Ushering In the Movie Star Era Again",
@@ -6206,13 +6206,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "'The Last of Us' series brought more than $141 million in production spending to Alberta; a study found i",
@@ -7273,13 +7273,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "Adobe expands Creative Cloud AI agents to give creatives more time to focus on ideas",
@@ -7882,6 +7882,30 @@
   "prov": []
  },
  {
+  "title": "TBWA\\Australia’s DISRUPT AI Film Festival returns with record entries + expanded 2026 programme",
+  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQak14Szg3akFDV0d0OE4yN2E3dlNuckN3TWN2YUZpVndudjdiWnllb0FIM2F4UERSTFlqUGZWRUxJVUd4NGx2RVpyTTFZT0xnYmFNRzFLcXVXZTlYV2hESjNxdlBSZkJJUlQxSGRTT0Y0YXhpOGp6Q25GalpHVUoxNHF4TFFKb00xNDI4QzNpOUJUQzFOcjhISG9jM2hZd2czdU1RUXZEcV9SUGJFblNRSXdKWF9KQ0tEc0E?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "Campaign Brief",
+  "excerpt": "",
+  "category": "ai",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Adobe MAX 2026: What’s New for Filmmakers and Video Editors",
   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9OVkk2UkpRYklNSENqRXZ1eEM0MWlOckZsY00wT2gtcXZlUE1TMEx0Zmx4cTZCQlpTbjdHaThWd1NaR2Q3dW5JUnRjTV9oUkkzcVJHTWJ3T3JnUFU?oc=5",
   "date": "2026-11-10T08:00:00+00:00",
@@ -8024,30 +8048,6 @@
   "tips": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "TBWA\\Australia’s DISRUPT AI Film Festival returns with record entries + expanded 2026 programme",
-  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQak14Szg3akFDV0d0OE4yN2E3dlNuckN3TWN2YUZpVndudjdiWnllb0FIM2F4UERSTFlqUGZWRUxJVUd4NGx2RVpyTTFZT0xnYmFNRzFLcXVXZTlYV2hESjNxdlBSZkJJUlQxSGRTT0Y0YXhpOGp6Q25GalpHVUoxNHF4TFFKb00xNDI4QzNpOUJUQzFOcjhISG9jM2hZd2czdU1RUXZEcV9SUGJFblNRSXdKWF9KQ0tEc0E?oc=5",
-  "date": "2026-11-10T08:00:00+00:00",
-  "source": "Campaign Brief",
-  "excerpt": "",
-  "category": "ai",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
  },
  {
   "title": "Syntax Launches Business AI Practice to Help Organizations Move from Promise to Proven, Production-Grade AI",
@@ -8211,13 +8211,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "AI In Visual Effects Statistics By Market Size And Tools (2026)",
@@ -8608,6 +8608,30 @@
   ]
  },
  {
+  "title": "CMF welcomes Government of Canada’s historic investment",
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNR2RUdHlvVF82SmJNZTRFcGp6b0ZtNDJfdGpOSFBfOEVjZFJJS21ReVJkTUNPdy1QdjkwSkU0dlBIakVwZHZnRC1jbk5COEdRSGJsSlhwR3dCakdaSnhROVZLWUdOLVFaZUdvSzZfQ3ZDT2ZUVnZ2T3lXWEk1anRhcUJDTHllUQ?oc=5",
+  "date": "2026-11-08T08:00:00+00:00",
+  "source": "Canada Media Fund",
+  "excerpt": "",
+  "category": "business",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Ottawa reveals details on long-promised $600-million for screen and music sectors",
   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZkdfcmFQWm5jVTFqMjQyV3pBWUdXZDZaT3RTNWlUb1l3dzJSWXhQenRmNWZnUjM1X1NoYm1qc19qaTNxcm56OTJzTU03ZllkeEx2Y21VR3JKZzVFSHVsNXB5QkZkTTVJY1dKb0lLdE02UnlFSWRnZ1lnYUROeEFwNkE2cGNqWUtFZUx1b1h5MUp4SjFpT2o4dG9yUDJ2Vk1talpJT0VhWWNoUjRvTGxNOWRFa24?oc=5",
   "date": "2026-11-08T08:00:00+00:00",
@@ -8632,30 +8656,6 @@
   "prov": [
    "ON"
   ]
- },
- {
-  "title": "CMF welcomes Government of Canada’s historic investment",
-  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNR2RUdHlvVF82SmJNZTRFcGp6b0ZtNDJfdGpOSFBfOEVjZFJJS21ReVJkTUNPdy1QdjkwSkU0dlBIakVwZHZnRC1jbk5COEdRSGJsSlhwR3dCakdaSnhROVZLWUdOLVFaZUdvSzZfQ3ZDT2ZUVnZ2T3lXWEk1anRhcUJDTHllUQ?oc=5",
-  "date": "2026-11-08T08:00:00+00:00",
-  "source": "Canada Media Fund",
-  "excerpt": "",
-  "category": "business",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": []
  },
  {
   "title": "China reiterates support for live-action micro-dramas, vows to regulate AI productions as actors seek new opportunities amid industry shifts",
@@ -8793,13 +8793,13 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "guild": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgc": false,
-  "iatse": false,
-  "guild": false
+  "prov": []
  },
  {
   "title": "8 Best AI Filmmaking Tools",

@@ -3,6 +3,8 @@ lines stay in their original language. Draft translation: needs a native French 
 import html, re
 
 EXACT = {
+    "🆕 NEW": "🆕 NOUVEAU",
+    "● LIVE": "● EN DIRECT", "Next update in": "Prochaine mise à jour dans", "Last updated": "Dernière mise à jour", "All stories from the last 3 weeks:": "Tous les articles des 3 dernières semaines :",
     "☕ Buy us a coffee": "☕ Offrez-nous un café", "Support us.": "Soutenez-nous.",
     "⚙️ Choose what you see": "⚙️ Choisissez ce que vous voyez", "Tick what you want on this page. We remember your choices on this device.": "Cochez ce que vous voulez voir sur cette page. Nous retenons vos choix sur cet appareil.",
     "☕ Morning Roll": "☕ Rouleau du matin", "📼 Past 10 days of the roll": "📼 Les 10 derniers jours du rouleau", "🕐 Update clock": "🕐 Horloge de mise à jour", "⭐ Our Picks": "⭐ Nos choix",
