@@ -80,7 +80,7 @@ ATTR = {
     "Toggle theme": "Changer de thème", "Morning Roll": "Rouleau du matin", "Past ten days of the Morning Roll": "Les dix derniers jours du Rouleau du matin", "Update clock": "Horloge de mise à jour",
     "Search stories": "Rechercher des articles", "Filter by province": "Filtrer par province", "Our picks": "Nos choix", "Sections": "Sections",
     "Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…": "Rechercher des titres — Resolve, Avid, Téléfilm, Vancouver, crédit d'impôt…",
-    "Back to the home page": "Retour à l'accueil", "Back to the home page (the 2 beep)": "Retour à l'accueil",
+    "Back to the home page": "Retour à l'accueil", "Back to the top": "Retour en haut de la page", "Back to the home page (the 2 beep)": "Retour à l'accueil",
 }
 
 

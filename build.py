@@ -365,6 +365,13 @@ def main():
         _rel = f.relative_to(OUT).as_posix()
         if _rel == "index.html":
             t = t.replace("</head>", NAV_CSS + "</head>", 1)
+            _tf = HOME_FAB.replace('<a class="homefab" href="/" title="Back to the home page (the 2 beep)" aria-label="Back to the home page">',
+                                   '<a class="homefab" id="topfab" href="#top" title="Back to the top" aria-label="Back to the top" style="display:none">', 1)
+            _tf += ('<script>(function(){var b=document.getElementById("topfab");if(!b)return;'
+                    'function f(){b.style.display=(window.scrollY>500)?"flex":"none"}'
+                    'window.addEventListener("scroll",f,{passive:true});f();'
+                    'b.addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"})})})();</script>')
+            t = t.replace("</body>", _tf + "</body>", 1)
         if _rel != "index.html":
             t = add_nav(t, _rel, bool(_arts))
         if _rel != "index.html" and "homefab" not in t:
