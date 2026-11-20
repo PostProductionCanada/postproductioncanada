@@ -53,6 +53,25 @@ READING = [
      "https://ca.billboard.com/music/awards/canadian-sync-awards-2026-nominees"),
 ]
 
+RIGHTS = [
+    ("Canada's Copyright Act: how long it lasts", "Changed December 30, 2022",
+     "The general term of copyright in Canada went from the author's life plus 50 years to life plus 70 years on December 30, 2022. "
+     "The change does not bring back works that were already in the public domain. Moral rights last as long as the copyright and stay with the author: they can be waived but not assigned. "
+     "The Act's basic rule is that the author is the first owner of the copyright, subject to the rest of the Act. How commissioned or employee work is treated needs a lawyer or the Act itself.",
+     "https://uwaterloo.ca/copyright-at-waterloo/news/copyright-term-changes-life-plus-70-years"),
+    ("Music licensing in Canada: who licenses what", "DLA Piper, 2024",
+     "A law-firm guide to the Canadian music licensing landscape. In general terms, SOCAN licenses the public performance of musical works, CMRRA licenses reproduction (mechanical) rights, "
+     "and Re:Sound collects neighbouring-rights royalties for performers and the makers of sound recordings. A song in a cut can involve more than one of them, plus a direct sync licence from the publisher and the label.",
+     "https://www.dlapiper.com/en/insights/publications/2024/01/music-licensing-in-canada"),
+    ("CMRRA: what is music copyright?", "CMRRA, Canadian Musical Reproduction Rights Agency",
+     "CMRRA's own explainer. It licenses and collects mechanical royalties for most songs recorded, sold and broadcast in Canada.",
+     "https://cmrra.ca/?p=14"),
+    ("SOCAN reported to have bought CMRRA", "Complete Music Update, July 30, 2026 (one report, not confirmed elsewhere)",
+     "One trade report says SOCAN has bought CMRRA from SoundExchange, which would put performing and mechanical licensing under one Canadian organisation. "
+     "We have not confirmed it with SOCAN or CMRRA, so check their sites before relying on it.",
+     "https://completemusicupdate.com/canadas-socan-buys-cmrra-from-soundexchange-meaning-canadian-performing-and-mechanical-rights-will-now-be-licensed-through-one-organisation/"),
+]
+
 RELATED = ("A different group: the Screen Composers Guild of Canada represents composers and music producers for film and television, "
            "not music supervisors. Its site is screencomposers.ca.")
 
@@ -67,6 +86,7 @@ def render(leaf, favicon, updated):
             'Canadian only. If something is out of date or missing, send it to us.</p>'
             '<h2>The Canadian guild</h2>' + _cards(GUILD)
             + '<h2>Awards and events</h2>' + _cards(EVENTS)
+            + '<h2>©️ Rights, copyright and ownership</h2><p class="note">General information from the sources linked, not legal advice. For a real clearance or ownership question, ask an entertainment lawyer.</p>' + _cards(RIGHTS)
             + '<h2>Reading</h2>' + _cards(READING)
             + '<p class="note">' + e(RELATED) + '</p>'
             '<h2>Send us a Canadian music supervisor story</h2><p>Know of an article, interview or event we missed? Email '

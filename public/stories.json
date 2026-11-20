@@ -15,6 +15,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -34,6 +35,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -53,6 +55,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -72,6 +75,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -91,6 +95,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -110,6 +115,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -129,6 +135,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -148,6 +155,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -167,6 +175,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -186,6 +195,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -205,6 +215,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -224,6 +235,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -243,6 +255,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": true,
   "status": false,
   "prov": [
    "BC"
@@ -264,6 +277,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -283,6 +297,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -302,6 +317,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -321,6 +337,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -340,8 +357,31 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Ubisoft cuts 166 jobs at Montreal and Quebec City video game studios",
+  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUzFSaS1ITE54YXg5dEtqSFdobC1jVjd4N1BuYTFCemZvXzlrU0o1aGxjcUhFMG1Ldm42U3BtVXI5MHFuLXJKMnFZZnZ0cEJGQmZSTFRVX1pVMS01ZmdsdVRkN2k1WFg2SzQwcEU5WXhIekJ6UUxQN2VZUXJyQmF6RXpmeTJRWDV4TXdj?oc=5",
+  "date": "2026-11-19T21:27:19+00:00",
+  "source": "CBC",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "legal": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "'GTA VI' Glorifies Killing, and That's Okay",
@@ -359,6 +399,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -380,6 +421,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -399,6 +441,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": true,
   "status": false,
   "prov": []
  },
@@ -418,6 +461,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -437,6 +481,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -459,6 +504,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -478,29 +524,9 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Ubisoft cuts 166 jobs at Montreal and Quebec City video game studios",
-  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQi1iSXRiOEJHMk9zTjRKSnFXblpNanVzV0ZpWHFoYTFDVUc3UHhnSVFpb0kxS1FrQmR5WlRMZi1vZ0VGaUNYd2YxMXZKMTVvSUtpZTFzYzRhTHgtaE5ON1VVbVV6MWtOY19oemdJYTRVYU45MDVjQWVMcmJYYXo2SExfcVV1aUNfWDNIeFROR0xYYnNUVENKU0xncTFlak0?oc=5",
-  "date": "2026-11-19T19:04:08+00:00",
-  "source": "CBC",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": [
-   "QC"
-  ]
  },
  {
   "title": "How Costume Designer Mynka Draper Captured Early-'90s LA Hip-Hop for FX’s 'The Drop: A Snowfall Saga'",
@@ -518,6 +544,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -537,6 +564,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -556,6 +584,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -575,6 +604,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -594,6 +624,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -613,6 +644,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -636,6 +668,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -655,6 +688,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -674,6 +708,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -693,6 +728,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -712,6 +748,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -731,6 +768,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -750,6 +788,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -769,6 +808,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -788,6 +828,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -807,6 +848,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -826,6 +868,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -845,6 +888,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -864,6 +908,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -883,6 +928,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -902,6 +948,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -921,6 +968,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -940,6 +988,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -959,8 +1008,31 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Ontario Investing Nearly $10 Million to Support Film and TV Sector in Northern Ontario",
+  "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZkEtZEp1NExmRkxsVGF3V2V6U2pUZE1KMVJJWUE1RTMzQmJWS0czMUtsaUV5REVMYURrSlBDYUM0LXg0Q2p0d05wVVh1SEk5b2ZVeUlLQzNtZW16MlppQXFBaTRLVmdSMlFVTVVZVnhSaWFUOGNMd213NVBBaU03SzU2LUYxQ1BLVUpjWnpMOWpNUEljNXJteHVrUFlYUGlVTk04UkZJUksyMEp2MHpqb3VRX2FtM3VZLTdvYjB6UVM4eGhTeTc4?oc=5",
+  "date": "2026-11-19T14:13:45+00:00",
+  "source": "ontario.ca",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "legal": false,
+  "status": false,
+  "prov": [
+   "ON"
+  ]
  },
  {
   "title": "Hollyland Solidcom SE – 2.4GHz Full-Duplex Intercom for Crews of Up to Five + Black Friday Deal",
@@ -978,6 +1050,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -997,6 +1070,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1019,6 +1093,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1038,6 +1113,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1057,6 +1133,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1076,6 +1153,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1095,6 +1173,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1114,6 +1193,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1133,6 +1213,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1152,6 +1233,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1171,6 +1253,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1190,6 +1273,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1209,6 +1293,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1228,6 +1313,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1247,6 +1333,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1266,6 +1353,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1285,6 +1373,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1304,6 +1393,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1323,6 +1413,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1342,6 +1433,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1361,6 +1453,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1380,6 +1473,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1399,6 +1493,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1418,6 +1513,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1437,6 +1533,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1457,7 +1554,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Film Quote of the Day: 'The Third Man' Speech That Gave Us a Great Villain Line",
@@ -1475,6 +1573,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1494,6 +1593,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1513,6 +1613,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1532,6 +1633,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1551,6 +1653,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1570,6 +1673,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1589,6 +1693,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -1611,7 +1716,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Floyd Norman Accepts Honorary Oscar At The Governors Awards",
@@ -1629,6 +1735,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1648,6 +1755,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1668,7 +1776,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "98 Years Ago, This 7 Min Cartoon Changed Hollywood Animation Forever",
@@ -1686,6 +1795,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1705,6 +1815,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1724,6 +1835,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1743,6 +1855,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1762,6 +1875,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1781,6 +1895,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1800,6 +1915,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1819,6 +1935,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1838,6 +1955,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1857,6 +1975,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1876,6 +1995,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1895,6 +2015,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1914,6 +2035,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1933,6 +2055,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1952,6 +2075,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1971,6 +2095,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -1990,6 +2115,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -2011,6 +2137,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2031,7 +2158,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "rushes Rentals Launched – Vimeo On Demand Alternative with 90% Revenue Share and Rentals from Your Own Website",
@@ -2049,6 +2177,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2068,6 +2197,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2088,7 +2218,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Panasonic LUMIX SHX1: the first compact cinema camera in LUMIX history",
@@ -2106,6 +2237,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2126,7 +2258,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Series Mania Forum Announces Canada-Québec as Guests of Honour for 2027",
@@ -2144,6 +2277,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "QC"
@@ -2165,6 +2299,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2184,6 +2319,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2203,6 +2339,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2225,7 +2362,8 @@
   "prov": [
    "QC"
   ],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Canvas Worldwide’s Agentic Layer Helps Zillow Distinguish Real Renters From Dreamers",
@@ -2243,6 +2381,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2262,6 +2401,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2281,6 +2421,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2300,6 +2441,7 @@
   "ai": false,
   "vibe": false,
   "cce": true,
+  "legal": false,
   "status": false,
   "prov": [
    "ATL"
@@ -2322,7 +2464,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Full Sail’s Mix Palace Now Immersive",
@@ -2342,6 +2485,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2361,6 +2505,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2380,6 +2525,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2399,6 +2545,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2418,6 +2565,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2438,7 +2586,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "The 5 Best William Friedkin Movies",
@@ -2456,6 +2605,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2475,6 +2625,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2494,6 +2645,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2513,6 +2665,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2532,6 +2685,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2551,6 +2705,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2570,6 +2725,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2589,6 +2745,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2608,6 +2765,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2627,6 +2785,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2646,6 +2805,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2665,6 +2825,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2685,7 +2846,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Pizza Shops & Mini Marts: Inside Fordham University’s Recruitment Strategy",
@@ -2704,7 +2866,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "A Proposed UK Film and TV Deal Would Require Actors’ Consent and Payment for Digital Replicas",
@@ -2723,7 +2886,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": true
  },
  {
   "title": "How to Create Your Own Micro Short Film Using Topview’s Film Studio",
@@ -2741,6 +2905,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2760,6 +2925,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2779,6 +2945,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2799,7 +2966,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Final Cut Pro 13 adds MotionVFX for one of the biggest updates ever",
@@ -2817,6 +2985,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2836,6 +3005,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2855,6 +3025,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2875,7 +3046,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Panasonic Offers Even More Add-On Support for the New LUMIX SHX1 With This Control Grip Handle",
@@ -2894,7 +3066,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Nikon’s Big ZR Version 2.00 Firmware Update is Finally Ready to Drop Next Week",
@@ -2913,7 +3086,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Beeble’s Updated SwitchX 3.0: AI Environments, More Creative Control",
@@ -2931,6 +3105,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -2951,7 +3126,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "9 Differences Between Amateur and Pro Writers, from a Disney Head Writer",
@@ -2970,7 +3146,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Creative BC welcomes Pete Mitchell and Tarek Elneweihi to its Board of Directors",
@@ -2988,6 +3165,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -3009,6 +3187,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3028,6 +3207,7 @@
   "ai": true,
   "vibe": true,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3047,6 +3227,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": true,
   "status": false,
   "prov": []
  },
@@ -3066,6 +3247,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3085,6 +3267,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3105,7 +3288,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Panasonic LUMIX SHX1 Lab Test – Rolling Shutter, Dynamic Range and Exposure Latitude",
@@ -3123,6 +3307,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3142,6 +3327,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3161,6 +3347,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3180,6 +3367,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3199,6 +3387,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3219,7 +3408,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "‘The Cat Came Back’ Director Cordell Barker Gives Santa A Rival In The Full Trailer For ‘The Anta Claus Of The South Pole’ (EXCLUSIVE)",
@@ -3237,6 +3427,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3257,7 +3448,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Canadian film powerhouse Rhombus Media acquired by nascent player Skywild Pictures",
@@ -3275,6 +3467,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3294,6 +3487,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "QC"
@@ -3315,6 +3509,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3334,6 +3529,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": true,
   "status": false,
   "prov": []
  },
@@ -3354,7 +3550,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Seven Acclaimed Korean Directors Team Up for AI Films at 'The Collaboration 2026' This November",
@@ -3372,6 +3569,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3391,6 +3589,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": true,
   "status": false,
   "prov": []
  },
@@ -3411,7 +3610,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Sony drone boom mic patent: stays out of shot",
@@ -3430,7 +3630,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Why Trump Is Throwing His Weight Behind a Hollywood Tax Credit",
@@ -3449,7 +3650,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "AI Is the Big Show. Creators Carry the Story.",
@@ -3468,7 +3670,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "HPA NET Roundtable: AI as a Second Unit",
@@ -3487,7 +3690,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Scott Brothers Entertainment launches Curity Studios podcast network",
@@ -3505,6 +3709,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3524,6 +3729,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "QC"
@@ -3547,6 +3753,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3566,6 +3773,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3585,6 +3793,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3605,7 +3814,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Film Quote of the Day: The ‘Harry Potter’ Line That Reminds Us Not to Lose Ourselves in Dreams",
@@ -3624,7 +3834,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Consider Leveling Up Your Color Grading Workflows in Final Cut Pro With This New Color Plugin",
@@ -3643,7 +3854,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Lilith Fair, Backrooms, win at the Directors Guild of Canada Awards",
@@ -3661,6 +3873,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3681,7 +3894,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Virtual Content Creator Roundtable",
@@ -3700,7 +3914,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Box Office: ‘The Cat In The Hat’ Holds At No. 2 As ‘Wildwood’ Passes ‘Kubo’",
@@ -3719,7 +3934,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Equity Urges British Actors to Back New AI and Pay Deal",
@@ -3738,7 +3954,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Lomography Lomo72: price, specs, release date",
@@ -3757,7 +3974,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Nikon Z8 Firmware Mod NikonFirmwarePatch Adds 8.3K Open-Gate N-RAW, More ProRes Options and S-Log3",
@@ -3776,7 +3994,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Adobe Max: AI takes center stage in Miami",
@@ -3794,6 +4013,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3814,7 +4034,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "The huge CyberLink Black Friday sale is a fantastic chance to get into video editing",
@@ -3833,7 +4054,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "The first scene from the new Harry Potter series just dropped – and it's sparked a fierce filmmaking debate",
@@ -3852,7 +4074,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "SmallRig Magnetic Phone Support Mounts the iPhone Duo on a Camera – MagSafe, Dual Rotating Shafts, 80g Aluminum Build",
@@ -3871,7 +4094,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Final Equity-Pact Deal Offer Includes AI Provisions, Streamer Residuals",
@@ -3889,6 +4113,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3908,6 +4133,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -3928,7 +4154,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "New York Closes In on California as Top US Production State – California Answers With $1 Billion Tax Credit Plan",
@@ -3947,7 +4174,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "ASUS XG Core RX 9060 XT LP: specs and price",
@@ -3966,7 +4194,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Memory Costs Hit Canon, FUJIFILM, Nikon and Sony – Canon Plans Price Increases From 2027",
@@ -3985,7 +4214,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "[REVIEW] AI movie 'Raphael' impresses visually, lacks fresh plot",
@@ -4003,6 +4233,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4022,6 +4253,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4042,7 +4274,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Christine Shaw: Adapting Filmmaking to Every Story and Platform",
@@ -4061,7 +4294,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "The Testaments, Small Achievable Goals lead 2026 DGC Awards winners",
@@ -4080,7 +4314,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Zhao Liying and 17 other actors file lawsuit.",
@@ -4099,7 +4334,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": true
  },
  {
   "title": "Manchester Animation Festival Bans Generative AI Films for 2027 as 2026 Short Film Winners Revealed",
@@ -4117,6 +4353,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4136,6 +4373,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4155,6 +4393,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4174,6 +4413,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4193,6 +4433,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4213,7 +4454,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "'The Last of Us' series brought more than $141 million in production spending to Alberta; a study found i",
@@ -4231,6 +4473,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "AB"
@@ -4252,6 +4495,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ATL"
@@ -4273,6 +4517,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4292,6 +4537,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4312,7 +4558,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
@@ -4331,7 +4578,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Donald Trump Urges Congress To Pass Federal Film & TV Tax Incentive Amid Worries Bill Will Languish: “Get This Done!”",
@@ -4350,7 +4598,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Indigenous Screen Office welcomes $51M promised by federal budget",
@@ -4368,6 +4617,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4387,6 +4637,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4406,6 +4657,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -4431,7 +4683,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Save Hundreds on Your Next Cinema Camera – MZed Pro Members Now Get B&H Education Pricing",
@@ -4450,7 +4703,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Insta360 X5 in How to Rob a Bank: 360 camera use",
@@ -4469,7 +4723,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Rescue Your Interview Audio Without Leaving Premiere",
@@ -4488,7 +4743,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Nikon Z30 Wonder Lantern Mod Adds Higher Bitrates – 200 Mbps 4K, 25-Minute Slow Motion, Photo Zebras",
@@ -4507,7 +4763,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "ARRI Publishes Legacy Analog Camera Archive – ARRIFLEX 35, 16SR and 416 Manuals, Brochures and Specs Online",
@@ -4526,7 +4783,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Greenlit Dark Introduces AI Filmmaking Platform for Independent and Genre Productions",
@@ -4544,6 +4802,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4563,6 +4822,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4582,6 +4842,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -4604,7 +4865,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "New Trailer For Brad Bird’s ‘Ray Gunn’ Arrives Ahead Of Limited 70mm Run",
@@ -4623,7 +4885,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "AI short film \"Red Chamber Dream Returns\" accused of illegally using images of 17 actors",
@@ -4641,6 +4904,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4660,6 +4924,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4679,6 +4944,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4701,7 +4967,8 @@
   "prov": [
    "ON"
   ],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Playing in Canada’s cinema sandbox is art on a tight budget",
@@ -4719,6 +4986,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4738,6 +5006,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -4760,7 +5029,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Blackmagic Expands Apple Partnership With 108-Microphone Spatial Audio System",
@@ -4778,6 +5048,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4798,7 +5069,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Mega Man Legends ACTRA Toronto Listing Reveals A New Project Could Be in The Works",
@@ -4816,6 +5088,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -4838,7 +5111,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Council plans to charge TV productions for filming",
@@ -4856,6 +5130,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4875,6 +5150,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4894,6 +5170,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4913,6 +5190,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4932,6 +5210,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4951,6 +5230,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4970,6 +5250,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -4989,6 +5270,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5008,6 +5290,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5027,6 +5310,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5046,6 +5330,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5065,6 +5350,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5084,6 +5370,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5103,6 +5390,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -5124,6 +5412,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5143,6 +5432,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5162,6 +5452,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5181,6 +5472,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5200,6 +5492,27 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "The 2026 Boston-Silicon Valley AI Film Festival: 11 Awards and the Convergence of AI & Filmmaking",
+  "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQTjI4UTJfUWNsNmxzR3IzU0V4SHVUX0ZaaXFKNW5SWnJ6ZzBZZGZjQUNBdzNURzR2RG1oZGFQTC1sVEpMY0hmZWVNZVM2Y2xFTVdINkd0eE5TWWk3d0RISkxrYnNuSUdJaTVEVk9SQmdCbmEydXVSUTM1dW9jT2k1cE9WM2pwQnJ4TkhrS3hmaEY3ellZQmZnaFZTWlZNVWhXY2hITU9RRzEzQl85dU9kWjlnMDVfTXlVN0hHSm45X1JyVDNaVjJEcldKb1RNWDZoOXVQc1lYWVQtd0RuTUhjNnZObE8?oc=5",
+  "date": "2026-11-10T10:03:54+00:00",
+  "source": "The Detroit News",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5219,6 +5532,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5238,6 +5552,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5257,25 +5572,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "George Stroumboulopoulos hosts new MADE / unmade conversation series for CMF and Telefilm",
-  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPajdsZFRMUU50cnpybmtIbjVZdEo0cDNScnVlYnJ3NnFrVW5wMGpiTVdVYU45N2pUa0NYd2ZYVTI2MENYTmdnZmxRbU84eTVYOVVndTVKU1Naak5kUVZwZVNmQlVobUMxVllWN21CRVdYa1VWOWF6TkVCblVOaHpYQlRwUEtIZzI1THQ0ZTVxOHpIczFrSEdiNFB5Tk5rMlVjTUZPMzJOc21aZXZkLTZEVGwyNlM4MEx3OXc?oc=5",
-  "date": "2026-11-10T08:00:00+00:00",
-  "source": "Broadcast Dialogue",
-  "excerpt": "",
-  "category": "business",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5295,29 +5592,11 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
   ]
- },
- {
-  "title": "The 2026 Boston-Silicon Valley AI Film Festival: 11 Awards and the Convergence of AI & Filmmaking",
-  "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTzRXSjdBXy1IN2ZFQjdKV0lFQTFWT1dXUkZ3ajM1cFJYVjlJVmloSVF3T0w0TkpySWtKcFR0b2s2bS1yd2JDUlctdmRpN05kdEQ5bW10eWZoa2t2U0pQeVJWb2dYSnhQdnZEY21fTlRkZjJPZTY4ZUdISWVZLTZPQVE2eVFhZ1VVTTlrX1VNSWpuLVcwd1ZHaVZudzM2REtHVVQxV2Zwd2ZnZU1FMXZYRVh1ZEw0YUJRRWVaUTlwU1ZDVHFnWlJFam1QUkJwMjFyeUMtNUw3TExMeVdvOG1vZTRPazExOEdZOE5sMw?oc=5",
-  "date": "2026-11-10T08:00:00+00:00",
-  "source": "The Des Moines Register",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "status": false,
-  "prov": []
  },
  {
   "title": "From Pilot to Production: The Intelligence Powering Agentic AI in Capital Markets",
@@ -5335,6 +5614,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5354,6 +5634,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5373,8 +5654,29 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "George Stroumboulopoulos hosts new MADE / unmade conversation series for CMF and Telefilm",
+  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPajdsZFRMUU50cnpybmtIbjVZdEo0cDNScnVlYnJ3NnFrVW5wMGpiTVdVYU45N2pUa0NYd2ZYVTI2MENYTmdnZmxRbU84eTVYOVVndTVKU1Naak5kUVZwZVNmQlVobUMxVllWN21CRVdYa1VWOWF6TkVCblVOaHpYQlRwUEtIZzI1THQ0ZTVxOHpIczFrSEdiNFB5Tk5rMlVjTUZPMzJOc21aZXZkLTZEVGwyNlM4MEx3OXc?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "Broadcast Dialogue",
+  "excerpt": "",
+  "category": "business",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "cce": false,
+  "status": false,
+  "prov": [],
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Why your best AI pilots never see production",
@@ -5393,7 +5695,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "TriCoast Advanced Technology Studios Launches Global AI Feature Film Production Company Targeting 35 Features Per Year",
@@ -5411,6 +5714,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5430,6 +5734,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5449,6 +5754,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -5470,6 +5776,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5489,6 +5796,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5508,6 +5816,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5527,6 +5836,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5546,6 +5856,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "MB"
@@ -5567,6 +5878,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5586,6 +5898,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5605,6 +5918,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5624,6 +5938,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5643,6 +5958,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5662,6 +5978,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5681,6 +5998,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -5703,7 +6021,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Ottawa reveals details on long-promised $600-million for screen and music sectors",
@@ -5721,6 +6040,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "ON"
@@ -5743,7 +6063,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Sony Demonstrates Real-Time Stabilization and Jello Effect Suppression for Professional Cameras",
@@ -5762,7 +6083,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "8 Best AI Filmmaking Tools",
@@ -5780,6 +6102,7 @@
   "ai": true,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5799,6 +6122,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -5818,6 +6142,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -5840,7 +6165,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",
@@ -5859,7 +6185,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Exclusive | Film industry's winter meets AI onslaught: Why do some actors still work in Hengdian?",
@@ -5878,7 +6205,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Bruno Dumont turns to generative AI to film English-language sci-fi thriller ‘The End’",
@@ -5897,7 +6225,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "‘Kamen Rider’ Studio Toei Frames Generative AI Rules, Sets First Video Games for 2027",
@@ -5916,7 +6245,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "WETA | Hollywood studios actively pursuing generative AI",
@@ -5935,7 +6265,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Bruno Dumont Made His Next Film ‘The End’ Entirely With AI",
@@ -5954,7 +6285,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Grimes Makes Film Debut in AI-Generated Movie After Saying She Doesn't Use AI in Her Music",
@@ -5973,7 +6305,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "A master of cinema worries AI is stealing our sense of self",
@@ -5992,7 +6325,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Netflix Thriller TRINITY With Gugu Mbatha-Raw & Richard Madden Drops December 1",
@@ -6010,6 +6344,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6029,6 +6364,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6048,6 +6384,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6067,6 +6404,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6087,7 +6425,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Dark Slope to Open New Virtual Production Stage in Vancouver (Exclusive)",
@@ -6108,7 +6447,8 @@
   "prov": [
    "BC"
   ],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Ottawa boosts journalism tax credit by $501M, extends eligibility to broadcasters",
@@ -6129,7 +6469,8 @@
   "prov": [
    "ON"
   ],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Idris Elba and Google give African filmmakers a route from AI training to funded films",
@@ -6148,7 +6489,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Korean, Chinese filmmakers seek common ground beyond politics through AI",
@@ -6167,7 +6509,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Hollywood Has Flipped on GenAI, Says 'Avatar' VFX House Weta FX Chief",
@@ -6186,7 +6529,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "AI movies make leap from short clips to big screen",
@@ -6205,7 +6549,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Grimes is going to star in an AI movie that’s coming to theaters",
@@ -6224,7 +6569,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "How Grimes’ Cameo in Theater-Bound AI Film ‘Gods Don’t Give Gifts’ Came Together (EXCLUSIVE)",
@@ -6243,7 +6589,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Can AI Really Replace Everyone in the Film Industry?",
@@ -6262,7 +6609,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "Former Disney AI Executive Joins Studio Making Antonio Banderas Film With Artificial Intelligence",
@@ -6281,7 +6629,8 @@
   "cce": false,
   "status": false,
   "prov": [],
-  "vibe": false
+  "vibe": false,
+  "legal": false
  },
  {
   "title": "It’s up to Carney to protect Canadian content on our screens",
@@ -6299,6 +6648,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6318,6 +6668,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6337,6 +6688,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -6358,6 +6710,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -6379,6 +6732,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -6400,6 +6754,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"
@@ -6421,6 +6776,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6440,6 +6796,7 @@
   "ai": false,
   "vibe": false,
   "cce": false,
+  "legal": false,
   "status": false,
   "prov": []
  },
@@ -6459,6 +6816,7 @@
   "ai": false,
   "vibe": false,
   "cce": true,
+  "legal": false,
   "status": false,
   "prov": [
    "BC"

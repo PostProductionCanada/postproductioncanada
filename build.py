@@ -167,7 +167,7 @@ HOME_FAB = ('<a class="homefab" href="/" title="Back to the home page (the 2 bee
             'font:800 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 14px 7px 8px;border-radius:999px;'
             'border:2px solid #ffb000;box-shadow:0 4px 14px rgba(0,0,0,.35)}.homefab:hover{background:#000}@media print{.homefab{display:none}}</style>')
 
-NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("music-supervisors.html", "🎸 Music Supervisors"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Education"), ("canadians.html", "🇨🇦 Canadian Stories"),
+NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("sound.html", "🎧 Sound"), ("music-supervisors.html", "🎸 Music Supervisors"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Education"), ("canadians.html", "🇨🇦 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -231,6 +231,7 @@ def main():
             it["ai"] = bool(AI_CS.search(blob2) or AI_CI.search(blob2))
             it["vibe"] = bool(VIBE_RE.search(blob2) and VIBE_CTX.search(blob2))
             it["cce"] = bool(CCE_RE.search(blob2 + " " + it["source"] + " " + it["url"]))
+            it["legal"] = bool(LEGAL_RE.search(blob2))
             it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
             it["prov"] = [k for k, r in PROV_RE.items() if r.search(blob2)]
             if it["category"] in ("picture", "gear", "vfx"):
@@ -251,6 +252,7 @@ def main():
         a.setdefault("canada", False); a.setdefault("status", False); a.setdefault("prov", []); a.setdefault("source", "")
         a["ai"] = bool(AI_CS.search(_b) or AI_CI.search(_b))
         a["vibe"] = bool(VIBE_RE.search(_b) and VIBE_CTX.search(_b))
+        a["legal"] = bool(LEGAL_RE.search(_b))
         a["cce"] = bool(CCE_RE.search(_b + " " + a["source"] + " " + a.get("url", "")))
         items.append(a)
     items.sort(key=lambda i: i["date"], reverse=True)
@@ -266,7 +268,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -305,6 +307,8 @@ def main():
     (OUT / "canadians.html").write_text(canadians.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import originals
     _arts = originals.render_all(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg, OUT, ROOT)
+    import soundpost
+    (OUT / "sound.html").write_text(soundpost.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import musicsup
     (OUT / "music-supervisors.html").write_text(musicsup.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import software
@@ -389,7 +393,12 @@ CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Ed
         "ai": ("🤖", "AI Filmmaking"),
         "cce": ("✂️", "CCE"),
         "vibe": ("🎚️", "Vibe Cutting"),
-        "status": ("⚖️", "Status of the Artist")}
+        "status": ("⚖️", "Status of the Artist"),
+        "legal": ("©️", "Copyright & Legal")}
+LEGAL_RE = re.compile(r"(copyright\w*|intellectual property|infring\w+|lawsuits?|\bsued?\b|\bsues\b|litigation|piracy|pirated|"
+                      r"trade-?marks?|likeness|right of publicity|moral rights|fair dealing|neighbouring rights|\bSOCAN\b|\bCMRRA\b|re:sound|"
+                      r"\bsync(hronization)? licen[cs]\w+|music licen[cs]\w+|licen[cs]ing (deal|agreement|rights)|training data|"
+                      r"who owns|ownership of|rights holders?|rightsholders?|digital replicas?|work[- ]for[- ]hire)", re.I)
 VIBE_RE = re.compile(r"vibe (cutting|editing)|agentic|\bMCP\b|AI assistant|natural[- ]language|creative agent|text-based editing|chat-?based", re.I)
 VIBE_CTX = re.compile(r"\bedit|video|timeline|premiere|resolve|avid|filmmak|post-?production|final cut|media composer", re.I)
 CCE_RE = re.compile(r"\bCCE\b|Canadian Cinema Editors|cceditors\.ca")
@@ -432,6 +441,7 @@ def card(i):
     if i["canada"]: cats.append("canada")
     cats.append(i["category"])
     if i["status"]: cats.append("status")
+    if i.get("legal"): cats.append("legal")
     if i["ai"]: cats.append("ai")
     if i["cce"]: cats.append("cce")
     if i["vibe"]: cats.append("vibe")
@@ -449,6 +459,8 @@ def card(i):
         chip += '<span class="chip c-cce" title="Canadian Cinema Editors">CCE</span>'
     if i["status"]:
         chip += '<span class="chip c-status">⚖️ Status</span>'
+    if i.get("legal"):
+        chip += '<span class="chip c-legal">©️ Legal</span>'
     for k in i["prov"]:
         chip += f'<span class="chip c-prov">📍 {k}</span>'
     ex = f'<p class="ex">{esc(i["excerpt"])}</p>' if i["excerpt"] else ""
@@ -670,7 +682,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "cce" and i["cce"]) or (k == "vibe" and i["vibe"]) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "cce" and i["cce"]) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
@@ -799,7 +811,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -879,7 +891,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Education</a><a class="btn" href="canadians.html">🇨🇦 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="music-supervisors.html">🎸 Music Supervisors</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Education</a><a class="btn" href="canadians.html">🇨🇦 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="sound.html">🎧 Sound</a><a class="btn" href="music-supervisors.html">🎸 Music Supervisors</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
