@@ -49,7 +49,7 @@ def card(s):
     note = f'<p class="note">{e(s["note"])}</p>' if s.get("note") else ""
     src = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(o)}</span></li>' for t, o, u in s["sources"])
     pins = "".join(f'<span class="pill">📍 {e(p)}</span> ' for p in s.get("prov", []))
-    return (f'<article class="box"><div>{roles}{pins}</div><h3>{e(s["name"])}</h3><p class="angle">🍁 {e(s["angle"])}</p>'
+    return (f'<article class="box"><div>{roles}{pins}</div><h3>{e(s["name"])}</h3><p class="angle">🇨🇦 {e(s["angle"])}</p>'
             f'{paras}{cred}{note}<ul class="src">{src}</ul></article>')
 
 
@@ -91,7 +91,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <body>
 <header><div class="wrap top"><a class="brand" href="/"><span class="logo">{{LEAF}}</span>Post Production <b>Canada</b></a><a class="btn" href="/">← Latest news</a></div></header>
 <main class="wrap">
-<h1>🍁 Canadian Stories</h1>
+<h1>🇨🇦 Canadian Stories</h1>
 <p class="lede">Canadians have cut, directed and crafted a lot of the movies and television the world watches, often without anyone noticing. These are some of their stories.</p>
 {{CARDS}}
 <div class="box add"><h3>Got a story?</h3><p>If you know a Canadian editor, director or craftsperson with a great story, send us the name and we'll research it and add it here, with sources. A longer list is welcome too.</p></div>

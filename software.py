@@ -19,13 +19,13 @@ HISTORY = [
      "https://www.simonsaysai.com/blog/the-history-of-non-linear-editing", "Simon Says"),
     ("1989", "🧲", "The EMC2 and then Avid's Avid/1, the first Media Composer, arrive within weeks of each other. Lightworks is also created this year, in the UK, by Paul Bamborough, Nick Pollock and Neil Harris.",
      "https://en.wikipedia.org/wiki/Non-linear_editing", "Wikipedia"),
-    ("1991", "🍁", "Discreet Logic is founded in Montréal. Its Flame, Inferno and Smoke systems become a mainstay of visual effects and finishing. Lightworks appears in a London facility the same year.",
+    ("1991", "🇨🇦", "Discreet Logic is founded in Montréal. Its Flame, Inferno and Smoke systems become a mainstay of visual effects and finishing. Lightworks appears in a London facility the same year.",
      "https://en.wikipedia.org/wiki/Autodesk_Media_and_Entertainment", "Wikipedia"),
     ("1992 to 93", "📀", "Storage is the barrier. Until 1992 a Mac could reach only about 50 GB at once. By February 1993 a Disney Channel team had Media Composer reaching over seven terabytes, and long-form feature editing became possible. Within a year thousands of systems had replaced 35mm editing equipment in studios and TV stations.",
      "https://en.wikipedia.org/wiki/Non-linear_editing", "Wikipedia"),
     ("1999", "🤝", "Autodesk agrees to buy Discreet Logic for about US$520 million. The unit stays in Montréal.",
      "https://www.techmonitor.ai/analysis/discreet_logic_to_be_acquired_by_autodesk_for_520m", "Tech Monitor"),
-    ("2014", "🍁", "Blackmagic Design buys eyeon Software of Toronto, maker of the Fusion compositor. Fusion now lives inside DaVinci Resolve.",
+    ("2014", "🇨🇦", "Blackmagic Design buys eyeon Software of Toronto, maker of the Fusion compositor. Fusion now lives inside DaVinci Resolve.",
      "https://www.fxguide.com/quicktakes/eyeon-software-acquired-by-blackmagic-design", "fxguide"),
     ("2026", "🤖", "Agentic and AI-assisted tools arrive in every major editor, and Premiere, Resolve, Media Composer and Final Cut all shipped major updates this year.",
      "#now", "See below"),
@@ -57,13 +57,13 @@ SOUND = [
 VFX = [
     ("☢️", "Foundry Nuke", "Nuke 17.0 came out Feb 26, 2026 (Gaussian Splat support, a USD-based 3D system). Nuke 18.0 entered open beta in October 2026.",
      "https://www.foundry.com/news-and-awards/foundry-releases-nuke-17-advancing-compositing-workflows", "Foundry", False),
-    ("🍁", "Blackmagic Fusion", "Fusion Studio 21.1 shipped Sept 9, 2026. It began as eyeon Fusion in Toronto and is also built into Resolve.",
+    ("🇨🇦", "Blackmagic Fusion", "Fusion Studio 21.1 shipped Sept 9, 2026. It began as eyeon Fusion in Toronto and is also built into Resolve.",
      "https://www.cgchannel.com/2026/09/blackmagic-design-releases-fusion-studio-21", "CG Channel", True),
-    ("🍁", "SideFX Houdini", "Made by Side Effects Software of Toronto. Houdini 21 is current; SideFX previewed Houdini 22 in June 2026, according to a market report.",
+    ("🇨🇦", "SideFX Houdini", "Made by Side Effects Software of Toronto. Houdini 21 is current; SideFX previewed Houdini 22 in June 2026, according to a market report.",
      "https://www.sidefx.com", "SideFX", True),
     ("🔥", "Autodesk Flame", "The descendant of Discreet Logic's Flame, born in Montréal. Flame 2026.2 is the latest we found, with OpenColorIO support.",
      "https://www.autodesk.com/products/flame", "Autodesk", True),
-    ("🍁", "Autodesk Maya", "The 3D package that grew out of Alias, a Toronto company, and Wavefront.",
+    ("🇨🇦", "Autodesk Maya", "The 3D package that grew out of Alias, a Toronto company, and Wavefront.",
      "https://www.autodesk.com/products/maya", "Autodesk", True),
     ("🎮", "Unreal Engine (Epic Games)", "The game engine used for real-time work and virtual production on LED stages. It is the big name for real-time, not for traditional compositing, where Nuke leads. Version not checked this round.",
      "https://www.unrealengine.com", "Epic Games", False),
@@ -98,7 +98,7 @@ CHAIN = [
 def _row(items):
     out = ""
     for ic, nm, st, u, lb, ca in items:
-        tag = ' <span style="background:#8a1710;color:#fff;border-radius:999px;font:700 11px/1 sans-serif;padding:3px 8px">🍁 Canadian-made</span>' if ca else ""
+        tag = ' <span style="background:#8a1710;color:#fff;border-radius:999px;font:700 11px/1 sans-serif;padding:3px 8px">🇨🇦 Canadian-made</span>' if ca else ""
         out += ('<article class="box"><h3>' + ic + " " + e(nm) + tag + "</h3><p>" + e(st) + '</p><a href="' + e(u)
                 + '" target="_blank" rel="noopener">' + e(lb) + " →</a></article>")
     return out
@@ -125,9 +125,9 @@ def render(leaf, favicon, updated):
               '<a href="mailto:hello@postproductioncanada.ca?subject=Lightworks">hello@postproductioncanada.ca</a> and we will add it.</div>'
             + '<h2 id="now">🎬 Picture editing</h2>' + _row(PICTURE)
             + '<h2>🔊 Sound</h2>' + _row(SOUND)
-            + '<h2>✨ Visual effects</h2><p class="note">🍁 marks software with Canadian roots: Discreet Logic (Montréal), eyeon (Toronto), Side Effects (Toronto) and Alias (Toronto).</p>' + _row(VFX)
+            + '<h2>✨ Visual effects</h2><p class="note">🇨🇦 marks software with Canadian roots: Discreet Logic (Montréal), eyeon (Toronto), Side Effects (Toronto) and Alias (Toronto).</p>' + _row(VFX)
             + '<h2>📺 Watch</h2><p class="note">Links open YouTube in a new tab. Nothing loads from YouTube until you click. Know a good video? Send it to hello@postproductioncanada.ca.</p>' + vids + videos.shelf()
-            + '<h2>🍁 Made in Canada</h2><div class="box"><ul>'
+            + '<h2>🇨🇦 Made in Canada</h2><div class="box"><ul>'
               '<li><b>Discreet Logic, Montréal, 1991.</b> Flame, Inferno and Smoke, later bought by Autodesk.</li>'
               '<li><b>Softimage, Montréal.</b> The 3D company Discreet Logic\'s founder came from.</li>'
               '<li><b>eyeon Software, Toronto.</b> Fusion, now owned by Blackmagic Design.</li>'

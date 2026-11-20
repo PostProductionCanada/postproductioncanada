@@ -36,12 +36,12 @@ def render(leaf, favicon, updated, latest):
         tags = "".join(f'<span class="pill">{e(t)}</span> ' for t in it["tags"])
         pins = "".join(f'<span class="pill pin">📍 {e(p)}</span> ' for p in it["prov"])
         src = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a> <span class="when">{e(o)}</span></li>' for t, o, u in it["sources"])
-        cards += (f'<article class="box"><div>🍁 {pins}{tags}</div><h3>{e(it["title"])}</h3><p>{e(it["what"])}</p><ul class="src">{src}</ul></article>')
+        cards += (f'<article class="box"><div>🇨🇦 {pins}{tags}</div><h3>{e(it["title"])}</h3><p>{e(it["what"])}</p><ul class="src">{src}</ul></article>')
     lat = ""
     for i in latest[:10]:
         d = i["date"].strftime("%b %-d") if hasattr(i["date"], "strftime") else ""
         pins = "".join(f' <span class="pill pin">📍 {e(p)}</span>' for p in i.get("prov", []))
-        lat += f'<li>🍁 <a href="{e(i["url"])}" target="_blank" rel="noopener">{e(i["title"])}</a>{pins} <span class="when">{e(i["source"])}, {e(d)}</span></li>'
+        lat += f'<li>🇨🇦 <a href="{e(i["url"])}" target="_blank" rel="noopener">{e(i["title"])}</a>{pins} <span class="when">{e(i["source"])}, {e(d)}</span></li>'
     lat = f'<ul class="src" style="border:0;padding:0;margin:0">{lat}</ul>' if lat else '<p class="note">Nothing matching right now. This fills in as studios and trades report.</p>'
     return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{CARDS}}", cards)
             .replace("{{LATEST}}", lat).replace("{{UPDATED}}", updated))

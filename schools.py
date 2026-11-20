@@ -161,7 +161,7 @@ def render(leaf, favicon, updated):
                           f'<a href="{e(url)}" target="_blank" rel="noopener">{e(title)}</a><div class="note">{e(note)}</div></div>')
             code = REGION_CODE.get(region) or ("NL" if "North Atlantic" in s["school"] else "NS")
             cards.append(f'<article class="box" data-tags="{" ".join({t for p in s["programs"] for t in p[1]})}"><h3>{e(s["school"])}</h3>'
-                         f'<div class="meta">🍁 📍 {code} · {e(s["city"])} · {e(s["kind"])}</div>{progs}</article>')
+                         f'<div class="meta">🇨🇦 📍 {code} · {e(s["city"])} · {e(s["kind"])}</div>{progs}</article>')
         secs.append(f'<h2 id="{e(region.lower().replace(" ", "-"))}">{e(region)}</h2>{"".join(cards)}')
     return (PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{SECTIONS}}", "".join(secs) + alumni_html()).replace("{{UPDATED}}", updated))
 

@@ -113,7 +113,7 @@ def rumours_html():
     out = ""
     for prov, code, srcname, url, note, items in RUMOURS:
         lis = "".join(f"<li><b>{e(t)}</b><div class=\"note\">{e(d)}</div></li>" for t, d in items)
-        out += (f'<div class="box"><h3 style="margin:0 0 4px">🍁 📍 {e(prov)}</h3><p class="note" style="margin:0 0 6px">{e(note)} '
+        out += (f'<div class="box"><h3 style="margin:0 0 4px">🇨🇦 📍 {e(prov)}</h3><p class="note" style="margin:0 0 6px">{e(note)} '
                 f'<a href="{e(url)}" target="_blank" rel="noopener">{e(srcname)}</a></p><ul class="arts">{lis}</ul></div>')
     return out + f'<p class="note">{e(NOT_YET)}</p>'
 

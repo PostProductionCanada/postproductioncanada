@@ -6,7 +6,7 @@ P = {
     "MB": ("🦬", "#92400e", "Manitoba"), "ON": ("🗼", "#b91c1c", "Ontario"), "QC": ("⚜️", "#1d4ed8", "Québec"),
     "NB": ("🌊", "#0e7490", "New Brunswick"), "NS": ("⚓", "#4338ca", "Nova Scotia"), "PE": ("🥔", "#be123c", "Prince Edward Island"),
     "NL": ("🐋", "#0f766e", "Newfoundland and Labrador"), "YT": ("⛏️", "#6d28d9", "Yukon"), "NT": ("❄️", "#475569", "Northwest Territories"),
-    "NU": ("🐻‍❄️", "#334155", "Nunavut"), "CA": ("🍁", "#d52b1e", "Canada"),
+    "NU": ("🐻‍❄️", "#334155", "Nunavut"), "CA": ("🇨🇦", "#d52b1e", "Canada"),
 }
 
 

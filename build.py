@@ -167,7 +167,7 @@ HOME_FAB = ('<a class="homefab" href="/" title="Back to the home page (the 2 bee
             'font:800 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 14px 7px 8px;border-radius:999px;'
             'border:2px solid #ffb000;box-shadow:0 4px 14px rgba(0,0,0,.35)}.homefab:hover{background:#000}@media print{.homefab{display:none}}</style>')
 
-NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Education"), ("canadians.html", "🍁 Canadian Stories"),
+NAV = [("index.html", LEADER + " Picture Start"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("music-supervisors.html", "🎸 Music Supervisors"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Education"), ("canadians.html", "🇨🇦 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -266,7 +266,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -305,6 +305,8 @@ def main():
     (OUT / "canadians.html").write_text(canadians.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import originals
     _arts = originals.render_all(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg, OUT, ROOT)
+    import musicsup
+    (OUT / "music-supervisors.html").write_text(musicsup.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import software
     (OUT / "software.html").write_text(software.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import networking
@@ -382,7 +384,7 @@ def cap_editor(t):
 
 def esc(s): return html.escape(s, quote=True)
 
-CATS = {"canada": ("🍁", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎧", "Audio"),
+CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎧", "Audio"),
         "vfx": ("🟩", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
         "cce": ("✂️", "CCE"),
@@ -420,7 +422,7 @@ VFX_RE = re.compile(r"\b(vfx|visual effects|animat\w+|composit\w+|nuke|houdini|u
 def _decor(r):
     """A leaf for anything Canadian and a pin for any province it connects to."""
     text = r.get("title", "") + " " + r.get("note", "")
-    leaf = "🍁 " if (CANADA_RE.search(text) or r.get("source") == "CMPA") else ""
+    leaf = "🇨🇦 " if (CANADA_RE.search(text) or r.get("source") == "CMPA") else ""
     pins = "".join(f'<span class="chip c-prov">📍 {k}</span>' for k, rx in PROV_RE.items() if rx.search(text))
     return leaf, pins
 
@@ -434,11 +436,11 @@ def card(i):
     if i["cce"]: cats.append("cce")
     if i["vibe"]: cats.append("vibe")
     iso = i["date"].isoformat()
-    _lf = "🍁 " if i["canada"] else ""
+    _lf = "🇨🇦 " if i["canada"] else ""
     em, lab = CATS[i["category"]]
     chip = f'<span class="chip c-{i["category"]}">{em} {lab}</span>'
     if i["canada"] and i["category"] != "canada":
-        chip += '<span class="chip c-canada">🍁</span>'
+        chip += '<span class="chip c-canada">🇨🇦</span>'
     if i["ai"]:
         chip += '<span class="chip c-ai">🤖 AI</span>'
     if i["vibe"]:
@@ -609,7 +611,7 @@ def _takeaways(items, now):
     if cc:
         k, n = max(cc.items(), key=lambda x: x[1])
         li.append(f"<li>Busiest topic: <b>{CATS[k][0]} {esc(CATS[k][1])}</b> ({n} stories).</li>")
-    return ('<div class="takes"><h3>🍁 Key takeaways for Canada</h3><ul>' + "".join(li) +
+    return ('<div class="takes"><h3>🇨🇦 Key takeaways for Canada</h3><ul>' + "".join(li) +
             '</ul><p>Counted from the stories on this page, not opinion. Pick a province or tab below to dig in.</p></div>')
 
 
@@ -629,7 +631,7 @@ def roll_html(items, now):
     byurl = {it["url"]: it for it in items}
     for n, s in enumerate(r["items"], 1):
         em = CATS.get(s["category"], ("🎬", ""))[0]
-        leaf = "🍁 " if (s["canada"] and s["category"] != "canada") else ""
+        leaf = "🇨🇦 " if (s["canada"] and s["category"] != "canada") else ""
         pins = "".join(f'<span class="rpin">📍 {esc(PROV_LABEL.get(k, k))}</span>' for k in s["prov"])
         ex = (s.get("excerpt") or (byurl.get(s["url"]) or {}).get("excerpt") or "").strip()
         ex = re.sub(r"This content is restricted to subscribers\.?", "", ex, flags=re.I)
@@ -644,9 +646,9 @@ def roll_html(items, now):
         else:
             gist = f'<div class="fgist"><b>The gist:</b> {esc(ex)}</div>' if ex else ""
         if s["prov"]:
-            ang = "🍁 Canadian angle: " + ", ".join(PROV_LABEL.get(k, k) for k in s["prov"])
+            ang = "🇨🇦 Canadian angle: " + ", ".join(PROV_LABEL.get(k, k) for k in s["prov"])
         elif s["canada"]:
-            ang = "🍁 Canadian angle: a Canadian story"
+            ang = "🇨🇦 Canadian angle: a Canadian story"
         else:
             ang = "🌐 Wider industry story"
         phrase = ROLL_PHRASES[(n - 1) % len(ROLL_PHRASES)]
@@ -768,7 +770,7 @@ header{border-bottom:1px solid var(--line)}
 .hero{padding:34px 0 18px}
 .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.08;letter-spacing:-.03em;margin:0 0 10px;max-width:16em}
 .hero h1 em{font-style:normal;color:var(--red)}
-.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.loopwrap{margin-top:14px!important}.loop{display:block;text-align:center;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,19px);line-height:1.3;padding:12px 18px;border-radius:12px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}.clap{font-size:1.25em;vertical-align:-2px}
+.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.nsrc{color:#0a7cff;font-weight:800}@media (prefers-color-scheme:dark){.nsrc{color:#4da3ff}}:root[data-theme="dark"] .nsrc{color:#4da3ff}:root[data-theme="light"] .nsrc{color:#0a7cff}.loopwrap{margin-top:14px!important}.loop{display:block;text-align:center;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,19px);line-height:1.3;padding:12px 18px;border-radius:12px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}.clap{font-size:1.25em;vertical-align:-2px}
 .bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
 .bar .wrap{display:flex;flex-direction:column;gap:10px}
 .tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
@@ -877,12 +879,12 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Education</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Education</a><a class="btn" href="canadians.html">🇨🇦 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="music-supervisors.html">🎸 Music Supervisors</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>
   <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="nw"><span class="newsword">NEWS</span> <em>in one place.</em></span></h1>
-  <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from {{NSOURCES}} sources and updated live every few hours. <span class="nw">Free, always.</span></p>
+  <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from <b class="nsrc">{{NSOURCES}} sources</b> and updated live every few hours. <span class="nw">Free, always.</span></p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div>
 <div class="wrap"><p class="loopwrap"><a class="loop" href="{{LOOP}}">Original articles and features are coming soon. Stay in the loop: <span class="clap">🎬</span> click here →</a></p></div></section>
 

@@ -85,7 +85,7 @@ def _cards(items):
     for title, org, url, text, prov, tags in items:
         pins = "".join(f'<span class="pill">📍 {e(p)}</span> ' for p in prov)
         chips = "".join(f'<span class="pill">{e(t)}</span> ' for t in tags)
-        out += (f'<article class="box"><div>🍁 {pins}{chips}</div><h3><a href="{e(url)}" target="_blank" rel="noopener">{e(title)}</a></h3>'
+        out += (f'<article class="box"><div>🇨🇦 {pins}{chips}</div><h3><a href="{e(url)}" target="_blank" rel="noopener">{e(title)}</a></h3>'
                 f'<div class="when">{e(org)}</div><p>{e(text)}</p></article>')
     return out
 
