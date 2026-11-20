@@ -131,4 +131,12 @@ PAIRS = [
     ("Send us an event", "Envoyez-nous un événement"),
     ("Know of one we missed? Email", "Vous en connaissez un que nous avons manqué? Écrivez à"),
     (". Please include a link", ". Veuillez inclure un lien vers la page de l'organisateur pour que nous puissions le vérifier."),
+    ("Register by Dec 4, 2026; market Feb 10 to 16, 2027", "S'inscrire avant le 4 déc. 2026; marché du 10 au 16 févr. 2027"),
+    ("Canada Pavilion at the European Film Market (EFM)", "Pavillon du Canada au Marché européen du film (EFM)"),
+    ("Berlin, Germany", "Berlin, Allemagne"),
+    ("Telefilm Canada's call for entry lists the Canada Pavilion", "L'appel de candidatures de Téléfilm Canada annonce le Pavillon du Canada à l'EFM, avec une date limite d'inscription par l'entremise de Téléfilm le 4 décembre 2026."),
+    ("Register by Jan 17, 2027; market May 16 to 19, 2027", "S'inscrire avant le 17 janv. 2027; marché du 16 au 19 mai 2027"),
+    ("Cannes 2027: the Short Film Corner", "Cannes 2027 : le Short Film Corner"),
+    ("Cannes, France", "Cannes, France"),
+    ("Telefilm Canada's call for entry for Canadian short films", "L'appel de candidatures de Téléfilm Canada pour les courts métrages canadiens, tous genres, avec une date limite d'inscription par l'entremise de Téléfilm le 17 janvier 2027."),
 ]
