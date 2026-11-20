@@ -23,7 +23,7 @@ CANADA_RE = re.compile(
     r"\b(canada|canadian|canadians|toronto|vancouver|montreal|montr[eé]al|ottawa|calgary|winnipeg|halifax|"
     r"ontario|qu[eé]bec|british columbia|alberta|manitoba|saskatchewan|nova scotia|new brunswick|"
     r"newfoundland|telefilm|cmf|dgc|cmpa|actra|iatse 873|unifor|creative bc|omdc|cbc|crtc|"
-    r"cineplex|bell media|corus|rogers)\b", re.I)
+    r"cineplex|bell media|corus|rogers|iatse (local )?(873|891|667|411|856|849|56|63|210|212|514|262|58|105|168))\b", re.I)
 POST_RE = re.compile(
     r"\b(post[- ]?production|editor|editing|edit|colou?r|grade|grading|dit|vfx|visual effects|compositing|"
     r"animation|sound|mix|mixing|audio|dubbing|davinci|resolve|avid|premiere|after effects|nuke|flame|"
@@ -292,6 +292,9 @@ def main():
             it["ai"] = bool(AI_CS.search(blob2) or AI_CI.search(blob2))
             it["vibe"] = bool(VIBE_RE.search(blob2) and VIBE_CTX.search(blob2))
             it["cce"] = bool(CCE_RE.search(blob2 + " " + it["source"] + " " + it["url"]))
+            it["dgc"] = bool(DGC_RE.search(blob2 + " " + it["source"]))
+            it["iatse"] = bool(IATSE_RE.search(blob2 + " " + it["source"]))
+            it["guild"] = it["cce"] or it["dgc"] or it["iatse"]
             it["legal"] = bool(LEGAL_RE.search(blob2))
             it["tips"] = it["category"] in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(it["title"])) and not NOT_TIPS.search(it["title"])
             it["status"] = it["category"] in ("business", "canada") and bool(STATUS_RE.search(blob2))
@@ -317,6 +320,9 @@ def main():
         a["legal"] = bool(LEGAL_RE.search(_b))
         a["tips"] = a.get("category") in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(a["title"])) and not NOT_TIPS.search(a["title"])
         a["cce"] = bool(CCE_RE.search(_b + " " + a["source"] + " " + a.get("url", "")))
+        a["dgc"] = bool(DGC_RE.search(_b + " " + a["source"]))
+        a["iatse"] = bool(IATSE_RE.search(_b + " " + a["source"]))
+        a["guild"] = a["cce"] or a["dgc"] or a["iatse"]
         items.append(a)
     items.sort(key=lambda i: i["date"], reverse=True)
     if os.environ.get("GITHUB_ACTIONS"):
@@ -498,7 +504,7 @@ def esc(s): return html.escape(s, quote=True)
 CATS = {"canada": ("🇨🇦", "Canada"), "picture": ("🎬", "Storytelling & Editing"), "audio": ("🎶", "Sound & Emotion"),
         "vfx": ("🟩", "VFX & Animation"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
-        "cce": ("✂️", "CCE"),
+        "guilds": ("🛡️", "DGC · CCE · IATSE"),
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
         "legal": ("©️", "Copyright & Legal"),
@@ -513,6 +519,8 @@ LEGAL_RE = re.compile(r"(copyright\w*|intellectual property|infring\w+|lawsuits?
                       r"who owns|ownership of|rights holders?|rightsholders?|digital replicas?|work[- ]for[- ]hire)", re.I)
 VIBE_RE = re.compile(r"vibe (cutting|editing)|agentic|\bMCP\b|AI assistant|natural[- ]language|creative agent|text-based editing|chat-?based", re.I)
 VIBE_CTX = re.compile(r"\bedit|video|timeline|premiere|resolve|avid|filmmak|post-?production|final cut|media composer", re.I)
+DGC_RE = re.compile(r"\bDGC\b|Directors Guild of Canada|Guilde canadienne des r[eé]alisateurs")
+IATSE_RE = re.compile(r"\bIATSE\b|International Alliance of Theatrical Stage Employees", re.I)
 CCE_RE = re.compile(r"\bCCE\b|Canadian Cinema Editors|cceditors\.ca")
 AI_CS = re.compile(r"\bAI\b|\bA\.I\.|\bGen-?AI\b|\bLLMs?\b")
 AI_CI = re.compile(r"(artificial intelligence|generative|machine learning|\brunway\b|\bsora\b|\bveo\b|\bkling\b|midjourney|"
@@ -556,6 +564,8 @@ TOPICS = [
     ("🎙️", "Mic", r"microphones?|\bmics?\b|lavalier|\bboom\b|field recorder|sound devices|shotgun"),
     ("💾", "Storage", r"\bstorage\b|\bssd\b|\bnas\b|hard drives?|\blto\b|\braid\b|\bbackups?\b|memory cards?|cfexpress"),
     ("🎨", "Colour", r"colou?r (grad|correct|manage|match|science)|davinci|\bluts?\b|\bhdr\b|dolby vision|colou?rist"),
+    ("🎼", "Music", r"\bmusic\b|composers?|\bscore[sd]?\b|soundtracks?|\bsongs?\b|\bSOCAN\b|needle drop|sync licen[cs]"),
+    ("🔊", "Sound", r"\bsound (design|editing|mix)|\bdialogue\b|\bfoley\b|\bADR\b|re-recording|\batmos\b|loudness|\bmixer\b"),
     ("🧩", "Plugin", r"plug-?ins?|add-ons?|\bofx\b|\bextension\b"),
     ("🎞️", "Film stock", r"\b35mm\b|\b16mm\b|\b65mm\b|film stock|kodak|celluloid|\bimax\b"),
     ("🆕", "New", r"\blaunch(es|ed)?\b|announc|unveil|releas|introduc|new version|firmware|\bbeta\b|\bupdate[sd]?\b|\badds?\b"),
@@ -590,6 +600,7 @@ def card(i):
     if i.get("tips"): cats.append("tips")
     if i["ai"]: cats.append("ai")
     if i["cce"]: cats.append("cce")
+    if i.get("guild"): cats.append("guilds")
     if i["vibe"]: cats.append("vibe")
     iso = i["date"].isoformat()
     _lf = "🇨🇦 " if i["canada"] else ""
@@ -603,6 +614,10 @@ def card(i):
         chip += '<span class="chip c-vibe">🎚️ Vibe</span>'
     if i["cce"]:
         chip += '<span class="chip c-cce" title="Canadian Cinema Editors">CCE</span>'
+    if i.get("dgc"):
+        chip += '<span class="chip c-dgc" title="Directors Guild of Canada">🎬 DGC</span>'
+    if i.get("iatse"):
+        chip += '<span class="chip c-iatse" title="IATSE">🛠️ IATSE</span>'
     if i["status"]:
         chip += '<span class="chip c-status">⚖️ Status</span>'
     if i.get("legal"):
@@ -803,8 +818,9 @@ def history_html(items, now, today_date):
             why = f'<div class="hwhy"><b>Why it matters:</b> {esc(wy[0])}</div>' if wy else ""
             leaf = "🇨🇦 " if s.get("canada") else ""
             pins = "".join(f'<span class="rpin">📍 {esc(PROV_LABEL.get(k, k))}</span>' for k in s.get("prov", []))
+            _rc = reel_chips(s["title"], s["url"], s.get("category", ""), "", s.get("source", ""))
             rows += (f'<li><span class="hno">{MINIREEL} REEL {n}</span> {leaf}<a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a> '
-                     f'<span class="hsrc">{esc(s["source"])} · {esc(s["date"])}</span> {pins}{why}</li>')
+                     f'<span class="hsrc">{esc(s["source"])} · {esc(s["date"])}</span><div class="hchips">{_rc}{pins}</div>{why}</li>')
         days += f'<details class="hday"><summary>{esc(r["day"])}</summary><ol>{rows}</ol></details>'
     recon = any(v.get("reconstructed") for v in h.values())
     note = ('<p class="hnote">Days marked here before the roll began saving itself were rebuilt from our story archive, so they may differ slightly from what ran that morning.</p>' if recon else "")
@@ -866,6 +882,38 @@ MINIREEL = ('<svg class="mreel" viewBox="0 0 24 24" width="18" height="18" aria-
 ROLL_PHRASES = ["COLD OPEN", "ROLLING", "CLOSE-UP", "PLOT TWIST", "WIDE SHOT", "THAT'S A WRAP"]
 
 
+
+def reel_chips(title, url, category, excerpt="", source=""):
+    """Small topic chips for a Morning Roll reel: category, AI, legal, guild, tips and up to three topic icons."""
+    blob = title + " " + excerpt
+    em, lab = CATS.get(category, ("🎬", ""))
+    out = f'<span class="rchip">{em} {esc(lab)}</span>' if lab else ""
+    if AI_CS.search(blob) or AI_CI.search(blob):
+        out += '<span class="rchip">🤖 AI</span>'
+    if LEGAL_RE.search(blob):
+        out += '<span class="rchip">©️ Legal</span>'
+    if CCE_RE.search(blob + " " + source):
+        out += '<span class="rchip">🛡️ CCE</span>'
+    if DGC_RE.search(blob):
+        out += '<span class="rchip">🛡️ DGC</span>'
+    if IATSE_RE.search(blob):
+        out += '<span class="rchip">🛡️ IATSE</span>'
+    if category in ("picture", "audio", "vfx", "gear") and TIPS_RE.search(title) and not NOT_TIPS.search(title):
+        out += '<span class="rchip">💡 Tips</span>'
+    seen = {lab}
+    n = 0
+    for em2, lab2, rx in TOPIC_RES:
+        if n == 3:
+            break
+        if lab2 in seen or not rx.search(title):
+            continue
+        out += f'<span class="rchip">{em2} {lab2}</span>'
+        n += 1
+    if "youtube.com" in url or "youtu.be" in url:
+        out += '<span class="rchip">▶️ Video</span>'
+    return out
+
+
 def roll_html(items, now):
     r = get_roll(items, now)
     frames = ""
@@ -893,7 +941,9 @@ def roll_html(items, now):
         else:
             ang = "🌐 Wider industry story"
         phrase = ROLL_PHRASES[(n - 1) % len(ROLL_PHRASES)]
-        frames += (f'<article class="frame"><div class="fno">{MINIREEL} REEL {n}</div><div class="fmeta">{em} {leaf}{pins}</div>'
+        _it = byurl.get(s["url"]) or {}
+        _rc = reel_chips(s["title"], s["url"], s["category"], _it.get("excerpt", ""), s.get("source", ""))
+        frames += (f'<article class="frame"><div class="fno">{MINIREEL} REEL {n}</div><div class="fmeta">{leaf}{_rc}{pins}</div>'
                    f'<a class="ftitle" href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])}</a>'
                    f'{gist}<div class="fang">{ang}</div>'
                    f'<div class="fsrc">{esc(s["source"])} · {esc(s["date"])}</div>'
@@ -911,7 +961,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "cce" and i["cce"]) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
@@ -1040,7 +1090,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-dgc{--c:#b3202a}.chip.c-iatse{--c:#a35a00}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -1071,7 +1121,7 @@ main{padding:20px 0 40px}
 .rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
 .takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
 .fgist{color:#fff1c2;font-size:14px;line-height:1.45;background:#33290a;border-left:4px solid #ffcc33;border-radius:4px;padding:8px 10px}.fgist b{color:#ffcc33}.fgist a{color:#ffd980;text-decoration:underline}.mreel{vertical-align:-4px;margin-right:4px}.fang{font-size:12.5px;color:#ffb347;font-weight:600}.fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
-.rollhist{background:#14161a;color:#eceae4;padding:6px 0 22px}.rollhist h2{margin:14px 0 6px;font-size:18px}.hnote{color:#8f96a3;font-size:12.5px;margin:4px 0 10px}.hday{background:#1e2127;border:1px solid #30343c;border-radius:8px;margin:6px 0;padding:8px 14px}.hday summary{cursor:pointer;font:700 13px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.12em}.hday ol{margin:10px 0 4px;padding-left:0;list-style:none}.hday li{padding:7px 0;border-top:1px solid #30343c;font-size:14px;line-height:1.4}.hday li a{color:#fff;font-weight:600}.hno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.12em;margin-right:6px}.hsrc{color:#8f96a3;font-size:12px}.hwhy{background:#33290a;border-left:4px solid #ffcc33;border-radius:4px;padding:6px 10px;margin-top:6px;color:#fff1c2;font-size:13.5px}.hwhy b{color:#ffcc33}.fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
+.rollhist{background:#14161a;color:#eceae4;padding:6px 0 22px}.rollhist h2{margin:14px 0 6px;font-size:18px}.hnote{color:#8f96a3;font-size:12.5px;margin:4px 0 10px}.hday{background:#1e2127;border:1px solid #30343c;border-radius:8px;margin:6px 0;padding:8px 14px}.hday summary{cursor:pointer;font:700 13px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.12em}.hday ol{margin:10px 0 4px;padding-left:0;list-style:none}.hday li{padding:7px 0;border-top:1px solid #30343c;font-size:14px;line-height:1.4}.hday li a{color:#fff;font-weight:600}.hno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.12em;margin-right:6px}.hsrc{color:#8f96a3;font-size:12px}.hwhy{background:#33290a;border-left:4px solid #ffcc33;border-radius:4px;padding:6px 10px;margin-top:6px;color:#fff1c2;font-size:13.5px}.hwhy b{color:#ffcc33}.fmeta{font-size:13px}.rchip{display:inline-block;background:#2a2e36;color:#eceae4;border-radius:999px;padding:1px 8px;font-size:11.5px;margin:0 4px 4px 0}.hchips{margin-top:4px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;font-size:17px;line-height:1.3;text-decoration:none}.coffee{font-size:48px;line-height:1;width:64px;text-align:center;flex:none}.ftitle:hover{text-decoration:underline}
 .fsrc{color:#8f96a3;font-size:12px}.fmore{color:#ff8a7f;font-size:13px;margin-top:auto;text-decoration:none}
 .newsword{display:inline-block;background:var(--red);color:#fff;padding:0 .3em;margin:.12em 0;border-radius:3px;font-weight:900;letter-spacing:.05em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}

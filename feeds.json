@@ -260,6 +260,24 @@
       "url": "https://news.google.com/rss/search?q=site%3Adeadline.com+%28Canada+OR+Canadian+OR+Telefilm+OR+CBC+OR+Crave+OR+Ottawa+OR+Toronto+OR+Vancouver+OR+Montreal+OR+Quebec%29+when%3A7d&hl=en-CA&gl=CA&ceid=CA:en",
       "category": "canada",
       "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%28%22Directors+Guild+of+Canada%22+OR+%22DGC+Ontario%22+OR+%22DGC+BC%22+OR+%22DGC+Maritimes%22+OR+%22DGC+Qu%C3%A9bec%22+OR+%22DGC+Alberta%22+OR+%22DGC+Manitoba%22+OR+%22DGC+Awards%22%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%28IATSE+873+OR+IATSE+891+OR+IATSE+667+OR+IATSE+411+OR+IATSE+856+OR+IATSE+849+OR+%22IATSE+Canada%22+OR+%28IATSE+AND+%28Canada+OR+Canadian+OR+Toronto+OR+Vancouver+OR+Montreal+OR+Ontario+OR+%22British+Columbia%22+OR+Manitoba+OR+Alberta+OR+Qu%C3%A9bec%29%29%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "business",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%28%22Canadian+Cinema+Editors%22+OR+%22CCE+Awards%22+OR+EditCon%29+when%3A30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "picture",
+      "google": true
     }
   ]
 }
