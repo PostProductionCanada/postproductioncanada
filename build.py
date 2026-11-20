@@ -558,6 +558,45 @@ REEL = ('<svg class="reel" viewBox="0 0 100 100" aria-hidden="true"><g class="sp
         + '<circle cx="50" cy="50" r="8" fill="#9aa0ab"/><circle cx="50" cy="50" r="3" fill="#1b1d22"/></g></svg>')
 
 
+_ROLL_JS = """<script>(function(){var s=document.getElementById('strip'),p=document.getElementById('rpause');if(!s)return;
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,paused=rm,hold=false,last=0,wait=0;
+function setb(){if(p){p.textContent=paused?'▶ Play scroll':'⏸ Pause scroll';p.setAttribute('aria-pressed',paused)}}
+if(p)p.onclick=function(){paused=!paused;setb()};setb();
+['pointerenter','touchstart','focusin','wheel'].forEach(function(e){s.addEventListener(e,function(){hold=true},{passive:true})});
+['pointerleave','touchend','focusout'].forEach(function(e){s.addEventListener(e,function(){setTimeout(function(){hold=false},3500)},{passive:true})});
+s.style.scrollSnapType='none';
+function tick(t){var dt=Math.min(t-last,80);last=t;
+if(!paused&&!hold&&s.scrollWidth>s.clientWidth){var max=s.scrollWidth-s.clientWidth;
+if(wait>0){wait-=dt;if(wait<=0)s.scrollLeft=0}else if(s.scrollLeft>=max-1){wait=2500}else{s.scrollLeft+=dt*0.028}}
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick)})();</script>"""
+
+
+def _takeaways(items, now):
+    """Key takeaways for Canada, computed from the stories on this page. Counts only, no opinions."""
+    rec = [i for i in items if i["date"] >= now - timedelta(days=7)]
+    if len(rec) < 5:
+        return ""
+    can = [i for i in rec if i["canada"]]
+    pc = {}
+    for i in rec:
+        for k in i.get("prov", []):
+            pc[k] = pc.get(k, 0) + 1
+    cc = {}
+    for i in rec:
+        if i["category"] in CATS:
+            cc[i["category"]] = cc.get(i["category"], 0) + 1
+    li = [f"<li><b>{len(rec)}</b> stories in the last 7 days; <b>{len(can)}</b> have a Canadian angle.</li>"]
+    if pc:
+        top = sorted(pc.items(), key=lambda x: -x[1])[:3]
+        li.append("<li>Most-mentioned places: " + ", ".join(f"<b>{esc(PROV_LABEL.get(k, k))}</b> ({n})" for k, n in top) + ".</li>")
+    if cc:
+        k, n = max(cc.items(), key=lambda x: x[1])
+        li.append(f"<li>Busiest topic: <b>{CATS[k][0]} {esc(CATS[k][1])}</b> ({n} stories).</li>")
+    return ('<div class="takes"><h3>🍁 Key takeaways for Canada</h3><ul>' + "".join(li) +
+            '</ul><p>Counted from the stories on this page, not opinion. Pick a province or tab below to dig in.</p></div>')
+
+
 def roll_html(items, now):
     r = get_roll(items, now)
     frames = ""
@@ -574,7 +613,9 @@ def roll_html(items, now):
     return ('<section class="roll" aria-label="Morning Roll"><div class="wrap"><div class="rollhead">' + REEL +
             f'<div class="rtxt"><div class="rlcd">MORNING ROLL · {esc(r["day"])}</div>'
             f'<div class="rsub">☕ Your 8 a.m. rundown of the latest. {"Preview edition: the first full roll compiles at 8 a.m. Eastern." if r["compiled"] == "PREVIEW" else "Compiled " + esc(r["compiled"]) + "."} Read it with your first coffee or tea.</div></div>'
-            + REEL + '</div><div class="strip">' + frames + '</div></div></section>')
+            + REEL + '</div><div class="strip" id="strip">' + frames + '</div>'
+            '<div class="rctl"><button class="btn" id="rpause" type="button" aria-pressed="false">⏸ Pause scroll</button> <span>Scrolls slowly on its own. Touch or hover to stop.</span></div>'
+            + _takeaways(items, now) + _ROLL_JS + '</div></section>')
 
 def render(items, sources, now):
     picks = load_picks(now)
@@ -738,6 +779,8 @@ main{padding:20px 0 40px}
 .strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,#f6f4ef 0 12px,transparent 12px 26px);opacity:.85}
 .strip::before{top:6px}.strip::after{bottom:6px}
 .frame{flex:0 0 min(270px,78vw);scroll-snap-align:start;background:#1e2127;border:1px solid #30343c;border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.rctl{margin-top:8px;color:#8f96a3;font-size:12.5px}.rctl .btn{background:#1e2127;color:#eceae4;border-color:#30343c;font-size:12px;padding:3px 10px;cursor:pointer}
+.takes{margin-top:14px;background:#1e2127;border:1px solid #30343c;border-radius:10px;padding:10px 16px;color:#eceae4}.takes h3{margin:2px 0 6px;font-size:16px}.takes ul{margin:0 0 6px;padding-left:20px}.takes p{margin:0;color:#8f96a3;font-size:12.5px}
 .fno{font:700 11px ui-monospace,Menlo,monospace;color:#ffb000;letter-spacing:.15em}
 .fmeta{font-size:13px}.rpin{background:#2a2e36;border-radius:999px;padding:1px 8px;font-size:11.5px;margin-left:4px}
 .ftitle{color:#fff;font-weight:700;line-height:1.3;text-decoration:none}.ftitle:hover{text-decoration:underline}
