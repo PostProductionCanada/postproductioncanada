@@ -31,7 +31,7 @@ EVENTS = [
     ("2027, dates not found yet", "Series Mania 2027: Canada and Quebec are the Guests of Honour",
      "Lille, France", "Series Mania, with Telefilm Canada and SODEC",
      "https://sodec.gouv.qc.ca/presence-internationale/series-mania/en",
-     "The Directors Guild of Canada announced that Canada and Quebec were selected as the 2027 Guests of Honour, with Telefilm and SODEC representatives in Lille to build partnerships. Applications to join the Series Mania delegation are open; the DGC's email did not give a deadline, so check with the DGC, Telefilm or SODEC. The 2026 festival ran March 20 to 27."),
+     "The Directors Guild of Canada announced that Canada and Quebec were selected as the 2027 Guests of Honour, with Telefilm and SODEC representatives in Lille to build partnerships. Applications to join the Series Mania delegation are open through the form below; the DGC's email did not give a deadline, so check with the DGC, Telefilm or SODEC. The 2026 festival ran March 20 to 27."),
     ("Nov 20, 2026, 9 a.m. ET (14:00 GMT)", "DaVinci Resolve online seminar: Workflows from Camera to Delivery",
      "Online, free", "Blackmagic Design",
      "https://www.blackmagicdesign.com/event/davinci-resolve-online-seminars",
@@ -55,6 +55,9 @@ EVENTS = [
      "https://cceditors.ca/sponsorship",
      "A conference on the art of picture editing. The 2026 edition ran Feb 6 to 8 in Toronto, Montreal, Vancouver, Edmonton, Halifax and Winnipeg. Check the CCE site for 2027 dates."),
 ]
+
+# Extra action links on an event, keyed by its title: (label, url)
+EXTRA = {"Series Mania 2027: Canada and Quebec are the Guests of Honour": ("Apply to join the delegation (form)", "https://tally.so/r/WJO6pv")}
 
 # Festivals and markets across Canada: (province, name, city, dates, url). Dates from Playback's industry calendar.
 FESTIVALS = [
@@ -120,7 +123,8 @@ WATCH = [
 def render(leaf, favicon, updated):
     ev = "".join(
         '<li><b>' + e(d) + '</b> <a href="' + e(u) + '" target="_blank" rel="noopener">' + e(t) + '</a>'
-        '<div class="note">' + e(w) + ' · ' + e(o) + '</div><div class="note">' + e(n) + '</div></li>'
+        '<div class="note">' + e(w) + ' · ' + e(o) + '</div><div class="note">' + e(n) + '</div>'
+        + (('<div class="note"><a class="btn" href="' + e(EXTRA[t][1]) + '" target="_blank" rel="noopener">' + e(EXTRA[t][0]) + ' →</a></div>') if t in EXTRA else '') + '</li>'
         for d, t, w, o, u, n in EVENTS)
     rec = "".join(
         '<article class="box"><h3><a href="' + e(u) + '" target="_blank" rel="noopener">' + e(n) + '</a></h3>'
