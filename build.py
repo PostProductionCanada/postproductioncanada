@@ -158,7 +158,7 @@ def nobreak(html_text):
     return "".join(out)
 
 
-NAV = [("index.html", "🏠 News"), ("networking.html", "🤝 Networking"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
+NAV = [("index.html", "🏠 News"), ("networking.html", "🤝 Networking"), ("software.html", "💻 Software"), ("awards.html", "🏆 Awards"), ("contact.html", "✉️ Contact"), ("documentary.html", "🎥 Documentary"), ("green-post.html", "🌱 Green Post"), ("wellbeing.html", "💚 Wellbeing"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("schools.html", "🎓 Schools"), ("canadians.html", "🍁 Canadian Stories"),
        ("unions.html", "🗺️ Union Map"), ("buzz.html", "🎬 Post Buzz"), ("editors.html", "✂️ Editors"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits")]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap}"
            ".sitenav a{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 11px;font:13px ui-sans-serif,-apple-system,sans-serif;text-decoration:none;white-space:nowrap}"
@@ -257,7 +257,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -296,6 +296,8 @@ def main():
     (OUT / "canadians.html").write_text(canadians.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import originals
     _arts = originals.render_all(_leaf, _fav, now.strftime("%Y-%m-%d"), _cfg, OUT, ROOT)
+    import software
+    (OUT / "software.html").write_text(software.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import networking
     (OUT / "networking.html").write_text(networking.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import buzz
@@ -831,7 +833,7 @@ footer p{margin:0 0 8px;max-width:60em}
 <body>
 <header><div class="wrap top">
   <a class="brand" href="/"><span class="logo">{{LEAF}}</span><span class="vu" id="vu" aria-hidden="true">{{VU}}</span>Post Production <b>Canada</b></a>
-  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
+  <div class="tools">{{SUBBTN}}{{ORIG}}<a class="btn" href="contact.html">✉️ Contact</a><a class="btn" href="awards.html">🏆 Awards</a><a class="btn" href="documentary.html">🎥 Documentary</a><a class="btn" href="green-post.html">🌱 Green Post</a><a class="btn" href="wellbeing.html">💚 Wellbeing</a><a class="btn" href="cut-in-canada.html">🎞️ Cut in Canada</a><a class="btn" href="vibe-cutting.html">🎚️ Vibe Cutting</a><a class="btn" href="schools.html">🎓 Schools</a><a class="btn" href="canadians.html">🍁 Canadian Stories</a><a class="btn" href="unions.html">🗺️ Union Map</a><a class="btn" href="networking.html">🤝 Networking</a><a class="btn" href="software.html">💻 Software</a><a class="btn" href="buzz.html">🎬 Post Buzz</a><a class="btn" href="editors.html">✂️ Editors</a><a class="btn" href="status-of-the-artist.html">⚖️ Status &amp; Tax Credits</a><a class="btn" href="/feed.xml">📡 RSS</a><button class="btn" id="theme" aria-label="Toggle theme">◐</button></div>
 </div></header>
 
 <section class="hero"><div class="wrap herogrid"><div>

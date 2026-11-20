@@ -1,6 +1,6 @@
 """Documentary section: a sourced timeline of Canadian documentary and where to find the work today."""
 import html
-import graphics, topics
+import graphics, topics, provinces
 
 e = html.escape
 
@@ -61,7 +61,7 @@ def render(leaf, favicon, updated):
     css = ("<style>" + graphics.CSS + ".tl{list-style:none;margin:20px 0;padding:0 0 0 26px;border-left:3px solid var(--red)}"
            ".tl li{position:relative;margin:0 0 22px;padding:0 0 0 14px}.tl li::before{content:'';position:absolute;left:-36px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--red)}"
            ".tl b{font:800 18px ui-monospace,Menlo,monospace;color:var(--red)}.tl p{margin:4px 0 2px}.tl a{font-size:13px}.pv{display:inline-block;color:#fff;font:700 11px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;padding:4px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}.lg{columns:2 280px;column-gap:16px;padding:0;list-style:none}.lg li{break-inside:avoid;margin:0 0 12px}.lg a{font-weight:700}</style>")
-    chip = lambda y: "".join('<span class="pv" style="background:' + PLACE_COL[k] + '" title="' + e(PLACE_NAME[k]) + '">' + ("🍁 " if k == "CA" else "📍 ") + e(k if k != "CA" else "Canada") + '</span>' for k in PLACE.get(y, []))
+    chip = lambda y: " " + "".join(provinces.badge(k) for k in PLACE.get(y, []))
     tl = "".join('<li><b>' + e(y) + '</b> ' + chip(y) + '<p>' + e(t) + '</p><a href="' + e(u) + '" target="_blank" rel="noopener">Source</a></li>' for y, t, u in TIMELINE)
     links = "".join('<article class="box"><h3><a href="' + e(u) + '"' + (' target="_blank" rel="noopener"' if u.startswith("http") else "") + '>' + e(n) + '</a></h3><p>' + e(t) + '</p></article>' for n, t, u in LINKS)
     legends = "".join('<li><a href="' + e(u) + '" target="_blank" rel="noopener">' + e(n) + '</a><br>' + e(t) + '</li>' for n, t, u in LEGENDS)
