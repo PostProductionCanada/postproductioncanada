@@ -27,6 +27,28 @@ TIMELINE = [
      "https://thecanadianencyclopedia.ca/en/article/documentary-film"),
 ]
 
+# Where each step happened (only where the source text names the place); CA = national / federal.
+PLACE = {"1897": ["MB"], "1918": ["CA"], "1920s–30s": ["QC"], "1939": ["CA"], "1940s": ["CA"], "1950s": ["CA"],
+         "1956–63": ["QC"], "1967–80": ["NL", "CA"], "1993": ["ON"], "Today": ["CA"]}
+PLACE_NAME = {"MB": "Manitoba", "QC": "Québec", "NL": "Newfoundland and Labrador", "ON": "Ontario", "CA": "Canada"}
+PLACE_COL = {"MB": "#b8860b", "QC": "#1d4ed8", "NL": "#0f766e", "ON": "#b91c1c", "CA": "#d52b1e"}
+
+# Names that are still legends of Canadian film and TV. Each line is checked against the linked page.
+LEGENDS = [
+    ("Norman McLaren", "NFB animator. His film Neighbours won the Academy Award for Best Documentary Short.", "https://en.wikipedia.org/wiki/Norman_McLaren"),
+    ("Colin Low", "NFB filmmaker behind Corral (1954) and, with Wolf Koenig, City of Gold (1957).", "https://www.imdb.com/name/nm0522800/"),
+    ("Roman Kroitor", "Co-directed Lonely Boy (1961) and later co-founded IMAX.", "https://en.wikipedia.org/wiki/Roman_Kroitor"),
+    ("Michel Brault", "Cinematographer and director, and Pierre Perrault's partner on Pour la suite du monde (1963).", "https://en.wikipedia.org/wiki/Michel_Brault"),
+    ("Pierre Perrault", "Québec poet and filmmaker, a founder of direct cinema in Canada.", "https://en.wikipedia.org/wiki/Pierre_Perrault"),
+    ("Allan King", "Documentary director of Warrendale (1967).", "https://www.imdb.com/name/nm0454437/"),
+    ("Evelyn Lambart", "NFB animator who worked alongside Norman McLaren.", "https://en.wikipedia.org/wiki/Evelyn_Lambart"),
+    ("Nell Shipman", "Silent-era actor, writer and director, and an early Canadian woman filmmaker.", "https://en.wikipedia.org/wiki/Nell_Shipman"),
+    ("David Cronenberg", "Toronto director whose films reshaped body horror and Canadian cinema.", "https://en.wikipedia.org/wiki/David_Cronenberg"),
+    ("Ronald Sanders", "Editor of David Cronenberg's films.", "https://www.imdb.com/name/nm0761697/"),
+    ("Denis Villeneuve", "Québec director of Incendies, Arrival and Dune.", "https://en.wikipedia.org/wiki/Denis_Villeneuve"),
+    ("Jean-Marc Vallée", "Québec director and Editor of Dallas Buyers Club and Big Little Lies, who died in 2021.", "https://en.wikipedia.org/wiki/Jean-Marc_Vall%C3%A9e"),
+]
+
 LINKS = [
     ("National Film Board of Canada", "Streams a large catalogue of Canadian documentary for free.", "https://www.nfb.ca"),
     ("Hot Docs", "The Toronto festival, with the Hot Docs Ted Rogers Cinema. The 2027 festival runs April 23 to May 2.", "https://hotdocs.ca/festivals/hot-docs-festival"),
@@ -38,12 +60,15 @@ LINKS = [
 def render(leaf, favicon, updated):
     css = ("<style>" + graphics.CSS + ".tl{list-style:none;margin:20px 0;padding:0 0 0 26px;border-left:3px solid var(--red)}"
            ".tl li{position:relative;margin:0 0 22px;padding:0 0 0 14px}.tl li::before{content:'';position:absolute;left:-36px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--red)}"
-           ".tl b{font:800 18px ui-monospace,Menlo,monospace;color:var(--red)}.tl p{margin:4px 0 2px}.tl a{font-size:13px}</style>")
-    tl = "".join('<li><b>' + e(y) + '</b><p>' + e(t) + '</p><a href="' + e(u) + '" target="_blank" rel="noopener">Source</a></li>' for y, t, u in TIMELINE)
+           ".tl b{font:800 18px ui-monospace,Menlo,monospace;color:var(--red)}.tl p{margin:4px 0 2px}.tl a{font-size:13px}.pv{display:inline-block;color:#fff;font:700 11px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;padding:4px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}.lg{columns:2 280px;column-gap:16px;padding:0;list-style:none}.lg li{break-inside:avoid;margin:0 0 12px}.lg a{font-weight:700}</style>")
+    chip = lambda y: "".join('<span class="pv" style="background:' + PLACE_COL[k] + '" title="' + e(PLACE_NAME[k]) + '">' + ("🍁 " if k == "CA" else "📍 ") + e(k if k != "CA" else "Canada") + '</span>' for k in PLACE.get(y, []))
+    tl = "".join('<li><b>' + e(y) + '</b> ' + chip(y) + '<p>' + e(t) + '</p><a href="' + e(u) + '" target="_blank" rel="noopener">Source</a></li>' for y, t, u in TIMELINE)
     links = "".join('<article class="box"><h3><a href="' + e(u) + '"' + (' target="_blank" rel="noopener"' if u.startswith("http") else "") + '>' + e(n) + '</a></h3><p>' + e(t) + '</p></article>' for n, t, u in LINKS)
+    legends = "".join('<li><a href="' + e(u) + '" target="_blank" rel="noopener">' + e(n) + '</a><br>' + e(t) + '</li>' for n, t, u in LEGENDS)
     body = (css + graphics.banner("A CENTURY OF CANADIAN STORIES", "Documentary Editors find the story in the footage.")
             + '<h2>More than a century, in ten steps</h2><p class="note">Every step links to its source. This is a short list, not a full history.</p><ol class="tl" style="list-style:none">' + tl + '</ol>'
             + '<div class="box"><b>Why the Editor matters most here.</b><p style="margin:6px 0 0">In documentary there is no script to follow. The story is found in the cutting room, and the Editor shapes it from hours of real footage. A longer original article on this history is in the members section.</p></div>'
+            + '<h2>Legends who still shape Canadian film and TV</h2><p class="note">Each name links to Wikipedia or IMDb. Know a name that belongs here? Send it with a source.</p><ul class="lg">' + legends + '</ul>'
             + '<h2>Where to watch and learn</h2>' + links)
     return topics._page(leaf, favicon, updated, "Documentary in Canada",
                         "A sourced timeline of Canadian documentary from 1897 to today, and where to find the work.",
