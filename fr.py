@@ -3,6 +3,7 @@ lines stay in their original language. Draft translation: needs a native French 
 import html, re
 
 EXACT = {
+    "← Latest news": "← Dernières nouvelles", "Picture Start": "Accueil",
     "Post Production Canada — the latest news in one place": "Post Production Canada — l'actualité canadienne de la postproduction, au même endroit",
     # menu
     "📰 News": "📰 Actualités", "🎬 Post Buzz": "🎬 Post Buzz", "🏆 Awards": "🏆 Prix", "🇨🇦 Canadian Stories": "🇨🇦 Histoires canadiennes", "🎥 Documentary": "🎥 Documentaire",
@@ -102,10 +103,23 @@ def _dyn(t):
     m = re.match(r"^(.+) \((\d+)\)$", t)
     if m and m.group(1) in PROV:
         return f"{PROV[m.group(1)]} ({m.group(2)})"
+    m = re.match(r"^Page built (\S+)\. Post Production Canada is independent\. Summaries are ours,? and each (item|entry) links to its source\.$", t)
+    if m:
+        return f"Page créée le {m.group(1)}. Post Production Canada est indépendant. Les résumés sont les nôtres, et chaque {'élément' if m.group(2) == 'item' else 'entrée'} renvoie à sa source."
     m = re.match(r"^REEL (\d+)$", t)
     if m:
         return f"BOBINE {m.group(1)}"
     return None
+
+
+_EX = {}
+_PRE = []
+
+
+def _setup(pairs):
+    global _EX, _PRE
+    _EX = {k: v for k, v in (pairs or [])}
+    _PRE = sorted([(k, v) for k, v in (pairs or []) if len(k) >= 12], key=lambda kv: -len(kv[0]))
 
 
 def _text(t, fragments):
@@ -113,7 +127,12 @@ def _text(t, fragments):
     s = html.unescape(t.strip())
     if not s:
         return raw
-    out = EXACT.get(s) or _dyn(s)
+    out = _EX.get(s) or EXACT.get(s) or _dyn(s)
+    if out is None:
+        for k, v in _PRE:
+            if s.startswith(k):
+                out = v
+                break
     if out is None and fragments:
         out = s
         for en, fr in FRAG:
@@ -131,7 +150,8 @@ def _text(t, fragments):
     return lead + html.escape(out, quote=False) + trail
 
 
-def to_french(page):
+def to_french(page, pairs=None, title=None):
+    _setup(pairs)
     parts = re.split(r"(<[^>]*>)", page)
     out, mode = [], None
     skip_re = re.compile(r"<(script|style|title)\b", re.I)
@@ -158,7 +178,17 @@ def to_french(page):
         else:
             out.append(_text(seg, fragments=True))
     res = "".join(out)
+    res = re.sub(r'(<button[^>]*>[^<]{0,6}<span class="nb">)postproduction', r'\1Postproduction', res)
     res = res.replace("<title>", "<title>", 1)
-    res = re.sub(r"<title>[^<]*</title>", "<title>Post Production Canada — l'actualité canadienne de la postproduction, au même endroit</title>", res, count=1)
+    res = re.sub(r"<title>[^<]*</title>", "<title>" + html.escape(title or "Post Production Canada — l'actualité canadienne de la postproduction, au même endroit", quote=False) + "</title>", res, count=1)
     res = re.sub(r'<html lang="[^"]*"', '<html lang="fr-CA"', res, count=1)
     return res
+
+
+FR_PAGES = {"index.html": "fr.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
+
+
+def localize_links(page):
+    for en, fr in FR_PAGES.items():
+        page = page.replace(f'href="{en}"', f'href="{fr}"')
+    return page.replace('href="/"', 'href="fr.html"')

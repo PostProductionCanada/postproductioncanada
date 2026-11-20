@@ -294,7 +294,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/specs.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/digital-assistant-editor.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cinematographers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/composers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/specs.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/digital-assistant-editor.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cinematographers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/composers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -380,7 +380,7 @@ def main():
             t = t.replace('<button class="btn" id="theme"', '<a class="btn" href="fr.html" hreflang="fr" lang="fr" title="Version française">FR</a><button class="btn" id="theme"', 1)
             t = t.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/fr.html"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/"></head>', 1)
             import fr as _fr
-            t_fr = _fr.to_french(t)
+            t_fr = _fr.localize_links(_fr.to_french(t))
             t_fr = t_fr.replace('href="fr.html" hreflang="fr" lang="fr" title="Version française">FR</a>', 'href="index.html" hreflang="en" lang="en" title="English version">EN</a>', 1)
             t_fr = t_fr.replace("toLocaleDateString('en-CA'", "toLocaleDateString('fr-CA'").replace("toLocaleString('en-CA'", "toLocaleString('fr-CA'")
             t_fr = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{SITE_URL}/fr.html">', t_fr)
@@ -389,6 +389,19 @@ def main():
                        'Une erreur de traduction? <a style="color:#ffcc33" href="mailto:hello@postproductioncanada.ca?subject=Traduction">Dites-le-nous</a>.</div>')
             t_fr = t_fr.replace("<body>", "<body>" + _banner, 1) if "<body>" in t_fr else t_fr
             (OUT / "fr.html").write_text(t_fr, encoding="utf-8")
+        if _rel in ("networking.html", "schools.html"):
+            import fr as _fr, fr_networking, fr_schools
+            _mod = fr_networking if _rel == "networking.html" else fr_schools
+            _frn = _fr.FR_PAGES[_rel]
+            t = t.replace("</div></nav>", f'<a href="{_frn}" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1)
+            t = t.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/{_frn}"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/{_rel}"></head>', 1)
+            t_fr = _fr.localize_links(_fr.to_french(t, _mod.PAIRS, _mod.TITLE))
+            t_fr = t_fr.replace(f'<a href="{_frn}" hreflang="fr" lang="fr" title="Version française">FR</a>', f'<a href="{_rel}" hreflang="en" lang="en" title="English version">EN</a>', 1)
+            t_fr = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{SITE_URL}/{_frn}">', t_fr)
+            _b2 = ('<div style="background:#14161a;color:#ffcc33;font:13px ui-sans-serif,-apple-system,sans-serif;padding:8px 16px;text-align:center">'
+                   'Traduction préliminaire, en cours de révision. Une erreur? <a style="color:#ffcc33" href="mailto:hello@postproductioncanada.ca?subject=Traduction">Dites-le-nous</a>.</div>')
+            t_fr = t_fr.replace("<body>", "<body>" + _b2, 1)
+            (OUT / _frn).write_text(t_fr, encoding="utf-8")
         f.write_text(t, encoding="utf-8")
     import members
     members.write(OUT, ROOT, _leaf, _fav)
