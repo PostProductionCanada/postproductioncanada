@@ -240,6 +240,20 @@
       "category": "vfx",
       "google": true,
       "intl": true
+    },
+    {
+      "name": "Playback",
+      "url": "https://news.google.com/rss/search?q=site%3Aplaybackonline.ca+when%3A5d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "canada",
+      "google": true,
+      "intl": true,
+      "nofilter": true
+    },
+    {
+      "name": "CMPA",
+      "url": "https://cmpa.ca/feed/",
+      "category": "canada",
+      "filter": true
     }
   ]
 }

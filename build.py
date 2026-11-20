@@ -111,11 +111,15 @@ def fetch(feed):
                 source = se.text.strip()
             title = re.sub(r"\s+-\s+" + re.escape(source) + r"$", "", title)
             desc = ""  # Google News descriptions are just link lists
+            if source.lower() == "playbackonline.ca":
+                source = "Playback"
+                if title.strip().lower() == "playback":
+                    continue
         if not (title and link and date):
             continue
         items.append({"title": title, "url": link, "date": date, "source": source,
                       "excerpt": clip(strip_tags(desc)), "category": feed["category"],
-                      "canada_only": feed.get("canada_only", False), "google": bool(feed.get("google")), "intl": bool(feed.get("intl")), "filter": bool(feed.get("google") or feed.get("filter")), "require": feed.get("require")})
+                      "canada_only": feed.get("canada_only", False), "google": bool(feed.get("google")), "intl": bool(feed.get("intl")), "filter": bool((feed.get("google") or feed.get("filter")) and not feed.get("nofilter")), "require": feed.get("require")})
     print(f"  ok   {feed['name']}: {len(items)}")
     return feed, items
 
