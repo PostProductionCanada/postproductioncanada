@@ -353,6 +353,7 @@ def main():
             it["orgs"] = orgs_in(blob2 + " " + it["source"])
             it["guild"] = it["cce"] or it["dgc"] or it["iatse"] or bool(it["orgs"])
             it["lgbtq"] = bool(LGBTQ_RE.search(blob2))
+            it["love"] = love(it["title"])
             it["fest"] = bool(FEST_RE.search(it["title"])) and not NOT_FEST.search(it["title"])
             it["legal"] = bool(LEGAL_RE.search(blob2))
             it["tips"] = it["category"] in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(it["title"])) and not NOT_TIPS.search(it["title"])
@@ -387,6 +388,7 @@ def main():
         a["orgs"] = orgs_in(_b + " " + a["source"])
         a["guild"] = a["cce"] or a["dgc"] or a["iatse"] or bool(a["orgs"])
         a["lgbtq"] = bool(LGBTQ_RE.search(_b))
+        a["love"] = love(a["title"])
         a["fest"] = bool(FEST_RE.search(a["title"])) and not NOT_FEST.search(a["title"])
         refine_category(a)
         items.append(a)
@@ -586,6 +588,7 @@ CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
         "lgbtq": ("🏳️‍🌈", "LGBTQ+"),
+        "love": ("🍿", "Love Movies"),
         "legal": ("©️", "Copyright & Legal"),
         "tips": ("💡", "Tips & Tricks"),
         "fest": ("🎪", "Festivals")}
@@ -634,6 +637,17 @@ def ai_sub(text):
         if r.search(text):
             return k
     return ""
+
+LOVE_RE = re.compile(
+    r"((\b(best|greatest|favou?rite|fave|essential|top \d+|\d+ best)\b.{0,45}\b(movies?|films?|filmmakers?|directors?|performances?)\b)|"
+    r"\b(movies?|films?) (history|fans?|buffs?|lovers?)\b|\bcinephiles?\b|\bclassic (films?|movies?|cinema|horror)\b|\biconic\b.{0,30}\b(films?|movies?|performances?)\b|"
+    r"\bcult (films?|movies?|classics?)\b|\b(noir|hitchcock|friedkin|kubrick|scorsese|spielberg|coppola|lynch|cronenberg|tarantino)\b|movie[- ]star|"
+    r"\b(independent|repertory|revival|art[- ]?house|neighbourhood|neighborhood) cinemas?\b|godmother|\bmasterpieces?\b|\bretrospectives?\b|\btributes?\b|"
+    r"love letter|who has starred|final films|restored|restoration of|(in|on) memoriam|\bremembering\b|\bappreciation of\b|\bwhy .{3,40} still (works|matters|holds up)\b|"
+    r"\b(horror|war|noir|western|sci-fi|romance|comedy) (movies|films)\b.{0,25}\b(to watch|streaming|on (netflix|hbo|prime|max|crave))\b|(movies|films) to watch)", re.I)
+LOVE_NOT = re.compile(r"\b(black friday|sale|% off|deal|firmware|plug-?in|premiere pro|davinci|resolve|avid|camera|lens|\bAI\b|generative|price|vfx|invest\w+|funding|tax credit|incentive|lawsuit|sue[sd]?|wins?|festival)\b", re.I)
+def love(title):
+    return bool(LOVE_RE.search(title)) and not LOVE_NOT.search(title)
 
 STATUS_RE = re.compile(r"(status of the artist|collective agreements?|collective bargaining|bargaining|ratif\w+|strikes?|lockout|"
                        r"labou?r (board|code|standards|law|dispute|action|shortage)|freelanc\w+|independent contractors?|"
@@ -733,6 +747,7 @@ def card(i):
     cats.append(i["category"])
     if i["status"]: cats.append("status")
     if i.get("lgbtq"): cats.append("lgbtq")
+    if i.get("love"): cats.append("love")
     if i.get("legal"): cats.append("legal")
     if i.get("tips"): cats.append("tips")
     if i.get("fest"): cats.append("fest")
@@ -759,6 +774,8 @@ def card(i):
         chip += '<span class="chip c-iatse" title="IATSE">🛠️ IATSE</span>'
     for _o in i.get("orgs", []):
         chip += f'<span class="chip c-iatse">🛡️ {_o}</span>'
+    if i.get("love"):
+        chip += '<span class="chip c-love">🍿 Love Movies</span>'
     if i.get("lgbtq"):
         chip += '<span class="chip c-lgbtq">🏳️‍🌈 LGBTQ+</span>'
     if i["status"]:
@@ -816,6 +833,8 @@ def _body_card(src, r):
     _lf, _pn = _decor({**r, "source": src})
     _gt = r.get("title", "") + " " + r.get("note", "")
     _pn += "".join(f'<span class="chip c-dgc">🛡️ {n}</span>' for n, ok in (("DGC", DGC_RE.search(_gt)), ("CCE", CCE_RE.search(_gt)), ("IATSE", IATSE_RE.search(_gt))) if ok)
+    if love(r.get("title", "")):
+        _pn += '<span class="chip c-love">🍿 Love Movies</span>'
     if LGBTQ_RE.search(_gt):
         _pn += '<span class="chip c-lgbtq">🏳️‍🌈 LGBTQ+</span>'
     _pn += "".join(f'<span class="chip c-iatse">🛡️ {n}</span>' for n in orgs_in(_gt))
@@ -1059,6 +1078,8 @@ def reel_chips(title, url, category, excerpt="", source=""):
         out += '<span class="rchip">🛡️ CCE</span>'
     if DGC_RE.search(blob):
         out += '<span class="rchip">🛡️ DGC</span>'
+    if love(title):
+        out += '<span class="rchip">🍿 Love Movies</span>'
     if LGBTQ_RE.search(blob):
         out += '<span class="rchip">🏳️‍🌈 LGBTQ+</span>'
     if IATSE_RE.search(blob):
@@ -1130,7 +1151,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "love" and i.get("love")) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
@@ -1262,7 +1283,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-lgbtq{--c:#8a4fe0;font-weight:700}.tab.sub{display:none;font-size:.92em;border-style:dashed}body.aisub .tab.sub{display:inline-block}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-love{--c:#d4691a;font-weight:700}.chip.c-lgbtq{--c:#8a4fe0;font-weight:700}.tab.sub{display:none;font-size:.92em;border-style:dashed}body.aisub .tab.sub{display:inline-block}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
