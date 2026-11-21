@@ -1987,6 +1987,36 @@
   "prov": []
  },
  {
+  "title": "Montreal’s image+nation film festival opens 39th edition",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSi1PMXZRVUp4d052MDJvT0pfaUpEdC1iR3V2MW5QVUJoNW9FQkRNSjRLZ29hRURlQkZvZG95RDRRS3lkd0hEczFnLUhXclNpQjhhSEhyU2x1YVRLMDMtUDBvU0hnMXhINnFvVzhPcmNxYWpBVjBfNVJQSE0wcUlMVUpIVVY1WWd6NkJWQlJ0VEFKTHFiNWJfOE40UGhOQjZwM09R?oc=5",
+  "date": "2026-11-20T03:06:00+00:00",
+  "source": "CityNews Montreal",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": true,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
+ },
+ {
   "title": "London AI Film Awards Crown Pray to Gacha Top Winner as OPUS Reveals First Champions",
   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdV9zNVlQZmtnUG4td3N2eGtfemI1QVVZWXdRT0JyZ3RxTFpXUThJOHZJRHdfbTZlUloyYWxQRkIxekRfQ0JOemNCdmMwdVI5T3FPQmZBWUlSSEZkMlRsb1drYkhSZ01QNVN6ajF0NFRETjltcUpmNjl3XzhSaXMzZVpBcjI3LVhwdWFDZjBKYVZDYlhYdUZlQjB0Z0N1UXAxZm5TNFowWkk4LUVXVXdqaXNSazdiU3pI?oc=5",
   "date": "2026-11-20T02:03:57+00:00",
@@ -2013,36 +2043,6 @@
   "tips": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Montreal’s image+nation film festival opens 39th edition",
-  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMkNPeHQxd1lxVy1kVHdISVplQTg3cVUyOEJyUDZpZVpYcTlmNGVWUzdSSUtIUWpGaWhJenQ3WDhiUmVLMEVDZ21vMHlVd1hrX1B3TW53QTRjOGRKMUsxaldHaWpwSVlzNUtwSFpoWWhIM1BkQnRBVktybm5pLUgyazJEdWI?oc=5",
-  "date": "2026-11-20T02:00:40+00:00",
-  "source": "CityNews Montreal",
-  "excerpt": "",
-  "category": "canada",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "aisub": "",
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
-  "lgbtq": false,
-  "fest": true,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [
-   "QC"
-  ]
  },
  {
   "title": "Who Is Vir Hirani? Meet the Actor Voicing Mowgli in New AI Jungle Book Film",
@@ -2114,21 +2114,21 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": [
    "ON"
-  ],
-  "lgbtq": false,
-  "aisub": "airights"
+  ]
  },
  {
   "title": "Final Cut Pro update adds MotionVFX and editing tools",
@@ -4597,19 +4597,19 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "lgbtq": false,
-  "aisub": "aitools"
+  "prov": []
  },
  {
   "title": "AI Filmmakers Have Until Friday to Enter $1 Million Competition With Strict New Rules",
@@ -8545,21 +8545,21 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": [
    "QC"
-  ],
-  "lgbtq": false,
-  "aisub": ""
+  ]
  },
  {
   "title": "Zhao Liying sues short film platform, image copyright battle before AI wave",
@@ -11672,19 +11672,19 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "aisub": "aibiz",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "lgbtq": false,
-  "aisub": "aibiz"
+  "prov": []
  },
  {
   "title": "Adobe MAX 2026: AI Agents Come to Photoshop, Premiere Pro and Illustrator in Major Creative Cloud Overhaul",
