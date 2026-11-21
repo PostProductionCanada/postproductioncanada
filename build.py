@@ -313,7 +313,8 @@ def main():
             it["cce"] = bool(CCE_RE.search(blob2 + " " + it["source"] + " " + it["url"]))
             it["dgc"] = bool(DGC_RE.search(blob2 + " " + it["source"]))
             it["iatse"] = bool(IATSE_RE.search(blob2 + " " + it["source"]))
-            it["guild"] = it["cce"] or it["dgc"] or it["iatse"]
+            it["orgs"] = orgs_in(blob2 + " " + it["source"])
+            it["guild"] = it["cce"] or it["dgc"] or it["iatse"] or bool(it["orgs"])
             it["fest"] = bool(FEST_RE.search(it["title"])) and not NOT_FEST.search(it["title"])
             it["legal"] = bool(LEGAL_RE.search(blob2))
             it["tips"] = it["category"] in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(it["title"])) and not NOT_TIPS.search(it["title"])
@@ -344,7 +345,8 @@ def main():
         a["cce"] = bool(CCE_RE.search(_b + " " + a["source"] + " " + a.get("url", "")))
         a["dgc"] = bool(DGC_RE.search(_b + " " + a["source"]))
         a["iatse"] = bool(IATSE_RE.search(_b + " " + a["source"]))
-        a["guild"] = a["cce"] or a["dgc"] or a["iatse"]
+        a["orgs"] = orgs_in(_b + " " + a["source"])
+        a["guild"] = a["cce"] or a["dgc"] or a["iatse"] or bool(a["orgs"])
         a["fest"] = bool(FEST_RE.search(a["title"])) and not NOT_FEST.search(a["title"])
         refine_category(a)
         items.append(a)
@@ -533,7 +535,7 @@ def esc(s): return html.escape(s, quote=True)
 CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing"), "story": ("🎬", "Storytelling & Filmmaking"), "soundedit": ("🎧", "Sound Editing"), "audio": ("🎶", "Sound & Emotion"),
         "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Games"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
-        "guilds": ("🛡️", "DGC · CCE · IATSE"),
+        "guilds": ("🛡️", "Unions, Guilds & Associations"),
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
         "legal": ("©️", "Copyright & Legal"),
@@ -555,6 +557,13 @@ LEGAL_RE = re.compile(r"(copyright\w*|intellectual property|infring\w+|lawsuits?
 VIBE_RE = re.compile(r"vibe (cutting|editing)|agentic|\bMCP\b|AI assistant|natural[- ]language|creative agent|text-based editing|chat-?based", re.I)
 VIBE_CTX = re.compile(r"\bedit|video|timeline|premiere|resolve|avid|filmmak|post-?production|final cut|media composer", re.I)
 DGC_RE = re.compile(r"\bDGC\b|Directors Guild of Canada|Guilde canadienne des r[eé]alisateurs")
+OTHER_ORGS = [("ACTRA", re.compile(r"\bACTRA\b")), ("WGC", re.compile(r"\bWGC\b|Writers Guild of Canada")),
+              ("AQTIS", re.compile(r"\bAQTIS\b")), ("ARRQ", re.compile(r"\bARRQ\b")),
+              ("CSC", re.compile(r"Canadian Society of Cinematographers|\bSCGC\b")),
+              ("CMPA", re.compile(r"\bCMPA\b|Canadian Media Producers Association")),
+              ("Unifor", re.compile(r"\bUnifor\b")), ("Editors Guild", re.compile(r"Motion Picture Editors Guild"))]
+def orgs_in(text):
+    return [n for n, rx in OTHER_ORGS if rx.search(text)]
 IATSE_RE = re.compile(r"\bIATSE\b|International Alliance of Theatrical Stage Employees", re.I)
 CCE_RE = re.compile(r"\bCCE\b|Canadian Cinema Editors|cceditors\.ca")
 AI_CS = re.compile(r"\bAI\b|\bA\.I\.|\bGen-?AI\b|\bLLMs?\b")
@@ -682,6 +691,8 @@ def card(i):
         chip += '<span class="chip c-dgc" title="Directors Guild of Canada">🎬 DGC</span>'
     if i.get("iatse"):
         chip += '<span class="chip c-iatse" title="IATSE">🛠️ IATSE</span>'
+    for _o in i.get("orgs", []):
+        chip += f'<span class="chip c-iatse">🛡️ {_o}</span>'
     if i["status"]:
         chip += '<span class="chip c-status">⚖️ Status</span>'
     if i.get("legal"):
@@ -735,6 +746,9 @@ def _body_card(src, r):
         when = '<span class="dot">·</span><time datetime="' + r["dt"].isoformat() + '">' + str(r["dt"].date()) + "</time>"
     note = '<p class="why">' + esc(r["note"]) + "</p>" if r.get("note") else ""
     _lf, _pn = _decor({**r, "source": src})
+    _gt = r.get("title", "") + " " + r.get("note", "")
+    _pn += "".join(f'<span class="chip c-dgc">🛡️ {n}</span>' for n, ok in (("DGC", DGC_RE.search(_gt)), ("CCE", CCE_RE.search(_gt)), ("IATSE", IATSE_RE.search(_gt))) if ok)
+    _pn += "".join(f'<span class="chip c-iatse">🛡️ {n}</span>' for n in orgs_in(_gt))
     return ('<article class="pick body"><div class="meta"><span class="src">' + _lf + esc(src) + "</span>" + by + when + _pn + "</div>"
             '<h3><a href="' + esc(r["url"]) + '" target="_blank" rel="noopener">' + esc(r["title"]) + "</a></h3>" + note + "</article>")
 
@@ -763,13 +777,13 @@ def bodies_html(now, items=None):
     gi = gi[:8]
     if gi:
         def _tag(i):
-            t = [n for k, n in (("dgc", "DGC"), ("cce", "CCE"), ("iatse", "IATSE")) if i.get(k)]
+            t = [n for k, n in (("dgc", "DGC"), ("cce", "CCE"), ("iatse", "IATSE")) if i.get(k)] + list(i.get("orgs", []))
             return " · ".join(t)
         cards = "".join('<article class="pick body"><div class="meta"><span class="src">' + esc(_tag(i)) + '</span><span class="dot">·</span>' + esc(i["source"])
                         + '<span class="dot">·</span><time datetime="' + i["date"].isoformat() + '">' + str(i["date"].date()) + '</time></div>'
                         '<h3><a href="' + esc(i["url"]) + '" target="_blank" rel="noopener">' + esc(i["title"]) + '</a></h3></article>' for i in gi)
-        out.append(f'<section class="picks fold" aria-label="DGC, CCE and IATSE"><details class="bfold"><summary><h2>\U0001F6E1\uFE0F Latest from the DGC, CCE and IATSE <span class="ct">({len(gi)})</span></h2></summary><div class="pgrid">{cards}</div>'
-                   f'<p class="note" style="margin-top:8px">Stories from the last 30 days that mention the Directors Guild of Canada, Canadian Cinema Editors or IATSE. Added automatically as they come in; see the DGC · CCE · IATSE tab for more.</p></details></section>')
+        out.append(f'<section class="picks fold" aria-label="Unions, guilds and associations"><details class="bfold"><summary><h2>\U0001F6E1\uFE0F Latest from unions, guilds and associations <span class="ct">({len(gi)})</span></h2></summary><div class="pgrid">{cards}</div>'
+                   f'<p class="note" style="margin-top:8px">Stories from the last 30 days that mention the DGC, Canadian Cinema Editors, IATSE, ACTRA, WGC, AQTIS, ARRQ, the Canadian Society of Cinematographers, CMPA, Unifor or the Motion Picture Editors Guild. Added automatically as they come in; see the Unions, Guilds &amp; Associations tab for more.</p></details></section>')
     return "\n".join(out)
 
 
@@ -977,6 +991,8 @@ def reel_chips(title, url, category, excerpt="", source=""):
         out += '<span class="rchip">🛡️ DGC</span>'
     if IATSE_RE.search(blob):
         out += '<span class="rchip">🛡️ IATSE</span>'
+    for _o in orgs_in(blob + " " + source):
+        out += f'<span class="rchip">🛡️ {_o}</span>'
     if FEST_RE.search(title) and not NOT_FEST.search(title):
         out += '<span class="rchip" style="color:#e8730c;font-weight:700">🎪 Festival</span>'
     if category in ("picture", "editing", "story", "soundedit", "audio", "vfx", "gear") and TIPS_RE.search(title) and not NOT_TIPS.search(title):
@@ -1299,6 +1315,7 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="https://postperspective.com/" target="_blank" rel="noopener">Post Perspective</a> — trade news and features on post-production, VFX, editing, colour and sound. Its stories also appear in the news feed above.</li>
     <li><a href="editors.html">Canadian Cinema Editors</a> — the non-profit association for Canadian picture editors, plus the Vancouver Post Alliance.</li>
     <li><a href="https://filmincanada.com/incentives" target="_blank" rel="noopener">filmincanada.com</a> — film incentives by province and a tracker of productions across Canada.</li>
+    <li><a href="https://filmincanada.com/stages" target="_blank" rel="noopener">filmincanada.com/stages</a> — a directory of Canadian sound stages and studios. The site says its specs are not independently verified, so confirm with the operator.</li>
     <li><a href="https://cmpa.ca/profile" target="_blank" rel="noopener">CMPA Profile</a> — the annual economic report on Canada's screen industry.</li>
     <li><a href="awards.html">Awards</a> — the awards that honour Editors, sound, VFX and music supervision, with winners and IMDb links.</li>
     <li><a href="documentary.html">Documentary in Canada</a> — a sourced timeline and where to watch.</li>
