@@ -68,9 +68,14 @@ EXACT = {
     "Contact us": "Nous joindre", "Rights.": "Droits.",
     "Headlines and excerpts link to their original publishers, who keep all rights in their own work. Summaries and original text on this site are ours; please do not republish them without permission.": "Les titres et extraits renvoient à leurs éditeurs d'origine, qui conservent tous les droits sur leurs œuvres. Les résumés et textes originaux de ce site sont les nôtres; veuillez ne pas les republier sans permission.",
     "Please note.": "À noter.",
+    "Explore": "Explorer", "Home": "Accueil", "By the Numbers": "Les chiffres", "Status of the Artist": "Statut de l'artiste",
+    "Networking": "Réseautage", "Education": "Formation", "Follow & contact": "Suivre et nous joindre", "RSS feed": "Fil RSS", "Contact": "Contact",
+    "All sources": "Toutes les sources",
+    "Free news and resources for Canadian Editors and the people who work with them. Independent, and every story links to its publisher.": "Nouvelles et ressources gratuites pour les monteurs et monteuses du Canada et les gens qui travaillent avec eux. Indépendant : chaque article renvoie à son éditeur.",
     "Provided for information only, with no guarantee of accuracy or completeness, so check anything important with the source. We are independent, and not affiliated with or endorsed by any union, guild, association or company mentioned.": "Fourni à titre informatif seulement, sans garantie d'exactitude ni d'exhaustivité; vérifiez tout élément important auprès de la source. Nous sommes indépendants et n'avons aucun lien avec les syndicats, guildes, associations ou entreprises mentionnés, qui ne nous endossent pas.",
 }
 FRAG = [
+    ("Post Production Canada shows headlines and short excerpts only. Every story links to its original publisher — go read them.", "Post Production Canada n'affiche que des titres et de courts extraits. Chaque article renvoie à son éditeur d'origine : allez les lire."),
     ("Post Production Canada shows headlines and short excerpts only. Every story links to its original publisher — go read them. Sources:", "Post Production Canada n'affiche que des titres et de courts extraits. Chaque article renvoie à son éditeur d'origine : allez les lire. Sources :"),
     ("Press releases from the Canadian Media Producers Association. From", "Communiqués de l'Association canadienne des producteurs médiatiques. Source :"),
     ("Articles from industry voices on LinkedIn. LinkedIn blocks automated readers, so these are added by hand and some show no date. From", "Articles de voix de l'industrie sur LinkedIn. LinkedIn bloque les lecteurs automatisés; ils sont donc ajoutés à la main et certains n'ont pas de date. Source :"),

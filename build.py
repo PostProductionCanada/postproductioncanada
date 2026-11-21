@@ -283,7 +283,7 @@ def fancy_footer(t, pre=""):
     L = lambda h, lbl: f'<a href="{pre}{h}">{lbl}</a>'
     new = ('<footer class="pfoot"><div class="fwm">' + logo.inline() + '</div><div class="wrap"><div class="fgrid">'
            '<div class="fbox"><div class="fbrand">' + logo.inline() + '<span>Post Production Canada</span></div>'
-           '<p>Free news and resources for Canada\'s post-production community. Independent, and every story links to its publisher.</p></div>'
+           '<p>Free news and resources for Canadian Editors and the people who work with them. Independent, and every story links to its publisher.</p></div>'
            '<div class="fbox"><h4>Explore</h4><div class="flinks">' + L("index.html", "Home") + L("stats.html", "By the Numbers") + L("unions.html", "Union Map")
            + L("status-of-the-artist.html", "Status of the Artist") + L("networking.html", "Networking") + L("schools.html", "Education") + '</div></div>'
            '<div class="fbox"><h4>Follow &amp; contact</h4><div class="flinks">' + L("feed.xml", "RSS feed") + L("contact.html", "Contact") + L("privacy.html", "Privacy")
@@ -576,7 +576,7 @@ def cap_editor(t):
 def esc(s): return html.escape(s, quote=True)
 
 CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing"), "story": ("🎬", "Storytelling & Filmmaking"), "soundedit": ("🎧", "Sound Editing"), "audio": ("🎶", "Sound & Emotion"),
-        "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Games"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
+        "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Gaming"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
         "aifilms": ("🎞️", "AI Films & Festivals"),
         "aitools": ("🛠️", "AI Tools & Workflows"),
