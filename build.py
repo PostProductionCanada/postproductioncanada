@@ -256,6 +256,42 @@ def add_mypage(t):
     return re.sub(r'(<section class="hero">.*?</section>)', lambda m: m.group(1) + panel, t, count=1, flags=re.S)
 
 
+
+FOOT_CSS = ("<style>footer.pfoot{position:relative;overflow:hidden;background:var(--panel);border-top:3px solid var(--red);padding:28px 0 34px;color:var(--mute);font-size:13px}"
+            "footer.pfoot .fwm{position:absolute;right:-30px;bottom:-40px;width:260px;opacity:.07;pointer-events:none}footer.pfoot .fwm svg{width:100%;height:auto}"
+            "footer.pfoot .fgrid{position:relative;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;margin-bottom:18px}"
+            "footer.pfoot .fbox{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px}"
+            "footer.pfoot .fbox h4{margin:0 0 8px;font:700 11px ui-sans-serif,-apple-system,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--ink)}"
+            "footer.pfoot .fbox p{margin:0;max-width:none;line-height:1.45}"
+            "footer.pfoot .fbrand{display:flex;gap:10px;align-items:center;margin-bottom:8px;color:var(--ink);font-weight:800;font-size:15px}footer.pfoot .fbrand svg{width:34px;height:34px;flex:none}"
+            "footer.pfoot .fbox a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}footer.pfoot .fbox a:hover{border-color:var(--red);color:var(--red)}"
+            "footer.pfoot .flinks{display:flex;flex-wrap:wrap;gap:6px 12px}"
+            "footer.pfoot .fine{position:relative;font-size:12.5px;line-height:1.5}footer.pfoot .fine p{margin:0 0 6px;max-width:62em}"
+            "footer.pfoot details{margin:6px 0}footer.pfoot summary{cursor:pointer;color:var(--ink);font-weight:600}"
+            "@media (max-width:760px){footer.pfoot .fgrid{grid-template-columns:1fr}}</style>")
+
+
+def fancy_footer(t, pre=""):
+    """Swap a page's plain footer for three small boxes and a faint logo; keep the page's own fine print."""
+    m = re.search(r"<footer[^>]*>(.*?)</footer>", t, re.S)
+    if not m or "pfoot" in m.group(0):
+        return t
+    inner = re.sub(r'^\s*<div class="wrap">|</div>\s*$', "", m.group(1).strip())
+    if not inner.lstrip().startswith("<p"):
+        inner = "<p>" + inner + "</p>"
+    inner = re.sub(r"(Sources:)(.*?)(</p>)", lambda s: '</p><details><summary>All sources</summary><p>' + s.group(2).strip() + "</p></details>", inner, count=1, flags=re.S)
+    L = lambda h, lbl: f'<a href="{pre}{h}">{lbl}</a>'
+    new = ('<footer class="pfoot"><div class="fwm">' + logo.inline() + '</div><div class="wrap"><div class="fgrid">'
+           '<div class="fbox"><div class="fbrand">' + logo.inline() + '<span>Post Production Canada</span></div>'
+           '<p>Free news and resources for Canada\'s post-production community. Independent, and every story links to its publisher.</p></div>'
+           '<div class="fbox"><h4>Explore</h4><div class="flinks">' + L("index.html", "Home") + L("stats.html", "By the Numbers") + L("unions.html", "Union Map")
+           + L("status-of-the-artist.html", "Status of the Artist") + L("networking.html", "Networking") + L("schools.html", "Education") + '</div></div>'
+           '<div class="fbox"><h4>Follow &amp; contact</h4><div class="flinks">' + L("feed.xml", "RSS feed") + L("contact.html", "Contact") + L("privacy.html", "Privacy")
+           + '<a href="mailto:hello@postproductioncanada.ca">hello@postproductioncanada.ca</a></div></div></div>'
+           '<div class="fine">' + inner + '</div></div></footer>')
+    return t[:m.start()] + new + t[m.end():]
+
+
 def add_nav(t, fname, has_originals):
     pre = "../" if fname.startswith("originals/") else ""
     nav = '<nav class="sitenav" aria-label="Sections"><div class="snw">' + menu_html(pre, fname, has_originals) + "</div></nav>"
@@ -448,6 +484,9 @@ def main():
                     'window.addEventListener("scroll",f,{passive:true});f();'
                     'b.addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"})})})();</script>')
             t = t.replace("</body>", _tf + "</body>", 1)
+        if not _rel.startswith("fr") and "members-" not in _rel:
+            t = fancy_footer(t, "../" if _rel.startswith("originals/") else "")
+            t = t.replace("</head>", FOOT_CSS + "</head>", 1)
         if _rel != "index.html":
             t = add_nav(t, _rel, bool(_arts))
         if _rel != "index.html" and "homefab" not in t:
