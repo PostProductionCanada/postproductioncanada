@@ -31,7 +31,7 @@ def main():
             continue
         arts.append({"title": a["title"], "date": a["date"], "type": a.get("type", ""), "byline": a.get("byline", "Post Production Canada"),
                      "summary": a.get("summary", ""), "disclosure": a.get("disclosure", ""), "html": originals.md(a["body"])})
-        arts[-1] = {k: ((style.link_people(style.cap_text(v)) if k == "html" else style.cap_text(v)) if k in ("title", "html", "disclosure", "summary") else v) for k, v in arts[-1].items()}
+        arts[-1] = {k: ((style.mark_people(style.link_people(style.cap_text(v))) if k == "html" else style.cap_text(v)) if k in ("title", "html", "disclosure", "summary") else v) for k, v in arts[-1].items()}
     arts.sort(key=lambda a: a["date"], reverse=True)
     if not arts:
         sys.exit("No articles found in " + str(SRC))

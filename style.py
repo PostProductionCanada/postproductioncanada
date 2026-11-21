@@ -90,3 +90,52 @@ def link_people(t):
         else:
             out.append(seg)
     return "".join(out)
+
+
+# Guild letters, only where a source confirms them. CCE: cceditors.ca and the Canadian Editors profiles (canadians.py).
+# ACE: americancinemaeditors.org lists Schoonmaker and Murch as ACE. Add more only after checking a source.
+CREDENTIALS = {
+    "Ronald Sanders": "CCE", "Jay Prychidny": "CCE", "Don Cassidy": "CCE", "Cam McLauchlin": "CCE",
+    "Wendy Hallam Martin": "CCE, ACE", "Thelma Schoonmaker": "ACE", "Walter Murch": "ACE",
+}
+
+# Other people named in the Originals: coloured like the rest, no letters or IMDb link unless verified above.
+PEOPLE_EXTRA = {"Tim Burton", "Martin Scorsese", "Joe Walker", "Jennifer Lame", "Hal Ashby", "Steven Soderbergh", "Chloé Zhao", "John Grierson", "Brock Mitchell", "Mark Robson"}
+
+
+def mark_people(t):
+    """Wrap verified people's names in a coloured span and add guild letters after the first mention in each article.
+    Skips links, headings, scripts and styles. Run after link_people so the IMDb badge stays after the letters."""
+    names = sorted(set(registry()) | set(CREDENTIALS) | PEOPLE_EXTRA, key=len, reverse=True)
+    pat = re.compile("(?<![\\w])(" + "|".join(re.escape(n) for n in names) + ")(?![\\w])")
+    seen, out = set(), []
+    depth_a = depth_h = 0
+    mode = None
+    for seg in re.split(r"(<[^>]*>)", t):
+        if seg.startswith("<"):
+            low = seg.lower()
+            if re.match(r"<(script|style|title)\b", low):
+                mode = "skip"
+            elif re.match(r"</(script|style|title)\b", low):
+                mode = None
+            elif re.match(r"<a\b", low):
+                depth_a += 1
+            elif low.startswith("</a"):
+                depth_a = max(0, depth_a - 1)
+            elif re.match(r"<h[1-3]\b", low):
+                depth_h += 1
+            elif re.match(r"</h[1-3]\b", low):
+                depth_h = max(0, depth_h - 1)
+            out.append(seg)
+        elif mode is None and not depth_a and not depth_h:
+            def rep(m):
+                n = m.group(1)
+                extra = ""
+                if n not in seen and n in CREDENTIALS:
+                    extra = ", " + CREDENTIALS[n]
+                seen.add(n)
+                return '<span class="pn">' + n + extra + "</span>"
+            out.append(pat.sub(rep, seg))
+        else:
+            out.append(seg)
+    return "".join(out)

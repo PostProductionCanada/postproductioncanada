@@ -10,6 +10,7 @@ import originals
 PAGE = """<!doctype html><html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Members — Post Production Canada</title><link rel="icon" href="{{FAVICON}}">
 <style>""" + originals.CSS + """
+.pn{color:#1a6fb5;font-weight:600}@media (prefers-color-scheme:dark){.pn{color:#6cb4f0}}
 .hero-art{display:block;width:100%;height:150px;border-radius:10px;margin:10px 0 14px}
 .gate{max-width:420px;margin:60px auto;text-align:center}.gate input{width:100%;padding:12px 14px;font:16px ui-sans-serif,sans-serif;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink)}
 .gate button{margin-top:12px;border:0;background:var(--red);color:#fff;border-radius:999px;padding:10px 22px;font:700 15px ui-sans-serif,sans-serif;cursor:pointer}
