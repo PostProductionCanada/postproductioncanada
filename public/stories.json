@@ -1,5 +1,86 @@
 [
  {
+  "title": "How we evolved from bi-standard/multistandard to bi-rate/multirate monitors",
+  "url": "https://www.provideocoalition.com/how-we-evolved-from-bi-standard-multistandard-to-bi-rate-multirate-monitors/",
+  "date": "2026-11-21T21:15:22+00:00",
+  "source": "ProVideo Coalition",
+  "excerpt": "A few decades ago, it was typical to converse about either bi-standard or multistandard monitors or TV sets. (We even applied those terms to certain video tape recorders and players too, but that goes outside the scope…",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Why Is Brad Pitt's New Film Facing AI Accusations? David Fincher's Trailer Faces Backlash Over Bizarre Visual Errors",
+  "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWXRLTVloZGhsa3dNTXViOU56YjVWMHN4WEJBOTkwOUhDNjN4OVJlOVo3aVptUW1aeENoT3I5SmFaaWxBc1lrdDRIdFA0WGRfSmRUcjlLaXdJVXRQd3hLWTY3OHVOdG9oSkRhdC1samlvM0prZWlaZGd0MERhRjZvNEQ3QkFtMk5ZWnlweXd1b2U3VnNXU09zTzBMRzBVRFNOSks1OGVNTm1aSUwxSC1CWXRqTnJ0SkpM?oc=5",
+  "date": "2026-11-21T21:12:48+00:00",
+  "source": "International Business Times, Singapore Edition",
+  "excerpt": "",
+  "category": "ai",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Shotcut 26.11 arrives with Audio Mixing Assistant and proxy support",
+  "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNHVMeXp3LVgwb0lObjhQSmpMMWkyVU9JT1ZuTHA5Q3lBTWJoNDBDRWpBX09NNWR1RERMQmZNZDEtZTYtZkI5b0JRV3N1ZG5meEx5WE4zT0VxNnZxM3pfNWI3UlQ2bnRmN0VGdnJ5cjhxc2tCVW9ublRTVmF2d3ZiMXEtaGhMUjZHQlk5VWpTenBKUFFKZWVmZDg2cXRaSzVCdzdROUdzYi1KelBN?oc=5",
+  "date": "2026-11-21T19:54:09+00:00",
+  "source": "Foro3D",
+  "excerpt": "",
+  "category": "audio",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Bryan Lourd Urges Congress to Pass NO FAKES Act as AI Cloning Threatens Celebrities and Creators’ Likeness",
   "url": "https://www.thewrap.com/industry-news/tech/bryan-lourd-ai-cloning-no-fakes-act-congress/",
   "date": "2026-11-21T18:28:59+00:00",
@@ -22,9 +103,37 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": true,
   "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "How to Fix Adobe Premiere Pro That Keeps Crashing",
+  "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbEVHM1FSNUZFVlByazZsSi10X1M5UU85RGlXTjA2cFh6X1RIeEptbl8tRllmZE5GYXN1b1d4YlpXZTdMSDFYU0JCOXR4T1dBZnh0ekZFYVBtcG5DRHBrWTQ2bmFPWVVOM1IzOW1NYkI3cm1JdmRVZ1RJN3J0QnIwS1V3?oc=5",
+  "date": "2026-11-21T17:55:44+00:00",
+  "source": "Technobezz",
+  "excerpt": "",
+  "category": "editing",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": true,
   "status": false,
   "prov": []
  },
@@ -48,6 +157,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -74,6 +184,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -100,6 +211,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -130,7 +242,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Paul Schrader embraces AI filmmaking despite fears it can imitate his scripts",
@@ -152,6 +265,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -178,6 +292,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -204,6 +319,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -236,7 +352,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "This movie poster is one big AI slop Easter egg hunt",
@@ -258,6 +375,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -284,6 +402,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -310,6 +429,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -336,6 +456,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -362,6 +483,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -388,6 +510,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -414,6 +537,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -440,6 +564,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -466,6 +591,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -494,6 +620,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": true,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -526,7 +653,8 @@
   "prov": [
    "ON"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "James Bond's Do's and Don'ts: 4 Rules Every 007 Must Follow",
@@ -548,6 +676,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -574,6 +703,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -600,6 +730,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -626,6 +757,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -652,6 +784,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -678,6 +811,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -706,6 +840,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -736,7 +871,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "SmallRig’s Black Friday Sales Are Rolling In as This Universal Mobile Phone Cage Gets a Discount",
@@ -758,6 +894,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -784,6 +921,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -810,6 +948,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -836,6 +975,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -864,6 +1004,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -890,6 +1031,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -916,6 +1058,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -946,7 +1089,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "EP Ryan Smith Joins Final Cut New York",
@@ -968,6 +1112,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -994,6 +1139,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1020,6 +1166,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1044,13 +1191,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "The Shape of Dread – Different Forms a Suspense Curve Can Take",
@@ -1072,6 +1220,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1098,6 +1247,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -1130,7 +1280,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AWN Studio Jobs Roundup, November 20: 78 Openings Direct from the Studios",
@@ -1156,7 +1307,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "DZOFILM Black Friday 2026 – 7th Anniversary Sale with Up to 38% Off, Arcana Kit Deal and New Education Kits",
@@ -1178,6 +1330,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1204,6 +1357,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1230,6 +1384,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1256,6 +1411,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1282,6 +1438,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1308,6 +1465,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1334,6 +1492,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1360,6 +1519,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -1388,6 +1548,7 @@
    "ACTRA"
   ],
   "guild": true,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1414,6 +1575,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1440,6 +1602,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1466,6 +1629,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1492,6 +1656,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1518,6 +1683,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -1550,7 +1716,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "TUNE IN: Tzinquaw Opera",
@@ -1572,6 +1739,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1598,6 +1766,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1624,6 +1793,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1650,6 +1820,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1682,7 +1853,8 @@
   "prov": [
    "QC"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Who Is Vir Hirani? Meet the Actor Voicing Mowgli in New AI Jungle Book Film",
@@ -1704,6 +1876,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1730,6 +1903,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1762,7 +1936,8 @@
   "prov": [
    "ON"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Cut Pro update adds MotionVFX and editing tools",
@@ -1784,6 +1959,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1810,6 +1986,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1836,6 +2013,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": true,
   "tips": false,
@@ -1868,7 +2046,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "DP Thorsten Thielow on Shooting Billie Jean King Doc Give Me the Ball",
@@ -1890,6 +2069,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1916,6 +2096,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1940,13 +2121,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Ashton Kutcher Celebrates Anthropic IPO as His Firm Rakes in Billions: ‘Kind of Cool’",
@@ -1971,6 +2153,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -1997,6 +2180,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -2023,6 +2207,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2049,6 +2234,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2077,6 +2263,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2103,6 +2290,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2129,6 +2317,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2155,6 +2344,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2181,6 +2371,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2207,6 +2398,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2235,6 +2427,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2261,6 +2454,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2291,7 +2485,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "VFXShow 311: Godzila Minus Zero",
@@ -2313,6 +2508,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2339,6 +2535,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2365,6 +2562,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2389,13 +2587,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "How Many Shots Does a Scene Need? How to Plan Your Coverage",
@@ -2417,6 +2616,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -2443,6 +2643,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2469,6 +2670,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2495,6 +2697,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2521,6 +2724,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2547,6 +2751,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2573,6 +2778,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2599,6 +2805,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2625,6 +2832,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2651,6 +2859,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2677,6 +2886,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2703,6 +2913,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2727,7 +2938,6 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
-  "orgs": [],
   "guild": false,
   "fest": false,
   "legal": false,
@@ -2735,7 +2945,9 @@
   "status": false,
   "prov": [
    "ON"
-  ]
+  ],
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Hollyland Solidcom SE – 2.4GHz Full-Duplex Intercom for Crews of Up to Five + Black Friday Deal",
@@ -2757,6 +2969,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2781,13 +2994,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Adobe’s democratisation of design doesn’t have to be the death of human creativity",
@@ -2809,6 +3023,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2833,13 +3048,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Nikon ZR — A Solo Filmmaker’s User Review",
@@ -2861,6 +3077,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2887,6 +3104,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2913,6 +3131,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2939,6 +3158,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2965,6 +3185,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -2991,6 +3212,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3021,7 +3243,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Early Black Friday Deal: Canon EOS R5 8K RAW Camera Drops to $2,399",
@@ -3043,6 +3266,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3069,6 +3293,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3095,6 +3320,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3121,6 +3347,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3145,13 +3372,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Hasselblad X2D, FUJIFILM X70 and Ricoh GR Community Mods – Film Looks, AF-C, 400MP Pixel Shift and 65:24",
@@ -3173,6 +3401,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3199,6 +3428,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3225,6 +3455,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3251,6 +3482,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3277,6 +3509,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3307,7 +3540,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Inside the Chinese AI Studio Shrinking Short-Drama Crews to One",
@@ -3333,7 +3567,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Westworld rebuilds the TV-drama creature pipeline with AI sources and VFX compositing",
@@ -3355,6 +3590,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3385,7 +3621,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Motion North 2027 brings together motion design and VFX in Manchester",
@@ -3411,7 +3648,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Google unveils AI filmmaking tool that creates multiple camera angles from a single phone recording",
@@ -3433,6 +3671,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3463,7 +3702,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Arena Animation ropes in Vatsal Sheth to promote AI filmmaking skills",
@@ -3489,7 +3729,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Cut Pro 13 — a deep dive",
@@ -3511,6 +3752,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3537,6 +3779,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3567,7 +3810,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "DNEG Converting Film Catalog to 3D for Meta VR Glasses",
@@ -3593,7 +3837,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Is Superhero Fatigue Actually Real? The Reception of 'Endgame Encore' Might Have the Answer",
@@ -3615,6 +3860,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3645,7 +3891,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Apple integrates MotionVFX directly into Final Cut Pro for Creator Studio subscribers",
@@ -3667,6 +3914,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3693,6 +3941,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3719,6 +3968,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3751,7 +4001,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Floyd Norman Accepts Honorary Oscar At The Governors Awards",
@@ -3773,6 +4024,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3799,6 +4051,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3829,7 +4082,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Cut Pro 13 Might Finally Sell You on Creator Studio! 7+ NEW Features!",
@@ -3851,6 +4105,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3877,6 +4132,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3901,7 +4157,6 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
-  "orgs": [],
   "guild": false,
   "fest": false,
   "legal": false,
@@ -3909,7 +4164,9 @@
   "status": false,
   "prov": [
    "AB"
-  ]
+  ],
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "‘Somewhere Out There’ Directors On Don Bluth, Taking On Disney, And The Cost Of Going Independent (EXCLUSIVE CLIP)",
@@ -3931,6 +4188,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3957,6 +4215,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -3983,6 +4242,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4009,6 +4269,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4039,7 +4300,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI Filmmakers Have Until Friday to Enter $1 Million Competition With Strict New Rules",
@@ -4065,7 +4327,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "A New Vimeo on Demand Alternative is Here as rushes Launches Rentals",
@@ -4087,6 +4350,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4113,6 +4377,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4139,6 +4404,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4169,7 +4435,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Etsy-dus: Artists Leave The Online Marketplace In Droves After New Terms Allow AI Training On Their Work",
@@ -4191,6 +4458,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4217,6 +4485,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4247,7 +4516,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "How to Cast an Indie Film",
@@ -4273,7 +4543,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Skydance Animation Shakeup: Bill Damaschke Steps Down At WBPA, Michael Ouweleen Takes On Nickelodeon",
@@ -4295,6 +4566,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4325,7 +4597,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "What Editors Can Learn from the Greatest Ad Agencies",
@@ -4351,7 +4624,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Video games, VFX, animation and AI: Talent at the heart of Montréal’s creative tech ecosystem",
@@ -4373,6 +4647,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4405,7 +4680,8 @@
   "status": false,
   "prov": [],
   "fest": true,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "ShotDeck Relaunch Announced – Natural Language Search, Movie and TV Clips, Public Decks",
@@ -4427,6 +4703,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4453,6 +4730,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4479,6 +4757,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4505,6 +4784,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4535,7 +4815,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Panasonic LUMIX SHX1: the first compact cinema camera in LUMIX history",
@@ -4557,6 +4838,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4587,7 +4869,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Vatsal Sheth Visits Arena Animation’s Vijaynagar Centre in Indore to Champion Next-Generation AI Filmmaking Skills",
@@ -4613,7 +4896,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Series Mania Forum Announces Canada-Québec as Guests of Honour for 2027",
@@ -4641,7 +4925,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Series Mania Forum Names Canada and Québec Guests of Honour for 2027",
@@ -4669,7 +4954,8 @@
   "prov": [
    "QC"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Short film expands playground for singers and rappers",
@@ -4695,7 +4981,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Aiarty Video Enhancer – Offline AI Denoising, 4K Upscaling and Black Friday Offer",
@@ -4717,6 +5004,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4743,6 +5031,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -4769,6 +5058,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4795,6 +5085,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4823,6 +5114,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4849,6 +5141,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4881,7 +5174,37 @@
    "QC"
   ],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
+ },
+ {
+  "title": "Stéphane Cardin: \"Our priority is to ensure that Québec remains an attractive destination for major productions\" - Señal News",
+  "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTXMzTFh0MGVqODVfZUVPejZ4NkZkdnNBeDdwS2pZRXY1REI3cjFCTkFLOHBDS3B0Q3lwX3hBbm54WTdyNUhRVUU1ZDQ3MVJhOFM4a05VOU14V2FIdDFqb2dxMVBXUHFlbVVHSGI0RkMxTkJBWHBweEVCLTlLM3FGYlBPMXVraUo4cUtIdno3T05McjFLSmhlZmpNWkVHNk1PWFQ3Y2VhU3hBbWhudC1qajRGSHZxVWkyOWpSNFlrYVZIYTNLMTNYbHJQVWtHbVVnZXZwbmhQUlE1S1EycVHSAeMBQVVfeXFMTXdJRWVQdHd0LUtyOHFMSlhsZjRDckRQeHhxQjNpcGZGVjgzOFRGTkFrX19lVldLY1NOdGYyUU1PbjlSOWZiVkdJRFZhMW9DQmFLUHZzSlRMMlZwQ2ozbTZKZmJycnppeC1fR3JfZHZEdzNnTFM2dG5HTkJpTkFuSXhOb3VXSzhaeGZSYnRkeGZNVmwzc1RQWEhIcktEaWQtWWtoVnBKZnJuZWV2SDgzNzgxUnIxLXJtZlVsaklLWklnRjZIb0JQcjkwMDFYUEVIQXpGbVJYTG11dTN5YzNLWU1ST2s?oc=5",
+  "date": "2026-11-18T02:47:42+00:00",
+  "source": "Senal News",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": [
+   "QC"
+  ]
  },
  {
   "title": "Episode 136: EditCon 2026: In Conversation with Brett Sullivan, CCE",
@@ -4903,6 +5226,7 @@
   "iatse": false,
   "orgs": [],
   "guild": true,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4935,7 +5259,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "REKT expands to corporate work with DaVinci Resolve",
@@ -4957,6 +5282,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -4983,6 +5309,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5011,6 +5338,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5037,6 +5365,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5067,7 +5396,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Jon Portman’s ‘Beast Of The Seine,’ A Hand-Drawn Short Inspired By A Bizarre 1908 Dog Story, Is Now Online",
@@ -5093,7 +5423,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Lemonlight Announces Hero, Its AI-Powered Operating System for Video Production",
@@ -5119,7 +5450,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "The 5 Best William Friedkin Movies",
@@ -5145,7 +5477,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "The French Psychological Horror Film That Pushed Hitchcock To Make ‘Psycho’",
@@ -5171,7 +5504,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Cut Pro adds MotionVFX library for Creator Studio subscribers",
@@ -5193,6 +5527,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5223,7 +5558,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Robert Pattinson is Ushering In the Movie Star Era Again",
@@ -5249,7 +5585,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Signiant Acquires Ceivo Media Intelligence Technology",
@@ -5271,6 +5608,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5301,7 +5639,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Skywild Pictures buys Niv Fichman’s Rhombus in major Canadian production deal",
@@ -5323,6 +5662,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5349,6 +5689,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5379,7 +5720,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "How to Create Your Own Micro Short Film Using Topview’s Film Studio",
@@ -5405,7 +5747,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Biwin Black Opal NV7400 2 TB Review - Adobe Photoshop & Premiere Pro",
@@ -5427,6 +5770,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5457,7 +5801,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Shure MV360 spatial microphone & MV360+ with built-in 32-bit float recorder w/wireless control",
@@ -5479,6 +5824,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5509,7 +5855,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Speaking in Shots: How DP Lawrence Sher Translates Director Visions & ShotDeck’s Next Chapter",
@@ -5535,7 +5882,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Cut Pro 13 adds MotionVFX for one of the biggest updates ever",
@@ -5557,6 +5905,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5583,6 +5932,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5609,6 +5959,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5639,7 +5990,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Cut Pro 13 to Add MotionVFX and More to Creator Studio",
@@ -5661,6 +6013,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5691,7 +6044,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Creative BC adds two to board of directors",
@@ -5713,6 +6067,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5745,7 +6100,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "NA HONG-JIN GOES OTHERWORLDLY WITH HOPE",
@@ -5771,7 +6127,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Beeble’s Updated SwitchX 3.0: AI Environments, More Creative Control",
@@ -5793,6 +6150,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5823,7 +6181,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "DNEG signs technology partnership with Meta for 3D VR movie titles",
@@ -5849,7 +6208,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Creative BC welcomes Pete Mitchell and Tarek Elneweihi to its Board of Directors",
@@ -5871,6 +6231,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5899,6 +6260,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -5925,6 +6287,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -5955,7 +6318,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Nueva Pescanova Launches AI Project to Optimize Seafood Production",
@@ -5981,7 +6345,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Post Vets Launch UK-Based Post Strategy Consultancy, WonderWorks",
@@ -6007,7 +6372,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Panasonic LUMIX SHX1 Interview – Tsumura-san on Blackmagic RAW, Missing ND, S9 Successor, and Firmware Hacks",
@@ -6029,6 +6395,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6059,7 +6426,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Panasonic LUMIX SHX1 Lab Test – Rolling Shutter, Dynamic Range and Exposure Latitude",
@@ -6081,6 +6449,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6111,7 +6480,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Panasonic LUMIX SHX1: specs, price, and release date",
@@ -6133,6 +6503,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6159,6 +6530,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6189,7 +6561,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "‘The Cat Came Back’ Director Cordell Barker Gives Santa A Rival In The Full Trailer For ‘The Anta Claus Of The South Pole’ (EXCLUSIVE)",
@@ -6215,7 +6588,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Canadian film powerhouse Rhombus Media acquired by nascent player Skywild Pictures",
@@ -6237,6 +6611,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6261,7 +6636,6 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
-  "orgs": [],
   "guild": false,
   "fest": false,
   "legal": false,
@@ -6269,7 +6643,9 @@
   "status": false,
   "prov": [
    "QC"
-  ]
+  ],
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "‘A Passage To India’: Ali Fazal, Fiona Shaw & Tom Mison Leading BBC & CBC’s TV Reboot",
@@ -6291,6 +6667,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6321,7 +6698,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Nikon ZR Firmware 2.00 Reportedly Coming November 24 – High ISO NR for ProRes N-Log, Full HD Limit for LUT Over HDMI",
@@ -6347,7 +6725,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Equity deal would give actors consent rights over AI digital replicas",
@@ -6373,7 +6752,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Avid unveils AI-powered Ready to Play for Media Composer",
@@ -6399,7 +6779,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Camerimage 2026 Winners – Golden Frog for Łukasz Żal and Fatherland, Shot in Black and White on ARRI ALEXA 35",
@@ -6425,7 +6806,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Seven Acclaimed Korean Directors Team Up for AI Films at 'The Collaboration 2026' This November",
@@ -6447,6 +6829,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6473,6 +6856,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": true,
   "tips": false,
@@ -6503,7 +6887,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Disney’s radical new animation technique will make Hexed the end of an era",
@@ -6529,7 +6914,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Sony drone boom mic patent: stays out of shot",
@@ -6555,7 +6941,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Foley Represents Nomad in Series C Financing",
@@ -6577,6 +6964,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6601,13 +6989,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
-  "orgs": [],
   "guild": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Forget XML: CornerCut Translates Adobe Premiere Pro Projects Directly to DaVinci Resolve",
@@ -6633,7 +7022,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "HPA NET Roundtable: AI as a Second Unit",
@@ -6659,7 +7049,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Scott Brothers Entertainment launches Curity Studios podcast network",
@@ -6685,7 +7076,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Mix Blog: Movies, Music and a One-of-a-Kind Mind",
@@ -6713,7 +7105,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "2027 Oscars Short Film Contenders: ‘With Tapes And Toasts In The Car’ Director Kiana Naghshineh",
@@ -6739,7 +7132,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "New Google AI technology lets professional film editors generate video without leaving their software",
@@ -6765,7 +7159,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Consider Leveling Up Your Color Grading Workflows in Final Cut Pro With This New Color Plugin",
@@ -6787,6 +7182,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -6813,6 +7209,7 @@
   "iatse": false,
   "orgs": [],
   "guild": true,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6843,7 +7240,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Virtual Content Creator Roundtable",
@@ -6869,7 +7267,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Scott Brothers Entertainment launches podcast network",
@@ -6895,7 +7294,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Box Office: ‘The Cat In The Hat’ Holds At No. 2 As ‘Wildwood’ Passes ‘Kubo’",
@@ -6921,7 +7321,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "CBC’s Small Achievable Goals earns trio of DGC Awards",
@@ -6943,6 +7344,7 @@
   "iatse": false,
   "orgs": [],
   "guild": true,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -6973,7 +7375,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Hot Sheet: The Gilded Age draws high demand with season four",
@@ -6999,7 +7402,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Lomography Lomo72: price, specs, release date",
@@ -7025,7 +7429,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "James Bond Franchise Worth: All previous 007 actors and Robert Pattinson's career",
@@ -7051,7 +7456,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Nikon Z8 Firmware Mod NikonFirmwarePatch Adds 8.3K Open-Gate N-RAW, More ProRes Options and S-Log3",
@@ -7077,7 +7483,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "FEENEY JOINS 526 AS ASSISTANT EDITOR",
@@ -7099,6 +7506,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7125,6 +7533,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7155,7 +7564,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "The huge CyberLink Black Friday sale is a fantastic chance to get into video editing",
@@ -7181,7 +7591,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "The first scene from the new Harry Potter series just dropped – and it's sparked a fierce filmmaking debate",
@@ -7207,7 +7618,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "SmallRig Magnetic Phone Support Mounts the iPhone Duo on a Camera – MagSafe, Dual Rotating Shafts, 80g Aluminum Build",
@@ -7233,7 +7645,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Final Equity-Pact Deal Offer Includes AI Provisions, Streamer Residuals",
@@ -7255,6 +7668,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7281,6 +7695,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7311,7 +7726,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "New York Closes In on California as Top US Production State – California Answers With $1 Billion Tax Credit Plan",
@@ -7337,7 +7753,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "ASUS XG Core RX 9060 XT LP: specs and price",
@@ -7363,7 +7780,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Memory Costs Hit Canon, FUJIFILM, Nikon and Sony – Canon Plans Price Increases From 2027",
@@ -7389,7 +7807,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "[REVIEW] AI movie 'Raphael' impresses visually, lacks fresh plot",
@@ -7411,6 +7830,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7441,7 +7861,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Chiranjeevi takes a stand against AI misuse and digital impersonation of actors, submits memo to union ministry after meeting Amit Shah | Hindustan Times",
@@ -7463,6 +7884,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7493,7 +7915,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Christine Shaw: Adapting Filmmaking to Every Story and Platform",
@@ -7519,7 +7942,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Projective integrates into DaVinci Resolve to centralize post-production",
@@ -7539,13 +7963,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Google introduces five Flow tools designed with filmmakers and visual artists",
@@ -7571,7 +7996,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Inside Gaza wins best documentary at Montreal’s Cinemania film festival",
@@ -7599,7 +8025,8 @@
   "prov": [
    "QC"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Zhao Liying sues short film platform, image copyright battle before AI wave",
@@ -7625,7 +8052,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "The Testaments, Small Achievable Goals lead 2026 DGC Awards winners",
@@ -7647,6 +8075,7 @@
   "iatse": false,
   "orgs": [],
   "guild": true,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7677,7 +8106,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Stability AI - Tools for Creative Production",
@@ -7699,6 +8129,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7729,7 +8160,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Manchester Animation Festival Bans Generative AI Films for 2027 as 2026 Short Film Winners Revealed",
@@ -7751,6 +8183,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -7781,7 +8214,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Manchester Animation Festival Bans Generative AI Films From Its 2027 Competition",
@@ -7803,6 +8237,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -7829,6 +8264,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7855,6 +8291,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7881,6 +8318,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7907,6 +8345,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7933,6 +8372,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -7963,7 +8403,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Adobe Reveals New AI Technology That Lets Filmmakers Talk to Characters Before Creating Videos",
@@ -7989,7 +8430,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "'The Last of Us' series brought more than $141 million in production spending to Alberta; a study found i",
@@ -8017,7 +8459,8 @@
   "prov": [
    "AB"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Video | Adobe MAX 2026 Explained: Firefly Goes Agentic, Premiere Pro Gets AI Upgrades & More!",
@@ -8039,6 +8482,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": true,
@@ -8069,7 +8513,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "One of the Twin Actors from the Popular Movie \"Twin Sitters\" Has Died",
@@ -8095,7 +8540,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Canon’s Flagship 410MP 25K Full-Frame Sensor Samples Are Ready",
@@ -8117,6 +8563,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8147,7 +8594,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Ramayana VFX supremacy: Facts to remember",
@@ -8173,7 +8621,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Collective Artists is making a film on Hanuman without actors. It’s relying on AI",
@@ -8195,6 +8644,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8221,6 +8671,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8251,7 +8702,8 @@
   "iatse": false,
   "guild": false,
   "fest": true,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
@@ -8277,7 +8729,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "How ‘Tuner’ Sound Designer Johnnie Burn Used Dolby Atmos to Mimic Hyperacusis",
@@ -8299,6 +8752,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8325,6 +8779,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -8351,6 +8806,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8377,6 +8833,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8412,7 +8869,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Save Hundreds on Your Next Cinema Camera – MZed Pro Members Now Get B&H Education Pricing",
@@ -8438,7 +8896,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Insta360 X5 in How to Rob a Bank: 360 camera use",
@@ -8464,7 +8923,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "CeraVe Becomes \"The Official Moisturizer of Arrakis\" in First-Ever Film Partnership with DUNE: PART THREE",
@@ -8490,7 +8950,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Rescue Your Interview Audio Without Leaving Premiere",
@@ -8516,7 +8977,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Ramayana’s VFX Verdict : Epic Scale Meets Digital Friction",
@@ -8542,7 +9004,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Ariel the Little Mermaid will play a witch in Disney's new movie.",
@@ -8568,7 +9031,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Nikon Z30 Wonder Lantern Mod Adds Higher Bitrates – 200 Mbps 4K, 25-Minute Slow Motion, Photo Zebras",
@@ -8594,7 +9058,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "ARRI Publishes Legacy Analog Camera Archive – ARRIFLEX 35, 16SR and 416 Manuals, Brochures and Specs Online",
@@ -8620,7 +9085,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Greenlit Dark Introduces AI Filmmaking Platform for Independent and Genre Productions",
@@ -8642,6 +9108,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8668,6 +9135,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8694,11 +9162,41 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": []
+ },
+ {
+  "title": "Dark Slope Announces New Virtual Production Stage at North Shore Studios in Vancouver",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSmlGZ05MNm94ekV6Zkd0cm5xOWtLWHlSOUdWUlUxZnp0OFFqZ0d2WGtROS1yZWh5WllqcnhrQmY0TzVKbWFXUjlBZjhPWExSejlFbUYwS0ZoenJ3TUhFbEdZNzRrci1KWjhaLUp3S0s0MnVOWWFDREpTcmhubkh3V2FwRm8xc0k1Yld6MTRXaU0wQQ?oc=5",
+  "date": "2026-11-13T08:00:00+00:00",
+  "source": "Auganix.org",
+  "excerpt": "",
+  "category": "vp",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": [
+   "BC"
+  ]
  },
  {
   "title": "Kendrapara’s VFX artist shines with 3D visuals for Ramayana movie",
@@ -8720,6 +9218,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8746,39 +9245,12 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Dark Slope Announces New Virtual Production Stage at North Shore Studios in Vancouver",
-  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSmlGZ05MNm94ekV6Zkd0cm5xOWtLWHlSOUdWUlUxZnp0OFFqZ0d2WGtROS1yZWh5WllqcnhrQmY0TzVKbWFXUjlBZjhPWExSejlFbUYwS0ZoenJ3TUhFbEdZNzRrci1KWjhaLUp3S0s0MnVOWWFDREpTcmhubkh3V2FwRm8xc0k1Yld6MTRXaU0wQQ?oc=5",
-  "date": "2026-11-13T06:28:58+00:00",
-  "source": "Auganix.org",
-  "excerpt": "",
-  "category": "vp",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [
-   "BC"
-  ]
  },
  {
   "title": "GKIDS Acquires NA Rights To Cartoon Saloon’s ‘Julián,’ Sets March 2027 Theatrical Release",
@@ -8804,7 +9276,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "New Trailer For Brad Bird’s ‘Ray Gunn’ Arrives Ahead Of Limited 70mm Run",
@@ -8830,7 +9303,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI short film \"Red Chamber Dream Returns\" accused of illegally using images of 17 actors",
@@ -8852,6 +9326,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8882,7 +9357,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Making international films, growing beyond e-commerce, scaling operations: How AI is helping SMEs",
@@ -8908,7 +9384,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Playing in Canada’s cinema sandbox is art on a tight budget",
@@ -8930,6 +9407,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8956,6 +9434,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8982,13 +9461,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Can Anyone Shoot an IMAX Film? From Production to the Big Screen – Focus Check ep142",
@@ -9014,33 +9494,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
- },
- {
-  "title": "Adobe VP of global strategic partnerships Shilpa Anand on bringing creative tools to ChatGPT and Claude",
-  "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOZGlZWmxDUW9rSjF6Szdsb3JkX0dnYTN0a1Fwdm9YeDc3bzFrbnJhTDRtdWtLUGVVTzM2WkZhaTNIZi1uYUMwQms2TGg4d1NGdGdMNFdUZ0lINTlaejhDbE1UQU1KcjlWTnlKSEFvRWp5QlE4MjI5OUFQbV9pdUxjMjM3ZjZIRjZteGhON1NmTVhnV2hDWllibEIyQVVRSGJzTnoxQUNLT1BOTDB1OVZqaXVFVklvQjBtSlRvTmlqWGJlbFJGb0ktUC1zYU1oR28yTmpydnYtYUxZY1FiVng5Rm1tekhfQW9tLVBWTldTRFdhdVFJRDBZeUE4ZUZGeVRxdU9tTzZn0gGLAkFVX3lxTE1jZ2p0OUpBdFlYNUlIdzluOVdmb3RlMnBSSjgwLW9aNTY4MXpGLW1qRXR0ODdhdWxkajZ2VVM2S1laVDVUdllLUG9UYzVfeDBEMkNfMEQweEo4YWsyZTVaZ0dmaGRWNUpBRy1LeUNZLXVvZGZTQ1djNVVoa0pTWC1wMEdXVnlxTUVsS1BNSGk5SnR1d0p5VnQyLTYwNDhhMk1XUkNLOUxKZkNCc1lEd3A1ekprUHYzanMwZnJwZUFlUHBOTEJ6QVFON3dTb3NXd1lmNWJJNTR6bkQ0NkgyYVpaTDZmVWlfeTJMZnFBaHJtU1kyOUR4QTllX1NXRkplYzNSa2ltcEJxc3pMVQ?oc=5",
-  "date": "2026-11-12T13:39:52+00:00",
-  "source": "The Economic Times",
-  "excerpt": "",
-  "category": "editing",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Blackmagic Expands Apple Partnership With 108-Microphone Spatial Audio System",
@@ -9062,6 +9517,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9092,7 +9548,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Project Explores AI's Impact on Intimacy Coordination in Film and TV",
@@ -9118,7 +9575,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Research project launched into how AI is impacting intimacy coordination in film and television",
@@ -9140,6 +9598,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9166,6 +9625,34 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Adobe VP of global strategic partnerships Shilpa Anand on bringing creative tools to ChatGPT and Claude",
+  "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOZGlZWmxDUW9rSjF6Szdsb3JkX0dnYTN0a1Fwdm9YeDc3bzFrbnJhTDRtdWtLUGVVTzM2WkZhaTNIZi1uYUMwQms2TGg4d1NGdGdMNFdUZ0lINTlaejhDbE1UQU1KcjlWTnlKSEFvRWp5QlE4MjI5OUFQbV9pdUxjMjM3ZjZIRjZteGhON1NmTVhnV2hDWllibEIyQVVRSGJzTnoxQUNLT1BOTDB1OVZqaXVFVklvQjBtSlRvTmlqWGJlbFJGb0ktUC1zYU1oR28yTmpydnYtYUxZY1FiVng5Rm1tekhfQW9tLVBWTldTRFdhdVFJRDBZeUE4ZUZGeVRxdU9tTzZn0gGLAkFVX3lxTE1jZ2p0OUpBdFlYNUlIdzluOVdmb3RlMnBSSjgwLW9aNTY4MXpGLW1qRXR0ODdhdWxkajZ2VVM2S1laVDVUdllLUG9UYzVfeDBEMkNfMEQweEo4YWsyZTVaZ0dmaGRWNUpBRy1LeUNZLXVvZGZTQ1djNVVoa0pTWC1wMEdXVnlxTUVsS1BNSGk5SnR1d0p5VnQyLTYwNDhhMk1XUkNLOUxKZkNCc1lEd3A1ekprUHYzanMwZnJwZUFlUHBOTEJ6QVFON3dTb3NXd1lmNWJJNTR6bkQ0NkgyYVpaTDZmVWlfeTJMZnFBaHJtU1kyOUR4QTllX1NXRkplYzNSa2ltcEJxc3pMVQ?oc=5",
+  "date": "2026-11-12T08:00:00+00:00",
+  "source": "The Economic Times",
+  "excerpt": "",
+  "category": "editing",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9196,7 +9683,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "How a Crying Baby Became the Sound of a Sinking House in Netflix’s ‘Below’",
@@ -9222,7 +9710,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "From Kendrapada To Bollywood Epic: Odia Youth Weaves VFX Magic For Ramayana | Odisha",
@@ -9248,7 +9737,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Dior ad film row: director admits interpolation, denies generative AI",
@@ -9270,6 +9760,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9300,7 +9791,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Premiere Pro’s Color Mode Adds More Control for Editors Finishing Their Own Work by PVC News Staff, for",
@@ -9322,6 +9814,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9348,6 +9841,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9378,7 +9872,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Sony Begins Mass Shipping Its Flagship 105MP Global Shutter Sensor: 10K at 100 FPS",
@@ -9400,6 +9895,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9426,6 +9922,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9452,6 +9949,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9478,6 +9976,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9504,6 +10003,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9530,6 +10030,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9556,6 +10057,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9582,6 +10084,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9608,6 +10111,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9634,6 +10138,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9658,13 +10163,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Adobe has announced MCP support for 2027, enabling AI-controlled operation of Photoshop and Premiere Pro.",
@@ -9684,13 +10190,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "AI Movie Awards Announces Winners Of First London Edition, Celebrating Global AI Filmmaking Talent",
@@ -9716,7 +10223,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Dior’s “Hand-Drawn” Holiday Film Faces AI Accusations as Producer Pushes Back",
@@ -9742,7 +10250,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Netflix Officially Bans AI From Blue Eye Samurai Production",
@@ -9768,7 +10277,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "iQIYI Launches China’s First AI Film Studio in Shanghai",
@@ -9790,6 +10300,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9820,7 +10331,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Generative AI and mental health: the film that compresses a house to talk about eating disorders",
@@ -9846,7 +10358,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Adobe unveils AI agents for Photoshop, Premiere Pro and Illustrator",
@@ -9866,13 +10379,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Hombale Films announces AI-based animated film ‘Sharanagathi’",
@@ -9898,7 +10412,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "JUSTICE PREVAILS FOR DNEG AND COYOTE VS. ACME",
@@ -9924,7 +10439,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Acclaimed Guitarist and Composer Donna Grantis Joins the Sustainable Production Forum for an Exclusive Live Performance and Sneak Peek of New Mercury Films Documentary",
@@ -9946,6 +10462,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9972,6 +10489,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -9998,32 +10516,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "The economics of AI filmmaking in Nigeria",
-  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBZeGpZSmRiSTlqVDZmaGduZHJscEtWZXZkemtSZS1OVWdDSDBSdzNYaHNmR1d5UFY2LWo5R0VUb2JYMWNYSldqZ3R6Y3BxbnF3aDlJX1hnMldGMmd5RzNKWGgwbnIydW9EWFN6QQ?oc=5",
-  "date": "2026-11-10T10:58:29+00:00",
-  "source": "https://www.readcommunique.com/",
-  "excerpt": "",
-  "category": "ai",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10050,6 +10543,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10076,6 +10570,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10102,6 +10597,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10128,6 +10624,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10154,6 +10651,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -10180,6 +10678,34 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "The economics of AI filmmaking in Nigeria",
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBZeGpZSmRiSTlqVDZmaGduZHJscEtWZXZkemtSZS1OVWdDSDBSdzNYaHNmR1d5UFY2LWo5R0VUb2JYMWNYSldqZ3R6Y3BxbnF3aDlJX1hnMldGMmd5RzNKWGgwbnIydW9EWFN6QQ?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "https://www.readcommunique.com/",
+  "excerpt": "",
+  "category": "ai",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10206,6 +10732,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10232,32 +10759,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": []
- },
- {
-  "title": "Adobe Premiere Pro is getting an AI agent to do the boring editing jobs",
-  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR1ZqNkNNQ2tsZzBkX3VGWEszVFBmWks2X1QzTWlVN3RGVkJYQnpHYnkxSGt2cktXMGFEWEZZUU9LNnRheWZQMTVaM2tIcXp5YzJOSEZnYk9VcDJ0eFJwY3E1ZlRKV0JRSDJ3Znc1QllfNGRFWnAySV94bHpfaFJPbU8xTXJkbFFjWmRNY05Xa2pKVzFNNmZZcHctaUk1bW5iMHhDZUNSMnI?oc=5",
-  "date": "2026-11-10T08:00:00+00:00",
-  "source": "Creative Bloq",
-  "excerpt": "",
-  "category": "editing",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10284,6 +10786,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10310,9 +10813,37 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Adobe Firefly Text-to-Video Guide: How to Generate AI Video, Animate Still Images and Extend Clips in Premiere Pro",
+  "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQNXJIc3lxdThXTWYyN1VuZE14RDh5ZFNUTFBESXpjcEFMT2dwcGx0ZHA2d0tuSjN5dGZvQ3loUTdUd09yS0UwX3BxQ05Bd2d0bDY3emVnLTE1dHNZYS05Mm9yUjVsNmN0TVpKdGk1SkpScVZ5YTNvNnhhSXE0ZXhncVRrQjZKbTAtV3RwTnh6SkMyR0VvSWlvTHMwRTNGV094eWl6MjBETllmaWh4YXdmNU5vaVp4RVdEWGo5bUVSWC1fYnd4YVMwdFMtVXhEVEFVdlRNcGRlV08?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "PCMag Australia",
+  "excerpt": "",
+  "category": "animation",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": true,
   "status": false,
   "prov": []
  },
@@ -10334,13 +10865,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": []
+  "prov": []
  },
  {
   "title": "Adobe Creative Cloud gets new features at Adobe MAX 2026: Photoshop AI tools, Premiere Pro updates and more",
@@ -10360,13 +10892,41 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Adobe Premiere Pro is getting an AI agent to do the boring editing jobs",
+  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR1ZqNkNNQ2tsZzBkX3VGWEszVFBmWks2X1QzTWlVN3RGVkJYQnpHYnkxSGt2cktXMGFEWEZZUU9LNnRheWZQMTVaM2tIcXp5YzJOSEZnYk9VcDJ0eFJwY3E1ZlRKV0JRSDJ3Znc1QllfNGRFWnAySV94bHpfaFJPbU8xTXJkbFFjWmRNY05Xa2pKVzFNNmZZcHctaUk1bW5iMHhDZUNSMnI?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "Creative Bloq",
+  "excerpt": "",
+  "category": "editing",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": true,
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
   "guild": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Stars Of \"Return Of The Living Dead: Aftermath\" Say They Were Blindsided By The Film's AI Use",
@@ -10392,7 +10952,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "TBWA\\Australia’s DISRUPT AI Film Festival returns with record entries + expanded 2026 programme",
@@ -10418,7 +10979,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Syntax Launches Business AI Practice to Help Organizations Move from Promise to Proven, Production-Grade AI",
@@ -10444,7 +11006,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Argentina's 'Listen to MEH' Wins $500K Higgsfield AI Film Prize",
@@ -10470,7 +11033,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "From Warped Lettering to Distorted Hands: Why Fans Think 'Christian Dior's Night in Color' Is AI-Generated Content Parading as a Hand-Drawn Animation",
@@ -10496,7 +11060,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI Slot Production and the Future of Game Craft",
@@ -10522,7 +11087,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "TriCoast Advanced Technology Studios Launches Global AI Feature Film Production Company Targeting 35 Features Per Year",
@@ -10544,6 +11110,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10570,37 +11137,12 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Adobe Firefly Text-to-Video Guide: How to Generate AI Video, Animate Still Images and Extend Clips in Premiere Pro",
-  "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQNXJIc3lxdThXTWYyN1VuZE14RDh5ZFNUTFBESXpjcEFMT2dwcGx0ZHA2d0tuSjN5dGZvQ3loUTdUd09yS0UwX3BxQ05Bd2d0bDY3emVnLTE1dHNZYS05Mm9yUjVsNmN0TVpKdGk1SkpScVZ5YTNvNnhhSXE0ZXhncVRrQjZKbTAtV3RwTnh6SkMyR0VvSWlvTHMwRTNGV094eWl6MjBETllmaWh4YXdmNU5vaVp4RVdEWGo5bUVSWC1fYnd4YVMwdFMtVXhEVEFVdlRNcGRlV08?oc=5",
-  "date": "2026-11-09T23:53:27+00:00",
-  "source": "PCMag Australia",
-  "excerpt": "",
-  "category": "animation",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": true,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [],
-  "orgs": []
  },
  {
   "title": "Peakto 3.0 Speeds Up AI Search and Video Editing",
@@ -10626,7 +11168,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "British Columbia, Canada at the American Film Market 2026",
@@ -10648,6 +11191,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": true,
   "legal": false,
   "tips": false,
@@ -10680,7 +11224,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Palm Beach Gardens Filmmaker Launches RICH FILMZ LLC and Weekly AI-Animated Series 'Tiny Tide'",
@@ -10706,7 +11251,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI In Visual Effects Statistics By Market Size And Tools (2026)",
@@ -10732,7 +11278,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Canada unveils $600M funding boost for film, TV, music and local media",
@@ -10754,6 +11301,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10780,6 +11328,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10808,6 +11357,7 @@
    "ACTRA"
   ],
   "guild": true,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10836,6 +11386,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10862,6 +11413,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10888,6 +11440,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10914,6 +11467,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10944,7 +11498,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Filmmaking’s fresh take on budgets and big ideas",
@@ -10970,7 +11525,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "4 Star Trek Actors From 3 Eras Join Forces For New Sci-Fi That Feels Like a Lost Trek Episode",
@@ -10996,7 +11552,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AWN Studio Jobs Roundup, November 9: 11 Openings Direct from the Studios",
@@ -11022,7 +11579,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Framestore Brings Hybrid AI/VFX to Sky's Christmas Campaign",
@@ -11048,7 +11606,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Dior animated film suspected of using AI: Luxury urged to prove its craftsmanship",
@@ -11074,7 +11633,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "James Gunn, Peter Safran out of DC Studios as Skydance shakeup continues",
@@ -11100,7 +11660,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "“It’s All Cinema!” Directors of 2026’s Top Docs on Taking Risks, Interacting With Subjects and the Huge Success of ‘You Can See Everything’ (Video)",
@@ -11126,7 +11687,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Download DaVinci Resolve 21.2 for Mac",
@@ -11148,6 +11710,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -11174,6 +11737,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -11202,6 +11766,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -11234,7 +11799,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "China reiterates support for live-action micro-dramas, vows to regulate AI productions as actors seek new opportunities amid industry shifts",
@@ -11260,7 +11826,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Canon Celebrates 15 Years of Cinema EOS: 17 Cameras and 53 Lenses",
@@ -11286,7 +11853,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI Trends in advertising, creative and production",
@@ -11312,7 +11880,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "French filmmaker denies AI use in Dior animated film narrated by Robert Pattinson",
@@ -11338,7 +11907,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Mac Mini M6 Review Malaysia: RM3,799, Tested in DaVinci Resolve",
@@ -11364,7 +11934,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Sony Demonstrates Real-Time Stabilization and Jello Effect Suppression for Professional Cameras",
@@ -11390,7 +11961,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI Filmmaking Platform Core Studio Launches at Taiwan Creative Content Fest With 24 Specialized Agents",
@@ -11416,7 +11988,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Namit Malhotra’s Net Worth: How The VFX Mogul Built His Empire Before Ramayana",
@@ -11438,6 +12011,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -11468,7 +12042,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "‘Triplets of Belleville’ Director Sylvain Chomet Fires Back at AI Accusations Over Dior Film Featuring Robert Pattinson’s Voice: ‘Everything Was Drawn by Hand’ (EXCLUSIVE)",
@@ -11494,7 +12069,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Sylvain Chomet Defends Himself From Accusations of Using AI in His New Animated Dior Short",
@@ -11520,7 +12096,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Sylvain Chomet Defends Dior Film Featuring Robert Pattinson After AI Backlash: 'Everything Was Drawn by Hand'",
@@ -11546,7 +12123,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Sylvain Chomet denies generative AI made Dior film’s artwork, explains limited automation",
@@ -11572,7 +12150,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Fuji TV to Use Generative AI in All Its Dramas by 2027!",
@@ -11598,7 +12177,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Fable Studio unveils AI-generated animated film Gods Don’t Give Gifts",
@@ -11624,7 +12204,8 @@
   "status": false,
   "prov": [],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Romance Fantasy FALLEN Season 2 Filming in Victoria BC This Winter",
@@ -11646,6 +12227,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -11678,7 +12260,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Grimes to star in first fully AI-generated film to be released in theatres",
@@ -11704,7 +12287,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Exclusive | Film industry's winter meets AI onslaught: Why do some actors still work in Hengdian?",
@@ -11730,7 +12314,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "11 Best War Movies on HBO Max (November 2026)",
@@ -11756,7 +12341,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Wide Appreciation for Ramayana VFX Work",
@@ -11782,7 +12368,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Bruno Dumont turns to generative AI to film English-language sci-fi thriller ‘The End’",
@@ -11808,7 +12395,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "‘Kamen Rider’ Studio Toei Frames Generative AI Rules, Sets First Video Games for 2027",
@@ -11834,7 +12422,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "WETA | Hollywood studios actively pursuing generative AI",
@@ -11860,7 +12449,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Bruno Dumont Made His Next Film ‘The End’ Entirely With AI",
@@ -11886,7 +12476,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Grimes Makes Film Debut in AI-Generated Movie After Saying She Doesn't Use AI in Her Music",
@@ -11912,7 +12503,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "A master of cinema worries AI is stealing our sense of self",
@@ -11938,7 +12530,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Netflix Thriller TRINITY With Gugu Mbatha-Raw & Richard Madden Drops December 1",
@@ -11960,6 +12553,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -11986,6 +12580,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -12012,6 +12607,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -12038,6 +12634,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -12068,7 +12665,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Dark Slope to Open New Virtual Production Stage in Vancouver (Exclusive)",
@@ -12096,7 +12694,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Ottawa boosts journalism tax credit by $501M, extends eligibility to broadcasters",
@@ -12124,7 +12723,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Idris Elba and Google give African filmmakers a route from AI training to funded films",
@@ -12150,7 +12750,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Korean, Chinese filmmakers seek common ground beyond politics through AI",
@@ -12176,7 +12777,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Hollywood Has Flipped on GenAI, Says 'Avatar' VFX House Weta FX Chief",
@@ -12202,7 +12804,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "AI movies make leap from short clips to big screen",
@@ -12228,7 +12831,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Grimes is going to star in an AI movie that’s coming to theaters",
@@ -12254,7 +12858,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "How Grimes’ Cameo in Theater-Bound AI Film ‘Gods Don’t Give Gifts’ Came Together (EXCLUSIVE)",
@@ -12280,7 +12885,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Can AI Really Replace Everyone in the Film Industry?",
@@ -12306,7 +12912,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Former Disney AI Executive Joins Studio Making Antonio Banderas Film With Artificial Intelligence",
@@ -12332,7 +12939,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "India's 'Lord of the Rings': filmmakers hail 'Ramayana' epic",
@@ -12358,7 +12966,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "It’s up to Carney to protect Canadian content on our screens",
@@ -12378,13 +12987,14 @@
   "cce": false,
   "dgc": false,
   "iatse": false,
-  "orgs": [],
   "guild": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": []
+  "prov": [],
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Ranbir Kapoor's Ramayana Promises a Grand Cinematic Experience; Yash, Sai Pallavi and A.R. Rahman-Hans Zimmer Collaboration in Focus",
@@ -12410,7 +13020,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Eddie Murphy’s 105-Minute Comedy Masterpiece Is Officially a Free Streaming Gem",
@@ -12436,7 +13047,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "With just one Apple computer in a Garage to funding Rs 4,000 Cr film: Meet Ranbir's Ramayana producer Namit Malhotra",
@@ -12462,7 +13074,8 @@
   "iatse": false,
   "guild": false,
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "BRINGING REALISM TO THE POST-APOCALYPTIC WORLD OF THE DOG STARS",
@@ -12488,7 +13101,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Bringing ‘The Odyssey’s’ Cyclops to life: A 60-foot puppet, Bill Irwin, and VFX",
@@ -12514,7 +13128,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Ramayana: Decoding The VFX Behind Nitesh Tiwari's Global Mythological Spectacle",
@@ -12540,7 +13155,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Art of VFX gathers Resident Evil creatures and The Mandalorian breakdowns",
@@ -12566,7 +13182,8 @@
   "tips": true,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Featured Member: Kyla O’Donovan",
@@ -12588,6 +13205,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -12614,6 +13232,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -12648,7 +13267,8 @@
   "prov": [
    "BC"
   ],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Dave Bautista Shows Off Kratos Build as Production Restarts on GOD OF WAR in BC",
@@ -12676,7 +13296,8 @@
    "BC"
   ],
   "fest": false,
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "Creative BC Supports Audience Growth and Market Development for 14 B.C. Magazine Publishers",
@@ -12698,6 +13319,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -12730,7 +13352,8 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "orgs": []
+  "orgs": [],
+  "lgbtq": false
  },
  {
   "title": "TUNE IN: Artificial",
@@ -12752,6 +13375,7 @@
   "iatse": false,
   "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,

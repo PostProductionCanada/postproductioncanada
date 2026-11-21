@@ -128,6 +128,23 @@ def section_production():
         + src("Broadcast Dialogue, on Telefilm Canada's 2025–26 annual report", BD) + '</div>')
 
 
+NUMERIS = "https://www.numeris.ca/resources/numeris-insights/the-year-in-canadian-media-what-audiences-watched-heard-and-streamed"
+
+
+def section_audience():
+    return (
+        '<h2>Where Canadians watch</h2>'
+        '<p>This is audience data, not an industry statistic. It shows where finished work is seen, which matters for formats, delivery and deliverables.</p>'
+        '<div class="box"><figure class="fig"><h3>Share of streaming viewing, 2025–26 broadcast year</h3>'
+        + bar("YouTube, nationally", "35%", [(35, QC, "YouTube 35%")])
+        + bar("Prime Video, fall", "15%", [(15, BC, "Prime Video fall 15%")])
+        + bar("Prime Video, summer", "19%", [(19, BC, "Prime Video summer 19%")])
+        + bar("Netflix, winter (its strongest season)", "11%", [(11, INK2, "Netflix winter 11%")])
+        + '<figcaption>Social video (TikTok, Instagram Reels, Facebook Video and Snapchat) is nearly one-third of streaming in Quebec. '
+          'YouTube is strongest in Ontario and Atlantic Canada, at around 37%. Numeris links the Netflix winter peak to the final season of Stranger Things.</figcaption></figure>'
+        + src("Numeris, The Year in Canadian Media, Oct. 19, 2026", NUMERIS) + '</div>')
+
+
 def kpis():
     return ('<div class="kpis">'
             '<div class="kpi"><b>$2.4B</b><span>post-production revenue, 2025</span></div>'
@@ -145,6 +162,7 @@ def method():
             '<h2>Sources</h2><ul class="src">'
             '<li><a href="' + e(STATCAN) + '" target="_blank" rel="noopener">Film, television and video post-production, 2025</a> · Statistics Canada, The Daily, released Oct. 9, 2026</li>'
             '<li><a href="' + e(STATCAN_TABLE) + '" target="_blank" rel="noopener">Table 21-10-0066-01</a> · Statistics Canada (the full data behind the release)</li>'
+            '<li><a href="' + e(NUMERIS) + '" target="_blank" rel="noopener">The Year in Canadian Media: What Audiences Watched, Heard and Streamed</a> · Numeris, Oct. 19, 2026</li>'
             '<li><a href="' + e(BD) + '" target="_blank" rel="noopener">Canadian production hits $10.17B driven by foreign services: Telefilm report</a> · Broadcast Dialogue, by Connie Thiessen</li></ul>')
 
 
@@ -152,7 +170,7 @@ def render(leaf, favicon, updated):
     body = (CSS + kpis()
             + '<p>Canada\'s post-production industry earned $2.4 billion in 2025. That is down from a record 2023 but still well above 2019. '
               'The change was uneven: British Columbia gained while Quebec fell. Every chart below comes from Statistics Canada or Telefilm Canada\'s own reporting.</p>'
-            + section_post() + section_vfx() + section_money() + section_production() + method())
+            + section_post() + section_vfx() + section_money() + section_production() + section_audience() + method())
     return topics._page(leaf, favicon, updated, "By the Numbers",
                         "Charts of Canadian post-production revenue, provinces, visual effects and production, from Statistics Canada and Telefilm Canada.",
                         "📊 By the Numbers", "Canada's post industry in charts, from Statistics Canada and Telefilm Canada.", body,
