@@ -1134,7 +1134,7 @@ def render(items, sources, now):
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
-    tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
+    tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}{" sub" if k in ("aifilms","aitools","airights","aibiz") else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
     popts = "".join(f'<option value="{k}">{PROV_LABEL[k]} ({sum(1 for i in items if k in i["prov"])})</option>' for k in PROV_LABEL)
     cfg = json.loads((ROOT / "site.json").read_text())
     sub, subbtn = "", ""
@@ -1261,7 +1261,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-lgbtq{--c:#8a4fe0;font-weight:700}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-lgbtq{--c:#8a4fe0;font-weight:700}.tab.sub{display:none;font-size:.92em;border-style:dashed}body.aisub .tab.sub{display:inline-block}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}
@@ -1422,6 +1422,7 @@ footer p{margin:0 0 8px;max-width:60em}
   }
   tabs.forEach(function(t){t.addEventListener('click',function(ev){
     tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
+    document.body.classList.toggle('aisub',f==='ai'||['aifilms','aitools','airights','aibiz'].indexOf(f)>-1);
     var emp=document.getElementById('empty');if(f==='status'&&emp.style.display==='block'){emp.innerHTML='No stories on this right now. Our <a href="status-of-the-artist.html">Status of the Artist page</a> explains the law, who is certified and what we could not confirm.'}else{emp.textContent='Nothing matches that. Try a different filter or search.'}
     if(ev.isTrusted){var fc=cards.filter(function(c){return c.style.display!=='none'})[0]||emp,bar=document.querySelector('.bar'),y=fc.getBoundingClientRect().top+window.pageYOffset-(bar?bar.offsetHeight:0)-10;
       window.scrollTo({top:Math.max(0,y),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
