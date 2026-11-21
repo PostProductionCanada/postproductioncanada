@@ -344,6 +344,11 @@
       "category": "story",
       "google": true,
       "intl": true
+    },
+    {
+      "name": "Canada Media Fund",
+      "url": "https://cmf-fmc.ca/feed/",
+      "category": "canada"
     }
   ]
 }

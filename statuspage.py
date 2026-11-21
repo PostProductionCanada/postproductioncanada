@@ -72,6 +72,7 @@ CREDITS = [
 ]
 
 SOURCES = [
+    ("Shifting the Lens: A Survey for Canadian Screen Performers (Canada Media Fund)", "https://cmf-fmc.ca/shifting-the-lens/"),
     ("Status of the Artist Act, page 1 (Justice Canada)", "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/page-1.html"),
     ("Certification Register under the Status of the Artist Act (CIRB)", "https://cirb-ccri.gc.ca/en/decisions/certification-register-under-status"),
     ("Réforme de la législation sur le statut de l'artiste (RBD Avocats, 2023)", "https://rbdavocats.com/reforme-de-la-legislation-sur-le-statut-de-lartiste-un-survol-des-principales-modifications"),
@@ -310,6 +311,11 @@ def law_section():
         '<div class="box"><h3 style="margin-top:0">CMPA and DGC ratify a new Standard Agreement</h3>'
         '<p>On December 16, 2025, the Canadian Media Producers Association and the Directors Guild of Canada announced a new three-year Standard Agreement covering terms, conditions and rates for directors and other professional crew in film, television and digital media. '
         'The DGC describes itself there as representing more than 7,000 people in direction, design, production and editing. ' + lnk("CMPA news release", CMPA_DGC) + '</p></div>'
+        '<div class="box"><h3 style="margin-top:0">What screen performers told the Canada Media Fund</h3>'
+        '<p>These are performers, not Editors, but they show how freelance screen work looks across the sector. In October 2026 the CMF, working with ACTRA and the UDA, published <i>Shifting the Lens</i>, a survey by Abacus Data of nearly 1,000 on-screen performers. '
+        'It found that 69% earned less than $20,000 from on-screen work in 2024, even though nearly seven in ten had worked as performers for more than a decade. '
+        'Cost was the barrier to training and mentorship cited most often (56%). Four in ten reported harassment, discrimination or microaggressions on a set or at an audition since 2021. '
+        + lnk("CMF, Shifting the Lens", "https://cmf-fmc.ca/shifting-the-lens/") + ' (the survey describes performers\' own reports, not a count of all performers in Canada).</p></div>'
         '<div class="box"><h3 style="margin-top:0">Parliament looked at the Act and asked for a review</h3>'
         '<p>The House of Commons Heritage Committee studied the Status of the Artist Act in the 44th Parliament, hearing 29 witnesses and receiving five briefs. Its first recommendation was an in-depth review of the Act and the Copyright Act. '
         'Its second was to add a way to reach a first scale agreement through bargaining and arbitration. '
