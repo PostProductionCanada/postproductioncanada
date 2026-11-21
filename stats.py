@@ -128,6 +128,9 @@ def section_production():
         + src("Broadcast Dialogue, on Telefilm Canada's 2025–26 annual report", BD) + '</div>')
 
 
+ESAC_PR = "https://finance.yahoo.com/news/canadas-video-game-industry-contributed-083000266.html"
+ESAC_SITE = "https://videogamescanada.ca"
+THR_GTA = "https://www.hollywoodreporter.com/business/business-news/gta-vi-day-one-sales-1236760139/"
 NUMERIS = "https://www.numeris.ca/resources/numeris-insights/the-year-in-canadian-media-what-audiences-watched-heard-and-streamed"
 
 
@@ -143,6 +146,28 @@ def section_audience():
         + '<figcaption>Social video (TikTok, Instagram Reels, Facebook Video and Snapchat) is nearly one-third of streaming in Quebec. '
           'YouTube is strongest in Ontario and Atlantic Canada, at around 37%. Numeris links the Netflix winter peak to the final season of Stranger Things.</figcaption></figure>'
         + src("Numeris, The Year in Canadian Media, Oct. 19, 2026", NUMERIS) + '</div>')
+
+
+def section_games():
+    tot = 34010
+    prov = [("Quebec", 15220, QC), ("British Columbia", 10930, BC), ("Ontario", 6090, INK2)]
+    bars = "".join(bar(n, f"{v:,}", [(v / tot * 100, c, f"{n} {v:,}"), (100 - v / tot * 100, "transparent", "")]) for n, v, c in prov)
+    return (
+        '<h2>Games: big money next door to post</h2>'
+        '<p>Games use the same skills as screen work: cinematics, VFX, animation, sound and Editors. These figures are from the games industry\'s own association, so read them as the industry\'s numbers.</p>'
+        '<div class="kpis"><div class="kpi"><b>$5.1B</b><span>contribution to Canada\'s GDP, 2024</span></div>'
+        '<div class="kpi"><b>34,010</b><span>full-time-equivalent jobs</span></div>'
+        '<div class="kpi"><b>821</b><span>active video game studios</span></div>'
+        '<div class="kpi"><b>$102,000</b><span>average salary</span></div></div>'
+        '<div class="box"><figure class="fig"><h3>Games jobs by province (full-time equivalents)</h3>' + bars +
+        '<figcaption>Bar length is each province\'s share of the 34,010 total (our arithmetic). The release does not break out the remaining jobs. '
+        'The study, by Nordicity for the Entertainment Software Association of Canada (ESAC), also reports 86% of employees working full-time and an average age of 34.</figcaption></figure>'
+        + src("ESAC economic impact study, released Jan. 28, 2025 (CNW)", ESAC_PR, ' · <a href="' + e(ESAC_SITE) + '" target="_blank" rel="noopener">Video Games Canada (ESAC)</a>') + '</div>'
+        '<div class="box"><h3 style="margin-top:0">Rockstar says: GTA VI sold $3.79 billion on day one</h3>'
+        '<p>Rockstar Games reported $3.79 billion in "day one retail sales" for <i>Grand Theft Auto VI</i> through Nov. 19, 2026, and 32.5 million units sold before release. '
+        'It calls this the biggest entertainment launch in history. This is Rockstar\'s own internal estimate, it includes pre-sales, and it is one game\'s retail sales, so it is not comparable to the GDP figure above. '
+        'We have not confirmed where any of the work was done.</p>'
+        + src("The Hollywood Reporter, on Rockstar's announcement", THR_GTA) + '</div>')
 
 
 def kpis():
@@ -163,6 +188,8 @@ def method():
             '<li><a href="' + e(STATCAN) + '" target="_blank" rel="noopener">Film, television and video post-production, 2025</a> · Statistics Canada, The Daily, released Oct. 9, 2026</li>'
             '<li><a href="' + e(STATCAN_TABLE) + '" target="_blank" rel="noopener">Table 21-10-0066-01</a> · Statistics Canada (the full data behind the release)</li>'
             '<li><a href="' + e(NUMERIS) + '" target="_blank" rel="noopener">The Year in Canadian Media: What Audiences Watched, Heard and Streamed</a> · Numeris, Oct. 19, 2026</li>'
+            '<li><a href="' + e(ESAC_PR) + '" target="_blank" rel="noopener">Canada\'s Video Game Industry contributed $5.1 billion to GDP in 2024</a> · ESAC, via CNW, Jan. 28, 2025</li>'
+            '<li><a href="' + e(THR_GTA) + '" target="_blank" rel="noopener">\'GTA VI\' Generates $3.79 Billion in "Day One" Sales</a> · The Hollywood Reporter</li>'
             '<li><a href="' + e(BD) + '" target="_blank" rel="noopener">Canadian production hits $10.17B driven by foreign services: Telefilm report</a> · Broadcast Dialogue, by Connie Thiessen</li></ul>')
 
 
@@ -170,7 +197,7 @@ def render(leaf, favicon, updated):
     body = (CSS + kpis()
             + '<p>Canada\'s post-production industry earned $2.4 billion in 2025. That is down from a record 2023 but still well above 2019. '
               'The change was uneven: British Columbia gained while Quebec fell. Every chart below comes from Statistics Canada or Telefilm Canada\'s own reporting.</p>'
-            + section_post() + section_vfx() + section_money() + section_production() + section_audience() + method())
+            + section_post() + section_vfx() + section_money() + section_production() + section_audience() + section_games() + method())
     return topics._page(leaf, favicon, updated, "By the Numbers",
                         "Charts of Canadian post-production revenue, provinces, visual effects and production, from Statistics Canada and Telefilm Canada.",
                         "📊 By the Numbers", "Canada's post industry in charts, from Statistics Canada and Telefilm Canada.", body,
