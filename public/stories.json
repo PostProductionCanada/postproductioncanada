@@ -13,6 +13,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -40,6 +41,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -70,6 +72,7 @@
   ],
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -97,6 +100,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -124,6 +128,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -151,6 +156,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -178,6 +184,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -216,6 +223,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -232,6 +240,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -259,6 +268,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -286,6 +296,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -326,6 +337,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -342,6 +354,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -369,6 +382,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -396,6 +410,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -423,6 +438,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -450,6 +466,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -477,6 +494,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aibiz",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -484,6 +502,36 @@
   "orgs": [],
   "guild": false,
   "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "‘Canada’s Drag Race’ Season 7 premiere recap: Pure Bliss",
+  "url": "https://xtramagazine.com/culture/canadas-drag-race-season-7-premiere-recap-pure-bliss-285534",
+  "date": "2026-11-20T23:46:29+00:00",
+  "source": "Xtra Magazine",
+  "excerpt": "One queen comes out on top in the Canadian main series’ seventh premiere",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": true,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -504,6 +552,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -531,6 +580,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -558,6 +608,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -587,6 +638,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -614,20 +666,21 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
   "prov": [
    "ON"
-  ],
-  "orgs": [],
-  "lgbtq": false
+  ]
  },
  {
   "title": "James Bond's Do's and Don'ts: 4 Rules Every 007 Must Follow",
@@ -643,6 +696,37 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Anchor Jim Handly counted 12,601 days at NBC Washington. For his last one, he thanked his husband",
+  "url": "https://www.advocate.com/news/people/jim-handly-retires",
+  "date": "2026-11-20T21:40:11+00:00",
+  "source": "The Advocate",
+  "excerpt": "News anchor Jim Handly had done the math. When he signed off Thursday from his final 6 p.m. newscast at WRC-TV, Washington, D.C.’s NBC station, 12,601 days had passed since he first walked into the building. Before…",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -670,6 +754,37 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Meet the 6 real people behind Andrew Scott’s ‘Elsinore’",
+  "url": "https://www.advocate.com/news/people/elsinore-andrew-scott-real-people",
+  "date": "2026-11-20T20:00:29+00:00",
+  "source": "The Advocate",
+  "excerpt": "In November 1989, Ian Charleson stepped onto the stage of London’s National Theatre to play Hamlet for the last time. His director, Richard Eyre, had spent the run trying to keep his worries from the actor. Years later…",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -697,6 +812,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -724,6 +840,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -751,6 +868,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -778,6 +896,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -807,6 +926,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -834,18 +954,19 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": [],
-  "lgbtq": false
+  "prov": []
  },
  {
   "title": "SmallRig’s Black Friday Sales Are Rolling In as This Universal Mobile Phone Cage Gets a Discount",
@@ -861,6 +982,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -888,6 +1010,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -915,6 +1038,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -942,6 +1066,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -971,6 +1096,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -998,6 +1124,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1025,6 +1152,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1063,6 +1191,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -1079,6 +1208,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1106,6 +1236,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1133,6 +1264,37 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Yellowjackets come home!",
+  "url": "https://www.out.com/gay-tv-shows/yellowjackets-come-home",
+  "date": "2026-11-20T15:00:04+00:00",
+  "source": "Out",
+  "excerpt": "This story originally appeared on Them . What if we had covered the return of the Yellowjackets in 1998? This story is fiction, imagined for the final season, now streaming on Paramount+.",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1171,6 +1333,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -1187,6 +1350,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1214,6 +1378,7 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1254,6 +1419,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -1281,6 +1447,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -1297,6 +1464,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1324,6 +1492,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1351,6 +1520,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1378,6 +1548,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1405,6 +1576,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1432,6 +1604,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1459,6 +1632,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1486,6 +1660,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1513,6 +1688,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1542,6 +1718,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1569,6 +1746,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1596,6 +1774,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1623,6 +1802,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1650,6 +1830,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1690,6 +1871,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -1706,6 +1888,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1733,6 +1916,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1760,6 +1944,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1800,6 +1985,7 @@
   "prov": [
    "QC"
   ],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -1816,6 +2002,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1843,6 +2030,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1870,6 +2058,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1910,6 +2099,7 @@
   "prov": [
    "ON"
   ],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -1926,6 +2116,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1953,6 +2144,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -1980,6 +2172,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2020,6 +2213,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -2036,6 +2230,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2063,6 +2258,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2090,6 +2286,37 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Andrew Scott’s ‘Elsinore’ honours a lost generation. He says we’ve come a long way",
+  "url": "https://xtramagazine.com/culture/andrew-scott-elsinore-285450",
+  "date": "2026-11-19T19:22:48+00:00",
+  "source": "Xtra Magazine",
+  "excerpt": "The Irish actor’s new Ian Charleson biopic is one of the fall’s biggest films. Scott tells Xtra the movie is more important than its awards buzz",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2120,6 +2347,7 @@
   ],
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2147,6 +2375,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2174,6 +2403,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2201,6 +2431,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2230,6 +2461,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2257,6 +2489,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2284,6 +2517,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2311,6 +2545,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2338,6 +2573,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2365,6 +2601,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2394,6 +2631,7 @@
   ],
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2421,6 +2659,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2459,6 +2698,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -2475,6 +2715,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2502,6 +2743,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2529,6 +2771,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2567,6 +2810,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -2583,6 +2827,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2610,6 +2855,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aibiz",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2637,6 +2883,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2664,6 +2911,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2691,6 +2939,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2718,6 +2967,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2745,6 +2995,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2772,6 +3023,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2799,6 +3051,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2826,6 +3079,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2853,6 +3107,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2880,6 +3135,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2920,6 +3176,7 @@
   "prov": [
    "ON"
   ],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -2936,6 +3193,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -2974,6 +3232,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -2990,6 +3249,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3028,6 +3288,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3044,6 +3305,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3071,6 +3333,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3098,6 +3361,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3125,6 +3389,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3152,6 +3417,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3179,6 +3445,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3217,6 +3484,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -3233,6 +3501,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3260,6 +3529,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3287,6 +3557,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3314,6 +3585,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3352,6 +3624,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3368,6 +3641,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3395,6 +3669,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3422,6 +3697,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3449,6 +3725,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3476,6 +3753,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3514,6 +3792,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3541,6 +3820,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -3557,6 +3837,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3595,6 +3876,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3622,6 +3904,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3638,6 +3921,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3676,6 +3960,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3703,6 +3988,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3719,6 +4005,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3746,6 +4033,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3784,6 +4072,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3811,6 +4100,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3827,6 +4117,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3865,6 +4156,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3881,6 +4173,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3908,6 +4201,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3935,6 +4229,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -3975,6 +4270,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -3991,6 +4287,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4018,6 +4315,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4056,6 +4354,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -4072,6 +4371,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4099,6 +4399,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4139,6 +4440,7 @@
    "AB"
   ],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4155,6 +4457,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4182,6 +4485,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4209,6 +4513,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4236,6 +4541,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4274,6 +4580,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -4301,6 +4608,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -4317,6 +4625,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4344,6 +4653,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4371,6 +4681,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4409,6 +4720,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4425,6 +4737,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4452,6 +4765,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4490,6 +4804,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4517,6 +4832,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4533,6 +4849,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4571,7 +4888,38 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
+ },
+ {
+  "title": "LGBTQ2S+ representation on TV plummeted last season",
+  "url": "https://xtramagazine.com/video/lgbtq2s-tv-plummeted-285421",
+  "date": "2026-11-18T15:46:13+00:00",
+  "source": "Xtra Magazine",
+  "excerpt": "GLAAD’s 2025-26 report reveals dramatic declines in portrayals of already underrepresented groups",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "What Editors Can Learn from the Greatest Ad Agencies",
@@ -4598,6 +4946,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4614,6 +4963,7 @@
   "require": null,
   "canada": true,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4654,6 +5004,7 @@
   "prov": [],
   "fest": true,
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -4670,6 +5021,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4697,6 +5049,35 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "10s Across the Borders: Free Auckland Screening",
+  "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdVh6VlUxdTdid2NtbFplNmphQjIzN2RVNmRGZnVuX2RPVHphY1dwQnpsaDBOUm81RkxPbjB1bm81bWJ0TkVLWVdxeUN4UV8zQ0t4SlFDWFpkTnp6d3hUcEpwM2s3blo5LW8zbFFOZXBld2JwcUZ0a1hMTl9hYW5pWXNCOHhBMW8?oc=5",
+  "date": "2026-11-18T13:30:27+00:00",
+  "source": "YOUR EX",
+  "excerpt": "",
+  "category": "story",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4724,6 +5105,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4751,6 +5133,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4789,6 +5172,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -4805,6 +5189,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4843,6 +5228,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -4870,6 +5256,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -4899,6 +5286,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4928,6 +5316,7 @@
    "QC"
   ],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4955,6 +5344,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -4971,6 +5361,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aibiz",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -4998,6 +5389,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5025,6 +5417,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5052,6 +5445,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5081,6 +5475,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5108,6 +5503,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5148,6 +5544,7 @@
   ],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5164,6 +5561,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5193,6 +5591,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": true,
   "dgc": false,
@@ -5233,6 +5632,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5249,6 +5649,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5276,6 +5677,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5305,6 +5707,7 @@
   ],
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5332,6 +5735,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5370,6 +5774,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5397,6 +5802,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5424,6 +5830,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -5451,6 +5858,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5478,6 +5886,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5494,6 +5903,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5521,18 +5931,19 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "orgs": [],
-  "lgbtq": false
+  "prov": []
  },
  {
   "title": "Robert Pattinson is Ushering In the Movie Star Era Again",
@@ -5559,6 +5970,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5575,6 +5987,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5613,6 +6026,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5629,6 +6043,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5656,6 +6071,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5694,6 +6110,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5721,6 +6138,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -5737,6 +6155,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5775,6 +6194,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -5791,6 +6211,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5829,6 +6250,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5856,6 +6278,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5872,6 +6295,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5899,6 +6323,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5926,6 +6351,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -5964,6 +6390,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -5980,6 +6407,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6018,6 +6446,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6034,6 +6463,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6074,6 +6504,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6101,6 +6532,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6117,6 +6549,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6155,6 +6588,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6182,6 +6616,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6198,6 +6633,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6227,6 +6663,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6254,6 +6691,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": true,
   "cce": false,
   "dgc": false,
@@ -6292,6 +6730,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -6319,6 +6758,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6346,6 +6786,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6362,6 +6803,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6400,6 +6842,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6416,6 +6859,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6454,6 +6898,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6470,6 +6915,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6497,6 +6943,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6535,6 +6982,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6562,6 +7010,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6578,6 +7027,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6618,34 +7068,8 @@
   "prov": [
    "QC"
   ],
+  "aisub": "",
   "lgbtq": false
- },
- {
-  "title": "‘A Passage To India’: Ali Fazal, Fiona Shaw & Tom Mison Leading BBC & CBC’s TV Reboot",
-  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEs4N051NEdFX3NOLWZkS1dMWDZGQUpRZ0h1eDcyaVVITW1WSmhtT0s1ZkdNN2EzRW5VQ0FGZV8yVC04cG5jNkNrWG1wbTZGQ25GelcwWnRwUG9Rd0x2TFozZlNpSVdDQ0Z3cnpZZ0l4NHBvZWtFcm51ckplM1NqQ0ZHT2ZjYzA1VmdZZ3M0eGZsdkpKaWI1d2M2cTNzQQ?oc=5",
-  "date": "2026-11-17T11:00:00+00:00",
-  "source": "Deadline",
-  "excerpt": "",
-  "category": "canada",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
-  "lgbtq": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": []
  },
  {
   "title": "Ali Fazal, Fiona Shaw, Naseeruddin Shah, Tom Mison Lead Richie Mehta’s ‘A Passage to India’ Series for BBC, CBC",
@@ -6661,18 +7085,47 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
   "iatse": false,
+  "orgs": [],
   "guild": false,
+  "lgbtq": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
+  "prov": []
+ },
+ {
+  "title": "‘A Passage To India’: Ali Fazal, Fiona Shaw & Tom Mison Leading BBC & CBC’s TV Reboot",
+  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUEs4N051NEdFX3NOLWZkS1dMWDZGQUpRZ0h1eDcyaVVITW1WSmhtT0s1ZkdNN2EzRW5VQ0FGZV8yVC04cG5jNkNrWG1wbTZGQ25GelcwWnRwUG9Rd0x2TFozZlNpSVdDQ0Z3cnpZZ0l4NHBvZWtFcm51ckplM1NqQ0ZHT2ZjYzA1VmdZZ3M0eGZsdkpKaWI1d2M2cTNzQQ?oc=5",
+  "date": "2026-11-17T11:00:00+00:00",
+  "source": "Deadline",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
   "orgs": [],
-  "lgbtq": false
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Nikon ZR Firmware 2.00 Reportedly Coming November 24 – High ISO NR for ProRes N-Log, Full HD Limit for LUT Over HDMI",
@@ -6699,6 +7152,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6726,6 +7180,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -6753,6 +7208,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -6780,6 +7236,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6796,6 +7253,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6823,6 +7281,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6861,6 +7320,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6888,6 +7348,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6915,6 +7376,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -6931,6 +7393,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6958,6 +7421,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -6996,7 +7460,38 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
+ },
+ {
+  "title": "LGBTQ+ Representation in Television Hits Devastating Lows",
+  "url": "https://www.autostraddle.com/lgbtq-representation-in-television-hits-devastating-lows/?utm_source=rss&utm_medium=rss&utm_campaign=lgbtq-representation-in-television-hits-devastating-lows",
+  "date": "2026-11-16T22:45:25+00:00",
+  "source": "Autostraddle",
+  "excerpt": "We will keep shouting and keep showing up for the queer shows doing it right until these numbers make sense again. The post LGBTQ+ Representation in Television Hits Devastating Lows appeared first on Autostraddle .",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "HPA NET Roundtable: AI as a Second Unit",
@@ -7023,6 +7518,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7050,6 +7546,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7079,6 +7576,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7106,6 +7604,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7133,6 +7632,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -7149,6 +7649,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7176,6 +7677,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": true,
@@ -7214,6 +7716,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -7241,6 +7744,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7268,6 +7772,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7295,6 +7800,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7311,6 +7817,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": true,
@@ -7349,6 +7856,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -7376,6 +7884,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7403,6 +7912,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7430,6 +7940,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7457,6 +7968,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7473,6 +7985,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7500,6 +8013,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7538,6 +8052,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -7565,6 +8080,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7592,6 +8108,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7619,6 +8136,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7635,6 +8153,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7662,6 +8181,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7700,6 +8220,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7727,6 +8248,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7754,6 +8276,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7781,6 +8304,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7797,6 +8321,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7835,6 +8360,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -7851,6 +8377,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -7889,6 +8416,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7916,6 +8444,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7943,6 +8472,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7970,6 +8500,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -7999,6 +8530,7 @@
   "prov": [
    "QC"
   ],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8026,6 +8558,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -8034,7 +8567,7 @@
   "date": "2026-11-16T02:35:55+00:00",
   "source": "Broadcast Dialogue",
   "excerpt": "",
-  "category": "business",
+  "category": "canada",
   "canada_only": false,
   "google": true,
   "intl": false,
@@ -8042,6 +8575,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": true,
@@ -8080,6 +8614,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8096,6 +8631,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8134,6 +8670,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -8150,6 +8687,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8188,7 +8726,38 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
+ },
+ {
+  "title": "Quiz: Which Character From ‘The Body’ Are You?",
+  "url": "https://www.autostraddle.com/which-character-from-the-body-are-you/?utm_source=rss&utm_medium=rss&utm_campaign=which-character-from-the-body-are-you",
+  "date": "2026-11-15T13:00:35+00:00",
+  "source": "Autostraddle",
+  "excerpt": "The series has put me in a state of religious fervor, where the religion is 2004 girlhood and the hymns are \"Confide in Me\" by Kylie Minogue and \"Goodies\" by Ciara. The post Quiz: Which Character From ‘The Body’ Are…",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Manchester Animation Festival Bans Generative AI Films From Its 2027 Competition",
@@ -8204,6 +8773,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8231,6 +8801,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8258,6 +8829,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8285,6 +8857,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8312,6 +8885,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8327,9 +8901,9 @@
  },
  {
   "title": "Dawn Greenhalgh Dies: Revered Canadian Stage Actor, Star Of TV’s ‘Anne of Green Gables’ Was 93",
-  "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1GeF92QS15V2tGWG1lcHZnbkUxSVJwdTZpOFlUamFWdXpPTHBhOEZFaFN4dHlLaTNZdlVHcDkzYlJDcHZNWkFfYzNCYmM1eTFITkl2LWdhMUJ1c3dublVhZTk2bDlhMVlOZ19PS1Vn?oc=5",
-  "date": "2026-11-14T22:14:00+00:00",
-  "source": "Deadline",
+  "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB6dkZBbXZKUlR0aVFLRUxlMnZGUEc2S2ZLV2V1eW5xaXlpVm5OU1haNFJqQ1p3LWY5NERUMHNISHQtcHBQbDJuYW1fMmwybENzWnBPUmcxTWdKQU0zTGRvcg?oc=5",
+  "date": "2026-11-14T22:52:15+00:00",
+  "source": "IMDb",
   "excerpt": "",
   "category": "canada",
   "canada_only": false,
@@ -8339,6 +8913,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8377,6 +8952,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8404,6 +8980,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8433,6 +9010,7 @@
    "AB"
   ],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8449,6 +9027,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8478,6 +9057,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": true,
   "cce": false,
   "dgc": false,
@@ -8516,6 +9096,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -8543,6 +9124,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8559,6 +9141,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8597,6 +9180,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8624,6 +9208,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8640,6 +9225,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8667,6 +9253,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8705,6 +9292,7 @@
   "guild": false,
   "fest": true,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -8732,6 +9320,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8748,6 +9337,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8755,6 +9345,64 @@
   "orgs": [],
   "guild": false,
   "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Netflix’s ‘The Body’ Is a Glorious, Unholy Revelation of Lesbian Camp",
+  "url": "https://www.autostraddle.com/the-body-netflix-lesbian-review/?utm_source=rss&utm_medium=rss&utm_campaign=the-body-netflix-lesbian-review",
+  "date": "2026-11-13T20:13:36+00:00",
+  "source": "Autostraddle",
+  "excerpt": "In the best new sapphic television show I’ve seen in a minute, Quinn Shephard delivers an electrifying and unyieldingly queer entry into the canon of religious horror. The post Netflix’s ‘The Body’ Is a Glorious, Unholy…",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "The godmother of queer and indie cinema is finally getting her Oscar",
+  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1FSFJVZW5WVXRUeDVVbVdDME1HZ2FpWUVjODNRa3hncHk3UnRzQW5qeE4zQVlsSWRvV0JzWFRRYWFqakF2RG9kRThudDhGenBnN2NVQzlfTGdWb3BOaFZ5Vi1BS1VvR0U0NlJydFI3aWVBR2M?oc=5",
+  "date": "2026-11-13T19:07:19+00:00",
+  "source": "CBC",
+  "excerpt": "",
+  "category": "story",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -8775,6 +9423,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8802,6 +9451,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8829,6 +9479,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -8872,6 +9523,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -8899,6 +9551,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8926,6 +9579,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8953,6 +9607,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -8980,6 +9635,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9007,6 +9663,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9034,6 +9691,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9061,6 +9719,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9088,6 +9747,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9104,6 +9764,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9131,6 +9792,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9158,6 +9820,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9185,6 +9848,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9214,6 +9878,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9241,6 +9906,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9279,6 +9945,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9306,6 +9973,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9322,6 +9990,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9360,6 +10029,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -9387,6 +10057,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -9403,6 +10074,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9430,6 +10102,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9470,6 +10143,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9497,6 +10171,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9524,6 +10199,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -9540,6 +10216,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9578,6 +10255,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9605,6 +10283,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9621,6 +10300,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9648,6 +10328,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9686,6 +10367,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -9713,6 +10395,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9740,6 +10423,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9756,6 +10440,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9794,6 +10479,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9810,6 +10496,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9837,6 +10524,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9875,6 +10563,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -9891,6 +10580,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9918,6 +10608,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9945,6 +10636,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9972,6 +10664,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9999,6 +10692,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10026,6 +10720,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10053,6 +10748,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10080,6 +10776,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10107,6 +10804,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10134,6 +10832,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10172,6 +10871,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -10199,6 +10899,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -10226,6 +10927,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -10253,6 +10955,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -10280,6 +10983,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -10296,6 +11000,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10334,6 +11039,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -10361,6 +11067,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -10388,6 +11095,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -10415,6 +11123,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -10442,6 +11151,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -10458,6 +11168,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10485,6 +11196,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10512,6 +11224,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10539,6 +11252,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aibiz",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10566,6 +11280,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10593,6 +11308,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10620,6 +11336,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10647,6 +11364,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10674,6 +11392,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10701,6 +11420,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10728,6 +11448,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10755,6 +11476,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10782,6 +11504,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "airights",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10809,6 +11532,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10836,6 +11560,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -10843,6 +11568,34 @@
   "orgs": [],
   "guild": false,
   "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "‘I loved it!’ SF Trans Film Fest’s Shawna Virago picks her 5 fave trans/queer movies",
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSWVVRHhHc2llUmQ5ZjdHcENBQjlhaEk3amVBcVo5OWlacWZQbnkzQXlqa3VteXB1S3ZaYWdVRWlJTlRWaVZOUS00RnNubS1RMjFxUzBocldCMUQyU2FlQlI3WXhLZWlpelRpYUxadGlBOFloMW9ZQ1J0b05JdGZlSlBDNjZ4ak1UbE1SeVZjbFlIbElQUktHQ0xVM2o3VkE?oc=5",
+  "date": "2026-11-10T08:00:00+00:00",
+  "source": "48 Hills",
+  "excerpt": "",
+  "category": "story",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
   "fest": false,
   "legal": false,
   "tips": false,
@@ -10874,6 +11627,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -10901,6 +11655,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -10928,6 +11683,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -10955,6 +11711,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -10982,6 +11739,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -11009,6 +11767,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -11036,6 +11795,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -11063,6 +11823,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11079,6 +11840,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aifilms",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11106,6 +11868,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11144,6 +11907,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -11171,6 +11935,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11187,6 +11952,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11227,6 +11993,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11254,6 +12021,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11281,6 +12049,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -11297,6 +12066,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11324,6 +12094,35 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Heated Rivalry could be getting 2 more seasons and a movie, sources say",
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb194c0t3WUZVR2o5QkdsZDZEc1hZSXU2bjZiZEpZbGkwNnY2cl8yR1hwMXNlRzNYeDFyckxaRGZValNJTk9VbkZ6MnFRZFl0Uk9RT1ZXMS1HWUhUc1lDSG9BV3dNcXJBckg4LWpqZWstX1QzVG9Ha3k3VFlVUERPcHROYlIzblc0?oc=5",
+  "date": "2026-11-09T08:00:00+00:00",
+  "source": "CBC",
+  "excerpt": "",
+  "category": "canada",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11351,6 +12150,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11382,6 +12182,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11409,6 +12210,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "aitools",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11436,6 +12238,7 @@
   "require": null,
   "canada": false,
   "ai": true,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11463,6 +12266,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11501,33 +12305,7 @@
   "tips": false,
   "status": false,
   "prov": [],
-  "lgbtq": false
- },
- {
-  "title": "Heated Rivalry could be getting 2 more seasons and a movie, sources say",
-  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb194c0t3WUZVR2o5QkdsZDZEc1hZSXU2bjZiZEpZbGkwNnY2cl8yR1hwMXNlRzNYeDFyckxaRGZValNJTk9VbkZ6MnFRZFl0Uk9RT1ZXMS1HWUhUc1lDSG9BV3dNcXJBckg4LWpqZWstX1QzVG9Ha3k3VFlVUERPcHROYlIzblc0?oc=5",
-  "date": "2026-11-09T08:00:00+00:00",
-  "source": "CBC",
-  "excerpt": "",
-  "category": "canada",
-  "canada_only": false,
-  "google": true,
-  "intl": false,
-  "filter": true,
-  "require": null,
-  "canada": true,
-  "ai": false,
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "guild": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [],
-  "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11555,6 +12333,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11582,6 +12361,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11609,6 +12389,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -11636,6 +12417,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -11663,6 +12445,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11690,6 +12473,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11706,6 +12490,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11733,6 +12518,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11762,6 +12548,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -11802,6 +12589,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11829,6 +12617,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "airights",
   "lgbtq": false
  },
  {
@@ -11856,6 +12645,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11883,6 +12673,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -11910,6 +12701,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -11937,6 +12729,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11964,6 +12757,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -11991,6 +12785,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -12007,6 +12802,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12045,6 +12841,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aitools",
   "lgbtq": false
  },
  {
@@ -12072,6 +12869,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12099,6 +12897,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12126,6 +12925,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12153,6 +12953,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12180,6 +12981,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12207,6 +13009,7 @@
   "prov": [],
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12223,6 +13026,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12263,6 +13067,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12290,6 +13095,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12317,6 +13123,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12344,6 +13151,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12371,6 +13179,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12398,6 +13207,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12425,6 +13235,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -12452,6 +13263,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -12479,6 +13291,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12506,6 +13319,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12533,6 +13347,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12549,6 +13364,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12576,6 +13392,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12603,6 +13420,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12630,6 +13448,7 @@
   "require": null,
   "canada": false,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12668,6 +13487,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12697,6 +13517,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12726,6 +13547,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12753,6 +13575,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12780,6 +13603,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -12807,6 +13631,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12834,6 +13659,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12861,6 +13687,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12888,6 +13715,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aifilms",
   "lgbtq": false
  },
  {
@@ -12915,6 +13743,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -12942,6 +13771,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "aibiz",
   "lgbtq": false
  },
  {
@@ -12969,7 +13799,66 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
+ },
+ {
+  "title": "I’m tired of gay period films",
+  "url": "https://xtramagazine.com/culture/gay-period-films-285239",
+  "date": "2026-11-04T19:29:46+00:00",
+  "source": "Xtra Magazine",
+  "excerpt": "“La Bola Negra,” “Elsinore” and “Coward” are some of the year’s buzziest films. They all make the same mistake",
+  "category": "story",
+  "canada_only": false,
+  "google": false,
+  "intl": false,
+  "filter": false,
+  "require": [
+   "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+  ],
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Advance Screening: Priyanka! What's My Name?",
+  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE93dXRtTEdBMnVuRFBlVTdEX2s5Mm04bDB6MDhjTi03ZnRCTWZDUHE2SVJfWENSb0Q4YUk2MDJpZjdIZDRCaDlOdXF5amVoLURKMjV2NFp1VHhMZm16M2ljNWJTMWsxeVlyZUJ5T0U5ZUNLSjg?oc=5",
+  "date": "2026-11-04T17:13:04+00:00",
+  "source": "TIFF - Toronto International Film Festival",
+  "excerpt": "",
+  "category": "story",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "It’s up to Carney to protect Canadian content on our screens",
@@ -12985,6 +13874,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -13023,6 +13913,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13050,6 +13941,7 @@
   "status": false,
   "prov": [],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13077,6 +13969,7 @@
   "guild": false,
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13104,6 +13997,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13131,6 +14025,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13158,6 +14053,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13185,6 +14081,7 @@
   "tips": true,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13201,6 +14098,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -13228,6 +14126,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -13270,6 +14169,7 @@
    "BC"
   ],
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13299,6 +14199,7 @@
   ],
   "fest": false,
   "orgs": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13315,6 +14216,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -13329,6 +14231,34 @@
   "prov": [
    "BC"
   ]
+ },
+ {
+  "title": "A future looking brighter than ever: 23rd Utah Queer Film Festival’s international slate set with 11 feature-length films, 25 shorts, Nov. 6-8",
+  "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQc2xXb0tHSV9zN1R6Ui1Sc1ZsODJDa2tWVG9GSXdHR3ExOFp4TTVlbklodVdkYkFYdnpVWGthS01OVm9VbVVxaWF6UzVKSDZYZks1cEF6MV82UEk4TXJzVU93NjVmVml2b0w0aXlBd0lkdlY0ck5uTTBqRWprdi0xMnhXM0ZTZzEyc3k4NEgyUm9jWFdhNjFZZmJUTTJCV3U4QVhuYVRJY2k5eEVOVFJOTDlaYlc4ZDNtbkx0UjB2RUhxX0xnUzRSQ1ppSkducjJQdVdxZmJLRDlqQkxLRnJVdXNacm1FOW5LUGF2RDB5YXN0QnlFNHBkMlRFTlc?oc=5",
+  "date": "2026-11-02T08:00:00+00:00",
+  "source": "The Utah Review",
+  "excerpt": "",
+  "category": "story",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
+  "fest": true,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
  },
  {
   "title": "Namit Malhotra mortgaged home to start Rs 7 lakh VFX firm, now backing Rs 4,000 cr Ramayana",
@@ -13355,6 +14285,7 @@
   "tips": false,
   "status": false,
   "prov": [],
+  "aisub": "",
   "lgbtq": false
  },
  {
@@ -13371,6 +14302,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -13378,6 +14310,34 @@
   "orgs": [],
   "guild": false,
   "lgbtq": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Roles for trans and non-binary characters are vanishing, actors and experts warn",
+  "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSWoxdFFMcVdrbktCbDFTTWFJa0xaMFo4TU5IdHRERkNCTlJsUWxzM0I2MmhjQXRwU3RJTTRaVEdmTDlQRVhwTXZNNEJFVUlTcE9qUGNkNzBjWU9KZjlxRmh3T01qWlpKT3VHVUU3VXpjS1NjeDdFdGVheGFFLTJBdTBwNExVZw?oc=5",
+  "date": "2026-11-01T07:00:00+00:00",
+  "source": "CBC",
+  "excerpt": "",
+  "category": "story",
+  "canada_only": false,
+  "google": true,
+  "intl": false,
+  "filter": true,
+  "require": null,
+  "canada": true,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": true,
   "fest": false,
   "legal": false,
   "tips": false,

@@ -293,6 +293,57 @@
       "google": true,
       "intl": true,
       "url": "https://news.google.com/rss/search?q=%28%22film+editor%22+OR+%22picture+editor%22+OR+%22assistant+editor%22+OR+%22Media+Composer%22+OR+%22Final+Cut+Pro%22+OR+%22DaVinci+Resolve%22+OR+%22Premiere+Pro%22%29+when%3A14d&hl=en-CA&gl=CA&ceid=CA:en"
+    },
+    {
+      "name": "Xtra Magazine",
+      "url": "https://www.xtramagazine.com/feed",
+      "category": "story",
+      "require": [
+        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+      ]
+    },
+    {
+      "name": "Out",
+      "url": "https://www.out.com/rss.xml",
+      "category": "story",
+      "require": [
+        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+      ]
+    },
+    {
+      "name": "The Advocate",
+      "url": "https://www.advocate.com/rss.xml",
+      "category": "story",
+      "require": [
+        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+      ]
+    },
+    {
+      "name": "Autostraddle",
+      "url": "https://www.autostraddle.com/feed/",
+      "category": "story",
+      "require": [
+        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+      ]
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=%22Inside+Out%22+Toronto+LGBT+film+festival+when:30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "story",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=2SLGBTQ%2B+Canadian+film+television+when:30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "story",
+      "google": true
+    },
+    {
+      "name": "Google News",
+      "url": "https://news.google.com/rss/search?q=Outfest+OR+Frameline+film+festival+when:30d&hl=en-CA&gl=CA&ceid=CA:en",
+      "category": "story",
+      "google": true,
+      "intl": true
     }
   ]
 }

@@ -38,7 +38,7 @@ SCREEN_RE = re.compile(
     r"tax credit|soundstage|set|shoot\w*|casting|screenwrit\w+|writers?)\b", re.I)
 SOURCE_EXCLUDE = {"StudioDaily", "Britannica", "Harvard Business Review", "Honest Reporting Canada", "Moomoo", "Investing.com Canada", "Drive Tesla Canada"}
 EXCLUDE_RE = re.compile(
-    r"\b(radio stations?|earnings|tsx|nasdaq|stock\w*|shares|ammunition|air defen[cs]e|tariffs?|"
+    r"\b(adult (star|film|performer|entertainment)|porn\w*|onlyfans|xxx|radio stations?|earnings|tsx|nasdaq|stock\w*|shares|ammunition|air defen[cs]e|tariffs?|"
     r"auto industry|mortgage|real estate|hockey|nhl|wildfire|weather forecast|horoscope|crypto\w*|"
     r"gold|silver|copper|lithium|mining|oil and gas|oil & gas|solar cell\w*|climate systems|stellantis|agnico|capital markets|royalties provides|"
     r"robotics|ghg emissions|mega man|honest ?reporting|quebecor|telus|dill pickle|rushtok|gen z|crisis playbook|pr roundup|measuring clicks|"
@@ -309,6 +309,7 @@ def main():
             it["canada"] = is_ca
             blob2 = it["title"] + " " + it["excerpt"]
             it["ai"] = bool(AI_CS.search(blob2) or AI_CI.search(blob2))
+            it["aisub"] = ai_sub(it["title"]) if it["ai"] else ""
             it["vibe"] = bool(VIBE_RE.search(blob2) and VIBE_CTX.search(blob2))
             it["cce"] = bool(CCE_RE.search(blob2 + " " + it["source"] + " " + it["url"]))
             it["dgc"] = bool(DGC_RE.search(blob2 + " " + it["source"]))
@@ -340,6 +341,7 @@ def main():
         _b = a["title"] + " " + a.get("excerpt", "")
         a.setdefault("canada", False); a.setdefault("status", False); a.setdefault("prov", []); a.setdefault("source", "")
         a["ai"] = bool(AI_CS.search(_b) or AI_CI.search(_b))
+        a["aisub"] = ai_sub(a["title"]) if a["ai"] else ""
         a["vibe"] = bool(VIBE_RE.search(_b) and VIBE_CTX.search(_b))
         a["legal"] = bool(LEGAL_RE.search(_b))
         a["tips"] = a.get("category") in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(a["title"])) and not NOT_TIPS.search(a["title"])
@@ -537,6 +539,10 @@ def esc(s): return html.escape(s, quote=True)
 CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing"), "story": ("🎬", "Storytelling & Filmmaking"), "soundedit": ("🎧", "Sound Editing"), "audio": ("🎶", "Sound & Emotion"),
         "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Games"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
         "ai": ("🤖", "AI Filmmaking"),
+        "aifilms": ("🎞️", "AI Films & Festivals"),
+        "aitools": ("🛠️", "AI Tools & Workflows"),
+        "airights": ("🎭", "AI, Actors & Rights"),
+        "aibiz": ("🏢", "AI & the Business"),
         "guilds": ("🛡️", "Unions, Guilds & Associations"),
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
@@ -578,6 +584,18 @@ AI_CI = re.compile(r"(artificial intelligence|generative|machine learning|\brunw
                    r"firefly|\bluma\b|\bpika\b|hailuo|seedance|comfyui|stable diffusion|text[- ]to[- ]video|image[- ]to[- ]video|"
                    r"synthetic (actors?|media|performers?)|deepfakes?|chatgpt|\bgemini\b|\bwan 2|\bflux\b|diffusion model|"
                    r"neural|ai[- ](generated|film\w*|actors?|video|tools?|studio|native))", re.I)
+AIRIGHTS_RE=re.compile(r"(no fakes|deepfakes?|impersonat\w+|cloning|digital cop(y|ies)|\b(faces|voices) (and|or) (voices|faces|bodies)|\bpaid\b|\bpay rights\b|actors? (win|gain|get)|\bunions?\b|\bequity\b|sag-?aftra|\bactra\b|\bguild\b|\bstrike\b|digital (replicas?|doubles?|likeness)|\blikeness|\bconsent\b|replac\w+ (actors|workers|artists)|\bjobs?\b|layoffs?|livelihood|\brights?\b|protections?|copyright|lawsuits?|\bsued?\b|\blegal\b|legislation|\blaw(s|makers)?\b|regulat\w+|precarity|blindsided|disclos\w+|\blabou?r|compensation|royalt\w+)",re.I)
+AITOOLS_RE=re.compile(r"(premiere|media composer|davinci|resolve|firefly|runway|\bsora\b|\bveo\b|kling|midjourney|\bluma\b|\bpika\b|comfyui|workflow|\btools?\b|plug-?in|assistant|\bMCP\b|software|generator|text-to-video|image-to-video|\bhow to\b|how-to guide|tutorial|best ai|workspaces?|agentic|operating system|stability ai|adobe premiere|avid|gemini)",re.I)
+AIFILMS_RE=re.compile(r"(\bai[- ]?(film|movie)s?\b|critics accuse|facing ai accusations|\bfeature film|ai feature|festival|awards?\b|competition|contest|box office|\bfeature\b|short film|screening|jury|champion|trailer|accusations|backlash|slop|dior|tilly norwood|ai[- ](generated|made) (film|movie|feature|short|animated)|first (fully )?ai|bombed|flops?|\bpremiere[sd]? of\b|talking-dog|gods don.t give gifts)",re.I)
+AIBIZ_RE=re.compile(r"(\bstudios?\b|invest\w+|\bdeals?\b|partnership|agreement|\bmarkets?\b|econom\w+|revenue|funding|startup|acquir\w+|advertis\w+|\bbrands?\b|campaign|china|india|korea|nigeria|broadcasters?|\bnetworks?\b|statistics|trends|\bceo\b|executives?|enterprise|business|production futures|scal\w+)",re.I)
+
+def ai_sub(text):
+    """Split AI stories into four groups by the headline; first match wins. Anything else stays in the general AI tab."""
+    for k, r in (("airights", AIRIGHTS_RE), ("aifilms", AIFILMS_RE), ("aitools", AITOOLS_RE), ("aibiz", AIBIZ_RE)):
+        if r.search(text):
+            return k
+    return ""
+
 STATUS_RE = re.compile(r"(status of the artist|collective agreements?|collective bargaining|bargaining|ratif\w+|strikes?|lockout|"
                        r"labou?r (board|code|standards|law|dispute|action|shortage)|freelanc\w+|independent contractors?|"
                        r"self[- ]employed|minimum wage|artists?['’]? (rights|fees|status)|union (drive|vote|contract|deal|certif\w+)|"
@@ -680,6 +698,7 @@ def card(i):
     if i.get("tips"): cats.append("tips")
     if i.get("fest"): cats.append("fest")
     if i["ai"]: cats.append("ai")
+    if i.get("aisub"): cats.append(i["aisub"])
     if i["cce"]: cats.append("cce")
     if i.get("guild"): cats.append("guilds")
     if i["vibe"]: cats.append("vibe")
@@ -1072,7 +1091,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == "lgbtq" and i.get("lgbtq")) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
