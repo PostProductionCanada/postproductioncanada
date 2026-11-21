@@ -9027,6 +9027,7 @@
   "require": null,
   "canada": true,
   "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -9040,8 +9041,7 @@
   "status": false,
   "prov": [
    "ATL"
-  ],
-  "aisub": ""
+  ]
  },
  {
   "title": "Video | Adobe MAX 2026 Explained: Firefly Goes Agentic, Premiere Pro Gets AI Upgrades & More!",
