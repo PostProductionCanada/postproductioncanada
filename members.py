@@ -10,7 +10,7 @@ import originals
 PAGE = """<!doctype html><html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Members — Post Production Canada</title><link rel="icon" href="{{FAVICON}}">
 <style>""" + originals.CSS + """
-.pn{color:#1a6fb5;font-weight:600}@media (prefers-color-scheme:dark){.pn{color:#6cb4f0}}
+.pn{color:#1a6fb5;font-weight:600}@media (prefers-color-scheme:dark){.pn{color:#6cb4f0}}.co{color:#8a3fc0;font-weight:600}@media (prefers-color-scheme:dark){.co{color:#c79bf2}}.hlkey{font-size:13.5px;color:var(--mute);margin:6px 0 12px}
 .hero-art{display:block;width:100%;height:150px;border-radius:10px;margin:10px 0 14px}
 .gate{max-width:420px;margin:60px auto;text-align:center}.gate input{width:100%;padding:12px 14px;font:16px ui-sans-serif,sans-serif;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink)}
 .gate button{margin-top:12px;border:0;background:var(--red);color:#fff;border-radius:999px;padding:10px 22px;font:700 15px ui-sans-serif,sans-serif;cursor:pointer}
@@ -73,7 +73,7 @@ document.getElementById('f').addEventListener('submit',async function(ev){
   try{var arts=await unlock(document.getElementById('pw').value);
     var h='<h1>Originals</h1><p class="meta">Original writing on Canadian post-production. Private.</p>';
     var DISC='<p class="disc legal"><b>About these articles.</b> We write from published, linked sources and say when something is our own reading or opinion. We try to be right, and we correct errors quickly: <a href="mailto:hello@postproductioncanada.ca?subject=Correction">tell us about one</a>. Nothing here is legal, financial, tax or career advice. Names and trademarks belong to their owners, and we have no commercial relationship with anyone named unless a piece says so.</p>';
-    h+=DISC;arts.forEach(function(a){var ty=(a.type||'').toLowerCase();var bd=ty==='editorial'?'<span class="badge ed">Editorial</span>':(ty?'<span class="badge">'+esc(ty.charAt(0).toUpperCase()+ty.slice(1))+'</span>':'');var en=ty==='editorial'?'<p class="disc"><b>This is an editorial.</b> It is our opinion, not reporting. Facts in it are sourced below; the conclusions are ours.</p>':'';h+='<details><summary>'+bd+esc(a.title)+'</summary><p class="meta">'+esc(a.byline)+' · '+esc(a.date)+'</p>'+art(a)+en+a.html+(a.disclosure?'<p class="disc"><b>Disclosure:</b> '+esc(a.disclosure)+'</p>':'')+'</details>'});
+    h+=DISC+'<p class="hlkey">To help you connect the dots as you read: <span class="pn">blue</span> is a person, <span class="co">purple</span> is a company or organization.</p>';arts.forEach(function(a){var ty=(a.type||'').toLowerCase();var bd=ty==='editorial'?'<span class="badge ed">Editorial</span>':(ty?'<span class="badge">'+esc(ty.charAt(0).toUpperCase()+ty.slice(1))+'</span>':'');var en=ty==='editorial'?'<p class="disc"><b>This is an editorial.</b> It is our opinion, not reporting. Facts in it are sourced below; the conclusions are ours.</p>':'';h+='<details><summary>'+bd+esc(a.title)+'</summary><p class="meta">'+esc(a.byline)+' · '+esc(a.date)+'</p>'+art(a)+en+a.html+(a.disclosure?'<p class="disc"><b>Disclosure:</b> '+esc(a.disclosure)+'</p>':'')+'</details>'});
     var o=document.getElementById('out');o.innerHTML=h;o.hidden=false;document.getElementById('gate').hidden=true;
   }catch(e){err.textContent='That password did not work.'}
 });

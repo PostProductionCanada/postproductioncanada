@@ -72,6 +72,11 @@ CREDITS = [
 ]
 
 SOURCES = [
+    ("Status of the Artist Act, page 1 (Justice Canada)", "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/page-1.html"),
+    ("Certification Register under the Status of the Artist Act (CIRB)", "https://cirb-ccri.gc.ca/en/decisions/certification-register-under-status"),
+    ("Réforme de la législation sur le statut de l'artiste (RBD Avocats, 2023)", "https://rbdavocats.com/reforme-de-la-legislation-sur-le-statut-de-lartiste-un-survol-des-principales-modifications"),
+    ("AQTIS 514 IATSE and AQPM collective agreement, cinema, 2024 to 2028", "https://www.aqpm.ca/wp-content/uploads/2025/06/Entente-AQTIS-514-AIEST-AQPM-Cinema-v.-administrative-6-juin-2025.pdf"),
+    ("Strengthening the Status of the Artist in Canada (House of Commons Heritage Committee)", "https://www.saskartsalliance.ca/wp-content/uploads/2023/03/441_CHPC_Rpt5-e.pdf"),
     ("Status of the Artist Act, full text (Justice Canada)", "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/fulltext.html"),
     ("Federal certification of artists' associations (Canada Industrial Relations Board)",
      "https://cirb-ccri.gc.ca/en/about-appeals-applications-complaints/status-artist-act-certification"),
@@ -172,7 +177,7 @@ These are productions in prep, shooting or wrapping, counted from public listing
 <div class="box"><h3>About this data</h3>
 <p>Numbers in these three charts come from <a href="https://filmincanada.com/" target="_blank" rel="noopener">filmincanada.com</a>
 (<a href="{e(d["source_urls"]["now_shooting"])}" target="_blank" rel="noopener">Now Shooting</a>,
-<a href="{e(d["source_urls"]["incentives"])}" target="_blank" rel="noopener">incentives by province</a>), an independent guide. The site says it is run by a service production company with a commercial interest in production volume. I show counts only and link to the full detail on their site. Fetched {e(d["fetched_at"][:10])}.</p></div>
+<a href="{e(d["source_urls"]["incentives"])}" target="_blank" rel="noopener">incentives by province</a>), an independent guide. The site says it is run by a service production company with a commercial interest in production volume. We show counts only and link to the full detail on their site. Fetched {e(d["fetched_at"][:10])}.</p></div>
 """
 
 
@@ -234,10 +239,90 @@ def vfx_section():
             '</ul></div>')
 
 
+LAW_FED = "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/page-1.html"
+LAW_FED_FULL = "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/fulltext.html"
+CIRB_CERT = "https://cirb-ccri.gc.ca/en/about-appeals-applications-complaints/status-artist-act-certification"
+CIRB_REG = "https://cirb-ccri.gc.ca/en/decisions/certification-register-under-status"
+RBD = "https://rbdavocats.com/reforme-de-la-legislation-sur-le-statut-de-lartiste-un-survol-des-principales-modifications"
+QC_GOV = ("https://www.quebec.ca/nouvelles/actualites/details/revision-des-lois-sur-le-statut-de-lartiste-la-ministre-de-la-culture-et-des-"
+          "communications-depose-un-projet-de-loi-pour-ameliorer-les-conditions-socioeconomiques-des-artistes-quebecois-39732")
+AQPM_AGREEMENT = "https://www.aqpm.ca/wp-content/uploads/2025/06/Entente-AQTIS-514-AIEST-AQPM-Cinema-v.-administrative-6-juin-2025.pdf"
+NETFLIX_PR = "https://www.newswire.ca/news-releases/aqtis-514-iatse-signs-first-term-agreement-with-netflix-805139041.html"
+NETFLIX_BD = "https://broadcastdialogue.com/quebec-crew-union-aqtis-514-iatse-signs-four-year-deal-with-netflix"
+CMPA_DGC = "https://cmpa.ca/pressreleases/independent-producers-and-directors-ratify-new-cmpa-dgc-standard-agreement-2025"
+CHPC_REPORT = "https://www.saskartsalliance.ca/wp-content/uploads/2023/03/441_CHPC_Rpt5-e.pdf"
+CHPC_NDP = "https://www.ourcommons.ca/documentviewer/en/44-1/CHPC/report-5/page-111"
+CHPC_RESPONSE = "https://www.ourcommons.ca/content/Committee/441/CHPC/GovResponse/RP12567138/441_CHPC_Rpt05_GR/DepartmentOfCanadianHeritage-e.pdf"
+
+# Certification register, read Nov 21, 2026: (short name, full name as the register prints it, decision, last renewal as listed)
+REGISTER = [
+    ("DGC", "Directors Guild of Canada", "Decision 44", "June 4, 2021"),
+    ("AQTIS", "Alliance québécoise des techniciens de l'image et du son", "Decisions 41, 46 and 49", "April 20, 2021"),
+    ("ACTRA", "Alliance of Canadian Cinema, Television and Radio Artists (Performers Guild)", "Decision 15", "June 25, 2020"),
+    ("ARRQ", "Association des réalisateurs et réalisatrices du Québec", "Decision 24", "December 30, 2021"),
+    ("WGC", "Writers Guild of Canada", "Decision 16", "June 25, 2020"),
+    ("SCGC", "Screen Composers Guild of Canada", "Decisions 43, 45 and Letter Decision 115", "May 23, 2021"),
+    ("ADC", "Associated Designers of Canada", "Decision 37", "January 4, 2023"),
+]
+
+
+def lnk(t, u):
+    return f'<a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>'
+
+
+def law_section():
+    reg = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(n)}</td><td>{e(d)}</td><td>{e(r)}</td></tr>' for a, n, d, r in REGISTER)
+    return (
+        '<h2>The federal Act, in plain terms</h2>'
+        '<p>Straight from the Act and the Canada Industrial Relations Board (CIRB) page that explains it, summarized in our words:</p>'
+        '<ul>'
+        '<li><b>Purpose.</b> Part II sets up a framework for professional relations between artists and producers that guarantees their freedom of association, recognizes the importance of their contributions to the cultural life of Canada, and protects their rights. (' + lnk("the Act", LAW_FED) + ')</li>'
+        '<li><b>Who "producers" are.</b> Federal government institutions and the broadcasting undertakings the Act describes, plus associations of producers. The Act does not cover employees of those bodies. (' + lnk("the Act", LAW_FED) + '; ' + lnk("CIRB", CIRB_CERT) + ')</li>'
+        '<li><b>Scale agreement.</b> A written agreement between a producer and an artists\' association on minimum terms and conditions for the artists\' services. (' + lnk("the Act", LAW_FED) + ')</li>'
+        '<li><b>Certification.</b> The CIRB recognizes an association as the exclusive bargaining agent for a "sector" of self-employed artists. It lasts three years and renews automatically unless someone files to revoke it or a rival association applies for the same sector. (' + lnk("CIRB", CIRB_CERT) + ')</li>'
+        '<li><b>Who decides.</b> The Act\'s former Tribunal was repealed in 2012, and the CIRB now handles certification. (' + lnk("the Act", LAW_FED) + ')</li>'
+        '</ul>'
+        '<h3>Who is certified today</h3>'
+        '<p>The CIRB keeps a public register of certified associations. These are the screen-industry groups on it when we read it on November 21, 2026:</p>'
+        '<div class="tw"><table><thead><tr><th>Short name</th><th>Association</th><th>Register entry</th><th>Last renewal listed</th></tr></thead><tbody>' + reg + '</tbody></table></div>'
+        '<p class="note" style="margin-top:10px">Source: ' + lnk("CIRB Certification Register", CIRB_REG) + '. The register lists the last renewal it records, and certifications renew every three years unless challenged, so the dates can lag. '
+        'The register also lists the Editors\' Association of Canada. We have not checked its sector, so do not assume it covers picture editors. '
+        'The full certification orders, which describe each sector, are PDFs on the CIRB site that we have not read, so we cannot say whether picture editors fall inside the DGC\'s federal sector.</p>'
+        '<h2>Québec: what Bill 35 changed</h2>'
+        '<p>Québec\'s first status law dates from 1987. On June 3, 2022, Bill 35 merged it with the 1988 law for visual arts, crafts and literature. The combined law is now titled the Loi sur le statut professionnel des artistes des arts visuels, du cinéma, du disque, de la littérature, des métiers d\'art et de la scène. '
+        'According to RBD Avocats, a Québec labour-law firm, the main changes were these:</p><ul>'
+        '<li>Collective bargaining now reaches visual arts, crafts and literature too.</li>'
+        '<li>Artists have a right to a workplace free of psychological and sexual harassment, and producers must have a prevention and complaints policy.</li>'
+        '<li>Recognized associations have a duty of fair representation toward the artists they represent, whether or not those artists are members.</li>'
+        '<li>Interfering with an association, or pressuring artists to join or leave one, is prohibited, with complaints going to the Tribunal administratif du travail (TAT).</li>'
+        '</ul>'
+        '<p>The firm also notes that a collective agreement under the law sets only minimum conditions: an artist can still negotiate better terms individually. '
+        'Sources: ' + lnk("RBD Avocats, Feb. 16, 2023", RBD) + ' (in French) and the ' + lnk("Québec government\'s announcement of the bill, April 27, 2022", QC_GOV) + ' (in French).</p>'
+        '<h3>A real agreement that names Editors</h3>'
+        '<p>The AQTIS 514 IATSE and Association québécoise de la production médiatique (AQPM) collective agreement for cinema, 2024 to 2028, recognizes AQTIS 514 IATSE as the sole bargaining agent for the artists covered by its recognitions in the cinema sector. '
+        'Its pay tables include a "Département du montage" (editing department) that lists Monteur (Editor), Monteur sonore (sound Editor), Assistant monteur, Assistant monteur sonore, Coloriste and Mixeur sonore. '
+        'The tables show several rate tiers; we have not worked out which applies to which budget, so we do not print rates here. Read it yourself: ' + lnk("AQPM, administrative version of June 6, 2025", AQPM_AGREEMENT) + ' (in French).</p>'
+        '<h2>Published stories worth reading</h2>'
+        '<div class="box"><h3 style="margin-top:0">AQTIS 514 IATSE signs a four-year deal with Netflix</h3>'
+        '<p>On August 26, 2026, AQTIS 514 IATSE announced its first term agreement with Netflix in Québec. It covers four years, so it does not need renegotiating for each Netflix project shot in the province. '
+        'Broadcast Dialogue describes AQTIS as representing 8,000 freelance professionals in more than 200 roles across design, planning, production and post-production. '
+        + lnk("News release (CNW)", NETFLIX_PR) + ' · ' + lnk("Broadcast Dialogue, Aug. 27, 2026", NETFLIX_BD) + '</p></div>'
+        '<div class="box"><h3 style="margin-top:0">CMPA and DGC ratify a new Standard Agreement</h3>'
+        '<p>On December 16, 2025, the Canadian Media Producers Association and the Directors Guild of Canada announced a new three-year Standard Agreement covering terms, conditions and rates for directors and other professional crew in film, television and digital media. '
+        'The DGC describes itself there as representing more than 7,000 people in direction, design, production and editing. ' + lnk("CMPA news release", CMPA_DGC) + '</p></div>'
+        '<div class="box"><h3 style="margin-top:0">Parliament looked at the Act and asked for a review</h3>'
+        '<p>The House of Commons Heritage Committee studied the Status of the Artist Act in the 44th Parliament, hearing 29 witnesses and receiving five briefs. Its first recommendation was an in-depth review of the Act and the Copyright Act. '
+        'Its second was to add a way to reach a first scale agreement through bargaining and arbitration. '
+        'A minority report from the NDP quotes the DGC\'s National Executive Director saying a full negotiation can take years, and that the DGC wants binding arbitration for a first contract, as in Québec. '
+        'In its September 2023 response, the Department of Canadian Heritage said a review of the Act was not being considered at that time. '
+        + lnk("Committee report", CHPC_REPORT) + ' · ' + lnk("NDP supplementary report", CHPC_NDP) + ' · ' + lnk("Government response", CHPC_RESPONSE) + '</p></div>'
+    )
+
+
 def render(leaf, favicon, updated):
     fic_html = fic_section(load_fic())
     srcs = "\n".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a></li>' for t, u in SOURCES)
-    return PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{VFX}}", vfx_section()).replace("{{CHART}}", chart()).replace("{{FIC}}", fic_html)\
+    return PAGE.replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{LAW}}", law_section()).replace("{{VFX}}", vfx_section()).replace("{{CHART}}", chart()).replace("{{FIC}}", fic_html)\
         .replace("{{CREDITS}}", credits_rows()).replace("{{SOURCES}}", srcs).replace("{{UPDATED}}", updated)
 
 
@@ -314,14 +399,16 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <h3>Other provinces</h3>
 <p>Saskatchewan passed a broad act in 2002 that works more as a statement of principles. Other provinces have studied the issue or passed recognition-style laws, but none of them has Québec's bargaining system.</p>
 
+{{LAW}}
+
 <div class="box ok"><h3>What this means for an editor</h3>
 <ul>
-<li><b>In Québec,</b> the law is the foundation for collective agreements covering freelance technicians, and post-production trades fall under AQTIS's coverage.</li>
-<li><b>Everywhere else,</b> an editor's pay and conditions come from union agreements and individual contracts, not from a status law.</li>
-<li><b>Federally,</b> the act could matter for a self-employed editor working for a broadcaster, but only if the editor's sector is certified.</li>
+<li><b>In Québec,</b> the law underpins collective agreements for freelance technicians. The AQTIS 514 IATSE cinema agreement lists Monteur, Monteur sonore and Assistant monteur among its editing-department functions, with set pay tables.</li>
+<li><b>Everywhere else,</b> an Editor's pay and conditions come from union agreements and individual contracts, not from a status law.</li>
+<li><b>Federally,</b> the Act matters to self-employed artists working for federally regulated producers such as broadcasters, and only where the CIRB has certified their sector. The DGC and AQTIS are both on the federal register.</li>
 </ul></div>
 <div class="box warn"><h3>What we could not confirm</h3>
-<p>We could not confirm that picture editors are named in Québec's law or covered by a federal certification. Before you rely on any of this, check with AQTIS (Québec), your union local, or the Canada Industrial Relations Board's certification register. I'm also not certain of the details of every provincial act.</p></div>
+<p>We have not read the certification orders that describe each federal sector, so we cannot say whether picture Editors fall inside the DGC's or AQTIS's federal certification. We also cannot say how the Québec recognitions apply to a particular Editor's contract. Before you rely on any of this, check with AQTIS (Québec), your union local, or the CIRB's certification register. We are also not certain of the details of every provincial act.</p></div>
 
 <h2>Production tax credits, federal and by province</h2>
 <p>These credits go to production companies, not to individual editors. They matter because they decide where work lands, and some target post directly: BC's DAVE credit covers post-production and VFX labour, and Saskatchewan adds a bonus for post done in-province.</p>

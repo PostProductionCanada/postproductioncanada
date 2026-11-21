@@ -139,4 +139,8 @@ PAIRS = [
     ("Cannes 2027: the Short Film Corner", "Cannes 2027 : le Short Film Corner"),
     ("Cannes, France", "Cannes, France"),
     ("Telefilm Canada's call for entry for Canadian short films", "L'appel de candidatures de Téléfilm Canada pour les courts métrages canadiens, tous genres, avec une date limite d'inscription par l'entremise de Téléfilm le 17 janvier 2027."),
+    ("Dec 3, 2026, 2 p.m. ET", "3 déc. 2026, 14 h (HE)"),
+    ("Telefilm Canada Annual Public Assembly", "Assemblée publique annuelle de Téléfilm Canada"),
+    ("Online, streamed on Telefilm Canada's YouTube channel", "En ligne, diffusée sur la chaîne YouTube de Téléfilm Canada"),
+    ("Broadcast Dialogue reports that CEO Julie Roy", "Selon Broadcast Dialogue, Julie Roy (chef de la direction) et Sylvain Lafrance (président du conseil) répondront aux questions de l'industrie et présenteront les priorités du prochain exercice. Le lien mène à ce reportage, qui donne les détails; nous n'avons pas encore trouvé l'annonce sur le site de Téléfilm."),
 ]

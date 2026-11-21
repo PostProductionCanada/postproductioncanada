@@ -103,10 +103,22 @@ CREDENTIALS = {
 PEOPLE_EXTRA = {"Tim Burton", "Martin Scorsese", "Joe Walker", "Jennifer Lame", "Hal Ashby", "Steven Soderbergh", "Chloé Zhao", "John Grierson", "Brock Mitchell", "Mark Robson"}
 
 
+# Companies, studios, agencies, guilds and institutions named in the Originals (purple). Each name was found in the article text.
+COMPANIES = {
+    "Deluxe Toronto", "Deluxe", "Technicolor Canada", "Technicolor Group", "Technicolor", "Adobe", "Blackmagic", "Frame.io", "Netflix", "Autodesk",
+    "DNEG", "Digital Domain", "Sony Pictures Imageworks", "Rodeo FX", "Mikros Animation", "Mikros", "MPC", "Method Studios",
+    "Rainmaker Digital Effects", "Citelab", "Urban Post Production", "Niagara Custom Lab", "Gaumont Pictures", "Bell Media", "Astral Media",
+    "National Film Board", "CAVCO", "Creative BC", "Ontario Creates", "IATSE", "Motion Picture Editors Guild", "Canadian Cinema Editors",
+    "American Cinema Editors", "Motion Picture Association", "Boris FX", "ILM", "Mr. X", "Documentary Organization of Canada", "Hot Docs",
+    "Canadian Pacific Railway", "Associated Screen News", "Bellevue-Humphries", "Global Vision", "Revenu Québec", "Orphiq", "LIFT", "MELS",
+    "Guild of Music Supervisors", "ACMI", "Berklee", "HBO", "Quebecor",
+}
+
+
 def mark_people(t):
     """Wrap verified people's names in a coloured span and add guild letters after the first mention in each article.
     Skips links, headings, scripts and styles. Run after link_people so the IMDb badge stays after the letters."""
-    names = sorted(set(registry()) | set(CREDENTIALS) | PEOPLE_EXTRA, key=len, reverse=True)
+    names = sorted(set(registry()) | set(CREDENTIALS) | PEOPLE_EXTRA | COMPANIES, key=len, reverse=True)
     pat = re.compile("(?<![\\w])(" + "|".join(re.escape(n) for n in names) + ")(?![\\w])")
     seen, out = set(), []
     depth_a = depth_h = 0
@@ -134,7 +146,7 @@ def mark_people(t):
                 if n not in seen and n in CREDENTIALS:
                     extra = ", " + CREDENTIALS[n]
                 seen.add(n)
-                return '<span class="pn">' + n + extra + "</span>"
+                return '<span class="' + ("co" if n in COMPANIES else "pn") + '">' + n + extra + "</span>"
             out.append(pat.sub(rep, seg))
         else:
             out.append(seg)
