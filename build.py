@@ -578,10 +578,10 @@ def cap_editor(t):
 def esc(s): return html.escape(s, quote=True)
 
 CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing"), "story": ("🎬", "Storytelling & Filmmaking"), "soundedit": ("🎧", "Sound Editing"), "audio": ("🎶", "Sound & Emotion"),
-        "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Gaming"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business & Unions"),
+        "vfx": ("🟩", "VFX & Compositing"), "animation": ("🎨", "Animation"), "vp": ("🎮", "Virtual Production & Gaming"), "gear": ("🎥", "Gear & Software"), "business": ("💼", "Business, Unions & Guilds"),
         "ai": ("🤖", "AI Filmmaking"),
         "aifilms": ("🎞️", "AI Films & Festivals"),
-        "aitools": ("🛠️", "AI Tools & Workflows"),
+        "aitools": ("🛠️", "AI Tools, Workflows & Vibe Cutting"),
         "airights": ("🎭", "AI, Actors & Rights"),
         "aibiz": ("🏢", "AI & the Business"),
         "aigen": ("🤖", "AI: Everything Else"),
@@ -755,8 +755,8 @@ def card(i):
     if i["ai"]: cats.append("ai")
     if i.get("aisub"): cats.append(i["aisub"])
     if i["cce"]: cats.append("cce")
-    if i.get("guild"): cats.append("guilds")
-    if i["vibe"]: cats.append("vibe")
+    if i.get("guild"): cats.append("guilds"); cats.append("business")
+    if i["vibe"]: cats.append("vibe"); cats.append("aitools")
     iso = i["date"].isoformat()
     _lf = "🇨🇦 " if i["canada"] else ""
     em, lab = CATS[LEGACY_CAT.get(i["category"], i["category"])]
@@ -1152,10 +1152,10 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "love" and i.get("love")) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "love" and i.get("love")) or (k == "ai" and i["ai"]) or (k == "business" and i.get("guild") and i["category"] != "business") or (k == "aitools" and i["vibe"] and i.get("aisub") != "aitools") or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
-    tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items() if k != "ai"]
+    tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items() if k not in ("ai","guilds","vibe")]
     tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
     popts = "".join(f'<option value="{k}">{PROV_LABEL[k]} ({sum(1 for i in items if k in i["prov"])})</option>' for k in PROV_LABEL)
     cfg = json.loads((ROOT / "site.json").read_text())
