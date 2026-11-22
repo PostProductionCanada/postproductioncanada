@@ -1254,7 +1254,7 @@ header{border-bottom:1px solid var(--line)}
 .hero{padding:34px 0 18px}
 .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.08;letter-spacing:-.03em;margin:0 0 10px;max-width:16em}
 .hero h1 em{font-style:normal;color:var(--red)}
-.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.nsrc{color:#0a7cff;font-weight:800}@media (prefers-color-scheme:dark){.nsrc{color:#4da3ff}}:root[data-theme="dark"] .nsrc{color:#4da3ff}:root[data-theme="light"] .nsrc{color:#0a7cff}.loopwrap{margin-top:14px!important}.loop{display:block;text-align:center;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,19px);line-height:1.3;padding:12px 18px;border-radius:12px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}.clap{font-size:1.25em;vertical-align:-2px}
+.hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.nsrc{color:#0a7cff;font-weight:800}@media (prefers-color-scheme:dark){.nsrc{color:#4da3ff}}:root[data-theme="dark"] .nsrc{color:#4da3ff}:root[data-theme="light"] .nsrc{color:#0a7cff}.loopwrap{margin-top:14px!important}.loop{display:block;width:100%;margin-top:14px;text-align:center;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,20px);line-height:1.3;padding:14px 18px;border-radius:0;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}.clap{font-size:1.25em;vertical-align:-2px}
 .bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
 .bar .wrap{display:flex;flex-direction:column;gap:10px}
 .tabs{display:flex;flex-wrap:wrap;gap:8px}
@@ -1373,7 +1373,7 @@ footer p{margin:0 0 8px;max-width:60em}
   <h1>All of Canada's<br><span class="filmframe">POST PRODUCTION</span><br><span class="nw"><span class="newsword">NEWS</span> <em>in one place.</em></span></h1>
   <p>Editing, colour, sound, VFX, animation and the business behind them — gathered from <b class="nsrc">{{NSOURCES}} sources</b> and updated live every few hours. <span class="nw">Free, always.</span></p>
 </div><img class="heroart" src="{{FLAG}}" alt="A Canadian flag built from a clapperboard, light, mixing console, location pin and maple leaf with a play button" width="640" height="340"></div>
-<div class="wrap"><p class="loopwrap"><a class="loop" href="{{LOOP}}">Original articles and features are coming soon. Stay in the loop: <span class="clap">🎬</span> click here →</a></p></div></section>
+<a class="loop" href="{{LOOP}}">Original articles and features are coming soon. Stay in the loop: <span class="clap">🎬</span></a></section>
 
 {{ROLL}}
 
@@ -1443,6 +1443,16 @@ footer p{margin:0 0 8px;max-width:60em}
     });
     empty.style.display=n?'none':'block';
   }
+  (function(){var tc=document.getElementById('tabs');if(!tc||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    var pos=0,hold=0,last=0,dir=1;
+    function pause(ms){hold=ms;pos=tc.scrollLeft}
+    ['pointerenter','pointerdown','touchstart','wheel','focusin'].forEach(function(e){tc.addEventListener(e,function(){pause(5000)},{passive:true})});
+    tc.addEventListener('pointerleave',function(){pause(1500)});
+    tc.addEventListener('scroll',function(){if(hold>0)pos=tc.scrollLeft},{passive:true});
+    function step(ts){var dt=Math.min(ts-last,50);last=ts;var max=tc.scrollWidth-tc.clientWidth;
+      if(max>2&&!document.hidden){if(hold>0){hold-=dt}else{pos+=dir*dt*0.04;if(pos>=max){pos=max;dir=-1;hold=1800}else if(pos<=0){pos=0;dir=1;hold=1800}tc.scrollLeft=pos}}
+      requestAnimationFrame(step)}
+    requestAnimationFrame(step)})();
   tabs.forEach(function(t){t.addEventListener('click',function(ev){
     tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
     var tc=t.parentNode;if(tc.scrollWidth>tc.clientWidth){tc.scrollTo({left:tc.scrollLeft+t.getBoundingClientRect().left-tc.getBoundingClientRect().left-24,behavior:'smooth'})}
