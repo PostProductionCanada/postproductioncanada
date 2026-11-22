@@ -584,6 +584,7 @@ CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing
         "aitools": ("🛠️", "AI Tools & Workflows"),
         "airights": ("🎭", "AI, Actors & Rights"),
         "aibiz": ("🏢", "AI & the Business"),
+        "aigen": ("🤖", "AI: Everything Else"),
         "guilds": ("🛡️", "Unions, Guilds & Associations"),
         "vibe": ("🎚️", "Vibe Cutting"),
         "status": ("⚖️", "Status of the Artist"),
@@ -636,7 +637,7 @@ def ai_sub(text):
     for k, r in (("airights", AIRIGHTS_RE), ("aifilms", AIFILMS_RE), ("aitools", AITOOLS_RE), ("aibiz", AIBIZ_RE)):
         if r.search(text):
             return k
-    return ""
+    return "aigen"
 
 LOVE_RE = re.compile(
     r"((\b(best|greatest|favou?rite|fave|essential|top \d+|\d+ best)\b.{0,45}\b(movies?|films?|filmmakers?|directors?|performances?)\b)|"
@@ -1154,8 +1155,8 @@ def render(items, sources, now):
     counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "love" and i.get("love")) or (k == "ai" and i["ai"]) or (k == "guilds" and i.get("guild")) or (k == "vibe" and i["vibe"]) or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
-    tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items()]
-    tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}{" sub" if k in ("aifilms","aitools","airights","aibiz") else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
+    tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items() if k != "ai"]
+    tabhtml = "".join(f'<button class="tab{" on" if k=="all" else ""}" data-f="{k}">{l} <i>{counts[k]}</i></button>' for k, l in tabs)
     popts = "".join(f'<option value="{k}">{PROV_LABEL[k]} ({sum(1 for i in items if k in i["prov"])})</option>' for k in PROV_LABEL)
     cfg = json.loads((ROOT / "site.json").read_text())
     sub, subbtn = "", ""
@@ -1257,7 +1258,7 @@ header{border-bottom:1px solid var(--line)}
 .bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
 .bar .wrap{display:flex;flex-direction:column;gap:10px}
 .tabs{display:flex;flex-wrap:wrap;gap:8px}
-@media (max-width:820px){.tabs{display:grid;grid-auto-flow:column;grid-template-rows:repeat(3,auto);grid-auto-columns:max-content;gap:6px 8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}}
+@media (min-width:0){.tabs{display:grid;grid-auto-flow:column;grid-template-rows:repeat(3,auto);grid-auto-columns:max-content;gap:6px 8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}}
 .tab{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
 .tab i{font-style:normal;color:var(--mute);margin-left:4px;font-size:12px}
 .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -1445,7 +1446,7 @@ footer p{margin:0 0 8px;max-width:60em}
   tabs.forEach(function(t){t.addEventListener('click',function(ev){
     tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
     var tc=t.parentNode;if(tc.scrollWidth>tc.clientWidth){tc.scrollTo({left:tc.scrollLeft+t.getBoundingClientRect().left-tc.getBoundingClientRect().left-24,behavior:'smooth'})}
-    document.body.classList.toggle('aisub',f==='ai'||['aifilms','aitools','airights','aibiz'].indexOf(f)>-1);
+    
     var emp=document.getElementById('empty');if(f==='status'&&emp.style.display==='block'){emp.innerHTML='No stories on this right now. Our <a href="status-of-the-artist.html">Status of the Artist page</a> explains the law, who is certified and what we could not confirm.'}else{emp.textContent='Nothing matches that. Try a different filter or search.'}
     if(ev.isTrusted){var fc=cards.filter(function(c){return c.style.display!=='none'})[0]||emp,bar=document.querySelector('.bar'),y=fc.getBoundingClientRect().top+window.pageYOffset-(bar?bar.offsetHeight:0)-10;
       window.scrollTo({top:Math.max(0,y),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
