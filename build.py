@@ -507,6 +507,14 @@ def main():
         if _rel == "index.html":
             t = t.replace('<button class="btn" id="theme"', '<a class="btn" href="fr.html" hreflang="fr" lang="fr" title="Version française">FR</a><button class="btn" id="theme"', 1)
             t = t.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/fr.html"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/"></head>', 1)
+            _ld = {"@context": "https://schema.org", "@graph": [
+                {"@type": "WebSite", "@id": SITE_URL + "/#site", "name": "Post Production Canada", "url": SITE_URL + "/",
+                 "description": "Canadian post-production, editing, VFX, sound and screen-industry news, gathered in one free feed.",
+                 "inLanguage": ["en-CA", "fr-CA"], "publisher": {"@id": SITE_URL + "/#org"}},
+                {"@type": "Organization", "@id": SITE_URL + "/#org", "name": "Post Production Canada", "url": SITE_URL + "/",
+                 "email": "hello@postproductioncanada.ca", "areaServed": {"@type": "Country", "name": "Canada"},
+                 "knowsAbout": ["Post Production", "Film editing", "Visual Effects", "Sound editing", "Canadian screen industry"]}]}
+            t = t.replace("</head>", '<script type="application/ld+json">' + json.dumps(_ld, ensure_ascii=False) + "</script></head>", 1)
             import fr as _fr
             t_fr = _fr.localize_links(_fr.to_french(t))
             t_fr = t_fr.replace('href="fr.html" hreflang="fr" lang="fr" title="Version française">FR</a>', 'href="index.html" hreflang="en" lang="en" title="English version">EN</a>', 1)

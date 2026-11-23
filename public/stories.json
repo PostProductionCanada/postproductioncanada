@@ -4300,7 +4300,7 @@
   "love": false,
   "fest": false,
   "legal": false,
-  "tips": true,
+  "tips": false,
   "status": false,
   "prov": []
  },
