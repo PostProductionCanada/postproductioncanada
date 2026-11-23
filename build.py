@@ -914,11 +914,18 @@ def bodies_html(now, items=None):
     return "\n".join(out)
 
 
+def _pick_cats(r):
+    cats = set(r.get("cats", []))
+    if CANADA_RE.search(r.get("title", "") + " " + r.get("note", "")):
+        cats.add("canada")
+    return " ".join(sorted(cats))
+
+
 def picks_html(picks):
     if not picks:
         return ""
     cards = "".join(
-        f'<article class="pick"><div class="meta"><span class="src">{_decor(r)[0]}{esc(r["source"])}</span><span class="dot">·</span>'
+        f'<article class="pick" data-cats="{_pick_cats(r)}" data-prov="" data-t="{esc(norm(r["title"] + " " + r["source"]))}"><div class="meta"><span class="src">{_decor(r)[0]}{esc(r["source"])}</span><span class="dot">·</span>'
         f'<time datetime="{r["dt"].isoformat()}">{r["dt"].date()}</time>{_decor(r)[1]}</div>'
         f'<h3><a href="{esc(r["url"])}" target="_blank" rel="noopener">{esc(r["title"])}</a></h3>'
         + (f'<p class="why"><b>Why it matters:</b> {esc(r["note"])}</p>' if r.get("note") else "") + '</article>'
@@ -1292,10 +1299,10 @@ header{border-bottom:1px solid var(--line)}
 .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.08;letter-spacing:-.03em;margin:0 0 10px;max-width:16em}
 .hero h1 em{font-style:normal;color:var(--red)}
 .hero p{color:var(--mute);margin:0;max-width:40em}.nw{white-space:nowrap}.nsrc{color:#0a7cff;font-weight:800}@media (prefers-color-scheme:dark){.nsrc{color:#4da3ff}}:root[data-theme="dark"] .nsrc{color:#4da3ff}:root[data-theme="light"] .nsrc{color:#0a7cff}.loopwrap{margin-top:14px!important}.loop{display:block;width:100%;margin-top:14px;text-align:center;background:var(--red);color:#fff!important;font-weight:800;font-size:clamp(15px,2.6vw,20px);line-height:1.3;padding:14px 18px;border-radius:0;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.25)}.loop:hover{filter:brightness(1.1)}.clap{font-size:1.25em;vertical-align:-2px}
-.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
+.bar{position:static;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
 .bar .wrap{display:flex;flex-direction:column;gap:10px}
 .tabs{display:flex;flex-wrap:wrap;gap:8px}
-@media (min-width:0){.tabs{display:grid;grid-auto-flow:column;grid-template-rows:repeat(3,auto);grid-auto-columns:max-content;gap:6px 8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}}
+@media (min-width:900px){.bar{position:sticky;top:0}}.tabs{overflow:visible}@media (max-width:899px){.tabs.fold:not(.open){max-height:88px;overflow:hidden}}.tabmore{display:none;align-self:flex-start;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer}@media (max-width:899px){.tabmore{display:inline-block}}.tab[data-f="all"]{font-weight:700;border-width:2px}
 .tab{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
 .tab i{font-style:normal;color:var(--mute);margin-left:4px;font-size:12px}
 .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -1424,7 +1431,7 @@ footer p{margin:0 0 8px;max-width:60em}
 </div></div></section>
 
 <div class="bar"><div class="wrap">
-  <div class="tabs" id="tabs">{{TABS}}</div>
+  <div class="tabs fold" id="tabs">{{TABS}}</div><button class="tabmore" id="tabmore" type="button" aria-expanded="false" aria-controls="tabs">All topics ▾</button>
   <input id="q" type="search" placeholder="Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…" aria-label="Search stories">
   <select id="prov" aria-label="Filter by province"><option value="">📍 All provinces</option>{{PROVOPTS}}</select>
 </div></div>
@@ -1473,8 +1480,8 @@ footer p{margin:0 0 8px;max-width:60em}
 <script>
 (function(){
   var loopOn=!matchMedia('(prefers-reduced-motion:reduce)').matches,tcs=document.getElementById('tabs');
-  if(loopOn&&tcs){[].slice.call(tcs.children).forEach(function(b){var c=b.cloneNode(true);c.setAttribute('aria-hidden','true');c.tabIndex=-1;c.dataset.clone='1';tcs.appendChild(c)})}
-  var tabs=document.querySelectorAll('.tab'),cards=[].slice.call(document.querySelectorAll('.card')),q=document.getElementById('q'),pv=document.getElementById('prov'),empty=document.getElementById('empty'),f='all';
+  var tm=document.getElementById('tabmore');if(tm)tm.addEventListener('click',function(){var o=tcs.classList.toggle('open');tm.textContent=o?'Hide topics ▴':'All topics ▾';tm.setAttribute('aria-expanded',o)});
+  var tabs=document.querySelectorAll('.tab'),cards=[].slice.call(document.querySelectorAll('.card,.pick[data-cats]')),q=document.getElementById('q'),pv=document.getElementById('prov'),empty=document.getElementById('empty'),f='all';
   function apply(){
     var s=q.value.toLowerCase().trim(),n=0;
     cards.forEach(function(c){
@@ -1483,20 +1490,9 @@ footer p{margin:0 0 8px;max-width:60em}
     });
     empty.style.display=n?'none':'block';
   }
-  (function(){var tc=document.getElementById('tabs');if(!tc||!loopOn)return;
-    var pos=0,hold=0,last=0;
-    function period(){var k=tc.children,h=k.length/2;return k[h].offsetLeft-k[0].offsetLeft}
-    function pause(ms){hold=ms;pos=tc.scrollLeft}
-    ['pointerenter','pointerdown','touchstart','wheel','focusin'].forEach(function(e){tc.addEventListener(e,function(){pause(5000)},{passive:true})});
-    tc.addEventListener('pointerleave',function(){pause(1500)});
-    tc.addEventListener('scroll',function(){if(hold>0){pos=tc.scrollLeft;var P=period();if(P>0){if(pos>=P){pos-=P;tc.scrollLeft=pos}else if(pos<=0){pos+=P;tc.scrollLeft=pos}}}},{passive:true});
-    function step(ts){var dt=Math.min(ts-last,50);last=ts;
-      if(!document.hidden&&hold<=0){var P=period();if(P>0){pos+=dt*0.04;if(pos>=P)pos-=P;tc.scrollLeft=pos}}else if(hold>0){hold-=dt}
-      requestAnimationFrame(step)}
-    requestAnimationFrame(step)})();
+
   tabs.forEach(function(t){t.addEventListener('click',function(ev){
-    tabs.forEach(function(x){x.classList.toggle('on',x.dataset.f===t.dataset.f)});f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
-    var tc=t.parentNode;if(tc.scrollWidth>tc.clientWidth){tc.scrollTo({left:tc.scrollLeft+t.getBoundingClientRect().left-tc.getBoundingClientRect().left-24,behavior:'smooth'})}
+    tabs.forEach(function(x){x.classList.toggle('on',x.dataset.f===t.dataset.f)});f=t.dataset.f;apply();if(tm&&tcs.classList.contains('open')&&ev.isTrusted){tcs.classList.remove('open');tm.textContent='All topics ▾';tm.setAttribute('aria-expanded','false')}try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
     
     var emp=document.getElementById('empty');if(f==='status'&&emp.style.display==='block'){emp.innerHTML='No stories on this right now. Our <a href="status-of-the-artist.html">Status of the Artist page</a> explains the law, who is certified and what we could not confirm.'}else{emp.textContent='Nothing matches that. Try a different filter or search.'}
     if(ev.isTrusted){var fc=cards.filter(function(c){return c.style.display!=='none'})[0]||emp,bar=document.querySelector('.bar'),y=fc.getBoundingClientRect().top+window.pageYOffset-(bar?bar.offsetHeight:0)-10;
