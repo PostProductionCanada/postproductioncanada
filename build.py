@@ -95,7 +95,7 @@ def fetch(feed):
                 if attempt == 2 or "429" not in str(err):
                     raise
                 time.sleep(4 * (attempt + 1) + (hash(feed["url"]) % 5))
-        root = ET.fromstring(data)
+        root = ET.fromstring(data.lstrip())  # some feeds (Playback) put a blank line before the XML declaration
     except Exception as e:
         print(f"  FAIL {feed['name']}: {e}", file=sys.stderr)
         return feed, []

@@ -244,11 +244,9 @@
     },
     {
       "name": "Playback",
-      "url": "https://news.google.com/rss/search?q=site%3Aplaybackonline.ca+when%3A5d&hl=en-CA&gl=CA&ceid=CA:en",
+      "url": "https://playbackonline.ca/feed/",
       "category": "canada",
-      "google": true,
-      "intl": true,
-      "nofilter": true
+      "canada_only": false
     },
     {
       "name": "CMPA",
