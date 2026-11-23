@@ -180,7 +180,7 @@ GROUPS = [
     ("📰 News", [("buzz.html", "🎬 Post Buzz"), ("awards.html", "🏆 Awards"), ("canadians.html", "🇨🇦 Canadian Stories"), ("documentary.html", "🎥 Documentary"), ("stats.html", "📊 By the Numbers")]),
     ("✂️ Craft", [("editors.html", "✂️ Editors"), ("cinematographers.html", "📷 Cinematographers"), ("digital-assistant-editor.html", "🤖 Digital Assistant Editor"), ("specs.html", "📐 Delivery Specs"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("software.html", "💻 Software"),
                    ("sound.html", "🎶 Sound & Emotion"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors")]),
-    ("🎓 Learn and work", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status & Tax Credits"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
+    ("🎓 Learn and work", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status of the Artist"), ("funding.html", "💰 Funding & Tax Credits"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
     ("🌍 Sustainability", [("green-post.html", "🌍 Green Post")]),
 ]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}"
@@ -285,7 +285,7 @@ def fancy_footer(t, pre=""):
            '<div class="fbox"><div class="fbrand">' + logo.inline() + '<span>Post Production Canada</span></div>'
            '<p>Free news and resources for Canadian Editors and the people who work with them. Independent, and every story links to its publisher.</p></div>'
            '<div class="fbox"><h4>Explore</h4><div class="flinks">' + L("index.html", "Home") + L("stats.html", "By the Numbers") + L("unions.html", "Union Map")
-           + L("status-of-the-artist.html", "Status of the Artist") + L("networking.html", "Networking") + L("schools.html", "Education") + '</div></div>'
+           + L("status-of-the-artist.html", "Status of the Artist") + L("funding.html", "Funding & Tax Credits") + L("networking.html", "Networking") + L("schools.html", "Education") + '</div></div>'
            '<div class="fbox"><h4>Follow &amp; contact</h4><div class="flinks">' + L("feed.xml", "RSS feed") + L("contact.html", "Contact") + L("privacy.html", "Privacy")
            + '<a href="mailto:hello@postproductioncanada.ca">hello@postproductioncanada.ca</a></div></div></div>'
            '<div class="fine">' + inner + '</div></div></footer>')
@@ -309,6 +309,7 @@ def main():
     except Exception as err:
         print("filmincanada step skipped:", err, file=sys.stderr)
     feeds = json.loads((ROOT / "feeds.json").read_text())["feeds"]
+    REQ_BY_SOURCE = {f["name"]: (f["require"] if isinstance(f["require"], list) else [f["require"]]) for f in feeds if f.get("require")}
     print(f"Fetching {len(feeds)} feeds…")
     with ThreadPoolExecutor(max_workers=6) as ex:
         results = list(ex.map(fetch, feeds))
@@ -371,6 +372,9 @@ def main():
         if a["url"] in fresh or a["date"] < cutoff or a["date"] > now + timedelta(days=1):
             continue
         key = norm(a["title"])
+        _req = REQ_BY_SOURCE.get(a.get("source", ""))
+        if _req and not all(re.search(pt, a["title"] + " " + a.get("excerpt", ""), re.I) for pt in _req):
+            continue  # stories archived before a feed's film/TV filter was tightened drop out too
         if (key in seen or EXCLUDE_RE.search(a["title"]) or a.get("source") in SOURCE_EXCLUDE
                 or (str(a.get("source", "")).startswith("Yahoo") and not CANADA_RE.search(a["title"] + " " + a.get("excerpt", "")))):
             continue
@@ -407,13 +411,15 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/stats.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/specs.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/digital-assistant-editor.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cinematographers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/composers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/funding.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/stats.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/specs.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/digital-assistant-editor.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cinematographers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/composers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
     _leaf = logo.inline()
     _fav = logo.favicon()
     (OUT / "status-of-the-artist.html").write_text(statuspage.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    import funding
+    (OUT / "funding.html").write_text(funding.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import editors, shutil
     cce_items = sorted(fetch({"name": "CCE", "url": "https://cceditors.ca/feed/", "category": "picture"})[1], key=lambda i: i["date"], reverse=True)
     vpa_items = sorted(fetch({"name": "VPA", "url": "https://vancouverpostalliance.com/feed/", "category": "canada"})[1], key=lambda i: i["date"], reverse=True)
@@ -1454,7 +1460,8 @@ footer p{margin:0 0 8px;max-width:60em}
     <li><a href="stats.html">By the Numbers</a> — charts of Canadian post-production revenue, provinces and production, from Statistics Canada and Telefilm Canada.</li>
     <li><a href="unions.html">Union Map</a> — pick a province to see which unions and guilds cover editors there.</li>
     <li><a href="privacy.html">Privacy</a> — what we collect (almost nothing) and how the newsletter works.</li>
-    <li><a href="status-of-the-artist.html">Status of the Artist and tax credits</a> — what the laws mean for editors, with credits by province.</li>
+    <li><a href="funding.html">Funding and Tax Credits</a> — the $600M federal funding split and the tax credits by province.</li>
+    <li><a href="status-of-the-artist.html">Status of the Artist</a> — what the laws mean for editors, with production by region.</li>
   </ul>
 </div></section>
 <footer><div class="wrap">

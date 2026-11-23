@@ -19,7 +19,7 @@ EXACT = {
     "📐 Delivery Specs": "📐 Spécifications de livraison", "🎞️ Cut in Canada": "🎞️ Monté au Canada", "🎚️ Vibe Cutting": "🎚️ Vibe Cutting", "💻 Software": "💻 Logiciels",
     "🎶 Sound & Emotion": "🎶 Son et émotion", "🎼 Composers": "🎼 Compositeurs", "🎸 Music Supervisors": "🎸 Superviseurs musicaux",
     "🎓 Learn and work": "🎓 Apprendre et travailler", "🎓 Education": "🎓 Formation", "🗺️ Union Map": "🗺️ Carte des syndicats",
-    "⚖️ Status & Tax Credits": "⚖️ Statut de l'artiste et crédits d'impôt", "🤝 Networking": "🤝 Réseautage", "💚 Wellbeing": "💚 Bien-être",
+    "⚖️ Status & Tax Credits": "⚖️ Statut de l'artiste et crédits d'impôt", "💰 Funding & Tax Credits": "💰 Financement et crédits d'impôt", "Funding & Tax Credits": "Financement et crédits d'impôt", "Funding and Tax Credits": "Financement et crédits d'impôt", "— the $600M federal funding split and the tax credits by province.": "— la répartition des 600 M$ fédéraux et les crédits d'impôt par province.", "— what the laws mean for Editors, with production by region.": "— ce que les lois signifient pour les monteurs et monteuses, avec la production par région.", "🤝 Networking": "🤝 Réseautage", "💚 Wellbeing": "💚 Bien-être",
     "🌍 Sustainability": "🌍 Durabilité", "🌍 Green Post": "🌍 Postproduction verte", "✉️ Contact": "✉️ Contact",
     # hero
     "All of Canada's": "Toute l'actualité de la", "POST PRODUCTION": "POSTPRODUCTION", "NEWS": "CANADIENNE", "in one place.": "au même endroit.",

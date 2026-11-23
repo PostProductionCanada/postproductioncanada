@@ -337,8 +337,8 @@ PAGE = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Status of the Artist, tax credits and production by region — Post Production Canada</title>
-<meta name="description" content="What Status of the Artist laws mean for Canadian editors, film and TV tax credits by province, and where production happens.">
+<title>Status of the Artist and production by region — Post Production Canada</title>
+<meta name="description" content="What Status of the Artist laws mean for Canadian editors, and where production happens.">
 <link rel="icon" href="{{FAVICON}}">
 <style>
 :root{--bg:#f6f4ef;--panel:#fff;--ink:#16181d;--mute:#69707d;--line:#e4e0d6;--red:#d52b1e;--chip:#ece8dd}
@@ -390,7 +390,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
   <a class="btn" href="/">← Latest news</a>
 </div></header>
 <main class="wrap">
-<h1>⚖️ Status of the Artist, tax credits and where Canada produces</h1>
+<h1>⚖️ Status of the Artist and where Canada produces</h1>
 <p class="lede">A plain-language guide for editors and other post-production freelancers. Researched from public sources, listed at the bottom. This is information, not legal or tax advice.</p>
 
 <h2>What "status of the artist" means</h2>
@@ -416,16 +416,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <div class="box warn"><h3>What we could not confirm</h3>
 <p>We have not read the certification orders that describe each federal sector, so we cannot say whether picture Editors fall inside the DGC's or AQTIS's federal certification. We also cannot say how the Québec recognitions apply to a particular Editor's contract. Before you rely on any of this, check with AQTIS (Québec), your union local, or the CIRB's certification register. We are also not certain of the details of every provincial act.</p></div>
 
-<h2>Production tax credits, federal and by province</h2>
-<p>These credits go to production companies, not to individual editors. They matter because they decide where work lands, and some target post directly: BC's DAVE credit covers post-production and VFX labour, and Saskatchewan adds a bonus for post done in-province.</p>
-<div class="tw"><table>
-<thead><tr><th>Where</th><th>Program and headline rates, as reported</th><th>Official links</th></tr></thead>
-<tbody>
-{{CREDITS}}
-</tbody></table></div>
-<p class="note" style="margin-top:10px">Rates come from CMPA, law-firm and consultant summaries, and change often. Confirm with the agency before you plan around any figure. Northwest Territories was not covered in our research.</p>
-
-{{VFX}}
+<div class="box"><h3>Tax credits have their own page</h3>
+<p>The federal and provincial production tax credits, and the credits aimed at VFX and post-production, now live on our <a href="funding.html">Funding and Tax Credits</a> page, together with the federal funding announced after Budget 2026.</p></div>
 
 <h2>Where production happens</h2>
 <p>Total film and television production volume by region, April 2024 to March 2025, in dollars, with the change from the year before. Canada's total was $10.17 billion.</p>

@@ -299,7 +299,8 @@
       "url": "https://www.xtramagazine.com/feed",
       "category": "story",
       "require": [
-        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+        "\\b(films?|movies?|cinema|cinematograph\\w*|television|TV|tv series|web series|limited series|miniseries|docuseries|sitcom|documentar\\w+|screenwriter\\w*|screenplay|showrunner|filmmaker\\w*|film director|directed by|biopic|box office|trailer|Netflix|HBO|Hulu|Disney\\+?|Paramount\\+?|Prime Video|Apple TV\\+?|Crave|CBC|Oscars?|Emmys?|Golden Globes?|TIFF|Sundance|Cannes|Outfest|Frameline|Inside Out|post-?production|video editor|film editor|visual effects|VFX|casting|actors?|actress\\w*|premiere|season \\d+|streaming (series|service|platform))\\b",
+        "(?is)^(?!.*\\b(marathon|half marathon|athletes?|runners?|swimmers?|olympic\\w*|NFL|NBA|NHL|MLB|soccer|figure skat\\w+)\\b).*"
       ]
     },
     {
@@ -307,7 +308,8 @@
       "url": "https://www.out.com/rss.xml",
       "category": "story",
       "require": [
-        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+        "\\b(films?|movies?|cinema|cinematograph\\w*|television|TV|tv series|web series|limited series|miniseries|docuseries|sitcom|documentar\\w+|screenwriter\\w*|screenplay|showrunner|filmmaker\\w*|film director|directed by|biopic|box office|trailer|Netflix|HBO|Hulu|Disney\\+?|Paramount\\+?|Prime Video|Apple TV\\+?|Crave|CBC|Oscars?|Emmys?|Golden Globes?|TIFF|Sundance|Cannes|Outfest|Frameline|Inside Out|post-?production|video editor|film editor|visual effects|VFX|casting|actors?|actress\\w*|premiere|season \\d+|streaming (series|service|platform))\\b",
+        "(?is)^(?!.*\\b(marathon|half marathon|athletes?|runners?|swimmers?|olympic\\w*|NFL|NBA|NHL|MLB|soccer|figure skat\\w+)\\b).*"
       ]
     },
     {
@@ -315,7 +317,8 @@
       "url": "https://www.advocate.com/rss.xml",
       "category": "story",
       "require": [
-        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+        "\\b(films?|movies?|cinema|cinematograph\\w*|television|TV|tv series|web series|limited series|miniseries|docuseries|sitcom|documentar\\w+|screenwriter\\w*|screenplay|showrunner|filmmaker\\w*|film director|directed by|biopic|box office|trailer|Netflix|HBO|Hulu|Disney\\+?|Paramount\\+?|Prime Video|Apple TV\\+?|Crave|CBC|Oscars?|Emmys?|Golden Globes?|TIFF|Sundance|Cannes|Outfest|Frameline|Inside Out|post-?production|video editor|film editor|visual effects|VFX|casting|actors?|actress\\w*|premiere|season \\d+|streaming (series|service|platform))\\b",
+        "(?is)^(?!.*\\b(marathon|half marathon|athletes?|runners?|swimmers?|olympic\\w*|NFL|NBA|NHL|MLB|soccer|figure skat\\w+)\\b).*"
       ]
     },
     {
@@ -323,7 +326,8 @@
       "url": "https://www.autostraddle.com/feed/",
       "category": "story",
       "require": [
-        "film|movie|cinema|television|\\bTV\\b|series|documentary|director|screenwriter|filmmaker|streaming|festival|casting|\\bactor|actress|editor|post-production"
+        "\\b(films?|movies?|cinema|cinematograph\\w*|television|TV|tv series|web series|limited series|miniseries|docuseries|sitcom|documentar\\w+|screenwriter\\w*|screenplay|showrunner|filmmaker\\w*|film director|directed by|biopic|box office|trailer|Netflix|HBO|Hulu|Disney\\+?|Paramount\\+?|Prime Video|Apple TV\\+?|Crave|CBC|Oscars?|Emmys?|Golden Globes?|TIFF|Sundance|Cannes|Outfest|Frameline|Inside Out|post-?production|video editor|film editor|visual effects|VFX|casting|actors?|actress\\w*|premiere|season \\d+|streaming (series|service|platform))\\b",
+        "(?is)^(?!.*\\b(marathon|half marathon|athletes?|runners?|swimmers?|olympic\\w*|NFL|NBA|NHL|MLB|soccer|figure skat\\w+)\\b).*"
       ]
     },
     {
