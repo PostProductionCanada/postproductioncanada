@@ -853,7 +853,7 @@ def load_picks(now):
             continue
         out.append({**r, "dt": d})
     out.sort(key=lambda r: r["dt"], reverse=True)
-    return out[:8]
+    return out[:12]
 
 BODY_SECTIONS = {
     "CMPA": ("📢 Latest from the CMPA", "https://cmpa.ca/", "cmpa.ca", "Press releases from the Canadian Media Producers Association."),
