@@ -1021,6 +1021,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -1030,9 +1032,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "David Fincher’s New Movie Is Apparently Stuffed With AI",
@@ -1335,6 +1335,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -1344,9 +1346,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "AI agent production costs exceed budget for 46 per cent of buyers",
@@ -1397,6 +1397,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -1408,9 +1410,7 @@
   "status": false,
   "prov": [
    "ON"
-  ],
-  "dgcm": false,
-  "ccem": false
+  ]
  },
  {
   "title": "How we evolved from bi-standard/multistandard to bi-rate/multirate monitors",
@@ -1619,6 +1619,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -1628,9 +1630,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "The Don Bluth Scenes That Still Give Us Nightmares As ‘An American Tail’ Turns 40",
@@ -2055,6 +2055,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -2064,9 +2066,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "‘Canada’s Drag Race’ Season 7 premiere recap: Pure Bliss",
@@ -3160,6 +3160,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -3169,9 +3171,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "AWN Studio Jobs Roundup, November 20: 78 Openings Direct from the Studios",
@@ -3346,6 +3346,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -3355,9 +3357,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "This looks like a scene from a 90s Hollywood movie. But there are no actors, no cameras, no film crew, and no set.Everything you just watched was made with AI.And you can learn to make your own cinematic movies too, even if yo",
@@ -4448,6 +4448,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -4457,9 +4459,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Looking to Make the Jump From DJI? These Holiday Savings on the Antigravity AI Drone Are Intriguing",
@@ -5570,6 +5570,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -5579,9 +5581,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Early Black Friday Deal: Canon EOS R5 8K RAW Camera Drops to $2,399",
@@ -6130,6 +6130,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -6139,9 +6141,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Arena Animation ropes in Vatsal Sheth to promote AI filmmaking skills",
@@ -6285,6 +6285,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -6294,9 +6296,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "DNEG Converting Film Catalog to 3D for Meta VR Glasses",
@@ -6659,6 +6659,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -6668,9 +6670,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Program Coordinator, BANFF Launch Fellowship (Contract)",
@@ -6754,6 +6754,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -6763,9 +6765,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Adobe MAX 2026 Part 2: Conference Overview",
@@ -7188,6 +7188,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -7197,9 +7199,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "'Primetime' Uses 4 Cameras to Tell You What's Real",
@@ -7595,6 +7595,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -7604,9 +7606,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Series Mania Forum Announces Canada-Québec as Guests of Honour for 2027",
@@ -7659,6 +7659,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -7670,9 +7672,7 @@
   "status": false,
   "prov": [
    "QC"
-  ],
-  "dgcm": false,
-  "ccem": false
+  ]
  },
  {
   "title": "Short film expands playground for singers and rappers",
@@ -7692,6 +7692,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -7701,9 +7703,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Aiarty Video Enhancer – Offline AI Denoising, 4K Upscaling and Black Friday Offer",
@@ -8072,6 +8072,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -8081,9 +8083,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Full Sail’s Mix Palace Now Immersive",
@@ -8384,6 +8384,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -8393,9 +8395,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Robert Pattinson is Ushering In the Movie Star Era Again",
@@ -8570,6 +8570,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -8579,9 +8581,7 @@
   "legal": true,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "How to Create Your Own Micro Short Film Using Topview’s Film Studio",
@@ -9068,6 +9068,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -9077,9 +9079,7 @@
   "legal": true,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Beeble’s Updated SwitchX 3.0: AI Environments, More Creative Control",
@@ -9351,6 +9351,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -9360,9 +9362,7 @@
   "legal": true,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Nueva Pescanova Launches AI Project to Optimize Seafood Production",
@@ -9880,6 +9880,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -9889,9 +9891,7 @@
   "legal": true,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Avid unveils AI-powered Ready to Play for Media Composer",
@@ -10504,6 +10504,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -10513,9 +10515,7 @@
   "legal": true,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Virtual Content Creator Roundtable",
@@ -10690,6 +10690,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -10699,9 +10701,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Lomography Lomo72: price, specs, release date",
@@ -11248,6 +11248,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -11257,9 +11259,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Chiranjeevi takes a stand against AI misuse and digital impersonation of actors, submits memo to union ministry after meeting Amit Shah | Hindustan Times",
@@ -11279,6 +11279,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -11288,9 +11290,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Beeble SwitchX 3.0: new features and availability",
@@ -11653,6 +11653,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -11662,9 +11664,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Quiz: Which Character From ‘The Body’ Are You?",
@@ -11996,6 +11996,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -12007,9 +12009,7 @@
   "status": false,
   "prov": [
    "AB"
-  ],
-  "dgcm": false,
-  "ccem": false
+  ]
  },
  {
   "title": "Video | Adobe MAX 2026 Explained: Firefly Goes Agentic, Premiere Pro Gets AI Upgrades & More!",
@@ -12217,6 +12217,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -12226,9 +12228,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Ramayana VFX supremacy: Facts to remember",
@@ -12279,6 +12279,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -12288,9 +12290,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Manchester Animation Festival Bans Films Made With GenAI, Names ‘In Waves’ Best Feature",
@@ -12689,6 +12689,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -12698,9 +12700,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Nikon Z30 Wonder Lantern Mod Adds Higher Bitrates – 200 Mbps 4K, 25-Minute Slow Motion, Photo Zebras",
@@ -13561,6 +13561,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -13570,9 +13572,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "How a Crying Baby Became the Sound of a Sinking House in Netflix’s ‘Below’",
@@ -14150,6 +14150,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -14159,9 +14161,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "AI Movie Awards Announces Winners Of First London Edition, Celebrating Global AI Filmmaking Talent",
@@ -14460,6 +14460,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -14469,9 +14471,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Acclaimed Guitarist and Composer Donna Grantis Joins the Sustainable Production Forum for an Exclusive Live Performance and Sneak Peek of New Mercury Films Documentary",
@@ -15018,6 +15018,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -15027,9 +15029,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Syntax Launches Business AI Practice to Help Organizations Move from Promise to Proven, Production-Grade AI",
@@ -17832,6 +17832,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -17841,9 +17843,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Bringing ‘The Odyssey’s’ Cyclops to life: A 60-foot puppet, Bill Irwin, and VFX",
