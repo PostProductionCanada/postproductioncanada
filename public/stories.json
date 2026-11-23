@@ -2401,6 +2401,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -2410,9 +2412,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Queer Horoscopes for Sagittarius Season 2026",
@@ -2592,6 +2592,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -2601,9 +2603,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "This movie poster is one big AI slop Easter egg hunt",
@@ -3983,6 +3983,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -3992,9 +3994,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "DZOFILM Black Friday 2026 – 7th Anniversary Sale with Up to 38% Off, Arcana Kit Deal and New Education Kits",
@@ -7140,6 +7140,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -7149,9 +7151,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Is Superhero Fatigue Actually Real? The Reception of 'Endgame Encore' Might Have the Answer",
@@ -11206,6 +11206,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -11215,9 +11217,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Consider Leveling Up Your Color Grading Workflows in Final Cut Pro With This New Color Plugin",
@@ -12884,18 +12884,18 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
   "lgbtq": false,
+  "love": false,
   "fest": false,
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "love": false,
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Collective Artists is making a film on Hanuman without actors. It’s relying on AI",
@@ -12912,6 +12912,37 @@
   "canada": false,
   "ai": true,
   "aisub": "aigen",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "dgcm": false,
+  "ccem": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "love": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
+  "title": "Ramayana VFX supremacy: Facts to remember",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbEZqN0hrV09aTEdEbnpOWDEzeVpZTDJ4QTdzaXJjVzcyM2R5SnctOUFNZ3NWRUdiaEUzQk5mOGpIS2huc0RBcHNYS1hZdVJpUGpIYzBVRTJMVVkyaTFjenIyRWRBdjFZMExKYS1PTzJuYk9kNk9Rd3UyN09iUGxNWjZsX0VfTTM4alFhUzFYLXl1Ung5a2tsUDVVRER0NUREMXRXOWVZTXdjUVNabVNuV2lBUdIBswFBVV95cUxPbEZqN0hrV09aTEdEbnpOWDEzeVpZTDJ4QTdzaXJjVzcyM2R5SnctOUFNZ3NWRUdiaEUzQk5mOGpIS2huc0RBcHNYS1hZdVJpUGpIYzBVRTJMVVkyaTFjenIyRWRBdjFZMExKYS1PTzJuYk9kNk9Rd3UyN09iUGxNWjZsX0VfTTM4alFhUzFYLXl1Ung5a2tsUDVVRER0NUREMXRXOWVZTXdjUVNabVNuV2lBUQ?oc=5",
+  "date": "2026-11-14T08:00:00+00:00",
+  "source": "The Week",
+  "excerpt": "",
+  "category": "vfx",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "aisub": "",
   "vibe": false,
   "cce": false,
   "dgc": false,
@@ -12991,37 +13022,6 @@
   "tips": false,
   "status": false,
   "prov": []
- },
- {
-  "title": "Ramayana VFX supremacy: Facts to remember",
-  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbEZqN0hrV09aTEdEbnpOWDEzeVpZTDJ4QTdzaXJjVzcyM2R5SnctOUFNZ3NWRUdiaEUzQk5mOGpIS2huc0RBcHNYS1hZdVJpUGpIYzBVRTJMVVkyaTFjenIyRWRBdjFZMExKYS1PTzJuYk9kNk9Rd3UyN09iUGxNWjZsX0VfTTM4alFhUzFYLXl1Ung5a2tsUDVVRER0NUREMXRXOWVZTXdjUVNabVNuV2lBUdIBswFBVV95cUxPbEZqN0hrV09aTEdEbnpOWDEzeVpZTDJ4QTdzaXJjVzcyM2R5SnctOUFNZ3NWRUdiaEUzQk5mOGpIS2huc0RBcHNYS1hZdVJpUGpIYzBVRTJMVVkyaTFjenIyRWRBdjFZMExKYS1PTzJuYk9kNk9Rd3UyN09iUGxNWjZsX0VfTTM4alFhUzFYLXl1Ung5a2tsUDVVRER0NUREMXRXOWVZTXdjUVNabVNuV2lBUQ?oc=5",
-  "date": "2026-11-14T08:00:00+00:00",
-  "source": "The Week",
-  "excerpt": "",
-  "category": "vfx",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": false,
-  "aisub": "",
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
-  "lgbtq": false,
-  "love": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
  },
  {
   "title": "Interview: Talking ‘Tuner’ with Sound Designer Johnnie Burn and Filmmaker Daniel Roher",
@@ -13358,6 +13358,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -13367,9 +13369,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Rescue Your Interview Audio Without Leaving Premiere",
@@ -13420,6 +13420,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -13429,9 +13431,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Ariel the Little Mermaid will play a witch in Disney's new movie.",
@@ -14399,6 +14399,37 @@
   "prov": []
  },
  {
+  "title": "How a Crying Baby Became the Sound of a Sinking House in Netflix’s ‘Below’",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNkhLMVJKbkxtOWgwTUZRTzV6ZlctSVY2MTE0ckxUTUtEa1dwVEJhdzM5d1k0ZjY2a0loemlNMzJLVmcxVzNOS2lUdDFnVGl2cXRiMUpXNHlVSjNaalowOVFZZDJDRWZaTUtrRTFfRXFRMy1HS1JPcmJERlZWbjZ1MGFSdVNDOG14Yk5VaHVzSFBTdDVJWGd0LQ?oc=5",
+  "date": "2026-11-12T08:00:00+00:00",
+  "source": "What's on Netflix",
+  "excerpt": "",
+  "category": "audio",
+  "canada_only": false,
+  "google": true,
+  "intl": true,
+  "filter": true,
+  "require": null,
+  "canada": false,
+  "ai": false,
+  "aisub": "",
+  "vibe": false,
+  "cce": false,
+  "dgc": false,
+  "dgcm": false,
+  "ccem": false,
+  "iatse": false,
+  "orgs": [],
+  "guild": false,
+  "lgbtq": false,
+  "love": false,
+  "fest": false,
+  "legal": false,
+  "tips": false,
+  "status": false,
+  "prov": []
+ },
+ {
   "title": "Grimes Makes Film Debut in First Fully AI-Generated Movie Set for Theatrical Release",
   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNXzhORmtUcUhlWl9BNTBUUm9VSU9OcTljZEcyYk95SnFYMk0wQ0RUTG43ejdsWTNRVk9saE9sTzFkZGNWYmhBVHBCYWFLeTd6dzZEQ1NxUWxFeVJ1MzZxczVDV0tnTnIyZFRYWVM5d0FqVjByWmlKdFkyeUZJRGlfNnVsa3JldlprRjlYS1hUenBxU0lqWnZyS3hFMTFGcWFxZnk3RXNxQXk1U2JSQUpjd2FNelVDaWdha1lGNnlB?oc=5",
   "date": "2026-11-12T08:00:00+00:00",
@@ -14430,37 +14461,6 @@
   "prov": []
  },
  {
-  "title": "How a Crying Baby Became the Sound of a Sinking House in Netflix’s ‘Below’",
-  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNkhLMVJKbkxtOWgwTUZRTzV6ZlctSVY2MTE0ckxUTUtEa1dwVEJhdzM5d1k0ZjY2a0loemlNMzJLVmcxVzNOS2lUdDFnVGl2cXRiMUpXNHlVSjNaalowOVFZZDJDRWZaTUtrRTFfRXFRMy1HS1JPcmJERlZWbjZ1MGFSdVNDOG14Yk5VaHVzSFBTdDVJWGd0LQ?oc=5",
-  "date": "2026-11-12T08:00:00+00:00",
-  "source": "What's on Netflix",
-  "excerpt": "",
-  "category": "audio",
-  "canada_only": false,
-  "google": true,
-  "intl": true,
-  "filter": true,
-  "require": null,
-  "canada": false,
-  "ai": false,
-  "aisub": "",
-  "vibe": false,
-  "cce": false,
-  "dgc": false,
-  "iatse": false,
-  "orgs": [],
-  "guild": false,
-  "lgbtq": false,
-  "love": false,
-  "fest": false,
-  "legal": false,
-  "tips": false,
-  "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
- },
- {
   "title": "From Kendrapada To Bollywood Epic: Odia Youth Weaves VFX Magic For Ramayana | Odisha",
   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYUpyYmJ3VE5GWTJYUDRsQ1FQNmtpVUIzSzd6Q2hyRHZwaVNRYnZ5UzlFTzMwWU01QU9Bc2lBUk1DQ3dqMW5ObDhxQldza0ZFV0NoSHYtTDhKZENwV1EtUWYtMC1taDgwRWY3WVVZazBQWGhOa2E2R1l5Q0Uzc284ZUw5SDBLd1p4VUVKX2NMNUc0X2hnQldEVWx6Ri1jZnR3UzhDd1V4VHVVdUl6M2Fr?oc=5",
   "date": "2026-11-12T06:09:57+00:00",
@@ -14478,6 +14478,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -14487,9 +14489,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Adobe expands Creative Cloud AI agents to give creatives more time to focus on ideas",
@@ -17594,6 +17594,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -17603,9 +17605,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Wide Appreciation for Ramayana VFX Work",
@@ -18502,6 +18502,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -18511,9 +18513,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Eddie Murphy’s 105-Minute Comedy Masterpiece Is Officially a Free Streaming Gem",
@@ -18533,6 +18533,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -18542,9 +18544,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "With just one Apple computer in a Garage to funding Rs 4,000 Cr film: Meet Ranbir's Ramayana producer Namit Malhotra",
@@ -18626,6 +18626,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -18635,9 +18637,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Ramayana: Decoding The VFX Behind Nitesh Tiwari's Global Mythological Spectacle",
@@ -18657,6 +18657,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -18666,9 +18668,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Ahead of Ramayana, looking at Indian films that nailed the VFX game",
@@ -18688,6 +18688,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -18697,9 +18699,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Art of VFX gathers Resident Evil creatures and The Mandalorian breakdowns",
