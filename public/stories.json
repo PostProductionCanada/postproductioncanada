@@ -10767,6 +10767,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -10776,9 +10778,7 @@
   "legal": false,
   "tips": false,
   "status": true,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Panasonic LUMIX AU-SHX1 Announced – 6K Full-Frame Box Camera, OLPF, Blackmagic RAW Recording to SSD, ARRI LogC3 Pre-installed",
@@ -15362,10 +15362,10 @@
   "prov": []
  },
  {
-  "title": "iQIYI Launches Chinas First AI Film Studio in Shanghai, with Inaugural Title Cop in Trouble in Production",
-  "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS1NTSDh6VDJJWXF3ZkprVkJYWnVRZ2NFVklsRkhITmhFRzlNQ3NxRVRaLUFGOWdfbHhIcnM2UmU2RmU3WnpkQjNwc2VyeldES3JTTGhuaW9QbDNYTThzQnUtOWF1MUFwc1B3NGxsZFJBXzlsTXVVTms1Zm43VVpFUjFiNnVhOVRNMlFzVS04c2pxVkhCVERscmgwc1Z3MTNlRHBUTXdWNjRobm10YUtRWUVWN2xuQXJFak5pS1k2WkNRd2EtWWVPT1RFVTU0VTNST2lHZUVfYldpZ9IB3wFBVV95cUxOamtFa0hGc1NXOG1meUlRRjhDbzhoLUFGaFJjMHVpcnAtaGpwbjZyMGo1US1fVlJtWTJkcGtOM3J0dEdWMlc4Y2ZlQ3FZOC0ybVVDdXl1SDFZUUE0cklVR2NTNnBQcnQxTlhpVWw2WVhpWGFDY2JqcE0xb0pMNHRYb0pYRFhMYjdlNEJMU1lzOEFGRjNHMThEVElvSVRtMDJvejl2cmtfZ1llSHRFQjlpVWpicUx5R2trQ3UtMVNnMkZOZmRpNWFhX3FPTGhjX0lRZmFLWEtDNy1jOUZ0NkJ3?oc=5",
+  "title": "Grimes to make film debut in “first-ever” AI-generated movie in cinemas",
+  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObU1NY3A2dmFwRzNtNEY0LTloWDgtN0EtcjhBbTBTUHlvNE9vb21ueXBXbVVJYl82T1BsWF94Z2RBVmhyWG1lMlA0LUpyRHItOWRsS3dubTUxUF9naTBUSTFpODg2cUk4dEkxejltT2plcmhlbkJILWJuVHZJUlZRbVBqTFZyU0t6VEdpQnl0cUp5UDQ?oc=5",
   "date": "2026-11-11T08:00:00+00:00",
-  "source": "ANTARA News",
+  "source": "Mixmag",
   "excerpt": "",
   "category": "ai",
   "canada_only": false,
@@ -15393,10 +15393,10 @@
   "prov": []
  },
  {
-  "title": "Grimes to make film debut in “first-ever” AI-generated movie in cinemas",
-  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObU1NY3A2dmFwRzNtNEY0LTloWDgtN0EtcjhBbTBTUHlvNE9vb21ueXBXbVVJYl82T1BsWF94Z2RBVmhyWG1lMlA0LUpyRHItOWRsS3dubTUxUF9naTBUSTFpODg2cUk4dEkxejltT2plcmhlbkJILWJuVHZJUlZRbVBqTFZyU0t6VEdpQnl0cUp5UDQ?oc=5",
+  "title": "iQIYI Launches Chinas First AI Film Studio in Shanghai, with Inaugural Title Cop in Trouble in Production",
+  "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS1NTSDh6VDJJWXF3ZkprVkJYWnVRZ2NFVklsRkhITmhFRzlNQ3NxRVRaLUFGOWdfbHhIcnM2UmU2RmU3WnpkQjNwc2VyeldES3JTTGhuaW9QbDNYTThzQnUtOWF1MUFwc1B3NGxsZFJBXzlsTXVVTms1Zm43VVpFUjFiNnVhOVRNMlFzVS04c2pxVkhCVERscmgwc1Z3MTNlRHBUTXdWNjRobm10YUtRWUVWN2xuQXJFak5pS1k2WkNRd2EtWWVPT1RFVTU0VTNST2lHZUVfYldpZ9IB3wFBVV95cUxOamtFa0hGc1NXOG1meUlRRjhDbzhoLUFGaFJjMHVpcnAtaGpwbjZyMGo1US1fVlJtWTJkcGtOM3J0dEdWMlc4Y2ZlQ3FZOC0ybVVDdXl1SDFZUUE0cklVR2NTNnBQcnQxTlhpVWw2WVhpWGFDY2JqcE0xb0pMNHRYb0pYRFhMYjdlNEJMU1lzOEFGRjNHMThEVElvSVRtMDJvejl2cmtfZ1llSHRFQjlpVWpicUx5R2trQ3UtMVNnMkZOZmRpNWFhX3FPTGhjX0lRZmFLWEtDNy1jOUZ0NkJ3?oc=5",
   "date": "2026-11-11T08:00:00+00:00",
-  "source": "Mixmag",
+  "source": "ANTARA News",
   "excerpt": "",
   "category": "ai",
   "canada_only": false,
