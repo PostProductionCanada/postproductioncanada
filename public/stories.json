@@ -3759,6 +3759,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -3768,9 +3770,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "SmallRig’s Black Friday Sales Are Rolling In as This Universal Mobile Phone Cage Gets a Discount",
@@ -10484,6 +10484,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -10495,9 +10497,7 @@
   "status": false,
   "prov": [
    "ON"
-  ],
-  "dgcm": false,
-  "ccem": false
+  ]
  },
  {
   "title": "DNEG signs technology partnership with Meta for 3D VR movie titles",
@@ -11110,6 +11110,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -11119,9 +11121,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "Nikon ZR Firmware 2.00 Reportedly Coming November 24 – High ISO NR for ProRes N-Log, Full HD Limit for LUT Over HDMI",
@@ -13132,6 +13132,8 @@
   "vibe": false,
   "cce": false,
   "dgc": false,
+  "dgcm": false,
+  "ccem": false,
   "iatse": false,
   "orgs": [],
   "guild": false,
@@ -13141,9 +13143,7 @@
   "legal": false,
   "tips": false,
   "status": false,
-  "prov": [],
-  "dgcm": false,
-  "ccem": false
+  "prov": []
  },
  {
   "title": "European Film Awards Unveil One Of Their Strongest Animation Lineups In Years",
