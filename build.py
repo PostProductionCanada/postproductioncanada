@@ -349,6 +349,7 @@ def main():
             it["vibe"] = bool(VIBE_RE.search(blob2) and VIBE_CTX.search(blob2))
             it["cce"] = bool(CCE_RE.search(blob2 + " " + it["source"] + " " + it["url"]))
             it["dgc"] = bool(DGC_RE.search(blob2 + " " + it["source"]))
+            it["dgcm"], it["ccem"] = member_tags(blob2)
             it["iatse"] = bool(IATSE_RE.search(blob2 + " " + it["source"]))
             it["orgs"] = orgs_in(blob2 + " " + it["source"])
             it["guild"] = it["cce"] or it["dgc"] or it["iatse"] or bool(it["orgs"])
@@ -384,6 +385,7 @@ def main():
         a["tips"] = a.get("category") in ("picture", "audio", "vfx", "gear") and bool(TIPS_RE.search(a["title"])) and not NOT_TIPS.search(a["title"])
         a["cce"] = bool(CCE_RE.search(_b + " " + a["source"] + " " + a.get("url", "")))
         a["dgc"] = bool(DGC_RE.search(_b + " " + a["source"]))
+        a["dgcm"], a["ccem"] = member_tags(_b)
         a["iatse"] = bool(IATSE_RE.search(_b + " " + a["source"]))
         a["orgs"] = orgs_in(_b + " " + a["source"])
         a["guild"] = a["cce"] or a["dgc"] or a["iatse"] or bool(a["orgs"])
@@ -622,6 +624,23 @@ LGBTQ_RE = re.compile(r"(?<!\w)(lgbtq\w*\+?|2slgbtq\w*\+?|lgbt|queer\w*|gay|lesb
                       r"homophob\w+|transphob\w+|gender[- ]diverse)(?!\w)", re.I)
 IATSE_RE = re.compile(r"\bIATSE\b|International Alliance of Theatrical Stage Employees", re.I)
 CCE_RE = re.compile(r"\bCCE\b|Canadian Cinema Editors|cceditors\.ca")
+
+# "DGC Member" / "CCE Member" chips: only when the text itself says so, or names a person the DGC honoured at its awards (the guild says it recognises its members' work)
+DGCM_RE = re.compile(r"\bDGC (?:(?:Maritimes|Ontario|BC|B\.C\.|Alberta|Quebec|Québec|Atlantic|Prairie|National) )?members?\b|\bmembers? of the Directors Guild of Canada|\bDGC Honou?rary Life Member", re.I)
+CCEM_RE = re.compile(r"\bC\.C\.E\.|\bCCE members?\b|\bmembers? of the (?:Canadian Cinema Editors|CCE)\b|\bCCE (?:Life|Lifetime|Honou?rary) Member", re.I)
+RECOG_RE = re.compile(r"\b(wins?|won|winners?|awards?|awarded|nominat\w+|honou?r\w*|congratulat\w+|recogni\w+|named|celebrat\w+)\b", re.I)
+_DGC_NAMES = None
+def member_tags(text):
+    global _DGC_NAMES
+    if _DGC_NAMES is None:
+        try:
+            import awards as _aw
+            _DGC_NAMES = {n for k, v in _aw.WIN.items() if k.startswith("DGC Awards") for _a, who, _w in v for n in who}
+        except Exception:
+            _DGC_NAMES = set()
+    dgcm = bool(DGCM_RE.search(text)) or bool(DGC_RE.search(text) and RECOG_RE.search(text) and any(n in text for n in _DGC_NAMES))
+    return dgcm, bool(CCEM_RE.search(text))
+
 AI_CS = re.compile(r"\bAI\b|\bA\.I\.|\bGen-?AI\b|\bLLMs?\b")
 AI_CI = re.compile(r"(artificial intelligence|generative|machine learning|\brunway\b|\bsora\b|\bveo\b|\bkling\b|midjourney|"
                    r"firefly|\bluma\b|\bpika\b|hailuo|seedance|comfyui|stable diffusion|text[- ]to[- ]video|image[- ]to[- ]video|"
@@ -771,6 +790,10 @@ def card(i):
         chip += '<span class="chip c-cce" title="Canadian Cinema Editors">CCE</span>'
     if i.get("dgc"):
         chip += '<span class="chip c-dgc" title="Directors Guild of Canada">🎬 DGC</span>'
+    if i.get("dgcm"):
+        chip += '<span class="chip c-dgc" title="A DGC member is named or honoured in this story">🛡️ DGC Member</span>'
+    if i.get("ccem"):
+        chip += '<span class="chip c-dgc" title="A CCE member is named in this story">✂️ CCE Member</span>'
     if i.get("iatse"):
         chip += '<span class="chip c-iatse" title="IATSE">🛠️ IATSE</span>'
     for _o in i.get("orgs", []):
