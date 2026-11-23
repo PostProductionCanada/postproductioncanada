@@ -221,7 +221,7 @@ def menu_html(pre="", cur="", originals=False, home=True):
 
 
 MYPAGE_SECS = [("roll", "☕ Morning Roll"), ("hist", "📼 Past 10 days of the roll"), ("clock", "🕐 Update clock"), ("picks", "⭐ Our Picks"),
-               ("feeds", "📢 Industry feeds (CMPA, LinkedIn, Avid)"), ("stories", "📰 All stories, tabs and search"), ("res", "📚 Resources and feedback")]
+               ("stories", "📰 All stories, tabs and search"), ("res", "📚 Resources and feedback")]
 
 
 def add_mypage(t):
@@ -234,7 +234,6 @@ def add_mypage(t):
     tag(r'<section class="rollhist"[^>]*>', "hist")
     tag(r'<section class="deck"[^>]*>', "clock")
     tag(r'<section class="picks" aria-label="Our picks">', "picks", "picks")
-    tag(r'<section class="picks" aria-label="(?!Our picks)[^"]*">', "feeds", None, count=0)
     tag(r'<div class="bar"[^>]*>', "stories", "news")
     tag(r'<div[^>]*id="grid"[^>]*>', "stories")
     tag(r'<section class="res">', "res", None, count=0)
@@ -313,12 +312,13 @@ def main():
     print(f"Fetching {len(feeds)} feeds…")
     with ThreadPoolExecutor(max_workers=6) as ex:
         results = list(ex.map(fetch, feeds))
+    results.append(("curated", curated_items(None)))
     cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
     now = datetime.now(timezone.utc)
     seen, seen_sets, items = set(), [], []
     for _, batch in results:
         for it in batch:
-            if it["date"] < cutoff or it["date"] > now + timedelta(days=1):
+            if (it["date"] < cutoff and not it.get("curated")) or it["date"] > now + timedelta(days=1):
                 continue
             blob = f"{it['title']} {it['excerpt']} {it['source']}"
             if EXCLUDE_RE.search(it["title"]) or it["source"] in SOURCE_EXCLUDE:
@@ -356,6 +356,7 @@ def main():
             it["guild"] = it["cce"] or it["dgc"] or it["iatse"] or bool(it["orgs"])
             it["lgbtq"] = bool(LGBTQ_RE.search(blob2))
             it["love"] = love(it["title"])
+            soft_flags(it)
             it["green"] = bool(GREEN_RE.search(it["title"] + " " + it.get("excerpt", "")))
             it["sdesign"] = bool(SDESIGN_RE.search(it["title"] + " " + it.get("excerpt", "")))
             it["fest"] = bool(FEST_RE.search(it["title"])) and not NOT_FEST.search(it["title"])
@@ -397,6 +398,7 @@ def main():
         a["guild"] = a["cce"] or a["dgc"] or a["iatse"] or bool(a["orgs"])
         a["lgbtq"] = bool(LGBTQ_RE.search(_b))
         a["love"] = love(a["title"])
+        soft_flags(a)
         a["green"] = bool(GREEN_RE.search(a["title"] + " " + a.get("excerpt", "")))
         a["sdesign"] = bool(SDESIGN_RE.search(a["title"] + " " + a.get("excerpt", "")))
         a["fest"] = bool(FEST_RE.search(a["title"])) and not NOT_FEST.search(a["title"])
@@ -405,7 +407,9 @@ def main():
     items.sort(key=lambda i: i["date"], reverse=True)
     if os.environ.get("GITHUB_ACTIONS"):
         save_archive(items)
-    items = items[:MAX_ITEMS]
+    # hand-added CMPA, Avid and LinkedIn stories stay in the feed even when newer stories fill the cap
+    items = [i for i in items if not i.get("curated")][:MAX_ITEMS] + [i for i in items if i.get("curated")]
+    items.sort(key=lambda i: i["date"], reverse=True)
     sources = sorted({i["source"] for i in items})
     print(f"{len(items)} stories from {len(sources)} sources")
 
@@ -613,10 +617,26 @@ CATS = {"canada": ("🇨🇦", "Canada"), "editing": ("✂️", "Picture Editing
         "legal": ("©️", "Copyright & Legal"),
         "tips": ("💡", "Tips & Tricks"),
         "fest": ("🎪", "Festivals"),
+        "cmpa": ("📢", "CMPA"),
+        "avid": ("🎛️", "Avid"),
         "green": ("🌱", "Green & Sustainability"),
         "sdesign": ("🔊", "Sound Design")}
 GREEN_RE = re.compile(r"\b(sustainab\w*|green (production|screen|post|film|set|shoot)\w*|carbon (footprint|neutral|reduction|emission\w*|calculator|literate)|net[- ]zero|climate (change|action|crisis|storytelling)|eco[- ]friendly|reel green|albert|zero[- ]waste|clean energy|environmental (impact|footprint))\b", re.I)
 SDESIGN_RE = re.compile(r"\b(sound design\w*|sound effects?|sfx|foley (artists?|work|stages?|studios?|editors?|sounds?|team|mix\w*)|on foley|soundscape\w*|sound librar\w+|creature (voice|sounds?))\b", re.I)
+AVID_RE = re.compile(r"\bavid\b|media composer|pro tools|sibelius|nexis|mediacentral", re.I)
+CMPA_RE2 = re.compile(r"\bCMPA\b|Canadian Media Producers Association", re.I)
+RESOLVE_RE = re.compile(r"davinci|resolve \d|blackmagic", re.I)
+PREMIERE_RE = re.compile(r"premiere pro|premiere rush|adobe premiere", re.I)
+
+
+def soft_flags(it):
+    t = it["title"] + " " + it.get("excerpt", "") + " " + it.get("source", "")
+    it["avid"] = bool(AVID_RE.search(t))
+    it["cmpa"] = bool(CMPA_RE2.search(t))
+    it["resolve"] = bool(RESOLVE_RE.search(t))
+    it["premiere"] = bool(PREMIERE_RE.search(t))
+
+
 LEGACY_CAT = {"picture": "editing"}
 SOUNDEDIT_RE = re.compile(r"\b(sound (design\w*|edit\w*|mix\w*|supervis\w*)|dialogue (editor|editing)|foley|ADR|re-?recording|mixer|atmos|supervising sound|audio post|post[- ]audio)\b", re.I)
 EDITPIC_RE = re.compile(r"\b(adobe|HPA|edit\w*|cutting room|rough cut|assembl\w+|premiere|resolve|media composer|avid|final cut|timeline|colou?r grad\w+|colou?rist|grading|montage|editcon|CCE)\b", re.I)
@@ -794,6 +814,8 @@ def card(i):
     if i.get("tips"): cats.append("tips")
     if i.get("fest"): cats.append("fest")
     if i.get("green"): cats.append("green")
+    if i.get("cmpa"): cats.append("cmpa")
+    if i.get("avid"): cats.append("avid")
     if i.get("sdesign"): cats.append("sdesign")
     if i["ai"]: cats.append("ai")
     if i.get("aisub"): cats.append(i["aisub"])
@@ -834,6 +856,14 @@ def card(i):
         chip += '<span class="chip c-tips">💡 Tips</span>'
     if i.get("fest"):
         chip += '<span class="chip c-fest">🎪 Festival</span>'
+    if i.get("cmpa"):
+        chip += '<span class="chip c-cmpa">📢 CMPA</span>'
+    if i.get("avid"):
+        chip += '<span class="chip c-avid">🎛️ Avid</span>'
+    if i.get("resolve"):
+        chip += '<span class="chip c-resolve">DaVinci Resolve</span>'
+    if i.get("premiere"):
+        chip += '<span class="chip c-premiere">Premiere Pro</span>'
     if i.get("green"):
         chip += '<span class="chip c-green">🌱 Green</span>'
     if i.get("sdesign"):
@@ -874,6 +904,25 @@ BODY_SECTIONS = {
     "LinkedIn": ("💼 Industry voices on LinkedIn", "https://www.linkedin.com/", "linkedin.com", "Articles from industry voices on LinkedIn. LinkedIn blocks automated readers, so these are added by hand and some show no date."),
     "Avid": ("🎛️ Latest from Avid", "https://www.avid.com/press-room", "avid.com", "Press releases and release notes from Avid, maker of Media Composer and Pro Tools."),
 }
+
+
+def curated_items(now):
+    """Hand-added CMPA, Avid and LinkedIn stories, folded into the main feed like any other source."""
+    try:
+        raw = json.loads((ROOT / "curated.json").read_text()).get("bodies", [])
+    except Exception:
+        return []
+    out = []
+    for r in raw:
+        d = parse_date(r.get("date", ""))
+        if d is None or not r.get("url") or not r.get("title"):
+            continue
+        src = r.get("source", "")
+        label = "LinkedIn · " + r["by"] if src == "LinkedIn" and r.get("by") else src
+        out.append({"title": r["title"], "url": r["url"], "date": d, "source": label, "excerpt": r.get("note", ""),
+                    "category": "gear" if src == "Avid" else "canada", "canada_only": False, "google": False, "intl": False,
+                    "filter": False, "require": None, "curated": True})
+    return out
 
 
 def _body_card(src, r):
@@ -1210,7 +1259,7 @@ def render(items, sources, now):
     ptitles = {norm(r["title"]) for r in picks}
     items = [i for i in items if norm(i["title"]) not in ptitles]
     cards = "\n".join(card(i) for i in items)
-    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "love" and i.get("love")) or (k == "ai" and i["ai"]) or (k == "business" and i.get("guild") and i["category"] != "business") or (k == "aitools" and i["vibe"] and i.get("aisub") != "aitools") or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or (k == "green" and i.get("green")) or (k == "sdesign" and i.get("sdesign")) or i["category"] == k)
+    counts = {k: sum(1 for i in items if (k == "all") or (k == "canada" and i["canada"]) or (k == "status" and i["status"]) or (k == i.get("aisub") and k.startswith("ai")) or (k == "lgbtq" and i.get("lgbtq")) or (k == "love" and i.get("love")) or (k == "ai" and i["ai"]) or (k == "business" and i.get("guild") and i["category"] != "business") or (k == "aitools" and i["vibe"] and i.get("aisub") != "aitools") or (k == "legal" and i.get("legal")) or (k == "tips" and i.get("tips")) or (k == "fest" and i.get("fest")) or (k == "cmpa" and i.get("cmpa")) or (k == "avid" and i.get("avid")) or (k == "green" and i.get("green")) or (k == "sdesign" and i.get("sdesign")) or i["category"] == k)
               for k in ["all"] + list(CATS)}
     updated = now.strftime("%Y-%m-%d %H:%M UTC")
     tabs = [("all", "📰 All")] + [(k, f"{e} {l}") for k, (e, l) in CATS.items() if k not in ("ai","guilds","vibe")]
@@ -1263,7 +1312,7 @@ def render(items, sources, now):
                '<a class="btn" href="' + esc(_href) + '"' + _ext + '>Send feedback</a></p></div></section>')
     _tip = (cfg.get("tip_url") or "").strip()
     _tipbtn = f'<a class="btn" href="{esc(_tip)}" target="_blank" rel="noopener" title="Support Post Production Canada">☕ Buy us a coffee</a>' if _tip else ""
-    return TEMPLATE.replace("{{TIPBTN}}", _tipbtn).replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", __import__("stats").teaser() + bodies_html(now, items)).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
+    return TEMPLATE.replace("{{TIPBTN}}", _tipbtn).replace("{{MENU}}", '<span class="sitenav" style="display:contents">' + menu_html("", "", False, False) + "</span>").replace("{{VU}}", "<s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s><s><u></u><u></u><u></u><u></u><u></u><u></u></s>").replace("{{ROLL}}", roll_html(items, now)).replace("{{FEEDBACK}}", _fb).replace("{{BARS}}", _bars).replace("{{TODAYSTR}}", now.strftime("%A, %b %-d, %Y")).replace("{{BODIES}}", __import__("stats").teaser()).replace("{{ORIG}}", _orig).replace("{{CCELOGO}}", _cl).replace("{{LEAF}}", leaf).replace("{{FAVICON}}", favicon).replace("{{PICKS}}", picks_html(picks)).replace("{{FLAG}}", flag).replace("{{PROVOPTS}}", popts).replace("{{SUBSCRIBE}}", sub).replace("{{SUBBTN}}", subbtn).replace("{{LOOP}}", ("#subscribe" if (cfg.get("subscribe_embed_html") or cfg.get("subscribe_form_action")) else "mailto:" + (cfg.get("contact_email") or "") + "?subject=Keep%20me%20in%20the%20loop")).replace("{{CONTACT}}", contact)\
         .replace("{{CARDS}}", cards).replace("{{TABS}}", tabhtml)\
         .replace("{{UPDATED}}", updated).replace("{{UPDATED_ISO}}", now.isoformat())\
         .replace("{{NSOURCES}}", str(len(sources))).replace("{{NSTORIES}}", str(len(items)))\
@@ -1342,7 +1391,7 @@ main{padding:20px 0 40px}
 .subbox{background:var(--ink);color:var(--bg);padding:26px 0}.subbox .consent{font-size:12.5px;margin:10px 0 0;opacity:.75}.subbox .consent a{color:inherit}
 .subbox h2{margin:0 0 6px;font-size:22px}.subbox p{margin:0 0 14px;opacity:.8;max-width:42em}.sf{display:flex;gap:8px;flex-wrap:wrap}.sf input{flex:1;min-width:220px;border:0;border-radius:10px;padding:11px 14px;font-size:15px}.btn.go{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;padding:10px 18px}
 .chip.c-cce{background:#fff url({{CCELOGO}}) center/contain no-repeat;border:1px solid var(--line);width:104px;height:28px;padding:0;color:transparent;overflow:hidden}
-.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-love{--c:#d4691a;font-weight:700}.chip.c-lgbtq{--c:#8a4fe0;font-weight:700}.tab.sub{display:none;font-size:.92em;border-style:dashed}body.aisub .tab.sub{display:inline-block}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.chip.c-green{--c:#2e8b3d;font-weight:700}.chip.c-sdesign{--c:#2f7de1;font-weight:700}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
+.chip.c-topic{--c:var(--mute);font-weight:600}.chip.c-love{--c:#d4691a;font-weight:700}.chip.c-lgbtq{--c:#8a4fe0;font-weight:700}.tab.sub{display:none;font-size:.92em;border-style:dashed}body.aisub .tab.sub{display:inline-block}.chip.c-dgc{--c:#b3202a}.chip.c-fest{--c:#e8730c;font-weight:700}.chip.c-iatse{--c:#a35a00}.chip.c-animation{--c:#e4572e}.k-animation{--c:#e4572e}.chip.c-vp{--c:#7a5af8}.k-vp{--c:#7a5af8}.c-newchip{background:#00c853!important;color:#04200f!important;border-color:#00c853!important;font-weight:900!important;letter-spacing:.06em;animation:newflash 1.3s ease-in-out infinite}@keyframes newflash{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,.75)}50%{opacity:.7;box-shadow:0 0 10px 3px rgba(0,200,83,.65)}}@media (prefers-reduced-motion:reduce){.c-newchip{animation:none}}.k-editing,.chip.c-editing{--c:var(--red)}.k-story,.chip.c-story{--c:#d4691a}.k-soundedit,.chip.c-soundedit{--c:#2f7de1}.chip.c-tips{--c:#1a9d5a}.chip.c-green{--c:#2e8b3d;font-weight:700}.chip.c-cmpa{--c:#b3202a;font-weight:700}.chip.c-avid{--c:#7a5af8;font-weight:700}.chip.c-resolve{--c:#e4572e;font-weight:700}.chip.c-premiere{--c:#9999ff;font-weight:700}.chip.c-sdesign{--c:#2f7de1;font-weight:700}.k-tips{--c:#1a9d5a}.chip.c-legal{--c:#b8860b}.k-legal{--c:#b8860b}.chip.c-vibe{--c:#8a4fe0}.k-vibe{--c:#8a4fe0}
 .chip.c-ai{--c:#0e8fb0}.k-ai{--c:#0e8fb0}.chip.c-status{--c:#8a4fe0}.chip.c-prov{--c:var(--mute);font-weight:600}.k-status{--c:#8a4fe0}
 #prov{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 12px;font-size:14px}
 .chips{flex-wrap:wrap}

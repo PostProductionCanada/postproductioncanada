@@ -205,9 +205,14 @@ def render(leaf, favicon, updated):
 
 
 def teaser():
-    """Compact strip for the home page."""
-    return (CSS + '<section class="picks"><h2>📊 By the numbers</h2>'
-            '<div class="kpis" style="margin:8px 0"><div class="kpi"><b>$2.4B</b><span>💵 post revenue in 2025, Statistics Canada</span></div>'
+    """Strip for the home page: the headline numbers and a big link to all of them."""
+    return (CSS + '<style>.bigbtn{display:block;text-align:center;font-size:18px;font-weight:800;padding:16px 20px;border-radius:14px;background:var(--ink);color:var(--bg);text-decoration:none;margin:6px 0 4px}.bigbtn:hover{opacity:.88}</style>'
+            '<section class="picks"><h2>📊 By the numbers</h2>'
+            '<div class="kpis" style="margin:8px 0">'
+            '<div class="kpi"><b>$2.4B</b><span>💵 post revenue in 2025, Statistics Canada</span></div>'
             '<div class="kpi dn"><b>−14.7%</b><span>📉 since the 2023 record</span></div>'
+            '<div class="kpi up"><b>+18.7%</b><span>📈 vs 2019, before the pandemic</span></div>'
+            '<div class="kpi"><b>6.7%</b><span>🧮 operating profit margin (6.0% in 2023)</span></div>'
             '<div class="kpi"><b>41.7%</b><span>of VFX and animation sales now in B.C., ahead of Quebec at 40.4%</span></div></div>'
-            '<p class="note" style="margin:0 0 6px"><a href="stats.html">See the charts →</a></p></section>')
+            '<a class="bigbtn" href="stats.html">📊 See all the numbers and charts →</a>'
+            '<p class="note" style="margin:6px 0 0">Every figure is read from the publisher\'s own page and linked there.</p></section>')
