@@ -23,8 +23,8 @@ SHOWS = [
      "Canada's Editors honour their own. The 16th edition in 2026 presented 17 awards, including a Lifetime Achievement Award and a Career Achievement Award."),
     ("Canadian Screen Awards", "Academy of Canadian Cinema & Television", "https://www.academy.ca/wp-content/uploads/2025/09/2026-Canadian-Screen-Awards-Film-Rules-Regulations.pdf",
      "Best Editing has been presented since 1966, first under the Canadian Film Awards. There is a separate documentary editing category, plus sound editing and visual effects. Nominees in editing are chosen by the Academy's Cinema Editors branch. The rules say Post Production Supervisor is not an eligible credit for sound mixing or sound editing."),
-    ("DGC Awards", "Directors Guild of Canada", "https://finance.yahoo.com/news/winners-announced-24th-annual-dgc-171800007.html",
-     "The guild's awards, including picture editing and sound editing categories for film and TV. The 24th edition was held November 8, 2025 at Koerner Hall in Toronto."),
+    ("DGC Awards", "Directors Guild of Canada", "https://www.newswire.ca/news-releases/winners-announced-for-25th-annual-dgc-awards-897936645.html",
+     "The guild's awards, including picture editing and sound editing categories for film and TV. The 25th edition was presented November 14, 2026 at the Chan Centre for the Performing Arts in Vancouver. The 24th was held November 8, 2025 at Koerner Hall in Toronto."),
     ("Canadian Sync Awards", "Guild of Music Supervisors, Canada", "https://www.guildofmusicsupervisors.ca/news/2026/6/12/congrats-to-the-2026-canadian-sync-awards-winners",
      "Honours music supervision in Canadian film, TV and media. The 2026 awards took place June 11 in Toronto."),
     ("Eddie Awards", "American Cinema Editors", "https://www.americancinemaeditors.org/", "The American Cinema Editors' awards for editing. International."),
@@ -62,6 +62,17 @@ WIN = {
         ("Achievement in Visual Effects", ["Tristan Zerafa", "Lou Gatti", "Mike Stadnyckyj", "Graham Houston", "James Soares", "Christopher Shewchuk", "Jeniree Bastidas", "Onur Can Yol", "Luca Tarantini"],
          "Nirvanna the Band the Show the Movie. A team of ten; we list nine names that match across sources, because one team member's first name is printed two ways. Credits on the IMDb event page below."),
     ],
+    "DGC Awards 2026": [
+        ("Best Picture Editing, Feature Film", ["Simone Smith"], "Mile End Kicks"),
+        ("Best Picture Editing, Documentary", ["Eamonn O'Connor", "Omar Majeed"], "Lilith Fair: Building a Mystery, with Navin Harrilal and Peter Mishara"),
+        ("Best Picture Editing, Dramatic Series", ["Ana Yavari"], "The Testaments, “Marat Sade”"),
+        ("Best Picture Editing, Comedy or Family Series", ["Geoff Ashenhurst"], "Murderbot, “Escape Velocity Protocol”"),
+        ("Best Picture Editing, Movies for TV and Mini-Series", ["Lara Johnston"], "The Twisted Tale of Amanda Knox, “Ci vediamo più tardi”"),
+        ("Best Sound Editing, Feature Film", ["Nathan Robitaille"], "Frankenstein, with Nelson Ferreira, Danielle McBride, Jill Purdy, David McCallum, Stephen Barden, Dustin Harris, Craig MacLellan, Paul Germann, Dashen Naidoo, Robert Hegedus and Scott Hitchon"),
+        ("Best Sound Editing, Dramatic Series", ["Tyler Whitham"], "Foundation, “A Song for the End of Everything”, with Joe Bracciale, Josh Brown, Alex Bullick, Nelson Ferreira, Gerald Trepy and Joe Mancuso"),
+        ("Best Sound Editing, Movies for TV and Mini-Series", ["Jane Tattersall"], "Wayward, “Mirror”, with Martin Gwynn Jones, Brennan Mercer, Brent Pickett, Rachael Zerafa and Chris Cobain"),
+        ("Best Sound Editing, Comedy or Family Series", ["Jill Purdy"], "Small Achievable Goals, “HRT, and Other Party Tricks”, with Stephen Barden, Faustine Pelipel and Chris Cobain"),
+    ],
     "DGC Awards 2025": [
         ("Best Picture Editing, Feature Film", ["Dev Singh", "Sandy Pereira"], "40 Acres"),
         ("Best Picture Editing, Documentary", ["Pauline Decroix"], "The Nest"),
@@ -89,7 +100,7 @@ def render(leaf, favicon, updated):
             + '<h2>The awards that honour the craft</h2>' + shows
             + '<p class="note">We found no awards show that honours post supervisors specifically. If you know of one, send it and we will check it.</p>'
             + '<h2>Recent Canadian winners</h2><p class="note">Names are from the linked winner lists. A person’s IMDb link is shown only when we found the page and matched it to the credit. Otherwise it says so.</p>' + wins
-            + '<p class="note">Sources: <a href="https://cceditors.ca/2026-awards" target="_blank" rel="noopener">CCE 2026 Awards</a>, <a href="https://deadline.com/2026/06/heated-rivalry-tops-canadian-screen-awards-1236931778" target="_blank" rel="noopener">Deadline, Canadian Screen Awards winners</a>, <a href="https://www.imdb.com/event/ev0001872/2026/1" target="_blank" rel="noopener">IMDb: Canadian Screen Awards 2026</a>, <a href="https://finance.yahoo.com/news/winners-announced-24th-annual-dgc-171800007.html" target="_blank" rel="noopener">DGC Awards 2025 winners</a>.</p>')
+            + '<p class="note">Sources: <a href="https://cceditors.ca/2026-awards" target="_blank" rel="noopener">CCE 2026 Awards</a>, <a href="https://deadline.com/2026/06/heated-rivalry-tops-canadian-screen-awards-1236931778" target="_blank" rel="noopener">Deadline, Canadian Screen Awards winners</a>, <a href="https://www.imdb.com/event/ev0001872/2026/1" target="_blank" rel="noopener">IMDb: Canadian Screen Awards 2026</a>, <a href="https://www.newswire.ca/news-releases/winners-announced-for-25th-annual-dgc-awards-897936645.html" target="_blank" rel="noopener">DGC Awards 2026 winners</a>, <a href="https://finance.yahoo.com/news/winners-announced-24th-annual-dgc-171800007.html" target="_blank" rel="noopener">DGC Awards 2025 winners</a>.</p>')
     return topics._page(leaf, favicon, updated, "Awards honouring Editors",
                         "Awards that honour Canadian Editors, sound Editors, VFX artists and music supervisors, with the winners and their IMDb pages.",
                         "🏆 Awards honouring Editors",

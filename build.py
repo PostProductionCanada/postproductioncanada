@@ -1434,6 +1434,8 @@ footer p{margin:0 0 8px;max-width:60em}
 
 <script>
 (function(){
+  var loopOn=!matchMedia('(prefers-reduced-motion:reduce)').matches,tcs=document.getElementById('tabs');
+  if(loopOn&&tcs){[].slice.call(tcs.children).forEach(function(b){var c=b.cloneNode(true);c.setAttribute('aria-hidden','true');c.tabIndex=-1;c.dataset.clone='1';tcs.appendChild(c)})}
   var tabs=document.querySelectorAll('.tab'),cards=[].slice.call(document.querySelectorAll('.card')),q=document.getElementById('q'),pv=document.getElementById('prov'),empty=document.getElementById('empty'),f='all';
   function apply(){
     var s=q.value.toLowerCase().trim(),n=0;
@@ -1443,18 +1445,19 @@ footer p{margin:0 0 8px;max-width:60em}
     });
     empty.style.display=n?'none':'block';
   }
-  (function(){var tc=document.getElementById('tabs');if(!tc||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-    var pos=0,hold=0,last=0,dir=1;
+  (function(){var tc=document.getElementById('tabs');if(!tc||!loopOn)return;
+    var pos=0,hold=0,last=0;
+    function period(){var k=tc.children,h=k.length/2;return k[h].offsetLeft-k[0].offsetLeft}
     function pause(ms){hold=ms;pos=tc.scrollLeft}
     ['pointerenter','pointerdown','touchstart','wheel','focusin'].forEach(function(e){tc.addEventListener(e,function(){pause(5000)},{passive:true})});
     tc.addEventListener('pointerleave',function(){pause(1500)});
-    tc.addEventListener('scroll',function(){if(hold>0)pos=tc.scrollLeft},{passive:true});
-    function step(ts){var dt=Math.min(ts-last,50);last=ts;var max=tc.scrollWidth-tc.clientWidth;
-      if(max>2&&!document.hidden){if(hold>0){hold-=dt}else{pos+=dir*dt*0.04;if(pos>=max){pos=max;dir=-1;hold=1800}else if(pos<=0){pos=0;dir=1;hold=1800}tc.scrollLeft=pos}}
+    tc.addEventListener('scroll',function(){if(hold>0){pos=tc.scrollLeft;var P=period();if(P>0){if(pos>=P){pos-=P;tc.scrollLeft=pos}else if(pos<=0){pos+=P;tc.scrollLeft=pos}}}},{passive:true});
+    function step(ts){var dt=Math.min(ts-last,50);last=ts;
+      if(!document.hidden&&hold<=0){var P=period();if(P>0){pos+=dt*0.04;if(pos>=P)pos-=P;tc.scrollLeft=pos}}else if(hold>0){hold-=dt}
       requestAnimationFrame(step)}
     requestAnimationFrame(step)})();
   tabs.forEach(function(t){t.addEventListener('click',function(ev){
-    tabs.forEach(function(x){x.classList.remove('on')});t.classList.add('on');f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
+    tabs.forEach(function(x){x.classList.toggle('on',x.dataset.f===t.dataset.f)});f=t.dataset.f;apply();try{history.replaceState(null,'',f==='all'?location.pathname:'#'+f)}catch(e){}
     var tc=t.parentNode;if(tc.scrollWidth>tc.clientWidth){tc.scrollTo({left:tc.scrollLeft+t.getBoundingClientRect().left-tc.getBoundingClientRect().left-24,behavior:'smooth'})}
     
     var emp=document.getElementById('empty');if(f==='status'&&emp.style.display==='block'){emp.innerHTML='No stories on this right now. Our <a href="status-of-the-artist.html">Status of the Artist page</a> explains the law, who is certified and what we could not confirm.'}else{emp.textContent='Nothing matches that. Try a different filter or search.'}
