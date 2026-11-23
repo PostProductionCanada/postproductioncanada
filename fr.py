@@ -37,7 +37,7 @@ EXACT = {
     # tabs
     "📰 All": "📰 Tout", "✂️ Picture Editing": "✂️ Montage d'image", "🎬 Storytelling & Filmmaking": "🎬 Récit et réalisation", "🎧 Sound Editing": "🎧 Montage sonore", "🟩 VFX & Animation": "🟩 Effets visuels et compositing", "🎥 Gear & Software": "🎥 Équipement et logiciels",
     "🛡️ DGC Member": "🛡️ Membre de la DGC", "✂️ CCE Member": "✂️ Membre du CCE",
-    "💼 Business, Unions & Guilds": "💼 Affaires, syndicats et guildes", "🛠️ AI Tools, Workflows & Vibe Cutting": "🛠️ Outils d'IA, flux de travail et Vibe Cutting", "🎞️ AI Films & Festivals": "🎞️ Films et festivals d'IA", "🎭 AI, Actors & Rights": "🎭 IA, acteurs et droits", "🏢 AI & the Business": "🏢 L'IA et l'industrie", "🤖 AI: Everything Else": "🤖 IA : le reste",
+    "💼 Business, Unions & Guilds": "💼 Affaires, syndicats et guildes", "🛠️ AI Tools, Workflows & Vibe Cutting": "🛠️ Outils d'IA, flux de travail et Vibe Cutting", "🎞️ AI Films & Festivals": "🎞️ Films et festivals d'IA", "🎭 AI, Actors & Rights": "🎭 IA, acteurs et droits", "🏢 AI & the Business": "🏢 L'IA et l'industrie", "🤖 AI": "🤖 IA", "🍿 Love of Movies": "🍿 Amour du cinéma", "🌱 Green & Sustainability": "🌱 Écologie et durabilité", "🔊 Sound Design": "🔊 Conception sonore",
     "💼 Business & Unions": "💼 Affaires et syndicats", "🤖 AI Filmmaking": "🤖 Cinéma et IA", "⚖️ Status of the Artist": "⚖️ Statut de l'artiste",
     "©️ Copyright & Legal": "©️ Droit d'auteur et juridique", "💡 Tips & Tricks": "💡 Trucs et astuces", "📍 All provinces": "📍 Toutes les provinces",
     "⭐ Our Picks": "⭐ Nos choix",
