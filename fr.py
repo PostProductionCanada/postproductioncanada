@@ -9,6 +9,12 @@ except Exception:
     PICK_FR = {}
 
 EXACT = {
+    "🎬 Canadian film and TV production volume, up 4.6%": "🎬 Volume de production cinéma et télé au Canada, en hausse de 4,6 %",
+    "👷 film and TV jobs in 2025–26, down 0.3%": "👷 emplois en cinéma et télé en 2025-2026, en baisse de 0,3 %",
+    "🍁 Ontario film and TV jobs in 2025, with $2.7B for its economy": "🍁 emplois en cinéma et télé en Ontario en 2025, et 2,7 G$ pour son économie",
+    "🥧 Who does Canada's post work: share of national revenue": "🥧 Qui fait le travail de postproduction au Canada : part des revenus nationaux",
+    "Record": "Record", "year, 2023": "année 2023", "Quebec 49.0% → 40.7%": "Québec 49,0 % → 40,7 %", "British Columbia 28.7% → 36.8%": "Colombie-Britannique 28,7 % → 36,8 %",
+    "All other provinces and territories 22.3% → 22.5%": "Toutes les autres provinces et territoires 22,3 % → 22,5 %",
     "Why it matters:": "Pourquoi c'est important :",
     "📊 By the numbers": "📊 En chiffres", "💵 post revenue in 2025, Statistics Canada": "💵 revenus de postproduction en 2025, Statistique Canada",
     "📉 since the 2023 record": "📉 depuis le record de 2023", "📈 vs 2019, before the pandemic": "📈 par rapport à 2019, avant la pandémie",

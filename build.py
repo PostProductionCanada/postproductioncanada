@@ -1370,6 +1370,22 @@ header{border-bottom:1px solid var(--line)}
 .tab i{font-style:normal;color:var(--mute);margin-left:4px;font-size:12px}
 .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .tab.on i{color:inherit;opacity:.7}
+@media (min-width:900px){
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 26px;max-width:1300px;margin:0 auto;padding:0 16px;align-items:start}
+.layout:has(>.bar[style*="none"]){grid-template-columns:minmax(0,1fr)}
+.layout>.bar{position:sticky;top:12px;grid-column:1;max-height:calc(100vh - 24px);overflow-y:auto;border:0;background:transparent;padding:20px 0 74px;scrollbar-width:thin}
+.layout>.bar .wrap{max-width:none;padding:0;margin:0}
+.layout .tabs{flex-direction:column;flex-wrap:nowrap;gap:5px}
+.layout .tab{width:100%;text-align:left;white-space:normal;border-radius:12px;padding:8px 12px;font-size:13.5px;line-height:1.3}
+.layout .tab i{float:right;margin-left:8px}
+.layout #prov,.layout #q{width:100%}.layout #q{order:-2}.layout #prov{order:-1}
+.layout>.rcol{grid-column:2;min-width:0}
+.layout>.rcol main .wrap{max-width:none;padding:0}
+.layout>.rcol .subbox{border-radius:14px;margin:20px 0 0;padding:20px}
+.layout>.rcol .subbox .wrap{max-width:none;padding:0}
+.layout .pgrid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.layout .grid{grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+}
 #q{width:100%;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:10px 14px;font-size:15px}
 main{padding:20px 0 40px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
@@ -1493,12 +1509,13 @@ footer p{margin:0 0 8px;max-width:60em}
   <div class="steps" id="steps" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
 </div></div></section>
 
+<div class="layout">
 <div class="bar"><div class="wrap">
   <div class="tabs fold" id="tabs">{{TABS}}</div><button class="tabmore" id="tabmore" type="button" aria-expanded="false" aria-controls="tabs">All topics ▾</button>
   <input id="q" type="search" placeholder="Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…" aria-label="Search stories">
   <select id="prov" aria-label="Filter by province"><option value="">📍 All provinces</option>{{PROVOPTS}}</select>
 </div></div>
-
+<div class="rcol">
 {{SUBSCRIBE}}
 <main><div class="wrap">
   {{PICKS}}
@@ -1508,6 +1525,7 @@ footer p{margin:0 0 8px;max-width:60em}
   </div>
   <div class="empty" id="empty">Nothing matches that. Try a different filter or search.</div>
 </div></main>
+</div></div>
 
 {{FEEDBACK}}
 <section class="res"><div class="wrap">
