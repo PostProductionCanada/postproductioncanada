@@ -9,6 +9,7 @@ except Exception:
     PICK_FR = {}
 
 EXACT = {
+    "Why it matters:": "Pourquoi c'est important :",
     "📊 By the numbers": "📊 En chiffres", "💵 post revenue in 2025, Statistics Canada": "💵 revenus de postproduction en 2025, Statistique Canada",
     "📉 since the 2023 record": "📉 depuis le record de 2023", "📈 vs 2019, before the pandemic": "📈 par rapport à 2019, avant la pandémie",
     "🧮 operating profit margin (6.0% in 2023)": "🧮 marge bénéficiaire d'exploitation (6,0 % en 2023)",
