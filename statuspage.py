@@ -74,6 +74,7 @@ CREDITS = [
 SOURCES = [
     ("Shifting the Lens: A Survey for Canadian Screen Performers (Canada Media Fund)", "https://cmf-fmc.ca/shifting-the-lens/"),
     ("Status of the Artist Act, page 1 (Justice Canada)", "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/page-1.html"),
+    ("Status of the Artist Act Professional Category Regulations, SOR/99-191 (Justice Canada)", "https://laws-lois.justice.gc.ca/eng/regulations/SOR-99-191/FullText.html"),
     ("Certification Register under the Status of the Artist Act (CIRB)", "https://cirb-ccri.gc.ca/en/decisions/certification-register-under-status"),
     ("Réforme de la législation sur le statut de l'artiste (RBD Avocats, 2023)", "https://rbdavocats.com/reforme-de-la-legislation-sur-le-statut-de-lartiste-un-survol-des-principales-modifications"),
     ("AQTIS 514 IATSE and AQPM collective agreement, cinema, 2024 to 2028", "https://www.aqpm.ca/wp-content/uploads/2025/06/Entente-AQTIS-514-AIEST-AQPM-Cinema-v.-administrative-6-juin-2025.pdf"),
@@ -241,6 +242,7 @@ def vfx_section():
 
 
 LAW_FED = "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/page-1.html"
+LAW_REG = "https://laws-lois.justice.gc.ca/eng/regulations/SOR-99-191/FullText.html"
 LAW_FED_FULL = "https://laws-lois.justice.gc.ca/eng/acts/s-19.6/fulltext.html"
 CIRB_CERT = "https://cirb-ccri.gc.ca/en/about-appeals-applications-complaints/status-artist-act-certification"
 CIRB_REG = "https://cirb-ccri.gc.ca/en/decisions/certification-register-under-status"
@@ -279,6 +281,9 @@ def law_section():
         '<ul>'
         '<li><b>Purpose.</b> Part II sets up a framework for professional relations between artists and producers that guarantees their freedom of association, recognizes the importance of their contributions to the cultural life of Canada, and protects their rights. (' + lnk("the Act", LAW_FED) + ')</li>'
         '<li><b>Who "producers" are.</b> Federal government institutions and the broadcasting undertakings the Act describes, plus associations of producers. The Act does not cover employees of those bodies. (' + lnk("the Act", LAW_FED) + '; ' + lnk("CIRB", CIRB_CERT) + ')</li>'
+        '<li><b>Where Editors fit.</b> For crew who are not directors, performers or authors, the Act covers independent contractors who contribute to the creation of a film, radio or television production <i>and</i> fall within a professional category set by regulation. The regulation sets five categories, and category 5 is "research for audiovisual productions, editing and continuity". Category 1 is "camera work, lighting and sound design". So Editing is a named category. (' + lnk("the Act, s. 6(2)(b)(iii)", LAW_FED) + '; ' + lnk("Professional Category Regulations, s. 2", LAW_REG) + ')</li>'
+        '<li><b>What the regulation leaves out.</b> The categories do not include accounting, legal, representation, publicity or management work, or "clerical, administrative or other support work". We cannot tell from the text where an Assistant Editor\'s duties fall, so we do not say. (' + lnk("Professional Category Regulations, s. 2(2)", LAW_REG) + ')</li>'
+        '<li><b>The test for being a professional.</b> The Board looks at whether the contractor is paid for presenting their work to an audience and is recognized as an artist by other artists, is becoming an artist by the artistic community\'s practice, or belongs to an artists\' association. (' + lnk("the Act, s. 18", LAW_FED_FULL) + ')</li>'
         '<li><b>Scale agreement.</b> A written agreement between a producer and an artists\' association on minimum terms and conditions for the artists\' services. (' + lnk("the Act", LAW_FED) + ')</li>'
         '<li><b>Certification.</b> The CIRB recognizes an association as the exclusive bargaining agent for a "sector" of self-employed artists. It lasts three years and renews automatically unless someone files to revoke it or a rival association applies for the same sector. (' + lnk("CIRB", CIRB_CERT) + ')</li>'
         '<li><b>Who decides.</b> The Act\'s former Tribunal was repealed in 2012, and the CIRB now handles certification. (' + lnk("the Act", LAW_FED) + ')</li>'
@@ -411,10 +416,10 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <ul>
 <li><b>In Québec,</b> the law underpins collective agreements for freelance technicians. The AQTIS 514 IATSE cinema agreement lists Monteur, Monteur sonore and Assistant monteur among its editing-department functions, with set pay tables.</li>
 <li><b>Everywhere else,</b> an Editor's pay and conditions come from union agreements and individual contracts, not from a status law.</li>
-<li><b>Federally,</b> the Act matters to self-employed artists working for federally regulated producers such as broadcasters, and only where the CIRB has certified their sector. The DGC and AQTIS are both on the federal register.</li>
+<li><b>Federally,</b> the regulation under the Act names Editing as a covered professional category, so an independent-contractor Editor can fall under it. It matters only when the producer is a federal institution or a federally regulated broadcaster, and only where the CIRB has certified a sector that includes you. The DGC and AQTIS are both on the federal register.</li>
 </ul></div>
 <div class="box warn"><h3>What we could not confirm</h3>
-<p>We have not read the certification orders that describe each federal sector, so we cannot say whether picture Editors fall inside the DGC's or AQTIS's federal certification. We also cannot say how the Québec recognitions apply to a particular Editor's contract. Before you rely on any of this, check with AQTIS (Québec), your union local, or the CIRB's certification register. We are also not certain of the details of every provincial act.</p></div>
+<p>The Act and its regulation name Editing as a covered category, but only the CIRB's certification orders say which sector each association is certified for, and we have not read them. So we cannot say whether picture Editors fall inside the DGC's or AQTIS's federal certification, or whether any Editor you know works for a federally regulated producer. We also cannot say how the Québec recognitions apply to a particular Editor's contract. Before you rely on any of this, check with AQTIS (Québec), your union local, or the CIRB's certification register. We are also not certain of the details of every provincial act.</p></div>
 
 <div class="box"><h3>Tax credits have their own page</h3>
 <p>The federal and provincial production tax credits, and the credits aimed at VFX and post-production, now live on our <a href="funding.html">Funding and Tax Credits</a> page, together with the federal funding announced after Budget 2026.</p></div>
