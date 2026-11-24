@@ -37,7 +37,7 @@ EXACT = {
     "✂️ Craft": "✂️ Métier", "✂️ Editors": "✂️ Monteurs et monteuses", "📷 Cinematographers": "📷 Direction photo", "🤖 Digital Assistant Editor": "🤖 L'assistant monteur numérique",
     "📐 Delivery Specs": "📐 Spécifications de livraison", "🎞️ Cut in Canada": "🎞️ Monté au Canada", "🎚️ Vibe Cutting": "🎚️ Vibe Cutting", "💻 Software": "💻 Logiciels",
     "🎶 Sound & Emotion": "🎶 Son et émotion", "🎼 Composers": "🎼 Compositeurs", "🎸 Music Supervisors": "🎸 Superviseurs musicaux",
-    "🤝 Unions, Guilds & Associations": "🤝 Syndicats, guildes et associations", "🏠 Start": "🏠 Début", "🏠 Home": "🏠 Accueil", "🎓 Education": "🎓 Formation", "🗺️ Union Map": "🗺️ Carte des syndicats",
+    "🤝 Unions, Guilds & Associations": "🤝 Syndicats, guildes et associations", "🎓 Learn and connect": "🎓 Apprendre et réseauter", "🏠 Start": "🏠 Début", "🏠 Home": "🏠 Accueil", "🎓 Education": "🎓 Formation", "🗺️ Union Map": "🗺️ Carte des syndicats",
     "⚖️ Status & Tax Credits": "⚖️ Statut de l'artiste et crédits d'impôt", "💰 Funding & Tax Credits": "💰 Financement et crédits d'impôt", "Funding & Tax Credits": "Financement et crédits d'impôt", "Funding and Tax Credits": "Financement et crédits d'impôt", "— the $600M federal funding split and the tax credits by province.": "— la répartition des 600 M$ fédéraux et les crédits d'impôt par province.", "— what the laws mean for Editors, with production by region.": "— ce que les lois signifient pour les monteurs et monteuses, avec la production par région.", "🤝 Networking": "🤝 Réseautage", "💚 Wellbeing": "💚 Bien-être",
     "🌍 Sustainability": "🌍 Durabilité", "🌍 Green Post": "🌍 Postproduction verte", "✉️ Contact": "✉️ Contact",
     # hero

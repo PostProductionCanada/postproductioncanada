@@ -180,7 +180,8 @@ GROUPS = [
     ("📰 News", [("buzz.html", "🎬 Post Buzz"), ("awards.html", "🏆 Awards"), ("canadians.html", "🇨🇦 Canadian Stories"), ("documentary.html", "🎥 Documentary"), ("stats.html", "📊 By the Numbers")]),
     ("✂️ Craft", [("editors.html", "✂️ Editors"), ("cinematographers.html", "📷 Cinematographers"), ("digital-assistant-editor.html", "🤖 Digital Assistant Editor"), ("specs.html", "📐 Delivery Specs"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("software.html", "💻 Software"),
                    ("sound.html", "🎶 Sound & Emotion"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors")]),
-    ("🤝 Unions, Guilds & Associations", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status of the Artist"), ("funding.html", "💰 Funding & Tax Credits"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
+    ("🤝 Unions, Guilds & Associations", [("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status of the Artist"), ("funding.html", "💰 Funding & Tax Credits")]),
+    ("🎓 Learn and connect", [("schools.html", "🎓 Education"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
     ("🌍 Sustainability", [("green-post.html", "🌍 Green Post")]),
 ]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}"
@@ -256,7 +257,7 @@ def add_mypage(t):
 
 
 
-FOOT_COLORS = ["#d52b1e", "#2f6fd0", "#d4691a", "#8a4fe0", "#0a8a6a"]
+FOOT_COLORS = ["#d52b1e", "#2f6fd0", "#d4691a", "#8a4fe0", "#c2185b", "#0a8a6a"]
 FOOT_CSS = ("<style>footer.pfoot{position:relative;overflow:hidden;background:var(--panel);border-top:3px solid var(--red);padding:28px 0 34px;color:var(--mute);font-size:13px}"
             "footer.pfoot .fwm{position:absolute;right:-30px;bottom:-40px;width:260px;opacity:.07;pointer-events:none}footer.pfoot .fwm svg{width:100%;height:auto}"
             "footer.pfoot .fgrid{position:relative;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;margin-bottom:18px}"
