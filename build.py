@@ -180,7 +180,7 @@ GROUPS = [
     ("📰 News", [("buzz.html", "🎬 Post Buzz"), ("awards.html", "🏆 Awards"), ("canadians.html", "🇨🇦 Canadian Stories"), ("documentary.html", "🎥 Documentary"), ("stats.html", "📊 By the Numbers")]),
     ("✂️ Craft", [("editors.html", "✂️ Editors"), ("cinematographers.html", "📷 Cinematographers"), ("digital-assistant-editor.html", "🤖 Digital Assistant Editor"), ("specs.html", "📐 Delivery Specs"), ("cut-in-canada.html", "🎞️ Cut in Canada"), ("vibe-cutting.html", "🎚️ Vibe Cutting"), ("software.html", "💻 Software"),
                    ("sound.html", "🎶 Sound & Emotion"), ("composers.html", "🎼 Composers"), ("music-supervisors.html", "🎸 Music Supervisors")]),
-    ("🎓 Learn and work", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status of the Artist"), ("funding.html", "💰 Funding & Tax Credits"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
+    ("🤝 Unions, Guilds & Associations", [("schools.html", "🎓 Education"), ("unions.html", "🗺️ Union Map"), ("status-of-the-artist.html", "⚖️ Status of the Artist"), ("funding.html", "💰 Funding & Tax Credits"), ("networking.html", "🤝 Networking"), ("wellbeing.html", "💚 Wellbeing")]),
     ("🌍 Sustainability", [("green-post.html", "🌍 Green Post")]),
 ]
 NAV_CSS = ("<style>.sitenav{border-bottom:1px solid var(--line);background:var(--bg)}.sitenav .snw{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}"
@@ -256,6 +256,7 @@ def add_mypage(t):
 
 
 
+FOOT_COLORS = ["#d52b1e", "#2f6fd0", "#d4691a", "#8a4fe0", "#0a8a6a"]
 FOOT_CSS = ("<style>footer.pfoot{position:relative;overflow:hidden;background:var(--panel);border-top:3px solid var(--red);padding:28px 0 34px;color:var(--mute);font-size:13px}"
             "footer.pfoot .fwm{position:absolute;right:-30px;bottom:-40px;width:260px;opacity:.07;pointer-events:none}footer.pfoot .fwm svg{width:100%;height:auto}"
             "footer.pfoot .fgrid{position:relative;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;margin-bottom:18px}"
@@ -267,6 +268,13 @@ FOOT_CSS = ("<style>footer.pfoot{position:relative;overflow:hidden;background:va
             "footer.pfoot .flinks{display:flex;flex-wrap:wrap;gap:6px 12px}"
             "footer.pfoot .fine{position:relative;font-size:12.5px;line-height:1.5}footer.pfoot .fine p{margin:0 0 6px;max-width:62em}"
             "footer.pfoot details{margin:6px 0}footer.pfoot summary{cursor:pointer;color:var(--ink);font-weight:600}"
+            "footer.pfoot .fexp{grid-column:1/-1;order:3;background:linear-gradient(135deg,var(--bg),var(--panel))}"
+            "footer.pfoot .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px}"
+            "footer.pfoot .fcol{border-radius:12px;border:2px solid var(--g);padding:10px 12px 12px;background:color-mix(in srgb,var(--g) 9%,var(--bg))}"
+            "footer.pfoot .fgh{font:800 14px ui-sans-serif,-apple-system,sans-serif;color:#fff;background:var(--g);border-radius:8px;padding:6px 10px;margin-bottom:10px}"
+            "footer.pfoot .fcol .flinks{flex-direction:column;gap:6px}"
+            "footer.pfoot .fcol .flinks a{display:block;border:1px solid color-mix(in srgb,var(--g) 45%,var(--line));border-radius:999px;padding:5px 12px;font-size:13.5px;background:var(--bg)}"
+            "footer.pfoot .fcol .flinks a:hover{background:var(--g);color:#fff;border-color:var(--g)}"
             "@media (max-width:760px){footer.pfoot .fgrid{grid-template-columns:1fr}}</style>")
 
 
@@ -282,9 +290,11 @@ def fancy_footer(t, pre=""):
     L = lambda h, lbl: f'<a href="{pre}{h}">{lbl}</a>'
     new = ('<footer class="pfoot"><div class="fwm">' + logo.inline() + '</div><div class="wrap"><div class="fgrid">'
            '<div class="fbox"><div class="fbrand">' + logo.inline() + '<span>Post Production Canada</span></div>'
-           '<p>Free news and resources for Canadian Editors and the people who work with them. Independent, and every story links to its publisher.</p></div>'
-           '<div class="fbox"><h4>Explore</h4><div class="flinks">' + L("index.html", "Home") + L("stats.html", "By the Numbers") + L("unions.html", "Union Map")
-           + L("status-of-the-artist.html", "Status of the Artist") + L("funding.html", "Funding & Tax Credits") + L("networking.html", "Networking") + L("schools.html", "Education") + '</div></div>'
+           '<p>Free news and resources for the Post Production community in Canada and around the world. Independent, and every story links to its publisher.</p></div>'
+           '<div class="fbox fexp"><h4>Explore</h4><div class="fcols">'
+           + "".join('<div class="fcol" style="--g:%s"><div class="fgh">%s</div><div class="flinks">%s</div></div>' % (c, gl, "".join(L(h, lbl.replace("&", "&amp;")) for h, lbl in its))
+                     for (gl, its), c in zip([("🏠 Start", [("index.html", "🏠 Home"), ("contact.html", "✉️ Contact")])] + GROUPS, FOOT_COLORS))
+           + '</div></div>'
            '<div class="fbox"><h4>Follow &amp; contact</h4><div class="flinks">' + L("feed.xml", "RSS feed") + L("contact.html", "Contact") + L("privacy.html", "Privacy")
            + '<a href="mailto:hello@postproductioncanada.ca">hello@postproductioncanada.ca</a></div></div></div>'
            '<div class="fine">' + inner + '</div></div></footer>')

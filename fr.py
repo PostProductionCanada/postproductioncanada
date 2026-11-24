@@ -37,7 +37,7 @@ EXACT = {
     "✂️ Craft": "✂️ Métier", "✂️ Editors": "✂️ Monteurs et monteuses", "📷 Cinematographers": "📷 Direction photo", "🤖 Digital Assistant Editor": "🤖 L'assistant monteur numérique",
     "📐 Delivery Specs": "📐 Spécifications de livraison", "🎞️ Cut in Canada": "🎞️ Monté au Canada", "🎚️ Vibe Cutting": "🎚️ Vibe Cutting", "💻 Software": "💻 Logiciels",
     "🎶 Sound & Emotion": "🎶 Son et émotion", "🎼 Composers": "🎼 Compositeurs", "🎸 Music Supervisors": "🎸 Superviseurs musicaux",
-    "🎓 Learn and work": "🎓 Apprendre et travailler", "🎓 Education": "🎓 Formation", "🗺️ Union Map": "🗺️ Carte des syndicats",
+    "🤝 Unions, Guilds & Associations": "🤝 Syndicats, guildes et associations", "🏠 Start": "🏠 Début", "🏠 Home": "🏠 Accueil", "🎓 Education": "🎓 Formation", "🗺️ Union Map": "🗺️ Carte des syndicats",
     "⚖️ Status & Tax Credits": "⚖️ Statut de l'artiste et crédits d'impôt", "💰 Funding & Tax Credits": "💰 Financement et crédits d'impôt", "Funding & Tax Credits": "Financement et crédits d'impôt", "Funding and Tax Credits": "Financement et crédits d'impôt", "— the $600M federal funding split and the tax credits by province.": "— la répartition des 600 M$ fédéraux et les crédits d'impôt par province.", "— what the laws mean for Editors, with production by region.": "— ce que les lois signifient pour les monteurs et monteuses, avec la production par région.", "🤝 Networking": "🤝 Réseautage", "💚 Wellbeing": "💚 Bien-être",
     "🌍 Sustainability": "🌍 Durabilité", "🌍 Green Post": "🌍 Postproduction verte", "✉️ Contact": "✉️ Contact",
     # hero
@@ -92,7 +92,7 @@ EXACT = {
     "Explore": "Explorer", "Home": "Accueil", "By the Numbers": "Les chiffres", "Status of the Artist": "Statut de l'artiste",
     "Networking": "Réseautage", "Education": "Formation", "Follow & contact": "Suivre et nous joindre", "RSS feed": "Fil RSS", "Contact": "Contact",
     "All sources": "Toutes les sources",
-    "Free news and resources for Canadian Editors and the people who work with them. Independent, and every story links to its publisher.": "Nouvelles et ressources gratuites pour les monteurs et monteuses du Canada et les gens qui travaillent avec eux. Indépendant : chaque article renvoie à son éditeur.",
+    "Free news and resources for the Post Production community in Canada and around the world. Independent, and every story links to its publisher.": "Nouvelles et ressources gratuites pour la communauté de la postproduction au Canada et dans le monde. Indépendant : chaque article renvoie à son éditeur.",
     "Provided for information only, with no guarantee of accuracy or completeness, so check anything important with the source. We are independent, and not affiliated with or endorsed by any union, guild, association or company mentioned.": "Fourni à titre informatif seulement, sans garantie d'exactitude ni d'exhaustivité; vérifiez tout élément important auprès de la source. Nous sommes indépendants et n'avons aucun lien avec les syndicats, guildes, associations ou entreprises mentionnés, qui ne nous endossent pas.",
 }
 FRAG = [
