@@ -1,233 +1,243 @@
 {
- "_help": "Our picks shown at the top of the site. Editing and post only (camera gear and DP/editor collaboration pieces are fine now and then). Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in our own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags. 'parked' holds picks taken out as off-topic (policy and general industry); they are not shown.",
- "picks": [
-  {
-   "title": "Accounting for the new economics of VFX",
-   "url": "https://vfxvoice.com/accounting-for-the-new-economics-of-vfx/",
-   "source": "VFX Voice",
-   "date": "2026-10-06",
-   "expires_days": 60,
-   "note": "Executives at Digital Domain, MR. X, Zoic and Pitch Black name Canada, and B.C. in particular, as a high-yield VFX region because of tax credits, exchange rates and deep talent. It is not a ranking of houses, and the same pieces say rival countries are catching up, rebates are converging, and mid-tier shops are being squeezed.",
-   "cats": [
-    "vfx",
-    "business"
-   ]
-  },
-  {
-   "title": "Adobe Firefly adds Build a story and Assemble short video",
-   "url": "https://www.redsharknews.com/adobe-firefly-build-story-assemble-short-video",
-   "source": "RedShark News",
-   "date": "2026-11-11",
-   "note": "Two beta Firefly workspaces, announced at Adobe MAX 2026, take a prompt to planned scenes and shots, then to a short video on a single-track timeline. It is generative and in beta, but it shows where Adobe wants assembly work to go, which matters to Assistant Editors and Editors.",
-   "cats": [
-    "ai",
-    "aitools",
-    "editing"
-   ]
-  },
-  {
-   "title": "Sony files patent for a drone-mounted boom mic",
-   "url": "https://www.redsharknews.com/sony-drone-boom-microphone-patent",
-   "source": "RedShark News",
-   "date": "2026-11-17",
-   "note": "A patent application, not a product. It describes a drone that keeps a mic close to the actor but out of shot, and can filter out its own propeller hum. Worth knowing for dialogue Editors and sound people, but nothing you can buy.",
-   "cats": [
-    "soundedit",
-    "gear"
-   ]
-  },
-  {
-   "title": "Google Flow adds Pocket Studio: new camera angles generated from one phone take",
-   "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools",
-   "source": "Google",
-   "date": "2026-11-12",
-   "note": "Google says the tool generates extra camera angles from a single take and keeps the actor's performance intact. That is Google's claim, not an independent test. For Editors it raises questions about coverage and what counts as footage.",
-   "cats": [
-    "ai",
-    "aitools"
-   ]
-  },
-  {
-   "title": "Canada's CBC Joins Global Microdrama Boom",
-   "url": "https://www.hollywoodreporter.com/business/digital/canada-cbc-microdrama-boom-1236747052/",
-   "source": "The Hollywood Reporter",
-   "date": "2026-11-03",
-   "note": "Vertical, short-form drama is arriving in Canada. Faster schedules and lean crews will change how post gets booked and paid.",
-   "cats": [
-    "business"
-   ]
-  },
-  {
-   "title": "DaVinci Resolve 21.1 Uses MCP to Let AI Assistants Control the Edit",
-   "url": "https://ymcinema.com/2026/09/17/davinci-resolve-21-1-mcp-ai-assistants-control-edit/",
-   "source": "YMCinema",
-   "date": "2026-09-17",
-   "expires_days": 120,
-   "note": "Resolve Studio now has a built-in MCP server, so an AI assistant can handle routine edit-room jobs like renaming clips, building deliverables and reframing to vertical from plain-language instructions.",
-   "cats": [
-    "editing",
-    "ai",
-    "aitools",
-    "gear"
-   ]
-  },
-  {
-   "title": "Disney Taps Adobe as 'Official AI Innovation Partner' Under Multiyear Pact",
-   "url": "https://variety.com/2026/digital/news/disney-adobe-official-ai-innovation-partner-1236943275/",
-   "source": "Variety",
-   "date": "2026-11-09",
-   "expires_days": 60,
-   "note": "Adobe, maker of Premiere Pro and After Effects, becomes Disney's AI partner in a multiyear alliance. Expect AI features to keep showing up in the tools editors already use.",
-   "cats": [
-    "ai",
-    "aibiz",
-    "business"
-   ]
-  },
-  {
-   "title": "2026 Rosie Award nominees: Alberta's screen craft nominations, including Editors",
-   "url": "https://ampia.org/2026-rosie-award-nominees",
-   "source": "AMPIA",
-   "date": "2026-11-07",
-   "expires_days": 45,
-   "cats": [
-    "editing",
-    "soundedit",
-    "vfx",
-    "canada"
-   ],
-   "note": "AMPIA's list for the Rosie Awards, held Nov 7 in Calgary, has separate Editor categories for scripted and unscripted work, under and over 30 minutes, plus sound, VFX and animation. Two Heartland episodes have a nominee each in Best Editor Scripted Over 30 Minutes, and Sarah Taylor CCE is nominated for an episode of Crip Trip. This is the nominee page, so it does not say who won."
-  },
-  {
-   "title": "EditCon 2026: Brett Sullivan, CCE, on moving from assistant editor to director",
-   "url": "https://cceditors.ca/2026/11/episode-136-editcon-2026-in-conversation-with-brett-sullivan-cce/",
-   "source": "Canadian Cinema Editors",
-   "date": "2026-11-18",
-   "expires_days": 60,
-   "cats": [
-    "editing",
-    "cce",
-    "canada"
-   ],
-   "note": "A conversation recorded live in Halifax on February 7, 2026. Sullivan started as editing moved from film to non-linear systems, cut his first feature, Blood & Donuts, on 35mm, and talks about what surprised him on leaving the edit suite for a busy studio floor. Useful for Canadian Editors thinking about directing."
-  },
-  {
-   "title": "Montréal International on video games, VFX, animation and AI talent",
-   "url": "https://www.montrealinternational.com/en/news/video-games-vfx-animation-and-ai-talent-at-the-heart-of-montreals-creative-tech-ecosystem",
-   "source": "Montréal International",
-   "date": "2026-11-18",
-   "expires_days": 45,
-   "cats": [
-    "vfx",
-    "animation",
-    "canada",
-    "business"
-   ],
-   "note": "Written by the agency that recruits companies to Montréal, so read it as promotion. It says Greater Montréal has more than 20,000 creative-industry workers and names Rodeo FX, which it says worked on Dune, Game of Thrones and Stranger Things. It also claims the lowest operating costs among the 20 largest Canadian and US metro areas for VFX and animation."
-  }
- ],
- "bodies": [
-  {
-   "title": "CMPA celebrates federal government's significant investment in Canadian culture",
-   "url": "https://cmpa.ca/pressreleases/cmpa-celebrates-federal-governments-significant-investment-in-canadian-culture",
-   "date": "2026-11-05",
-   "note": "The CMPA's response to the federal budget: $600 million in immediate support for cultural industries and $300 million over two years for CBC/Radio-Canada.",
-   "source": "CMPA"
-  },
-  {
-   "title": "CEPI welcomes CMPA and AQPM as its first international observer members",
-   "url": "https://cmpa.ca/pressreleases/cepi-welcomes-cmpa-and-aqpm-as-its-first-international-observer-members",
-   "date": "2026-10-29",
-   "note": "Canadian independent producers' associations join the European producers' association CEPI as observers.",
-   "source": "CMPA"
-  },
-  {
-   "title": "CMPA appoints three new Board Directors on eve of federal advocacy meetings",
-   "url": "https://cmpa.ca/pressreleases/cmpa-appoints-three-new-board-directors-on-eve-of-federal-advocacy-meetings",
-   "date": "2026-10-05",
-   "note": "New directors, plus polling the CMPA took to Ottawa on the Online Streaming Act.",
-   "source": "CMPA"
-  },
-  {
-   "title": "Global screen sector coalition calls on governments to protect local content",
-   "url": "https://cmpa.ca/pressreleases/global-content-statement",
-   "date": "2026-09-11",
-   "note": "A joint statement from 23 screen organizations, released at TIFF, backing domestic production requirements.",
-   "source": "CMPA"
-  },
-  {
-   "title": "KOTV, Tyler Hagan, and Anthony Cauchy named 2026 CMPA Indiescreen Awards winners",
-   "url": "https://cmpa.ca/pressreleases/kotv-tyler-hagan-and-anthony-cauchy-named-2026-cmpa-indiescreen-awards-winners",
-   "date": "2026-09-10",
-   "note": "The producers honoured at the Indiescreen Awards during TIFF.",
-   "source": "CMPA"
-  },
-  {
-   "source": "Avid",
-   "title": "Avid accelerates music creation and audio post production with new Pro Tools Extensions and AI-powered capabilities",
-   "url": "https://www.avid.com/press-room/2026/11/avid-accelerates-music-creation-and-audio-post-production-with-new-pro-tools-extensions-and-ai",
-   "date": "2026-11-05",
-   "note": "Pro Tools 2026.11 adds Extensions (a new plugin format), an AI Stem Separator that runs locally, MIDI Polyphonic Expression and sharper Windows displays."
-  },
-  {
-   "source": "Avid",
-   "title": "What's new in Avid Media Composer 2026.8",
-   "url": "https://www.avid.com/resource-center/whats-new-avid-media-composer-2026-8",
-   "date": "2026-08-31",
-   "note": "Multicam Auto Cut driven by speaker, better transcript tools, an OpenTimelineIO 2.0 adapter update and secure collaboration on shared storage with Media Composer Enterprise."
-  },
-  {
-   "source": "Avid",
-   "title": "Avid shows the future of agentic editing at IBC2026, launches Media Composer 2026.8",
-   "url": "https://www.avid.com/press-room/2026/08/avid-shows-the-future-of-agentic-editing-at-ibc2026",
-   "date": "2026-08-31",
-   "note": "The press release behind the 2026.8 launch, with Avid's agentic editing preview and browser-based editing."
-  },
-  {
-   "source": "LinkedIn",
-   "by": "Moyra Rodger",
-   "title": "Canada wants its content seen. Who is investing in making audiences care?",
-   "url": "https://www.linkedin.com/pulse/canada-wants-its-content-seen-who-investing-making-audiences-rodger-j5mwc/",
-   "date": "2026-10-29",
-   "note": "Argues Canada funds production far more than marketing and audience-building, citing a January 2026 CRTC-commissioned study, and calls for a national audience-development strategy."
-  }
- ],
- "parked": [
-  {
-   "title": "Big tech sent a wish list to U.S. trade negotiators. Here are the Canadian policies they want scrapped",
-   "url": "https://www.thewirereport.ca/2026/11/02/big-tech-sent-a-wish-list-to-u-s-trade-negotiators-here-are-the-canadian-policies-they-want-scrapped/",
-   "source": "The Wire Report",
-   "date": "2026-11-02",
-   "note": "The rules that fund Canadian content are on the table in trade talks. That money is what keeps Canadian shows in post here."
-  },
-  {
-   "title": "Budget 2026 strengthens news funding, cuts CBC dollars, and leaves CanCon hanging",
-   "url": "https://mediapolicy.ca/2026/11/07/budget-2026-strengthens-news-funding-cuts-cbc-dollars-and-leaves-cancon-hanging/",
-   "source": "Media Policy",
-   "date": "2026-11-07",
-   "note": "What the federal budget means for the broadcasters and funders that commission Canadian screen work."
-  },
-  {
-   "title": "It's up to Carney to protect Canadian content on our screens",
-   "url": "https://www.ipolitics.ca/2026/11/04/its-up-to-carney-to-protect-canadian-content-on-our-screens/",
-   "source": "iPolitics",
-   "date": "2026-11-04",
-   "note": "An opinion piece on whether Canadian-content protections survive the pressure from Washington."
-  },
-  {
-   "title": "Everybody's macrodosing on microdramas",
-   "url": "https://www.theguardian.com/lifeandstyle/2026/oct/29/everybodys-macrodosing-on-microdramas",
-   "source": "The Guardian",
-   "date": "2026-10-29",
-   "note": "Background on the microdrama phenomenon behind the shift in what gets made and where it's watched."
-  },
-  {
-   "title": "Disney's Accelerator Day Highlights AI Startups",
-   "url": "https://www.thewrap.com/industry-news/tech/disney-ai-accelerator-startup-investor/",
-   "source": "TheWrap",
-   "date": "2026-11-04",
-   "expires_days": 60,
-   "note": "Disney is putting money behind AI startups, including ones building hybrid filmmaking tools, and says it wants artists involved at every step of the workflow."
-  }
- ]
+  "_help": "Our picks shown at the top of the site. Editing and post only (camera gear and DP/editor collaboration pieces are fine now and then). Add an object per pick: title, url, source, date (YYYY-MM-DD), note (one line on why it matters, in our own words). Picks drop off after expires_days (default 30). Use clean publisher URLs, no tracking tags. 'parked' holds picks taken out as off-topic (policy and general industry); they are not shown.",
+  "picks": [
+    {
+      "title": "Accounting for the new economics of VFX",
+      "url": "https://vfxvoice.com/accounting-for-the-new-economics-of-vfx/",
+      "source": "VFX Voice",
+      "date": "2026-10-06",
+      "expires_days": 60,
+      "note": "Executives at Digital Domain, MR. X, Zoic and Pitch Black name Canada, and B.C. in particular, as a high-yield VFX region because of tax credits, exchange rates and deep talent. It is not a ranking of houses, and the same pieces say rival countries are catching up, rebates are converging, and mid-tier shops are being squeezed.",
+      "cats": [
+        "vfx",
+        "business"
+      ],
+      "note_fr": "Des dirigeants de Digital Domain, MR. X, Zoic et Pitch Black citent le Canada, et la Colombie-Britannique en particulier, comme une région à fort rendement pour les effets visuels, en raison des crédits d'impôt, des taux de change et d'une main-d'œuvre talentueuse. Ce n'est pas un classement des studios, et les mêmes articles disent que d'autres pays rattrapent leur retard, que les remises convergent et que les studios de taille moyenne sont sous pression."
+    },
+    {
+      "title": "Adobe Firefly adds Build a story and Assemble short video",
+      "url": "https://www.redsharknews.com/adobe-firefly-build-story-assemble-short-video",
+      "source": "RedShark News",
+      "date": "2026-11-11",
+      "note": "Two beta Firefly workspaces, announced at Adobe MAX 2026, take a prompt to planned scenes and shots, then to a short video on a single-track timeline. It is generative and in beta, but it shows where Adobe wants assembly work to go, which matters to Assistant Editors and Editors.",
+      "cats": [
+        "ai",
+        "aitools",
+        "editing"
+      ],
+      "note_fr": "Deux espaces de travail Firefly en version bêta, annoncés à Adobe MAX 2026, transforment une consigne en scènes et plans planifiés, puis en courte vidéo sur une piste unique. C'est génératif et en bêta, mais cela montre où Adobe veut mener le travail d'assemblage, ce qui compte pour les assistants-monteurs et les monteurs."
+    },
+    {
+      "title": "Sony files patent for a drone-mounted boom mic",
+      "url": "https://www.redsharknews.com/sony-drone-boom-microphone-patent",
+      "source": "RedShark News",
+      "date": "2026-11-17",
+      "note": "A patent application, not a product. It describes a drone that keeps a mic close to the actor but out of shot, and can filter out its own propeller hum. Worth knowing for dialogue Editors and sound people, but nothing you can buy.",
+      "cats": [
+        "soundedit",
+        "gear"
+      ],
+      "note_fr": "Une demande de brevet, pas un produit. Elle décrit un drone qui garde un micro près de l'acteur sans l'inclure dans le cadre, et qui peut filtrer le bourdonnement de ses propres hélices. À savoir pour les monteurs de dialogue et les gens du son, mais rien que l'on puisse acheter."
+    },
+    {
+      "title": "Google Flow adds Pocket Studio: new camera angles generated from one phone take",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools",
+      "source": "Google",
+      "date": "2026-11-12",
+      "note": "Google says the tool generates extra camera angles from a single take and keeps the actor's performance intact. That is Google's claim, not an independent test. For Editors it raises questions about coverage and what counts as footage.",
+      "cats": [
+        "ai",
+        "aitools"
+      ],
+      "note_fr": "Google affirme que l'outil génère des angles de caméra supplémentaires à partir d'une seule prise et préserve le jeu de l'acteur. C'est ce que dit Google, pas un test indépendant. Pour les monteurs, cela soulève des questions sur la couverture et sur ce qui compte comme images tournées."
+    },
+    {
+      "title": "Canada's CBC Joins Global Microdrama Boom",
+      "url": "https://www.hollywoodreporter.com/business/digital/canada-cbc-microdrama-boom-1236747052/",
+      "source": "The Hollywood Reporter",
+      "date": "2026-11-03",
+      "note": "Vertical, short-form drama is arriving in Canada. Faster schedules and lean crews will change how post gets booked and paid.",
+      "cats": [
+        "business"
+      ],
+      "note_fr": "Le drame vertical de courte durée arrive au Canada. Des horaires plus serrés et des équipes réduites changeront la façon dont la postproduction est réservée et payée."
+    },
+    {
+      "title": "DaVinci Resolve 21.1 Uses MCP to Let AI Assistants Control the Edit",
+      "url": "https://ymcinema.com/2026/09/17/davinci-resolve-21-1-mcp-ai-assistants-control-edit/",
+      "source": "YMCinema",
+      "date": "2026-09-17",
+      "expires_days": 120,
+      "note": "Resolve Studio now has a built-in MCP server, so an AI assistant can handle routine edit-room jobs like renaming clips, building deliverables and reframing to vertical from plain-language instructions.",
+      "cats": [
+        "editing",
+        "ai",
+        "aitools",
+        "gear"
+      ],
+      "note_fr": "Resolve Studio intègre maintenant un serveur MCP : un assistant d'IA peut effectuer des tâches courantes de salle de montage, comme renommer des clips, préparer des livrables et recadrer en format vertical, à partir d'instructions en langage courant."
+    },
+    {
+      "title": "Disney Taps Adobe as 'Official AI Innovation Partner' Under Multiyear Pact",
+      "url": "https://variety.com/2026/digital/news/disney-adobe-official-ai-innovation-partner-1236943275/",
+      "source": "Variety",
+      "date": "2026-11-09",
+      "expires_days": 60,
+      "note": "Adobe, maker of Premiere Pro and After Effects, becomes Disney's AI partner in a multiyear alliance. Expect AI features to keep showing up in the tools editors already use.",
+      "cats": [
+        "ai",
+        "aibiz",
+        "business"
+      ],
+      "note_fr": "Adobe, fabricant de Premiere Pro et d'After Effects, devient le partenaire d'IA de Disney dans le cadre d'une alliance pluriannuelle. Attendez-vous à voir des fonctions d'IA continuer d'apparaître dans les outils que les monteurs utilisent déjà."
+    },
+    {
+      "title": "2026 Rosie Award nominees: Alberta's screen craft nominations, including Editors",
+      "url": "https://ampia.org/2026-rosie-award-nominees",
+      "source": "AMPIA",
+      "date": "2026-11-07",
+      "expires_days": 45,
+      "cats": [
+        "editing",
+        "soundedit",
+        "vfx",
+        "canada"
+      ],
+      "note": "AMPIA's list for the Rosie Awards, held Nov 7 in Calgary, has separate Editor categories for scripted and unscripted work, under and over 30 minutes, plus sound, VFX and animation. Two Heartland episodes have a nominee each in Best Editor Scripted Over 30 Minutes, and Sarah Taylor CCE is nominated for an episode of Crip Trip. This is the nominee page, so it does not say who won.",
+      "note_fr": "La liste d'AMPIA pour les prix Rosie, remis le 7 nov. à Calgary, comprend des catégories distinctes de montage pour le travail scénarisé et non scénarisé, de moins et de plus de 30 minutes, ainsi que le son, les effets visuels et l'animation. Deux épisodes de Heartland ont chacun un candidat au meilleur montage scénarisé de plus de 30 minutes, et Sarah Taylor, CCE, est en lice pour un épisode de Crip Trip. Il s'agit de la page des candidatures; elle n'indique pas qui a gagné."
+    },
+    {
+      "title": "EditCon 2026: Brett Sullivan, CCE, on moving from assistant editor to director",
+      "url": "https://cceditors.ca/2026/11/episode-136-editcon-2026-in-conversation-with-brett-sullivan-cce/",
+      "source": "Canadian Cinema Editors",
+      "date": "2026-11-18",
+      "expires_days": 60,
+      "cats": [
+        "editing",
+        "cce",
+        "canada"
+      ],
+      "note": "A conversation recorded live in Halifax on February 7, 2026. Sullivan started as editing moved from film to non-linear systems, cut his first feature, Blood & Donuts, on 35mm, and talks about what surprised him on leaving the edit suite for a busy studio floor. Useful for Canadian Editors thinking about directing.",
+      "note_fr": "Une conversation enregistrée en direct à Halifax le 7 février 2026. Sullivan a commencé quand le montage passait du film aux systèmes non linéaires, a monté son premier long métrage, Blood & Donuts, sur 35 mm, et raconte ce qui l'a surpris en quittant la salle de montage pour un plateau très actif. Utile pour les monteurs canadiens qui songent à la réalisation."
+    },
+    {
+      "title": "Montréal International on video games, VFX, animation and AI talent",
+      "url": "https://www.montrealinternational.com/en/news/video-games-vfx-animation-and-ai-talent-at-the-heart-of-montreals-creative-tech-ecosystem",
+      "source": "Montréal International",
+      "date": "2026-11-18",
+      "expires_days": 45,
+      "cats": [
+        "vfx",
+        "animation",
+        "canada",
+        "business"
+      ],
+      "note": "Written by the agency that recruits companies to Montréal, so read it as promotion. It says Greater Montréal has more than 20,000 creative-industry workers and names Rodeo FX, which it says worked on Dune, Game of Thrones and Stranger Things. It also claims the lowest operating costs among the 20 largest Canadian and US metro areas for VFX and animation.",
+      "note_fr": "Rédigé par l'organisme qui recrute des entreprises pour Montréal; il faut donc le lire comme de la promotion. Il affirme que le Grand Montréal compte plus de 20 000 travailleurs des industries créatives et nomme Rodeo FX, qui aurait travaillé sur Dune, Game of Thrones et Stranger Things. Il prétend aussi avoir les coûts d'exploitation les plus bas parmi les 20 plus grandes régions métropolitaines du Canada et des États-Unis pour les effets visuels et l'animation."
+    }
+  ],
+  "bodies": [
+    {
+      "title": "CMPA celebrates federal government's significant investment in Canadian culture",
+      "url": "https://cmpa.ca/pressreleases/cmpa-celebrates-federal-governments-significant-investment-in-canadian-culture",
+      "date": "2026-11-05",
+      "note": "The CMPA's response to the federal budget: $600 million in immediate support for cultural industries and $300 million over two years for CBC/Radio-Canada.",
+      "source": "CMPA"
+    },
+    {
+      "title": "CEPI welcomes CMPA and AQPM as its first international observer members",
+      "url": "https://cmpa.ca/pressreleases/cepi-welcomes-cmpa-and-aqpm-as-its-first-international-observer-members",
+      "date": "2026-10-29",
+      "note": "Canadian independent producers' associations join the European producers' association CEPI as observers.",
+      "source": "CMPA"
+    },
+    {
+      "title": "CMPA appoints three new Board Directors on eve of federal advocacy meetings",
+      "url": "https://cmpa.ca/pressreleases/cmpa-appoints-three-new-board-directors-on-eve-of-federal-advocacy-meetings",
+      "date": "2026-10-05",
+      "note": "New directors, plus polling the CMPA took to Ottawa on the Online Streaming Act.",
+      "source": "CMPA"
+    },
+    {
+      "title": "Global screen sector coalition calls on governments to protect local content",
+      "url": "https://cmpa.ca/pressreleases/global-content-statement",
+      "date": "2026-09-11",
+      "note": "A joint statement from 23 screen organizations, released at TIFF, backing domestic production requirements.",
+      "source": "CMPA"
+    },
+    {
+      "title": "KOTV, Tyler Hagan, and Anthony Cauchy named 2026 CMPA Indiescreen Awards winners",
+      "url": "https://cmpa.ca/pressreleases/kotv-tyler-hagan-and-anthony-cauchy-named-2026-cmpa-indiescreen-awards-winners",
+      "date": "2026-09-10",
+      "note": "The producers honoured at the Indiescreen Awards during TIFF.",
+      "source": "CMPA"
+    },
+    {
+      "source": "Avid",
+      "title": "Avid accelerates music creation and audio post production with new Pro Tools Extensions and AI-powered capabilities",
+      "url": "https://www.avid.com/press-room/2026/11/avid-accelerates-music-creation-and-audio-post-production-with-new-pro-tools-extensions-and-ai",
+      "date": "2026-11-05",
+      "note": "Pro Tools 2026.11 adds Extensions (a new plugin format), an AI Stem Separator that runs locally, MIDI Polyphonic Expression and sharper Windows displays."
+    },
+    {
+      "source": "Avid",
+      "title": "What's new in Avid Media Composer 2026.8",
+      "url": "https://www.avid.com/resource-center/whats-new-avid-media-composer-2026-8",
+      "date": "2026-08-31",
+      "note": "Multicam Auto Cut driven by speaker, better transcript tools, an OpenTimelineIO 2.0 adapter update and secure collaboration on shared storage with Media Composer Enterprise."
+    },
+    {
+      "source": "Avid",
+      "title": "Avid shows the future of agentic editing at IBC2026, launches Media Composer 2026.8",
+      "url": "https://www.avid.com/press-room/2026/08/avid-shows-the-future-of-agentic-editing-at-ibc2026",
+      "date": "2026-08-31",
+      "note": "The press release behind the 2026.8 launch, with Avid's agentic editing preview and browser-based editing."
+    },
+    {
+      "source": "LinkedIn",
+      "by": "Moyra Rodger",
+      "title": "Canada wants its content seen. Who is investing in making audiences care?",
+      "url": "https://www.linkedin.com/pulse/canada-wants-its-content-seen-who-investing-making-audiences-rodger-j5mwc/",
+      "date": "2026-10-29",
+      "note": "Argues Canada funds production far more than marketing and audience-building, citing a January 2026 CRTC-commissioned study, and calls for a national audience-development strategy."
+    }
+  ],
+  "parked": [
+    {
+      "title": "Big tech sent a wish list to U.S. trade negotiators. Here are the Canadian policies they want scrapped",
+      "url": "https://www.thewirereport.ca/2026/11/02/big-tech-sent-a-wish-list-to-u-s-trade-negotiators-here-are-the-canadian-policies-they-want-scrapped/",
+      "source": "The Wire Report",
+      "date": "2026-11-02",
+      "note": "The rules that fund Canadian content are on the table in trade talks. That money is what keeps Canadian shows in post here."
+    },
+    {
+      "title": "Budget 2026 strengthens news funding, cuts CBC dollars, and leaves CanCon hanging",
+      "url": "https://mediapolicy.ca/2026/11/07/budget-2026-strengthens-news-funding-cuts-cbc-dollars-and-leaves-cancon-hanging/",
+      "source": "Media Policy",
+      "date": "2026-11-07",
+      "note": "What the federal budget means for the broadcasters and funders that commission Canadian screen work."
+    },
+    {
+      "title": "It's up to Carney to protect Canadian content on our screens",
+      "url": "https://www.ipolitics.ca/2026/11/04/its-up-to-carney-to-protect-canadian-content-on-our-screens/",
+      "source": "iPolitics",
+      "date": "2026-11-04",
+      "note": "An opinion piece on whether Canadian-content protections survive the pressure from Washington."
+    },
+    {
+      "title": "Everybody's macrodosing on microdramas",
+      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/29/everybodys-macrodosing-on-microdramas",
+      "source": "The Guardian",
+      "date": "2026-10-29",
+      "note": "Background on the microdrama phenomenon behind the shift in what gets made and where it's watched."
+    },
+    {
+      "title": "Disney's Accelerator Day Highlights AI Startups",
+      "url": "https://www.thewrap.com/industry-news/tech/disney-ai-accelerator-startup-investor/",
+      "source": "TheWrap",
+      "date": "2026-11-04",
+      "expires_days": 60,
+      "note": "Disney is putting money behind AI startups, including ones building hybrid filmmaking tools, and says it wants artists involved at every step of the workflow."
+    }
+  ]
 }

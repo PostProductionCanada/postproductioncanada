@@ -1,8 +1,20 @@
-"""French (Canadian) version of the home page. Translates the site's own wording; story headlines and our hand-written
-lines stay in their original language. Draft translation: needs a native French reviewer."""
-import html, re
+"""French (Canadian) version of the home page. Translates the site's own wording; story headlines stay in their original language;
+our own "why it matters" lines on Our Picks come from note_fr in curated.json. Draft translation: needs a native French reviewer."""
+import html, re, json
+from pathlib import Path
+
+try:
+    PICK_FR = {p["note"]: p["note_fr"] for p in json.loads((Path(__file__).parent / "curated.json").read_text(encoding="utf-8")).get("picks", []) if p.get("note") and p.get("note_fr")}
+except Exception:
+    PICK_FR = {}
 
 EXACT = {
+    "📊 By the numbers": "📊 En chiffres", "💵 post revenue in 2025, Statistics Canada": "💵 revenus de postproduction en 2025, Statistique Canada",
+    "📉 since the 2023 record": "📉 depuis le record de 2023", "📈 vs 2019, before the pandemic": "📈 par rapport à 2019, avant la pandémie",
+    "🧮 operating profit margin (6.0% in 2023)": "🧮 marge bénéficiaire d'exploitation (6,0 % en 2023)",
+    "of VFX and animation sales now in B.C., ahead of Quebec at 40.4%": "des ventes d'effets visuels et d'animation sont maintenant en C.-B., devant le Québec à 40,4 %",
+    "📊 See all the numbers and charts →": "📊 Voir tous les chiffres et graphiques (en anglais) →",
+    "Every figure is read from the publisher's own page and linked there.": "Chaque chiffre est lu sur la page de l'éditeur et lié à celle-ci.",
     "🔑 Subscribers": "🔑 Abonnés",
     "🆕 NEW": "🆕 NOUVEAU",
     "● LIVE": "● EN DIRECT", "Next update in": "Prochaine mise à jour dans", "Last updated": "Dernière mise à jour", "All stories from the last 3 weeks:": "Tous les articles des 3 dernières semaines :",
@@ -189,6 +201,11 @@ def to_french(page, pairs=None, title=None):
         elif mode == "skip":
             out.append(seg)
         elif mode == "card":
+            _s = html.unescape(seg.strip())
+            if _s == "Why it matters:":
+                seg = seg.replace("Why it matters:", "Pourquoi c'est important :")
+            elif _s in PICK_FR:
+                seg = seg.replace(seg.strip(), html.escape(PICK_FR[_s], quote=False))
             out.append(seg)
         else:
             out.append(_text(seg, fragments=True))
