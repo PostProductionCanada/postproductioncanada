@@ -125,9 +125,23 @@ def section_production():
         '<div class="t">Canadian television production, <b>−6.6%</b></div><div class="neg"><span style="width:78.6%"></span></div><div class="pos"></div>'
         '<div class="t">Canadian feature film, <b>−8.4%</b></div><div class="neg"><span style="width:100%"></span></div><div class="pos"></div></div>'
         '<figcaption>Canadian feature films: 132 made, down from 147 (−10%), with volume down 3.2% to $460 million and the average English and French fiction feature budget up 9% to $3.5 million.</figcaption></figure>'
-        + src("Broadcast Dialogue, on Telefilm Canada's 2025–26 annual report", BD) + '</div>')
+        + src("Broadcast Dialogue, on Telefilm Canada's 2025–26 annual report", BD) + '</div>'
+        '<div class="box"><figure class="fig"><h3>🎬 Ontario, 2025: $2.7 billion and 35,268 jobs</h3>'
+        '<div class="kpis"><div class="kpi"><b>$2.7B</b><span>💵 contribution to Ontario\'s economy</span></div>'
+        '<div class="kpi"><b>35,268</b><span>👷 full-time-equivalent direct and spin-off jobs</span></div>'
+        '<div class="kpi"><b>363</b><span>🎞️ productions (383 in 2024, 404 in 2023)</span></div></div>'
+        + bar("Domestic production, $809 million", "30%", [(30, BC, "Domestic 30%"), (70, "transparent", "")])
+        + bar("Foreign production, $1.89 billion", "up 15%", [(70, QC, "Foreign 70% (our arithmetic)"), (30, "transparent", "")])
+        + '<figcaption>Ontario Creates says the industry grew 5.7% in 2025 but has not returned to pre-pandemic levels. Of the 363 projects, 272 were domestic and 91 foreign. '
+          'Domestic work is 30% of spending in Ontario. Foreign projects fell in number while their spending rose 15%. The 70% bar is our arithmetic. These figures are Ontario Creates\' own and cover productions using its incentives and services.</figcaption></figure>'
+        + src("Ontario Creates, Film and TV industry profile, September 2026", OC_PROFILE) + '</div>'
+        '<div class="box"><h3 style="margin-top:0">🎭 Canada\'s culture sector, first quarter of 2026</h3>'
+        '<p>Statistics Canada reports that real GDP of the culture sector rose 0.6% in the first quarter of 2026, while employment fell 0.3% to 687,824 jobs. This covers all of culture, not only screen or post.</p>'
+        + src("Statistics Canada, The Daily, July 7, 2026", STATCAN_NCI) + '</div>')
 
 
+OC_PROFILE = "https://www.ontariocreates.ca/research/industry-profile/ip-filmtv"
+STATCAN_NCI = "https://www150.statcan.gc.ca/n1/daily-quotidien/260707/dq260707d-eng.htm"
 ESAC_PR = "https://finance.yahoo.com/news/canadas-video-game-industry-contributed-083000266.html"
 ESAC_SITE = "https://videogamescanada.ca"
 THR_GTA = "https://www.hollywoodreporter.com/business/business-news/gta-vi-day-one-sales-1236760139/"
@@ -187,6 +201,8 @@ def method():
             '<h2>📚 Sources</h2><ul class="src">'
             '<li><a href="' + e(STATCAN) + '" target="_blank" rel="noopener">Film, television and video post-production, 2025</a> · Statistics Canada, The Daily, released Oct. 9, 2026</li>'
             '<li><a href="' + e(STATCAN_TABLE) + '" target="_blank" rel="noopener">Table 21-10-0066-01</a> · Statistics Canada (the full data behind the release)</li>'
+            '<li><a href="' + e(OC_PROFILE) + '" target="_blank" rel="noopener">Film &amp; TV industry profile</a> · Ontario Creates, September 2026</li>'
+            '<li><a href="' + e(STATCAN_NCI) + '" target="_blank" rel="noopener">National culture indicators, fourth quarter 2025 and first quarter 2026</a> · Statistics Canada, The Daily, July 7, 2026</li>'
             '<li><a href="' + e(NUMERIS) + '" target="_blank" rel="noopener">The Year in Canadian Media: What Audiences Watched, Heard and Streamed</a> · Numeris, Oct. 19, 2026</li>'
             '<li><a href="' + e(ESAC_PR) + '" target="_blank" rel="noopener">Canada\'s Video Game Industry contributed $5.1 billion to GDP in 2024</a> · ESAC, via CNW, Jan. 28, 2025</li>'
             '<li><a href="' + e(THR_GTA) + '" target="_blank" rel="noopener">\'GTA VI\' Generates $3.79 Billion in "Day One" Sales</a> · The Hollywood Reporter</li>'
