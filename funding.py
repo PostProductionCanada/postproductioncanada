@@ -5,6 +5,7 @@ story on Yahoo. Tax credit tables are shared with statuspage.py so there is one 
 """
 import html
 import statuspage as sp
+import agencies
 
 e = html.escape
 
@@ -65,7 +66,9 @@ def render(leaf, favicon, updated):
         '<main class="wrap">'
         '<h1>💰 Funding and Tax Credits</h1>'
         '<p class="lede">Where Canadian screen money comes from and where it lands. Researched from public sources, listed at the bottom. This is information, not legal or tax advice.</p>'
+        '<p><a href="#agencies">Jump to the funding agencies directory ↓</a></p>'
         + money_section() +
+        agencies.section() +
         '<h2>Production tax credits, federal and by province</h2>'
         '<p>These credits go to production companies, not to individual Editors. They matter because they decide where work lands, and some target post directly: BC\'s DAVE credit covers post-production and VFX labour, and Saskatchewan adds a bonus for post done in-province.</p>'
         '<div class="tw"><table><thead><tr><th>Where</th><th>Program and headline rates, as reported</th><th>Official links</th></tr></thead><tbody>'
