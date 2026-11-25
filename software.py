@@ -75,7 +75,7 @@ VFX = [
 # so a visitor's browser does not contact YouTube until they click. Added from titles and channel names; not every claim in a video is checked.
 VIDEOS = [
     ("Avid's Ready to Edit helps editors sync media, transcribe and align dialogue, and organize bins", "Avid", "Official",
-     "Ready to Edit is a new Media Composer 2026.8 feature, so this is the maker explaining its own tool.", "https://www.youtube.com/watch?v=fsgiOpNZDEM"),
+     "Ready to Edit is the agentic tool Avid previewed at IBC 2026, so this is the maker explaining its own tool.", "https://www.youtube.com/watch?v=fsgiOpNZDEM"),
     ("DaVinci Resolve Motion Graphics will never be the same...", "MrAlexTech", "Creator's opinion",
      "Resolve 21 added a large set of motion graphics tools to Fusion. This is one creator's take on them, not an official source.", "https://www.youtube.com/watch?v=Txilg-667Ac"),
 ]

@@ -246,7 +246,7 @@ def to_french(page, pairs=None, title=None):
     return res
 
 
-FR_PAGES = {"index.html": "fr.html", "funding.html": "fr-funding.html", "stats.html": "fr-stats.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
+FR_PAGES = {"index.html": "fr.html", "funding.html": "fr-funding.html", "stats.html": "fr-stats.html", "software.html": "fr-software.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
 
 
 def localize_links(page):
