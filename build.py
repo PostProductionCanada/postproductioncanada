@@ -430,7 +430,7 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/funding.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/stats.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/specs.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/digital-assistant-editor.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cinematographers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/composers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
+        f'<url><loc>{SITE_URL}/</loc><lastmod>{now.date()}</lastmod><changefreq>hourly</changefreq></url><url><loc>{SITE_URL}/contact.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/awards.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/documentary.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/wellbeing.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/green-post.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cut-in-canada.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/vibe-cutting.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/canadians.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/funding.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/stats.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/unions.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/software.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/specs.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/digital-assistant-editor.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/cinematographers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/composers.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-stats.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-funding.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr-schools.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/fr.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/sound.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/music-supervisors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/networking.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/buzz.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/editors.html</loc><lastmod>{now.date()}</lastmod></url><url><loc>{SITE_URL}/status-of-the-artist.html</loc><lastmod>{now.date()}</lastmod></url></urlset>')
     import statuspage
     lf = re.search(r'points="([^"]+)"', (ROOT / "art" / "flag.svg").read_text()).group(1)
     from urllib.parse import quote as _q
@@ -464,7 +464,18 @@ def main():
     import unions
     (OUT / "unions.html").write_text(unions.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import stats
-    (OUT / "stats.html").write_text(stats.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    import fr_stats
+    _st = stats.render(_leaf, _fav, now.strftime("%Y-%m-%d"))
+    _st = _st.replace("</div></nav>", '<a href="fr-stats.html" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1)
+    _st = _st.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/fr-stats.html"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/stats.html"></head>', 1)
+    (OUT / "stats.html").write_text(_st, encoding="utf-8")
+    _sd = now.strftime("%Y-%m-%d")
+    _sp = fr_stats.PAIRS + [(fr_stats.FOOTER[0].format(d=_sd), fr_stats.FOOTER[1].format(d=_sd))]
+    _fr.ATTR.update(fr_stats.ATTR)
+    _sfr = _fr.localize_links(_fr.to_french(_st, _sp, fr_stats.TITLE))
+    _sfr = _sfr.replace('<a href="fr-stats.html" hreflang="fr" lang="fr" title="Version française">FR</a>', '<a href="stats.html" hreflang="en" lang="en" title="English version">EN</a>', 1)
+    _sfr = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{SITE_URL}/fr-stats.html">', _sfr)
+    (OUT / "fr-stats.html").write_text(_sfr.replace("<body>", "<body>" + _bfr, 1), encoding="utf-8")
     import didyouknow
     _dyk = [i for i in items if didyouknow.STUDIO_RE.search(i["title"] + " " + i.get("excerpt", ""))]
     (OUT / "cut-in-canada.html").write_text(didyouknow.render(_leaf, _fav, now.strftime("%Y-%m-%d"), _dyk), encoding="utf-8")
@@ -587,6 +598,12 @@ def main():
     _i = _t.rfind("</main>")
     _t = _t[:_i] + _fr.to_french(_t[_i:], _pp)  # footer and floating button are added after the first pass
     _p.write_text(_t.replace("</div></nav>", '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a></div></nav>', 1), encoding="utf-8")
+    _p = OUT / "stats.html"; _t = _p.read_text(encoding="utf-8")
+    _p.write_text(_t.replace("</div></nav>", '<a href="fr-stats.html" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1), encoding="utf-8")
+    _p = OUT / "fr-stats.html"; _t = _p.read_text(encoding="utf-8")
+    _i = _t.rfind("</main>")
+    _t = _t[:_i] + _fr.to_french(_t[_i:], _sp)
+    _p.write_text(_t.replace("</div></nav>", '<a href="stats.html" hreflang="en" lang="en" title="English version">EN</a></div></nav>', 1), encoding="utf-8")
     import members
     members.write(OUT, ROOT, _leaf, _fav)
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")

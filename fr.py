@@ -20,7 +20,7 @@ EXACT = {
     "📉 since the 2023 record": "📉 depuis le record de 2023", "📈 vs 2019, before the pandemic": "📈 par rapport à 2019, avant la pandémie",
     "🧮 operating profit margin (6.0% in 2023)": "🧮 marge bénéficiaire d'exploitation (6,0 % en 2023)",
     "of Visual Effects and animation sales now in B.C., ahead of Quebec at 40.4%": "des ventes d'effets visuels et d'animation sont maintenant en C.-B., devant le Québec à 40,4 %", "of VFX and animation sales now in B.C., ahead of Quebec at 40.4%": "des ventes d'effets visuels et d'animation sont maintenant en C.-B., devant le Québec à 40,4 %",
-    "📊 See all the numbers and charts →": "📊 Voir tous les chiffres et graphiques (en anglais) →",
+    "📊 See all the numbers and charts →": "📊 Voir tous les chiffres et graphiques →",
     "Every figure is read from the publisher's own page and linked there.": "Chaque chiffre est lu sur la page de l'éditeur et lié à celle-ci.",
     "🔑 Subscribers": "🔑 Abonnés",
     "🆕 NEW": "🆕 NOUVEAU",
@@ -224,7 +224,7 @@ def to_french(page, pairs=None, title=None):
     return res
 
 
-FR_PAGES = {"index.html": "fr.html", "funding.html": "fr-funding.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
+FR_PAGES = {"index.html": "fr.html", "funding.html": "fr-funding.html", "stats.html": "fr-stats.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
 
 
 def localize_links(page):
