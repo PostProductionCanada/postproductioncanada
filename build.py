@@ -443,14 +443,16 @@ def main():
     _fund = _fund.replace("</div></nav>", f'<a href="fr-funding.html" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1)
     _fund = _fund.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/fr-funding.html"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/funding.html"></head>', 1)
     (OUT / "funding.html").write_text(_fund, encoding="utf-8")
-    _ffr = _fr.localize_links(_fr.to_french(_fund, fr_funding.PAIRS, fr_funding.TITLE))
+    _d = now.strftime("%Y-%m-%d")
+    _pp = fr_funding.PAIRS + [(f"Page built {_d}. Post Production Canada links to original publishers and official sources.", f"Page construite le {_d}. Post Production Canada renvoie aux éditeurs d'origine et aux sources officielles.")]
+    _ffr = _fr.localize_links(_fr.to_french(_fund, _pp, fr_funding.TITLE))
     for _a, _b in fr_funding.SCRIPT_FIXES:
         _ffr = _ffr.replace(_a, _b)
     _ffr = _ffr.replace('<a href="funding.html" hreflang="fr" lang="fr" title="Version française">FR</a>', '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a>', 1)
     _ffr = _ffr.replace('<a href="fr-funding.html" hreflang="fr" lang="fr" title="Version française">FR</a>', '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a>', 1)
     _ffr = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{SITE_URL}/fr-funding.html">', _ffr)
     _bfr = ('<div style="background:#14161a;color:#ffcc33;font:13px ui-sans-serif,-apple-system,sans-serif;padding:8px 16px;text-align:center">'
-            'Traduction préliminaire : seul le répertoire des organismes est traduit; le reste de la page est encore en anglais. Une erreur? '
+            'Traduction préliminaire, en cours de révision. Une erreur? '
             '<a style="color:#ffcc33" href="mailto:hello@postproductioncanada.ca?subject=Traduction">Dites-le-nous</a>.</div>')
     (OUT / "fr-funding.html").write_text(_ffr.replace("<body>", "<body>" + _bfr, 1), encoding="utf-8")
     import editors, shutil
@@ -582,6 +584,8 @@ def main():
     _p = OUT / "funding.html"; _t = _p.read_text(encoding="utf-8")
     _p.write_text(_t.replace("</div></nav>", '<a href="fr-funding.html" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1), encoding="utf-8")
     _p = OUT / "fr-funding.html"; _t = _p.read_text(encoding="utf-8")
+    _i = _t.rfind("</main>")
+    _t = _t[:_i] + _fr.to_french(_t[_i:], _pp)  # footer and floating button are added after the first pass
     _p.write_text(_t.replace("</div></nav>", '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a></div></nav>', 1), encoding="utf-8")
     import members
     members.write(OUT, ROOT, _leaf, _fav)
