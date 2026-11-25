@@ -36,7 +36,7 @@ SCREEN_RE = re.compile(
     r"cinematograph\w*|director\w*|actor\w*|actra|iatse|dgc|telefilm|cmf|netflix|disney|paramount|"
     r"documentar\w+|festival|tiff|box office|sound|audio|colou?r|davinci|avid|adobe|content|crew|"
     r"tax credit|soundstage|set|shoot\w*|casting|screenwrit\w+|writers?)\b", re.I)
-SOURCE_EXCLUDE = {"StudioDaily", "Britannica", "Harvard Business Review", "Honest Reporting Canada", "Moomoo", "Investing.com Canada", "Drive Tesla Canada"}
+SOURCE_EXCLUDE = {"StudioDaily", "Britannica", "Harvard Business Review", "Honest Reporting Canada", "Moomoo", "Investing.com Canada", "Drive Tesla Canada", "autoevolution"}
 EXCLUDE_RE = re.compile(
     r"\b(adult (star|film|performer|entertainment)|porn\w*|onlyfans|xxx|radio stations?|earnings|tsx|nasdaq|stock\w*|shares|ammunition|air defen[cs]e|tariffs?|"
     r"auto industry|mortgage|real estate|hockey|nhl|wildfire|weather forecast|horoscope|crypto\w*|"
