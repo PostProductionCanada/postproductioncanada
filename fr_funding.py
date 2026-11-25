@@ -275,3 +275,19 @@ REST = [
     ("Producing in Canada (Dentons)", "Producing in Canada (Dentons, en anglais)"),
 ]
 PAIRS += REST
+CHG = [
+    ("🔔 What changed", "🔔 Ce qui a changé"),
+    ("Funding and tax credit changes that matter to post, Visual Effects and animation, newest first. Each line links to the page we read.",
+     "Les changements de financement et de crédits d'impôt qui touchent la postproduction, les effets visuels et l'animation, du plus récent au plus ancien. Chaque ligne renvoie à la page que nous avons lue."),
+    ("Nov 24, 2026.", "24 nov. 2026."), ("Nov 8, 2026.", "8 nov. 2026."), ("2026-27.", "2026-2027."),
+    ("Policy Options published an analysis of the $600 million. It reports the minister's position that investment will be adjusted once the new CRTC rules are final, and its author says the full amount may not last. (",
+     "Policy Options a publié une analyse des 600 millions de dollars. Elle rapporte la position du ministre selon laquelle l'investissement sera ajusté une fois les nouvelles règles du CRTC finalisées, et son auteur affirme que la totalité du montant pourrait ne pas durer. ("),
+    ("Canadian Heritage published how the $600 million is divided: seven recipients, led by $213.4M for the Canada Media Fund. (",
+     "Patrimoine canadien a publié la répartition des 600 millions de dollars : sept bénéficiaires, avec le Fonds des médias du Canada en tête (213,4 M$). ("),
+    ("Canadian Heritage backgrounder", "Document d'information de Patrimoine canadien"),
+    ("Ontario Creates' business plan sets an 84-calendar-day (12-week) service standard for processing tax credits. Across all its tax credits, the average in 2024-25 was 35.6 weeks. (",
+     "Le plan d'affaires d'Ontario Creates fixe une norme de service de 84 jours civils (12 semaines) pour le traitement des crédits d'impôt. Pour l'ensemble de ses crédits d'impôt, la moyenne en 2024-2025 était de 35,6 semaines. ("),
+    ("Ontario Creates business plan", "Plan d'affaires d'Ontario Creates"),
+]
+PAIRS += CHG
+

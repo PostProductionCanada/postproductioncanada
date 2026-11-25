@@ -95,6 +95,8 @@ PAIRS = [
     ("We publish a figure only if we read it", "Nous ne publions un chiffre que si nous l'avons lu sur la page de l'éditeur, et cette page est liée à côté. Nous n'estimons, ne projetons ni n'arrondissons rien. Lorsque nous calculons nous-mêmes quelque chose, comme un reste, le graphique indique « notre calcul ». Lorsqu'une page omet quelque chose, nous l'omettons aussi. Les chiffres ont été lus le 21 novembre 2026."),
     ("The post-production numbers are Statistics Canada's biennial survey", "Les chiffres de postproduction proviennent de l'enquête biennale de Statistique Canada, dont les données de 2021 et de 2023 ont été révisées. La prochaine diffusion sur la postproduction est prévue pour l'automne 2028. Une erreur? Écrivez à"),
     ("with the page that shows it.", "en indiquant la page qui la montre."),
+    ("Funding and tax credit changes are logged in the", "Les changements de financement et de crédits d'impôt sont consignés dans la"),
+    ("What changed box on our Funding page", "case « Ce qui a changé » de notre page sur le financement"),
     ("📚 Sources", "📚 Sources (pages en anglais)"),
     ("· Statistics Canada, The Daily, released Oct. 9, 2026", "· " + SQ + ", publié le 9 oct. 2026"),
     ("· Statistics Canada (the full data behind the release)", "· Statistique Canada (les données complètes derrière la publication)"),

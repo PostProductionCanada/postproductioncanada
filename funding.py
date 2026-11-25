@@ -28,6 +28,21 @@ ALLOC = [
     ("Canada History Fund", "Audiovisual programming and related costs.", "Up to $5M"),
 ]
 
+# What changed: newest first. Add a line only after reading the page it links to, and only if it bears on post, Visual Effects or animation.
+# (date as shown, what happened, link label, url)
+CHANGES = [
+    ("Nov 24, 2026.", "Policy Options published an analysis of the $600 million. It reports the minister's position that investment will be adjusted once the new CRTC rules are final, and its author says the full amount may not last.", "Policy Options", POLICY_OPTIONS),
+    ("Nov 8, 2026.", "Canadian Heritage published how the $600 million is divided: seven recipients, led by $213.4M for the Canada Media Fund.", "Canadian Heritage backgrounder", BACKGROUNDER),
+    ("2026-27.", "Ontario Creates' business plan sets an 84-calendar-day (12-week) service standard for processing tax credits. Across all its tax credits, the average in 2024-25 was 35.6 weeks.", "Ontario Creates business plan", "https://www.ontariocreates.ca/uploads/Bar/Business-Plan/English/OC_Business-Plan_EN_2026-27.pdf"),
+]
+
+
+def changes_box():
+    rows = "".join(f'<li><b>{e(d)}</b> {e(t)} (' + lk(l, u) + ')</li>' for d, t, l, u in CHANGES)
+    return ('<div class="box" id="changes"><h2 style="margin-top:0">🔔 What changed</h2>'
+            '<p class="note">Funding and tax credit changes that matter to post, Visual Effects and animation, newest first. Each line links to the page we read.</p>'
+            '<ul>' + rows + '</ul></div>')
+
 
 def alloc_rows():
     return "".join(f'<tr><th scope="row">{e(r)}</th><td>{e(d)}</td><td style="white-space:nowrap"><b>{e(a)}</b></td></tr>' for r, d, a in ALLOC)
@@ -70,7 +85,7 @@ def render(leaf, favicon, updated):
         '<h1>💰 Funding and Tax Credits</h1>'
         '<p class="lede">Where Canadian screen money comes from and where it lands. Researched from public sources, listed at the bottom. This is information, not legal or tax advice.</p>'
         '<p><a href="#agencies">Jump to the funding agencies directory ↓</a></p>'
-        + money_section() +
+        + changes_box() + money_section() +
         agencies.section() +
         '<h2>Production tax credits, federal and by province</h2>'
         '<p>These credits go to production companies, not to individual Editors. They matter because they decide where work lands, and some target post directly: BC\'s DAVE credit covers post-production and VFX labour, and Saskatchewan adds a bonus for post done in-province.</p>'

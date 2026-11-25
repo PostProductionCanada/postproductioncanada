@@ -198,6 +198,7 @@ def method():
             'When a page leaves something out, we leave it out too. ' 'Figures were read on ' + e(AS_OF) + '.</p>'
             '<p class="note" style="margin:0">The post-production numbers are Statistics Canada\'s biennial survey, with 2021 and 2023 data revised. The next post release is scheduled for fall 2028. '
             'Spot an error? Email <a href="mailto:hello@postproductioncanada.ca?subject=Stats">hello@postproductioncanada.ca</a> with the page that shows it.</p></div>'
+            '<p class="note" style="margin:10px 0 0">Funding and tax credit changes are logged in the <a href="funding.html">What changed box on our Funding page</a>.</p>'
             '<h2>📚 Sources</h2><ul class="src">'
             '<li><a href="' + e(STATCAN) + '" target="_blank" rel="noopener">Film, television and video post-production, 2025</a> · Statistics Canada, The Daily, released Oct. 9, 2026</li>'
             '<li><a href="' + e(STATCAN_TABLE) + '" target="_blank" rel="noopener">Table 21-10-0066-01</a> · Statistics Canada (the full data behind the release)</li>'
