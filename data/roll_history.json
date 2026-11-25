@@ -1,20 +1,4 @@
 {
- "2026-11-12": {
-  "date": "2026-11-12",
-  "day": "THU NOV 12",
-  "items": [
-   {
-    "title": "Blackmagic Ambisonic Microphone Announced – 7th Order Ambisonics, 108 MEMS Microphones, Single USB-C Cable",
-    "url": "https://www.cined.com/blackmagic-ambisonic-microphone-announced-7th-order-ambisonics-108-mems-microphones-single-usb-c-cable/",
-    "source": "CineD",
-    "category": "audio",
-    "prov": [],
-    "canada": false,
-    "date": "Nov 12"
-   }
-  ],
-  "reconstructed": true
- },
  "2026-11-13": {
   "date": "2026-11-13",
   "day": "FRI NOV 13",
@@ -695,6 +679,72 @@
     ],
     "canada": true,
     "date": "Nov 22"
+   }
+  ],
+  "reconstructed": false
+ },
+ "2026-11-24": {
+  "date": "2026-11-24",
+  "compiled": "8:20 AM ET",
+  "day": "TUE NOV 24",
+  "items": [
+   {
+    "title": "Toronto Film School Celebrates Class of 2026 with a Call to Take Chances and Embrace the Unexpected",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONnE1SnVpR3E3MjVPeWl1UGk0NVp1N2wzNndGTjc0X1RRbXhzc2xLTHd5ZDM4VVNNODVuODFfT2ZPZExUY205SzBaNW9QSTQzWTlBdGdFMVFDQ0Z3R2lTYnpVS2F0cHp0d1cwRFY2dEhkY1lBdGJ2THhfNGhUMmZtdVFTZ0Y1N2RFd3lqaW1vYk1UUnpaWVNGa1dxQTVnRW5aVlI1ME55T2ZpcWZmOVo4cFdFUnNRNWpHVHNBUHk3NWVpSFhQdHROZWtyOE9GYXZXN0RiTQ?oc=5",
+    "source": "Toronto Film School",
+    "category": "canada",
+    "prov": [
+     "ON"
+    ],
+    "canada": true,
+    "date": "Nov 23"
+   },
+   {
+    "title": "SCRUTINY | The Canada Ireland Foundation/Druid Production Of Endgame Is A Real Joy",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWGF1aERlUUwxT05UVGZQWkptOWt1M09ncmFRWWcyWmpGdEU2dlcyX1Z0NkZ1Y2ZleHFwMW80WF9oR2NZV0FFeS0tZ3h2MlNSNFhJdm1mVlRjcWxWNzgzSEl4a2IwT0JnLUxUYzVlTW5od2xhd3VBMmRRODZKOF8yQ1BqM01yMGFUQmktSWRSVjNFWGpFS2RpeExTZklZNEx2bERQMW8yTXFwRFd2Y3htRl9HZzNFa0NVV1ZQMlpmSlY4WjVaOFFIa04ySVlZdw?oc=5",
+    "source": "The New Classical FM",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 23"
+   },
+   {
+    "title": "TAF Industries and Draganfly Plan Drone Production in Canada - Oj",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWU5fTm8wVUtGX0M0cF80QlBWTlQ0eVZRdW1pU29SdlJOZXl3YloxZUV0TTZyMVRJT0kxQXNBNHc1SUNyc1dkRmlTX3VQZlJuSmlibXBHOFBwS2VFWWRLM19Rb055OTloOWo1QTNacTF3aFYtdFdLUHpQZ3pHNVpFZUhvX19HaGdtSTB0N1czeF84MGFzWWVkYkR1R3dDRWkyUWVtbWpBMUg2dw?oc=5",
+    "source": "Odessa Journal",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 23"
+   },
+   {
+    "title": "Be With Zee copro structure led to gentle show that crosses borders",
+    "url": "https://playbackonline.ca/2026/11/23/be-with-zee-copro-structure-led-to-gentle-show-that-crosses-borders/",
+    "source": "Playback",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 23"
+   },
+   {
+    "title": "Crave renews folklore thriller Yaga for season two",
+    "url": "https://playbackonline.ca/2026/11/23/crave-renews-folklore-thriller-yaga-for-season-two/",
+    "source": "Playback",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 23"
+   },
+   {
+    "title": "Manitoba faces risk as U.S. proposes new film tax credit",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNQ1lMRU1EbWdYWlE2OV91dnplRmdCSDh5OE5heWlYd1hycE9kVWhUOTBoWjZtVDdLbnJpbGdBYlc3SWxMTElGbDhxa2xjNlcxUDk4QkY1TmUtcGR1NktQZFlTV0xDTExWTkFXZFFKdWFTSC1qbEZ4Njg2cVJ6eDhhUkxnYmxheEM1Zm1GRms4eUthVUg4N0hBTmVQT0V3cXJvQ0R3am1RUTdyRUFxWnhwTm0yZG9GRms2N1I5cThoMHZ4N0VOMDBxUzJWZWxvZnhIcGcyZHN3VFN1ckdHR0x4Vg?oc=5",
+    "source": "Winnipeg Sun",
+    "category": "business",
+    "prov": [
+     "MB"
+    ],
+    "canada": true,
+    "date": "Nov 23"
    }
   ],
   "reconstructed": false
