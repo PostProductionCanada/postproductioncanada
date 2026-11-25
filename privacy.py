@@ -42,7 +42,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <p>Short version: we collect almost nothing, we don't run ads, and we never sell anything about you.</p>
 
 <h2>Visiting the site</h2>
-<p>This site counts visits with a privacy-friendly tool that uses no cookies and does not build profiles of individual visitors. It records things like which pages are viewed, where visitors came from and what kind of browser they use. There are no accounts, no ads and no advertising trackers.</p>
+<p>This site counts visits with Cloudflare Web Analytics, a privacy-friendly tool that uses no cookies and does not build profiles of individual visitors. It records things like which pages are viewed, where visitors came from and what kind of browser they use. There are no accounts, no ads and no advertising trackers.</p>
 
 <h2>The newsletter</h2>
 <p>If you subscribe, we collect your email address so we can send you the newsletter, and nothing else. By subscribing you agree to receive it. Your address is held by the email service we use to send it, and it is used only for the newsletter. We do not sell or share it. Every email has an unsubscribe link, and we stop sending within 10 business days of your request, usually immediately.</p>
