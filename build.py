@@ -43,7 +43,7 @@ EXCLUDE_RE = re.compile(
     r"gold|silver|copper|lithium|mining|oil and gas|oil & gas|solar cell\w*|climate systems|stellantis|agnico|capital markets|royalties provides|"
     r"robotics|ghg emissions|mega man|honest ?reporting|quebecor|telus|dill pickle|rushtok|gen z|crisis playbook|pr roundup|measuring clicks|"
     r"audi ceo|campus rituals|recruitment strategy|chatgpt ads|earphones|earpods|britannica|streetcar named desire|mass production|2nm|casting calls|twitter reviews|"
-    r"rachel bilson|scott foley|jingle bells|panchjanya|sanatan|instagram launches|film quote of the day|movies,? ranked|stars who almost|every movie that beat|worldbuilding|screenplay|anxiety draft|pro writers|movies that inspired|grand theft auto|gta vi)\b", re.I)
+    r"british columbia film and television tax credit announcement|rachel bilson|scott foley|jingle bells|panchjanya|sanatan|instagram launches|film quote of the day|movies,? ranked|stars who almost|every movie that beat|worldbuilding|screenplay|anxiety draft|pro writers|movies that inspired|grand theft auto|gta vi)\b", re.I)
 
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
