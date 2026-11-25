@@ -94,6 +94,60 @@ CHAIN = [
     ("5", "Notes and finals", "Notes go back to the vendor. Final shots are checked and sent to the colour finish (the DI), with the right version of every shot."),
 ]
 
+# AI chart: (editor, [what ships now], [announced or previewed], [(label, url)]). Read from the makers' own pages (plus trade reports where marked) on AI_AS_OF.
+AI_AS_OF = "November 25, 2026"
+AI_ROWS = [
+    ("🅰️ Avid Media Composer",
+     ["ScriptSync AI and PhraseFind AI: match transcripts to audio and search spoken dialogue.",
+      "2026.8 (Aug 31, 2026): PhraseFindAI Multicam Auto Cut builds an editable first pass of a multicam sequence from speaker assignments in the transcript.",
+      "Ready to Play (Nov 10, 2026): an extension built with Google Gemini. Create Video makes a clip from a prompt or still, Analyze Video adds descriptions to clip metadata, and Modify Video makes a changed copy. Media is processed by Google services. It does not edit your sequence by itself."],
+     ["Avid says more Ready to Play releases are \"coming soon\" and gives no details.",
+      "Ready to Edit, an agentic tool to sync, transcribe and organize a project before cutting, was previewed at IBC 2026. We did not find a release date.",
+      "Trade press reported previews of a Content Core panel, a Gemini panel and browser-based editing in Avid Content Core (CineD)."],
+     [("Avid: Media Composer", "https://www.avid.com/media-composer"), ("Avid: Ready to Play", "https://www.avid.com/resource-center/whats-new-ready-to-play-avid-media-composer"),
+      ("Avid: 2026.8", "https://www.avid.com/resource-center/whats-new-avid-media-composer-2026-8"), ("CineD on 2026.8 and IBC previews", "https://www.cined.com/avid-media-composer-2026-8-coming-soon-ai-multicam-cutting-an-uncapped-free-tier-and-a-bin-locking-shake-up")]),
+    ("🅿️ Adobe Premiere",
+     ["AI Assistant panel (beta): understands your project and helps with complex or repetitive tasks.",
+      "Generative Media Tool: makes images, music and soundscapes from a prompt. Generate Soundscape builds ambience and sound effect layers from your video.",
+      "Separate Crosstalk (Adobe Firefly audio), Enhance Audio and Auto Ducking for dialogue and mixes.",
+      "Object Mask finds and tracks objects and people with AI. Generative Extend makes the extra frames a transition needs.",
+      "Content Credentials can be added on export, including generative AI use."],
+     ["Adobe said on June 18, 2026 that it is rolling its creative agent out across Premiere, Photoshop, Illustrator, InDesign and Frame.io (public beta) and After Effects (private beta).",
+      "Adobe said in April 2026 that Firefly AI Assistant, which runs multi-step workflows across Creative Cloud apps including Premiere, was \"coming soon\" to the Firefly app."],
+     [("Adobe: what's new in Premiere", "https://helpx.adobe.com/premiere/desktop/whats-new/whats-new.html"), ("Adobe news, June 18, 2026", "https://news.adobe.com/news/2026/06/adobe-unveils-major-expansion"),
+      ("Adobe blog, April 15, 2026", "https://blog.adobe.com/en/publish/2026/04/15/adobe-extends-leadership-video-unleashing-new-ai-powered-creation-firefly-reinventing-color-editors-in-premiere")]),
+    ("🟦 DaVinci Resolve",
+     ["DaVinci AI Neural Engine (a Studio feature): face recognition, object detection, smart reframing, Speed Warp retiming, Super Scale, auto colour and colour matching, Magic Mask and text-based editing.",
+      "Resolve 21 added AI IntelliSearch (find people, objects and spoken words in clips), AI Speech Generator (a voice from text, or from a 10-second sample), AI CineFocus (change focus and depth of field), face tools (Age Transformer, Reshaper, Blemish Removal), SlateFinder and SlateID (read slates into clip metadata), UltraSharpen and Motion Deblur.",
+      "IntelliScript builds timelines from a script, and now accepts Final Draft or plain text."],
+     ["We found no AI roadmap from Blackmagic. It announces tools with each release: Resolve 21 was announced as a beta at NAB in April 2026."],
+     [("Blackmagic: DaVinci Resolve", "https://www.blackmagicdesign.com/products/davinciresolve"), ("Blackmagic: what's new", "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew"),
+      ("Blackmagic forum: Resolve 21 release notes", "https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=234676"), ("CineD on Resolve 21", "https://www.cined.com/davinci-resolve-21-announced-new-photo-page-eight-new-ai-tools-tethered-camera-controls-and-more")]),
+    ("🍎 Final Cut Pro",
+     ["Magnetic Mask isolates people and objects without a green screen. Transcribe to Captions makes captions from speech.",
+      "Transcript Search and Visual Search find moments by typing a phrase or describing an object or action (Apple silicon needed; Transcript Search is U.S. English only).",
+      "Beat Detection, Enhance Light and Color (machine learning), Smooth Slo-Mo (AI-enhanced) and Voice Isolation.",
+      "Oct 27, 2026: built-in MotionVFX, including AI rotoscoping and intelligent 3D camera and surface tracking, plus text-to-image generation inside a project (Apple does not name the model, per CineD)."],
+     ["We found no announced AI roadmap for Final Cut Pro. Apple's Oct 27 release added assistants to Logic Pro, Keynote, Pages and Numbers, not to Final Cut Pro."],
+     [("Apple: Final Cut Pro", "https://www.apple.com/final-cut-pro"), ("Apple newsroom, Oct 27, 2026", "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools"),
+      ("Apple: Final Cut Pro release notes", "https://support.apple.com/en-us/102825"), ("CineD on the October update", "https://www.cined.com/apple-creator-studio-update-announced-motionvfx-in-final-cut-pro-generate-fill-cinematic-mode-encoding")]),
+]
+
+
+def ai_chart():
+    def ul(items):
+        return "<ul style=\"margin:0;padding-left:18px\">" + "".join("<li>" + e(i) + "</li>" for i in items) + "</ul>"
+    rows = "".join(
+        '<tr><th scope="row">' + e(n) + '</th><td>' + ul(now) + '</td><td>' + ul(nxt) + '</td><td>'
+        + " · ".join('<a href="' + e(u) + '" target="_blank" rel="noopener">' + e(l) + '</a>' for l, u in links) + '</td></tr>'
+        for n, now, nxt, links in AI_ROWS)
+    return ('<h2 id="ai">🤖 AI in the main editors</h2>'
+            '<p>What each picture editor does with AI today, and what its maker has said is coming. &ldquo;Coming&rdquo; means only what the maker or the trade press has said in public: it is not a promise, and dates are given only where the maker gave one. '
+            'Read from the makers\' own pages on ' + e(AI_AS_OF) + ', except where a trade report is named. AI features change with nearly every release, so check the maker\'s page before you plan around one.</p>'
+            '<div class="tw"><table><thead><tr><th>Editor</th><th>AI you can use now</th><th>Announced or previewed</th><th>Sources</th></tr></thead><tbody>' + rows + '</tbody></table></div>'
+            '<p class="note" style="margin-top:10px">Lightworks is not in this chart because we did not check its AI features. Spot a missing feature or a newer announcement? Email '
+            '<a href="mailto:hello@postproductioncanada.ca?subject=Software%20AI">hello@postproductioncanada.ca</a> with the maker\'s page.</p>')
+
 
 def _row(items):
     out = ""
@@ -124,6 +178,7 @@ def render(leaf, favicon, updated):
             + '<div class="box"><b>About Lightworks.</b> It is often remembered as Canadian, but every source we found says it was created in the UK in 1989 and first appeared in a London facility in 1991. We could not find a source for a Canadian origin. If you have one, send it to '
               '<a href="mailto:hello@postproductioncanada.ca?subject=Lightworks">hello@postproductioncanada.ca</a> and we will add it.</div>'
             + '<h2 id="now">🎬 Picture editing</h2>' + _row(PICTURE)
+            + ai_chart()
             + '<h2>🔊 Sound</h2>' + _row(SOUND)
             + '<h2>✨ Visual effects</h2><p class="note">🇨🇦 marks software with Canadian roots: Discreet Logic (Montréal), eyeon (Toronto), Side Effects (Toronto) and Alias (Toronto).</p>' + _row(VFX)
             + '<h2>📺 Watch</h2><p class="note">Links open YouTube in a new tab. Nothing loads from YouTube until you click. Know a good video? Send it to hello@postproductioncanada.ca.</p>' + vids + videos.shelf()
