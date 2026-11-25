@@ -33,7 +33,6 @@ ALLOC = [
 CHANGES = [
     ("Nov 24, 2026.", "Policy Options published an analysis of the $600 million. It reports the minister's position that investment will be adjusted once the new CRTC rules are final, and its author says the full amount may not last.", "Policy Options", POLICY_OPTIONS),
     ("Nov 8, 2026.", "Canadian Heritage published how the $600 million is divided: seven recipients, led by $213.4M for the Canada Media Fund.", "Canadian Heritage backgrounder", BACKGROUNDER),
-    ("2026-27.", "Ontario Creates' business plan sets an 84-calendar-day (12-week) service standard for processing tax credits. Across all its tax credits, the average in 2024-25 was 35.6 weeks.", "Ontario Creates business plan", "https://www.ontariocreates.ca/uploads/Bar/Business-Plan/English/OC_Business-Plan_EN_2026-27.pdf"),
 ]
 
 
