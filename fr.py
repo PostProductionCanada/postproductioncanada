@@ -16,10 +16,10 @@ EXACT = {
     "Record": "Record", "year, 2023": "année 2023", "Quebec 49.0% → 40.7%": "Québec 49,0 % → 40,7 %", "British Columbia 28.7% → 36.8%": "Colombie-Britannique 28,7 % → 36,8 %",
     "All other provinces and territories 22.3% → 22.5%": "Toutes les autres provinces et territoires 22,3 % → 22,5 %",
     "Why it matters:": "Pourquoi c'est important :",
-    "📊 By the numbers": "📊 En chiffres", "💵 post revenue in 2025, Statistics Canada": "💵 revenus de postproduction en 2025, Statistique Canada",
+    "📊 By the numbers": "📊 En chiffres", "💵 post revenue in 2025, Statistics Canada": "💵 revenus de postproduction en 2025, Statistique Canada", "💵 Post Production revenue in 2025, Statistics Canada": "💵 revenus de postproduction en 2025, Statistique Canada", "💵 Post Production revenue, 2025": "💵 revenus de postproduction, 2025", "🎞️ Ontario productions in 2025 (383 in 2024)": "🎞️ productions en Ontario en 2025 (383 en 2024)", "🎮 video games contribution to Canada's GDP in 2024, industry association study": "🎮 contribution des jeux vidéo au PIB du Canada en 2024, étude de l'association de l'industrie",
     "📉 since the 2023 record": "📉 depuis le record de 2023", "📈 vs 2019, before the pandemic": "📈 par rapport à 2019, avant la pandémie",
     "🧮 operating profit margin (6.0% in 2023)": "🧮 marge bénéficiaire d'exploitation (6,0 % en 2023)",
-    "of VFX and animation sales now in B.C., ahead of Quebec at 40.4%": "des ventes d'effets visuels et d'animation sont maintenant en C.-B., devant le Québec à 40,4 %",
+    "of Visual Effects and animation sales now in B.C., ahead of Quebec at 40.4%": "des ventes d'effets visuels et d'animation sont maintenant en C.-B., devant le Québec à 40,4 %", "of VFX and animation sales now in B.C., ahead of Quebec at 40.4%": "des ventes d'effets visuels et d'animation sont maintenant en C.-B., devant le Québec à 40,4 %",
     "📊 See all the numbers and charts →": "📊 Voir tous les chiffres et graphiques (en anglais) →",
     "Every figure is read from the publisher's own page and linked there.": "Chaque chiffre est lu sur la page de l'éditeur et lié à celle-ci.",
     "🔑 Subscribers": "🔑 Abonnés",
@@ -114,7 +114,7 @@ ATTR = {
     "Toggle theme": "Changer de thème", "Morning Roll": "Rouleau du matin", "Past ten days of the Morning Roll": "Les dix derniers jours du Rouleau du matin", "Update clock": "Horloge de mise à jour",
     "Search stories": "Rechercher des articles", "Filter by province": "Filtrer par province", "Our picks": "Nos choix", "Sections": "Sections",
     "Search headlines — Resolve, Avid, Telefilm, Vancouver, tax credit…": "Rechercher des titres — Resolve, Avid, Téléfilm, Vancouver, crédit d'impôt…",
-    "Back to the home page": "Retour à l'accueil", "Back to the top": "Retour en haut de la page", "Back to the home page (the 2 beep)": "Retour à l'accueil",
+    "Search agencies: Alberta, games, short film, post...": "Rechercher des organismes : Alberta, jeux, court métrage, postproduction…", "Search funding agencies": "Rechercher des organismes de financement", "Back to the home page": "Retour à l'accueil", "Back to the top": "Retour en haut de la page", "Back to the home page (the 2 beep)": "Retour à l'accueil",
 }
 
 
@@ -224,7 +224,7 @@ def to_french(page, pairs=None, title=None):
     return res
 
 
-FR_PAGES = {"index.html": "fr.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
+FR_PAGES = {"index.html": "fr.html", "funding.html": "fr-funding.html", "networking.html": "fr-networking.html", "schools.html": "fr-schools.html"}
 
 
 def localize_links(page):

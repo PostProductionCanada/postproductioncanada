@@ -438,7 +438,21 @@ def main():
     _fav = logo.favicon()
     (OUT / "status-of-the-artist.html").write_text(statuspage.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
     import funding
-    (OUT / "funding.html").write_text(funding.render(_leaf, _fav, now.strftime("%Y-%m-%d")), encoding="utf-8")
+    _fund = funding.render(_leaf, _fav, now.strftime("%Y-%m-%d"))
+    import fr as _fr, fr_funding
+    _fund = _fund.replace("</div></nav>", f'<a href="fr-funding.html" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1)
+    _fund = _fund.replace("</head>", f'<link rel="alternate" hreflang="fr-CA" href="{SITE_URL}/fr-funding.html"><link rel="alternate" hreflang="en-CA" href="{SITE_URL}/funding.html"></head>', 1)
+    (OUT / "funding.html").write_text(_fund, encoding="utf-8")
+    _ffr = _fr.localize_links(_fr.to_french(_fund, fr_funding.PAIRS, fr_funding.TITLE))
+    for _a, _b in fr_funding.SCRIPT_FIXES:
+        _ffr = _ffr.replace(_a, _b)
+    _ffr = _ffr.replace('<a href="funding.html" hreflang="fr" lang="fr" title="Version française">FR</a>', '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a>', 1)
+    _ffr = _ffr.replace('<a href="fr-funding.html" hreflang="fr" lang="fr" title="Version française">FR</a>', '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a>', 1)
+    _ffr = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{SITE_URL}/fr-funding.html">', _ffr)
+    _bfr = ('<div style="background:#14161a;color:#ffcc33;font:13px ui-sans-serif,-apple-system,sans-serif;padding:8px 16px;text-align:center">'
+            'Traduction préliminaire : seul le répertoire des organismes est traduit; le reste de la page est encore en anglais. Une erreur? '
+            '<a style="color:#ffcc33" href="mailto:hello@postproductioncanada.ca?subject=Traduction">Dites-le-nous</a>.</div>')
+    (OUT / "fr-funding.html").write_text(_ffr.replace("<body>", "<body>" + _bfr, 1), encoding="utf-8")
     import editors, shutil
     cce_items = sorted(fetch({"name": "CCE", "url": "https://cceditors.ca/feed/", "category": "picture"})[1], key=lambda i: i["date"], reverse=True)
     vpa_items = sorted(fetch({"name": "VPA", "url": "https://vancouverpostalliance.com/feed/", "category": "canada"})[1], key=lambda i: i["date"], reverse=True)
@@ -564,6 +578,11 @@ def main():
             t_fr = t_fr.replace("<body>", "<body>" + _b2, 1)
             (OUT / _frn).write_text(t_fr, encoding="utf-8")
         f.write_text(t, encoding="utf-8")
+    # FR/EN switch links for the Funding page pair (the nav is filled in by the loop above)
+    _p = OUT / "funding.html"; _t = _p.read_text(encoding="utf-8")
+    _p.write_text(_t.replace("</div></nav>", '<a href="fr-funding.html" hreflang="fr" lang="fr" title="Version française">FR</a></div></nav>', 1), encoding="utf-8")
+    _p = OUT / "fr-funding.html"; _t = _p.read_text(encoding="utf-8")
+    _p.write_text(_t.replace("</div></nav>", '<a href="funding.html" hreflang="en" lang="en" title="English version">EN</a></div></nav>', 1), encoding="utf-8")
     import members
     members.write(OUT, ROOT, _leaf, _fav)
     (OUT / "CNAME").write_text("postproductioncanada.ca\n")
@@ -1379,7 +1398,7 @@ header{border-bottom:1px solid var(--line)}
 @media (min-width:900px){.bar{position:sticky;top:0}}.tabs{overflow:visible}@media (max-width:899px){.tabs.fold:not(.open){max-height:88px;overflow:hidden}}.tabmore{display:none;align-self:flex-start;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer}@media (max-width:899px){.tabmore{display:inline-block}}.tab[data-f="all"]{font-weight:700;border-width:2px}
 .tab{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
 .tab i{font-style:normal;color:var(--mute);margin-left:4px;font-size:12px}
-.tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab.on{background:#1f6bff;color:#fff;border-color:#1f6bff;box-shadow:0 0 0 2px rgba(31,107,255,.25)}
 .tab.on i{color:inherit;opacity:.7}
 @media (min-width:900px){
 .layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 26px;max-width:1300px;margin:0 auto;padding:0 16px;align-items:start}

@@ -186,7 +186,7 @@ def section_games():
 
 def kpis():
     return ('<div class="kpis">'
-            '<div class="kpi"><b>$2.4B</b><span>💵 post-production revenue, 2025</span></div>'
+            '<div class="kpi"><b>$2.4B</b><span>💵 Post Production revenue, 2025</span></div>'
             '<div class="kpi dn"><b>−14.7%</b><span>📉 vs the 2023 record</span></div>'
             '<div class="kpi up"><b>+18.7%</b><span>📈 vs 2019, before the pandemic</span></div>'
             '<div class="kpi"><b>6.7%</b><span>🧮 operating profit margin (6.0% in 2023)</span></div></div>')
@@ -229,18 +229,20 @@ def teaser():
             + '</div></div>'
             + legend([("Quebec 49.0% → 40.7%", QC), ("British Columbia 28.7% → 36.8%", BC), ("All other provinces and territories 22.3% → 22.5%", REST)]))
     return (CSS + '<style>.bigbtn{display:block;text-align:center;font-size:18px;font-weight:800;padding:16px 20px;border-radius:14px;background:var(--ink);color:var(--bg);text-decoration:none;margin:6px 0 4px}.bigbtn:hover{opacity:.88}'
-            '.kpis.xl{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.kpis.xl .kpi b{font-size:40px}.kpis.xl .kpi span{font-size:14px}'
+            '.kpis.xl{grid-template-columns:repeat(2,1fr)}.kpis.xl .kpi b{font-size:34px}.kpis.xl .kpi span{font-size:13px}@media (min-width:760px){.kpis.xl{grid-template-columns:repeat(5,1fr)}}'
             '.pies.big .pie svg{width:230px;height:230px}.pies.big .yr{font-size:20px}.hs3{margin:18px 0 4px;font-size:15px}</style>'
             '<section class="picks"><h2>📊 By the numbers</h2>'
             '<div class="kpis xl" style="margin:8px 0">'
-            '<div class="kpi"><b>$2.4B</b><span>💵 post revenue in 2025, Statistics Canada</span></div>'
+            '<div class="kpi"><b>$2.4B</b><span>💵 Post Production revenue in 2025, Statistics Canada</span></div>'
             '<div class="kpi dn"><b>−14.7%</b><span>📉 since the 2023 record</span></div>'
             '<div class="kpi up"><b>+18.7%</b><span>📈 vs 2019, before the pandemic</span></div>'
             '<div class="kpi"><b>6.7%</b><span>🧮 operating profit margin (6.0% in 2023)</span></div>'
-            '<div class="kpi"><b>41.7%</b><span>of VFX and animation sales now in B.C., ahead of Quebec at 40.4%</span></div>'
+            '<div class="kpi"><b>41.7%</b><span>of Visual Effects and animation sales now in B.C., ahead of Quebec at 40.4%</span></div>'
             '<div class="kpi"><b>$10.17B</b><span>🎬 Canadian film and TV production volume, up 4.6%</span></div>'
             '<div class="kpi dn"><b>181,360</b><span>👷 film and TV jobs in 2025–26, down 0.3%</span></div>'
-            '<div class="kpi"><b>35,268</b><span>🍁 Ontario film and TV jobs in 2025, with $2.7B for its economy</span></div></div>'
+            '<div class="kpi"><b>35,268</b><span>🍁 Ontario film and TV jobs in 2025, with $2.7B for its economy</span></div>'
+            '<div class="kpi"><b>363</b><span>🎞️ Ontario productions in 2025 (383 in 2024)</span></div>'
+            '<div class="kpi"><b>$5.1B</b><span>🎮 video games contribution to Canada\'s GDP in 2024, industry association study</span></div></div>'
             '<h3 class="hs3">🥧 Who does Canada\'s post work: share of national revenue</h3>' + pies +
             '<a class="bigbtn" href="stats.html">📊 See all the numbers and charts →</a>'
             '<p class="note" style="margin:6px 0 0">Every figure is read from the publisher\'s own page and linked there.</p></section>')
