@@ -12,6 +12,7 @@ e = html.escape
 BACKGROUNDER = ("https://www.canada.ca/en/canadian-heritage/news/2026/11/budget-2026-masters-of-our-destiny--backgrounder-"
                 "administration-and-implementation-of-600-million-targeted-support-for-canadas-audio-and-audiovisua.html")
 CP_YAHOO = "https://ca.finance.yahoo.com/news/ottawa-outlines-details-600m-cancon-184040035.html"
+POLICY_OPTIONS = "https://policyoptions.irpp.org/2026/11/canadian-content-funding"
 TELEFILM_FB = "https://www.facebook.com/telefilmcanada"
 CMF_SITE = "https://cmf-fmc.ca/"
 TELEFILM_SITE = "https://telefilm.ca/en"
@@ -49,6 +50,8 @@ def money_section():
         '<ul>'
         '<li><b>How long it lasts.</b> In June the government said it would provide $600 million in annual funding to replace payments from big streamers that the CRTC ordered under the Online Streaming Act. '
         'The Canadian Press reports the federal budget included only one year of the enhanced funding, and a government spokesperson said future amounts could vary once the new CRTC rules are final. (' + lk("Canadian Press, via Yahoo", CP_YAHOO) + ')</li>'
+        '<li><b>What an analyst says.</b> Policy Options (Nov 24) reports the minister\'s position that, "once the new CRTC rules are finalized, the level of government investment will be adjusted as appropriate." '
+        'Its author writes that the whole $600 million will not last, because it could be reduced by the amount streamers are required to reinvest in Canadian programming. (' + lk("Policy Options", POLICY_OPTIONS) + ')</li>'
         '<li><b>What it means for post.</b> The backgrounder does not name post-production. Most of the money goes to funds that pay for production and promotion, so the effect on post work will depend on how each fund writes its new programs. We have not seen those details yet.</li>'
         '<li><b>Telefilm.</b> Telefilm said on Nov 12 that its teams are mobilized to put the additional $68.5 million to work. (' + lk("Telefilm Canada on Facebook", TELEFILM_FB) + ') We will add details here once Telefilm publishes them.</li>'
         '</ul></div>'
@@ -80,6 +83,7 @@ def render(leaf, favicon, updated):
         '<h2>Sources</h2><ul>'
         '<li>' + lk("Budget 2026 backgrounder on the $600 million (Canadian Heritage)", BACKGROUNDER) + '</li>'
         '<li>' + lk("Ottawa outlines details of $600M for CanCon (Canadian Press, via Yahoo)", CP_YAHOO) + '</li>'
+        '<li>' + lk("Weighing Ottawa\'s $600-million alternative to the Netflix tax (Policy Options)", POLICY_OPTIONS) + '</li>'
         '<li>' + lk("Telefilm Canada on Facebook", TELEFILM_FB) + '</li>'
         '<li>' + lk("Tax credits and incentives across Canada (CMPA)", sp.CMPA_HUB) + '</li>'
         '<li>' + lk("Incentives by province (filmincanada.com, an independent guide)", "https://filmincanada.com/incentives/manitoba") + '</li>'
