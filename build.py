@@ -531,7 +531,7 @@ def main():
     (OUT / "buzz.html").write_text(buzz.render(_leaf, _fav, now.strftime("%Y-%m-%d"), now), encoding="utf-8")
     import base64 as _b64
     _logo = "data:image/jpeg;base64," + _b64.b64encode((ROOT / "art" / "cce-logo.jpg").read_bytes()).decode()
-    (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items, [i for i in items if i["category"] == "audio"][:8]).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
+    (OUT / "editors.html").write_text(editors.render(_leaf, _fav, now.strftime("%Y-%m-%d"), cce_items, vpa_items, [i for i in items if i["category"] == "audio" and FILMAUDIO_RE.search(i["title"]) and not NOT_FILMAUDIO_RE.search(i["title"])][:8]).replace('src="cce-logo.jpg"', 'src="' + _logo + '"'), encoding="utf-8")
     shutil.copy(ROOT / "art" / "cce-logo.jpg", OUT / "cce-logo.jpg")
     (OUT / "flag.svg").write_text((ROOT / "art" / "flag.svg").read_text())
     (OUT / "build.json").write_text(json.dumps({"built": now.isoformat()}))
@@ -803,6 +803,11 @@ PROV_RE = {k: re.compile(v, re.I if k != "BC" else 0) for k, v in PROVS.items()}
 PROV_RE["BC"] = re.compile(PROVS["BC"], re.I)
 PROV_LABEL = {"BC": "British Columbia", "AB": "Alberta", "SK": "Saskatchewan", "MB": "Manitoba", "ON": "Ontario",
               "QC": "Québec", "ATL": "Atlantic Canada", "TERR": "Territories"}
+# The Editors page lists film and TV audio only: sound mixing, editing, design, dialogue, Foley, ADR, soundtracks, post audio tools.
+FILMAUDIO_RE = re.compile(r"\b(sound (mix\w*|design\w*|edit\w*|effects?|supervis\w*|team|department|crew|post|stage)|re-?recording|audio post|post[- ]production audio|"
+                          r"dialogue|foley|adr|dolby|atmos|soundtrack|film audio|film sound|movie sound|fairlight|pro tools|mixers?|mixing|"
+                          r"supervising sound|location sound|production sound|boom operator|scoring|film score|composers?|audio mixing|audio editing)\b", re.I)
+NOT_FILMAUDIO_RE = re.compile(r"\b(cricket|t20\w*|football|soccer|hockey|nfl|nba|greenlights?|series b|s-1|cfo|stock|earnings|casino)\b", re.I)
 AUDIO_RE = re.compile(r"\b(audio|sound|mix(ing|er)?|microphones?|mic|dolby|atmos|loudness|podcast\w*|music|dialogue|foley|"
                       r"adr|dubbing|spatial|ambisonic|headphones?|speakers?|pro tools|reaper|ableton|aes)\b", re.I)
 VFX_RE = re.compile(r"\b(vfx|visual effects|animat\w+|composit\w+|nuke|houdini|unreal|cgi|3d|motion graphics|"
