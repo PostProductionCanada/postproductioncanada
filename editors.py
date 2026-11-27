@@ -316,6 +316,16 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 40px;colo
 <li>A clear plan for what comes next. Several sources say assisting and editing are different skills, so cut on your own time.</li>
 </ul></div>
 
+<h2 id="ai">Editors and AI: what one survey found</h2>
+<p>In November, Variety reported on a survey of 120 members of American Cinema Editors, which has about 1,200 members. Avid ran the survey. Avid makes Media Composer and Pro Tools. It covers American editors, not Canadian ones, and the company that sells editing tools did the asking. We include it because it is one of the few sets of numbers on how working editors use AI.</p>
+<div class="box"><ul>
+<li>77.5% use AI to some extent in post.</li>
+<li>The top uses are transcription (60%), audio cleanup (55%) and searching footage for specific shots (39.2%).</li>
+<li>Only 7.5% want AI to help assemble shots or rough cuts.</li>
+<li>Ethical, copyright and security concerns make up nearly half of what holds editors back from using AI.</li>
+</ul></div>
+<p class="note">Source: <a href="https://variety.com/2026/biz/news/surveyed-ace-editors-using-ai-avid-data-finds-1236947004" target="_blank" rel="noopener">Variety</a>.</p>
+
 <h2 id="resolve">DaVinci Resolve Studio: the latest</h2>
 <p>Resolve 21.1 added AI assistant integration, and 21.1.2 is the newest point release. Here is a reading list of reviews, release notes and videos.</p>
 <h3>Articles and release notes</h3>
