@@ -1,67 +1,4 @@
 {
- "2026-11-14": {
-  "date": "2026-11-14",
-  "day": "SAT NOV 14",
-  "items": [
-   {
-    "title": "Canon’s Flagship 410MP 25K Full-Frame Sensor Samples Are Ready",
-    "url": "https://ymcinema.com/2026/11/14/anon-410mp-25k-sensor-engineering-samples/",
-    "source": "YMCinema",
-    "category": "gear",
-    "prov": [],
-    "canada": false,
-    "date": "Nov 14"
-   },
-   {
-    "title": "Manchester Animation Festival Bans Films Made With GenAI, Names ‘In Waves’ Best Feature",
-    "url": "https://www.cartoonbrew.com/awards/manchester-animation-festival-genai-ban-in-waves-269431.html",
-    "source": "Cartoon Brew",
-    "category": "animation",
-    "prov": [],
-    "canada": false,
-    "date": "Nov 14"
-   },
-   {
-    "title": "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
-    "url": "https://www.cartoonbrew.com/series/netflix-magic-the-gathering-planeswalker-first-look-269425.html",
-    "source": "Cartoon Brew",
-    "category": "animation",
-    "prov": [],
-    "canada": false,
-    "date": "Nov 14"
-   },
-   {
-    "title": "Indigenous Screen Office welcomes $51M promised by federal budget",
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBqWk8yX2RvUUlJbVV2MTZkMU9SbkU3Mzh3bDFHbHVKUVowVC1UNDI4Ykc1cHhqYUZNa1BMcUxKejRyTmd2SndoWjlkejYwQmt0V1ZlOGIyRlh5eDExUVlWRGkyeEpWVDVLVDVBWDBUUDREaVN6TF84?oc=5",
-    "source": "CBC",
-    "category": "canada",
-    "prov": [],
-    "canada": true,
-    "date": "Nov 13"
-   },
-   {
-    "title": "British Columbia, Canada, at the IDFA Forum 2026",
-    "url": "https://creativebc.com/2026/11/british-columbia-canada-at-the-idfa-forum-2026/",
-    "source": "Creative BC",
-    "category": "canada",
-    "prov": [
-     "BC"
-    ],
-    "canada": true,
-    "date": "Nov 13"
-   },
-   {
-    "title": "CeraVe Becomes \"The Official Moisturizer of Arrakis\" in First-Ever Film Partnership with DUNE: PART THREE",
-    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPYjlRN0daSW85TlZRNWRiWjUxbVpUTWc0R1dPOHpVR1FUVzVka3Q4ajdvM2NSdDI1bTJJWTBabE5pWktOeV84dlNuczQ1aWlGa0NDYkhQeXBaU2lfT1hsUFViT0Y4OGVTemZuakZ0OTA0UUt6Yk1jWEhGX0JvVFJGXy16QmVsd2prakZJLVVya0h0TjlwQ1ppRzVzUmcwaF9BQjhFaHFZcjFocG9hWk9zOHo0LVU5S2QzazJyQUgyaFotTDludS1QelhMZVhLRDRoRW13aVVGU2ROdUxkMTE4ZVk3cHlpZGFxQ1RsX294SQ?oc=5",
-    "source": "PR Newswire Canada",
-    "category": "canada",
-    "prov": [],
-    "canada": true,
-    "date": "Nov 13"
-   }
-  ],
-  "reconstructed": true
- },
  "2026-11-15": {
   "date": "2026-11-15",
   "day": "SUN NOV 15",
@@ -735,6 +672,68 @@
     "prov": [],
     "canada": true,
     "date": "Nov 24"
+   }
+  ],
+  "reconstructed": false
+ },
+ "2026-11-26": {
+  "date": "2026-11-26",
+  "compiled": "8:24 AM ET",
+  "day": "THU NOV 26",
+  "items": [
+   {
+    "title": "Applications open for the Canadian Film Centre’s Comedy Story Room program",
+    "url": "https://cartt.ca/applications-open-for-the-canadian-film-centres-comedy-story-room-program/",
+    "source": "Cartt.ca",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 25"
+   },
+   {
+    "title": "BBC Studios open to many types of partnerships in Canada",
+    "url": "https://playbackonline.ca/2026/11/25/bbc-studios-open-to-many-types-of-partnerships-in-canada/",
+    "source": "Playback",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 25"
+   },
+   {
+    "title": "Writers Guild of Canada Reports \"Alarming\" Diversity Backslide in Film and TV Industry",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZEZXeVVEZW9PWkhDV0pzWGNydWZyNkZJbVVXZEk4M1BXM2c5cDN3WmU1RjJsVm9nbnFEeGJBT2FLVU9yLWxIVFotbGMtZXl6Sk1ObVNKWDBoc3E0TmhYRWtweHh2ZHNBVm4zU091dzh3YmhEZkJZSzExZFAxSG9fX1R2TVM3SFYxajNQMG81bVdUNmFkMHpFeXNvOUpzaXpfWVlONjJpN3Z3MVpkWU03SDBNMHRTejQ?oc=5",
+    "source": "Exclaim!",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 25"
+   },
+   {
+    "title": "DGC sends four delegates to Content London",
+    "url": "https://playbackonline.ca/2026/11/25/dgc-sends-four-delegates-to-content-london/",
+    "source": "Playback",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 25"
+   },
+   {
+    "title": "Meet Five Women Shaping Canada's Film Industry",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBaYzZhVVVsVV9BSC0wbEhUVGtfTmUxTDh1cGxGRDYyLVRnMVc4Z3VMb3FNcUktOFRVenpWN3MtUVZIUVhyb2R2WUpZaGRub1dDZktoakkxbmZTMlRHbXFfTjQ4dTQzRThrdG9xckplU0k4UlYxMFRnS0lsUQ?oc=5",
+    "source": "ELLE Canada Magazine",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 25"
+   },
+   {
+    "title": "‘Saint-Pierre’ Is The High-Rating Canadian Cop Series Proving Small Island Life Can Provide The Drama",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdEdqb2cydkU4aDBoU1ItOEdfcXlXUDJTNEVUQXBIclZocjg2OTcxSVp5SFZaWVg3WmZEYVFfYWFCNGoxdkgtYkZvektqanRxX0RvX2xOZVhGSlJMNktvaWc0ODRZWTJSRFlxNnpYVEh1dW92S1hCLVJoUlkwMkJ3Wjdhc1ktbHR4?oc=5",
+    "source": "Deadline",
+    "category": "canada",
+    "prov": [],
+    "canada": true,
+    "date": "Nov 25"
    }
   ],
   "reconstructed": false

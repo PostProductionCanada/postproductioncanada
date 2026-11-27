@@ -1,61 +1,65 @@
 {
- "date": "2026-11-26",
- "compiled": "8:24 AM ET",
- "day": "THU NOV 26",
+ "date": "2026-11-27",
+ "compiled": "8:20 AM ET",
+ "day": "FRI NOV 27",
  "items": [
   {
-   "title": "Applications open for the Canadian Film Centre’s Comedy Story Room program",
-   "url": "https://cartt.ca/applications-open-for-the-canadian-film-centres-comedy-story-room-program/",
+   "title": "Korean film ′White Blast′ set for English-language remake in Canada",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Xci1BcWRjcm9QUG4xcmZiNFNNeXRjMThORDM5T2NoWGpORHB0dkthSlJDU1lzNm1zZ3hTcTJrY2ZmOXJMLXBpSWN3YldOY1dtSDJ5YXpjSm84QnPSAVZBVV95cUxOYWh5NXpiY0lGZHZKNUh3NVd5dTc3WVhwcFBNQngzRHl0bG1UbTNxdmVHN0M5eVFtR0dEeXY0Qk50NHJDcXRzRnd2aTNfaWs2X195Y2xfUQ?oc=5",
+   "source": "K-VIBE",
+   "category": "canada",
+   "prov": [],
+   "canada": true,
+   "date": "Nov 27"
+  },
+  {
+   "title": "Call for Entries: Canadian Creative Accelerator Séries Mania 2027",
+   "url": "https://creativebc.com/2026/11/call-for-entries-canadian-creative-accelerator-series-mania-2027/",
+   "source": "Creative BC",
+   "category": "canada",
+   "prov": [
+    "QC"
+   ],
+   "canada": true,
+   "date": "Nov 26"
+  },
+  {
+   "title": "Ottawa teen actor hitting the big stage with musical production of ’13 Going on 30’",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMHB2MHhkVHFPSWs5VUdFNEs1SjRzNnhjYWdodi13X1I5TERBYy1PVDJFRzhMd2VpUGxZWEZoTExiSGtHTnhmWVROVGI3MlVXR0V1Ukd2eThLenU0R0puWjN5VEdQa0M5cER1TU9MbFJOTWRUaElxbTFyTTBsR1lodk9WSExoOGVYWUJEOG1Xdmp2SkpaOEl3NmoxdldXOU80UDhQNG8xVjB1UDZOeE5xRjFPUU41N3ROZkFZTA?oc=5",
+   "source": "CTV News",
+   "category": "canada",
+   "prov": [
+    "ON"
+   ],
+   "canada": true,
+   "date": "Nov 26"
+  },
+  {
+   "title": "Call for Entries: Women in Music Canada Honours 2027",
+   "url": "https://creativebc.com/2026/11/call-for-entries-women-in-music-canada-honours-2027/",
+   "source": "Creative BC",
+   "category": "canada",
+   "prov": [],
+   "canada": true,
+   "date": "Nov 26"
+  },
+  {
+   "title": "Corus promotes Jordan Schwartz to VP of Original Content as Rachel Nelson exits",
+   "url": "https://cartt.ca/corus-promotes-jordan-schwartz-to-vp-of-original-content-as-rachel-nelson-exits/",
    "source": "Cartt.ca",
    "category": "canada",
    "prov": [],
    "canada": true,
-   "date": "Nov 25"
+   "date": "Nov 26"
   },
   {
-   "title": "BBC Studios open to many types of partnerships in Canada",
-   "url": "https://playbackonline.ca/2026/11/25/bbc-studios-open-to-many-types-of-partnerships-in-canada/",
+   "title": "Telefilm confirms first spending of $600M allocation",
+   "url": "https://playbackonline.ca/2026/11/26/telefilm-confirms-first-spending-of-600m-allocation/",
    "source": "Playback",
    "category": "canada",
    "prov": [],
    "canada": true,
-   "date": "Nov 25"
-  },
-  {
-   "title": "Writers Guild of Canada Reports \"Alarming\" Diversity Backslide in Film and TV Industry",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZEZXeVVEZW9PWkhDV0pzWGNydWZyNkZJbVVXZEk4M1BXM2c5cDN3WmU1RjJsVm9nbnFEeGJBT2FLVU9yLWxIVFotbGMtZXl6Sk1ObVNKWDBoc3E0TmhYRWtweHh2ZHNBVm4zU091dzh3YmhEZkJZSzExZFAxSG9fX1R2TVM3SFYxajNQMG81bVdUNmFkMHpFeXNvOUpzaXpfWVlONjJpN3Z3MVpkWU03SDBNMHRTejQ?oc=5",
-   "source": "Exclaim!",
-   "category": "canada",
-   "prov": [],
-   "canada": true,
-   "date": "Nov 25"
-  },
-  {
-   "title": "DGC sends four delegates to Content London",
-   "url": "https://playbackonline.ca/2026/11/25/dgc-sends-four-delegates-to-content-london/",
-   "source": "Playback",
-   "category": "canada",
-   "prov": [],
-   "canada": true,
-   "date": "Nov 25"
-  },
-  {
-   "title": "Meet Five Women Shaping Canada's Film Industry",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBaYzZhVVVsVV9BSC0wbEhUVGtfTmUxTDh1cGxGRDYyLVRnMVc4Z3VMb3FNcUktOFRVenpWN3MtUVZIUVhyb2R2WUpZaGRub1dDZktoakkxbmZTMlRHbXFfTjQ4dTQzRThrdG9xckplU0k4UlYxMFRnS0lsUQ?oc=5",
-   "source": "ELLE Canada Magazine",
-   "category": "canada",
-   "prov": [],
-   "canada": true,
-   "date": "Nov 25"
-  },
-  {
-   "title": "‘Saint-Pierre’ Is The High-Rating Canadian Cop Series Proving Small Island Life Can Provide The Drama",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdEdqb2cydkU4aDBoU1ItOEdfcXlXUDJTNEVUQXBIclZocjg2OTcxSVp5SFZaWVg3WmZEYVFfYWFCNGoxdkgtYkZvektqanRxX0RvX2xOZVhGSlJMNktvaWc0ODRZWTJSRFlxNnpYVEh1dW92S1hCLVJoUlkwMkJ3Wjdhc1ktbHR4?oc=5",
-   "source": "Deadline",
-   "category": "canada",
-   "prov": [],
-   "canada": true,
-   "date": "Nov 25"
+   "date": "Nov 26"
   }
  ]
 }
